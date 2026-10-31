@@ -171,7 +171,8 @@ code { font-size: .92em; background: var(--surface-2); padding: 1px 5px; border-
 @media (min-width: 1440px) { .mainnav a.nwide { display: grid; } .mainnav a.nnarrow { display: none; } }
 :lang(es) .mainnav a.nwide { display: none !important; } :lang(es) .mainnav a.nnarrow { display: grid !important; }   /* «Segunda pantalla» runs 48 px off at 1440 */
 /* the top bar row is tight (9 links + language, search, radio, login, theme): measured to fit with room at every width */
-@media (max-width: 1280px) { .mainnav a { padding: 0 6px; } }
+@media (max-width: 1439px) { .mainnav a { padding: 0 6px; } }   /* 1281-1439 too: with 9 px pt / ru ran the theme button off a 1300 px screen */
+@media (min-width: 1261px) and (max-width: 1439px) { :lang(es) .topbar .bt small { display: none; } }   /* es: «Builds y talentos», «Lista de tiers» and the subtitle ran the theme button 2-34 px off a 1261-1366 px screen; the menu stays, the wordmark stands alone */
 .mainnav a[aria-current="true"] { opacity: 1; color: var(--ink-gold); }
 .sheet .grp a[aria-current="true"], .tabbar .morebtn[aria-current="true"] { color: var(--gold-2); }  
 .topbar.solid .mainnav a[aria-current="true"], .topbar.solid .bt small, .langon .topbar .mainnav a[aria-current="true"], .langon .topbar .bt small { color: var(--gold-2); }
@@ -210,16 +211,16 @@ code { font-size: .92em; background: var(--surface-2); padding: 1px 5px; border-
 .iconbtn:hover { border-color: var(--gold); }
 .srchbtn kbd, .radiobtn .rdo-eq { display: none; }
 .srchbtn .sl { display: none; }
-/* search field in the top bar (build.SEARCH_BTN, assets/search/): a phone and a tablet get the field in place of the icon, a wide screen too; 1261-1599 has no room (9 menu links) and keeps the icon */
+/* search field in the top bar (build.SEARCH_BTN, assets/search/): a phone and a tablet get the field in place of the icon, a wide screen too; 1261-1799 has no room (8 menu links + My character) and keeps the icon: at 1600 the field pushed the theme button off the screen in 7 languages */
 @media (min-width: 375px) and (max-width: 1260px) {
   .topbar .tools { flex: 1; min-width: 0; }
   .topbar .srchbtn { flex: 1 1 0; min-width: 0; max-width: 380px; margin-right: auto; display: flex; align-items: center; justify-content: flex-start; gap: 8px; padding: 0 12px; }
   .topbar .srchbtn .ico { flex: none; }
   .topbar .srchbtn .sl { display: block; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: var(--fs-14); font-weight: 500; opacity: .82; }
 }
-@media (min-width: 375px) and (max-width: 1260px), (min-width: 1600px) { html:not(.langon) .topbar:not(.solid) .srchbtn { background: rgb(5 6 8 / .4); } }
+@media (min-width: 375px) and (max-width: 1260px), (min-width: 1800px) { html:not(.langon) .topbar:not(.solid) .srchbtn { background: rgb(5 6 8 / .4); } }
 @media (min-width: 375px) and (max-width: 719px) { .topbar .bt { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; } .topbar .brand { padding: 0 6px; margin: 0 -6px; } }   /* the wordmark steps aside for the field; the logo stays, the link keeps its name and a 44 px tap box (padding offset by margin: the layout does not move) */
-@media (min-width: 1600px) {
+@media (min-width: 1800px) {
   .topbar .srchbtn { width: 200px; display: flex; align-items: center; justify-content: flex-start; gap: 8px; padding: 0 10px 0 12px; }
   .topbar .srchbtn .ico { flex: none; }
   .topbar .srchbtn .sl { display: block; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: var(--fs-14); font-weight: 500; text-align: left; opacity: .82; }
