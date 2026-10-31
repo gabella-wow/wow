@@ -1,5 +1,5 @@
 {
- "last_run": "2026-10-31T21:30:58Z",
+ "last_run": "2026-10-31T21:41:02Z",
  "posts": {
   "art-24301455": {
    "checked": "2026-10-29T20:21:03Z",
@@ -12,7 +12,7 @@
    "version": null
   },
   "art-24301516": {
-   "checked": "2026-10-31T15:40:58Z",
+   "checked": "2026-10-31T21:41:02Z",
    "lines": [
     "6e46921c4386",
     "aa82e152d33a",
@@ -64,7 +64,7 @@
    "version": null
   },
   "art-24302547": {
-   "checked": "2026-10-31T21:30:58Z",
+   "checked": "2026-10-31T21:41:02Z",
    "lines": [
     "e463594c3307"
    ],
@@ -125,7 +125,7 @@
    "version": null
   },
   "art-24303866": {
-   "checked": "2026-10-31T15:40:58Z",
+   "checked": "2026-10-31T21:41:02Z",
    "lines": [
     "28aff144f326",
     "08d259d885e3",
@@ -134,7 +134,7 @@
     "62a3f6d716e5"
    ],
    "seen": "2026-10-27T19:16:54Z",
-   "sha": "d5b8f94cad3dc981951a0f61d5201c57b677cca58df0dc1df7bcd664211e7a95",
+   "sha": "c149570f6522094b69bda66db270152d6380710ca53d821e156afbfbf4bfddf0",
    "title": "Claim Your World of Warcraft: Forever Character Names",
    "updated_at": null,
    "url": "https://worldofwarcraft.blizzard.com/en-us/news/24303866/claim-your-world-of-warcraft-forever-character-names",
@@ -160,7 +160,7 @@
    "version": null
   },
   "art-24313105": {
-   "checked": "2026-10-31T15:40:58Z",
+   "checked": "2026-10-31T21:41:02Z",
    "lines": [],
    "seen": "2026-10-27T19:16:54Z",
    "sha": "aebc6b17973e25616a8390fdd9d640cc9112740dd1c802d8e0371312a3eedbf7",
@@ -170,7 +170,7 @@
    "version": null
   },
   "art-24313106": {
-   "checked": "2026-10-31T15:40:58Z",
+   "checked": "2026-10-31T21:41:02Z",
    "lines": [
     "d6320dace8b2",
     "ee5206efe358",
@@ -199,7 +199,7 @@
    "version": null
   },
   "art-24315203": {
-   "checked": "2026-10-31T15:40:58Z",
+   "checked": "2026-10-31T21:41:02Z",
    "lines": [
     "c9a456dabe76"
    ],
@@ -433,7 +433,7 @@
    "version": 1
   },
   "eu-631316-1": {
-   "checked": "2026-10-31T21:30:58Z",
+   "checked": "2026-10-31T21:41:02Z",
    "lines": [
     "b980faad67e4",
     "551f003b8fd3",
@@ -571,7 +571,7 @@
    "version": 5
   },
   "eu-631316-4": {
-   "checked": "2026-10-31T21:30:58Z",
+   "checked": "2026-10-31T21:41:02Z",
    "lines": [
     "a9f91ef9a1d3",
     "3f0687de02e8",
@@ -726,7 +726,7 @@
    "version": 3
   },
   "eu-631316-5": {
-   "checked": "2026-10-31T21:30:58Z",
+   "checked": "2026-10-31T21:41:02Z",
    "lines": [
     "862affbc3ad5",
     "3e1771b3fd67",
@@ -864,7 +864,7 @@
    "version": 1
   },
   "eu-631316-6": {
-   "checked": "2026-10-31T21:30:58Z",
+   "checked": "2026-10-31T21:41:02Z",
    "lines": [
     "ba02c8dc2b40",
     "cdd748e437cc",
@@ -1102,7 +1102,7 @@
    "version": 2
   },
   "eu-631316-7": {
-   "checked": "2026-10-31T21:30:58Z",
+   "checked": "2026-10-31T21:41:02Z",
    "lines": [
     "c2f53382556d",
     "157b13cf95b2",
@@ -1130,7 +1130,7 @@
    "version": 4
   },
   "eu-631316-8": {
-   "checked": "2026-10-31T21:30:58Z",
+   "checked": "2026-10-31T21:41:02Z",
    "lines": [
     "180749eee47d",
     "57c724e3010c",
@@ -1353,7 +1353,7 @@
    "version": 1
   },
   "us-2360696-1": {
-   "checked": "2026-10-31T21:30:58Z",
+   "checked": "2026-10-31T21:41:02Z",
    "lines": [
     "b980faad67e4",
     "551f003b8fd3",
@@ -1491,7 +1491,7 @@
    "version": 5
   },
   "us-2360696-4": {
-   "checked": "2026-10-31T21:30:58Z",
+   "checked": "2026-10-31T21:41:02Z",
    "lines": [
     "a9f91ef9a1d3",
     "3f0687de02e8",
@@ -1646,7 +1646,7 @@
    "version": 4
   },
   "us-2360696-5": {
-   "checked": "2026-10-31T21:30:58Z",
+   "checked": "2026-10-31T21:41:02Z",
    "lines": [
     "862affbc3ad5",
     "3e1771b3fd67",
@@ -1784,7 +1784,7 @@
    "version": 1
   },
   "us-2360696-6": {
-   "checked": "2026-10-31T21:30:58Z",
+   "checked": "2026-10-31T21:41:02Z",
    "lines": [
     "ba02c8dc2b40",
     "cdd748e437cc",
@@ -2022,7 +2022,7 @@
    "version": 2
   },
   "us-2360696-7": {
-   "checked": "2026-10-31T21:30:58Z",
+   "checked": "2026-10-31T21:41:02Z",
    "lines": [
     "c2f53382556d",
     "157b13cf95b2",
@@ -2050,7 +2050,7 @@
    "version": 4
   },
   "us-2360696-8": {
-   "checked": "2026-10-31T21:30:58Z",
+   "checked": "2026-10-31T21:41:02Z",
    "lines": [
     "180749eee47d",
     "57c724e3010c",
@@ -2324,7 +2324,7 @@
   "art-24315820": "d3341d17",
   "art-24316094": "8e0d688b"
  },
- "requests": 13,
+ "requests": 18,
  "sources": {
   "articles:24301455": {
    "fails": 0,
@@ -2332,7 +2332,7 @@
   },
   "articles:24301516": {
    "fails": 0,
-   "ok": "2026-10-31T15:40:58Z"
+   "ok": "2026-10-31T21:41:02Z"
   },
   "articles:24302070": {
    "fails": 0,
@@ -2344,7 +2344,7 @@
   },
   "articles:24302547": {
    "fails": 0,
-   "ok": "2026-10-31T21:30:58Z"
+   "ok": "2026-10-31T21:40:59Z"
   },
   "articles:24303009": {
    "fails": 0,
@@ -2352,7 +2352,7 @@
   },
   "articles:24303866": {
    "fails": 0,
-   "ok": "2026-10-31T15:40:58Z"
+   "ok": "2026-10-31T21:41:02Z"
   },
   "articles:24313102": {
    "fails": 0,
@@ -2360,15 +2360,15 @@
   },
   "articles:24313105": {
    "fails": 0,
-   "ok": "2026-10-31T15:40:56Z"
+   "ok": "2026-10-31T21:41:00Z"
   },
   "articles:24313106": {
    "fails": 0,
-   "ok": "2026-10-31T15:40:57Z"
+   "ok": "2026-10-31T21:41:01Z"
   },
   "articles:24315203": {
    "fails": 0,
-   "ok": "2026-10-31T15:40:56Z"
+   "ok": "2026-10-31T21:40:59Z"
   },
   "articles:24315280": {
    "fails": 0,
@@ -2392,27 +2392,27 @@
   },
   "articles:list": {
    "fails": 0,
-   "ok": "2026-10-31T21:30:57Z"
+   "ok": "2026-10-31T21:40:58Z"
   },
   "eu:c/wow-forever-beta-discussion/362": {
    "fails": 0,
-   "ok": "2026-10-31T21:30:53Z"
+   "ok": "2026-10-31T21:40:55Z"
   },
   "eu:c/wow-forever-beta-discussion/362/new": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-10-31T12:20:58Z",
    "fails": 0,
-   "ok": "2026-10-31T21:30:55Z"
+   "ok": "2026-10-31T21:40:56Z"
   },
   "eu:c/wow-forever/359": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-10-31T12:20:50Z",
    "fails": 0,
-   "ok": "2026-10-31T21:30:50Z"
+   "ok": "2026-10-31T21:40:52Z"
   },
   "eu:c/wow-forever/359/new": {
    "fails": 0,
-   "ok": "2026-10-31T21:30:51Z"
+   "ok": "2026-10-31T21:40:53Z"
   },
   "eu:t/628701": {
    "fails": 0,
@@ -2436,7 +2436,7 @@
   },
   "eu:t/631316": {
    "fails": 0,
-   "ok": "2026-10-31T21:30:56Z"
+   "ok": "2026-10-31T21:40:57Z"
   },
   "eu:t/631603": {
    "fails": 0,
@@ -2618,25 +2618,25 @@
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-10-27T20:30:59Z",
    "fails": 0,
-   "ok": "2026-10-31T21:30:48Z"
+   "ok": "2026-10-31T21:40:49Z"
   },
   "us:c/wow-forever-beta-discussion/349/new": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-10-27T20:10:54Z",
    "fails": 0,
-   "ok": "2026-10-31T21:30:48Z"
+   "ok": "2026-10-31T21:40:50Z"
   },
   "us:c/wow-forever/346": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-10-27T20:30:49Z",
    "fails": 0,
-   "ok": "2026-10-31T21:30:47Z"
+   "ok": "2026-10-31T21:40:48Z"
   },
   "us:c/wow-forever/346/new": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-10-27T20:40:51Z",
    "fails": 0,
-   "ok": "2026-10-31T21:30:47Z"
+   "ok": "2026-10-31T21:40:49Z"
   },
   "us:t/2352595": {
    "fails": 0,
@@ -2672,7 +2672,7 @@
   },
   "us:t/2360696": {
    "fails": 0,
-   "ok": "2026-10-31T21:30:49Z"
+   "ok": "2026-10-31T21:40:51Z"
   },
   "us:t/2361993": {
    "fails": 0,
@@ -2718,7 +2718,7 @@
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-10-27T20:10:57Z",
    "fails": 0,
-   "ok": "2026-10-31T21:30:49Z"
+   "ok": "2026-10-31T21:40:51Z"
   },
   "us:t/2381433": {
    "fails": 0,
