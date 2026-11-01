@@ -1130,6 +1130,13 @@ dialog.sheet::backdrop { background: rgba(0,0,0,.6); }
 .thero::after { display: none; }
 .ghero { --band-h: var(--hh); min-height: calc(var(--hh) * .66); padding: calc(var(--top) + clamp(32px, 8vh, 96px)) 0 28px; display: grid; align-content: start; color: var(--ink); }
 .ghero .stband-art.por img { object-position: 50% 14%; }   /* a class or race portrait: the face, not the chest */
+/* Builds of a class (build_guides.por_band): the class portrait of the reader's side stands where the class page (.chero) has it,
+   on the portrait's own blurred backdrop; the band keeps the guide height and shade (::before), the fade runs into the page */
+.pband-bg { position: absolute; inset: 0 0 auto 0; z-index: -3; height: var(--hh); overflow: hidden; }
+.pband-bg img { width: 100%; height: 100%; object-fit: cover; filter: blur(40px) brightness(.5); transform: scale(1.15); }
+.pband-por { position: absolute; z-index: -2; top: 0; right: max(0px, calc((100vw - var(--wrap)) / 2 - 40px)); height: var(--hh); aspect-ratio: 3 / 4;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 30%, #000 74%, transparent 100%); mask-image: linear-gradient(90deg, transparent 0, #000 30%, #000 74%, transparent 100%); }
+.pband-por img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; }
 .thero::before, .ghero::before { height: var(--hh); background:
   linear-gradient(90deg, rgba(5,5,5,.8) max(0%, 50% - 960px), rgba(5,5,5,.54) max(32%, 50% - 346px), rgba(5,5,5,.14) min(58%, 50% + 154px), rgba(5,5,5,0) min(78%, 50% + 538px)),
   linear-gradient(180deg, rgba(5,5,5,.62) 0%, rgba(5,5,5,0) 26%, rgba(5,5,5,0) 48%, rgb(8 9 11 / .88) 80%, var(--bg) 100%); }
@@ -1576,6 +1583,7 @@ dialog.sheet::backdrop { background: rgba(0,0,0,.6); }
 @media (max-width: 719px) {
   .thero, .ghero { --hh: 380px; padding: calc(var(--top) + 100px) 0 24px; min-height: 0; }   /* slim art band: ~160 px of scene above the text (was ~300) */
   .thero-art img { object-position: 90% 0; }
+  .pband-por { right: 0; -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 34%); mask-image: linear-gradient(90deg, transparent 0, #000 34%); }   /* the face above the crumbs, the title runs over the chest */
   .thero::before, .ghero::before { background: linear-gradient(180deg, rgba(5,5,5,.55) 0%, rgba(5,5,5,.08) 26%, rgba(5,5,5,.4) 50%, rgb(8 9 11 / .9) 74%, var(--bg) 100%); }
   /* light: the title and the lead run past the art on a phone, so the whole hero is the dark plate and the paper starts under it */
   :root[data-theme="light"] :is(.thero, .ghero) { background: rgb(8 9 11); }
