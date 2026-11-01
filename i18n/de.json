@@ -6012,5 +6012,16 @@
  "Talent calculator": "Talentrechner",
  "The Horde is not locked out of City of Dalaran. Per the Blizzard beta notes of Oct 16, the Horde is attacked on sight in the city itself, but this does not affect access to the dungeon. The Horde questline for the Dalaran Sewer Key no longer grants free passage through the city.": "City of Dalaran ist für die Horde nicht gesperrt. Laut den Beta-Notizen von Blizzard vom 16.10. wird die Horde in der Stadt selbst sofort angegriffen, der Zugang zum Dungeon ist davon aber nicht betroffen. Die Questreihe der Horde für den Dalaran Sewer Key gewährt keinen freien Durchgang durch die Stadt mehr.",
  "A tier list ranks classes and specs by strength, from S to C. In the beta the strongest picks are Paladin in PvE, Hunter and Mage for leveling, Warlock and Rogue in PvP.": "Die Tier-Liste ordnet Klassen und Spezialisierungen nach Stärke, von S bis C. In der Beta liegen vorn: Paladin im PvE, Jäger und Magier beim Leveln, Hexenmeister und Schurke im PvP.",
- "Show in full": "Vollständig anzeigen"
+ "Show in full": "Vollständig anzeigen",
+ "Weapons by spec": "Waffen nach Skillung",
+ "Assassination and Subtlety usually take daggers, any weapon suits Combat (Warcraft Tavern).": "Meucheln und Täuschung nehmen meist Dolche, für Kampf passt jede Waffe (Warcraft Tavern).",
+ "Main hand": "Haupthand",
+ "Off hand": "Nebenhand",
+ "Slow, with high damage, any type": "Langsam, mit hohem Schaden, beliebiger Typ",
+ "Fast, any type": "Schnell, beliebiger Typ",
+ "Riposte and Sinister Strike hit harder with a slow main-hand weapon (Icy Veins); the fast one goes in the off hand (Mobalytics). Hack and Slash gives a bonus to every weapon type; with a sword, a chance for an extra hit (Mobalytics).": "Riposte und Finsterer Stoß treffen mit einer langsamen Waffe in der Haupthand härter (Icy Veins), die schnelle gehört in die Nebenhand (Mobalytics). Niedermetzeln gibt jedem Waffentyp einen Bonus, mit einem Schwert die Chance auf einen zusätzlichen Schlag (Mobalytics).",
+ "Dagger": "Dolch",
+ "Mutilate strikes with both weapons and needs two daggers (Icy Veins).": "Verstümmeln trifft mit beiden Waffen und braucht zwei Dolche (Icy Veins).",
+ "Ambush and Backstab strike with a dagger; without one, open with Garrote (Icy Veins). The bleed build strikes with Hemorrhage (Warcraft Tavern).": "Hinterhalt und Meucheln schlagen mit einem Dolch zu; ohne Dolch eröffnest du mit Erdrosseln (Icy Veins). Der Blutungs-Build schlägt mit Blutsturz zu (Warcraft Tavern).",
+ "Combat with a dagger: Backstab from behind, Ambush from Stealth (Icy Veins). With a good main-hand dagger, Icy Veins suggests Puncturing Wounds, and Mobalytics has a separate dagger build. Swords, axes, maces and daggers all suit Combat (Mobalytics). Fist weapons work too: you learn them from a weapon master (Warcraft Tavern).": "Kampf mit Dolch: Meucheln von hinten, Hinterhalt aus der Verstohlenheit (Icy Veins). Mit einem guten Dolch in der Haupthand rät Icy Veins zu Puncturing Wounds, Mobalytics hat für Dolche einen eigenen Build. Schwerter, Äxte, Streitkolben und Dolche taugen alle für Kampf (Mobalytics). Faustwaffen gehen auch: Man lernt sie beim Waffenmeister (Warcraft Tavern)."
 }

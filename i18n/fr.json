@@ -6012,5 +6012,16 @@
  "Talent calculator": "Calculateur de talents",
  "The Horde is not locked out of City of Dalaran. Per the Blizzard beta notes of Oct 16, the Horde is attacked on sight in the city itself, but this does not affect access to the dungeon. The Horde questline for the Dalaran Sewer Key no longer grants free passage through the city.": "La Horde n’est pas exclue de City of Dalaran. Selon les notes de bêta de Blizzard du 16.10, la Horde est attaquée à vue dans la ville elle-même, mais l’accès au donjon n’est pas concerné. La suite de quêtes de la Horde pour la Dalaran Sewer Key ne donne plus libre passage dans la ville.",
  "A tier list ranks classes and specs by strength, from S to C. In the beta the strongest picks are Paladin in PvE, Hunter and Mage for leveling, Warlock and Rogue in PvP.": "La liste des tiers classe les classes et spécialisations par puissance, de S à C. Dans la bêta, les meilleurs choix sont le Paladin en JcE, le Chasseur et le Mage pour la progression, le Démoniste et le Voleur en JcJ.",
- "Show in full": "Afficher en entier"
+ "Show in full": "Afficher en entier",
+ "Weapons by spec": "Armes par spécialisation",
+ "Assassination and Subtlety usually take daggers, any weapon suits Combat (Warcraft Tavern).": "Assassinat et Finesse prennent en général des dagues, Combat accepte n’importe quelle arme (Warcraft Tavern).",
+ "Main hand": "Main droite",
+ "Off hand": "Main gauche",
+ "Slow, with high damage, any type": "Lente, à gros dégâts, de tout type",
+ "Fast, any type": "Rapide, de tout type",
+ "Riposte and Sinister Strike hit harder with a slow main-hand weapon (Icy Veins); the fast one goes in the off hand (Mobalytics). Hack and Slash gives a bonus to every weapon type; with a sword, a chance for an extra hit (Mobalytics).": "Riposte et Attaque pernicieuse frappent plus fort avec une arme lente en main droite (Icy Veins), la rapide va en main gauche (Mobalytics). Taillader et trancher donne un bonus à chaque type d’arme ; avec une épée, une chance de coup supplémentaire (Mobalytics).",
+ "Dagger": "Dague",
+ "Mutilate strikes with both weapons and needs two daggers (Icy Veins).": "Estropier frappe avec les deux armes et exige deux dagues (Icy Veins).",
+ "Ambush and Backstab strike with a dagger; without one, open with Garrote (Icy Veins). The bleed build strikes with Hemorrhage (Warcraft Tavern).": "Embuscade et Attaque sournoise frappent avec une dague ; sans dague, ouvrez avec Garrot (Icy Veins). Le build saignement frappe avec Hémorragie (Warcraft Tavern).",
+ "Combat with a dagger: Backstab from behind, Ambush from Stealth (Icy Veins). With a good main-hand dagger, Icy Veins suggests Puncturing Wounds, and Mobalytics has a separate dagger build. Swords, axes, maces and daggers all suit Combat (Mobalytics). Fist weapons work too: you learn them from a weapon master (Warcraft Tavern).": "Combat à la dague : Attaque sournoise dans le dos, Embuscade depuis Camouflage (Icy Veins). Avec une bonne dague en main droite, Icy Veins conseille Puncturing Wounds, et Mobalytics a un build à part pour les dagues. Épées, haches, masses et dagues conviennent toutes à Combat (Mobalytics). Les armes de pugilat aussi : on les apprend chez le maître d’armes (Warcraft Tavern)."
 }
