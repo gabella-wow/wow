@@ -1829,6 +1829,8 @@ def main():
     build_guides.main()
     import build_cards  # share pages b/<race>-<class>-<spec>/ of built characters (noindex, outside sitemap.xml)
     build_cards.main()
+    import build_talent_links  # share pages t/<class>-<spec>/ of a talent build (noindex, outside sitemap.xml)
+    build_talent_links.main()
     import seo  # last: titles/descriptions for search, JSON-LD, analytics, sitemap.xml over the built pages
     from content import spec_cheats  # noqa: E402
     seo.META.update(spec_cheats.SEO)   # the four spec cheat sheets: title and description for the search

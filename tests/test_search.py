@@ -40,7 +40,7 @@ pages = [p for p in glob.glob(os.path.join(ROOT, '**', '*.html'), recursive=True
 versions = set()
 for p in pages:
     parts = os.path.relpath(p, ROOT).replace(os.sep, '/').split('/')
-    if p == os.path.join(ROOT, '404.html') or 'b' in parts[:2] and parts[-1] == 'index.html' and len(parts) in (3, 4) and parts[-3] == 'b':   # the root 404 and the share pages b/<build>/ are light pages without the site chrome
+    if p == os.path.join(ROOT, '404.html') or parts[-1] == 'index.html' and len(parts) in (3, 4) and parts[-3] in ('b', 't'):   # the root 404 and the share pages b/<build>/, t/<class>-<spec>/ are light pages without the site chrome
         continue
     html = open(p, encoding='utf-8').read()
     v = re.findall(r'assets/search/search\.(?:js|css)\?v=(\w+)', html)

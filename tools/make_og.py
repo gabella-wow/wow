@@ -16,6 +16,8 @@ import langs  # noqa: E402
 import live  # noqa: E402
 from classes import CLASSES  # noqa: E402
 import build_guides as BG  # noqa: E402
+import build_talent_links as TL  # noqa: E402
+from content import spec_cheats as SC  # noqa: E402
 
 CHROME = r'C:\Program Files\Google\Chrome\Application\chrome.exe'
 LANGS = langs.LANGS
@@ -76,6 +78,13 @@ def core(lang):
     return BG.hero_core(lang)
 
 
+def spec_roles(cid, spec, lang):
+    """«Урон», «Танк · Урон»: the roles of a spec on the class page (a guessed '?' role stays off the card)"""
+    c = next(x for x in CLASSES if x['id'] == cid)
+    sp = next(x for x in c['specs'] if re.sub(r'\W+', '-', x['en'].lower()) == spec)
+    return JOIN.join(ROLES[lang][r] for r in sp['roles'] if not r.endswith('?'))
+
+
 def cards():
     """(file name without -lang, art, title by lang, line under the title by lang, foot line by lang or None = the launch line)"""
     yield 'og', 'hero_dawn', HOME['t'], HOME['d'], None
@@ -88,6 +97,11 @@ def cards():
         if m:                                              # a class guide: the portrait of the class, one short line
             art = f'{m[2]}-{SIDE_RACE[m[2]]}'
             lead = ({l: JOIN.join(N[l]['sn'][m[2]]) for l in LANGS} if m[1] == 'builds' else ROUTE)
+        s = re.match(r'spec-([a-z]+)-([a-z-]+)$', g['slug'])
+        if s:                                              # a spec guide (and the share page of a talent build, t/): class portrait, «Frost Mage»
+            yield ('og/' + g['slug'], f'{s[1]}-{SIDE_RACE[s[1]]}', {l: TL.spec_name(s[1], s[2], l) for l in LANGS},
+                   {l: f'{spec_roles(s[1], s[2], l)}. {SC.LEAD_TAIL[l]}' for l in LANGS}, None)
+            continue
         yield 'og/' + g['slug'], art, g['title'], lead, None
     yield 'og/tools', 'hero_tools', TOOLS['t'], TOOLS['d'], None
     yield 'og/404', 'hero_dawn', {'xx': 'WoW Forever'}, {'xx': ''}, {'xx': 'gabella.site/wow'}   # one card for every language: the root 404.html is one page for all
