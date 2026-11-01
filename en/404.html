@@ -1365,6 +1365,9 @@ dialog.sheet::backdrop { background: rgba(0,0,0,.6); }
 .geart .iq { text-decoration: none; font-weight: 600; color: var(--fg); }
 .geart .iq:hover { text-decoration: underline; }
 .geart .iq0 { color: var(--q0); } .geart .iq2 { color: var(--q2); } .geart .iq3 { color: var(--q3); } .geart .iq4 { color: var(--q4); } .geart .iq5 { color: var(--q5); }
+/* a row picked by stats from other specs' lists (tools/gear_fill.py), not the guide's advice: a quiet outlined tag under the item */
+.geart .gpick { display: block; width: fit-content; max-width: 100%; margin-top: 5px; padding: 1px 7px; border: 1px solid var(--line);
+  border-radius: 4px; font-size: var(--fs-13); line-height: 1.5; color: var(--muted); }
 #gearProf[hidden] { display: none; }
 .gtest { color: var(--gold-2); font-weight: 600; }
 /* the honest marks on top of the gear list: temporary beta data, and "incomplete" on a spec with few slots; a quiet ruled note, not a badge */
@@ -1648,7 +1651,7 @@ dialog.sheet::backdrop { background: rgba(0,0,0,.6); }
 <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png?v=00a6a7d9">
 <meta name="apple-mobile-web-app-title" content="Gabella WoW">
 <link rel="stylesheet" href="../assets/radio/radio.css?v=556d7dc63f" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="../assets/search/search.css?v=6521747d30" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="../assets/search/search.css?v=ae39ea35e3" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="../assets/me/me.css?v=f19953bd21" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="../assets/hero/hero.css?v=6321409992" media="print" onload="this.media='all'">
 </head>
@@ -1880,7 +1883,7 @@ addEventListener('beforeinstallprompt', e => {
 });
 </script>
 <script src="../assets/radio/radio.js?v=556d7dc63f" data-root="../" defer></script>
-<script src="../assets/search/search.js?v=6521747d30" data-root="../" defer></script>
+<script src="../assets/search/search.js?v=ae39ea35e3" data-root="../" defer></script>
 <script src="../assets/me/me.js?v=f19953bd21" data-root="../" data-home="./" data-lang="en" data-ach="0" data-teaser="" data-close="Close" data-page="404" data-look="2" defer></script>
 <script src="../assets/hero/hero.js?v=6321409992" data-root="../" data-home="./" data-data="../assets/hero/en.json?v=6321409992" defer></script>
 </body>
