@@ -220,6 +220,8 @@ def test_gear30_strict():
         slots = {items[str(e['id'])]['slot'] for e in entries}
         assert len(slots) >= sc.GEAR_MIN_SLOTS, (spec, sorted(slots))
         picks = [e for e in entries if e.get('pick')]
+        assert all(e['pick'] == 'stats' for e in picks), spec
+        assert not [e['id'] for e in entries if 'pages' in e and not e.get('pick')], spec   # provenance comes with the pick mark
         for slot in {items[str(e['id'])]['slot'] for e in picks}:
             n = sum(1 for e in picks if items[str(e['id'])]['slot'] == slot)
             assert n <= 3, (spec, slot, n)
@@ -246,12 +248,18 @@ def gear_marks(sc, data):
             assert 'class="gnote"' in html and (f'<b>{temp}:</b>' in html) == beta, (key, lang)
             assert (f'<b>{inc}:</b>' in html) == part, (key, lang)
             assert (sc.G_PART_S[lang] in sc.gear_answer(key, lang)) == part, (key, lang)
+            # a pick by stats (tools/gear_fill.py) is marked on its row, on top of the section and next to the source
+            picks = sum(1 for e in data['specs'][key] if e.get('pick'))
+            pick = escape(sc.G_PICK_NOTE[lang].split(':')[0])
+            assert html.count('class="gpick"') == picks and (f'<b>{pick}:</b>' in html) == bool(picks), (key, lang)
+            assert (escape(sc.G_SRC_PICK[lang]) in html) == bool(picks), (key, lang)
         for d in ('', 'en/', 'uk/', 'pl/'):
             page = os.path.join(bg.HERE, d + 'guides', f'spec-{key}', 'index.html')
             html = open(page, encoding='utf-8').read()
             lang = d.strip('/') or 'ru'
             assert 'id="gearBox"' in html and 'class="gnote"' in html, page
             assert (escape(sc.G_PART[lang].split(':')[0]) + ':</b>' in html) == part, page
+            assert html.count('class="gpick"') == sum(1 for e in data['specs'][key] if e.get('pick')), page
 
 
 def test_gear_import_pages():

@@ -689,6 +689,29 @@ G_PART = n9('Неполно: предметы есть только для {n} �
             'Incompleto: há itens só para {n} espaços, os demais ainda não foram preenchidos.',
             'Incompleto: oggetti solo per {n} slot, gli altri non sono ancora compilati.',
             'Niepełne: przedmioty tylko dla {n} miejsc, pozostałe nie są jeszcze uzupełnione.')
+# items of tools/gear_fill.py ("pick": "stats"): not the advice of this spec's guide but our pick by its stat priority from the lists of
+# other specs; a badge on each such row, a mark on top and a line next to the source, so a pick never reads as the guide's advice
+G_PICK = n9('Подбор по статам', 'Picked by stats', 'Добір за характеристиками', 'Nach Werten gewählt', 'Choisi selon les stats',
+            'Elegido por estadísticas', 'Escolhido por atributos', 'Scelto per statistiche', 'Dobór według statystyk')
+G_PICK_NOTE = n9(
+    'Подбор по статам: {n} из {t} предметов не из гайда этого спека, а подобраны по его приоритету статов из списков других спеков. В таблице они отмечены.',
+    'Picked by stats: {n} of {t} items are not from this spec’s guide; we picked them by its stat priority from other specs’ lists. They are marked in the table.',
+    'Добір за характеристиками: {n} з {t} предметів не з гайду цього спеку, а дібрані за його пріоритетом характеристик зі списків інших спеків. У таблиці вони позначені.',
+    'Nach Werten gewählt: {n} von {t} Gegenständen stammen nicht aus dem Guide dieser Skillung, sondern sind nach ihrer Werte-Priorität aus Listen anderer Skillungen gewählt. Sie sind in der Tabelle markiert.',
+    'Choisis selon les stats : {n} objets sur {t} ne viennent pas du guide de cette spécialisation, mais des listes d’autres, choisis selon sa priorité de caractéristiques. Ils sont signalés dans le tableau.',
+    'Elegidos por estadísticas: {n} de {t} objetos no son de la guía de esta especialización, sino de listas de otras, elegidos por su prioridad de estadísticas. Están marcados en la tabla.',
+    'Escolhidos por atributos: {n} de {t} itens não vêm do guia desta especialização, e sim de listas de outras, escolhidos pela prioridade de atributos dela. Estão marcados na tabela.',
+    'Scelti per statistiche: {n} oggetti su {t} non vengono dalla guida di questa specializzazione, ma da elenchi di altre, scelti secondo la sua priorità di statistiche. Sono segnati nella tabella.',
+    'Dobór według statystyk: {n} z {t} przedmiotów nie pochodzi z poradnika tej specjalizacji, tylko z list innych, dobranych według jej priorytetu statystyk. W tabeli są oznaczone.')
+G_SRC_PICK = n9('Предметы «Подбор по статам» выбрали мы, по приоритету статов спека, из списков других спеков в тех же гайдах.',
+                'Items marked “Picked by stats” were chosen by us, by the spec’s stat priority, from other specs’ lists in the same guides.',
+                'Предмети «Добір за характеристиками» вибрали ми, за пріоритетом характеристик спеку, зі списків інших спеків у тих самих гайдах.',
+                'Gegenstände mit „Nach Werten gewählt“ haben wir nach der Werte-Priorität der Skillung aus Listen anderer Skillungen derselben Guides gewählt.',
+                'Les objets « Choisi selon les stats » ont été choisis par nous, selon la priorité de la spécialisation, dans les listes d’autres spécialisations des mêmes guides.',
+                'Los objetos «Elegido por estadísticas» los elegimos nosotros, por la prioridad de la especialización, de listas de otras en las mismas guías.',
+                'Os itens “Escolhido por atributos” foram escolhidos por nós, pela prioridade da especialização, de listas de outras nos mesmos guias.',
+                'Gli oggetti «Scelto per statistiche» li abbiamo scelti noi, secondo la priorità della specializzazione, da elenchi di altre nelle stesse guide.',
+                'Przedmioty „Dobór według statystyk” wybraliśmy my, według priorytetu specjalizacji, z list innych specjalizacji w tych samych poradnikach.')
 G_TEMP_S = n9('данные беты', 'beta data', 'дані бети', 'Beta-Daten', 'données de la bêta', 'datos de la beta', 'dados da beta', 'dati della beta',
               'dane z bety')
 G_PART_S = n9('неполно', 'incomplete', 'неповно', 'unvollständig', 'incomplet', 'incompleto', 'incompleto', 'incompleto', 'niepełne')
@@ -804,14 +827,18 @@ def gear_html(key, lang, tr, fn, data=None):
                  + (f'<i class="gic" style="--i:{int(it["ic"])}" aria-hidden="true"></i>' if it.get('ic') is not None else '<i class="gic no" aria-hidden="true"></i>')
                  + f'<a class="iq iq{int(it.get("q", 1))}" href="{href}" target="_blank" rel="noopener"'
                  + (f' title="{escape(it["names"]["en"])}"' if name != it['names'].get('en') else '') + f'>{escape(name)}</a>'
-                 + (f'<span class="alt">{escape(stats)}</span>' if stats else '') + '</td>'
+                 + (f'<span class="alt">{escape(stats)}</span>' if stats else '')
+                 + (f'<span class="gpick">{escape(G_PICK[lang])}</span>' if e.get('pick') else '') + '</td>'
                  f'<td data-l="{head[2]}" class="s lv">{lv or "—"}</td>'
                  f'<td data-l="{head[3]}">{where}</td></tr>')
     prov = {it.get('provenance') for _, it in rows}
     slots = len({it['slot'] for _, it in rows})
+    picks = sum(1 for e, _ in rows if e.get('pick'))
     marks = ([_mark(G_TEMP[lang])] if gear_beta(rows) else []) + ([_mark(G_PART[lang].replace('{n}', str(slots)))] if gear_partial(key, data) else [])
+    marks += [_mark(G_PICK_NOTE[lang].replace('{n}', str(picks)).replace('{t}', str(len(rows))))] if picks else []
     day = '.'.join(reversed((data.get('date') or '').split('-')))
     src_line = ' '.join(G_SRC[p][lang].replace('{d}', day) for p in ('client-dump', 'wowhead-forever-guide') if p in prov)
+    src_line += f' {G_SRC_PICK[lang]}' if picks else ''
     btns = (f'<button type="button" data-v="all" aria-pressed="true">{escape(G_ALL[lang])}</button>'
             + ''.join(f'<button type="button" data-v="{x}" aria-pressed="false">{escape(fn[x])}</button>' for x in ('alliance', 'horde')))
     ths = ''.join(f'<th scope="col">{h}</th>' for h in head)
