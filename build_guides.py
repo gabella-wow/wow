@@ -1847,7 +1847,9 @@ def build_page(g, lang, tpl, base_css, sprite, src):
         'PILLS': ' · '.join(E(p, lang) for p in g.get('pills', [])),   # one line of facts under the lead, no badges
         'TOC': toc, 'TOC_GRP': toc_grp, 'BODY': body, 'MORE': more, 'NEXT': build.next_block(g.get('next'), lang, root),
         'SOLO': '' if toc else ' solo', 'MORE_H': (MORE_SITE if section else MORE_H)[lang],
-        'SOURCES': ''.join(f'<li><a href="{u}" target="_blank" rel="noopener">{E(n, lang)}</a></li>' for n, u in g.get('sources', [])),
+        # sources: a Wowhead page is cited, not recommended: nofollow, the reader's way goes to our pages (talents.WH_REL)
+        'SOURCES': ''.join(f'<li><a href="{u}" target="_blank" rel="{talents.WH_REL if "wowhead.com" in u else "noopener"}">{E(n, lang)}</a></li>'
+                           for n, u in g.get('sources', [])),
         'JS': ((hero_js_data + '\n' if js == 'hero' else hero_js(lang) + (build.js_names(DATA[js](src, lang), lang) + '\n' if js in DATA else '') if js in HERO_FOLLOW else build.js_names(DATA[js](src, lang), lang) + '\n' if js in DATA else ref_js(src, lang) + '\n' if js in REF else '') + L(JS[js], lang)) if js else '',
     }
     for k, v in rep.items():                                     # 2) тело

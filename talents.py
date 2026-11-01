@@ -61,9 +61,13 @@ UI = {
                 'fr': 'Comme dans Classic, mis à jour pour Forever après le lancement',
                 'it': 'Come in Classic, aggiorneremo per Forever dopo il lancio', 'pl': 'Jak w Classic, dla Forever zaktualizujemy po starcie',
                 'pt': 'Como no Classic, atualizaremos para o Forever após o lançamento'},
-    'wh': {'ru': 'Открыть в калькуляторе Wowhead', 'en': 'Open in the Wowhead calculator', 'uk': 'Відкрити в калькуляторі Wowhead',
-           'de': 'Im Wowhead-Rechner öffnen', 'es': 'Abrir en la calculadora de Wowhead', 'fr': 'Ouvrir dans le calculateur Wowhead',
-           'it': 'Apri nel calcolatore di Wowhead', 'pl': 'Otwórz w kalkulatorze Wowhead', 'pt': 'Abrir na calculadora do Wowhead'},
+    # The build leads to our calculator (a button); Wowhead is one small line under it to check against, rel="nofollow noopener"
+    'go': {'ru': 'Открыть билд в калькуляторе', 'en': 'Open this build in the calculator', 'uk': 'Відкрити білд у калькуляторі',
+           'de': 'Build im Talentrechner öffnen', 'es': 'Abrir la build en la calculadora', 'fr': 'Ouvrir le build dans le calculateur',
+           'it': 'Apri la build nel calcolatore', 'pl': 'Otwórz build w kalkulatorze', 'pt': 'Abrir a build na calculadora'},
+    'wh': {'ru': 'Сверить у Wowhead', 'en': 'Check on Wowhead', 'uk': 'Звірити на Wowhead', 'de': 'Bei Wowhead abgleichen',
+           'es': 'Comparar en Wowhead', 'fr': 'Comparer sur Wowhead', 'it': 'Confronta su Wowhead', 'pl': 'Sprawdź na Wowhead',
+           'pt': 'Conferir no Wowhead'},
     'perk': {'ru': 'с перком Legacy Talented ({n}/5)', 'en': 'with the Legacy Talented perk ({n}/5)',
              'uk': 'з перком Legacy Talented ({n}/5)', 'de': 'mit dem Legacy-Vorteil Talented ({n}/5)',
              'es': 'con la ventaja Legacy Talented ({n}/5)', 'fr': 'avec l’avantage Legacy Talented ({n}/5)',
@@ -184,7 +188,7 @@ UI = {
            'it': 'Guide alle specializzazioni', 'pl': 'Poradniki specjalizacji'},
 }
 JS_SKIP = ('hint', 'beta', 'classic', 'wh', 'perk', 'bs', 'b_general', 'b_leveling', 'b_dungeons', 'b_raid', 'b_pvp', 'lvh', 'lvnote', 'lvg', 'lvwait',
-           'add', 'del', 'reset', 'share', 'eh', 'eht', 'cm', 'cmt', 'calc', 'ours', 'gd')
+           'add', 'del', 'reset', 'share', 'eh', 'eht', 'cm', 'cmt', 'calc', 'ours', 'gd', 'go')
 EDIT_CAP = 51                              # points at level 60: one per level from 10 (the leveling build above checks the same 51)
 EN_NAMES = ('en', 'uk', 'pl')              # the site keeps English talent names on these pages (content/spec_builds.py)
 WH_LANGS = ('ru', 'de', 'es', 'fr', 'it', 'pt')            # Wowhead's own interface languages (www.wowhead.com/forever/<lang>/…)
@@ -217,6 +221,20 @@ def wh_base(cid, lang):
 
 def wowhead_ids(cid, data, picks, lang, pk):
     return f'{wh_base(cid, lang)}{build_code(data, picks)}_t{pk}'
+
+
+WH_REL = 'nofollow noopener'               # Wowhead is a source to check against, not a page we pass readers and link weight to
+
+
+def go_button(root, cid, code, lang):
+    """The main action of a build: the same build opened in our calculator (talents/<class>/#<code>)."""
+    return f'<p class="tt-go"><a class="btn" href="{root}talents/{cid}/#{code}">{UI["go"][lang]}</a></p>'
+
+
+def wh_link(href, lang, cls=''):
+    """The small «check on Wowhead» line at the bottom of a build (never a button)."""
+    c = f' class="{cls}"' if cls else ''
+    return f'<a{c} href="{escape(href)}" target="_blank" rel="{WH_REL}">{UI["wh"][lang]} ↗</a>'
 
 
 def build_code(data, picks):
@@ -558,13 +576,12 @@ def render(cid, spec, rows, titles, lang, root):
     pk_html = f' <span class="tt-pk">{UI["perk"][lang].format(n=pk)}</span>' if pk else ''
     basis = data.get('basis')                                     # before launch: one line over the tree says where it comes from
     note = f'<p class="tt-note">{UI[basis][lang]} · {day(data["date"], lang)}</p>' if basis in ('beta', 'classic') else ''
-    link = (f'<a href="{escape(wowhead(cid, data, [(r[0], r[1]) for r in rows], lang))}" target="_blank" '
-            f'rel="noopener">{UI["wh"][lang]} ↗</a>')
     code = build_code(data, table_picks(data, [(r[0], r[1]) for r in rows]))
-    calc = f'<a href="{root}talents/{cid}/#{code}">{UI["calc"][lang]}</a>'      # the same build, opened on the calculator page
+    link = wh_link(wowhead(cid, data, [(r[0], r[1]) for r in rows], lang), lang)
     head = (f'<h3 class="tt-oh">{UI["order"][lang]}{"" if basis else " @@BETA@@"}'
-            f'{pk_html}</h3>{_rib(steps, lang)}<p class="tt-ext">{link}{calc}</p>')
+            f'{pk_html}</h3>{_rib(steps, lang)}{go_button(root, cid, code, lang)}<p class="tt-whc">{link}</p>')
     box = (f'<div class="tt" data-c="{cid}" data-l="{lang}" data-sp="{spec}" data-w="{code}" data-wh="{escape(wh_base(cid, lang))}" '
+           f'data-sh="{root}t/{cid}-" '
            f'data-p="{p_attr}"@@B@@ style="--n:{max(data.get("sprite", 0), 2)};--sp:url(@@ROOT@@assets/talents/{cid}.webp{sprite_v(cid)})">')
     hint = f'<div class="tt-card" aria-live="polite"><p class="tt-hint">{UI["hint"][lang]}</p></div>'
     # in a <template>: no dead buttons without the script, and search.py leaves the bar out of the page text
@@ -574,8 +591,8 @@ def render(cid, spec, rows, titles, lang, root):
           f'<div class="tt-md"><button type="button" class="tt-mb" data-m="1" aria-pressed="true">+ {UI["add"][lang]}</button>'
           f'<button type="button" class="tt-mb" data-m="-1" aria-pressed="false">− {UI["del"][lang]}</button></div>'
           f'<button type="button" class="tt-rs">{UI["reset"][lang]}</button>'
-          f'<a class="tt-whl" href="{escape(wh_base(cid, lang))}_t0" target="_blank" rel="noopener">{UI["wh"][lang]} ↗</a>'
           f'<a class="tt-cl" href="{root}talents/{cid}/">{UI["calc"][lang]}</a>'
+          f'{wh_link(wh_base(cid, lang) + "_t0", lang, "tt-whl")}'
           f'<p class="tt-eh"><span class="tt-cm">{UI["eh"][lang]}</span><span class="tt-ct">{UI["eht"][lang]}</span></p></div></div></template>')
     if not extra and LEVEL_SPEC.get(cid) == spec and _level_rows(cid):      # the leveling guide of the class has rows but they do not fit the tree
         note += f'<p class="tt-note">{UI["lvwait"][lang]} <a href="{root}guides/leveling-{cid}/#talents">{UI["lvg"][lang]}</a></p>'
@@ -599,9 +616,9 @@ def render(cid, spec, rows, titles, lang, root):
         wh = wowhead_ids(cid, data, b['picks'], lang, b['pk'])
         ows.append(f'<div class="tt-ow" data-b="{bid}" hidden><p class="tt-note">{UI[b["note"]][lang]}</p>'
                    f'<h3 class="tt-oh">{UI[b["head"]][lang]}</h3>{_rib(b["steps"], lang, "f" + bid)}'
-                   f'<p class="tt-ext"><a href="{escape(wh)}" target="_blank" rel="noopener">{UI["wh"][lang]} ↗</a>'
-                   f'<a href="{root}talents/{cid}/#{bdata[bid]["w"]}">{UI["calc"][lang]}</a>'
-                   f'<a href="{root}guides/leveling-{cid}/#talents">{UI[b["guide"]][lang]}</a></p></div>')
+                   f'{go_button(root, cid, bdata[bid]["w"], lang)}'
+                   f'<p class="tt-ext"><a href="{root}guides/leveling-{cid}/#talents">{UI[b["guide"]][lang]}</a></p>'
+                   f'<p class="tt-whc">{wh_link(wh, lang)}</p></div>')
     b_attr = escape(json.dumps(bdata, ensure_ascii=False, separators=(',', ':')))
     return (f'{box.replace("@@B@@", " data-b=" + chr(34) + b_attr + chr(34))}'
             f'<div class="tt-bs" role="tablist" aria-label="{UI["bs"][lang]}">{"".join(sw)}</div>{note}{ed}'
@@ -623,7 +640,7 @@ def render_calc(cid, specs, titles, lang, root):
     basis = data.get('basis')
     note = f'<p class="tt-note">{UI[basis][lang]} · {day(data["date"], lang)}</p>' if basis in ('beta', 'classic') else ''
     box = (f'<div class="tt calc ed" id="calc" data-c="{cid}" data-l="{lang}" data-sp="{cid}" data-calc="1" data-w="" '
-           f'data-wh="{escape(wh_base(cid, lang))}" data-p="{{}}" style="--n:{max(data.get("sprite", 0), 2)};'
+           f'data-wh="{escape(wh_base(cid, lang))}" data-sh="{root}t/{cid}-" data-p="{{}}" style="--n:{max(data.get("sprite", 0), 2)};'
            f'--sp:url(@@ROOT@@assets/talents/{cid}.webp{sprite_v(cid)})">')
     ed = (f'<div class="tt-ed"><div class="tt-er"><button type="button" class="btn tt-sh">{UI["share"][lang]}</button>'
           f'<button type="button" class="tt-eb" hidden>{UI["ed"][lang]}</button></div><p class="tt-st" role="status"></p><div class="tt-ec">'
@@ -640,10 +657,10 @@ def render_calc(cid, specs, titles, lang, root):
             ours.append(f'<a href="#{code}" data-t="{spec}">{escape(titles.get(spec, spec))}</a>')
     row = f'<nav class="tt-ours" aria-label="{UI["ours"][lang]}"><span>{UI["ours"][lang]}</span>{"".join(ours)}</nav>' if ours else ''
     # the links and the data line under the tree, not over it: on a phone the tree starts on the first screen
-    ext = (f'<p class="tt-ext"><a href="{root}guides/builds-{cid}/">{UI["gd"][lang]}</a>'
-           f'<a class="tt-whl" href="{escape(wh_base(cid, lang))}_t0" target="_blank" rel="noopener">{UI["wh"][lang]} ↗</a></p>')
+    ext = f'<p class="tt-ext"><a href="{root}guides/builds-{cid}/">{UI["gd"][lang]}</a></p>'
     eh = f'<p class="tt-eh"><span class="tt-cm">{UI["eh"][lang]}</span><span class="tt-ct">{UI["eht"][lang]}</span></p>'
-    return f'{box}{ed}{tabs_html}{trees_html}{hint}{row}{ext}{eh}{note}</div>'
+    wh = f'<p class="tt-whc">{wh_link(wh_base(cid, lang) + "_t0", lang, "tt-whl")}</p>'      # the last line of the block
+    return f'{box}{ed}{tabs_html}{trees_html}{hint}{row}{ext}{eh}{note}{wh}</div>'
 
 
 CSS = """/* Talent trees (talents.py): three trees in a row when there is room, else the spec's tree and tabs; icons from one sprite */
@@ -686,6 +703,11 @@ CSS = """/* Talent trees (talents.py): three trees in a row when there is room, 
 .tt-note { margin: 0; color: var(--muted); font-size: var(--fs-13); }
 .tt-pk { color: var(--muted); font-size: var(--fs-13); font-weight: 400; }
 .tt-ext { display: flex; flex-wrap: wrap; gap: 4px 18px; margin: 0; font-size: var(--fs-14); }
+.tt-go { margin: 0; }
+.tt-go .btn { min-height: 48px; padding: 0 22px; font-size: var(--fs-16); white-space: normal; text-align: center; }
+.tt-whc { margin: 0; font-size: var(--fs-13); }
+.tt-whc a { color: var(--muted); }
+.tt-whc a:hover { color: var(--fg); }
 .tt-bs { display: flex; flex-wrap: wrap; gap: 4px; width: fit-content; max-width: 100%; padding: 4px; border: 1px solid var(--line); border-radius: 8px; }
 .tt-b { min-height: 44px; padding: 0 16px; border: 0; border-radius: 6px; background: transparent; color: var(--muted); cursor: pointer; font: inherit; font-weight: 600; }
 .tt-b:hover { background: var(--zebra); }
@@ -723,7 +745,8 @@ CSS = """/* Talent trees (talents.py): three trees in a row when there is room, 
 .tt-md { display: flex; gap: 4px; padding: 4px; border: 1px solid var(--line); border-radius: 8px; }
 .tt-md .tt-mb { border: 0; color: var(--muted); }
 .tt-md .tt-mb[aria-pressed="true"] { background: var(--seg-on); color: var(--gold-2); }
-.tt-whl, .tt-cl { font-size: var(--fs-14); }
+.tt-cl { font-size: var(--fs-14); }
+.tt-whl { font-size: var(--fs-13); color: var(--muted); }
 .tt-eb[hidden] { display: none; }
 /* The calculator page (render_calc): our builds of the class as a row of plain buttons under the tree, the spec guide at the end */
 .tt-ours { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin: 0; }
@@ -741,6 +764,7 @@ CSS = """/* Talent trees (talents.py): three trees in a row when there is room, 
 @media (prefers-reduced-motion: no-preference) { .tt.ed .tt-t { transition: border-color .12s; } }
 @container (max-width: 759px) {
   .tt-er > * { flex: 1 1 100%; }
+  .tt-go .btn { width: 100%; }
   .tt-tabs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .tt-tab { padding: 4px 2px; font-size: min(var(--fs-14), 3.5vw); line-height: 1.2; hyphens: auto; overflow-wrap: anywhere; }
   .tt-tab span { display: block; margin: 2px 0 0; white-space: nowrap; }
@@ -931,12 +955,22 @@ JS = r"""<script>
         ec.querySelectorAll('.tt-mb').forEach(function (x) { x.setAttribute('aria-pressed', x === m ? 'true' : 'false'); });
       } else if (e.target.closest('.tt-rs')) { S = {}; update(); cur = null; card.innerHTML = hint; }
     });
-    /* «Copy build link»: the build on screen (yours in the editor, else the build of ours chosen above the tree) as #<spec>/<code>
-       (#<code> on the calculator page); not location.href: replaceState can be throttled */
+    /* the spec a build belongs to: the guide's section, on the calculator page the tree with most points */
+    function specOf(code) {
+      if (!calc) return w.dataset.sp;
+      var P2 = decode(code), best = 0, at = -1;
+      D.o.forEach(function (ids, i) { var n = 0; ids.forEach(function (k) { n += P2[k] || 0; }); if (n > best) { best = n; at = i; } });
+      return at < 0 ? '' : w.querySelectorAll('.tt-tree')[at].dataset.t;
+    }
+    /* «Copy build link»: the build on screen (yours in the editor, else the build of ours chosen above the tree) as the share page
+       t/<class>-<spec>/#<code>: a chat shows the class and spec in its card, a visitor lands in the calculator on the same build.
+       An empty build keeps the page's own address; not location.href: replaceState can be throttled */
     ed.querySelector('.tt-sh').addEventListener('click', function () {
       var t = bs && bs.querySelector('.tt-b[aria-selected="true"]');
       var code = S ? encode(S) : t && t.dataset.b !== 'general' ? B[t.dataset.b].w : w.dataset.w;
-      var url = location.href.split('#')[0] + (calc ? (code ? '#' + code : '') : '#' + w.dataset.sp + '/' + code);
+      var sp = code && w.dataset.sh ? specOf(code) : '';
+      var url = sp ? new URL(w.dataset.sh + sp + '/#' + code, location.href).href
+        : location.href.split('#')[0] + (calc ? (code ? '#' + code : '') : '#' + w.dataset.sp + '/' + code);
       var ok = function () { st.textContent = U.copied; };
       var no = function () {                         /* old browsers and http: a hidden field and the copy command */
         var a = document.createElement('textarea'), done = false;
