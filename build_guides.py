@@ -15,6 +15,7 @@ import langs
 from content import hero as HERO, looks as LK
 from content import spec_cheats
 from content import dungeon_pages
+from content import play_card
 from content.guides import BUILDS_HUB_TILE, CLASS_HUB_TILE, GUIDES, HUB, HUBS, NEWS, NEWS_SO, NOT_FOUND, ORDER, PAGES, PLAY_MILESTONES, PLAY_TX
 
 HERE = build.HERE
@@ -976,6 +977,8 @@ def play_data(src, lang):
         'rn': {r['id']: build.tr(r['n'], lang) for r in races},
         'cn': {c['id']: build.tr(c['n'], lang) for c in build.CLASSES},
         'face': face, 'col': build.COLOR, 'pages': pages,
+        # «My class at level N» (content/play_card.py): talents, abilities, gear and dungeon pages from the data the guides show
+        'card': play_card.data(lang, L, build.tr, GUIDES, slugs, HERO.SPEC_IDS, play_card.spec_roles_of(home_src()), dungeon_pages.table_links()),
     }
     return dungeons_data(src) + '\nconst P = ' + json.dumps(data, ensure_ascii=False) + ';\n'
 
@@ -1021,6 +1024,7 @@ def play_body(lang, root):
   <div class="pfac" id="pFac" role="group" aria-label="{x("fac")}">{fac}</div>
   <div class="plv"><button type="button" class="lvb" id="lvDown" aria-label="{x("lvDown")}">−</button><input id="lvIn" type="number" min="1" max="60" step="1" inputmode="numeric" enterkeyhint="done" placeholder="—" aria-label="{x("lvIn")}"><button type="button" class="lvb" id="lvUp" aria-label="{x("lvUp")}">+</button></div>
   <div class="plvq" id="lvQuick" role="group" aria-label="{x("lvQuick")}">{"".join(f'<button type="button" class="pill" data-lv="{n}" aria-pressed="false">{n}</button>' for n in (10, 20, 30, 40, 50, 60))}</div>
+  <section class="pcard" id="pCard" aria-labelledby="hCard" hidden></section>
   <div id="pNow"></div>
   {render_block('tip', tip, lang, root)}
   <a class="pmore" href="{root}guides/leveling/#route">{x("route")}</a>
@@ -1118,6 +1122,80 @@ function renderWho(m) {
   $('#pLinks').innerHTML = L.map(([u, t]) => `<a href="${HOME}${u}">${esc(t)}</a>`).join('');
   $('#pLinks').hidden = !L.length;
 }
+/* «My class at level N» (P.card, content/play_card.py — all of it read from the guides' data): the talents taken by N and the next
+   ones, trainer abilities around N, gear 16–30 wearable at N, the dungeon pages near N with tips by role. The spec comes from the
+   hero; no spec: the class part (abilities, dungeons) and the way to pick one. Under the level buttons, so ± never moves them */
+const C = P.card, CT = C.tx;
+const fmtC = (s, o) => s.replace(/\{(\w)\}/g, (x, k) => (k in o ? o[k] : x));
+const spanC = (a, b) => a >= b ? String(a) : `${a}–${b}`;
+const liC = (lv, up, main, sub) => `<li${up ? ' class="up"' : ''}><span class="pcl-l">${lv}</span><span>${main}${sub ? `<small>${sub}</small>` : ''}</span></li>`;
+const moreC = (u, t) => u ? `<a href="${HOME}${u}">${esc(t)}</a>` : '';
+function cardTal(sp, lv) {
+  const top = sp.top, at = Math.min(lv, top), got = new Map();
+  let free = 0;
+  sp.t.forEach(s => {   // [first, last, name ('' = your pick), points, rank after the step, max rank]
+    if (s[0] > at) return;
+    const n = Math.min(s[1], at) - s[0] + 1;
+    if (!s[2]) { free += n; return; }
+    got.set(s[2], [s[4] - (s[3] - n), s[5]]);
+  });
+  let h = '';
+  if (lv < sp.f) h += `<p class="pcn">${esc(fmtC(CT.talFirst, { n: sp.f }))}</p>`;
+  else {
+    const pts = at - sp.f + 1, list = [...got].map(([n, r]) => `${esc(n)} ${r[0]}/${r[1]}`).concat(free ? [`${esc(CT.free)} ×${free}`] : []);
+    h += `<p class="pct"><b>${esc(fmtC(CT.talTo, { n: at }))} · ${pts}:</b> ${list.join(', ')}</p>`;
+  }
+  const nx = sp.t.filter(s => s[1] > lv).slice(0, 2);
+  if (nx.length) h += `<ul class="pcl">${nx.map(s => liC(spanC(Math.max(s[0], lv + 1), s[1]), true, s[2] ? `${esc(s[2])} ${s[4]}/${s[5]}` : esc(CT.free), '')).join('')}</ul>`;
+  const note = [];
+  if (lv > top && top < 60) note.push(CT.talWait);
+  if (sp.k === 'lv' && lv > 30) note.push(CT.lvnote);
+  if (sp.k === 'gen') note.push(CT.beta + (sp.pk ? ' · ' + fmtC(CT.perk, { n: sp.pk }) : ''));
+  return h + (note.length ? `<p class="pcn">${note.map(esc).join(' ')}</p>` : '');
+}
+function cardAb(c, lv) {
+  const up = c.ab.filter(r => r[0] > lv).slice(0, 3), past = c.ab.filter(r => r[0] <= lv);
+  const rows = past.slice(-Math.max(1, 4 - up.length)).concat(up);   // 4 lines: the last one taken, the next ones; «why» for the next ones only
+  return `<ul class="pcl">${rows.map(r => liC(r[0], r[0] > lv, esc(r[1]), r[0] > lv && r[2] !== '—' ? esc(r[2]) : '')).join('')}</ul><p class="pcn">${esc(CT.abBeta)}</p>`;
+}
+function cardGear(sp, lv, fac) {
+  if (!sp.g) return `<p class="pcn">${esc(CT.gearHole)}</p>`;
+  const its = sp.g.filter(g => !g[1] || g[1] === fac).map(g => [g, C.it[g[0]]]);
+  const li = ([g, it]) => liC(it[0], it[0] > lv, `<b class="iq${it[3]}">${esc(it[2])}</b>`, esc([it[1], g[2]].filter(Boolean).join(' · ')));
+  let h;
+  if (lv < 16) {
+    const soon = its.slice().sort((a, b) => a[1][0] - b[1][0]).slice(0, 3);
+    h = soon.length ? `<p class="pcn">${esc(fmtC(CT.gearSoon, { n: soon[0][1][0] }))}</p><ul class="pcl">${soon.map(li).join('')}</ul>` : '';
+  } else {
+    const cap = Math.min(lv, 30), best = new Map();
+    its.forEach(x => { const k = x[1][1]; if (x[1][0] <= cap && (!best.has(k) || best.get(k)[1][0] < x[1][0])) best.set(k, x); });
+    const now = [...best.values()].sort((a, b) => b[1][0] - a[1][0]).slice(0, 4);
+    h = now.length ? `<ul class="pcl" aria-label="${esc(CT.gearNow)}">${now.map(li).join('')}</ul>` : `<p class="pcn">${esc(fmtC(CT.gearNone, { n: cap }))}</p>`;
+  }
+  return h + `<p class="pcn">${esc(CT.gearBeta)}${lv > 30 ? ' ' + esc(CT.gearUp) : ''}</p>`;
+}
+function cardDg(sp, m, lv, fac) {
+  const R = ['tank', 'heal', 'dps'], role = sp ? (sp.r.includes(m.role) ? m.role : sp.r[0]) : R.includes(m.role) ? m.role : '';
+  const near = DUNGEONS.map((d, i) => [d, i]).filter(([d, i]) => C.dg[i] && nearLvl(d, lv) && (!d[6] || d[6] === fac)).slice(0, 3);
+  const r = role ? `${esc(fmtC(CT.role, { r: CT.roles[role] }))} ` : '';
+  return near.length ? `<p class="pct">${r}${esc(CT.dgTips)} ${near.map(([d, i]) => `<a href="${HOME}${C.dg[i]}">${esc(d[0])}</a> <span class="pcl-l">${lvRange(d)}</span>`).join(', ')}</p>`
+    : `<p class="pcn">${r}${esc(CT.dgNone)}</p>`;
+}
+function renderCard(m, lv, fac) {
+  const box = $('#pCard'), h = readHero(), c = h && C.cls[h.cls];
+  if (!c || !lv) { box.hidden = true; box.innerHTML = ''; return; }
+  const sp = h.spec ? c.sp[h.spec] : null, part = (t, body, more) => `<div class="pcx"><div class="pch"><h4>${esc(t)}</h4>${more}</div>${body}</div>`;
+  /* with a spec the card's own links (talents, abilities, gear, the class guide in its head) replace the class link row above */
+  let x = `<div class="pch"><h3 id="hCard">${esc(fmtC(CT.head, { c: [h.clsN, h.specN].filter(Boolean).join(' · '), n: lv }))}</h3>${sp && (P.pages[h.cls] || [])[0] ? moreC(`classes/${h.cls}/`, TX.clsGuide) : ''}</div>`;
+  if (sp) $('#pLinks').hidden = true;
+  if (sp) x += part(CT.tal, cardTal(sp, lv), moreC(sp.tU, CT.talAll));
+  x += part(CT.ab, cardAb(c, lv), moreC(c.abU, CT.abAll));
+  if (sp) x += part(CT.gear, cardGear(sp, lv, fac), moreC(sp.gU, CT.gearAll));
+  else x += `<div class="pcx"><p class="pcn">${esc(CT.noSpec)}</p><a class="btn ghost" href="${HOME}character/" data-hero-open>${esc(CT.pickSpec)}</a></div>`;
+  x += part(CT.dg, cardDg(sp, m, lv, fac), '');
+  box.innerHTML = x;
+  box.hidden = false;
+}
 function renderLvl() {
   const m = rd(MEKEY), lv = lvOf(m), raceF = P.racef[m.race], fac = raceF || ps.fac;
   renderWho(m);
@@ -1132,6 +1210,7 @@ function renderLvl() {
   document.querySelectorAll('#pFac button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.f === fac)));
   if (document.activeElement !== $('#lvIn')) $('#lvIn').value = lv || '';
   document.querySelectorAll('#lvQuick button').forEach(b => b.setAttribute('aria-pressed', String(+b.dataset.lv === lv)));
+  renderCard(m, lv, fac);
   if (!lv) {
     $('#pNow').innerHTML = `<p class="pnote">${esc(TX.needLvl)}</p>`;
     $('#pDg').innerHTML = `<li class="pnote">${esc(TX.needLvl)}</li>`;
