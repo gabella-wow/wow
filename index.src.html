@@ -861,7 +861,7 @@ ul.verdict li.warn::before { content: "!"; color: var(--horde); left: 7px; }
 /* Comparison tables: classes and races, one row per entry, whole row opens its page */
 .cmp { display: grid; gap: 6px; container-type: inline-size; }
 .cmp-h, .cmp-row { display: grid; gap: 22px; align-items: center; }
-.cmp.cls .cmp-h, .cmp.cls .cmp-row { grid-template-columns: minmax(276px, 1.2fr) 122px 190px minmax(0, 1.9fr) 22px; }
+.cmp.cls .cmp-h, .cmp.cls .cmp-row { grid-template-columns: minmax(280px, 1fr) 114px 146px minmax(0, 2fr) 22px; gap: 16px; }   /* the raid note keeps ~180 px beside its chevron at 880 px */
 .cmp.rac .cmp-h, .cmp.rac .cmp-row { grid-template-columns: minmax(200px, .9fr) 346px minmax(0, 2.2fr) 22px; }
 .cmp-h { padding: 0 22px 4px; font-size: var(--fs-13); font-weight: 600; color: var(--muted); }
 .cmp-h .rdots { color: var(--muted); }
@@ -888,6 +888,22 @@ ul.verdict li.warn::before { content: "!"; color: var(--horde); left: 7px; }
 .cmp-row:hover .go { color: var(--gold-2); transform: translateX(3px); }
 .cmp-txt { font-size: var(--fs-16); color: var(--ink-2); line-height: 1.5; }
 :root[data-theme="light"] .cmp-txt { color: var(--fg); }
+/* Class rows: the name is the link and its zone covers the card; the raid note is held to 3 lines in a box of 3 lines,
+   so every card has the same height; the chevron (a button beside the link, not inside it) shows the whole note */
+.cmp-a { color: inherit; text-decoration: none; }
+.cmp-a::before { content: ""; position: absolute; inset: 0; z-index: 1; }
+.cmp-a:focus-visible { outline: none; }
+.cmp-row:has(.cmp-a:focus-visible) { outline: 2px solid var(--gold-2); outline-offset: 2px; }
+.cmp.cls .rdots { position: relative; z-index: 2; }   /* the role tooltips stay reachable over the link zone */
+.cmp-d { display: grid; grid-template-columns: minmax(0, 1fr) 30px; gap: 4px; align-items: center; min-height: 4.5em; font-size: var(--fs-16); line-height: 1.5; }
+.cmp-d .cmp-txt { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; line-clamp: 3; overflow: hidden; }
+.cmp-row.open .cmp-d .cmp-txt { display: block; -webkit-line-clamp: unset; line-clamp: none; overflow: visible; }
+.cmp-more { position: relative; z-index: 2; display: grid; place-items: center; width: 30px; height: 44px; padding: 0; border: 1px solid transparent; border-radius: 8px; background: transparent; color: var(--muted); cursor: pointer; transition: color .2s, border-color .2s, background-color .2s; }
+.cmp-more::before { content: ""; width: 8px; height: 8px; margin-top: -4px; border: solid currentColor; border-width: 0 2px 2px 0; transform: rotate(45deg); transition: transform .2s var(--ease), margin .2s; }
+.cmp-more[aria-expanded="true"]::before { margin-top: 4px; transform: rotate(-135deg); }
+.cmp-more:hover { color: var(--gold-2); border-color: var(--pline); background: color-mix(in srgb, var(--fg) 5%, transparent); }
+.cmp-more:focus-visible { outline: 2px solid var(--gold-2); outline-offset: 1px; color: var(--gold-2); }
+.cmp-more.fits { visibility: hidden; }   /* the note fits in 3 lines: nothing to show, the place stays (no shift) */
 .rdots { display: grid; grid-template-columns: repeat(3, 34px); gap: 6px; }
 .rdot { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: color-mix(in srgb, var(--fg) 4%, transparent); color: color-mix(in srgb, var(--fg) 22%, transparent); }
 .rdot .ri { width: 16px; height: 16px; margin: 0; }
@@ -1021,6 +1037,11 @@ dialog.sheet::backdrop { background: rgba(0,0,0,.6); }
   .cmp-row > .rdots { grid-column: 2; grid-row: 1; }
   .cmp-row > .go { grid-column: 3; grid-row: 1; }
   .cmp-row::before { width: 80%; }
+}
+@container (max-width: 560px) {   /* class rows on a phone: the spec names take the whole width under the face and the name, in a box of 2 lines, so every card is one height */
+  .cmp.cls .cmp-id { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 6px 12px; align-items: center; }
+  .cmp.cls .cmp-id > span { display: contents; }
+  .cmp.cls .cmp-id small { grid-column: 1 / -1; margin: 0; min-height: 2.8em; }
 }
 @media (max-width: 719px) {
   :root { --top: 56px; --fs-h2: var(--fs-28); --fs-hero: var(--fs-40); }
@@ -1502,13 +1523,24 @@ function lvlMeter(c) {
 function renderClassRef() {
   const roles = ['tank', 'heal', 'dps'];
   const head = `<div class="cmp-h" aria-hidden="true"><span>Класс</span><span class="rdots">${roles.map(x => `<span title="${ROLE_RU[x]}">${ri(x)}</span>`).join('')}</span><span>Прокачка</span><span>В рейде</span><span></span></div>`;
-  $('#classRef').innerHTML = head + CLASSES.map(c => `<a class="cmp-row" href="${HOME}classes/${c.id}/" style="--cc:${CCOL[c.id]};--art:url('@@ROOT@@assets/art/${window.GabellaPor ? GabellaPor.id(c.id) : c.id}-360.webp${PV}')">
-    <span class="cmp-id">${face(c.id, CCOL[c.id])}<span><b>${esc(c.n)}</b><small>${c.specs.map(s => esc(s[0])).join(' · ')}</small></span></span>
+  const box = $('#classRef');
+  box.innerHTML = head + CLASSES.map(c => `<div class="cmp-row" style="--cc:${CCOL[c.id]};--art:url('@@ROOT@@assets/art/${window.GabellaPor ? GabellaPor.id(c.id) : c.id}-360.webp${PV}')">
+    <span class="cmp-id">${face(c.id, CCOL[c.id])}<span><b><a class="cmp-a" href="${HOME}classes/${c.id}/">${esc(c.n)}</a></b><small>${c.specs.map(s => esc(s[0])).join(' · ')}</small></span></span>
     <span class="rdots" role="img" aria-label="Роли: ${c.roles.map(x => ROLE_RU[x]).join(', ')}">${roles.map(x => { const on = c.roles.includes(x), q = c.roles.includes(x + '?'); return `<span class="rdot${on ? ' on' : q ? ' q' : ''}" title="${ROLE_RU[q ? x + '?' : x]}">${ri(x)}</span>`; }).join('')}</span>
     ${lvlMeter(c)}
-    <span class="cmp-txt">${esc(c.raid)}</span>
+    <span class="cmp-d"><span class="cmp-txt" id="crt-${c.id}">${esc(c.raid)}</span><button type="button" class="cmp-more" aria-expanded="false" aria-controls="crt-${c.id}" aria-label="Показать полностью" title="Показать полностью"></button></span>
     <span class="go" aria-hidden="true"><svg class="ico"><use href="#i-arrow"/></svg></span>
-  </a>`).join('');
+  </div>`).join('');
+  /* the chevron: hidden (its place kept) where the note fits in 3 lines; checked again on resize and when the fonts arrive */
+  const fit = () => box.querySelectorAll('.cmp-row:not(.open) .cmp-txt').forEach(t => t.nextElementSibling.classList.toggle('fits', t.scrollHeight <= t.clientHeight + 1));
+  fit();
+  if (!box.dataset.more) {
+    box.dataset.more = '1';
+    box.addEventListener('click', e => { const b = e.target.closest('.cmp-more'); if (!b) return;
+      const open = b.getAttribute('aria-expanded') !== 'true'; b.setAttribute('aria-expanded', open); b.closest('.cmp-row').classList.toggle('open', open); });
+    let q = 0; addEventListener('resize', () => { cancelAnimationFrame(q); q = requestAnimationFrame(fit); });
+    if (document.fonts) document.fonts.ready.then(fit);
+  }
 }
 
 function renderRaceRef() {
