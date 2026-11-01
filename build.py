@@ -1208,6 +1208,35 @@ def fresh(lang):
                    for d, t, u in items[:3])
 
 
+LAUNCH = json.load(open(os.path.join(HERE, 'data', 'launch.json'), encoding='utf-8'))   # the launch day switch (data/launch.json)
+# The card: where to check the servers and the login queue. No live numbers: the page it opens lists Blizzard's own channels only.
+LAUNCH_TX = {
+    'ru': ('Серверы и очередь', 'Статус — только каналы Blizzard'),
+    'en': ('Servers and queue', 'Status: Blizzard channels only'),
+    'uk': ('Сервери і черга', 'Статус — лише канали Blizzard'),
+    'de': ('Server und Warteschlange', 'Status: nur Kanäle von Blizzard'),
+    'fr': ('Serveurs et file de connexion', 'Statut : canaux Blizzard uniquement'),
+    'es': ('Servidores y cola de acceso', 'Estado: solo canales de Blizzard'),
+    'pt': ('Servidores e fila de entrada', 'Status: só canais da Blizzard'),
+    'it': ('Server e coda d’accesso', 'Stato: solo canali Blizzard'),
+    'pl': ('Serwery i kolejka', 'Status: tylko kanały Blizzarda'),
+}
+# shown by the reader's clock inside [from, until); runs right after the card, before the first paint (no layout shift)
+LAUNCH_JS = ("<script>(a => { const n = Date.now(); a.hidden = !(n >= Date.parse(a.dataset.from) && n < Date.parse(a.dataset.until)); })"
+             "(document.currentScript.previousElementSibling);</script>")
+
+
+def launch_card(lang, root=''):
+    """Launch day card «Серверы и очередь» -> guides/server-status/ (home hero, Launch day guide head), or '' while
+    data/launch.json has status_card off. In the page it stays hidden outside the from–until window of the config."""
+    if not LAUNCH.get('status_card'):
+        return ''
+    title, sub = LAUNCH_TX[lang]
+    return (f'<a class="lstat" href="{root}guides/server-status/" data-from="{esc(LAUNCH["from"])}" data-until="{esc(LAUNCH["until"])}" hidden>'
+            f'<span class="lst-t"><b>{esc(title)}</b><span>{esc(sub)}</span></span>'
+            '<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>' + LAUNCH_JS)
+
+
 DATA_SRC = ('content', 'i18n/names.json')   # the game data of the site: its last commit dates the «Данные: … · обновлено» home line
 
 
@@ -1250,6 +1279,7 @@ def build_home(lang, src):
     src = chrome(src, tab='', home='')
     html, missing = translate(src, lang)
     html = html.replace('@@FRESH@@', fresh(lang)).replace('@@DATA_UPD@@', data_updated())
+    html = html.replace('\n    @@LAUNCH@@', ('\n    ' + launch_card(lang)) if LAUNCH.get('status_card') else '', 1)
     html = sleep_art(html).replace('<b>Gruppenplaner</b>', '<b>Gruppen&shy;planer</b>')   # 320 px tile: a hyphen, not «Gruppenplane / r»
     html = tod.apply(html, lang, amb=True)   # the hero in the reader's time of day (tod.py)
     here = page_dir(lang)

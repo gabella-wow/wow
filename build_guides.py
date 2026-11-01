@@ -1862,6 +1862,8 @@ def build_page(g, lang, tpl, base_css, sprite, src):
         html = re.sub(r'(<p class="gfacts">.*?</p>)', lambda m: m[1] + cpick(lang, root, E(g['title'], lang), 'guides/builds-{}/'), html, count=1, flags=re.S)
     elif g['slug'].startswith('spec-'):                           # phones: the parts of a spec sheet as one row under the lead (gjump)
         html = re.sub(r'(<p class="gfacts">.*?</p>)', lambda m: m[1] + spec_jump(g, lang), html, count=1, flags=re.S)
+    elif g['slug'] == 'launch-day' and build.LAUNCH.get('status_card'):   # launch day: the server status card under the facts (data/launch.json)
+        html = re.sub(r'(<p class="gfacts">.*?</p>)', lambda m: m[1] + build.launch_card(lang, root), html, count=1, flags=re.S)
     if g.get('compact') is True:
         html = html.replace('</body>', jscript + '</body>', 1)
     html = build.set_updated(html, sub)
