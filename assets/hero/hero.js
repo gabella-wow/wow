@@ -27,6 +27,15 @@
   const specIx = h => D.sid[h.cls].indexOf(h.spec);
   // a class face: the portrait of side f (the best race of that side, build.portraits), else of the reader's side (build.por_js)
   const face = (id, f) => `${ROOT}assets/art/${window.GabellaPor ? GabellaPor.id(id, f || undefined) : id}-face.webp${PV}`;
+  /* the hero's own face (as play/): only a picture drawn for this very race and class (<class>-<race>-face.webp, build.pair_faces);
+     none drawn — the neutral class badge (class colour + role icon), never another race. FM: f = the pairs, c = class colours */
+  const FM = /*FACES*/{"f":{"dwarf.shaman":"shaman-dwarf","gnome.mage":"mage-gnome","gnome.priest":"priest-gnome","gnome.warlock":"warlock-gnome","human.paladin":"paladin-human","human.warrior":"warrior-human","nightelf.druid":"druid-nightelf","nightelf.hunter":"hunter-nightelf","nightelf.rogue":"rogue-nightelf","orc.hunter":"hunter-orc","orc.mage":"mage-orc","orc.rogue":"rogue-orc","orc.shaman":"shaman-orc","orc.warlock":"warlock-orc","orc.warrior":"warrior-orc","tauren.druid":"druid-tauren","undead.paladin":"paladin-undead","undead.priest":"priest-undead"},"c":{"warrior":"#c79c6e","paladin":"#f58cba","hunter":"#abd473","rogue":"#fff569","priest":"#e8e8e8","shaman":"#2f8cf0","mage":"#40c7eb","warlock":"#8788ee","druid":"#ff7d0a"}};
+  function heroFace(h, size, cls) {
+    const n = h && FM.f[h.race + '.' + h.cls];
+    if (n) return `<img${cls ? ` class="${cls}"` : ''} src="${ROOT}assets/art/${n}-face.webp${PV}" alt="" width="${size}" height="${size}">`;
+    const ico = ['tank', 'heal', 'dps'].includes(h && h.role) ? h.role : 'user';
+    return `<span class="hface${cls ? ' ' + cls : ''}" style="--cc:${FM.c[h && h.cls] || ''}"><svg class="ico" aria-hidden="true"><use href="#i-${ico}"/></svg></span>`;
+  }
   const bestOf = (c, f, s) => { const b = (D.best[c] || {})[f]; return b ? (b[s] || b['*']) : null; };
 
   /* ---------- the top-bar button: a reader without a login ---------- */
@@ -38,7 +47,7 @@
     const h = read();
     btn.href = HOME + 'character/';
     btn.classList.add('herobtn');
-    btn.innerHTML = h && h.cls && /^\w+$/.test(h.cls) ? `<img src="${face(h.cls)}" alt="" width="30" height="30">` : '<svg class="ico" aria-hidden="true"><use href="#i-user"/></svg>';
+    btn.innerHTML = h && FM.c[h.cls] ? heroFace(h, 30) : '<svg class="ico" aria-hidden="true"><use href="#i-user"/></svg>';
     btn.onclick = e => { e.preventDefault(); open(); };
     if (D) { const t = valid(h) ? fill(D.tx.yourCls, { s: D.cn[h.cls] }) : D.tx.collect; btn.setAttribute('aria-label', t); btn.title = t; }
     btn.setAttribute('aria-haspopup', 'dialog');
@@ -144,7 +153,7 @@
     const facts = [`<span><b>${esc(T.profsL)}:</b> ${pr.slice(0, -1).map(x => `${esc(x[0])}: ${esc(x[1])}`).join('. ')}. <a href="${HOME}guides/professions/#pairs=${h.cls}">${esc(T.pairs)}</a></span>`,
       `<a href="${HOME}guides/launch-checklist/">${esc(fill(T.day1n, { n: day1(), t: D.ck }))}</a>`];
     if (r) facts.push(`<span>${esc(T.resetH)} · ${esc(T.regs[h.reg])}: ${esc(fill(T.resetIn, { s: leftTxt(r - new Date()) }))}</span>`);
-    box.innerHTML = `<div class="mh frame" style="--cc:${D.color[h.cls]}"><img class="mh-face" src="${face(h.cls, raceOf(h.race)[1])}" alt="" width="96" height="96">`
+    box.innerHTML = `<div class="mh frame" style="--cc:${D.color[h.cls]}">${heroFace(h, 96, 'mh-face')}`
       + `<div class="mh-t"><h2>${esc(fill(T.yourCls, { s: D.cn[h.cls] }))}</h2><p class="mh-s">${esc(meta)}</p></div>`
       + `<button type="button" class="mh-ch" data-hero-open>${esc(T.change)}</button>`
       + `<nav class="mh-b" aria-label="${esc(fill(T.yourCls, { s: D.cn[h.cls] }))}">${a(`guides/builds-${h.cls}/${i >= 0 ? '#' + h.spec : ''}`, T.bTalents, ' ')}${a('play/', T.bLevel)}`

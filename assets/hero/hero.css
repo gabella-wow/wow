@@ -1,6 +1,12 @@
 /* My character (hero.js): the top-bar face, the switch sheet and the home block «Your <class>». Site tokens, no badges. */
 .herobtn img { width: 30px; height: 30px; border-radius: 50%; object-fit: cover; display: block; }
-.herobtn:has(img) { padding: 0; overflow: hidden; }
+.herobtn:has(img), .herobtn:has(.hface) { padding: 0; overflow: hidden; }
+/* no picture of the hero's race and class: the class badge (class colour + role icon), never another race's face */
+.hface { display: grid; place-items: center; border-radius: 50%; box-sizing: border-box; border: 1.5px solid var(--cc, var(--line)); background: color-mix(in srgb, var(--cc, var(--panel-2)) 22%, var(--panel-2)); color: var(--cc, var(--muted)); }
+.herobtn .hface { width: 30px; height: 30px; }
+.herobtn .hface .ico { width: 16px; height: 16px; }
+span.mh-face { border: 0; }
+span.mh-face .ico { width: 44%; height: 44%; }
 
 dialog.hsheet { border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px 20px; width: min(560px, 94vw); max-height: 88dvh; overflow: auto; background: var(--rail); color: var(--fg); }
 dialog.hsheet::backdrop { background: rgba(0,0,0,.6); }

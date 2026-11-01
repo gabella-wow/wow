@@ -786,6 +786,16 @@ def portraits():
     return _POR
 
 
+def pair_faces():
+    """The face of a hero: only a picture drawn for this very race and class, {"<race>.<class>": "<class>-<race>"} for each
+    pair the race can play that has assets/art/<class>-<race>-face.webp. No pair drawn: no key, the page draws the neutral
+    class badge (class colour + role icon), never another race (the bare <class>-face or the race art). The same map as
+    P.face of play/ (build_guides.play_data); hero.js gets it in /*FACES*/ (art_version), tests/test_hero_button_portrait.py."""
+    race_sides()
+    d = os.path.join(HERE, 'assets', 'art')
+    return {f'{r["id"]}.{c}': f'{c}-{r["id"]}' for r in _RACES for c in r['can'] if os.path.isfile(os.path.join(d, f'{c}-{r["id"]}-face.webp'))}
+
+
 def race_sides():
     if not _RACES:
         _RACES.extend(parse_races(open(os.path.join(HERE, 'index.src.html'), encoding='utf-8').read()))
@@ -978,10 +988,12 @@ def art_version():
                                                           if f"'{f.rsplit('.', 1)[0]}'" in html or f'"{f.rsplit(".", 1)[0]}"' in extra}, separators=(',', ':'))
     # scripts of assets/ draw portraits and scenes by name too: me.js (the small portrait), radio.js (the cover is the art of a
     # station, named in stations.json). They are hashed after this pass (me_version, radio_version).
+    faces = json.dumps({'f': dict(sorted(pair_faces().items())), 'c': COLOR}, separators=(',', ':'))
     for js, named in (('me/me.js', ''), ('hero/hero.js', ''), ('radio/radio.js', open(os.path.join(HERE, 'assets', 'radio', 'stations.json'), encoding='utf-8').read())):
         p = os.path.join(HERE, 'assets', js)
         was = open(p, encoding='utf-8').read()
         new = re.sub(r"/\*PV\*/'[^']*'", f"/*PV*/'{pv}'", re.sub(r'/\*ARTV\*/\{[^}]*\}', lambda _: artv(was, named), was))
+        new = re.sub(r'/\*FACES\*/\{"f":\{[^}]*\},"c":\{[^}]*\}\}', lambda _: '/*FACES*/' + faces, new)   # hero.js: the hero's own face
         if new != was:
             open(p, 'w', encoding='utf-8', newline='\n').write(new)
     n = 0
