@@ -182,9 +182,7 @@ def clink(cid, name, href, spec=''):
 def face_img(cid):
     """The round face of a class: the portrait of the reader's side (build.portraits; the Alliance one in the page,
     GabellaPor swaps it for the Horde before it loads, build.por_js)."""
-    a = build.portraits()[cid]['alliance']
-    return (f'<img src="@@ROOT@@assets/art/{a}-face.webp" data-por-src="@@ROOT@@assets/art/{{{cid}}}-face.webp"'
-            ' width="160" height="160" alt="" loading="lazy" decoding="async">')
+    return build.class_face(cid)
 
 
 def cpick(lang, root, title, href='classes/{}/'):
@@ -340,7 +338,7 @@ def render_block(kind, data, lang, root, inner=False):
         return f'<div class="ttiles gtiles">{tile_links(data, lang, root)}</div>'
     if kind == 'anchors':                                         # class ids -> chips to the sections of this page (#warlock)
         name = {c['id']: escape(build.tr(c['n'], lang)) for c in build.CLASSES}
-        return '<ul class="spchips">' + ''.join(f'<li><a href="#{c}"><b>{name[c]}</b></a></li>' for c in data) + '</ul>'
+        return build.spec_list([build.spec_plate(f'#{c}', name[c], '', c, face=True) for c in data], 'cls9')
     if kind == 'table':
         head = [E(h, lang) for h in data['head']]
         th = ''.join(f'<th scope="col">{h}</th>' for h in head)
@@ -1713,9 +1711,8 @@ def calc_classes(lang, root, cur=None):
             continue
         titles = talents.tree_titles(_calc_trees(c['id'])[1], lang)
         trees = ' · '.join(escape(titles.get(t['key'], t['key'])) for t in data['trees'])
-        now = ' aria-current="page"' if c['id'] == cur else ''
-        out.append(f'<li><a href="{root}talents/{c["id"]}/"{now}><b>{escape(build.tr(c["n"], lang))}</b><span>{trees}</span></a></li>')
-    return f'<ul class="spchips calcl">{"".join(out)}</ul>'
+        out.append(build.spec_plate(f'{root}talents/{c["id"]}/', escape(build.tr(c['n'], lang)), trees, c['id'], face=True, cur=c['id'] == cur))
+    return build.spec_list(out, 'cls9 calcl')
 
 
 def calc_head(sec, g, lang):

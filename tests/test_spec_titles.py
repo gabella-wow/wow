@@ -98,7 +98,7 @@ def test_best_race_anchors():
         for cid in CLASSES:
             m = re.search(rf'<section class="frame gsec" id="{cid}" data-toc="classes"><h2>([^<]+)</h2>', t)
             assert m, (rel, cid)
-            assert f'<a href="#{cid}">' in t, (rel, cid, 'chip')
+            assert re.search(rf'<a class="spp" href="#{cid}"', t), (rel, cid, 'chip')   # the class plate (build.spec_plate)
         if lang == 'en':
             assert '<h2>Best race for Warlock</h2>' in t and '<h2>Best race for Mage</h2>' in t
         assert t.count('data-toc="classes"') == len(CLASSES), rel

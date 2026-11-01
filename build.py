@@ -1265,12 +1265,9 @@ def sleep_art(html):
 
 def home_specs():
     """Home «Билды и таланты»: nine classes, each with the chips of its three spec cheat sheets (Russian, translate() does the rest)."""
-    rows = ''
-    for c in CLASSES:
-        chips = ''.join(f'<li><a href="guides/spec-{c["id"]}-{sid}/"><b>{esc(s["n"])}</b><span>{" · ".join(ROLE[r] for r in s["roles"])}</span></a></li>'
-                        for s, sid in zip(c['specs'], SPEC_IDS[c['id']]))
-        rows += f'<div class="spcls"><a class="spn" href="guides/builds-{c["id"]}/">{esc(c["n"])}</a><ul class="spchips">{chips}</ul></div>'
-    return rows
+    return spec_matrix([(c['id'], f'guides/builds-{c["id"]}/', esc(c['n']),
+                         [spec_plate(f'guides/spec-{c["id"]}-{sid}/', esc(s['n']), ' · '.join(ROLE[r] for r in s['roles']), c['id'], s['roles'], sid)
+                          for s, sid in zip(c['specs'], SPEC_IDS[c['id']])]) for c in CLASSES])
 
 
 def build_home(lang, src):
@@ -1498,6 +1495,50 @@ def ico(name):
 
 def ri(role):
     return f'<svg class="ri" aria-hidden="true"><use href="#i-{role.rstrip("?")}"/></svg>'
+
+
+# ---------- the spec plate: one component for every list of specs (home, /guides/builds/, builds-<class>, talents) ----------
+# css: index.src.html .spp / .spps / .sppm. All the texts come in already escaped and in the page's language.
+
+SPEC_ICON = {}   # '<class>-<spec>' -> assets path of the spec icon; empty until the addon dump (05.11): the role icon in the class colour
+
+
+def class_face(cid):
+    """The round face of a class: the portrait of the reader's side (the Alliance one in the page, GabellaPor swaps it, por_js)."""
+    a = portraits()[cid]['alliance']
+    return (f'<img src="@@ROOT@@assets/art/{a}-face.webp" data-por-src="@@ROOT@@assets/art/{{{cid}}}-face.webp"'
+            ' width="160" height="160" alt="" loading="lazy" decoding="async">')
+
+
+def spec_plate(href, name, sub, cid, roles=(), spec='', face=False, cur=False):
+    """One plate: an icon in the class colour, the name, a line under it. The icon is the spec icon with role badges once
+    SPEC_ICON has it, until then the main role (a second role, Feral, as a badge); face=True: the class portrait (a class plate)."""
+    keys = [r for r in roles if not r.endswith('?')] or [r.rstrip('?') for r in roles]
+    icon = SPEC_ICON.get(f'{cid}-{spec}') if spec else ''
+    badge = lambda rs: ''.join(f'<span class="spp-r">{ri(r)}</span>' for r in rs)   # noqa: E731
+    if face:
+        inner, kind = f'<span class="av">{class_face(cid)}</span>', ' face'
+    elif icon:
+        inner, kind = f'<img src="@@ROOT@@{icon}" width="40" height="40" alt="" loading="lazy" decoding="async">' + badge(keys[:2]), ''
+    else:
+        inner, kind = ri(keys[0]) + badge(keys[1:2]), ''
+    now = ' aria-current="page"' if cur else ''
+    return (f'<a class="spp" href="{href}" style="--cc:{COLOR[cid]}"{now}><span class="spp-i{kind}" aria-hidden="true">{inner}</span>'
+            f'<span class="spp-t"><b>{name}</b>{f"<small>{sub}</small>" if sub else ""}</span></a>')
+
+
+def spec_list(plates, cls=''):
+    """Plates of one width in a grid (3 to a row for one class, more for the nine classes); the wrapper is the size container
+    the plates follow (3 side by side, 3 with the icon above the name, or one under another)."""
+    return f'<div class="sppw"><ul class="spps{" " + cls if cls else ""}">' + ''.join(f'<li>{p}</li>' for p in plates) + '</ul></div>'
+
+
+def spec_matrix(rows):
+    """The nine classes, a row each: the class (face and name, its builds page) and its three spec plates.
+    rows: [(cid, href of the class, escaped name, [plate html])]."""
+    return '<div class="sppm">' + ''.join(
+        f'<div class="sppc"><a class="sppn" href="{href}" style="--cc:{COLOR[cid]}"><span class="av">{class_face(cid)}</span><b>{name}</b></a>'
+        f'{spec_list(plates)}</div>' for cid, href, name, plates in rows) + '</div>'
 
 
 def parse_races(src):
