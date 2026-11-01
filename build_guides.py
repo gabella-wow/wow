@@ -962,15 +962,10 @@ def play_data(src, lang):
     races = build.parse_races(src)
     art = os.path.join(HERE, 'assets', 'art')
     has = lambda n: os.path.isfile(os.path.join(art, f'{n}-face.webp'))   # noqa: E731
-    slug = {r['id']: r['slug'] for r in build.RACES_PAGE}
-    face = {}   # the face of the level block: race + class if drawn, else the race alone, else none (no other race's face)
-    for r in races:
-        if has(slug.get(r['id'], r['id'])):
-            face[r['id']] = slug.get(r['id'], r['id'])
-        for c in r['can']:
-            n = f'{c}-{r["id"]}' if has(f'{c}-{r["id"]}') else face.get(r['id'])
-            if n:
-                face[f'{r["id"]}.{c}'] = n
+    # the face of the level block: only a picture drawn for this very race and class (<class>-<race>-face.webp). The bare class
+    # portraits (<class>-face, e.g. rogue = a Forsaken) and the race arts (any class) are never used: no pair drawn — the
+    # neutral class badge (class colour + role icon), never another race (tests/test_play_portrait.py)
+    face = {f'{r["id"]}.{c}': f'{c}-{r["id"]}' for r in races for c in r['can'] if has(f'{c}-{r["id"]}')}
     slugs = {g['slug'] for g in GUIDES if lang in g.get('langs', (lang,))}
     pages = {c['id']: [1, int(f'builds-{c["id"]}' in slugs), int(f'leveling-{c["id"]}' in slugs)] for c in build.CLASSES}   # class page, builds, class leveling
     data = {
@@ -1019,7 +1014,7 @@ def play_body(lang, root):
     return day1 + f'''<div class="pgrid"><div class="pcol">
 <section class="frame psec" id="level" aria-labelledby="hLvl">
   <div class="phero"><h2 id="hLvl">{x("lvl")}</h2><a href="{root}character/">{E(htx["allSet"], lang)}</a></div>
-  <div class="pme"><img id="pFace" src="data:," alt="" width="56" height="56" hidden><div class="pwho"><b id="pWho">{x("noHero")}</b><span id="pSub"></span></div>
+  <div class="pme"><span class="pav" id="pAv"><svg class="ico" aria-hidden="true"><use href="#i-user"/></svg><img id="pFace" src="data:," alt="" width="56" height="56" hidden></span><div class="pwho"><b id="pWho">{x("noHero")}</b><span id="pSub"></span></div>
     <a class="btn ghost" id="pPick" href="{root}character/" data-hero-open>{E(htx["collect"], lang)}</a></div>
   <nav class="plinks" id="pLinks" aria-label="{x("clsGuide")}" hidden></nav>
   <div class="pchars" id="pChars" role="group" aria-label="{x("chars")}" hidden></div>
@@ -1102,11 +1097,15 @@ function saveLvl() {
 const PV = /*PV*/'';   // ?v= of the portraits (build.art_version)
 /* The character line: race-true face (P.face: race + class, else the race; none: no picture), spec from the hero, the class pages */
 function renderWho(m) {
-  const h = readHero() || {}, cls = P.cn[m.cls] ? m.cls : '', face = P.face[m.race + '.' + cls] || P.face[m.race] || '', img = $('#pFace');
+  const h = readHero() || {}, cls = P.cn[m.cls] ? m.cls : '', face = P.face[m.race + '.' + cls] || '', img = $('#pFace'), av = $('#pAv');
   $('#pWho').textContent = P.rn[m.race] || cls ? [P.rn[m.race], P.cn[cls]].filter(Boolean).join(' · ') : TX.noHero;
   $('#pSub').textContent = [h.specN, TX[P.racef[m.race]]].filter(Boolean).join(' · ');
+  /* only the picture of this race and class; none drawn: the class colour and the role icon, never another race */
   img.hidden = !face;
-  if (face) { const src = `${ROOT}assets/art/${face}-face.webp${PV}`; if (img.getAttribute('src') !== src) img.src = src; img.style.setProperty('--cc', P.col[cls] || ''); }
+  if (face) { const src = `${ROOT}assets/art/${face}-face.webp${PV}`; if (img.getAttribute('src') !== src) img.src = src; }
+  av.style.setProperty('--cc', P.col[cls] || '');
+  av.dataset.face = face;
+  av.querySelector('use').setAttribute('href', '#i-' + (cls && ['tank', 'heal', 'dps'].includes(m.role) ? m.role : 'user'));
   const pick = $('#pPick');
   pick.hidden = !!meNow;
   pick.textContent = (HC.tx || {})[cls ? 'change' : 'collect'] || pick.textContent;
