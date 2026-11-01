@@ -286,6 +286,14 @@ code { font-size: .92em; background: var(--surface-2); padding: 1px 5px; border-
 .hplay a { color: #f1ece0; text-decoration: underline; text-decoration-color: rgba(201,165,74,.7); text-underline-offset: 4px; }
 .hplay a:hover { color: #e0c27a; }
 .hplay a::after { content: " →"; }
+/* Launch day: the server status card in the hero (build.launch_card, data/launch.json); the reader's clock unhides it */
+.lstat { display: flex; align-items: center; gap: 14px; width: min(100%, 728px); min-height: 56px; padding: 8px 14px 8px 16px; border: 1px solid var(--gold); border-left-width: 4px; border-radius: 7px; background: rgba(14,14,16,.92); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); color: #f1ece0; text-decoration: none; transition: border-color .15s; }
+.lstat[hidden] { display: none; }
+.lstat:hover { border-color: #e0c27a; }
+.lst-t { flex: 1; min-width: 0; display: grid; gap: 2px; }
+.lst-t b { font-size: var(--fs-16); font-weight: 600; line-height: 1.25; }
+.lst-t span { font-size: var(--fs-14); line-height: 1.3; color: #d9d2c2; }
+.lstat .ico { flex: none; width: 20px; height: 20px; color: #e0c27a; }
 .hnews { margin: 0 auto 34px; display: grid; gap: 10px; }
 .hnews .hh { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; text-shadow: var(--hero-shadow); }
 .hnews .hh h2 { font-size: var(--fs-22); line-height: 1; color: var(--ink); }
@@ -1185,6 +1193,7 @@ dialog.sheet::backdrop { background: rgba(0,0,0,.6); }
 .gmain { display: flex; flex-direction: column; gap: 24px; min-width: 0; }
 .gsec { padding: 22px 24px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; scroll-margin-top: calc(var(--top) + 16px); }
 .gsec > h2 { margin: 0; font-size: var(--fs-h2); }
+.tlchg time { margin-right: .35em; font-weight: 600; color: var(--gold-2); }   /* tier list, the changes block: the date of each note (content/tierlist_live.py) */
 :root { --fs-h2: var(--fs-28); }   /* a guide is one long page: all its h2 are the in-page step */
 .gsec.bare { padding: 0; }   /* art tiles stand on the page, no frame around them */
 .gsec p { max-width: 72ch; }
@@ -1263,6 +1272,8 @@ dialog.sheet::backdrop { background: rgba(0,0,0,.6); }
 .fsws button[aria-pressed="true"] { background: var(--seg-on); color: var(--gold-2); }
 .fswn { margin: 0; max-width: 72ch; font-size: var(--fs-14); color: var(--muted); }
 .fswn a { color: var(--gold-2); }
+a.frc { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; text-decoration-color: var(--muted); }
+a.frc:hover { text-decoration-color: var(--gold); }
 .frc b { font-weight: 600; color: var(--fg); }
 .frc i { margin-left: 2px; font-style: normal; color: var(--gold-2); }
 :root[data-side="horde"] .frc[data-f="alliance"], :root:not([data-side="horde"]) .frc[data-f="horde"] { display: none; }
@@ -1365,6 +1376,9 @@ dialog.sheet::backdrop { background: rgba(0,0,0,.6); }
 .geart .iq { text-decoration: none; font-weight: 600; color: var(--fg); }
 .geart .iq:hover { text-decoration: underline; }
 .geart .iq0 { color: var(--q0); } .geart .iq2 { color: var(--q2); } .geart .iq3 { color: var(--q3); } .geart .iq4 { color: var(--q4); } .geart .iq5 { color: var(--q5); }
+/* a row picked by stats from other specs' lists (tools/gear_fill.py), not the guide's advice: a quiet outlined tag under the item */
+.geart .gpick { display: block; width: fit-content; max-width: 100%; margin-top: 5px; padding: 1px 7px; border: 1px solid var(--line);
+  border-radius: 4px; font-size: var(--fs-13); line-height: 1.5; color: var(--muted); }
 #gearProf[hidden] { display: none; }
 .gtest { color: var(--gold-2); font-weight: 600; }
 /* the honest marks on top of the gear list: temporary beta data, and "incomplete" on a spec with few slots; a quiet ruled note, not a badge */
@@ -1648,7 +1662,7 @@ dialog.sheet::backdrop { background: rgba(0,0,0,.6); }
 <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png?v=00a6a7d9">
 <meta name="apple-mobile-web-app-title" content="Gabella WoW">
 <link rel="stylesheet" href="../assets/radio/radio.css?v=556d7dc63f" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="../assets/search/search.css?v=6521747d30" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="../assets/search/search.css?v=8420ef28ae" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="../assets/me/me.css?v=f19953bd21" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="../assets/hero/hero.css?v=6321409992" media="print" onload="this.media='all'">
 </head>
@@ -1791,7 +1805,7 @@ document.querySelectorAll('.gtabs').forEach(box => {
 const tocLinks = [...document.querySelectorAll('.gtoc a')];
 if ('IntersectionObserver' in window && tocLinks.length) {
   const io = new IntersectionObserver(es => es.forEach(e => {
-    if (e.isIntersecting) tocLinks.forEach(a => a.setAttribute('aria-current', a.hash === '#' + e.target.id));
+    if (e.isIntersecting) tocLinks.forEach(a => a.setAttribute('aria-current', a.hash === '#' + (e.target.dataset.toc || e.target.id)));
   }), { rootMargin: '-40% 0px -55% 0px' });
   document.querySelectorAll('.gsec').forEach(s => io.observe(s));
 }
@@ -1880,7 +1894,7 @@ addEventListener('beforeinstallprompt', e => {
 });
 </script>
 <script src="../assets/radio/radio.js?v=556d7dc63f" data-root="../" defer></script>
-<script src="../assets/search/search.js?v=6521747d30" data-root="../" defer></script>
+<script src="../assets/search/search.js?v=8420ef28ae" data-root="../" defer></script>
 <script src="../assets/me/me.js?v=f19953bd21" data-root="../" data-home="./" data-lang="it" data-ach="0" data-teaser="" data-close="Chiudi" data-page="404" data-look="2" defer></script>
 <script src="../assets/hero/hero.js?v=6321409992" data-root="../" data-home="./" data-data="../assets/hero/it.json?v=6321409992" defer></script>
 </body>
