@@ -551,16 +551,38 @@ ul.dlist li .z { grid-column: 1; color: var(--muted); font-size: var(--fs-13); l
 ul.dlist li .z i { font-style: normal; color: var(--sapphire); font-weight: 600; }
 ul.dlist li .lvl { grid-column: 2; grid-row: 1 / 3; text-align: right; }
 ul.dlist li.mine { background: var(--seg-on); }
-.spgrid { display: grid; gap: 4px 40px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.spcls { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 4px 14px; align-items: start; padding: 12px 0; border-bottom: 1px solid var(--pline); }
-.spn { text-decoration: none; font-weight: 600; font-size: var(--fs-16); color: var(--gold-2); padding-top: 12px; }
-.spchips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
-.spchips a { text-decoration: none; display: grid; gap: 2px; min-height: 48px; padding: 8px 14px; border-radius: 6px; background: var(--panel-2); border: 1px solid var(--pline); transition: background-color .15s, border-color .15s; }
-.spchips a:hover { border-color: var(--gold); }
-.spchips b { color: var(--gold-2); font-size: var(--fs-16); }
-.spchips span { color: var(--muted); font-size: var(--fs-13); }
-@media (max-width: 959px) { .spgrid { grid-template-columns: minmax(0, 1fr); } }
-@media (max-width: 479px) { .spcls { grid-template-columns: minmax(0, 1fr); } .spn { padding-top: 0; } }
+/* Spec plate (build.spec_plate): one plate for every list of specs and classes (home, /guides/builds/, builds-<class>, talents,
+   best race). An icon in the class colour (the spec icon from 05.11, until then the role), the name, a line; a list shares one width and height */
+.spps { list-style: none; margin: 10px 0 4px; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-auto-rows: 1fr; gap: 8px; }
+.spps > li { display: grid; min-width: 0; }
+.spps.cls9 { grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); }
+.spp { display: grid; grid-template-columns: 36px minmax(0, 1fr); align-items: center; gap: 12px; min-height: 60px; padding: 8px 12px; border-radius: 8px; background: var(--panel-2); border: 1px solid var(--pline); color: var(--fg); text-decoration: none; transition: border-color .15s, background-color .15s; }
+.spp:hover { border-color: color-mix(in srgb, var(--cc) 60%, var(--pline)); background: color-mix(in srgb, var(--cc) 6%, var(--panel-2)); }
+.spp[aria-current="page"] { border-color: color-mix(in srgb, var(--cc) 70%, var(--pline)); background: color-mix(in srgb, var(--cc) 10%, var(--panel-2)); }
+.spp-i { position: relative; display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; color: var(--fg); background: color-mix(in srgb, var(--cc) 22%, transparent); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--cc) 60%, transparent); }
+.spp-i > .ri { width: 18px; height: 18px; margin: 0; }
+.spp-i > img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+.spp-i.face { background: none; box-shadow: none; }
+.spp-i.face .av { --s: 32px; --ring-gap: var(--panel-2); }
+.spp-r { position: absolute; right: -5px; bottom: -5px; display: grid; place-items: center; width: 18px; height: 18px; border-radius: 50%; background: var(--panel-2); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--cc) 60%, transparent); }
+.spp-r .ri { width: 11px; height: 11px; margin: 0; }
+.spp-t { display: grid; gap: 2px; min-width: 0; line-height: 1.3; }
+.spp-t b { color: var(--gold-2); font-size: var(--fs-16); font-weight: 600; hyphens: auto; overflow-wrap: break-word; }
+.spp-t small { color: var(--muted); font-size: var(--fs-13); }
+.sppm { container-type: inline-size; display: grid; grid-auto-rows: 1fr; }   /* every class row as tall as the tallest: a plate whose line wraps (768 px) lifts all 27 */
+.sppc { display: grid; grid-template-columns: 184px minmax(0, 1fr); gap: 8px 16px; align-items: stretch; padding: 10px 0; border-bottom: 1px solid var(--pline); }
+.sppc > .sppn { align-self: center; }
+.sppc:last-child { border-bottom: 0; }
+.sppw { container-type: inline-size; min-width: 0; }
+.sppc .spps { margin: 0; height: 100%; }
+.sppn { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; min-width: 0; color: var(--class-ink); font-weight: 600; font-size: var(--fs-16); text-decoration: none; }
+.sppn .av { --s: 32px; }
+.sppn:hover b { text-decoration: underline; }
+/* widths: the longest one-word name (Enhancement in ru, Wiederherstellung) needs ~240 px beside the icon (~220 with the smaller icon and type), ~190 px under it */
+@container (max-width: 959px) { .sppc { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto 1fr; gap: 4px; } .sppc > .sppn { align-self: start; } }
+@container (max-width: 739px) { .spps:not(.cls9) .spp { grid-template-columns: 32px minmax(0, 1fr); gap: 10px; padding: 8px 10px; } .spps:not(.cls9) .spp-i { width: 32px; height: 32px; } .spps:not(.cls9) .spp-t b { font-size: .9375rem; } }
+@container (max-width: 672px) { .spps:not(.cls9) .spp { grid-template-columns: minmax(0, 1fr); align-content: center; justify-items: start; gap: 8px; padding: 10px 12px; } }
+@container (max-width: 599px) { .spps:not(.cls9) { grid-template-columns: minmax(0, 1fr); grid-auto-rows: auto; } .spps:not(.cls9) .spp { grid-template-columns: 36px minmax(0, 1fr); align-content: normal; justify-items: stretch; gap: 12px; padding: 8px 12px; } }
 .sbtns { display: flex; flex-wrap: wrap; gap: 10px; }
 .more-l { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font-weight: 600; font-size: var(--fs-16); }
 .more-ls { display: flex; flex-wrap: wrap; gap: 0 28px; }
@@ -830,7 +852,7 @@ ul.verdict li.warn::before { content: "!"; color: var(--horde); left: 7px; }
 /* Comparison tables: classes and races, one row per entry, whole row opens its page */
 .cmp { display: grid; gap: 6px; container-type: inline-size; }
 .cmp-h, .cmp-row { display: grid; gap: 22px; align-items: center; }
-.cmp.cls .cmp-h, .cmp.cls .cmp-row { grid-template-columns: minmax(276px, 1.2fr) 122px 190px minmax(0, 1.9fr) 22px; }
+.cmp.cls .cmp-h, .cmp.cls .cmp-row { grid-template-columns: minmax(280px, 1fr) 114px 146px minmax(0, 2fr) 22px; gap: 16px; }   /* the raid note keeps ~180 px beside its chevron at 880 px */
 .cmp.rac .cmp-h, .cmp.rac .cmp-row { grid-template-columns: minmax(200px, .9fr) 346px minmax(0, 2.2fr) 22px; }
 .cmp-h { padding: 0 22px 4px; font-size: var(--fs-13); font-weight: 600; color: var(--muted); }
 .cmp-h .rdots { color: var(--muted); }
@@ -857,6 +879,22 @@ ul.verdict li.warn::before { content: "!"; color: var(--horde); left: 7px; }
 .cmp-row:hover .go { color: var(--gold-2); transform: translateX(3px); }
 .cmp-txt { font-size: var(--fs-16); color: var(--ink-2); line-height: 1.5; }
 :root[data-theme="light"] .cmp-txt { color: var(--fg); }
+/* Class rows: the name is the link and its zone covers the card; the raid note is held to 3 lines in a box of 3 lines,
+   so every card has the same height; the chevron (a button beside the link, not inside it) shows the whole note */
+.cmp-a { color: inherit; text-decoration: none; }
+.cmp-a::before { content: ""; position: absolute; inset: 0; z-index: 1; }
+.cmp-a:focus-visible { outline: none; }
+.cmp-row:has(.cmp-a:focus-visible) { outline: 2px solid var(--gold-2); outline-offset: 2px; }
+.cmp.cls .rdots { position: relative; z-index: 2; }   /* the role tooltips stay reachable over the link zone */
+.cmp-d { display: grid; grid-template-columns: minmax(0, 1fr) 30px; gap: 4px; align-items: center; min-height: 4.5em; font-size: var(--fs-16); line-height: 1.5; }
+.cmp-d .cmp-txt { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; line-clamp: 3; overflow: hidden; }
+.cmp-row.open .cmp-d .cmp-txt { display: block; -webkit-line-clamp: unset; line-clamp: none; overflow: visible; }
+.cmp-more { position: relative; z-index: 2; display: grid; place-items: center; width: 30px; height: 44px; padding: 0; border: 1px solid transparent; border-radius: 8px; background: transparent; color: var(--muted); cursor: pointer; transition: color .2s, border-color .2s, background-color .2s; }
+.cmp-more::before { content: ""; width: 8px; height: 8px; margin-top: -4px; border: solid currentColor; border-width: 0 2px 2px 0; transform: rotate(45deg); transition: transform .2s var(--ease), margin .2s; }
+.cmp-more[aria-expanded="true"]::before { margin-top: 4px; transform: rotate(-135deg); }
+.cmp-more:hover { color: var(--gold-2); border-color: var(--pline); background: color-mix(in srgb, var(--fg) 5%, transparent); }
+.cmp-more:focus-visible { outline: 2px solid var(--gold-2); outline-offset: 1px; color: var(--gold-2); }
+.cmp-more.fits { visibility: hidden; }   /* the note fits in 3 lines: nothing to show, the place stays (no shift) */
 .rdots { display: grid; grid-template-columns: repeat(3, 34px); gap: 6px; }
 .rdot { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: color-mix(in srgb, var(--fg) 4%, transparent); color: color-mix(in srgb, var(--fg) 22%, transparent); }
 .rdot .ri { width: 16px; height: 16px; margin: 0; }
@@ -990,6 +1028,11 @@ dialog.sheet::backdrop { background: rgba(0,0,0,.6); }
   .cmp-row > .rdots { grid-column: 2; grid-row: 1; }
   .cmp-row > .go { grid-column: 3; grid-row: 1; }
   .cmp-row::before { width: 80%; }
+}
+@container (max-width: 560px) {   /* class rows on a phone: the spec names take the whole width under the face and the name, in a box of 2 lines, so every card is one height */
+  .cmp.cls .cmp-id { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 6px 12px; align-items: center; }
+  .cmp.cls .cmp-id > span { display: contents; }
+  .cmp.cls .cmp-id small { grid-column: 1 / -1; margin: 0; min-height: 2.8em; }
 }
 @media (max-width: 719px) {
   :root { --top: 56px; --fs-h2: var(--fs-28); --fs-hero: var(--fs-40); }
@@ -1176,13 +1219,6 @@ dialog.sheet::backdrop { background: rgba(0,0,0,.6); }
 .gjump a:hover { border-color: var(--gold); }
 .gjump a:active { background: rgb(5 5 5 / .8); }
 @media (min-width: 1024px) { .gjump { display: none; } }
-/* /guides/builds/: every class with the links of its three spec sheets (content/spec_cheats.finish) */
-.spcls { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 4px 14px; align-items: start; padding: 12px 0; border-bottom: 1px solid var(--pline); }
-.spcls:last-child { border-bottom: 0; }
-.spn { text-decoration: none; font-weight: 600; font-size: var(--fs-16); color: var(--gold-2); padding-top: 12px; }
-.spn:hover { text-decoration: underline; }
-.spcls .spchips { margin: 0; }
-@media (max-width: 479px) { .spcls { grid-template-columns: minmax(0, 1fr); } .spn { padding-top: 0; display: inline-flex; align-items: center; min-height: 44px; } }
 .gbody { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 28px; align-items: start; padding-top: 20px; }
 .gbody.solo { grid-template-columns: minmax(0, 1fr); }
 .gbody.solo .gtoc { display: none; }
@@ -1345,11 +1381,6 @@ a.frc:hover { text-decoration-color: var(--gold); }
 .gsec .gplay:hover { background: color-mix(in srgb, var(--fg) 6%, var(--panel-2)); }
 .gplay > span:first-child { flex: 1 1 320px; }
 .gplay b { color: var(--gold-2); }
-.spchips { list-style: none; margin: 10px 0 4px; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
-.spchips a { text-decoration: none; display: grid; gap: 2px; min-height: 48px; padding: 8px 14px; border-radius: 6px; background: var(--panel-2); border: 1px solid var(--pline); transition: background-color .15s, border-color .15s; }
-.spchips a:hover { border-color: var(--gold); }
-.spchips b { color: var(--gold-2); font-size: var(--fs-16); }
-.spchips span { color: var(--muted); font-size: var(--fs-13); }
 .nsteps { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin: 6px 0 14px; }
 .nsteps .nr { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; }
 .nsteps .nr a { color: var(--gold-2); font-weight: 600; }
@@ -1498,8 +1529,8 @@ a.frc:hover { text-decoration-color: var(--gold); }
 .pchars .pill b { font-weight: 600; margin-right: 6px; }
 .pchars a { align-self: center; color: var(--gold-2); font-size: var(--fs-14); }
 .pgrid { display: grid; gap: 14px; grid-template-columns: minmax(0, 1fr); }
-.pcol { display: contents; }   /* phone: one column, radio first */
-#radio { order: 1; } #level { order: 2; } #dung { order: 3; } #timers { order: 4; }
+.pcol { display: contents; }   /* phone: one column, the level first, radio last */
+#level { order: 1; } #dung { order: 2; } #timers { order: 3; } #radio { order: 4; }
 #radioDock { min-height: 515px; }   /* the player comes after load: its place is kept, so nothing below jumps (CLS) */
 @media (max-width: 719px) { #radioDock { min-height: 568px; } }
 @media (max-width: 359px) { #radioDock { min-height: 630px; } }
@@ -1525,9 +1556,8 @@ a.frc:hover { text-decoration-color: var(--gold); }
 }
 .psec { padding: 16px 18px; display: grid; gap: 12px; align-content: start; }
 /* stages and my character under the level, radio and timers (journey.src.html) */
-.pjour { margin-top: 48px; display: grid; gap: 20px; }
-.pjour, .pjour .me { scroll-margin-top: calc(var(--top) + 16px); }
-@media (max-width: 719px) { .pjour { margin-top: 36px; } }
+.pjour { margin-top: 24px; }
+.pjour { scroll-margin-top: calc(var(--top) + 16px); }
 .psec > h2, .phero h2 { margin: 0; font-size: var(--fs-h2); }
 #radio .rdo { border-radius: 10px; }
 .phero { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
@@ -1547,7 +1577,34 @@ a.frc:hover { text-decoration-color: var(--gold); }
 .lvb { width: 56px; height: 56px; border-radius: 50%; border: 1px solid var(--pline); background: var(--panel-2); color: var(--fg); font: inherit; font-size: var(--fs-28); line-height: 1; cursor: pointer; }
 .lvb:hover { border-color: var(--gold); }
 .lvb:active { transform: scale(.96); }
-#lvOut { min-width: 2.2ch; text-align: center; font-family: var(--font-display); font-weight: var(--display-w); font-size: var(--fs-40); line-height: 1; color: var(--gold-2); font-variant-numeric: lining-nums tabular-nums; }
+#lvIn { width: 3.2ch; min-height: 56px; padding: 0; border: 0; border-bottom: 1px solid var(--pline); background: none; text-align: center; font-family: var(--font-display); font-weight: var(--display-w); font-size: var(--fs-40); line-height: 1; color: var(--gold-2); font-variant-numeric: lining-nums tabular-nums; -moz-appearance: textfield; appearance: textfield; }
+#lvIn::-webkit-inner-spin-button, #lvIn::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+#lvIn:focus { outline: 0; border-bottom-color: var(--gold); }
+#lvIn::placeholder { color: var(--muted); }
+/* the character line of the level block: race-true face (none when no picture of that race), class links */
+.pme { display: flex; align-items: center; gap: 12px; }
+.pav { position: relative; flex: none; display: grid; place-items: center; width: 56px; height: 56px; border-radius: 50%; overflow: hidden; border: 1.5px solid var(--cc, var(--pline)); background: color-mix(in srgb, var(--cc, var(--panel-2)) 22%, var(--panel-2)); color: var(--cc, var(--muted)); }
+.pav .ico { width: 26px; height: 26px; }
+.pav img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.pav img[hidden] { display: none; }
+.pme .pwho { flex: 1 1 auto; min-width: 0; display: grid; gap: 2px; }
+.pme .pwho b { font-size: var(--fs-18); }
+.pme .pwho span { color: var(--muted); font-size: var(--fs-14); }
+.pme .btn { flex: none; min-height: 40px; cursor: pointer; }
+.plinks { display: flex; flex-wrap: wrap; gap: 8px; }
+.plinks[hidden] { display: none; }
+.plinks a { display: inline-flex; align-items: center; min-height: 40px; padding: 0 14px; border: 1px solid var(--pline); border-radius: 999px; color: var(--gold-2); font-size: var(--fs-14); }
+.plinks a:hover { border-color: var(--gold); }
+/* game stages: folded by default under the second-screen blocks */
+.pjour > summary { list-style: none; cursor: pointer; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; padding: 16px 18px; }
+.pjour > summary::-webkit-details-marker { display: none; }
+.pjour > summary h2 { margin: 0; font-size: var(--fs-h2); }
+.pjour > summary span { color: var(--muted); }
+.pjour > summary::after { content: "+"; margin-left: auto; color: var(--gold-2); font-size: var(--fs-28); line-height: 1; }
+.pjour[open] > summary::after { content: "−"; }
+.pjour > .pjin { display: grid; gap: 20px; padding: 0 18px 18px; }
+.pjour .stage { border: 0; background: none; padding: 0; box-shadow: none; }
+@media (max-width: 719px) { .pjour > .pjin { padding: 0 12px 14px; } }
 .pnow { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 4px 12px; align-items: baseline; }
 .pnow p, .pnext { margin: 0; }
 .ph { margin: 4px 0 0; font-size: var(--fs-16); color: var(--muted); }
@@ -1662,9 +1719,9 @@ a.frc:hover { text-decoration-color: var(--gold); }
 <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png?v=00a6a7d9">
 <meta name="apple-mobile-web-app-title" content="Gabella WoW">
 <link rel="stylesheet" href="../assets/radio/radio.css?v=556d7dc63f" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="../assets/search/search.css?v=591130ecc1" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="../assets/search/search.css?v=044d7d6679" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="../assets/me/me.css?v=f19953bd21" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="../assets/hero/hero.css?v=6321409992" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="../assets/hero/hero.css?v=d902786d1d" media="print" onload="this.media='all'">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -1894,8 +1951,8 @@ addEventListener('beforeinstallprompt', e => {
 });
 </script>
 <script src="../assets/radio/radio.js?v=556d7dc63f" data-root="../" defer></script>
-<script src="../assets/search/search.js?v=591130ecc1" data-root="../" defer></script>
+<script src="../assets/search/search.js?v=044d7d6679" data-root="../" defer></script>
 <script src="../assets/me/me.js?v=f19953bd21" data-root="../" data-home="./" data-lang="es" data-ach="0" data-teaser="" data-close="Cerrar" data-page="404" data-look="2" defer></script>
-<script src="../assets/hero/hero.js?v=6321409992" data-root="../" data-home="./" data-data="../assets/hero/es.json?v=6321409992" defer></script>
+<script src="../assets/hero/hero.js?v=d902786d1d" data-root="../" data-home="./" data-data="../assets/hero/es.json?v=d902786d1d" defer></script>
 </body>
 </html>

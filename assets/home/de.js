@@ -148,13 +148,24 @@ function lvlMeter(c) {
 function renderClassRef() {
   const roles = ['tank', 'heal', 'dps'];
   const head = `<div class="cmp-h" aria-hidden="true"><span>Klasse</span><span class="rdots">${roles.map(x => `<span title="${ROLE_RU[x]}">${ri(x)}</span>`).join('')}</span><span>Leveln</span><span>In Raids</span><span></span></div>`;
-  $('#classRef').innerHTML = head + CLASSES.map(c => `<a class="cmp-row" href="${HOME}classes/${c.id}/" style="--cc:${CCOL[c.id]};--art:url('../assets/art/${window.GabellaPor ? GabellaPor.id(c.id) : c.id}-360.webp${PV}')">
-    <span class="cmp-id">${face(c.id, CCOL[c.id])}<span><b>${esc(c.n)}</b><small>${c.specs.map(s => esc(s[0])).join(' · ')}</small></span></span>
+  const box = $('#classRef');
+  box.innerHTML = head + CLASSES.map(c => `<div class="cmp-row" style="--cc:${CCOL[c.id]};--art:url('../assets/art/${window.GabellaPor ? GabellaPor.id(c.id) : c.id}-360.webp${PV}')">
+    <span class="cmp-id">${face(c.id, CCOL[c.id])}<span><b><a class="cmp-a" href="${HOME}classes/${c.id}/">${esc(c.n)}</a></b><small>${c.specs.map(s => esc(s[0])).join(' · ')}</small></span></span>
     <span class="rdots" role="img" aria-label="Rollen: ${c.roles.map(x => ROLE_RU[x]).join(', ')}">${roles.map(x => { const on = c.roles.includes(x), q = c.roles.includes(x + '?'); return `<span class="rdot${on ? ' on' : q ? ' q' : ''}" title="${ROLE_RU[q ? x + '?' : x]}">${ri(x)}</span>`; }).join('')}</span>
     ${lvlMeter(c)}
-    <span class="cmp-txt">${esc(c.raid)}</span>
+    <span class="cmp-d"><span class="cmp-txt" id="crt-${c.id}">${esc(c.raid)}</span><button type="button" class="cmp-more" aria-expanded="false" aria-controls="crt-${c.id}" aria-label="Vollständig anzeigen" title="Vollständig anzeigen"></button></span>
     <span class="go" aria-hidden="true"><svg class="ico"><use href="#i-arrow"/></svg></span>
-  </a>`).join('');
+  </div>`).join('');
+  /* the chevron: hidden (its place kept) where the note fits in 3 lines; checked again on resize and when the fonts arrive */
+  const fit = () => box.querySelectorAll('.cmp-row:not(.open) .cmp-txt').forEach(t => t.nextElementSibling.classList.toggle('fits', t.scrollHeight <= t.clientHeight + 1));
+  fit();
+  if (!box.dataset.more) {
+    box.dataset.more = '1';
+    box.addEventListener('click', e => { const b = e.target.closest('.cmp-more'); if (!b) return;
+      const open = b.getAttribute('aria-expanded') !== 'true'; b.setAttribute('aria-expanded', open); b.closest('.cmp-row').classList.toggle('open', open); });
+    let q = 0; addEventListener('resize', () => { cancelAnimationFrame(q); q = requestAnimationFrame(fit); });
+    if (document.fonts) document.fonts.ready.then(fit);
+  }
 }
 
 function renderRaceRef() {
