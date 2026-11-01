@@ -8860,23 +8860,6 @@
        "en": "Scorn"
       },
       "dungeon": {
-       "en": "Scarlet Monastery"
-      }
-     },
-     {
-      "kind": "drop",
-      "boss": {},
-      "dungeon": {
-       "en": "Scarlet Monastery",
-       "zone": 796
-      }
-     },
-     {
-      "kind": "drop",
-      "boss": {
-       "en": "Scorn"
-      },
-      "dungeon": {
        "en": "Scarlet Monastery: Graveyard"
       }
      }
@@ -8976,14 +8959,6 @@
        "en": "Data Rescue",
        "id": 2930
       },
-      "faction": null
-     },
-     {
-      "kind": "quest",
-      "quest": {
-       "en": "Data Rescue",
-       "id": 2930
-      },
       "faction": null,
       "dungeon": {
        "en": "Gnomeregan"
@@ -9029,14 +9004,6 @@
       "dungeon": {
        "en": "Gnomeregan"
       }
-     },
-     {
-      "kind": "quest",
-      "quest": {
-       "en": "Gyrodrillmatic Excavationators",
-       "id": 2928
-      },
-      "faction": null
      }
     ],
     "pick": "stats",
@@ -9229,13 +9196,6 @@
       "boss": {
        "en": "Viscous Fallout"
       },
-      "dungeon": {
-       "en": "Gnomeregan"
-      }
-     },
-     {
-      "kind": "drop",
-      "boss": {},
       "dungeon": {
        "en": "Gnomeregan"
       }
@@ -9867,23 +9827,6 @@
        "en": "Scorn"
       },
       "dungeon": {
-       "en": "Scarlet Monastery"
-      }
-     },
-     {
-      "kind": "drop",
-      "boss": {},
-      "dungeon": {
-       "en": "Scarlet Monastery",
-       "zone": 796
-      }
-     },
-     {
-      "kind": "drop",
-      "boss": {
-       "en": "Scorn"
-      },
-      "dungeon": {
        "en": "Scarlet Monastery: Graveyard"
       }
      }
@@ -9958,22 +9901,6 @@
       "dungeon": {
        "en": "Razorfen Kraul"
       }
-     },
-     {
-      "kind": "quest",
-      "quest": {
-       "en": "The Crone of the Kraul",
-       "id": 1101
-      },
-      "faction": null
-     },
-     {
-      "kind": "quest",
-      "quest": {
-       "en": "A Vengeful Fate",
-       "id": 1102
-      },
-      "faction": null
      }
     ],
     "pick": "stats",
@@ -10079,14 +10006,6 @@
        "en": "Data Rescue",
        "id": 2930
       },
-      "faction": null
-     },
-     {
-      "kind": "quest",
-      "quest": {
-       "en": "Data Rescue",
-       "id": 2930
-      },
       "faction": null,
       "dungeon": {
        "en": "Gnomeregan"
@@ -10128,22 +10047,6 @@
       "dungeon": {
        "en": "Gnomeregan"
       }
-     },
-     {
-      "kind": "quest",
-      "quest": {
-       "en": "The Grand Betrayal",
-       "id": 2929
-      },
-      "faction": null
-     },
-     {
-      "kind": "quest",
-      "quest": {
-       "en": "Rig Wars",
-       "id": 2841
-      },
-      "faction": null
      }
     ],
     "pick": "stats",
@@ -10188,14 +10091,6 @@
     "src": [
      {
       "kind": "drop",
-      "boss": {},
-      "dungeon": {
-       "en": "Razorfen Kraul",
-       "zone": 491
-      }
-     },
-     {
-      "kind": "drop",
       "boss": {
        "en": "Death Speaker Jargba"
       },
@@ -10219,13 +10114,6 @@
       "boss": {
        "en": "Electrocutioner 6000"
       },
-      "dungeon": {
-       "en": "Gnomeregan"
-      }
-     },
-     {
-      "kind": "drop",
-      "boss": {},
       "dungeon": {
        "en": "Gnomeregan"
       }
@@ -10258,14 +10146,6 @@
       "dungeon": {
        "en": "Gnomeregan"
       }
-     },
-     {
-      "kind": "quest",
-      "quest": {
-       "en": "Gyrodrillmatic Excavationators",
-       "id": 2928
-      },
-      "faction": null
      }
     ],
     "pick": "stats",
@@ -10459,13 +10339,6 @@
       "dungeon": {
        "en": "Gnomeregan"
       }
-     },
-     {
-      "kind": "drop",
-      "boss": {},
-      "dungeon": {
-       "en": "Gnomeregan"
-      }
      }
     ],
     "pick": "stats",
@@ -10524,14 +10397,6 @@
    {
     "id": 9447,
     "src": [
-     {
-      "kind": "drop",
-      "boss": {},
-      "dungeon": {
-       "en": "Gnomeregan",
-       "zone": 721
-      }
-     },
      {
       "kind": "drop",
       "boss": {
@@ -10782,23 +10647,6 @@
        "en": "Scorn"
       },
       "dungeon": {
-       "en": "Scarlet Monastery"
-      }
-     },
-     {
-      "kind": "drop",
-      "boss": {},
-      "dungeon": {
-       "en": "Scarlet Monastery",
-       "zone": 796
-      }
-     },
-     {
-      "kind": "drop",
-      "boss": {
-       "en": "Scorn"
-      },
-      "dungeon": {
        "en": "Scarlet Monastery: Graveyard"
       }
      }
@@ -10873,22 +10721,6 @@
       "dungeon": {
        "en": "Razorfen Kraul"
       }
-     },
-     {
-      "kind": "quest",
-      "quest": {
-       "en": "The Crone of the Kraul",
-       "id": 1101
-      },
-      "faction": null
-     },
-     {
-      "kind": "quest",
-      "quest": {
-       "en": "A Vengeful Fate",
-       "id": 1102
-      },
-      "faction": null
      }
     ],
     "pick": "stats",
@@ -10994,14 +10826,6 @@
        "en": "Data Rescue",
        "id": 2930
       },
-      "faction": null
-     },
-     {
-      "kind": "quest",
-      "quest": {
-       "en": "Data Rescue",
-       "id": 2930
-      },
       "faction": null,
       "dungeon": {
        "en": "Gnomeregan"
@@ -11043,22 +10867,6 @@
       "dungeon": {
        "en": "Gnomeregan"
       }
-     },
-     {
-      "kind": "quest",
-      "quest": {
-       "en": "The Grand Betrayal",
-       "id": 2929
-      },
-      "faction": null
-     },
-     {
-      "kind": "quest",
-      "quest": {
-       "en": "Rig Wars",
-       "id": 2841
-      },
-      "faction": null
      }
     ],
     "pick": "stats",
@@ -11103,14 +10911,6 @@
     "src": [
      {
       "kind": "drop",
-      "boss": {},
-      "dungeon": {
-       "en": "Razorfen Kraul",
-       "zone": 491
-      }
-     },
-     {
-      "kind": "drop",
       "boss": {
        "en": "Death Speaker Jargba"
       },
@@ -11134,13 +10934,6 @@
       "boss": {
        "en": "Electrocutioner 6000"
       },
-      "dungeon": {
-       "en": "Gnomeregan"
-      }
-     },
-     {
-      "kind": "drop",
-      "boss": {},
       "dungeon": {
        "en": "Gnomeregan"
       }
@@ -11173,14 +10966,6 @@
       "dungeon": {
        "en": "Gnomeregan"
       }
-     },
-     {
-      "kind": "quest",
-      "quest": {
-       "en": "Gyrodrillmatic Excavationators",
-       "id": 2928
-      },
-      "faction": null
      }
     ],
     "pick": "stats",
@@ -11374,13 +11159,6 @@
       "dungeon": {
        "en": "Gnomeregan"
       }
-     },
-     {
-      "kind": "drop",
-      "boss": {},
-      "dungeon": {
-       "en": "Gnomeregan"
-      }
      }
     ],
     "pick": "stats",
@@ -11439,14 +11217,6 @@
    {
     "id": 9447,
     "src": [
-     {
-      "kind": "drop",
-      "boss": {},
-      "dungeon": {
-       "en": "Gnomeregan",
-       "zone": 721
-      }
-     },
      {
       "kind": "drop",
       "boss": {

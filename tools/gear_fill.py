@@ -75,8 +75,27 @@ def skip_hand(spec, slot, have):
     return melee and 'two' in have and slot in ('main', 'off')
 
 
+def covers(t, s):
+    """Source t says all that s says and more (the same quest with its dungeon; the same drop with the boss or the wing)."""
+    if t == s or t['kind'] != s['kind']:
+        return False
+    if s['kind'] == 'quest':
+        return all(t.get(k) == v for k, v in s.items() if k != 'dungeon') and (not s.get('dungeon') or s['dungeon'] == t.get('dungeon'))
+    if s['kind'] == 'drop':
+        sb, tb = (s.get('boss') or {}).get('en'), (t.get('boss') or {}).get('en')
+        sd, td = (s.get('dungeon') or {}).get('en') or '', (t.get('dungeon') or {}).get('en') or ''
+        return (not sb or sb == tb) and td.startswith(sd) and (bool(tb) > bool(sb) or len(td) > len(sd))
+    return False
+
+
+def merged(srcs):
+    return [s for s in srcs if not any(covers(t, s) for t in srcs)]
+
+
 def fill(data):
     items, specs = data['items'], data['specs']
+    for spec in specs:                                             # a new run starts from the pages' own lists
+        specs[spec] = [e for e in specs[spec] if not e.get('pick')]
     srcs, pages = {}, {}
     for spec, entries in specs.items():
         for e in entries:
@@ -114,7 +133,7 @@ def fill(data):
                 short.setdefault(spec, []).append(slot)
                 continue
             for sc, _, num in cand[:PER_SLOT]:
-                specs[spec].append({'id': num, 'src': srcs[num], 'pick': 'stats', 'pages': sorted(pages[num])})
+                specs[spec].append({'id': num, 'src': merged(srcs[num]), 'pick': 'stats', 'pages': sorted(pages[num])})
                 added.setdefault(spec, []).append((slot, num, round(sc, 1)))
     data['partial'] = sorted(k for k, v in specs.items() if 0 < len({items[str(e['id'])]['slot'] for e in v}) < MIN_SLOTS)
     return added, short
