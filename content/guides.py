@@ -1481,6 +1481,18 @@ GUIDES.append({
     ],
 })
 
+
+def _race_per_class(g):
+    """best-race: an h2 with an anchor for every class («Best race for Warlock», #warlock), the query players type.
+    The «Best race by class» section above keeps the toc entry and the jump links; the class sections light it up in the toc."""
+    i = next(i for i, s in enumerate(g['sections']) if s['id'] == 'classes')
+    steps = next(d for k, d in g['sections'][i]['blocks'] if k == 'steps')
+    g['sections'][i]['blocks'] = [('anchors', [s['id'] for s in steps])]
+    g['sections'][i + 1:i + 1] = [{'id': s['id'], 'title': s['t'], 'toc': 'classes', 'blocks': [('text', [s['d']])]} for s in steps]
+
+
+_race_per_class(GUIDES[-1])
+
 # ---------- tier-list ----------
 
 GUIDES.append({

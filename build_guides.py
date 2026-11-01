@@ -266,8 +266,8 @@ def side_races(cid, lang):
         ids = [r['id'] for r in race_list() if r['f'] == f and cid in r['can']]
         ids = [r for r in best if r in ids] + [r for r in ids if r not in best]
         name = {r['id']: escape(build.tr(r['n'], lang)) for r in race_list()}
-        out += (f'<span class="frc" data-f="{f}">'
-                + ', '.join(f'<b>{name[r]}<i aria-hidden="true">★</i></b>' if r in best else name[r] for r in ids) + '</span>')
+        out += (f'<a class="frc" data-f="{f}" href="../best-race/#{cid}">'   # the races open the class' section of the Best race guide
+                + ', '.join(f'<b>{name[r]}<i aria-hidden="true">★</i></b>' if r in best else name[r] for r in ids) + '</a>')
     return Raw(out)
 
 
@@ -337,6 +337,9 @@ def render_block(kind, data, lang, root, inner=False):
         return f'<ol class="steps-c">{cards}</ol>'
     if kind == 'tiles':
         return f'<div class="ttiles gtiles">{tile_links(data, lang, root)}</div>'
+    if kind == 'anchors':                                         # class ids -> chips to the sections of this page (#warlock)
+        name = {c['id']: escape(build.tr(c['n'], lang)) for c in build.CLASSES}
+        return '<ul class="spchips">' + ''.join(f'<li><a href="#{c}"><b>{name[c]}</b></a></li>' for c in data) + '</ul>'
     if kind == 'table':
         head = [E(h, lang) for h in data['head']]
         th = ''.join(f'<th scope="col">{h}</th>' for h in head)
@@ -516,7 +519,7 @@ def inline_arts(obj):
 
 def render_guide(g, lang, root):
     sections = [s for s in g['sections'] if lang in s.get('langs', (lang,))]   # 'langs': a section only in these languages
-    toc = ''.join(f'<a href="#{s["id"]}">{E(s["title"], lang)}</a>' for s in sections)
+    toc = ''.join(f'<a href="#{s["id"]}">{E(s["title"], lang)}</a>' for s in sections if not s.get('toc'))   # 'toc': lit by that entry
     tier = g['slug'] == 'tier-list'
     def blocks(s):
         bl = cls_cells(s['blocks']) if tier else s['blocks']
@@ -526,7 +529,8 @@ def render_guide(g, lang, root):
         if tier and s['id'] == 'classes':                       # the switch and the grid open the section, the table with the reasons follows
             html = (side_switch(g['side'], lang, root) if g.get('side') else '') + tier_grid(next(d for k, d in s['blocks'] if k == 'table'), lang, root) + html
         return html
-    body = '\n'.join(f'<section class="frame gsec" id="{s["id"]}"><h2>{E(s["title"], lang)}</h2>' + blocks(s) + '</section>'
+    body = '\n'.join(f'<section class="frame gsec" id="{s["id"]}"' + (f' data-toc="{s["toc"]}"' if s.get('toc') else '')
+                     + f'><h2>{E(s["title"], lang)}</h2>' + blocks(s) + '</section>'
                       for s in sections)
     return toc, body
 
@@ -791,7 +795,7 @@ JS['cheat'] = r'''/* Spec cheat sheet: the «answer in 5 seconds» block (race s
   };
   const best = document.getElementById('cheatBest'), b = HC.best[cls];   // best race of the spec for each faction, from the Best race guide
   const names = ['alliance', 'horde'].map(f => { const x = bestOf(cls, f, spec); return x && x[0] ? HC.rn[x[0][0]] + ' (' + HC.fn[f] + ')' : ''; }).filter(Boolean);
-  if (b && names.length) best.textContent = best.dataset.l + ': ' + names.join(', ');
+  if (b && names.length) best.firstChild.textContent = best.dataset.l + ': ' + names.join(', ');   // the link to the class' section of the Best race guide stays
 })();
 /* Gear 13–30 (content/spec_cheats.gear_html): faction, my level and my professions hide rows; the start is the hero of this browser.
    A row: data-s slot, data-lv required level, data-f the one faction of its quests, data-p the professions it is made by. */

@@ -58,12 +58,12 @@
 <link rel="apple-touch-icon" href="../../../assets/icons/apple-touch-icon.png?v=00a6a7d9">
 <meta name="apple-mobile-web-app-title" content="Gabella WoW">
 <link data-rel="stylesheet" href="../../../assets/radio/radio.css?v=556d7dc63f">
-<link data-rel="stylesheet" href="../../../assets/search/search.css?v=6521747d30">
+<link data-rel="stylesheet" href="../../../assets/search/search.css?v=c541b43dd3">
 <link data-rel="stylesheet" href="../../../assets/me/me.css?v=f19953bd21">
 <link data-rel="stylesheet" href="../../../assets/hero/hero.css?v=6321409992">
 <meta name="msvalidate.01" content="73FA74F8B7D415104D305A58E9706FE7">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gabella.site/wow/en/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://gabella.site/wow/en/guides/"},{"@type":"ListItem","position":3,"name":"Launch Day: Time, Queues, Status","item":"https://gabella.site/wow/en/guides/launch-day/"}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"WoW Forever Launch Time, Queues and Server Status","description":"WoW Forever launch time in every time zone: Nov 4, 15:00 PST (23:00 UTC), Nov 5 in Europe. Countdown, login queues and where to check if servers are down.","inLanguage":"en","url":"https://gabella.site/wow/en/guides/launch-day/","dateModified":"2026-10-30","mainEntityOfPage":{"@type":"WebPage","@id":"https://gabella.site/wow/en/guides/launch-day/"},"author":{"@type":"Organization","name":"Gabella","url":"https://gabella.site/","logo":"https://gabella.site/wow/assets/icons/icon-512.png?v=48809128","sameAs":["https://discord.gg/ZGpznkX3Zw","https://t.me/gabella_wow"]},"publisher":{"@type":"Organization","name":"Gabella","url":"https://gabella.site/","logo":"https://gabella.site/wow/assets/icons/icon-512.png?v=48809128","sameAs":["https://discord.gg/ZGpznkX3Zw","https://t.me/gabella_wow"]},"isPartOf":{"@type":"WebSite","url":"https://gabella.site/wow/en/"},"image":"https://gabella.site/wow/assets/og/launch-day-en.jpg?v=6fee8158"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"WoW Forever Launch Time, Queues and Server Status","description":"WoW Forever launch time in every time zone: Nov 4, 15:00 PST (23:00 UTC), Nov 5 in Europe. Countdown, login queues and where to check if servers are down.","inLanguage":"en","url":"https://gabella.site/wow/en/guides/launch-day/","dateModified":"2026-11-01","mainEntityOfPage":{"@type":"WebPage","@id":"https://gabella.site/wow/en/guides/launch-day/"},"author":{"@type":"Organization","name":"Gabella","url":"https://gabella.site/","logo":"https://gabella.site/wow/assets/icons/icon-512.png?v=48809128","sameAs":["https://discord.gg/ZGpznkX3Zw","https://t.me/gabella_wow"]},"publisher":{"@type":"Organization","name":"Gabella","url":"https://gabella.site/","logo":"https://gabella.site/wow/assets/icons/icon-512.png?v=48809128","sameAs":["https://discord.gg/ZGpznkX3Zw","https://t.me/gabella_wow"]},"isPartOf":{"@type":"WebSite","url":"https://gabella.site/wow/en/"},"image":"https://gabella.site/wow/assets/og/launch-day-en.jpg?v=6fee8158"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"en","mainEntity":[{"@type":"Question","name":"What time does WoW Forever launch?","acceptedAnswer":{"@type":"Answer","text":"Nov 4, 2026 at 15:00 PST, which is 23:00 UTC. That is 23:00 on Nov 4 in London, 00:00 on Nov 5 in Berlin and Paris, and 18:00 on Nov 4 in New York."}},{"@type":"Question","name":"Do Europe and the Americas launch at different times?","acceptedAnswer":{"@type":"Answer","text":"No. Blizzard opens every region at the same minute; only the local time differs."}},{"@type":"Question","name":"Is it PST or PDT?","acceptedAnswer":{"@type":"Answer","text":"PST, UTC-8: US daylight time ends on Nov 1. One English Blizzard article says PDT, but the French Blizzard article gives midnight Paris time, which is also 23:00 UTC."}},{"@type":"Question","name":"Can I play before launch?","acceptedAnswer":{"@type":"Answer","text":"No. The beta ended on Oct 23. Until Nov 3 pack owners can only create up to three characters and claim names."}}]}</script>
 </head>
 <body>
@@ -120,7 +120,7 @@
   <div class="wrap thero-in">
     <nav class="crumbs" aria-label="Breadcrumbs"><a href="../../">Home</a><span aria-hidden="true">/</span><a href="../../guides/">Guides</a><span aria-hidden="true">/</span><span>Launch day</span></nav>
     <h1>Launch Day: Time, Queues, Status</h1>
-    <p class="upd">Updated <time datetime="2026-10-30">Oct 30, 2026</time></p>
+    <p class="upd">Updated <time datetime="2026-11-01">Nov 1, 2026</time></p>
     <p class="lead">When WoW Forever opens in your time zone, what to expect in the first hours and where Blizzard reports outages.</p>
     <p class="gfacts">Launch Nov 4, 2026, 23:00 UTC · Status: Blizzard channels only</p>
   </div>
@@ -221,7 +221,7 @@ document.querySelectorAll('.gtabs').forEach(box => {
 const tocLinks = [...document.querySelectorAll('.gtoc a')];
 if ('IntersectionObserver' in window && tocLinks.length) {
   const io = new IntersectionObserver(es => es.forEach(e => {
-    if (e.isIntersecting) tocLinks.forEach(a => a.setAttribute('aria-current', a.hash === '#' + e.target.id));
+    if (e.isIntersecting) tocLinks.forEach(a => a.setAttribute('aria-current', a.hash === '#' + (e.target.dataset.toc || e.target.id)));
   }), { rootMargin: '-40% 0px -55% 0px' });
   document.querySelectorAll('.gsec').forEach(s => io.observe(s));
 }
@@ -327,7 +327,7 @@ addEventListener('beforeinstallprompt', e => {
 });
 </script>
 <script data-src="../../../assets/radio/radio.js?v=556d7dc63f" data-root="../../../"></script>
-<script data-src="../../../assets/search/search.js?v=6521747d30" data-root="../../../"></script>
+<script data-src="../../../assets/search/search.js?v=c541b43dd3" data-root="../../../"></script>
 <script data-src="../../../assets/me/me.js?v=f19953bd21" data-root="../../../" data-home="../../" data-lang="en" data-ach="0" data-teaser="" data-close="Close" data-page="guides/launch-day/" data-look="2"></script>
 <script data-src="../../../assets/hero/hero.js?v=6321409992" data-root="../../../" data-home="../../" data-data="../../../assets/hero/en.json?v=6321409992"></script>
 <script type="module" data-src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "ee1d216e690040389063e8d72384c2c7"}'></script>
