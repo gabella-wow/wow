@@ -117,6 +117,19 @@ def thero(sec, hero):
                .replace('<div class="wrap">', '<div class="wrap thero-in">', 1).replace('class="glead"', 'class="lead"', 1))
 
 
+def por_band(cid):
+    """A guide of one class ('por': guides/builds-<class>/): the portrait of that class instead of a shared scene, the same
+    picture and side as the class page (.chero): "{<class>}" is the portrait of the reader's side (build.por_js), filled in
+    by the script right under it, so only one side is ever fetched. Behind it the portrait's own blurred backdrop (~1 KB)."""
+    s = lambda ext: ', '.join(f'@@ROOT@@assets/art/{{{cid}}}-{w}.{ext} {w}w' for w in (600, 896, 1344))   # noqa: E731
+    sizes = '(max-width: 719px) 285px, clamp(405px, 57vh, 540px)'   # 3:4 at the band height (guide.src.html --hh)
+    return (f'<picture class="pband-bg" aria-hidden="true"><img data-por-src="@@ROOT@@assets/art/{{{cid}}}-bg.webp" width="480" height="270" alt="" decoding="async"></picture>'
+            f'<picture class="pband-por" aria-hidden="true"><source type="image/avif" data-por-srcset="{s("avif")}" sizes="{sizes}">'
+            f'<source type="image/webp" data-por-srcset="{s("webp")}" sizes="{sizes}">'
+            f'<img data-por-src="@@ROOT@@assets/art/{{{cid}}}-896.webp" width="896" height="1200" alt="" fetchpriority="high" decoding="async"></picture>'
+            '<script>GabellaPor.fill(document.currentScript.parentNode)</script>')
+
+
 def tile_links(tiles, lang, root):
     """root: path to the language home (links); art always from the site root via @@ROOT@@."""
     out = []
@@ -1762,6 +1775,8 @@ def page_ids(g):
 
 
 def build_page(g, lang, tpl, base_css, sprite, src):
+    if g['slug'].startswith('builds-'):   # a class' builds: the portrait of that class (por_band), not the shared leveling scene;
+        g = {**g, 'por': True, 'hero': None}   # the tile on other pages keeps the scene. Set here, not in content: no new «Обновлено»
     sub = g['path'] if 'path' in g else (f'guides/{g["slug"]}/' if g['slug'] else 'guides/')   # path: classes/, races/, privacy/, '' (404)
     here = page_dir(lang, sub)
     html = tpl.replace('@@BASE_CSS@@', base_css).replace('@@SPRITE@@', sprite)
@@ -1818,7 +1833,8 @@ def build_page(g, lang, tpl, base_css, sprite, src):
         missing += hmiss
     fx_attr = f' data-fx="{FX[g["art"]]}"' if g['art'] in FX else ''
     rep = {
-        'HERO': ('@@TOD_HERO@@' if g['art'] == 'hero_dawn' else   # the leveling guide: the hero in the reader's time of day (tod.py)
+        'HERO': (por_band(g['art']) if g.get('por') else
+                 '@@TOD_HERO@@' if g['art'] == 'hero_dawn' else  # the leveling guide: the hero in the reader's time of day (tod.py)
                  (f'<img class="thero-amb" src="@@ROOT@@assets/art/{g["art"]}-960.webp" width="960" height="536" alt="" aria-hidden="true" loading="lazy" decoding="async">'   # ultrawide sides
                   if g['art'] in WIDTHS else '') +
                  f'<picture class="stband-art{"" if g["art"] in WIDTHS else " por"}" aria-hidden="true"{fx_attr}><source type="image/avif" srcset="{avif}" sizes="100vw">'
@@ -1832,6 +1848,8 @@ def build_page(g, lang, tpl, base_css, sprite, src):
     }
     for k, v in rep.items():                                     # 2) тело
         html = html.replace(f'@@{k}@@', v)
+    if g.get('por'):                                              # the class portrait band (por_band)
+        html = html.replace('<section class="stband ghero" id="top">', '<section class="stband ghero pband" id="top">', 1)
     if g.get('path') == 'classes/':                              # phones: the class grid in the hero (cpick)
         html = html.replace('<p class="gfacts"></p>', '<p class="gfacts"></p>' + cpick(lang, root, E(g['title'], lang)), 1)
     elif g['slug'] == 'builds':                                   # phones: class -> its builds page in one tap from the first screen
