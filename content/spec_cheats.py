@@ -70,9 +70,47 @@ FULL_BUILDS = n9('Все спеки класса', 'All specs of the class', 'У
                  'Todas las especializaciones de la clase', 'Todas as especializações da classe', 'Tutte le specializzazioni della classe',
                  'Wszystkie specjalizacje klasy')
 SEE_ALSO = n9('Смотрите также', 'See also', 'Дивіться також', 'Siehe auch', 'À voir aussi', 'Véase también', 'Veja também', 'Vedi anche', 'Zobacz też')
-SEO_TAIL = n9('шпора WoW Forever', 'WoW Forever cheat sheet', 'шпора WoW Forever', 'Spickzettel WoW Forever', 'fiche WoW Forever',
-              'guía rápida WoW Forever', 'resumo WoW Forever', 'scheda WoW Forever', 'ściąga WoW Forever')
 SEO = {}   # guides/<slug>/ -> (title, description) by language, for seo.META (build.py adds it before seo.main)
+# Search title, h1 and description of a sheet, the way players search («frost mage build», «маг лёд билд»): {c} class, {s} spec.
+# Titles: the first one of 60 characters or less wins. Leaders title these pages «Frost Mage Guide» (Icy Veins, Method, Tavern, 01.11).
+SEO_T = {
+    'ru': ('{c} {s}: билд и гайд WoW Forever (30 уровень)', '{c} {s}: билд WoW Forever (30 уровень)', '{c} {s}: билд WoW Forever'),
+    'en': ('WoW Forever {s} {c} Build and Guide (Level 30)', 'WoW Forever {s} {c} Build (Level 30)', 'WoW Forever {s} {c} Build'),
+    'uk': ('{c} {s}: білд і гайд WoW Forever (30 рівень)', '{c} {s}: білд WoW Forever (30 рівень)', '{c} {s}: білд WoW Forever'),
+    'de': ('WoW Forever {c} {s}: Build und Guide (Stufe 30)', 'WoW Forever {c} {s}: Build (Stufe 30)', 'WoW Forever {c} {s}: Build'),
+    'fr': ('Guide {c} {s} WoW Forever : build et talents (niveau 30)', 'Guide {c} {s} WoW Forever : build (niveau 30)',
+           'Build {c} {s} WoW Forever (niveau 30)', 'Build {c} {s} WoW Forever'),
+    'es': ('Guía de {c} {s} WoW Forever: build y talentos (nivel 30)', 'Guía de {c} {s} WoW Forever: build (nivel 30)',
+           'Build de {c} {s} WoW Forever (nivel 30)', 'Build de {c} {s} WoW Forever'),
+    'pt': ('Guia de {c} {s} WoW Forever: build e talentos (nível 30)', 'Guia de {c} {s} WoW Forever: build (nível 30)',
+           'Build de {c} {s} WoW Forever (nível 30)', 'Build de {c} {s} WoW Forever'),
+    'it': ('Guida {c} {s} WoW Forever: build e talenti (livello 30)', 'Guida {c} {s} WoW Forever: build (livello 30)',
+           'Build {c} {s} WoW Forever (livello 30)', 'Build {c} {s} WoW Forever'),
+    'pl': ('WoW Forever {s} {c}: build i poradnik (poziom 30)', 'WoW Forever {s} {c}: build (poziom 30)', 'WoW Forever {s} {c}: build'),
+}
+H1_T = n9('{c} {s}: гайд', '{s} {c} Guide', '{c} {s}: гайд', '{c} {s}: Guide', 'Guide {c} {s}', 'Guía de {c} {s}', 'Guia de {c} {s}',
+          'Guida {c} {s}', '{s} {c}: poradnik')
+DESC_T = n9('{c} {s} в WoW Forever: билд на 30 уровень, таланты, снаряжение, характеристики, ротация и прокачка.',
+            'WoW Forever {s} {c} build for level 30: talents, gear, stats, rotation and leveling.',
+            '{c} {s} у WoW Forever: білд на 30 рівень, таланти, спорядження, характеристики, ротація й прокачування.',
+            'WoW Forever {c} {s}: Build für Stufe 30, Talente, Ausrüstung, Werte, Rotation und Leveln.',
+            '{c} {s} dans WoW Forever : build niveau 30, talents, équipement, statistiques, rotation et progression.',
+            '{c} {s} en WoW Forever: build para nivel 30, talentos, equipo, estadísticas, rotación y subida.',
+            '{c} {s} no WoW Forever: build para nível 30, talentos, equipamento, atributos, rotação e evolução.',
+            '{c} {s} in WoW Forever: build per il livello 30, talenti, equipaggiamento, statistiche, rotazione e salita.',
+            'WoW Forever {s} {c}: build na 30 poziom, talenty, ekwipunek, statystyki, rotacja i levelowanie.')
+
+
+def seo_title(lang, c, s):
+    """The search title of a sheet: the longest form that fits 60 characters."""
+    forms = [f.format(c=c, s=s) for f in SEO_T[lang]]
+    return next((x for x in forms if len(x) <= 60), forms[-1])
+
+
+def seo_desc(lang, c, s, tails):
+    """Description: what the page has, then the first tail that still fits 155 characters (the spec's verdict, else role and tier)."""
+    head = DESC_T[lang].format(c=c, s=s)
+    return next((f'{head} {x}.' for x in tails if len(f'{head} {x}.') <= 155), head)
 LEAD_TAIL = n9('Билд, таланты, прокачка и группа на одной странице.', 'Build, talents, leveling and group on one page.',
                'Білд, таланти, прокачування й група на одній сторінці.', 'Build, Talente, Leveln und Gruppe auf einer Seite.',
                'Build, talents, progression et groupe sur une seule page.', 'Build, talentos, subida y grupo en una sola página.',
@@ -920,7 +958,7 @@ def finish(guides, hero_core, langs_mod):
             continue
         cid, spec, rows, tierh, trows = g.pop('cheat')
         got[(cid, spec)] = rows
-        title, lead, bar = {}, {}, {}
+        title, lead, bar, h1, stitle, sdesc = {}, {}, {}, {}, {}, {}
         key = f'{cid}-{spec}'
         gear = next((s for s in g['sections'] if s['id'] == 'gear'), None)
         for lang in LANGS9:
@@ -931,9 +969,13 @@ def finish(guides, hero_core, langs_mod):
                 import build   # noqa: E402  the profession names of the site in every language (build.tr)
                 gear['blocks'][0][1][lang] = gear_html(key, lang, build.tr, n['fn'])
             sn = n['sn'][cid][n['sid'][cid].index(spec)]
-            title[lang] = f'{n["cn"][cid]} · {sn}'   # the dot stays with the class on a wrapped heading
+            title[lang] = f'{n["cn"][cid]} · {sn}'   # crumb and tiles: the short name
+            h1[lang] = H1_T[lang].format(c=n['cn'][cid], s=sn)
+            stitle[lang] = seo_title(lang, n['cn'][cid], sn)
             role = ' / '.join(r[1][lang] for r in rows)
-            lead[lang] = f'{role} · {tierh[lang]}: {" / ".join(dict.fromkeys(r[2] for r in rows))}. {rows[0][3][lang]}. {LEAD_TAIL[lang]}'
+            tier = f'{role} · {tierh[lang]}: {" / ".join(dict.fromkeys(r[2] for r in rows))}'
+            sdesc[lang] = seo_desc(lang, n['cn'][cid], sn, (f'{tier}. {rows[0][3][lang]}', rows[0][3][lang], tier))
+            lead[lang] = f'{tier}. {rows[0][3][lang]}. {LEAD_TAIL[lang]}'
             top = [trows[-1]] + sorted(trows[:-1], key=lambda r: -int(r[1]))[:4]   # the last row is the spec's main talent, then the most points
             keys = ' · '.join(f'{escape(_name(r[0], lang))} ×{r[1]}' for r in top)
             leveling_href = f'../leveling-{cid}/'
@@ -942,7 +984,7 @@ def finish(guides, hero_core, langs_mod):
                      ' › '.join(escape((STAT.get(k) or EXTRA[k])[lang]) for k in st[0].split()) + f'<br><span class="small">{escape(st[1])}</span>')
             bar[lang] = (f'<div id="cheat" data-cls="{cid}" data-spec="{spec}" data-from="{escape(FROM_LINK[lang])}">'
                          f'<p class="small" id="cheatRace" hidden></p>'
-                         f'<p id="cheatBest" data-l="{escape(BEST[lang])}"></p>'
+                         f'<p id="cheatBest" data-l="{escape(BEST[lang])}"><a href="../best-race/#{cid}">{escape(BEST[lang])}</a></p>'
                          f'<dl class="cxrows">'
                          f'<div><dt>{escape(GOAL[lang])}</dt><dd><a href="#leveling">{escape(GOAL_LV[lang])}</a> · '
                          f'<a href="#group">{escape(GOAL_DG[lang])}: {escape(role)}</a></dd></div>'
@@ -955,8 +997,8 @@ def finish(guides, hero_core, langs_mod):
                          f'<a class="btn ghost" id="cheatPick" href="../../tools/#pick={cid}">{escape(PICK[lang])}</a> '
                          f'<button type="button" class="btn ghost" id="cheatShare">{escape(n["tx"]["share"])}</button> '
                          f'<span class="small" role="status" id="cheatMsg"></span></p></div>')
-        g['title'], g['lead'], g['crumb'] = title, lead, title
-        SEO[f'guides/{g["slug"]}/'] = ({l: f'{title[l]}: {SEO_TAIL[l]}' for l in title}, dict(lead))
+        g['title'], g['lead'], g['crumb'] = h1, lead, title
+        SEO[f'guides/{g["slug"]}/'] = (stitle, sdesc)
         g['sections'][0]['blocks'][0] = ('raw', bar)
         for sec in g['sections']:                                  # the headings of the borrowed sections: raw html, built after fill
             sec['blocks'] = [('raw', _h(d)) if k == 'h3' else (k, d) for k, d in sec['blocks']]

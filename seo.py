@@ -240,7 +240,7 @@ META = {
                    'Які дані збирає Gabella, довідник WoW Forever: профіль після входу, статистика без cookies, що зберігається в браузері, як завантажити й видалити дані.')),
 }
 
-CLASS_T = t('{n} в WoW Forever: гайд, специализации и расы', 'WoW Forever {n} Guide: Specs, Abilities and Races', '{n} у WoW Forever: гайд, спеціалізації та раси')
+CLASS_T = t('{n} в WoW Forever: гайд, спеки и лучшая раса', 'WoW Forever {n} Guide: Specs, Best Race, Abilities', '{n} у WoW Forever: гайд, спеки й найкраща раса')   # «best race for warlock»: suggestions 27.10
 CLASS_T_SHORT = t('{n} в WoW Forever: {specs}', 'WoW Forever {n}: {specs}', '{n} у WoW Forever: {specs}')   # when the full one is over 65
 CLASS_D = t('{n} в WoW Forever: {specs} — ключевые способности, расы, польза в группе, плюсы, минусы и что нового.',
             'WoW Forever {n} guide: {specs} specs, key abilities, races, group value, pros and cons, and what is new.',
