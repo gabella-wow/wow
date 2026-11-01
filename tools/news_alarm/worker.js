@@ -2,16 +2,23 @@
 //   gabella-wow/wow          news-auto.yml  (watcher of Blizzard, short note on the site; public repo, free minutes)
 // every 30 minutes starts
 //   gabella-wow/wow          news.yml       (feed assets/news.json, RSS; public repo)
+// and with the same tick (:00, :30) starts
+//   gabella-wow/wow          news-watchdog.yml  (alert if news-auto is silent > 25 min; its own GitHub cron ran only every 2.7-5.7 h on 31.10)
 // The Discord workflow news in gabella-bot is OFF until further notice (not dispatched).
 // GitHub's own cron is late by hours. The token lives only in the Worker secret GH_DISPATCH_TOKEN
 // (fine-grained, these two repositories only, Actions: read and write). The workflows decide by their switches
 // (variables NEWS_AUTO / NEWS_DISCORD): the alarm sends no mode.
 const SITE = 'https://api.github.com/repos/gabella-wow/wow/actions/workflows/news-auto.yml/dispatches';
 const FEED = 'https://api.github.com/repos/gabella-wow/wow/actions/workflows/news.yml/dispatches';
+const WATCHDOG = 'https://api.github.com/repos/gabella-wow/wow/actions/workflows/news-watchdog.yml/dispatches';
+
+export function targets(withFeed) {
+  return withFeed ? [SITE, FEED, WATCHDOG] : [SITE];
+}
 
 async function dispatch(env, withFeed) {
   const out = [];
-  for (const url of withFeed ? [SITE, FEED] : [SITE]) {
+  for (const url of targets(withFeed)) {
     const r = await fetch(url, {
       method: 'POST',
       headers: {
