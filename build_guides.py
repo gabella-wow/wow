@@ -960,6 +960,19 @@ def play_data(src, lang):
     """Language data of the page script: route, milestones, labels, race -> faction and race/class names."""
     route, _ = leveling_parts()
     races = build.parse_races(src)
+    art = os.path.join(HERE, 'assets', 'art')
+    has = lambda n: os.path.isfile(os.path.join(art, f'{n}-face.webp'))   # noqa: E731
+    slug = {r['id']: r['slug'] for r in build.RACES_PAGE}
+    face = {}   # the face of the level block: race + class if drawn, else the race alone, else none (no other race's face)
+    for r in races:
+        if has(slug.get(r['id'], r['id'])):
+            face[r['id']] = slug.get(r['id'], r['id'])
+        for c in r['can']:
+            n = f'{c}-{r["id"]}' if has(f'{c}-{r["id"]}') else face.get(r['id'])
+            if n:
+                face[f'{r["id"]}.{c}'] = n
+    slugs = {g['slug'] for g in GUIDES if lang in g.get('langs', (lang,))}
+    pages = {c['id']: [1, int(f'builds-{c["id"]}' in slugs), int(f'leveling-{c["id"]}' in slugs)] for c in build.CLASSES}   # class page, builds, class leveling
     data = {
         'route': {f: [[lo, hi, L(d, lang)] for lo, hi, d in rows] for f, rows in route.items()},
         'miles': [[lv, L(x, lang)] for lv, x in PLAY_MILESTONES],
@@ -967,6 +980,7 @@ def play_data(src, lang):
         'racef': {r['id']: r['f'] for r in races},
         'rn': {r['id']: build.tr(r['n'], lang) for r in races},
         'cn': {c['id']: build.tr(c['n'], lang) for c in build.CLASSES},
+        'face': face, 'col': build.COLOR, 'pages': pages,
     }
     return dungeons_data(src) + '\nconst P = ' + json.dumps(data, ensure_ascii=False) + ';\n'
 
@@ -974,11 +988,16 @@ def play_data(src, lang):
 def play_head(lang):
     """Title and lead on the left, the screen buttons on the right (each shows up only where the browser can do it)."""
     x = lambda k: E(PLAY_TX[k], lang)
-    road = lambda ext: ', '.join(f'@@ROOT@@assets/art/hero_road-{w}.{ext} {w}w' for w in (960, 1600, 2560))   # noqa: E731
-    art = ('<img class="phead-amb" src="@@ROOT@@assets/art/hero_road-960.webp" width="960" height="536" alt="" aria-hidden="true" loading="lazy" decoding="async">'   # ultrawide sides
-           '<picture class="phead-art" aria-hidden="true">'   # the evening road: a ready scene seen nowhere else on the site
-           f'<source type="image/avif" srcset="{road("avif")}" sizes="min(100vw, 1620px)"><source type="image/webp" srcset="{road("webp")}" sizes="min(100vw, 1620px)">'
-           '<img src="@@ROOT@@assets/art/hero_road-1600.webp" width="1600" height="893" alt="" fetchpriority="high" decoding="async"></picture>')
+    road = lambda ext, n='hero_road': ', '.join(f'@@ROOT@@assets/art/{n}-{w}.{ext} {w}w' for w in (960, 1600, 2560))   # noqa: E731
+    fire = 'hero_campfire'
+    # the evening road (Alliance) by default; the side of the hero (or the time of day, GabellaPor) Horde: the Horde campfire.
+    # Both sets are in the markup (data-h-*) so build.art_version tags each with its own ?v=
+    art = (f'<img class="phead-amb" src="@@ROOT@@assets/art/hero_road-960.webp" data-h-src="@@ROOT@@assets/art/{fire}-960.webp" width="960" height="536" alt="" aria-hidden="true" loading="lazy" decoding="async">'   # ultrawide sides
+           '<picture class="phead-art" aria-hidden="true">'
+           f'<source type="image/avif" srcset="{road("avif")}" data-h-srcset="{road("avif", fire)}" sizes="min(100vw, 1620px)"><source type="image/webp" srcset="{road("webp")}" data-h-srcset="{road("webp", fire)}" sizes="min(100vw, 1620px)">'
+           f'<img src="@@ROOT@@assets/art/hero_road-1600.webp" data-h-src="@@ROOT@@assets/art/{fire}-1600.webp" width="1600" height="893" alt="" fetchpriority="high" decoding="async"></picture>'
+           '<script>try{if(window.GabellaPor&&GabellaPor.fac()==="horde")document.querySelectorAll(".phead [data-h-srcset],.phead [data-h-src]").forEach(function(e){'
+           'if(e.dataset.hSrcset)e.setAttribute("srcset",e.dataset.hSrcset);if(e.dataset.hSrc)e.setAttribute("src",e.dataset.hSrc)})}catch(e){}</script>')
     return ('<section class="phead" id="top">' + art + '<div class="wrap"><div class="ptitle"><h1>@@TITLE@@</h1><p class="glead">@@LEAD@@</p></div>'
             '</div></section>'
             f'<div class="wrap"><section class="frame pway" id="pWay" aria-label="{x("profile")}"><p class="pnote">{x("guest")}</p><a class="btn ghost" href="@@ROOT@@profile/">{x("login")}</a></section></div>'
@@ -994,12 +1013,18 @@ def play_body(lang, root):
                + ''.join(f'<button type="button" class="pill" data-min="{m}">{m} {x("min")}</button>' for m in (5, 10, 30)))
     day1 = (f'<a class="gplay frame pday" href="{root}guides/launch-checklist/"><span><b>{x("day1")}</b> {x("day1d")}</span>'   # launch checklist, one line
             f'<span class="btn ghost">{x("day1go")}</span></a>')
+    htx = deep(HERO.TX, lang)
+    # the character line: a race-true face, «race · class», «spec · side», the hero sheet of hero.js (class -> spec -> race in
+    # three taps; until hero.js has loaded the link opens character/), and the class pages once a class is set
     return day1 + f'''<div class="pgrid"><div class="pcol">
 <section class="frame psec" id="level" aria-labelledby="hLvl">
-  <div class="phero"><h2 id="hLvl">{x("lvl")}</h2><span id="pWho"></span><a href="{root}character/">{x("edit")}</a></div>
+  <div class="phero"><h2 id="hLvl">{x("lvl")}</h2><a href="{root}character/">{E(htx["allSet"], lang)}</a></div>
+  <div class="pme"><img id="pFace" src="data:," alt="" width="56" height="56" hidden><div class="pwho"><b id="pWho">{x("noHero")}</b><span id="pSub"></span></div>
+    <a class="btn ghost" id="pPick" href="{root}character/" data-hero-open>{E(htx["collect"], lang)}</a></div>
+  <nav class="plinks" id="pLinks" aria-label="{x("clsGuide")}" hidden></nav>
   <div class="pchars" id="pChars" role="group" aria-label="{x("chars")}" hidden></div>
   <div class="pfac" id="pFac" role="group" aria-label="{x("fac")}">{fac}</div>
-  <div class="plv"><button type="button" class="lvb" id="lvDown" aria-label="{x("lvDown")}">−</button><output id="lvOut" aria-live="polite">—</output><button type="button" class="lvb" id="lvUp" aria-label="{x("lvUp")}">+</button></div>
+  <div class="plv"><button type="button" class="lvb" id="lvDown" aria-label="{x("lvDown")}">−</button><input id="lvIn" type="number" min="1" max="60" step="1" inputmode="numeric" enterkeyhint="done" placeholder="—" aria-label="{x("lvIn")}"><button type="button" class="lvb" id="lvUp" aria-label="{x("lvUp")}">+</button></div>
   <div class="plvq" id="lvQuick" role="group" aria-label="{x("lvQuick")}">{"".join(f'<button type="button" class="pill" data-lv="{n}" aria-pressed="false">{n}</button>' for n in (10, 20, 30, 40, 50, 60))}</div>
   <div id="pNow"></div>
   {render_block('tip', tip, lang, root)}
@@ -1007,6 +1032,8 @@ def play_body(lang, root):
 </section>
 <section class="frame psec" id="dung" aria-labelledby="hDg"><h2 id="hDg">{x("dung")}</h2><ul class="pdg" id="pDg"></ul>
   <a class="pmore" href="{root}guides/dungeons/#list">{x("all")}</a></section>
+</div><div class="pcol">
+<section class="frame psec" id="radio" aria-labelledby="hRadio"><h2 id="hRadio">{x("radio")}</h2><div id="radioDock"><div class="rskel" aria-hidden="true"><i class="ra"></i><i class="rl"></i><span class="rc"><i></i><i></i><i></i><i class="rv"></i></span><i class="rl rs"></i><span class="rt"><i></i><i></i><i></i><i></i><i></i></span></div></div></section>
 <section class="frame psec" id="timers" aria-labelledby="hT"><h2 id="hT">{x("timers")}</h2>
   <div class="ppre" id="tPre">{presets}</div>
   <form class="pform" id="tForm" novalidate><input id="tName" maxlength="40" placeholder="{x("name")}" aria-label="{x("name")}">
@@ -1016,8 +1043,6 @@ def play_body(lang, root):
   <label class="pnotify" id="tNotify" hidden><input type="checkbox"> {x("notify")}</label>
   <p class="pnote" id="tReset" hidden></p>
 </section>
-</div><div class="pcol">
-<section class="frame psec" id="radio" aria-labelledby="hRadio"><h2 id="hRadio">{x("radio")}</h2><div id="radioDock"><div class="rskel" aria-hidden="true"><i class="ra"></i><i class="rl"></i><span class="rc"><i></i><i></i><i></i><i class="rv"></i></span><i class="rl rs"></i><span class="rt"><i></i><i></i><i></i><i></i><i></i></span></div></div></section>
 </div></div>'''
 
 
@@ -1074,17 +1099,39 @@ function saveLvl() {
   }, 1500);
 }
 
+const PV = /*PV*/'';   // ?v= of the portraits (build.art_version)
+/* The character line: race-true face (P.face: race + class, else the race; none: no picture), spec from the hero, the class pages */
+function renderWho(m) {
+  const h = readHero() || {}, cls = P.cn[m.cls] ? m.cls : '', face = P.face[m.race + '.' + cls] || P.face[m.race] || '', img = $('#pFace');
+  $('#pWho').textContent = P.rn[m.race] || cls ? [P.rn[m.race], P.cn[cls]].filter(Boolean).join(' · ') : TX.noHero;
+  $('#pSub').textContent = [h.specN, TX[P.racef[m.race]]].filter(Boolean).join(' · ');
+  img.hidden = !face;
+  if (face) { const src = `${ROOT}assets/art/${face}-face.webp${PV}`; if (img.getAttribute('src') !== src) img.src = src; img.style.setProperty('--cc', P.col[cls] || ''); }
+  const pick = $('#pPick');
+  pick.hidden = !!meNow;
+  pick.textContent = (HC.tx || {})[cls ? 'change' : 'collect'] || pick.textContent;
+  const pg = P.pages[cls], L = [];
+  if (pg) {
+    if (pg[1]) L.push([`guides/builds-${cls}/${h.spec ? '#' + h.spec : ''}`, TX.myTal]);
+    if (pg[0]) L.push([`classes/${cls}/`, TX.clsGuide]);
+    if (pg[2]) L.push([`guides/leveling-${cls}/`, TX.clsLvl]);
+  }
+  $('#pLinks').innerHTML = L.map(([u, t]) => `<a href="${HOME}${u}">${esc(t)}</a>`).join('');
+  $('#pLinks').hidden = !L.length;
+}
 function renderLvl() {
   const m = rd(MEKEY), lv = lvOf(m), raceF = P.racef[m.race], fac = raceF || ps.fac;
-  $('#pWho').textContent = P.rn[m.race] || P.cn[m.cls] ? [P.rn[m.race], P.cn[m.cls], TX[raceF]].filter(Boolean).join(' · ') : TX.noHero;
+  renderWho(m);
   const cs = chars(), cur = curChar(), box = $('#pChars');
   box.hidden = !meNow;
   if (meNow) box.innerHTML = cs.length ? cs.map(c => `<button type="button" class="pill" data-c="${c.id}" aria-pressed="${c === cur}"><b>${esc(c.name)}</b>${c.level}</button>`).join('')
     : `<a href="${ROOT}profile/">${esc(TX.addChar)}</a>`;
-  $('#level .phero a').href = meNow ? ROOT + 'profile/' : ROOT + 'character/';
+  const all = $('#level .phero a');
+  all.href = meNow ? ROOT + 'profile/' : HOME + 'character/';
+  all.textContent = meNow ? TX.profile : (HC.tx || {}).allSet || all.textContent;
   $('#pFac').hidden = !!raceF;
   document.querySelectorAll('#pFac button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.f === fac)));
-  $('#lvOut').textContent = lv || '—';
+  if (document.activeElement !== $('#lvIn')) $('#lvIn').value = lv || '';
   document.querySelectorAll('#lvQuick button').forEach(b => b.setAttribute('aria-pressed', String(+b.dataset.lv === lv)));
   if (!lv) {
     $('#pNow').innerHTML = `<p class="pnote">${esc(TX.needLvl)}</p>`;
@@ -1109,6 +1156,11 @@ function dgSoon(lv, fac) {
 $('#lvDown').addEventListener('click', () => setLvl((lvOf(rd(MEKEY)) || 2) - 1));
 $('#lvUp').addEventListener('click', () => setLvl(lvOf(rd(MEKEY)) + 1));
 $('#lvQuick').addEventListener('click', e => { const b = e.target.closest('button[data-lv]'); if (b) setLvl(+b.dataset.lv); });
+/* The level typed in: taken on Enter or when the field is left; out of 1–60 or empty: the saved level comes back */
+const lvIn = $('#lvIn');
+lvIn.addEventListener('change', () => { const v = parseInt(lvIn.value, 10); if (v >= 1 && v <= 60) setLvl(v); else lvIn.value = lvOf(rd(MEKEY)) || ''; });
+lvIn.addEventListener('keydown', e => { if (e.key === 'Enter') lvIn.blur(); });
+lvIn.addEventListener('focus', () => lvIn.select());
 $('#pChars').addEventListener('click', e => {
   const b = e.target.closest('button[data-c]'), c = b && chars().find(x => String(x.id) === b.dataset.c);
   if (!c) return;

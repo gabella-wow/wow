@@ -429,7 +429,7 @@ Class
 Stages
 Where you are now
 now
-Five stages from name reservation to raids. The stage is picked by date, and if you add your character, the guide finds dungeons for your level and shows the buffs you bring to the group.
+Five stages from name reservation to raids. The stage is picked by your character’s level, or by date when no level is set.
 Game stages
 My character
 Not chosen

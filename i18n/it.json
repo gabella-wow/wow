@@ -1,4 +1,7 @@
 {
+ "Level from 1 to 60": "Livello da 1 a 60",
+ "My talents": "I miei talenti",
+ "Class guide": "Guida alla classe",
  "Gabella fan guide. Not affiliated with or endorsed by Blizzard Entertainment. World of Warcraft, Warcraft and Blizzard Entertainment are trademarks or registered trademarks of Blizzard Entertainment, Inc. in the U.S. and/or other countries.": "Guida amatoriale di Gabella. Non affiliata né approvata da Blizzard Entertainment. World of Warcraft, Warcraft e Blizzard Entertainment sono marchi o marchi registrati di Blizzard Entertainment, Inc. negli Stati Uniti e/o in altri Paesi.",
  "Privacy": "Privacy",
  "Contact": "Contatti",
@@ -29,7 +32,7 @@
  "Launch": "Lancio",
  "Raids": "Incursioni",
  "Where you are now": "Dove sei ora",
- "Five stages from name reservation to raids. The stage is picked by date, and if you add your character, the guide finds dungeons for your level and shows the buffs you bring to the group.": "Cinque fasi dalla prenotazione dei nomi alle incursioni. La fase viene scelta in base alla data e, se aggiungi il tuo personaggio, la guida trova le spedizioni per il tuo livello e mostra i potenziamenti che porti al gruppo.",
+ "Five stages from name reservation to raids. The stage is picked by your character’s level, or by date when no level is set.": "Cinque fasi dalla prenotazione dei nomi alle incursioni. La fase segue il livello del tuo personaggio o, senza livello, la data.",
  "Game stages": "Fasi di gioco",
  "My character": "Il mio personaggio",
  "Set up character": "Imposta personaggio",

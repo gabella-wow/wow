@@ -384,8 +384,8 @@ a.frc:hover { text-decoration-color: var(--gold); }
 .pchars .pill b { font-weight: 600; margin-right: 6px; }
 .pchars a { align-self: center; color: var(--gold-2); font-size: var(--fs-14); }
 .pgrid { display: grid; gap: 14px; grid-template-columns: minmax(0, 1fr); }
-.pcol { display: contents; }   /* phone: one column, radio first */
-#radio { order: 1; } #level { order: 2; } #dung { order: 3; } #timers { order: 4; }
+.pcol { display: contents; }   /* phone: one column, the level first, radio last */
+#level { order: 1; } #dung { order: 2; } #timers { order: 3; } #radio { order: 4; }
 #radioDock { min-height: 515px; }   /* the player comes after load: its place is kept, so nothing below jumps (CLS) */
 @media (max-width: 719px) { #radioDock { min-height: 568px; } }
 @media (max-width: 359px) { #radioDock { min-height: 630px; } }
@@ -411,9 +411,8 @@ a.frc:hover { text-decoration-color: var(--gold); }
 }
 .psec { padding: 16px 18px; display: grid; gap: 12px; align-content: start; }
 /* stages and my character under the level, radio and timers (journey.src.html) */
-.pjour { margin-top: 48px; display: grid; gap: 20px; }
-.pjour, .pjour .me { scroll-margin-top: calc(var(--top) + 16px); }
-@media (max-width: 719px) { .pjour { margin-top: 36px; } }
+.pjour { margin-top: 24px; }
+.pjour { scroll-margin-top: calc(var(--top) + 16px); }
 .psec > h2, .phero h2 { margin: 0; font-size: var(--fs-h2); }
 #radio .rdo { border-radius: 10px; }
 .phero { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
@@ -433,7 +432,32 @@ a.frc:hover { text-decoration-color: var(--gold); }
 .lvb { width: 56px; height: 56px; border-radius: 50%; border: 1px solid var(--pline); background: var(--panel-2); color: var(--fg); font: inherit; font-size: var(--fs-28); line-height: 1; cursor: pointer; }
 .lvb:hover { border-color: var(--gold); }
 .lvb:active { transform: scale(.96); }
-#lvOut { min-width: 2.2ch; text-align: center; font-family: var(--font-display); font-weight: var(--display-w); font-size: var(--fs-40); line-height: 1; color: var(--gold-2); font-variant-numeric: lining-nums tabular-nums; }
+#lvIn { width: 3.2ch; min-height: 56px; padding: 0; border: 0; border-bottom: 1px solid var(--pline); background: none; text-align: center; font-family: var(--font-display); font-weight: var(--display-w); font-size: var(--fs-40); line-height: 1; color: var(--gold-2); font-variant-numeric: lining-nums tabular-nums; -moz-appearance: textfield; appearance: textfield; }
+#lvIn::-webkit-inner-spin-button, #lvIn::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+#lvIn:focus { outline: 0; border-bottom-color: var(--gold); }
+#lvIn::placeholder { color: var(--muted); }
+/* the character line of the level block: race-true face (none when no picture of that race), class links */
+.pme { display: flex; align-items: center; gap: 12px; }
+.pme img { flex: none; width: 56px; height: 56px; border-radius: 50%; border: 1.5px solid var(--cc, var(--pline)); object-fit: cover; background: var(--panel-2); }
+.pme img[hidden] { display: none; }
+.pme .pwho { flex: 1 1 auto; min-width: 0; display: grid; gap: 2px; }
+.pme .pwho b { font-size: var(--fs-18); }
+.pme .pwho span { color: var(--muted); font-size: var(--fs-14); }
+.pme .btn { flex: none; min-height: 40px; cursor: pointer; }
+.plinks { display: flex; flex-wrap: wrap; gap: 8px; }
+.plinks[hidden] { display: none; }
+.plinks a { display: inline-flex; align-items: center; min-height: 40px; padding: 0 14px; border: 1px solid var(--pline); border-radius: 999px; color: var(--gold-2); font-size: var(--fs-14); }
+.plinks a:hover { border-color: var(--gold); }
+/* game stages: folded by default under the second-screen blocks */
+.pjour > summary { list-style: none; cursor: pointer; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; padding: 16px 18px; }
+.pjour > summary::-webkit-details-marker { display: none; }
+.pjour > summary h2 { margin: 0; font-size: var(--fs-h2); }
+.pjour > summary span { color: var(--muted); }
+.pjour > summary::after { content: "+"; margin-left: auto; color: var(--gold-2); font-size: var(--fs-28); line-height: 1; }
+.pjour[open] > summary::after { content: "−"; }
+.pjour > .pjin { display: grid; gap: 20px; padding: 0 18px 18px; }
+.pjour .stage { border: 0; background: none; padding: 0; box-shadow: none; }
+@media (max-width: 719px) { .pjour > .pjin { padding: 0 12px 14px; } }
 .pnow { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 4px 12px; align-items: baseline; }
 .pnow p, .pnext { margin: 0; }
 .ph { margin: 4px 0 0; font-size: var(--fs-16); color: var(--muted); }
