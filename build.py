@@ -1226,12 +1226,13 @@ LAUNCH_JS = ("<script>(a => { const n = Date.now(); a.hidden = !(n >= Date.parse
              "(document.currentScript.previousElementSibling);</script>")
 
 
-def launch_card(lang, root=''):
+def launch_card(lang, root='', sub=None):
     """Launch day card «Серверы и очередь» -> guides/server-status/ (home hero, Launch day guide head), or '' while
-    data/launch.json has status_card off. In the page it stays hidden outside the from–until window of the config."""
+    data/launch.json has status_card off. In the page it stays hidden outside the from–until window of the config.
+    sub: the second line where the page already says «Blizzard channels only» (the Launch day facts line)."""
     if not LAUNCH.get('status_card'):
         return ''
-    title, sub = LAUNCH_TX[lang]
+    title, sub = LAUNCH_TX[lang][0], sub or LAUNCH_TX[lang][1]
     return (f'<a class="lstat" href="{root}guides/server-status/" data-from="{esc(LAUNCH["from"])}" data-until="{esc(LAUNCH["until"])}" hidden>'
             f'<span class="lst-t"><b>{esc(title)}</b><span>{esc(sub)}</span></span>'
             '<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>' + LAUNCH_JS)

@@ -24,6 +24,7 @@ assert len(_ru) == len(_en) == len(_uk), (len(_ru), len(_en), len(_uk))
 build.T.update({r: (e, u) for r, e, u in zip(_ru, _en, _uk)})
 langs.fill([GUIDES, HUB, HUBS, NEWS, NEWS_SO, NOT_FOUND, PAGES, CLASS_HUB_TILE, BUILDS_HUB_TILE, HERO.TX, HERO.BEST])   # new languages of every guide text: i18n/<lang>.json by the English one
 
+SS_TILE = next(g for g in GUIDES if g['slug'] == 'server-status')['tile']   # «Статус, очередь на вход, слои, техработы»: the launch card on Launch day
 TIP = {'ru': 'Совет', 'en': 'Tip', 'uk': 'Порада'}
 THIS_PAGE = {'ru': 'Эта страница', 'en': 'This page', 'uk': 'Ця сторінка'}
 MORE_H = {'ru': 'Другие гайды', 'en': 'Other guides', 'uk': 'Інші гайди'}
@@ -1863,7 +1864,7 @@ def build_page(g, lang, tpl, base_css, sprite, src):
     elif g['slug'].startswith('spec-'):                           # phones: the parts of a spec sheet as one row under the lead (gjump)
         html = re.sub(r'(<p class="gfacts">.*?</p>)', lambda m: m[1] + spec_jump(g, lang), html, count=1, flags=re.S)
     elif g['slug'] == 'launch-day' and build.LAUNCH.get('status_card'):   # launch day: the server status card under the facts (data/launch.json)
-        html = re.sub(r'(<p class="gfacts">.*?</p>)', lambda m: m[1] + build.launch_card(lang, root), html, count=1, flags=re.S)
+        html = re.sub(r'(<p class="gfacts">.*?</p>)', lambda m: m[1] + build.launch_card(lang, root, L(SS_TILE, lang)), html, count=1, flags=re.S)
     if g.get('compact') is True:
         html = html.replace('</body>', jscript + '</body>', 1)
     html = build.set_updated(html, sub)

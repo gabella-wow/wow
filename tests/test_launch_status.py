@@ -52,7 +52,8 @@ class LaunchStatus(unittest.TestCase):
             target = posixpath.normpath(posixpath.join(here, href)) + '/'
             self.assertEqual(target, build.page_dir(lang, 'guides/server-status/'), (lang, page, href))
             self.assertTrue(os.path.isfile(os.path.join(ROOT, target, 'index.html')), target)   # the built page it opens
-            self.assertEqual((title, sub), tuple(build.esc(x) for x in build.LAUNCH_TX[lang]), (lang, page))
+            want = build.LAUNCH_TX[lang][1] if page == '' else build_guides.SS_TILE[lang]   # Launch day already says «Blizzard only» above
+            self.assertEqual((title, sub), (build.esc(build.LAUNCH_TX[lang][0]), build.esc(want)), (lang, page))
             self.assertEqual((frm, until), (ON['from'], ON['until']))
             if lang not in ('ru', 'uk'):
                 self.assertFalse(re.search('[А-Яа-яЁёЇїІіЄєҐґ]', title + sub), (lang, title, sub))
