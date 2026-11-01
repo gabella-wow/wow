@@ -1531,9 +1531,16 @@ a.frc:hover { text-decoration-color: var(--gold); }
 .pgrid { display: grid; gap: 14px; grid-template-columns: minmax(0, 1fr); }
 .pcol { display: contents; }   /* phone: one column, the level first, radio last */
 #level { order: 1; } #dung { order: 2; } #timers { order: 3; } #radio { order: 4; }
-#radioDock { min-height: 515px; }   /* the player comes after load: its place is kept, so nothing below jumps (CLS) */
-@media (max-width: 719px) { #radioDock { min-height: 568px; } }
-@media (max-width: 359px) { #radioDock { min-height: 630px; } }
+/* the player comes after load: its place is kept, so nothing below jumps (CLS). The heights are the player's own (ru, measured 01.11
+   at 320–1920 px): the old 515/568/630 were 8–111 px short, and on the live page before the second-screen rework (radio above the
+   level) the player pushed the level block down by 44 px — Lighthouse mobile CLS 0.15 */
+#radioDock { min-height: 523px; }
+@media (min-width: 960px) and (max-width: 1279px) { #radioDock { min-height: 560px; } }
+@media (max-width: 719px) { #radioDock { min-height: 591px; } }
+@media (max-width: 559px) { #radioDock { min-height: 612px; } }
+@media (max-width: 389px) { #radioDock { min-height: 628px; } }
+@media (max-width: 359px) { #radioDock { min-height: 678px; } }
+@media (max-width: 339px) { #radioDock { min-height: 741px; } }
 /* until radio.js builds the player: its outline in the same place (art strip, bar, buttons, stations), not an empty black box */
 .rskel { display: grid; gap: 16px; align-content: start; }
 #radioDock:has(.rdo) .rskel { display: none; }
@@ -1595,6 +1602,27 @@ a.frc:hover { text-decoration-color: var(--gold); }
 .plinks[hidden] { display: none; }
 .plinks a { display: inline-flex; align-items: center; min-height: 40px; padding: 0 14px; border: 1px solid var(--pline); border-radius: 999px; color: var(--gold-2); font-size: var(--fs-14); }
 .plinks a:hover { border-color: var(--gold); }
+/* «My class at level N» under the level buttons (JS play renderCard): talents, abilities, gear, dungeons; two columns from 720 px */
+.pcard { display: grid; gap: 10px 22px; padding-top: 10px; border-top: 1px solid var(--pline); }
+.pcard[hidden] { display: none; }
+.pcard h3 { margin: 0; font-size: var(--fs-18); }
+.pcard > .pch { grid-column: 1 / -1; }
+.pcx { display: grid; gap: 6px; align-content: start; min-width: 0; }
+.pcx h4 { margin: 0; font-size: var(--fs-14); font-weight: 600; color: var(--gold-2); }
+.pch { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0 12px; }
+.pch a { display: inline-block; padding: 12px 0; margin: -12px 0; color: var(--gold-2); font-size: var(--fs-14); }   /* 44 px to tap, no extra height */
+.pcx .btn { justify-self: start; min-height: 44px; cursor: pointer; }
+.pcn, .pct { margin: 0; font-size: var(--fs-14); }
+.pcn { color: var(--muted); }
+.pct b { font-weight: 600; }
+.pcl { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
+.pcl li { display: grid; grid-template-columns: 3.4em minmax(0, 1fr); gap: 10px; align-items: baseline; font-size: var(--fs-14); }
+.pcl-l { color: var(--muted); font-variant-numeric: lining-nums tabular-nums; white-space: nowrap; }
+.pcl li.up .pcl-l { color: var(--gold-2); }
+.pcl small { display: block; color: var(--muted); font-size: var(--fs-13); }
+.pcl b { font-weight: 600; }
+.pcl .iq0 { color: var(--q0); } .pcl .iq2 { color: var(--q2); } .pcl .iq3 { color: var(--q3); } .pcl .iq4 { color: var(--q4); }
+@media (min-width: 720px) and (max-width: 959px), (min-width: 1280px) { .pcard { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } .pcard h3 { grid-column: 1 / -1; } }
 /* game stages: folded by default under the second-screen blocks */
 .pjour > summary { list-style: none; cursor: pointer; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; padding: 16px 18px; }
 .pjour > summary::-webkit-details-marker { display: none; }
@@ -1719,7 +1747,7 @@ a.frc:hover { text-decoration-color: var(--gold); }
 <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png?v=00a6a7d9">
 <meta name="apple-mobile-web-app-title" content="Gabella WoW">
 <link rel="stylesheet" href="../assets/radio/radio.css?v=556d7dc63f" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="../assets/search/search.css?v=044d7d6679" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="../assets/search/search.css?v=f60111c18a" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="../assets/me/me.css?v=f19953bd21" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="../assets/hero/hero.css?v=d902786d1d" media="print" onload="this.media='all'">
 </head>
@@ -1951,7 +1979,7 @@ addEventListener('beforeinstallprompt', e => {
 });
 </script>
 <script src="../assets/radio/radio.js?v=556d7dc63f" data-root="../" defer></script>
-<script src="../assets/search/search.js?v=044d7d6679" data-root="../" defer></script>
+<script src="../assets/search/search.js?v=f60111c18a" data-root="../" defer></script>
 <script src="../assets/me/me.js?v=f19953bd21" data-root="../" data-home="./" data-lang="en" data-ach="0" data-teaser="" data-close="Close" data-page="404" data-look="2" defer></script>
 <script src="../assets/hero/hero.js?v=d902786d1d" data-root="../" data-home="./" data-data="../assets/hero/en.json?v=d902786d1d" defer></script>
 </body>
