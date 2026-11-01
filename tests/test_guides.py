@@ -205,6 +205,32 @@ def test_gear30_data():
     assert fx['fixture'] and gear_problems(fx, 5) == [], gear_problems(fx, 5)
 
 
+def test_gear30_strict():
+    """The accepted file, with no waiver: each of the 27 specs has 6+ slots, at most 3 items per slot among the picks of
+    tools/gear_fill.py, a source on every item of a pick, names in uk and pl, and the «incomplete» list empty."""
+    from content import spec_cheats as sc
+    p = os.path.join(bg.HERE, 'data', 'gear30.json')
+    data = sc.load_gear30(p)
+    if not data.get('approved'):
+        return
+    assert data.get('partial') == [], data.get('partial')
+    assert set(data['specs']) == set(sc.HAS_CHEAT), set(sc.HAS_CHEAT) ^ set(data['specs'])
+    items = data['items']
+    for spec, entries in data['specs'].items():
+        slots = {items[str(e['id'])]['slot'] for e in entries}
+        assert len(slots) >= sc.GEAR_MIN_SLOTS, (spec, sorted(slots))
+        picks = [e for e in entries if e.get('pick')]
+        for slot in {items[str(e['id'])]['slot'] for e in picks}:
+            n = sum(1 for e in picks if items[str(e['id'])]['slot'] == slot)
+            assert n <= 3, (spec, slot, n)
+        own = {items[str(e['id'])]['slot'] for e in entries if not e.get('pick')}
+        for e in picks:
+            assert e.get('src') and e.get('pages') and spec not in e['pages'], (spec, e['id'])
+            assert items[str(e['id'])]['slot'] not in own, (spec, e['id'])   # a pick fills an empty slot only
+    for k, it in items.items():
+        assert it['names'].get('uk') and it['names'].get('pl'), k
+
+
 def gear_marks(sc, data):
     """Accepted data in the build: every spec with items shows the section with the beta mark in 9 languages (while the items come
     from the Wowhead import); the «incomplete» mark exactly on the specs listed in "partial"; the built pages carry the same."""

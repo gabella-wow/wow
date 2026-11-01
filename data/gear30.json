@@ -3,15 +3,7 @@
  "date": "2026-10-30",
  "fixture": false,
  "approved": true,
- "partial": [
-  "paladin-holy",
-  "paladin-protection",
-  "priest-discipline",
-  "priest-holy",
-  "shaman-enhancement",
-  "warrior-arms",
-  "warrior-fury"
- ],
+ "partial": [],
  "dungeon_loot": false,
  "provenance": {
   "source": "Wowhead Forever level-30 class guides (SingleFile saves, offline)",
@@ -128,7 +120,8 @@
     "saved": "2026-10-30 07:12"
    }
   },
-  "details": "Blizzard Game Data API, static-classic1x-eu (slot, levels, quality, names, stats, icon)"
+  "details": "Blizzard Game Data API, static-classic1x-eu (slot, levels, quality, names, stats, icon)",
+  "fill": "empty slots of the specs under 6 slots: the best items of the other pages by the spec stat priority (tools/gear_fill.py), entries marked \"pick\": \"stats\""
  },
  "missing": [
   "il",
@@ -259,7 +252,9 @@
     "fr": "Bâtonnet du somnanbule",
     "es": "Vara del Insomne",
     "pt": "Bastão do Sonâmbulo",
-    "it": "Verga del Sonnambulo"
+    "it": "Verga del Sonnambulo",
+    "uk": "Rod of the Sleepwalker",
+    "pl": "Rod of the Sleepwalker"
    },
    "stats": {
     "int": 11,
@@ -268,7 +263,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 0
+   "ic": 0,
+   "cls": 2,
+   "sub": 10
   },
   "1156": {
    "slot": "finger",
@@ -282,7 +279,9 @@
     "fr": "Anneau somptueux",
     "es": "Anillo con una piedra magnífica",
     "pt": "Anel Carregado de Gemas",
-    "it": "Anello Sontuosamente Ingioiellato"
+    "it": "Anello Sontuosamente Ingioiellato",
+    "uk": "Lavishly Jeweled Ring",
+    "pl": "Lavishly Jeweled Ring"
    },
    "stats": {
     "agi": 2,
@@ -290,7 +289,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 1
+   "ic": 1,
+   "cls": 4,
+   "sub": 0
   },
   "1317": {
    "slot": "two",
@@ -304,7 +305,9 @@
     "fr": "Bâton de racine durcie",
     "es": "Bastón de raíz endurecido",
     "pt": "Cajado de Raiz Densa",
-    "it": "Bastone Indurito"
+    "it": "Bastone Indurito",
+    "uk": "Hardened Root Staff",
+    "pl": "Hardened Root Staff"
    },
    "stats": {
     "str": 1,
@@ -313,7 +316,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 2
+   "ic": 2,
+   "cls": 2,
+   "sub": 10
   },
   "1978": {
    "slot": "hands",
@@ -327,7 +332,9 @@
     "fr": "Gants griffe-de-loup",
     "es": "Guantes de garra de lobo",
     "pt": "Luvas Lupigarras",
-    "it": "Guanti dell'Artiglio Lupino"
+    "it": "Guanti dell'Artiglio Lupino",
+    "uk": "Wolfclaw Gloves",
+    "pl": "Wolfclaw Gloves"
    },
    "stats": {
     "str": 5,
@@ -337,7 +344,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 3
+   "ic": 3,
+   "cls": 4,
+   "sub": 2
   },
   "2169": {
    "slot": "main",
@@ -351,14 +360,18 @@
     "fr": "Lame sifflante",
     "es": "Hoja timbre",
     "pt": "Lâmina-alarme",
-    "it": "Pugnale di Glubtok"
+    "it": "Pugnale di Glubtok",
+    "uk": "Buzzer Blade",
+    "pl": "Buzzer Blade"
    },
    "stats": {
     "dps": 9.7
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 4
+   "ic": 4,
+   "cls": 2,
+   "sub": 15
   },
   "2264": {
    "slot": "shoulder",
@@ -372,7 +385,9 @@
     "fr": "Mantelet des voleurs",
     "es": "Manto de Ladrones",
     "pt": "Dragonas dos Larápios",
-    "it": "Coprispalle dei Ladri"
+    "it": "Coprispalle dei Ladri",
+    "uk": "Mantle of Thieves",
+    "pl": "Mantle of Thieves"
    },
    "stats": {
     "agi": 10,
@@ -382,7 +397,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 5
+   "ic": 5,
+   "cls": 4,
+   "sub": 2
   },
   "2278": {
    "slot": "shoulder",
@@ -396,7 +413,9 @@
     "fr": "Epaulettes de pisteur sylvestre",
     "es": "Insignias de rastreador de bosque",
     "pt": "Palas do Rastreador",
-    "it": "Spalline del Braccatore della Foresta"
+    "it": "Spalline del Braccatore della Foresta",
+    "uk": "Forest Tracker Epaulets",
+    "pl": "Forest Tracker Epaulets"
    },
    "stats": {
     "str": 5,
@@ -405,7 +424,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 6
+   "ic": 6,
+   "cls": 4,
+   "sub": 2
   },
   "2280": {
    "slot": "two",
@@ -419,7 +440,9 @@
     "fr": "Cane de Kam",
     "es": "Bastón de Kam",
     "pt": "Bengala do Kam",
-    "it": "Bastone da Cammino di Kam"
+    "it": "Bastone da Cammino di Kam",
+    "uk": "Kam's Walking Stick",
+    "pl": "Kam's Walking Stick"
    },
    "stats": {
     "agi": 3,
@@ -428,7 +451,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 0
+   "ic": 0,
+   "cls": 2,
+   "sub": 10
   },
   "2545": {
    "slot": "legs",
@@ -442,7 +467,9 @@
     "fr": "Jambières en mailles de l'apprenti",
     "es": "Leotardos de anillas maleables",
     "pt": "Perneiras Encadeadas Maleáveis",
-    "it": "Gambiere Inanellate Malleabili"
+    "it": "Gambiere Inanellate Malleabili",
+    "uk": "Malleable Chain Leggings",
+    "pl": "Malleable Chain Leggings"
    },
    "stats": {
     "str": 7,
@@ -452,7 +479,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 7
+   "ic": 7,
+   "cls": 4,
+   "sub": 3
   },
   "2549": {
    "slot": "two",
@@ -466,14 +495,18 @@
     "fr": "Bâton des ombres",
     "es": "Bastón de la Sombra",
     "pt": "Cajado do Vulto",
-    "it": "Bastone dell'Ombra"
+    "it": "Bastone dell'Ombra",
+    "uk": "Staff of the Shade",
+    "pl": "Staff of the Shade"
    },
    "stats": {
     "dps": 22.3
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 8
+   "ic": 8,
+   "cls": 2,
+   "sub": 10
   },
   "2567": {
    "slot": "main",
@@ -487,7 +520,9 @@
     "fr": "Lame de l'Evocateur",
     "es": "Hoja de evocador",
     "pt": "Lâmina do  Invocador",
-    "it": "Lama dell'Evocatore"
+    "it": "Lama dell'Evocatore",
+    "uk": "Evocator's Blade",
+    "pl": "Evocator's Blade"
    },
    "stats": {
     "int": 4,
@@ -496,7 +531,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 9
+   "ic": 9,
+   "cls": 2,
+   "sub": 15
   },
   "2816": {
    "slot": "main",
@@ -510,7 +547,9 @@
     "fr": "Sceptre de nécrorateur",
     "es": "Cetro de médium",
     "pt": "Cetro do Morta-voz",
-    "it": "Scettro dell'Oratore della Morte"
+    "it": "Scettro dell'Oratore della Morte",
+    "uk": "Death Speaker Scepter",
+    "pl": "Death Speaker Scepter"
    },
    "stats": {
     "spi": 1,
@@ -519,7 +558,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 10
+   "ic": 10,
+   "cls": 2,
+   "sub": 4
   },
   "2870": {
    "slot": "chest",
@@ -533,7 +574,9 @@
     "fr": "Cuirasse en argent lumineux",
     "es": "Peto de plata lustrosa",
     "pt": "Peitoral de Prata Rutilante",
-    "it": "Pettorale Corazzato d'Argento Lucido"
+    "it": "Pettorale Corazzato d'Argento Lucido",
+    "uk": "Shining Silver Breastplate",
+    "pl": "Shining Silver Breastplate"
    },
    "stats": {
     "str": 14,
@@ -542,7 +585,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 11
+   "ic": 11,
+   "cls": 4,
+   "sub": 3
   },
   "2953": {
    "slot": "back",
@@ -556,7 +601,9 @@
     "fr": "Cape de maître du guet",
     "es": "Capa de maestro vigía",
     "pt": "Manto do Mestre Vigilante",
-    "it": "Mantello del Maestro della Guardia"
+    "it": "Mantello del Maestro della Guardia",
+    "uk": "Watch Master's Cloak",
+    "pl": "Watch Master's Cloak"
    },
    "stats": {
     "sta": 7,
@@ -564,7 +611,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 12
+   "ic": 12,
+   "cls": 4,
+   "sub": 1
   },
   "3191": {
    "slot": "two",
@@ -578,7 +627,9 @@
     "fr": "Hache de guerre du croissant",
     "es": "Hacha de guerra arqueada",
     "pt": "Machado de Guerra Recurvo",
-    "it": "Ascia da Guerra Arcuata"
+    "it": "Ascia da Guerra Arcuata",
+    "uk": "Arced War Axe",
+    "pl": "Arced War Axe"
    },
    "stats": {
     "str": 6,
@@ -587,7 +638,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 13
+   "ic": 13,
+   "cls": 2,
+   "sub": 1
   },
   "3228": {
    "slot": "wrist",
@@ -601,7 +654,9 @@
     "fr": "Menottes forcées",
     "es": "Esposas forzadas",
     "pt": "Grilhões Forçados",
-    "it": "Polsiere di Jimmy"
+    "it": "Polsiere di Jimmy",
+    "uk": "Jimmied Handcuffs",
+    "pl": "Jimmied Handcuffs"
    },
    "stats": {
     "str": 3,
@@ -610,7 +665,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 14
+   "ic": 14,
+   "cls": 4,
+   "sub": 3
   },
   "3324": {
    "slot": "shoulder",
@@ -624,7 +681,9 @@
     "fr": "Mantelet fantomatique",
     "es": "Manto fantasmal",
     "pt": "Dragonas Fantasmagóricas",
-    "it": "Coprispalla Fantasmatico"
+    "it": "Coprispalla Fantasmatico",
+    "uk": "Ghostly Mantle",
+    "pl": "Ghostly Mantle"
    },
    "stats": {
     "int": 5,
@@ -633,7 +692,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 15
+   "ic": 15,
+   "cls": 4,
+   "sub": 1
   },
   "3414": {
    "slot": "main",
@@ -647,7 +708,9 @@
     "fr": "Sceptre de guerre",
     "es": "Cetro con emblema",
     "pt": "Cetro Timbrado",
-    "it": "Scettro Crestato"
+    "it": "Scettro Crestato",
+    "uk": "Crested Scepter",
+    "pl": "Crested Scepter"
    },
    "stats": {
     "sta": 5,
@@ -656,7 +719,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 16
+   "ic": 16,
+   "cls": 2,
+   "sub": 4
   },
   "3461": {
    "slot": "chest",
@@ -670,7 +735,9 @@
     "fr": "Grande robe de l'adjudicateur",
     "es": "Gran toga del Adjudicador",
     "pt": "Grande Veste do Árbitro",
-    "it": "Tonaca del Gran Giudice"
+    "it": "Tonaca del Gran Giudice",
+    "uk": "High Robe of the Adjudicator",
+    "pl": "High Robe of the Adjudicator"
    },
    "stats": {
     "int": 2,
@@ -679,7 +746,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 17
+   "ic": 17,
+   "cls": 4,
+   "sub": 1
   },
   "3569": {
    "slot": "chest",
@@ -693,7 +762,9 @@
     "fr": "Robe de vicaire",
     "es": "Toga de vicario",
     "pt": "Veste do Vicário",
-    "it": "Tonaca del Vicario"
+    "it": "Tonaca del Vicario",
+    "uk": "Vicar's Robe",
+    "pl": "Vicar's Robe"
    },
    "stats": {
     "sta": 4,
@@ -702,7 +773,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 18
+   "ic": 18,
+   "cls": 4,
+   "sub": 1
   },
   "3719": {
    "slot": "back",
@@ -716,14 +789,18 @@
     "fr": "Cape d'homme des collines",
     "es": "Capa de montañero",
     "pt": "Manto do Montanhista",
-    "it": "Mantello di Collealto"
+    "it": "Mantello di Collealto",
+    "uk": "Hillman's Cloak",
+    "pl": "Hillman's Cloak"
    },
    "stats": {
     "armor": 20
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 19
+   "ic": 19,
+   "cls": 4,
+   "sub": 1
   },
   "3748": {
    "slot": "shoulder",
@@ -737,7 +814,9 @@
     "fr": "Mantelet félin",
     "es": "Manto felino",
     "pt": "Dragonas Felinas",
-    "it": "Spalline Feline"
+    "it": "Spalline Feline",
+    "uk": "Feline Mantle",
+    "pl": "Feline Mantle"
    },
    "stats": {
     "agi": 2,
@@ -747,7 +826,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 20
+   "ic": 20,
+   "cls": 4,
+   "sub": 1
   },
   "3759": {
    "slot": "hands",
@@ -761,7 +842,9 @@
     "fr": "Gants vitaux des sages",
     "es": "Guantes aislantes de sabio",
     "pt": "Luvas Isolantes do Sábio",
-    "it": "Guanti Isolati del Saggio"
+    "it": "Guanti Isolati del Saggio",
+    "uk": "Insulated Sage Gloves",
+    "pl": "Insulated Sage Gloves"
    },
    "stats": {
     "sta": 7,
@@ -770,7 +853,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 21
+   "ic": 21,
+   "cls": 4,
+   "sub": 1
   },
   "3841": {
    "slot": "shoulder",
@@ -784,7 +869,9 @@
     "fr": "Epaulières en écailles dorées",
     "es": "Hombreras de escamas de oro",
     "pt": "Omoplatas de Escama Dourada",
-    "it": "Spallacci di Scaglie d'Oro"
+    "it": "Spallacci di Scaglie d'Oro",
+    "uk": "Golden Scale Shoulders",
+    "pl": "Golden Scale Shoulders"
    },
    "stats": {
     "str": 7,
@@ -793,7 +880,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 15
+   "ic": 15,
+   "cls": 4,
+   "sub": 3
   },
   "4055": {
    "slot": "feet",
@@ -807,7 +896,9 @@
     "fr": "Bottes à insigne",
     "es": "Botas de insignia",
     "pt": "Botas com Insígnia",
-    "it": "Stivali con Fregio"
+    "it": "Stivali con Fregio",
+    "uk": "Insignia Boots",
+    "pl": "Insignia Boots"
    },
    "stats": {
     "agi": 8,
@@ -816,7 +907,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 22
+   "ic": 22,
+   "cls": 4,
+   "sub": 2
   },
   "4107": {
    "slot": "hands",
@@ -830,7 +923,9 @@
     "fr": "Gants de chasseur de tigres",
     "es": "Guantes de cazador de tigre",
     "pt": "Luvas do Caçador de Tigres",
-    "it": "Guanti da Cacciatore di Tigre"
+    "it": "Guanti da Cacciatore di Tigre",
+    "uk": "Tiger Hunter Gloves",
+    "pl": "Tiger Hunter Gloves"
    },
    "stats": {
     "str": 7,
@@ -839,7 +934,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 3
+   "ic": 3,
+   "cls": 4,
+   "sub": 2
   },
   "4108": {
    "slot": "legs",
@@ -853,7 +950,9 @@
     "fr": "Jambières du chasseur de panthères",
     "es": "Leotardos de cazador de panteras",
     "pt": "Perneiras do Caçador de Panteras",
-    "it": "Gambiere da Cacciatore di Pantere"
+    "it": "Gambiere da Cacciatore di Pantere",
+    "uk": "Panther Hunter Leggings",
+    "pl": "Panther Hunter Leggings"
    },
    "stats": {
     "agi": 10,
@@ -862,7 +961,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 23
+   "ic": 23,
+   "cls": 4,
+   "sub": 2
   },
   "4129": {
    "slot": "off",
@@ -876,7 +977,9 @@
     "fr": "Légendaire",
     "es": "Colección de placas",
     "pt": "Bandeja de Coleta",
-    "it": "Scudopiastra da Collezione"
+    "it": "Scudopiastra da Collezione",
+    "uk": "Collection Plate",
+    "pl": "Collection Plate"
    },
    "stats": {
     "str": 2,
@@ -885,7 +988,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 24
+   "ic": 24,
+   "cls": 4,
+   "sub": 6
   },
   "4197": {
    "slot": "shoulder",
@@ -899,7 +1004,9 @@
     "fr": "Ailettes de Berylline",
     "es": "Protectores de berilio",
     "pt": "Ombreiras Berílias",
-    "it": "Spalline Doppie di Berillio"
+    "it": "Spalline Doppie di Berillio",
+    "uk": "Berylline Pads",
+    "pl": "Berylline Pads"
    },
    "stats": {
     "sta": 5,
@@ -909,7 +1016,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 20
+   "ic": 20,
+   "cls": 4,
+   "sub": 1
   },
   "4253": {
    "slot": "hands",
@@ -923,7 +1032,9 @@
     "fr": "Gants en cuir raffermi",
     "es": "Guantes de cuero fortalecido",
     "pt": "Luvas de Couro Resistente",
-    "it": "Guanti di Cuoio Temprato"
+    "it": "Guanti di Cuoio Temprato",
+    "uk": "Toughened Leather Gloves",
+    "pl": "Toughened Leather Gloves"
    },
    "stats": {
     "agi": 6,
@@ -933,7 +1044,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 25
+   "ic": 25,
+   "cls": 4,
+   "sub": 2
   },
   "4256": {
    "slot": "chest",
@@ -947,7 +1060,9 @@
     "fr": "Armure de gardien",
     "es": "Armadura de guardián",
     "pt": "Armadura do Guardião",
-    "it": "Armatura del Guardiano"
+    "it": "Armatura del Guardiano",
+    "uk": "Guardian Armor",
+    "pl": "Guardian Armor"
    },
    "stats": {
     "int": 10,
@@ -956,7 +1071,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 26
+   "ic": 26,
+   "cls": 4,
+   "sub": 2
   },
   "4258": {
    "slot": "waist",
@@ -970,7 +1087,9 @@
     "fr": "Ceinture de gardien",
     "es": "Cinturón de guardián",
     "pt": "Cinto do Guardião",
-    "it": "Cintura del Guardiano"
+    "it": "Cintura del Guardiano",
+    "uk": "Guardian Belt",
+    "pl": "Guardian Belt"
    },
    "stats": {
     "int": 7,
@@ -979,7 +1098,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 27
+   "ic": 27,
+   "cls": 4,
+   "sub": 2
   },
   "4319": {
    "slot": "hands",
@@ -993,7 +1114,9 @@
     "fr": "Gants azur en soie",
     "es": "Guantes de seda azur",
     "pt": "Luvas de Seda Lazúli",
-    "it": "Guanti di Seta Azzurri"
+    "it": "Guanti di Seta Azzurri",
+    "uk": "Azure Silk Gloves",
+    "pl": "Azure Silk Gloves"
    },
    "stats": {
     "spi": 3,
@@ -1001,7 +1124,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 28
+   "ic": 28,
+   "cls": 4,
+   "sub": 1
   },
   "4320": {
    "slot": "feet",
@@ -1015,7 +1140,9 @@
     "fr": "Bottes en soie d'araignée",
     "es": "Botas de seda de araña",
     "pt": "Botas de Sedaracna",
-    "it": "Stivali di Seta di Ragno"
+    "it": "Stivali di Seta di Ragno",
+    "uk": "Spidersilk Boots",
+    "pl": "Spidersilk Boots"
    },
    "stats": {
     "sta": 4,
@@ -1025,7 +1152,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 29
+   "ic": 29,
+   "cls": 4,
+   "sub": 1
   },
   "4321": {
    "slot": "feet",
@@ -1039,7 +1168,9 @@
     "fr": "Mules en soie d'araignée",
     "es": "Zapatillas de seda de araña",
     "pt": "Sapatilhas de Seda de Aranha",
-    "it": "Pianelle di Seta di Ragno"
+    "it": "Pianelle di Seta di Ragno",
+    "uk": "Spider Silk Slippers",
+    "pl": "Spider Silk Slippers"
    },
    "stats": {
     "agi": 3,
@@ -1048,7 +1179,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 30
+   "ic": 30,
+   "cls": 4,
+   "sub": 1
   },
   "4322": {
    "slot": "head",
@@ -1062,7 +1195,9 @@
     "fr": "Capuche d'enchanteur",
     "es": "Capucha de encantador",
     "pt": "Capucho do Encantador",
-    "it": "Copricapo da Incantatore"
+    "it": "Copricapo da Incantatore",
+    "uk": "Enchanter's Cowl",
+    "pl": "Enchanter's Cowl"
    },
    "stats": {
     "int": 10,
@@ -1071,7 +1206,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 31
+   "ic": 31,
+   "cls": 4,
+   "sub": 1
   },
   "4323": {
    "slot": "head",
@@ -1085,7 +1222,9 @@
     "fr": "Chaperon des ombres",
     "es": "Caperuza de las Sombras",
     "pt": "Capuz das Sombras",
-    "it": "Cappuccio d'Ombra"
+    "it": "Cappuccio d'Ombra",
+    "uk": "Shadow Hood",
+    "pl": "Shadow Hood"
    },
    "stats": {
     "int": 11,
@@ -1093,7 +1232,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 32
+   "ic": 32,
+   "cls": 4,
+   "sub": 1
   },
   "4324": {
    "slot": "chest",
@@ -1107,7 +1248,9 @@
     "fr": "Gilet azur en soie",
     "es": "Jubón de seda azur",
     "pt": "Colete de Seda Lazúli",
-    "it": "Veste di Seta Azzurra"
+    "it": "Veste di Seta Azzurra",
+    "uk": "Azure Silk Vest",
+    "pl": "Azure Silk Vest"
    },
    "stats": {
     "int": 9,
@@ -1115,7 +1258,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 33
+   "ic": 33,
+   "cls": 4,
+   "sub": 1
   },
   "4325": {
    "slot": "feet",
@@ -1129,7 +1274,9 @@
     "fr": "Bottes de l'enchanteur",
     "es": "Botas del Encantador",
     "pt": "Botas do Encantador",
-    "it": "Stivali dell'Incantatore"
+    "it": "Stivali dell'Incantatore",
+    "uk": "Boots of the Enchanter",
+    "pl": "Boots of the Enchanter"
    },
    "stats": {
     "int": 5,
@@ -1138,7 +1285,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 29
+   "ic": 29,
+   "cls": 4,
+   "sub": 1
   },
   "4368": {
    "slot": "head",
@@ -1152,7 +1301,9 @@
     "fr": "Lunettes de tigre volant",
     "es": "Gafas de tigre volador",
     "pt": "Óculos de Tigre Voador",
-    "it": "Occhiali della Tigre Volante"
+    "it": "Occhiali della Tigre Volante",
+    "uk": "Flying Tiger Goggles",
+    "pl": "Flying Tiger Goggles"
    },
    "stats": {
     "sta": 4,
@@ -1161,7 +1312,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 34
+   "ic": 34,
+   "cls": 4,
+   "sub": 1
   },
   "4373": {
    "slot": "head",
@@ -1175,7 +1328,9 @@
     "fr": "Lunettes des ombres",
     "es": "Gafas de las Sombras",
     "pt": "Óculos Sombrios",
-    "it": "Occhiali d'Ombra"
+    "it": "Occhiali d'Ombra",
+    "uk": "Shadow Goggles",
+    "pl": "Shadow Goggles"
    },
    "stats": {
     "int": 5,
@@ -1184,7 +1339,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 34
+   "ic": 34,
+   "cls": 4,
+   "sub": 1
   },
   "4381": {
    "slot": "trinket",
@@ -1198,12 +1355,16 @@
     "fr": "Recombobulateur mineur",
     "es": "Recombobulador menor",
     "pt": "Rebotocador Menor",
-    "it": "Tecno-Ricostituente Minore"
+    "it": "Tecno-Ricostituente Minore",
+    "uk": "Minor Recombobulator",
+    "pl": "Minor Recombobulator"
    },
    "stats": {},
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 35
+   "ic": 35,
+   "cls": 7,
+   "sub": 3
   },
   "4385": {
    "slot": "head",
@@ -1217,7 +1378,9 @@
     "fr": "Lunettes teintées vertes",
     "es": "Gafas tintadas de verde",
     "pt": "Óculos Tintos de Verde",
-    "it": "Occhiali con Lenti Verdi"
+    "it": "Occhiali con Lenti Verdi",
+    "uk": "Green Tinted Goggles",
+    "pl": "Green Tinted Goggles"
    },
    "stats": {
     "sta": 8,
@@ -1226,7 +1389,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 34
+   "ic": 34,
+   "cls": 4,
+   "sub": 1
   },
   "4396": {
    "slot": "trinket",
@@ -1240,12 +1405,16 @@
     "fr": "Petit dragon mécanique",
     "es": "Dragonizo mecánico",
     "pt": "Dragonete Mecânico",
-    "it": "Minidrago Meccanico"
+    "it": "Minidrago Meccanico",
+    "uk": "Mechanical Dragonling",
+    "pl": "Mechanical Dragonling"
    },
    "stats": {},
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 36
+   "ic": 36,
+   "cls": 7,
+   "sub": 3
   },
   "4744": {
    "slot": "wrist",
@@ -1259,7 +1428,9 @@
     "fr": "Brassards runiques des arcanes",
     "es": "Brazaletes rúnicos Arcanos",
     "pt": "Braçadeiras Arcanas com Runas",
-    "it": "Bracciali Runici Arcani"
+    "it": "Bracciali Runici Arcani",
+    "uk": "Arcane Runed Bracers",
+    "pl": "Arcane Runed Bracers"
    },
    "stats": {
     "sta": 1,
@@ -1268,7 +1439,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 37
+   "ic": 37,
+   "cls": 4,
+   "sub": 1
   },
   "4746": {
    "slot": "chest",
@@ -1282,7 +1455,9 @@
     "fr": "Robe d'auspice funeste",
     "es": "Toga de cuentacondenas",
     "pt": "Veste do Agourento",
-    "it": "Tonaca del Vate della Rovina"
+    "it": "Tonaca del Vate della Rovina",
+    "uk": "Doomsayer's Robe",
+    "pl": "Doomsayer's Robe"
    },
    "stats": {
     "sta": -10,
@@ -1291,7 +1466,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 38
+   "ic": 38,
+   "cls": 4,
+   "sub": 1
   },
   "4983": {
    "slot": "two",
@@ -1305,7 +1482,9 @@
     "fr": "Destructeur de roc",
     "es": "Pulverizador de rocas",
     "pt": "Pulverizador de Rochas",
-    "it": "Polverizzatore Roccioso"
+    "it": "Polverizzatore Roccioso",
+    "uk": "Rock Pulverizer",
+    "pl": "Rock Pulverizer"
    },
    "stats": {
     "dps": 31.2,
@@ -1313,7 +1492,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 39
+   "ic": 39,
+   "cls": 2,
+   "sub": 5
   },
   "5201": {
    "slot": "two",
@@ -1327,7 +1508,9 @@
     "fr": "Bâton de Pierrebraise",
     "es": "Bastón de piedra de ascuas",
     "pt": "Cajado da Pedra Incandescente",
-    "it": "Bastone di Pietrardente"
+    "it": "Bastone di Pietrardente",
+    "uk": "Emberstone Staff",
+    "pl": "Emberstone Staff"
    },
    "stats": {
     "sta": 5,
@@ -1337,7 +1520,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 40
+   "ic": 40,
+   "cls": 2,
+   "sub": 10
   },
   "5202": {
    "slot": "chest",
@@ -1351,7 +1536,9 @@
     "fr": "Casaque de corsaire",
     "es": "Sobrecamisa de corsario",
     "pt": "Pulôver do Corsário",
-    "it": "Maglia del Corsaro"
+    "it": "Maglia del Corsaro",
+    "uk": "Corsair's Overshirt",
+    "pl": "Corsair's Overshirt"
    },
    "stats": {
     "sta": 5,
@@ -1360,7 +1547,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 41
+   "ic": 41,
+   "cls": 4,
+   "sub": 1
   },
   "5964": {
    "slot": "shoulder",
@@ -1374,7 +1563,9 @@
     "fr": "Epaulières barbares",
     "es": "Hombreras barbáricas",
     "pt": "Omoplatas Barbarescas",
-    "it": "Spallacci della Barbarie"
+    "it": "Spallacci della Barbarie",
+    "uk": "Barbaric Shoulders",
+    "pl": "Barbaric Shoulders"
    },
    "stats": {
     "agi": 5,
@@ -1384,7 +1575,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 5
+   "ic": 5,
+   "cls": 4,
+   "sub": 2
   },
   "6226": {
    "slot": "chest",
@@ -1398,7 +1591,9 @@
     "fr": "Tablier sanglant",
     "es": "Mandil sangriento",
     "pt": "Avental Ensanguentado",
-    "it": "Tunica Insanguinata"
+    "it": "Tunica Insanguinata",
+    "uk": "Bloody Apron",
+    "pl": "Bloody Apron"
    },
    "stats": {
     "sta": 8,
@@ -1406,7 +1601,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 42
+   "ic": 42,
+   "cls": 4,
+   "sub": 1
   },
   "6318": {
    "slot": "two",
@@ -1420,7 +1617,9 @@
     "fr": "Bâton d'Odo",
     "es": "Bastón de Ley de Odo",
     "pt": "Cajado de Meridiano de Odo",
-    "it": "Bastone della Faglia di Odo"
+    "it": "Bastone della Faglia di Odo",
+    "uk": "Odo's Ley Staff",
+    "pl": "Odo's Ley Staff"
    },
    "stats": {
     "sta": 5,
@@ -1429,7 +1628,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 43
+   "ic": 43,
+   "cls": 2,
+   "sub": 10
   },
   "6324": {
    "slot": "chest",
@@ -1443,7 +1644,9 @@
     "fr": "Robe d'Arugal",
     "es": "Togas de Arugal",
     "pt": "Vestes de Arugal",
-    "it": "Vesti di Arugal"
+    "it": "Vesti di Arugal",
+    "uk": "Robes of Arugal",
+    "pl": "Robes of Arugal"
    },
    "stats": {
     "agi": 3,
@@ -1454,7 +1657,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 44
+   "ic": 44,
+   "cls": 4,
+   "sub": 1
   },
   "6340": {
    "slot": "back",
@@ -1468,7 +1673,9 @@
     "fr": "Peau de Fenrus",
     "es": "Pellejo de Fenrus",
     "pt": "Pelego de Fenrus",
-    "it": "Pelle di Fenrus"
+    "it": "Pelle di Fenrus",
+    "uk": "Fenrus' Hide",
+    "pl": "Fenrus' Hide"
    },
    "stats": {
     "agi": 4,
@@ -1477,7 +1684,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 45
+   "ic": 45,
+   "cls": 4,
+   "sub": 1
   },
   "6392": {
    "slot": "waist",
@@ -1491,7 +1700,9 @@
     "fr": "Ceinture d'Arugal",
     "es": "Cinturón de Arugal",
     "pt": "Cinto de Arugal",
-    "it": "Cintura di Arugal"
+    "it": "Cintura di Arugal",
+    "uk": "Belt of Arugal",
+    "pl": "Belt of Arugal"
    },
    "stats": {
     "agi": 2,
@@ -1501,7 +1712,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 46
+   "ic": 46,
+   "cls": 4,
+   "sub": 1
   },
   "6414": {
    "slot": "finger",
@@ -1515,7 +1728,9 @@
     "fr": "Sceau de Sylvanas",
     "es": "Lacre de Sylvanas",
     "pt": "Selo de Sylvana",
-    "it": "Sigillo di Sylvanas"
+    "it": "Sigillo di Sylvanas",
+    "uk": "Seal of Sylvanas",
+    "pl": "Seal of Sylvanas"
    },
    "stats": {
     "str": 3,
@@ -1523,7 +1738,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 47
+   "ic": 47,
+   "cls": 4,
+   "sub": 0
   },
   "6641": {
    "slot": "two",
@@ -1537,7 +1754,9 @@
     "fr": "Lame de hantise",
     "es": "Hoja inquietante",
     "pt": "Lâmina de Assombração",
-    "it": "Lama Infestante"
+    "it": "Lama Infestante",
+    "uk": "Haunting Blade",
+    "pl": "Haunting Blade"
    },
    "stats": {
     "spi": 9,
@@ -1545,7 +1764,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 48
+   "ic": 48,
+   "cls": 2,
+   "sub": 8
   },
   "6669": {
    "slot": "finger",
@@ -1559,7 +1780,9 @@
     "fr": "Anneau sacré",
     "es": "Sortija sacra",
     "pt": "Anel Sagrado",
-    "it": "Vera Consacrata"
+    "it": "Vera Consacrata",
+    "uk": "Sacred Band",
+    "pl": "Sacred Band"
    },
    "stats": {
     "int": 2,
@@ -1567,7 +1790,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 49
+   "ic": 49,
+   "cls": 4,
+   "sub": 0
   },
   "6682": {
    "slot": "chest",
@@ -1581,7 +1806,9 @@
     "fr": "Robe de nécrorateur",
     "es": "Togas de médium",
     "pt": "Vestes do Morta-voz",
-    "it": "Vesti dell'Oratore della Morte"
+    "it": "Vesti dell'Oratore della Morte",
+    "uk": "Death Speaker Robes",
+    "pl": "Death Speaker Robes"
    },
    "stats": {
     "sta": 3,
@@ -1591,7 +1818,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 50
+   "ic": 50,
+   "cls": 4,
+   "sub": 1
   },
   "6685": {
    "slot": "shoulder",
@@ -1605,7 +1834,9 @@
     "fr": "Mantelet de nécrorateur",
     "es": "Manto de médium",
     "pt": "Dragonas do Morta-voz",
-    "it": "Coprispalle dell'Oratore della Morte"
+    "it": "Coprispalle dell'Oratore della Morte",
+    "uk": "Death Speaker Mantle",
+    "pl": "Death Speaker Mantle"
    },
    "stats": {
     "int": 7,
@@ -1614,7 +1845,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 15
+   "ic": 15,
+   "cls": 4,
+   "sub": 1
   },
   "6686": {
    "slot": "head",
@@ -1628,7 +1861,9 @@
     "fr": "Heaume du phacochère",
     "es": "Casco con comillo",
     "pt": "Elmo com Presas",
-    "it": "Elmo Cornuto"
+    "it": "Elmo Cornuto",
+    "uk": "Tusken Helm",
+    "pl": "Tusken Helm"
    },
    "stats": {
     "str": 9,
@@ -1637,7 +1872,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 51
+   "ic": 51,
+   "cls": 4,
+   "sub": 3
   },
   "6687": {
    "slot": "two",
@@ -1651,7 +1888,9 @@
     "fr": "Démembreur",
     "es": "Crea cadáveres",
     "pt": "Cria-cadáver",
-    "it": "Creacadaveri"
+    "it": "Creacadaveri",
+    "uk": "Corpsemaker",
+    "pl": "Corpsemaker"
    },
    "stats": {
     "str": 15,
@@ -1660,7 +1899,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 52
+   "ic": 52,
+   "cls": 2,
+   "sub": 1
   },
   "6689": {
    "slot": "two",
@@ -1674,7 +1915,9 @@
     "fr": "Bâton d'esprit du vent",
     "es": "Bastón de espíritu del viento",
     "pt": "Cajado Espírito do Vento",
-    "it": "Bastone dello Spirito del Vento"
+    "it": "Bastone dello Spirito del Vento",
+    "uk": "Wind Spirit Staff",
+    "pl": "Wind Spirit Staff"
    },
    "stats": {
     "sta": 3,
@@ -1684,7 +1927,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 53
+   "ic": 53,
+   "cls": 2,
+   "sub": 10
   },
   "6690": {
    "slot": "legs",
@@ -1698,7 +1943,9 @@
     "fr": "Jambières de Ferine",
     "es": "Leotardos de Ferine",
     "pt": "Perneiras Ferinas",
-    "it": "Gambiere Brade"
+    "it": "Gambiere Brade",
+    "uk": "Ferine Leggings",
+    "pl": "Ferine Leggings"
    },
    "stats": {
     "str": 9,
@@ -1707,7 +1954,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 54
+   "ic": 54,
+   "cls": 4,
+   "sub": 2
   },
   "6691": {
    "slot": "main",
@@ -1721,7 +1970,9 @@
     "fr": "Croc de swinetusk",
     "es": "Carne de Colmillosucio",
     "pt": "Adaga Presa-de-suíno",
-    "it": "Daga della Zanna Suina"
+    "it": "Daga della Zanna Suina",
+    "uk": "Swinetusk Shank",
+    "pl": "Swinetusk Shank"
    },
    "stats": {
     "sta": 6,
@@ -1730,7 +1981,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 55
+   "ic": 55,
+   "cls": 2,
+   "sub": 15
   },
   "6695": {
    "slot": "neck",
@@ -1744,7 +1997,9 @@
     "fr": "Amulette stygienne en os",
     "es": "Amuleto de hueso estigio",
     "pt": "Amuleto de Osso Estígio",
-    "it": "Amuleto Osseo Stigiano"
+    "it": "Amuleto Osseo Stigiano",
+    "uk": "Stygian Bone Amulet",
+    "pl": "Stygian Bone Amulet"
    },
    "stats": {
     "sta": 4,
@@ -1752,7 +2007,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 56
+   "ic": 56,
+   "cls": 4,
+   "sub": 0
   },
   "6697": {
    "slot": "shoulder",
@@ -1766,7 +2023,9 @@
     "fr": "Mantelet d'aile de vampire",
     "es": "Manto ala de murciélago",
     "pt": "Dragonas Quirópteras",
-    "it": "Coprispalla ad Ala di Pipistrello"
+    "it": "Coprispalla ad Ala di Pipistrello",
+    "uk": "Batwing Mantle",
+    "pl": "Batwing Mantle"
    },
    "stats": {
     "agi": 3,
@@ -1776,7 +2035,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 20
+   "ic": 20,
+   "cls": 4,
+   "sub": 1
   },
   "6720": {
    "slot": "head",
@@ -1790,7 +2051,9 @@
     "fr": "Coiffure de chasseur d'esprit",
     "es": "Penacho de cazador de espíritus",
     "pt": "Cocar do Caçador Espiritual",
-    "it": "Maschera del Cacciatore dello Spirito"
+    "it": "Maschera del Cacciatore dello Spirito",
+    "uk": "Spirit Hunter Headdress",
+    "pl": "Spirit Hunter Headdress"
    },
    "stats": {
     "agi": 10,
@@ -1799,7 +2062,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 57
+   "ic": 57,
+   "cls": 4,
+   "sub": 2
   },
   "6727": {
    "slot": "hands",
@@ -1813,7 +2078,9 @@
     "fr": "Gants de course de Razzeric",
     "es": "Mandiletes de competición de Razzeric",
     "pt": "Luvas de Corrida do Razzeric",
-    "it": "Guanti da Corsa di Razzeric"
+    "it": "Guanti da Corsa di Razzeric",
+    "uk": "Razzeric's Racing Grips",
+    "pl": "Razzeric's Racing Grips"
    },
    "stats": {
     "agi": 8,
@@ -1822,7 +2089,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 25
+   "ic": 25,
+   "cls": 4,
+   "sub": 2
   },
   "6743": {
    "slot": "finger",
@@ -1836,7 +2105,9 @@
     "fr": "Anneau de soutien",
     "es": "Anillo de sustención",
     "pt": "Anel do Encorajamento",
-    "it": "Anello del Sostentamento"
+    "it": "Anello del Sostentamento",
+    "uk": "Sustaining Ring",
+    "pl": "Sustaining Ring"
    },
    "stats": {
     "sta": 1,
@@ -1844,7 +2115,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 58
+   "ic": 58,
+   "cls": 4,
+   "sub": 0
   },
   "6748": {
    "slot": "finger",
@@ -1858,14 +2131,18 @@
     "fr": "Anneau du singe",
     "es": "Anillo de mono",
     "pt": "Anel Símio",
-    "it": "Anello della Scimmia"
+    "it": "Anello della Scimmia",
+    "uk": "Monkey Ring",
+    "pl": "Monkey Ring"
    },
    "stats": {
     "agi": 6
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 59
+   "ic": 59,
+   "cls": 4,
+   "sub": 0
   },
   "6749": {
    "slot": "finger",
@@ -1879,14 +2156,18 @@
     "fr": "Anneau du tigre",
     "es": "Sortija de tigre",
     "pt": "Elo Tigrino",
-    "it": "Vera della Tigre"
+    "it": "Vera della Tigre",
+    "uk": "Tiger Band",
+    "pl": "Tiger Band"
    },
    "stats": {
     "str": 6
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 60
+   "ic": 60,
+   "cls": 4,
+   "sub": 0
   },
   "6750": {
    "slot": "finger",
@@ -1900,14 +2181,18 @@
     "fr": "Arceau du serpent",
     "es": "Aro de serpiente",
     "pt": "Aro Ofídio",
-    "it": "Anello del Serpente"
+    "it": "Anello del Serpente",
+    "uk": "Snake Hoop",
+    "pl": "Snake Hoop"
    },
    "stats": {
     "int": 6
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 61
+   "ic": 61,
+   "cls": 4,
+   "sub": 0
   },
   "6752": {
    "slot": "feet",
@@ -1921,7 +2206,9 @@
     "fr": "Bottes du lancier",
     "es": "Botas de lancero",
     "pt": "Botas Lanceiras",
-    "it": "Stivali da Lanciere"
+    "it": "Stivali da Lanciere",
+    "uk": "Lancer Boots",
+    "pl": "Lancer Boots"
    },
    "stats": {
     "agi": 6,
@@ -1930,7 +2217,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 30
+   "ic": 30,
+   "cls": 4,
+   "sub": 2
   },
   "6898": {
    "slot": "off",
@@ -1944,12 +2233,16 @@
     "fr": "Orbe de Soran'ruk",
     "es": "Orbe de Soran'ruk",
     "pt": "Orbe de Soran'ruk",
-    "it": "Globo di Soran'ruk"
+    "it": "Globo di Soran'ruk",
+    "uk": "Orb of Soran'ruk",
+    "pl": "Orb of Soran'ruk"
    },
    "stats": {},
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 62
+   "ic": 62,
+   "cls": 4,
+   "sub": 0
   },
   "6901": {
    "slot": "back",
@@ -1963,7 +2256,9 @@
     "fr": "Cape luminescente du batteur",
     "es": "Manteo de trillador resplandeciente",
     "pt": "Capa do Trilhador Reluzente",
-    "it": "Cappa di Plesiosauro Luminoso"
+    "it": "Cappa di Plesiosauro Luminoso",
+    "uk": "Glowing Thresher Cape",
+    "pl": "Glowing Thresher Cape"
    },
    "stats": {
     "str": 3,
@@ -1972,7 +2267,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 63
+   "ic": 63,
+   "cls": 4,
+   "sub": 1
   },
   "6903": {
    "slot": "legs",
@@ -1986,7 +2283,9 @@
     "fr": "Pantalon du rêveur",
     "es": "Pantalones de soñador de mirada",
     "pt": "Calças do Vislumbrador",
-    "it": "Pantaloni del Sognatore"
+    "it": "Pantaloni del Sognatore",
+    "uk": "Gaze Dreamer Pants",
+    "pl": "Gaze Dreamer Pants"
    },
    "stats": {
     "int": 7,
@@ -1995,7 +2294,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 23
+   "ic": 23,
+   "cls": 4,
+   "sub": 1
   },
   "6908": {
    "slot": "waist",
@@ -2008,7 +2309,9 @@
     "de": "Ghamoo-ras Bindung",
     "fr": "Lien de Ghamoo-ra",
     "es": "Vínculo de Ghamoo-ra",
-    "pt": "Elo de Ghamoo-ra"
+    "pt": "Elo de Ghamoo-ra",
+    "uk": "Ghamoo-ra's Bind",
+    "pl": "Ghamoo-ra's Bind"
    },
    "stats": {
     "sta": 4,
@@ -2017,7 +2320,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 64
+   "ic": 64,
+   "cls": 4,
+   "sub": 1
   },
   "6909": {
    "slot": "two",
@@ -2031,14 +2336,18 @@
     "fr": "Frappe de l'Hydre",
     "es": "Golpe de la hidra",
     "pt": "Golpe da Hidra",
-    "it": "Assalto dell'Idra"
+    "it": "Assalto dell'Idra",
+    "uk": "Strike of the Hydra",
+    "pl": "Strike of the Hydra"
    },
    "stats": {
     "dps": 25.6
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 65
+   "ic": 65,
+   "cls": 2,
+   "sub": 8
   },
   "6910": {
    "slot": "legs",
@@ -2052,7 +2361,9 @@
     "fr": "Pantalon de sangsue",
     "es": "Pantalones de sanguijuela",
     "pt": "Calças da Sanguessuga",
-    "it": "Pantaloni del Salasso"
+    "it": "Pantaloni del Salasso",
+    "uk": "Leech Pants",
+    "pl": "Leech Pants"
    },
    "stats": {
     "sta": 1,
@@ -2062,7 +2373,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 54
+   "ic": 54,
+   "cls": 4,
+   "sub": 1
   },
   "6911": {
    "slot": "waist",
@@ -2076,7 +2389,9 @@
     "fr": "Cordelière de mousse",
     "es": "Cincho musgoso",
     "pt": "Cilha de Musgo",
-    "it": "Cinta di Muschio"
+    "it": "Cinta di Muschio",
+    "uk": "Moss Cinch",
+    "pl": "Moss Cinch"
    },
    "stats": {
     "sta": 5,
@@ -2085,7 +2400,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 66
+   "ic": 66,
+   "cls": 4,
+   "sub": 2
   },
   "6953": {
    "slot": "two",
@@ -2099,7 +2416,9 @@
     "fr": "Poing de Verigan",
     "es": "Puño de Verigan",
     "pt": "Punho de Verigan",
-    "it": "Pugno di Verigan"
+    "it": "Pugno di Verigan",
+    "uk": "Verigan's Fist",
+    "pl": "Verigan's Fist"
    },
    "stats": {
     "sta": 7,
@@ -2109,7 +2428,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 67
+   "ic": 67,
+   "cls": 2,
+   "sub": 5
   },
   "6975": {
    "slot": "two",
@@ -2123,7 +2444,9 @@
     "fr": "Hache de tourbillon",
     "es": "Hacha espirálica",
     "pt": "Machado Redemoinho",
-    "it": "Ascia Turbinante"
+    "it": "Ascia Turbinante",
+    "uk": "Whirlwind Axe",
+    "pl": "Whirlwind Axe"
    },
    "stats": {
     "str": 15,
@@ -2132,7 +2455,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 68
+   "ic": 68,
+   "cls": 2,
+   "sub": 1
   },
   "6998": {
    "slot": "feet",
@@ -2146,7 +2471,9 @@
     "fr": "Bottes de la nimbe",
     "es": "Botas Nimbus",
     "pt": "Botas Nímbus",
-    "it": "Stivali di Nimbus"
+    "it": "Stivali di Nimbus",
+    "uk": "Nimbus Boots",
+    "pl": "Nimbus Boots"
    },
    "stats": {
     "agi": 3,
@@ -2155,7 +2482,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 29
+   "ic": 29,
+   "cls": 4,
+   "sub": 1
   },
   "7000": {
    "slot": "waist",
@@ -2169,7 +2498,9 @@
     "fr": "Ceinturon de coeur du bois",
     "es": "Faja de duramen",
     "pt": "Cinturão de Alburno",
-    "it": "Cinturone di Cuordilegno"
+    "it": "Cinturone di Cuordilegno",
+    "uk": "Heartwood Girdle",
+    "pl": "Heartwood Girdle"
    },
    "stats": {
     "sta": 4,
@@ -2178,7 +2509,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 69
+   "ic": 69,
+   "cls": 4,
+   "sub": 2
   },
   "7001": {
    "slot": "ranged",
@@ -2192,7 +2525,9 @@
     "fr": "Sceptre du tombeau",
     "es": "Cetro de lápida",
     "pt": "Cetro da Lápide",
-    "it": "Scettro di Pietra di Lapide"
+    "it": "Scettro di Pietra di Lapide",
+    "uk": "Gravestone Scepter",
+    "pl": "Gravestone Scepter"
    },
    "stats": {
     "spi": 1,
@@ -2200,7 +2535,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 70
+   "ic": 70,
+   "cls": 2,
+   "sub": 19
   },
   "7004": {
    "slot": "back",
@@ -2214,7 +2551,9 @@
     "fr": "Cape de prélat",
     "es": "Manteo de prelación",
     "pt": "Capa da Prelação",
-    "it": "Cappa della Prelatura"
+    "it": "Cappa della Prelatura",
+    "uk": "Prelacy Cape",
+    "pl": "Prelacy Cape"
    },
    "stats": {
     "spi": 5,
@@ -2222,7 +2561,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 71
+   "ic": 71,
+   "cls": 4,
+   "sub": 1
   },
   "7027": {
    "slot": "feet",
@@ -2236,7 +2577,9 @@
     "fr": "Bottes des ténèbres",
     "es": "Botas de oscuridad",
     "pt": "Botas da Escuridão",
-    "it": "Stivali dell'Oscurità"
+    "it": "Stivali dell'Oscurità",
+    "uk": "Boots of Darkness",
+    "pl": "Boots of Darkness"
    },
    "stats": {
     "sta": 5,
@@ -2244,7 +2587,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 29
+   "ic": 29,
+   "cls": 4,
+   "sub": 1
   },
   "7046": {
    "slot": "legs",
@@ -2258,7 +2603,9 @@
     "fr": "Pantalon azur en soie",
     "es": "Pantalones de seda azur",
     "pt": "Calças de Seda Lazúli",
-    "it": "Pantaloni di Seta Azzurri"
+    "it": "Pantaloni di Seta Azzurri",
+    "uk": "Azure Silk Pants",
+    "pl": "Azure Silk Pants"
    },
    "stats": {
     "int": 6,
@@ -2266,7 +2613,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 72
+   "ic": 72,
+   "cls": 4,
+   "sub": 1
   },
   "7047": {
    "slot": "hands",
@@ -2280,7 +2629,9 @@
     "fr": "Mains des ténèbres",
     "es": "Manos de Oscuridad",
     "pt": "Mãos das Trevas",
-    "it": "Guanti dell'Oscurità"
+    "it": "Guanti dell'Oscurità",
+    "uk": "Hands of Darkness",
+    "pl": "Hands of Darkness"
    },
    "stats": {
     "spi": 5,
@@ -2288,7 +2639,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 73
+   "ic": 73,
+   "cls": 4,
+   "sub": 1
   },
   "7048": {
    "slot": "head",
@@ -2302,14 +2655,18 @@
     "fr": "Chaperon azur en soie",
     "es": "Caperuza de seda azur",
     "pt": "Capuz de Seda Lazúli",
-    "it": "Cappuccio di Seta Azzurro"
+    "it": "Cappuccio di Seta Azzurro",
+    "uk": "Azure Silk Hood",
+    "pl": "Azure Silk Hood"
    },
    "stats": {
     "armor": 33
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 74
+   "ic": 74,
+   "cls": 4,
+   "sub": 1
   },
   "7053": {
    "slot": "back",
@@ -2323,7 +2680,9 @@
     "fr": "Cape azur en soie",
     "es": "Capa de seda azur",
     "pt": "Manto de Seda Lazúli",
-    "it": "Mantello di Seta Azzurro"
+    "it": "Mantello di Seta Azzurro",
+    "uk": "Azure Silk Cloak",
+    "pl": "Azure Silk Cloak"
    },
    "stats": {
     "spi": 3,
@@ -2331,7 +2690,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 75
+   "ic": 75,
+   "cls": 4,
+   "sub": 1
   },
   "7055": {
    "slot": "waist",
@@ -2345,7 +2706,9 @@
     "fr": "Ceinture cramoisie en soie",
     "es": "Cinturón de seda carmesí",
     "pt": "Cinto de Seda Carmesim",
-    "it": "Cintura di Seta Cremisi"
+    "it": "Cintura di Seta Cremisi",
+    "uk": "Crimson Silk Belt",
+    "pl": "Crimson Silk Belt"
    },
    "stats": {
     "int": 7,
@@ -2354,7 +2717,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 69
+   "ic": 69,
+   "cls": 4,
+   "sub": 1
   },
   "7065": {
    "slot": "chest",
@@ -2368,7 +2733,9 @@
     "fr": "Armure verte en soie",
     "es": "Armadura de seda verde",
     "pt": "Armadura de Seda Verde",
-    "it": "Armatura di Seta Verde"
+    "it": "Armatura di Seta Verde",
+    "uk": "Green Silk Armor",
+    "pl": "Green Silk Armor"
    },
    "stats": {
     "int": 13,
@@ -2376,7 +2743,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 76
+   "ic": 76,
+   "cls": 4,
+   "sub": 1
   },
   "7374": {
    "slot": "chest",
@@ -2390,7 +2759,9 @@
     "fr": "Armure en cuir mat",
     "es": "Armadura de cuero oscurecido",
     "pt": "Armadura de Couro Crepuscular",
-    "it": "Armatura di Cuoio Fosca"
+    "it": "Armatura di Cuoio Fosca",
+    "uk": "Dusky Leather Armor",
+    "pl": "Dusky Leather Armor"
    },
    "stats": {
     "agi": 14,
@@ -2398,7 +2769,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 77
+   "ic": 77,
+   "cls": 4,
+   "sub": 2
   },
   "7413": {
    "slot": "head",
@@ -2412,14 +2785,18 @@
     "fr": "Coiffe d'infiltrateur",
     "es": "Almete de infiltrador",
     "pt": "Casquete do Infiltrador",
-    "it": "Berretto dell'Infiltrato"
+    "it": "Berretto dell'Infiltrato",
+    "uk": "Infiltrator Cap",
+    "pl": "Infiltrator Cap"
    },
    "stats": {
     "armor": 80
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 78
+   "ic": 78,
+   "cls": 4,
+   "sub": 2
   },
   "7682": {
    "slot": "main",
@@ -2433,14 +2810,18 @@
     "fr": "Tisonnier de torture",
     "es": "Atizador de tortura",
     "pt": "Atiçador de Tortura",
-    "it": "Spuntone da Tortura"
+    "it": "Spuntone da Tortura",
+    "uk": "Torturing Poker",
+    "pl": "Torturing Poker"
    },
    "stats": {
     "dps": 21.2
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 79
+   "ic": 79,
+   "cls": 2,
+   "sub": 15
   },
   "7683": {
    "slot": "main",
@@ -2454,14 +2835,18 @@
     "fr": "Coup de poing sanglant en laiton",
     "es": "Nudillos de latón sangrientos",
     "pt": "Soqueira Ensanguentada",
-    "it": "Paranocche d'Ottone Insanguinati"
+    "it": "Paranocche d'Ottone Insanguinati",
+    "uk": "Bloody Brass Knuckles",
+    "pl": "Bloody Brass Knuckles"
    },
    "stats": {
     "dps": 16.6
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 80
+   "ic": 80,
+   "cls": 2,
+   "sub": 13
   },
   "7684": {
    "slot": "shoulder",
@@ -2475,7 +2860,9 @@
     "fr": "Mantelet de mage de sang",
     "es": "Manto de mago de sangre",
     "pt": "Dragonas do Mago Sangrento",
-    "it": "Coprispalle del Mago del Sangue"
+    "it": "Coprispalle del Mago del Sangue",
+    "uk": "Bloodmage Mantle",
+    "pl": "Bloodmage Mantle"
    },
    "stats": {
     "int": 8,
@@ -2484,7 +2871,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 20
+   "ic": 20,
+   "cls": 4,
+   "sub": 1
   },
   "7686": {
    "slot": "finger",
@@ -2498,7 +2887,9 @@
     "fr": "Oeil d'Echine-de-fer",
     "es": "Ojo de Dorsacerado",
     "pt": "Olho do Espinha de Ferro",
-    "it": "Occhio dei Ferrospina"
+    "it": "Occhio dei Ferrospina",
+    "uk": "Ironspine's Eye",
+    "pl": "Ironspine's Eye"
    },
    "stats": {
     "str": 4,
@@ -2506,7 +2897,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 81
+   "ic": 81,
+   "cls": 4,
+   "sub": 0
   },
   "7687": {
    "slot": "main",
@@ -2520,7 +2913,9 @@
     "fr": "Poing d'Echine-de-fer",
     "es": "Puño de Dorsacerado",
     "pt": "Punho do Espinha de Ferro",
-    "it": "Pugno dei Ferrospina"
+    "it": "Pugno dei Ferrospina",
+    "uk": "Ironspine's Fist",
+    "pl": "Ironspine's Fist"
    },
    "stats": {
     "str": 7,
@@ -2528,7 +2923,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 82
+   "ic": 82,
+   "cls": 2,
+   "sub": 4
   },
   "7689": {
    "slot": "two",
@@ -2542,7 +2939,9 @@
     "fr": "Aube morbide",
     "es": "Amanecer mórbido",
     "pt": "Aurora Mórbida",
-    "it": "Alba Morbosa"
+    "it": "Alba Morbosa",
+    "uk": "Morbid Dawn",
+    "pl": "Morbid Dawn"
    },
    "stats": {
     "str": 10,
@@ -2551,7 +2950,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 83
+   "ic": 83,
+   "cls": 2,
+   "sub": 8
   },
   "7690": {
    "slot": "hands",
@@ -2565,7 +2966,9 @@
     "fr": "Cestes d'ébène",
     "es": "Torno de ébano",
     "pt": "Torno de Ébano",
-    "it": "Morsa d'Ebano"
+    "it": "Morsa d'Ebano",
+    "uk": "Ebon Vise",
+    "pl": "Ebon Vise"
    },
    "stats": {
     "str": 4,
@@ -2575,7 +2978,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 84
+   "ic": 84,
+   "cls": 4,
+   "sub": 2
   },
   "7691": {
    "slot": "head",
@@ -2589,7 +2994,9 @@
     "fr": "Voile embaumé",
     "es": "Sudario embalsamado",
     "pt": "Mortalha Embalsamada",
-    "it": "Manto Imbalsamato"
+    "it": "Manto Imbalsamato",
+    "uk": "Embalmed Shroud",
+    "pl": "Embalmed Shroud"
    },
    "stats": {
     "sta": 7,
@@ -2599,7 +3006,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 85
+   "ic": 85,
+   "cls": 4,
+   "sub": 1
   },
   "7708": {
    "slot": "ranged",
@@ -2613,14 +3022,18 @@
     "fr": "Baguette de nécromancie",
     "es": "Varita necrótica",
     "pt": "Varinha Necrótica",
-    "it": "Bacchetta Necrotica"
+    "it": "Bacchetta Necrotica",
+    "uk": "Necrotic Wand",
+    "pl": "Necrotic Wand"
    },
    "stats": {
     "dps": 33.2
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 70
+   "ic": 70,
+   "cls": 2,
+   "sub": 19
   },
   "7709": {
    "slot": "legs",
@@ -2634,7 +3047,9 @@
     "fr": "Jambières flétries",
     "es": "Leotardos infestados",
     "pt": "Perneiras Empesteadas",
-    "it": "Gambiere Ammorbate"
+    "it": "Gambiere Ammorbate",
+    "uk": "Blighted Leggings",
+    "pl": "Blighted Leggings"
    },
    "stats": {
     "spi": 17,
@@ -2642,7 +3057,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 86
+   "ic": 86,
+   "cls": 4,
+   "sub": 1
   },
   "7731": {
    "slot": "neck",
@@ -2656,7 +3073,9 @@
     "fr": "Talisman de Ghostshard",
     "es": "Talismán de fragmento fantasmal",
     "pt": "Talismã do Fragmento Espectral",
-    "it": "Talismano Fantasmagorico"
+    "it": "Talismano Fantasmagorico",
+    "uk": "Ghostshard Talisman",
+    "pl": "Ghostshard Talisman"
    },
    "stats": {
     "sta": 9,
@@ -2664,7 +3083,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 87
+   "ic": 87,
+   "cls": 4,
+   "sub": 0
   },
   "7746": {
    "slot": "neck",
@@ -2678,7 +3099,9 @@
     "fr": "Recommandation de la Ligue des explorateurs",
     "es": "Mención de honor de la Liga de Expedicionarios",
     "pt": "Comenda da Liga de Exploradores",
-    "it": "Encomio della Lega degli Esploratori"
+    "it": "Encomio della Lega degli Esploratori",
+    "uk": "Explorers' League Commendation",
+    "pl": "Explorers' League Commendation"
    },
    "stats": {
     "sta": 6,
@@ -2686,7 +3109,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 88
+   "ic": 88,
+   "cls": 4,
+   "sub": 0
   },
   "7749": {
    "slot": "off",
@@ -2700,7 +3125,9 @@
     "fr": "Orbe Oméga",
     "es": "Orbe omega",
     "pt": "Orbe Ômega",
-    "it": "Globo Omega"
+    "it": "Globo Omega",
+    "uk": "Omega Orb",
+    "pl": "Omega Orb"
    },
    "stats": {
     "sp": 11,
@@ -2708,7 +3135,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 62
+   "ic": 62,
+   "cls": 4,
+   "sub": 0
   },
   "7750": {
    "slot": "shoulder",
@@ -2722,7 +3151,9 @@
     "fr": "Mantelet de malédiction",
     "es": "Manto de Tragedia",
     "pt": "Dragonas do Sofrimento",
-    "it": "Coprispalle della Sofferenza"
+    "it": "Coprispalle della Sofferenza",
+    "uk": "Mantle of Woe",
+    "pl": "Mantle of Woe"
    },
    "stats": {
     "int": 7,
@@ -2731,7 +3162,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 89
+   "ic": 89,
+   "cls": 4,
+   "sub": 1
   },
   "7751": {
    "slot": "feet",
@@ -2745,7 +3178,9 @@
     "fr": "Bottes de Vorrel",
     "es": "Botas de Vorrel",
     "pt": "Botas do Vorrel",
-    "it": "Stivali di Vorrel"
+    "it": "Stivali di Vorrel",
+    "uk": "Vorrel's Boots",
+    "pl": "Vorrel's Boots"
    },
    "stats": {
     "agi": 8,
@@ -2754,7 +3189,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 30
+   "ic": 30,
+   "cls": 4,
+   "sub": 2
   },
   "9446": {
    "slot": "main",
@@ -2768,14 +3205,18 @@
     "fr": "Jambe de l'électrocuteur",
     "es": "Pata de Electrocutor",
     "pt": "Perna do Eletrocutor",
-    "it": "Arto dell'Elettrocuz"
+    "it": "Arto dell'Elettrocuz",
+    "uk": "Electrocutioner Leg",
+    "pl": "Electrocutioner Leg"
    },
    "stats": {
     "dps": 22.1
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 90
+   "ic": 90,
+   "cls": 2,
+   "sub": 7
   },
   "9447": {
    "slot": "finger",
@@ -2789,7 +3230,9 @@
     "fr": "Boulon de l'électrocuteur",
     "es": "Perno de Electrocutor",
     "pt": "Porca do Eletrocutor",
-    "it": "Bullone dell'Elettrocuz"
+    "it": "Bullone dell'Elettrocuz",
+    "uk": "Electrocutioner Lagnut",
+    "pl": "Electrocutioner Lagnut"
    },
    "stats": {
     "sta": 4,
@@ -2797,7 +3240,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 91
+   "ic": 91,
+   "cls": 4,
+   "sub": 0
   },
   "9448": {
    "slot": "wrist",
@@ -2811,7 +3256,9 @@
     "fr": "Chiffon graisseux de mécano-tank",
     "es": "Trapo grasiento de tanque araña",
     "pt": "Trapo Oleoso do Aracnotanque",
-    "it": "Fasce Petroleose"
+    "it": "Fasce Petroleose",
+    "uk": "Spidertank Oilrag",
+    "pl": "Spidertank Oilrag"
    },
    "stats": {
     "armor": 20,
@@ -2819,7 +3266,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 92
+   "ic": 92,
+   "cls": 4,
+   "sub": 1
   },
   "9449": {
    "slot": "two",
@@ -2833,7 +3282,9 @@
     "fr": "Roueur manuel",
     "es": "Manual de Muchedumbre de Puñetazos",
     "pt": "Espanca-gente Manual",
-    "it": "Sfollagente Manuale"
+    "it": "Sfollagente Manuale",
+    "uk": "Manual Crowd Pummeler",
+    "pl": "Manual Crowd Pummeler"
    },
    "stats": {
     "str": 16,
@@ -2842,7 +3293,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 93
+   "ic": 93,
+   "cls": 2,
+   "sub": 5
   },
   "9450": {
    "slot": "feet",
@@ -2856,7 +3309,9 @@
     "fr": "Bottes d'opération gnomebot",
     "es": "Botas de gnomobot",
     "pt": "Botas de Operação do Gnomobô",
-    "it": "Stivali Operativi per Gnomobot"
+    "it": "Stivali Operativi per Gnomobot",
+    "uk": "Gnomebot Operating Boots",
+    "pl": "Gnomebot Operating Boots"
    },
    "stats": {
     "sta": 8,
@@ -2865,7 +3320,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 30
+   "ic": 30,
+   "cls": 4,
+   "sub": 2
   },
   "9452": {
    "slot": "two",
@@ -2879,14 +3336,18 @@
     "fr": "Hydrocane",
     "es": "Hidrocaña",
     "pt": "Hidrobengala",
-    "it": "Idrocanna"
+    "it": "Idrocanna",
+    "uk": "Hydrocane",
+    "pl": "Hydrocane"
    },
    "stats": {
     "dps": 21.6
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 94
+   "ic": 94,
+   "cls": 2,
+   "sub": 10
   },
   "9453": {
    "slot": "main",
@@ -2900,14 +3361,18 @@
     "fr": "Vengeresse empoisonnée",
     "es": "Vengador tóxico",
     "pt": "Vingador Tóxico",
-    "it": "Rivendicatore Tossico"
+    "it": "Rivendicatore Tossico",
+    "uk": "Toxic Revenger",
+    "pl": "Toxic Revenger"
    },
    "stats": {
     "dps": 20.5
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 95
+   "ic": 95,
+   "cls": 2,
+   "sub": 15
   },
   "9454": {
    "slot": "feet",
@@ -2921,7 +3386,9 @@
     "fr": "Botillons acides",
     "es": "Botos ácidos",
     "pt": "Chancas Ácidas",
-    "it": "Stivali Inaciditi"
+    "it": "Stivali Inaciditi",
+    "uk": "Acidic Walkers",
+    "pl": "Acidic Walkers"
    },
    "stats": {
     "int": 8,
@@ -2932,7 +3399,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 29
+   "ic": 29,
+   "cls": 4,
+   "sub": 1
   },
   "9455": {
    "slot": "wrist",
@@ -2946,14 +3415,18 @@
     "fr": "Crispins d'émissaire",
     "es": "Puños de emisario",
     "pt": "Manilhas do Emissário",
-    "it": "Polsiere dell'Emissario"
+    "it": "Polsiere dell'Emissario",
+    "uk": "Emissary Cuffs",
+    "pl": "Emissary Cuffs"
    },
    "stats": {
     "armor": 47
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 96
+   "ic": 96,
+   "cls": 4,
+   "sub": 2
   },
   "9456": {
    "slot": "ranged",
@@ -2967,14 +3440,18 @@
     "fr": "Crache-verre",
     "es": "Pistola de cristal",
     "pt": "Carabina de Vidro",
-    "it": "Archibugio di Vetro"
+    "it": "Archibugio di Vetro",
+    "uk": "Glass Shooter",
+    "pl": "Glass Shooter"
    },
    "stats": {
     "dps": 17.9
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 97
+   "ic": 97,
+   "cls": 2,
+   "sub": 3
   },
   "9457": {
    "slot": "main",
@@ -2988,7 +3465,9 @@
     "fr": "Sceptre diplomatique royal",
     "es": "Cetro diplomático real",
     "pt": "Cetro Diplomático Real",
-    "it": "Scettro Diplomatico Reale"
+    "it": "Scettro Diplomatico Reale",
+    "uk": "Royal Diplomatic Scepter",
+    "pl": "Royal Diplomatic Scepter"
    },
    "stats": {
     "sta": 2,
@@ -2997,7 +3476,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 16
+   "ic": 16,
+   "cls": 2,
+   "sub": 4
   },
   "9520": {
    "slot": "main",
@@ -3011,7 +3492,9 @@
     "fr": "Tueuse muette",
     "es": "Cazador silencioso",
     "pt": "Caçador Silencioso",
-    "it": "Cacciatore Silenzioso"
+    "it": "Cacciatore Silenzioso",
+    "uk": "Silent Hunter",
+    "pl": "Silent Hunter"
    },
    "stats": {
     "agi": 7,
@@ -3019,7 +3502,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 98
+   "ic": 98,
+   "cls": 2,
+   "sub": 15
   },
   "9522": {
    "slot": "off",
@@ -3033,7 +3518,9 @@
     "fr": "Cercle de pierres alimenté",
     "es": "Círculo de Piedras cargado",
     "pt": "Círculo de Pedra Energizado",
-    "it": "Scudo di Pietra Energizzato"
+    "it": "Scudo di Pietra Energizzato",
+    "uk": "Energized Stone Circle",
+    "pl": "Energized Stone Circle"
    },
    "stats": {
     "sta": 2,
@@ -3042,7 +3529,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 99
+   "ic": 99,
+   "cls": 4,
+   "sub": 6
   },
   "9536": {
    "slot": "shoulder",
@@ -3056,7 +3545,9 @@
     "fr": "Mantelet Aile-de-fée",
     "es": "Manto alas de hada",
     "pt": "Dragonas Asa-de-fada",
-    "it": "Coprispalle d'Ala di Fata"
+    "it": "Coprispalle d'Ala di Fata",
+    "uk": "Fairywing Mantle",
+    "pl": "Fairywing Mantle"
    },
    "stats": {
     "sta": 1,
@@ -3065,7 +3556,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 100
+   "ic": 100,
+   "cls": 4,
+   "sub": 1
   },
   "9538": {
    "slot": "finger",
@@ -3079,7 +3572,9 @@
     "fr": "Anneau d'or de Talvash",
     "es": "Anillo de oro de Talvash",
     "pt": "Anel de Ouro do Didiê",
-    "it": "Anello d'Oro di Talvash"
+    "it": "Anello d'Oro di Talvash",
+    "uk": "Talvash's Gold Ring",
+    "pl": "Talvash's Gold Ring"
    },
    "stats": {
     "sta": 9,
@@ -3087,7 +3582,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 101
+   "ic": 101,
+   "cls": 4,
+   "sub": 0
   },
   "9588": {
    "slot": "finger",
@@ -3101,7 +3598,9 @@
     "fr": "Anneau d'or de Nogg",
     "es": "Anillo de oro de Nogg",
     "pt": "Anel de Ouro do Nogg",
-    "it": "Anello d'Oro di Nogg"
+    "it": "Anello d'Oro di Nogg",
+    "uk": "Nogg's Gold Ring",
+    "pl": "Nogg's Gold Ring"
    },
    "stats": {
     "sta": 9,
@@ -3109,7 +3608,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 101
+   "ic": 101,
+   "cls": 4,
+   "sub": 0
   },
   "9604": {
    "slot": "two",
@@ -3123,7 +3624,9 @@
     "fr": "Marteau du mécanicien",
     "es": "Martillo de mecánico",
     "pt": "Martelo do Mecânico",
-    "it": "Mazzuola da Meccanico"
+    "it": "Mazzuola da Meccanico",
+    "uk": "Mechanic's Pipehammer",
+    "pl": "Mechanic's Pipehammer"
    },
    "stats": {
     "sta": 10,
@@ -3132,7 +3635,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 102
+   "ic": 102,
+   "cls": 2,
+   "sub": 5
   },
   "9605": {
    "slot": "back",
@@ -3146,7 +3651,9 @@
     "fr": "Cape de réparateur",
     "es": "Manteo de mecánico",
     "pt": "Capa do Mecânico",
-    "it": "Cappa del Riparatore"
+    "it": "Cappa del Riparatore",
+    "uk": "Repairman's Cape",
+    "pl": "Repairman's Cape"
    },
    "stats": {
     "int": 1,
@@ -3155,7 +3662,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 103
+   "ic": 103,
+   "cls": 4,
+   "sub": 1
   },
   "9609": {
    "slot": "hands",
@@ -3169,7 +3678,9 @@
     "fr": "Mitaines de Shilly",
     "es": "Mitones llamativos",
     "pt": "Luvas Bechil",
-    "it": "Guanti da Tiro"
+    "it": "Guanti da Tiro",
+    "uk": "Shilly Mitts",
+    "pl": "Shilly Mitts"
    },
    "stats": {
     "int": 6,
@@ -3178,7 +3689,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 104
+   "ic": 104,
+   "cls": 4,
+   "sub": 1
   },
   "9622": {
    "slot": "finger",
@@ -3192,7 +3705,9 @@
     "fr": "Anneau Reedknot",
     "es": "Anillo Nudo de Junco",
     "pt": "Anel de Nó de Bambu",
-    "it": "Anello del Canneto Intrecciato"
+    "it": "Anello del Canneto Intrecciato",
+    "uk": "Reedknot Ring",
+    "pl": "Reedknot Ring"
    },
    "stats": {
     "sta": 3,
@@ -3200,7 +3715,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 105
+   "ic": 105,
+   "cls": 4,
+   "sub": 0
   },
   "9623": {
    "slot": "chest",
@@ -3214,7 +3731,9 @@
     "fr": "Robe civinade",
     "es": "Togas civinad",
     "pt": "Vestes de Civínada",
-    "it": "Vesti Civinad"
+    "it": "Vesti Civinad",
+    "uk": "Civinad Robes",
+    "pl": "Civinad Robes"
    },
    "stats": {
     "sta": 7,
@@ -3223,7 +3742,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 17
+   "ic": 17,
+   "cls": 4,
+   "sub": 1
   },
   "9624": {
    "slot": "legs",
@@ -3237,7 +3758,9 @@
     "fr": "Chausses du coureur",
     "es": "Peto de corredor",
     "pt": "Culotes Corretrecho",
-    "it": "Pantaloni da Corsa"
+    "it": "Pantaloni da Corsa",
+    "uk": "Triprunner Dungarees",
+    "pl": "Triprunner Dungarees"
    },
    "stats": {
     "str": 3,
@@ -3247,7 +3770,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 72
+   "ic": 72,
+   "cls": 4,
+   "sub": 2
   },
   "9625": {
    "slot": "legs",
@@ -3261,7 +3786,9 @@
     "fr": "Jambières à double renfort",
     "es": "Leotardos duales reforzados",
     "pt": "Perneiras Duplas Reforçadas",
-    "it": "Gambiere con Doppio Rinforzo"
+    "it": "Gambiere con Doppio Rinforzo",
+    "uk": "Dual Reinforced Leggings",
+    "pl": "Dual Reinforced Leggings"
    },
    "stats": {
     "armor": 391,
@@ -3269,7 +3796,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 7
+   "ic": 7,
+   "cls": 4,
+   "sub": 3
   },
   "10358": {
    "slot": "wrist",
@@ -3283,7 +3812,9 @@
     "fr": "Brassards de Duracin",
     "es": "Brazales de Duracin",
     "pt": "Braçadeiras de Duracin",
-    "it": "Bracciali di Duracin"
+    "it": "Bracciali di Duracin",
+    "uk": "Duracin Bracers",
+    "pl": "Duracin Bracers"
    },
    "stats": {
     "agi": 7,
@@ -3292,7 +3823,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 106
+   "ic": 106,
+   "cls": 4,
+   "sub": 3
   },
   "10359": {
    "slot": "feet",
@@ -3306,7 +3839,9 @@
     "fr": "Bottes perdurantes",
     "es": "Botas perpetuas",
     "pt": "Botas Sempiternas",
-    "it": "Stivali Perpetui"
+    "it": "Stivali Perpetui",
+    "uk": "Everlast Boots",
+    "pl": "Everlast Boots"
    },
    "stats": {
     "spi": 11,
@@ -3314,7 +3849,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 22
+   "ic": 22,
+   "cls": 4,
+   "sub": 1
   },
   "10499": {
    "slot": "head",
@@ -3328,7 +3865,9 @@
     "fr": "Lunettes d'oeil brillant",
     "es": "Gafas Ojo brillante",
     "pt": "Óculos Brilho-do-olhar",
-    "it": "Occhiali Brillanti"
+    "it": "Occhiali Brillanti",
+    "uk": "Bright-Eye Goggles",
+    "pl": "Bright-Eye Goggles"
    },
    "stats": {
     "sta": 9,
@@ -3337,7 +3876,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 34
+   "ic": 34,
+   "cls": 4,
+   "sub": 1
   },
   "10504": {
    "slot": "head",
@@ -3351,7 +3892,9 @@
     "fr": "Lentille verte",
     "es": "Lentes verdes",
     "pt": "Lente Verde",
-    "it": "Lente Verde"
+    "it": "Lente Verde",
+    "uk": "Green Lens",
+    "pl": "Green Lens"
    },
    "stats": {
     "sta": 10,
@@ -3359,7 +3902,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 107
+   "ic": 107,
+   "cls": 4,
+   "sub": 1
   },
   "10654": {
    "slot": "hands",
@@ -3373,7 +3918,9 @@
     "fr": "Gants en jute tressée",
     "es": "Guantes de trenza de yute",
     "pt": "Luvas de Trançajuta",
-    "it": "Guanti di Iuta"
+    "it": "Guanti di Iuta",
+    "uk": "Jutebraid Gloves",
+    "pl": "Jutebraid Gloves"
    },
    "stats": {
     "str": 6,
@@ -3382,7 +3929,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 108
+   "ic": 108,
+   "cls": 4,
+   "sub": 1
   },
   "11884": {
    "slot": "shoulder",
@@ -3396,7 +3945,9 @@
     "fr": "Amict lunaires",
     "es": "Hombrera luz lunar",
     "pt": "Sobreveste Luz do Luar",
-    "it": "Amitto della Luce della Luna"
+    "it": "Amitto della Luce della Luna",
+    "uk": "Moonlit Amice",
+    "pl": "Moonlit Amice"
    },
    "stats": {
     "sta": 7,
@@ -3405,7 +3956,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 100
+   "ic": 100,
+   "cls": 4,
+   "sub": 1
   },
   "13033": {
    "slot": "main",
@@ -3419,7 +3972,9 @@
     "fr": "Lame zélée",
     "es": "Espada de Zealot",
     "pt": "Lâmina do Zelote",
-    "it": "Lama dello Zelota"
+    "it": "Lama dello Zelota",
+    "uk": "Zealot Blade",
+    "pl": "Zealot Blade"
    },
    "stats": {
     "int": 5,
@@ -3428,7 +3983,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 109
+   "ic": 109,
+   "cls": 2,
+   "sub": 7
   },
   "13084": {
    "slot": "neck",
@@ -3442,7 +3999,9 @@
     "fr": "Collier du Kaléidoscope",
     "es": "Cadena caleidoscópica",
     "pt": "Corrente Caleidoscópica",
-    "it": "Catenina Caleidoscopica"
+    "it": "Catenina Caleidoscopica",
+    "uk": "Kaleidoscope Chain",
+    "pl": "Kaleidoscope Chain"
    },
    "stats": {
     "str": 4,
@@ -3453,7 +4012,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 110
+   "ic": 110,
+   "cls": 4,
+   "sub": 0
   },
   "13108": {
    "slot": "back",
@@ -3467,7 +4028,9 @@
     "fr": "Manteau de frappe du tigre",
     "es": "Manto de Golpe de tigre",
     "pt": "Dragonas Tigrataque",
-    "it": "Coprispalle dell'Assalto della Tigre"
+    "it": "Coprispalle dell'Assalto della Tigre",
+    "uk": "Tigerstrike Mantle",
+    "pl": "Tigerstrike Mantle"
    },
    "stats": {
     "agi": 8,
@@ -3476,7 +4039,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 111
+   "ic": 111,
+   "cls": 4,
+   "sub": 1
   },
   "14590": {
    "slot": "wrist",
@@ -3490,7 +4055,9 @@
     "fr": "Brassards oeil-de-faucon",
     "es": "Brazales de ojo de halcón",
     "pt": "Braçadeira Olho de Falcão",
-    "it": "Bracciali di Occhiolungo"
+    "it": "Bracciali di Occhiolungo",
+    "uk": "Hawkeye's Bracers",
+    "pl": "Hawkeye's Bracers"
    },
    "stats": {
     "str": 4,
@@ -3499,7 +4066,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 106
+   "ic": 106,
+   "cls": 4,
+   "sub": 2
   },
   "14593": {
    "slot": "back",
@@ -3513,7 +4082,9 @@
     "fr": "Cape oeil-de-faucon",
     "es": "Capa de ojo de halcón",
     "pt": "Manto Olho de Falcão",
-    "it": "Mantello di Occhiolungo"
+    "it": "Mantello di Occhiolungo",
+    "uk": "Hawkeye's Cloak",
+    "pl": "Hawkeye's Cloak"
    },
    "stats": {
     "str": 3,
@@ -3522,7 +4093,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 112
+   "ic": 112,
+   "cls": 4,
+   "sub": 1
   },
   "15109": {
    "slot": "two",
@@ -3536,14 +4109,18 @@
     "fr": "Bâton de Soran'ruk",
     "es": "Bastón de Soran'ruk",
     "pt": "Cajado de Soran'ruk",
-    "it": "Bastone di Soran'ruk"
+    "it": "Bastone di Soran'ruk",
+    "uk": "Staff of Soran'ruk",
+    "pl": "Staff of Soran'ruk"
    },
    "stats": {
     "dps": 16.9
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 113
+   "ic": 113,
+   "cls": 2,
+   "sub": 10
   },
   "15467": {
    "slot": "finger",
@@ -3557,7 +4134,9 @@
     "fr": "Anneau de la Ligue des Inventeurs",
     "es": "Anillo de la Liga de los Inventores",
     "pt": "Anel da Liga do Inventor",
-    "it": "Anello della Lega degli Inventori"
+    "it": "Anello della Lega degli Inventori",
+    "uk": "Inventor's League Ring",
+    "pl": "Inventor's League Ring"
    },
    "stats": {
     "sta": 4,
@@ -3565,7 +4144,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 114
+   "ic": 114,
+   "cls": 4,
+   "sub": 0
   },
   "15468": {
    "slot": "back",
@@ -3579,7 +4160,9 @@
     "fr": "Drapé chantevent",
     "es": "Mantón Canzalvaje",
     "pt": "Clâmide Cantéolo",
-    "it": "Drappo di Soffiavento"
+    "it": "Drappo di Soffiavento",
+    "uk": "Windsong Drape",
+    "pl": "Windsong Drape"
    },
    "stats": {
     "int": 4,
@@ -3588,7 +4171,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 12
+   "ic": 12,
+   "cls": 4,
+   "sub": 1
   },
   "15698": {
    "slot": "shoulder",
@@ -3602,7 +4187,9 @@
     "fr": "Spallières de renforcement",
     "es": "Bufas de riña",
     "pt": "Espaldares Contendores",
-    "it": "Guardaspalle del Domatore"
+    "it": "Guardaspalle del Domatore",
+    "uk": "Wrangling Spaulders",
+    "pl": "Wrangling Spaulders"
    },
    "stats": {
     "str": 8,
@@ -3612,7 +4199,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 115
+   "ic": 115,
+   "cls": 4,
+   "sub": 3
   },
   "15999": {
    "slot": "head",
@@ -3626,7 +4215,9 @@
     "fr": "Lunettes de concentration extrême",
     "es": "Gafas extremas de hechizo de poder plus",
     "pt": "Óculos de Poder Mágico Xtremo Plus",
-    "it": "Occhiali della Potenza Magica Extremi Plus"
+    "it": "Occhiali della Potenza Magica Extremi Plus",
+    "uk": "Spellpower Goggles Xtreme Plus",
+    "pl": "Spellpower Goggles Xtreme Plus"
    },
    "stats": {
     "armor": 57,
@@ -3635,7 +4226,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 34
+   "ic": 34,
+   "cls": 4,
+   "sub": 1
   },
   "16741": {
    "slot": "hands",
@@ -3649,7 +4242,9 @@
     "fr": "Protège-mains huilés",
     "es": "Mitones de aceite",
     "pt": "Mitenes de Trapo Oleoso",
-    "it": "Mitene Petroleose"
+    "it": "Mitene Petroleose",
+    "uk": "Oilrag Handwraps",
+    "pl": "Oilrag Handwraps"
    },
    "stats": {
     "sta": 2,
@@ -3659,7 +4254,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 116
+   "ic": 116,
+   "cls": 4,
+   "sub": 2
   },
   "16886": {
    "slot": "main",
@@ -3673,7 +4270,9 @@
     "fr": "Sabre des hors-la-loi",
     "es": "Sable de foragido",
     "pt": "Sabre do Fora da Lei",
-    "it": "Sciabola Fuorilegge"
+    "it": "Sciabola Fuorilegge",
+    "uk": "Outlaw Sabre",
+    "pl": "Outlaw Sabre"
    },
    "stats": {
     "dps": 18.9,
@@ -3681,7 +4280,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 117
+   "ic": 117,
+   "cls": 2,
+   "sub": 7
   },
   "16887": {
    "slot": "off",
@@ -3695,7 +4296,9 @@
     "fr": "Doigt de la sorcière",
     "es": "Dedo de bruja",
     "pt": "Dedo de Bruxa",
-    "it": "Dito della Strega"
+    "it": "Dito della Strega",
+    "uk": "Witch's Finger",
+    "pl": "Witch's Finger"
    },
    "stats": {
     "sta": 4,
@@ -3703,7 +4306,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 118
+   "ic": 118,
+   "cls": 4,
+   "sub": 0
   },
   "16894": {
    "slot": "two",
@@ -3717,7 +4322,9 @@
     "fr": "Bâtonnet en cristal transparent",
     "es": "Vara de cristal claro",
     "pt": "Bastão de Cristal Claro",
-    "it": "Verga di Cristallo Limpido"
+    "it": "Verga di Cristallo Limpido",
+    "uk": "Clear Crystal Rod",
+    "pl": "Clear Crystal Rod"
    },
    "stats": {
     "sta": 4,
@@ -3726,7 +4333,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 119
+   "ic": 119,
+   "cls": 2,
+   "sub": 10
   },
   "16975": {
    "slot": "waist",
@@ -3740,7 +4349,9 @@
     "fr": "Echarpe warsong",
     "es": "Fajín Grito de Guerra",
     "pt": "Faixa do Brado Guerreiro",
-    "it": "Fascia dei Cantaguerra"
+    "it": "Fascia dei Cantaguerra",
+    "uk": "Warsong Sash",
+    "pl": "Warsong Sash"
    },
    "stats": {
     "sta": 4,
@@ -3749,7 +4360,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 120
+   "ic": 120,
+   "cls": 4,
+   "sub": 1
   },
   "16977": {
    "slot": "feet",
@@ -3763,7 +4376,9 @@
     "fr": "Bottes Warsong",
     "es": "Botas Grito de Guerra",
     "pt": "Botas do Brado Guerreiro",
-    "it": "Stivali dei Cantaguerra"
+    "it": "Stivali dei Cantaguerra",
+    "uk": "Warsong Boots",
+    "pl": "Warsong Boots"
    },
    "stats": {
     "agi": 8,
@@ -3772,7 +4387,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 29
+   "ic": 29,
+   "cls": 4,
+   "sub": 2
   },
   "16978": {
    "slot": "hands",
@@ -3786,7 +4403,9 @@
     "fr": "Gantelets Warsong",
     "es": "Guanteletes Grito de Guerra",
     "pt": "Manoplas do Brado Guerreiro",
-    "it": "Guanti Lunghi dei Cantaguerra"
+    "it": "Guanti Lunghi dei Cantaguerra",
+    "uk": "Warsong Gauntlets",
+    "pl": "Warsong Gauntlets"
    },
    "stats": {
     "str": 10,
@@ -3795,7 +4414,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 121
+   "ic": 121,
+   "cls": 4,
+   "sub": 3
   },
   "17039": {
    "slot": "main",
@@ -3809,7 +4430,9 @@
     "fr": "Casse-tête",
     "es": "Partecalaveras",
     "pt": "Quebra-crânio",
-    "it": "Spezzateschi"
+    "it": "Spezzateschi",
+    "uk": "Skullbreaker",
+    "pl": "Skullbreaker"
    },
    "stats": {
     "sta": 3,
@@ -3818,7 +4441,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 122
+   "ic": 122,
+   "cls": 2,
+   "sub": 4
   },
   "17043": {
    "slot": "chest",
@@ -3832,7 +4457,9 @@
     "fr": "Robe de zélote",
     "es": "Toga de Zealot",
     "pt": "Veste do Zelote",
-    "it": "Veste dello Zelota"
+    "it": "Veste dello Zelota",
+    "uk": "Zealot's Robe",
+    "pl": "Zealot's Robe"
    },
    "stats": {
     "sta": 12,
@@ -3842,7 +4469,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 76
+   "ic": 76,
+   "cls": 4,
+   "sub": 1
   },
   "17687": {
    "slot": "ranged",
@@ -3856,14 +4485,18 @@
     "fr": "Carabine de maître-chasseur",
     "es": "Rifle de maestro cazador",
     "pt": "Rifle do Mestre Caçador",
-    "it": "Archibugio da Maestro Cacciatore"
+    "it": "Archibugio da Maestro Cacciatore",
+    "uk": "Master Hunter's Rifle",
+    "pl": "Master Hunter's Rifle"
    },
    "stats": {
     "dps": 19.4
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 123
+   "ic": 123,
+   "cls": 2,
+   "sub": 3
   },
   "17694": {
    "slot": "finger",
@@ -3877,7 +4510,9 @@
     "fr": "Anneau du poing",
     "es": "Sortija del Puño",
     "pt": "Elo do Punho",
-    "it": "Vera del Pugno"
+    "it": "Vera del Pugno",
+    "uk": "Band of the Fist",
+    "pl": "Band of the Fist"
    },
    "stats": {
     "str": 3,
@@ -3885,7 +4520,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 124
+   "ic": 124,
+   "cls": 4,
+   "sub": 0
   },
   "17695": {
    "slot": "shoulder",
@@ -3899,7 +4536,9 @@
     "fr": "Mantelet noisette",
     "es": "Manto de castaño",
     "pt": "Dragonas Castanhas",
-    "it": "Coprispalle Castani"
+    "it": "Coprispalle Castani",
+    "uk": "Chestnut Mantle",
+    "pl": "Chestnut Mantle"
    },
    "stats": {
     "sta": 2,
@@ -3908,7 +4547,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 15
+   "ic": 15,
+   "cls": 4,
+   "sub": 1
   },
   "18585": {
    "slot": "finger",
@@ -3922,7 +4563,9 @@
     "fr": "Anneau d'allégeance",
     "es": "Sortija de Lealtad",
     "pt": "Elo da Lealdade",
-    "it": "Vera dell'Alleanza"
+    "it": "Vera dell'Alleanza",
+    "uk": "Band of Allegiance",
+    "pl": "Band of Allegiance"
    },
    "stats": {
     "str": 9,
@@ -3930,7 +4573,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 1
+   "ic": 1,
+   "cls": 4,
+   "sub": 0
   },
   "18948": {
    "slot": "wrist",
@@ -3944,7 +4589,9 @@
     "fr": "Brassards barbares",
     "es": "Brazales barbáricos",
     "pt": "Braçadeiras Barbarescas",
-    "it": "Bracciali della Barbarie"
+    "it": "Bracciali della Barbarie",
+    "uk": "Barbaric Bracers",
+    "pl": "Barbaric Bracers"
    },
    "stats": {
     "agi": 4,
@@ -3954,7 +4601,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 125
+   "ic": 125,
+   "cls": 4,
+   "sub": 2
   },
   "23169": {
    "slot": "neck",
@@ -3968,7 +4617,9 @@
     "fr": "Sautoir glacé de Scorn",
     "es": "Gargantilla helada de Desdén",
     "pt": "Gargantilha Gélida de Escarne",
-    "it": "Girocollo Glaciale di Scorn"
+    "it": "Girocollo Glaciale di Scorn",
+    "uk": "Scorn's Icy Choker",
+    "pl": "Scorn's Icy Choker"
    },
    "stats": {
     "sta": 5,
@@ -3978,7 +4629,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 126
+   "ic": 126,
+   "cls": 4,
+   "sub": 0
   },
   "215365": {
    "slot": "shoulder",
@@ -3991,7 +4644,9 @@
     "de": "Mantel des Herbeirufers",
     "fr": "Mantelet d’invocatrice",
     "es": "Manto de invocador",
-    "pt": "Dragonas do Invocador"
+    "pt": "Dragonas do Invocador",
+    "uk": "Invoker's Mantle",
+    "pl": "Invoker's Mantle"
    },
    "stats": {
     "int": 5,
@@ -4001,7 +4656,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 100
+   "ic": 100,
+   "cls": 4,
+   "sub": 1
   },
   "215366": {
    "slot": "waist",
@@ -4014,7 +4671,9 @@
     "de": "Kordel des Herbeirufers",
     "fr": "Corde d’invocatrice",
     "es": "Cordón de invocador",
-    "pt": "Cordão do Invocador"
+    "pt": "Cordão do Invocador",
+    "uk": "Invoker's Cord",
+    "pl": "Invoker's Cord"
    },
    "stats": {
     "int": 5,
@@ -4024,7 +4683,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 27
+   "ic": 27,
+   "cls": 4,
+   "sub": 1
   },
   "217287": {
    "slot": "ranged",
@@ -4038,7 +4699,9 @@
     "fr": "Baguette mystique supérieure",
     "es": "Varita mística superior",
     "pt": "Varinha Mística Maior",
-    "it": "Bacchetta Mistica Superiore"
+    "it": "Bacchetta Mistica Superiore",
+    "uk": "Greater Mystic Wand",
+    "pl": "Greater Mystic Wand"
    },
    "stats": {
     "dps": 29.0,
@@ -4047,7 +4710,9 @@
    },
    "provenance": "wowhead-forever-guide",
    "api": "static-classic1x-eu",
-   "ic": 119
+   "ic": 119,
+   "cls": 2,
+   "sub": 19
   }
  },
  "specs": {
@@ -8185,6 +8850,499 @@
       "faction": null
      }
     ]
+   },
+   {
+    "id": 23169,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Scorn"
+      },
+      "dungeon": {
+       "en": "Scarlet Monastery"
+      }
+     },
+     {
+      "kind": "drop",
+      "boss": {},
+      "dungeon": {
+       "en": "Scarlet Monastery",
+       "zone": 796
+      }
+     },
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Scorn"
+      },
+      "dungeon": {
+       "en": "Scarlet Monastery: Graveyard"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-balance",
+     "druid-restoration",
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "paladin-protection",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 13084,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {},
+      "dungeon": {},
+      "world": true
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "hunter-survival"
+    ]
+   },
+   {
+    "id": 6695,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Blind Hunter"
+      },
+      "dungeon": {
+       "en": "Razorfen Kraul"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-balance"
+    ]
+   },
+   {
+    "id": 15468,
+    "src": [
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "Free at Last",
+       "id": 4904
+      },
+      "faction": "horde"
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 6901,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Old Serra'kis"
+      },
+      "dungeon": {
+       "en": "Blackfathom Deeps"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "priest-shadow"
+    ]
+   },
+   {
+    "id": 9605,
+    "src": [
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "Data Rescue",
+       "id": 2930
+      },
+      "faction": null
+     },
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "Data Rescue",
+       "id": 2930
+      },
+      "faction": null,
+      "dungeon": {
+       "en": "Gnomeregan"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-restoration",
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 18948,
+    "src": [
+     {
+      "kind": "craft",
+      "prof": "leatherworking"
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-feral",
+     "paladin-retribution",
+     "warrior-protection"
+    ]
+   },
+   {
+    "id": 9609,
+    "src": [
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "Gyrodrillmatic Excavationators",
+       "id": 2928
+      },
+      "faction": null,
+      "dungeon": {
+       "en": "Gnomeregan"
+      }
+     },
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "Gyrodrillmatic Excavationators",
+       "id": 2928
+      },
+      "faction": null
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-balance",
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "priest-shadow",
+     "shaman-elemental",
+     "shaman-restoration",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 16741,
+    "src": [
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "The Lost Pages",
+       "id": 6504
+      },
+      "faction": null
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "paladin-protection"
+    ]
+   },
+   {
+    "id": 3759,
+    "src": [
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "Syndicate Assassins",
+       "id": 505
+      },
+      "faction": "alliance"
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 215366,
+    "src": [
+     {
+      "kind": "craft",
+      "prof": "tailoring"
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-balance",
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 6392,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Archmage Arugal"
+      },
+      "dungeon": {
+       "en": "Shadowfang Keep"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-balance",
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 7055,
+    "src": [
+     {
+      "kind": "craft",
+      "prof": "tailoring"
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 6910,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Aku'mai"
+      },
+      "dungeon": {
+       "en": "Blackfathom Deeps"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 7709,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Azshir the Sleepless"
+      },
+      "dungeon": {
+       "en": "Scarlet Monastery: Graveyard"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "priest-shadow",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 6903,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Twilight Lord Kelris"
+      },
+      "dungeon": {
+       "en": "Blackfathom Deeps"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "priest-shadow",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 9454,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Viscous Fallout"
+      },
+      "dungeon": {
+       "en": "Gnomeregan"
+      }
+     },
+     {
+      "kind": "drop",
+      "boss": {},
+      "dungeon": {
+       "en": "Gnomeregan"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-balance",
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "priest-shadow",
+     "shaman-elemental",
+     "shaman-restoration",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 4325,
+    "src": [
+     {
+      "kind": "craft",
+      "prof": "tailoring"
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-balance",
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 4320,
+    "src": [
+     {
+      "kind": "craft",
+      "prof": "tailoring"
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "shaman-elemental",
+     "shaman-restoration",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 2816,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Death Speaker Jargba"
+      },
+      "dungeon": {
+       "en": "Razorfen Kraul"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "priest-shadow"
+    ]
+   },
+   {
+    "id": 13033,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {},
+      "dungeon": {},
+      "world": true
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "hunter-survival"
+    ]
+   },
+   {
+    "id": 9457,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {},
+      "dungeon": {
+       "en": "Gnomeregan",
+       "zone": 721
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-restoration"
+    ]
    }
   ],
   "paladin-protection": [
@@ -8238,6 +9396,203 @@
       },
       "faction": null
      }
+    ]
+   },
+   {
+    "id": 6686,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {},
+      "dungeon": {
+       "en": "Razorfen Kraul",
+       "zone": 491
+      }
+     },
+     {
+      "kind": "drop",
+      "boss": {},
+      "dungeon": {
+       "en": "Razorfen Kraul"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "warrior-arms",
+     "warrior-fury"
+    ]
+   },
+   {
+    "id": 15698,
+    "src": [
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "Kodo Roundup",
+       "id": 5561
+      },
+      "faction": null
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "paladin-retribution"
+    ]
+   },
+   {
+    "id": 2278,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {},
+      "dungeon": {},
+      "world": true
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "hunter-beast-mastery",
+     "hunter-marksmanship",
+     "hunter-survival"
+    ]
+   },
+   {
+    "id": 3841,
+    "src": [
+     {
+      "kind": "craft",
+      "prof": "blacksmithing"
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "paladin-retribution"
+    ]
+   },
+   {
+    "id": 14593,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {},
+      "dungeon": {},
+      "world": true
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "hunter-survival"
+    ]
+   },
+   {
+    "id": 2870,
+    "src": [
+     {
+      "kind": "craft",
+      "prof": "blacksmithing"
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "paladin-retribution"
+    ]
+   },
+   {
+    "id": 3228,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {},
+      "dungeon": {
+       "en": "The Stockade",
+       "zone": 717
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "warrior-protection"
+    ]
+   },
+   {
+    "id": 14590,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {},
+      "dungeon": {},
+      "world": true
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "hunter-beast-mastery",
+     "hunter-marksmanship",
+     "hunter-survival"
+    ]
+   },
+   {
+    "id": 9624,
+    "src": [
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "Rig Wars",
+       "id": 2841
+      },
+      "faction": null
+     },
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "The Grand Betrayal",
+       "id": 2929
+      },
+      "faction": null
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "hunter-beast-mastery",
+     "hunter-marksmanship",
+     "hunter-survival",
+     "paladin-retribution",
+     "rogue-assassination",
+     "rogue-combat",
+     "rogue-subtlety"
+    ]
+   },
+   {
+    "id": 9625,
+    "src": [
+     {
+      "kind": "quest",
+      "quest": {},
+      "faction": null
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "paladin-retribution"
+    ]
+   },
+   {
+    "id": 6690,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {},
+      "dungeon": {
+       "en": "Razorfen Kraul",
+       "zone": 491
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-feral",
+     "shaman-enhancement"
     ]
    }
   ],
@@ -8502,6 +9857,874 @@
       "prof": "engineering"
      }
     ]
+   },
+   {
+    "id": 23169,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Scorn"
+      },
+      "dungeon": {
+       "en": "Scarlet Monastery"
+      }
+     },
+     {
+      "kind": "drop",
+      "boss": {},
+      "dungeon": {
+       "en": "Scarlet Monastery",
+       "zone": 796
+      }
+     },
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Scorn"
+      },
+      "dungeon": {
+       "en": "Scarlet Monastery: Graveyard"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-balance",
+     "druid-restoration",
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "paladin-protection",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 6695,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Blind Hunter"
+      },
+      "dungeon": {
+       "en": "Razorfen Kraul"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-balance"
+    ]
+   },
+   {
+    "id": 13084,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {},
+      "dungeon": {},
+      "world": true
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "hunter-survival"
+    ]
+   },
+   {
+    "id": 4197,
+    "src": [
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "A Vengeful Fate",
+       "id": 1102
+      },
+      "faction": null,
+      "dungeon": {
+       "en": "Razorfen Kraul"
+      }
+     },
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "The Crone of the Kraul",
+       "id": 1101
+      },
+      "faction": null,
+      "dungeon": {
+       "en": "Razorfen Kraul"
+      }
+     },
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "The Crone of the Kraul",
+       "id": 1101
+      },
+      "faction": null
+     },
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "A Vengeful Fate",
+       "id": 1102
+      },
+      "faction": null
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-balance",
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "priest-shadow",
+     "shaman-elemental",
+     "shaman-restoration",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 215365,
+    "src": [
+     {
+      "kind": "craft",
+      "prof": "tailoring"
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-balance",
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "shaman-elemental",
+     "shaman-restoration",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 6697,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Blind Hunter"
+      },
+      "dungeon": {
+       "en": "Razorfen Kraul"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-balance",
+     "priest-shadow"
+    ]
+   },
+   {
+    "id": 6901,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Old Serra'kis"
+      },
+      "dungeon": {
+       "en": "Blackfathom Deeps"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "priest-shadow"
+    ]
+   },
+   {
+    "id": 15468,
+    "src": [
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "Free at Last",
+       "id": 4904
+      },
+      "faction": "horde"
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 9605,
+    "src": [
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "Data Rescue",
+       "id": 2930
+      },
+      "faction": null
+     },
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "Data Rescue",
+       "id": 2930
+      },
+      "faction": null,
+      "dungeon": {
+       "en": "Gnomeregan"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-restoration",
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 9623,
+    "src": [
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "The Grand Betrayal",
+       "id": 2929
+      },
+      "faction": null,
+      "dungeon": {
+       "en": "Gnomeregan"
+      }
+     },
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "Rig Wars",
+       "id": 2841
+      },
+      "faction": null,
+      "dungeon": {
+       "en": "Gnomeregan"
+      }
+     },
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "The Grand Betrayal",
+       "id": 2929
+      },
+      "faction": null
+     },
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "Rig Wars",
+       "id": 2841
+      },
+      "faction": null
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-balance",
+     "druid-restoration",
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "priest-shadow",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 6324,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Archmage Arugal"
+      },
+      "dungeon": {
+       "en": "Shadowfang Keep"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-balance",
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 6682,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {},
+      "dungeon": {
+       "en": "Razorfen Kraul",
+       "zone": 491
+      }
+     },
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Death Speaker Jargba"
+      },
+      "dungeon": {
+       "en": "Razorfen Kraul"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-restoration",
+     "paladin-holy",
+     "priest-shadow"
+    ]
+   },
+   {
+    "id": 9448,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Electrocutioner 6000"
+      },
+      "dungeon": {
+       "en": "Gnomeregan"
+      }
+     },
+     {
+      "kind": "drop",
+      "boss": {},
+      "dungeon": {
+       "en": "Gnomeregan"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-balance",
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "priest-shadow",
+     "shaman-elemental",
+     "shaman-restoration",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 9609,
+    "src": [
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "Gyrodrillmatic Excavationators",
+       "id": 2928
+      },
+      "faction": null,
+      "dungeon": {
+       "en": "Gnomeregan"
+      }
+     },
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "Gyrodrillmatic Excavationators",
+       "id": 2928
+      },
+      "faction": null
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-balance",
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "priest-shadow",
+     "shaman-elemental",
+     "shaman-restoration",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 3759,
+    "src": [
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "Syndicate Assassins",
+       "id": 505
+      },
+      "faction": "alliance"
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 7047,
+    "src": [
+     {
+      "kind": "craft",
+      "prof": "tailoring"
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 215366,
+    "src": [
+     {
+      "kind": "craft",
+      "prof": "tailoring"
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-balance",
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 7055,
+    "src": [
+     {
+      "kind": "craft",
+      "prof": "tailoring"
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 6392,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Archmage Arugal"
+      },
+      "dungeon": {
+       "en": "Shadowfang Keep"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-balance",
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 6910,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Aku'mai"
+      },
+      "dungeon": {
+       "en": "Blackfathom Deeps"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 7709,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Azshir the Sleepless"
+      },
+      "dungeon": {
+       "en": "Scarlet Monastery: Graveyard"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "priest-shadow",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 6903,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Twilight Lord Kelris"
+      },
+      "dungeon": {
+       "en": "Blackfathom Deeps"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "priest-shadow",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 9454,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Viscous Fallout"
+      },
+      "dungeon": {
+       "en": "Gnomeregan"
+      }
+     },
+     {
+      "kind": "drop",
+      "boss": {},
+      "dungeon": {
+       "en": "Gnomeregan"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-balance",
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "priest-shadow",
+     "shaman-elemental",
+     "shaman-restoration",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 4325,
+    "src": [
+     {
+      "kind": "craft",
+      "prof": "tailoring"
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-balance",
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 4320,
+    "src": [
+     {
+      "kind": "craft",
+      "prof": "tailoring"
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "shaman-elemental",
+     "shaman-restoration",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 9447,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {},
+      "dungeon": {
+       "en": "Gnomeregan",
+       "zone": 721
+      }
+     },
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Electrocutioner 6000"
+      },
+      "dungeon": {
+       "en": "Gnomeregan"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-restoration",
+     "priest-shadow"
+    ]
+   },
+   {
+    "id": 9622,
+    "src": [
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "Jarl Needs a Blade",
+       "id": 1203
+      },
+      "faction": null
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-restoration",
+     "paladin-protection",
+     "paladin-retribution"
+    ]
+   },
+   {
+    "id": 6669,
+    "src": [
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "The Den",
+       "id": 1089
+      },
+      "faction": "horde"
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 2816,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Death Speaker Jargba"
+      },
+      "dungeon": {
+       "en": "Razorfen Kraul"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "priest-shadow"
+    ]
+   },
+   {
+    "id": 9457,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {},
+      "dungeon": {
+       "en": "Gnomeregan",
+       "zone": 721
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-restoration"
+    ]
+   },
+   {
+    "id": 2567,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {},
+      "dungeon": {
+       "en": "Blackfathom Deeps"
+      },
+      "trash": true
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 6689,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {},
+      "dungeon": {
+       "en": "Razorfen Kraul",
+       "zone": 491
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-restoration"
+    ]
+   },
+   {
+    "id": 1155,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Twilight Lord Kelris"
+      },
+      "dungeon": {
+       "en": "Blackfathom Deeps"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-balance",
+     "priest-shadow"
+    ]
+   },
+   {
+    "id": 6318,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Odo the Blindwatcher"
+      },
+      "dungeon": {
+       "en": "Shadowfang Keep"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-balance",
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 16887,
+    "src": [
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "Baron Aquanis",
+       "id": 6922
+      },
+      "faction": null,
+      "dungeon": {
+       "en": "Blackfathom Deeps"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "priest-shadow"
+    ]
    }
   ],
   "priest-holy": [
@@ -8548,6 +10771,874 @@
       "kind": "craft",
       "prof": "engineering"
      }
+    ]
+   },
+   {
+    "id": 23169,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Scorn"
+      },
+      "dungeon": {
+       "en": "Scarlet Monastery"
+      }
+     },
+     {
+      "kind": "drop",
+      "boss": {},
+      "dungeon": {
+       "en": "Scarlet Monastery",
+       "zone": 796
+      }
+     },
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Scorn"
+      },
+      "dungeon": {
+       "en": "Scarlet Monastery: Graveyard"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-balance",
+     "druid-restoration",
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "paladin-protection",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 6695,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Blind Hunter"
+      },
+      "dungeon": {
+       "en": "Razorfen Kraul"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-balance"
+    ]
+   },
+   {
+    "id": 13084,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {},
+      "dungeon": {},
+      "world": true
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "hunter-survival"
+    ]
+   },
+   {
+    "id": 4197,
+    "src": [
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "A Vengeful Fate",
+       "id": 1102
+      },
+      "faction": null,
+      "dungeon": {
+       "en": "Razorfen Kraul"
+      }
+     },
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "The Crone of the Kraul",
+       "id": 1101
+      },
+      "faction": null,
+      "dungeon": {
+       "en": "Razorfen Kraul"
+      }
+     },
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "The Crone of the Kraul",
+       "id": 1101
+      },
+      "faction": null
+     },
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "A Vengeful Fate",
+       "id": 1102
+      },
+      "faction": null
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-balance",
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "priest-shadow",
+     "shaman-elemental",
+     "shaman-restoration",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 215365,
+    "src": [
+     {
+      "kind": "craft",
+      "prof": "tailoring"
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-balance",
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "shaman-elemental",
+     "shaman-restoration",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 6697,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Blind Hunter"
+      },
+      "dungeon": {
+       "en": "Razorfen Kraul"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-balance",
+     "priest-shadow"
+    ]
+   },
+   {
+    "id": 6901,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Old Serra'kis"
+      },
+      "dungeon": {
+       "en": "Blackfathom Deeps"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "priest-shadow"
+    ]
+   },
+   {
+    "id": 15468,
+    "src": [
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "Free at Last",
+       "id": 4904
+      },
+      "faction": "horde"
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 9605,
+    "src": [
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "Data Rescue",
+       "id": 2930
+      },
+      "faction": null
+     },
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "Data Rescue",
+       "id": 2930
+      },
+      "faction": null,
+      "dungeon": {
+       "en": "Gnomeregan"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-restoration",
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 9623,
+    "src": [
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "The Grand Betrayal",
+       "id": 2929
+      },
+      "faction": null,
+      "dungeon": {
+       "en": "Gnomeregan"
+      }
+     },
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "Rig Wars",
+       "id": 2841
+      },
+      "faction": null,
+      "dungeon": {
+       "en": "Gnomeregan"
+      }
+     },
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "The Grand Betrayal",
+       "id": 2929
+      },
+      "faction": null
+     },
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "Rig Wars",
+       "id": 2841
+      },
+      "faction": null
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-balance",
+     "druid-restoration",
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "priest-shadow",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 6324,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Archmage Arugal"
+      },
+      "dungeon": {
+       "en": "Shadowfang Keep"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-balance",
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 6682,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {},
+      "dungeon": {
+       "en": "Razorfen Kraul",
+       "zone": 491
+      }
+     },
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Death Speaker Jargba"
+      },
+      "dungeon": {
+       "en": "Razorfen Kraul"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-restoration",
+     "paladin-holy",
+     "priest-shadow"
+    ]
+   },
+   {
+    "id": 9448,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Electrocutioner 6000"
+      },
+      "dungeon": {
+       "en": "Gnomeregan"
+      }
+     },
+     {
+      "kind": "drop",
+      "boss": {},
+      "dungeon": {
+       "en": "Gnomeregan"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-balance",
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "priest-shadow",
+     "shaman-elemental",
+     "shaman-restoration",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 9609,
+    "src": [
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "Gyrodrillmatic Excavationators",
+       "id": 2928
+      },
+      "faction": null,
+      "dungeon": {
+       "en": "Gnomeregan"
+      }
+     },
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "Gyrodrillmatic Excavationators",
+       "id": 2928
+      },
+      "faction": null
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-balance",
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "priest-shadow",
+     "shaman-elemental",
+     "shaman-restoration",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 3759,
+    "src": [
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "Syndicate Assassins",
+       "id": 505
+      },
+      "faction": "alliance"
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 7047,
+    "src": [
+     {
+      "kind": "craft",
+      "prof": "tailoring"
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 215366,
+    "src": [
+     {
+      "kind": "craft",
+      "prof": "tailoring"
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-balance",
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 7055,
+    "src": [
+     {
+      "kind": "craft",
+      "prof": "tailoring"
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 6392,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Archmage Arugal"
+      },
+      "dungeon": {
+       "en": "Shadowfang Keep"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-balance",
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 6910,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Aku'mai"
+      },
+      "dungeon": {
+       "en": "Blackfathom Deeps"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 7709,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Azshir the Sleepless"
+      },
+      "dungeon": {
+       "en": "Scarlet Monastery: Graveyard"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "priest-shadow",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 6903,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Twilight Lord Kelris"
+      },
+      "dungeon": {
+       "en": "Blackfathom Deeps"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "priest-shadow",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 9454,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Viscous Fallout"
+      },
+      "dungeon": {
+       "en": "Gnomeregan"
+      }
+     },
+     {
+      "kind": "drop",
+      "boss": {},
+      "dungeon": {
+       "en": "Gnomeregan"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-balance",
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "priest-shadow",
+     "shaman-elemental",
+     "shaman-restoration",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 4325,
+    "src": [
+     {
+      "kind": "craft",
+      "prof": "tailoring"
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-balance",
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 4320,
+    "src": [
+     {
+      "kind": "craft",
+      "prof": "tailoring"
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "shaman-elemental",
+     "shaman-restoration",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 9447,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {},
+      "dungeon": {
+       "en": "Gnomeregan",
+       "zone": 721
+      }
+     },
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Electrocutioner 6000"
+      },
+      "dungeon": {
+       "en": "Gnomeregan"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-restoration",
+     "priest-shadow"
+    ]
+   },
+   {
+    "id": 9622,
+    "src": [
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "Jarl Needs a Blade",
+       "id": 1203
+      },
+      "faction": null
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-restoration",
+     "paladin-protection",
+     "paladin-retribution"
+    ]
+   },
+   {
+    "id": 6669,
+    "src": [
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "The Den",
+       "id": 1089
+      },
+      "faction": "horde"
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 2816,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Death Speaker Jargba"
+      },
+      "dungeon": {
+       "en": "Razorfen Kraul"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "priest-shadow"
+    ]
+   },
+   {
+    "id": 9457,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {},
+      "dungeon": {
+       "en": "Gnomeregan",
+       "zone": 721
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-restoration"
+    ]
+   },
+   {
+    "id": 2567,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {},
+      "dungeon": {
+       "en": "Blackfathom Deeps"
+      },
+      "trash": true
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 6689,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {},
+      "dungeon": {
+       "en": "Razorfen Kraul",
+       "zone": 491
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-restoration"
+    ]
+   },
+   {
+    "id": 1155,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Twilight Lord Kelris"
+      },
+      "dungeon": {
+       "en": "Blackfathom Deeps"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-balance",
+     "priest-shadow"
+    ]
+   },
+   {
+    "id": 6318,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {
+       "en": "Odo the Blindwatcher"
+      },
+      "dungeon": {
+       "en": "Shadowfang Keep"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-balance",
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 16887,
+    "src": [
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "Baron Aquanis",
+       "id": 6922
+      },
+      "faction": null,
+      "dungeon": {
+       "en": "Blackfathom Deeps"
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "priest-shadow"
     ]
    }
   ],
@@ -9939,6 +13030,21 @@
       "kind": "craft",
       "prof": "leatherworking"
      }
+    ]
+   },
+   {
+    "id": 13084,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {},
+      "dungeon": {},
+      "world": true
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "hunter-survival"
     ]
    }
   ],
@@ -12697,6 +15803,198 @@
       "faction": null
      }
     ]
+   },
+   {
+    "id": 13084,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {},
+      "dungeon": {},
+      "world": true
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "hunter-survival"
+    ]
+   },
+   {
+    "id": 2278,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {},
+      "dungeon": {},
+      "world": true
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "hunter-beast-mastery",
+     "hunter-marksmanship",
+     "hunter-survival"
+    ]
+   },
+   {
+    "id": 3841,
+    "src": [
+     {
+      "kind": "craft",
+      "prof": "blacksmithing"
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "paladin-retribution"
+    ]
+   },
+   {
+    "id": 14593,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {},
+      "dungeon": {},
+      "world": true
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "hunter-survival"
+    ]
+   },
+   {
+    "id": 2870,
+    "src": [
+     {
+      "kind": "craft",
+      "prof": "blacksmithing"
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "paladin-retribution"
+    ]
+   },
+   {
+    "id": 14590,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {},
+      "dungeon": {},
+      "world": true
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "hunter-beast-mastery",
+     "hunter-marksmanship",
+     "hunter-survival"
+    ]
+   },
+   {
+    "id": 3228,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {},
+      "dungeon": {
+       "en": "The Stockade",
+       "zone": 717
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "warrior-protection"
+    ]
+   },
+   {
+    "id": 9624,
+    "src": [
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "Rig Wars",
+       "id": 2841
+      },
+      "faction": null
+     },
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "The Grand Betrayal",
+       "id": 2929
+      },
+      "faction": null
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "hunter-beast-mastery",
+     "hunter-marksmanship",
+     "hunter-survival",
+     "paladin-retribution",
+     "rogue-assassination",
+     "rogue-combat",
+     "rogue-subtlety"
+    ]
+   },
+   {
+    "id": 6690,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {},
+      "dungeon": {
+       "en": "Razorfen Kraul",
+       "zone": 491
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "druid-feral",
+     "shaman-enhancement"
+    ]
+   },
+   {
+    "id": 2545,
+    "src": [
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "Apprentice's Duties",
+       "id": 471
+      },
+      "faction": null
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "warrior-fury"
+    ]
+   },
+   {
+    "id": 9456,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {},
+      "dungeon": {
+       "en": "Gnomeregan",
+       "zone": 721
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "rogue-assassination",
+     "rogue-combat",
+     "rogue-subtlety"
+    ]
    }
   ],
   "warrior-fury": [
@@ -12761,6 +16059,89 @@
       },
       "faction": null
      }
+    ]
+   },
+   {
+    "id": 3841,
+    "src": [
+     {
+      "kind": "craft",
+      "prof": "blacksmithing"
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "paladin-retribution"
+    ]
+   },
+   {
+    "id": 2870,
+    "src": [
+     {
+      "kind": "craft",
+      "prof": "blacksmithing"
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "paladin-retribution"
+    ]
+   },
+   {
+    "id": 3228,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {},
+      "dungeon": {
+       "en": "The Stockade",
+       "zone": 717
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "warrior-protection"
+    ]
+   },
+   {
+    "id": 10654,
+    "src": [
+     {
+      "kind": "quest",
+      "quest": {
+       "en": "Horde Presence",
+       "id": 3514
+      },
+      "faction": "horde"
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "mage-arcane",
+     "mage-fire",
+     "mage-frost",
+     "warlock-affliction",
+     "warlock-demonology",
+     "warlock-destruction"
+    ]
+   },
+   {
+    "id": 7687,
+    "src": [
+     {
+      "kind": "drop",
+      "boss": {},
+      "dungeon": {
+       "en": "Scarlet Monastery",
+       "zone": 796
+      }
+     }
+    ],
+    "pick": "stats",
+    "pages": [
+     "rogue-combat",
+     "rogue-subtlety"
     ]
    }
   ],
