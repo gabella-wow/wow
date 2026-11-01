@@ -9368,13 +9368,6 @@
        "en": "Razorfen Kraul",
        "zone": 491
       }
-     },
-     {
-      "kind": "drop",
-      "boss": {},
-      "dungeon": {
-       "en": "Razorfen Kraul"
-      }
      }
     ],
     "pick": "stats",
@@ -9521,20 +9514,6 @@
      "rogue-assassination",
      "rogue-combat",
      "rogue-subtlety"
-    ]
-   },
-   {
-    "id": 9625,
-    "src": [
-     {
-      "kind": "quest",
-      "quest": {},
-      "faction": null
-     }
-    ],
-    "pick": "stats",
-    "pages": [
-     "paladin-retribution"
     ]
    },
    {

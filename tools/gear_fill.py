@@ -88,8 +88,27 @@ def covers(t, s):
     return False
 
 
+def shown(s):
+    """A source the page can name: a boss or a dungeon, a world drop, a quest by name, a profession («a quest» names nothing)."""
+    if s['kind'] == 'drop':
+        return bool((s.get('boss') or {}).get('en') or (s.get('dungeon') or {}).get('en') or s.get('world'))
+    if s['kind'] == 'quest':
+        return bool((s.get('quest') or {}).get('en'))
+    return bool(s.get('prof'))
+
+
 def merged(srcs):
-    return [s for s in srcs if not any(covers(t, s) for t in srcs)]
+    """The sources of a pick as the page shows them: only nameable ones, one line each (a zone id more or less is the same line)."""
+    out, seen = [], set()
+    for s in srcs:
+        if not shown(s) or any(covers(t, s) for t in srcs):
+            continue
+        key = (s['kind'], (s.get('boss') or {}).get('en'), (s.get('dungeon') or {}).get('en'), (s.get('quest') or {}).get('en'),
+               s.get('faction'), s.get('prof'), bool(s.get('world')))
+        if key not in seen:
+            seen.add(key)
+            out.append(s)
+    return out
 
 
 def fill(data):
@@ -118,7 +137,7 @@ def fill(data):
             cand = []
             for k, it in items.items():
                 num = int(k)
-                if num in own or it['slot'] != slot or not srcs.get(num) or not gi.allowed(it, cls):
+                if num in own or it['slot'] != slot or not merged(srcs.get(num, [])) or not gi.allowed(it, cls):
                     continue
                 classes = {p.split('-')[0] for p in pages.get(num, [])}
                 if all(s['kind'] == 'quest' for s in srcs[num]) and len(classes) == 1 and cls not in classes:

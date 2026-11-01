@@ -228,6 +228,10 @@ def test_gear30_strict():
         own = {items[str(e['id'])]['slot'] for e in entries if not e.get('pick')}
         for e in picks:
             assert e.get('src') and e.get('pages') and spec not in e['pages'], (spec, e['id'])
+            fn = {'alliance': 'A', 'horde': 'H'}
+            for lang in ('ru', 'en'):   # every source of a pick names something on the page: no «—», no bare «Quest:»
+                got = [sc._src_html(s, lang, lambda a, b: a, fn) for s in e['src']]
+                assert all(g and not g.endswith(': ') for g in got) and len(set(got)) == len(got), (spec, e['id'], got)
             assert items[str(e['id'])]['slot'] not in own, (spec, e['id'])   # a pick fills an empty slot only
     for k, it in items.items():
         assert it['names'].get('uk') and it['names'].get('pl'), k

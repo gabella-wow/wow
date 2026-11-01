@@ -712,6 +712,8 @@ G_SRC_PICK = n9('Предметы «Подбор по статам» выбра�
                 'Os itens “Escolhido por atributos” foram escolhidos por nós, pela prioridade da especialização, de listas de outras nos mesmos guias.',
                 'Gli oggetti «Scelto per statistiche» li abbiamo scelti noi, secondo la priorità della specializzazione, da elenchi di altre nelle stesse guide.',
                 'Przedmioty „Dobór według statystyk” wybraliśmy my, według priorytetu specjalizacji, z list innych specjalizacji w tych samych poradnikach.')
+G_WORLD = n9('Добыча в мире', 'World drop', 'Здобич у світі', 'Weltdrop', 'Butin du monde', 'Botín del mundo', 'Saque do mundo',
+             'Bottino del mondo', 'Łup ze świata')   # a drop the guide lists as a world drop: no boss, no dungeon
 G_TEMP_S = n9('данные беты', 'beta data', 'дані бети', 'Beta-Daten', 'données de la bêta', 'datos de la beta', 'dados da beta', 'dati della beta',
               'dane z bety')
 G_PART_S = n9('неполно', 'incomplete', 'неповно', 'unvollständig', 'incomplet', 'incompleto', 'incompleto', 'incompleto', 'niepełne')
@@ -769,7 +771,7 @@ def gear_rows(key, data=None):
 def _src_html(src, lang, tr, fn):
     if src['kind'] == 'drop':
         boss, dg = (escape(_name(src[k], lang)) if src.get(k) else '' for k in ('boss', 'dungeon'))
-        return ' · '.join(x for x in (boss, dg) if x)
+        return ' · '.join(x for x in (boss, dg) if x) or (escape(G_WORLD[lang]) if src.get('world') else '')
     if src['kind'] == 'quest':
         q = escape(_name(src['quest'], lang)) if src.get('quest') else ''
         return f'{escape(G_QUEST[lang])}: {q}' + (f'<span class="alt">{escape(fn[src["faction"]])}</span>' if src.get('faction') else '')
