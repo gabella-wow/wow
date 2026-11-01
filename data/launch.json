@@ -1,6 +1,6 @@
 {
   "_": "Launch day card «Серверы и очередь» -> guides/server-status/ on the home hero and the Launch day guide (build.launch_card). status_card: true to put it in the pages (then python build.py); it shows only from 'from' until 'until' (UTC, the reader's clock), so it can go live early. 16:00 UTC = 18:00 Kyiv 04.11; 22:00 UTC 08.11 = midnight Kyiv.",
-  "status_card": false,
+  "status_card": true,
   "from": "2026-11-04T16:00:00Z",
   "until": "2026-11-08T22:00:00Z"
 }
