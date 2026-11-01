@@ -1138,6 +1138,7 @@ UPD_SRC = {'guides/leveling-': ('content/class_guides.py',),   # the nine class 
            'guides/builds-': ('content/spec_builds.py',),
            'guides/spec-': ('content/spec_cheats.py', 'content/spec_builds.py', 'content/class_guides.py', 'data/gear30.json'),
            'guides/dungeons/': ('content/dungeon_pages.py', 'content/guides.py'),   # the list and the pages of single dungeons
+           'guides/tier-list/': ('content/guides.py', 'content/tierlist_live.py', 'data/tierlist.json', 'i18n/guides.ru.txt', 'i18n/guides.en.txt', 'i18n/guides.uk.txt'),   # the status switch dates the page too
            'guides/': ('content/guides.py', 'i18n/guides.ru.txt', 'i18n/guides.en.txt', 'i18n/guides.uk.txt'),
            'classes/': ('content/classes.py',), 'races/': ('content/races.py',),
            'talents/': ('talents.py', 'content/talents'),   # the calculator: the engine and the trees

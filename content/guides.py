@@ -31,6 +31,8 @@ NEWS = []     # записи «Новостей», шаблон и порядо�
 #  'cls'?: 'all' | 'mage priest'} — cls: «касается вашего класса» для «Моего персонажа»
 NEWS_SO = t('Для игрока', 'For you', 'Для гравця')   # подпись строки 'so'
 from build import DISCORD_AT  # noqa: E402  (у каждого места ссылки своё приглашение)
+from content import tierlist_live as TL  # noqa: E402  (тир-лист: «по бете» / «по живой игре» и дата, data/tierlist.json)
+TL_STATUS = TL.load()
 
 ORDER = ['name-reservation', 'launch-checklist', 'launch-day', 'leveling', 'leveling-warrior', 'leveling-paladin', 'leveling-hunter', 'leveling-rogue', 'leveling-priest', 'leveling-shaman', 'leveling-mage', 'leveling-warlock', 'leveling-druid', 'builds', 'builds-warrior', 'builds-paladin', 'builds-hunter', 'builds-rogue', 'builds-priest', 'builds-shaman', 'builds-mage', 'builds-warlock', 'builds-druid', 'spec-hunter-beast-mastery', 'spec-mage-frost', 'spec-paladin-protection', 'spec-priest-discipline', 'best-race', 'tier-list', 'pvp', 'legacy', 'dungeons', 'professions', 'addons', 'faq', 'glossary', 'requirements', 'server-status', 'news', 'ukrainian']   # порядок плиток на хабе и в «Другие гайды»
 
@@ -859,7 +861,7 @@ GUIDES.append({
                                 'href': 'guides/dungeons/', 'art': 'hero_dungeons'}]),
                 ]},
             ]),
-            ('tiles', [{'t': t('Тир-лист классов WoW Forever', 'WoW Forever Class Tier List', 'Тір-лист класів WoW Forever'), 'd': t('Сильные классы и спеки по данным беты', 'Strong classes and specs by beta data', 'Сильні класи й спеціалізації за даними бети'), 'href': 'guides/tier-list/', 'art': 'hero_tierlist'}]),
+            ('tiles', [{'t': t('Тир-лист классов WoW Forever', 'WoW Forever Class Tier List', 'Тір-лист класів WoW Forever'), 'd': TL.tile(TL_STATUS), 'href': 'guides/tier-list/', 'art': 'hero_tierlist'}]),
         ]},
         {'id': 'legacy', 'title': t('Система Legacy', 'Legacy system', 'Система Legacy'), 'blocks': [
             ('text', [t('Legacy — прогресс на весь аккаунт Battle.net. Очки дают за испытания: уровни, профессии, PvP, подземелья и рейды. Тратите их на перки отдельно на каждом персонаже, на старте до 16 очков.', 'Legacy is progress shared across your whole Battle.net account. Challenges give you points: levels, professions, PvP, dungeons and raids. You spend them on perks separately on each character, up to 16 points at launch.', 'Legacy — прогрес на весь обліковий запис Battle.net. Очки дають за випробування: рівні, професії, PvP, підземелля та рейди. Витрачаєте їх на перки окремо на кожному персонажі, на старті до 16.')]),
@@ -986,7 +988,7 @@ GUIDES.append({
             ('table', _pairs_table()),
             ('tabs', _pair_tabs()),
             ('tip', t('Кулинарию, Первую помощь и Рыбалку берут все: это вспомогательные профессии, можно взять все три, и забыть их нельзя. Пусть кто-то в группе прокачает Кулинарию ради 10 мест в лагере: порог навыка источники называют разный.', 'Everyone takes Cooking, First Aid and Fishing: they are secondary professions, you can have all three and they cannot be unlearned. Let someone in the group raise Cooking for 10 camp slots: sources give different skill thresholds.', 'Кулінарію, Першу допомогу та Рибальство беруть усі: це допоміжні професії, можна взяти всі три, і розучити їх не можна. Нехай хтось у групі прокачає Кулінарію заради 10 місць у таборі: поріг навички джерела називають різний.')),
-            ('tiles', [{'t': t('Тир-лист классов WoW Forever', 'WoW Forever Class Tier List', 'Тір-лист класів WoW Forever'), 'd': t('Сильные классы и спеки по данным беты', 'Strong classes and specs by beta data', 'Сильні класи й спеціалізації за даними бети'), 'href': 'guides/tier-list/', 'art': 'hero_tierlist'}]),
+            ('tiles', [{'t': t('Тир-лист классов WoW Forever', 'WoW Forever Class Tier List', 'Тір-лист класів WoW Forever'), 'd': TL.tile(TL_STATUS), 'href': 'guides/tier-list/', 'art': 'hero_tierlist'}]),
         ]},
         {'id': 'choose', 'title': t('Как выбрать пару', 'How to choose a pair', 'Як вибрати пару'), 'blocks': [
             ('steps', [
@@ -1494,14 +1496,17 @@ def _race_per_class(g):
 _race_per_class(GUIDES[-1])
 
 # ---------- tier-list ----------
+# «по бете» / «по живой игре» и дата: один переключатель data/tierlist.json (content/tierlist_live.py) — title, лид, факты
+# первого экрана, совет «Как читать», плитка и блок «Что изменилось». Порядок: docs/wow/TIERLIST-LIVE-RUNBOOK.md
 
 GUIDES.append({
     'slug': 'tier-list', 'art': 'hero_tierlist', 'hero': 'hero_tierlist',
     'title': t('Тир-лист классов WoW Forever', 'WoW Forever Class Tier List', 'Тір-лист класів WoW Forever'),
     'crumb': t('Тир-лист', 'Tier list', 'Тір-лист'),
-    'lead': t('Тир-лист — рейтинг классов и спеков по силе, от S до C. На бете сильнее всех Паладин в PvE, Охотник и Маг на прокачке, Чернокнижник и Разбойник в PvP. Это срез беты 30 уровня, обновим после старта 5 ноября.', 'A tier list ranks classes and specs by strength, from S to C. In the beta the strongest picks are Paladin in PvE, Hunter and Mage for leveling, Warlock and Rogue in PvP. This is a level 30 beta snapshot; we’ll update it after the Nov 4–5 launch.', 'Тір-лист — рейтинг класів і спеціалізацій за силою, від S до C. У бета-версії найсильніші Паладин у PvE, Мисливець і Маг на прокачуванні, Чорнокнижник і Розбійник у PvP. Це зріз бети на 30 рівні, оновимо його після старту 5 листопада.'),
-    'tile': t('Сильные классы и спеки по данным беты', 'Strong classes and specs by beta data', 'Сильні класи й спеціалізації за даними бети'),
-    'pills': [t('По бете', 'Beta data', 'За бетою'), t('27 спеков', '27 specs', '27 спеціалізацій'), t('Обновим после 05.11', 'Updated after Nov 4–5', 'Оновимо після 5 листопада')],
+    # the content sentences; the status one (beta snapshot / live game, date) is added by TL.lead
+    'lead': TL.lead(t('Тир-лист — рейтинг классов и спеков по силе, от S до C. На бете сильнее всех Паладин в PvE, Охотник и Маг на прокачке, Чернокнижник и Разбойник в PvP.', 'A tier list ranks classes and specs by strength, from S to C. In the beta the strongest picks are Paladin in PvE, Hunter and Mage for leveling, Warlock and Rogue in PvP.', 'Тір-лист — рейтинг класів і спеціалізацій за силою, від S до C. У бета-версії найсильніші Паладин у PvE, Мисливець і Маг на прокачуванні, Чорнокнижник і Розбійник у PvP.'), TL_STATUS),
+    'tile': TL.tile(TL_STATUS),
+    'pills': TL.pills(t('27 спеков', '27 specs', '27 спеціалізацій'), TL_STATUS),
     # one Alliance / Horde switch over the class grid (build_guides.side_switch): the site-wide side, races of that side in the table
     'side': {'label': t('Фракция', 'Faction', 'Фракція'),
              'alliance': t('Альянс', 'Alliance', 'Альянс'), 'horde': t('Орда', 'Horde', 'Орда'),
@@ -1525,7 +1530,7 @@ GUIDES.append({
     'sections': [
         {'id': 'how', 'title': t('Как читать', 'How to read it', 'Як читати'), 'blocks': [
             ('text', [t('Тир — сводка нескольких источников, а не оценка одного сайта. S — лучшие в своей роли, C — слабее, но играть можно. Звёздочка (*) — источники расходятся на две буквы и больше. Источники — сайты гайдов (RankedBoost, gamer-guides, Noobtoboss, Kami-labs и другие), список со ссылками — в конце страницы.', 'The tier is a summary of several sources, not one site’s rating. S is the best in its role, C is weaker but playable. An asterisk (*) means the sources differ by two letters or more. The sources are guide sites (RankedBoost, gamer-guides, Noobtoboss, Kami-labs and others); the full list with links is at the end of the page.', 'Тір — це зведення кількох джерел, а не оцінка одного сайту. S — найкращі у своїй ролі, C — слабші, але грати можна. Зірочка (*) означає, що джерела розходяться на дві літери й більше. Джерела — сайти гайдів (RankedBoost, gamer-guides, Noobtoboss, Kami-labs та інші), список із посиланнями — наприкінці сторінки.')]),
-            ('tip', t('По бете. Бета шла с 17.09 по 23.10 на уровне 30: рейдов, полей боя и уровней 31–60 там не было. Обновим после старта 5 ноября.', 'Beta data. The beta ran from Sep 17 to Oct 23 at level 30: no raids, battlegrounds or levels 31–60. We’ll update after the Nov 4–5 launch.', 'За бетою. Бета тривала з 17 вересня по 23 жовтня на 30 рівні: рейдів, полів бою та рівнів 31–60 там не було. Оновимо після старту 5 листопада.')),
+            ('tip', TL.tip(TL_STATUS)),
         ]},
         {'id': 'classes', 'title': t('Лучшие классы на 30 уровне', 'Best classes at level 30', 'Найкращі класи на 30 рівні'), 'blocks': [
             ('table', {'head': [t('Класс', 'Class', 'Клас'), t('Прокачка', 'Leveling', 'Прокачування'), 'PvE', 'PvP', t('Почему', 'Why', 'Чому')], 'rows': [
@@ -1724,6 +1729,8 @@ GUIDES.append({
         ]},
     ],
 })
+if TL.changes_section(TL_STATUS):                                  # «Что изменилось» opens the page; no notes, no block
+    GUIDES[-1]['sections'].insert(0, TL.changes_section(TL_STATUS))
 
 
 # ---------- pvp: система PvP по официальным статьям Blizzard; спеки и расы — из тир-листа и «Лучшей расы» (одни данные) ----------
