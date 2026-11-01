@@ -1,0 +1,6 @@
+{
+ "_doc": "Tier list status: the one switch. source: beta | live. date: YYYY-MM-DD of the data. changes: [{date, text: {ru, en, uk, de, fr, es, pt, it, pl}}], newest first; empty = the block is hidden. Runbook: docs/wow/TIERLIST-LIVE-RUNBOOK.md",
+ "source": "beta",
+ "date": "2026-10-23",
+ "changes": []
+}

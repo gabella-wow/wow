@@ -166,8 +166,7 @@ META = {
                  t('Билды WoW Forever для 9 классов и 27 спеков: таланты, приоритет, характеристики и полный калькулятор на 51 очко. Раскладку к 60 добавим после старта.',
                    'WoW Forever builds for all 9 classes and 27 specs: talents, priorities, stats and a full 51-point calculator. The level 60 layout follows after launch.',
                    'Білди WoW Forever для 9 класів і 27 спеціалізацій: таланти, пріоритет, характеристики й повний калькулятор на 51 очко. Розкладку до 60 додамо після старту.')),
-    'guides/tier-list/': (t('Тир-лист WoW Forever: лучшие классы для PvE, PvP и прокачки', 'WoW Forever Tier List: Best Classes for PvE, PvP, Leveling', 'Тір-лист WoW Forever: кращі класи для PvE, PvP, прокачування'),
-                 t('Тир-лист WoW Forever: лучшие классы и спеки для PvE, PvP и прокачки по бете 30 уровня. Обновим после старта.', 'WoW Forever tier list: best classes and specs for PvE, PvP and leveling from the level 30 beta. Updated after launch.', 'Тір-лист WoW Forever: найкращі класи й спеціалізації для PvE, PvP і прокачування за бетою 30 рівня. Оновимо після старту.')),
+    # 'guides/tier-list/': content.tierlist_live.meta() below (the status and the date of data/tierlist.json)
     'guides/pvp/': (t('PvP в WoW Forever: звания, Честь, награды и поля боя', 'WoW Forever PvP: Ranks, Honor, Rewards and Battlegrounds', 'PvP у WoW Forever: звання, Честь, нагороди й поля бою'),
                  t('Как устроено PvP в WoW Forever по данным Blizzard: Честь и очки звания, награды званий 1–14, наборы за Честь и Emboldened Seal, сезоны, Darkspear Islands.',
                    'How PvP works in WoW Forever per Blizzard: Honor and Rank Points, rewards for ranks 1–14, Honor gear and Emboldened Seals, seasons, Darkspear Islands.',
@@ -356,6 +355,9 @@ def calc_meta():
 from content import dungeon_pages  # noqa: E402
 
 META.update(dungeon_pages.SEO)   # pages of single dungeons: guides/dungeons/<slug>/
+from content import tierlist_live  # noqa: E402
+
+META['guides/tier-list/'] = tierlist_live.meta()   # «(Beta, Oct 23)» / «(Live, Nov 6)» in the title: one switch, data/tierlist.json
 langs.fill([HOME_NAME, TOOLS_NAME, PRIVACY_NAME, PLAY_NAME, ROSTER_NAME, PROFILE_NAME, CHAR_NAME, PLAYER_NAME, META, CLASS_T, CLASS_T_SHORT, CLASS_D, RACE_T, RACE_T_SHORT, RACE_D, AND, OG])   # new languages: i18n/<lang>.json
 
 
