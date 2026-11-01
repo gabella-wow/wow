@@ -317,6 +317,14 @@ code { font-size: .92em; background: var(--surface-2); padding: 1px 5px; border-
 .hplay a { color: #f1ece0; text-decoration: underline; text-decoration-color: rgba(201,165,74,.7); text-underline-offset: 4px; }
 .hplay a:hover { color: #e0c27a; }
 .hplay a::after { content: " →"; }
+/* Launch day: the server status card in the hero (build.launch_card, data/launch.json); the reader's clock unhides it */
+.lstat { display: flex; align-items: center; gap: 14px; width: min(100%, 728px); min-height: 56px; padding: 8px 14px 8px 16px; border: 1px solid var(--gold); border-left-width: 4px; border-radius: 7px; background: rgba(14,14,16,.92); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); color: #f1ece0; text-decoration: none; transition: border-color .15s; }
+.lstat[hidden] { display: none; }
+.lstat:hover { border-color: #e0c27a; }
+.lst-t { flex: 1; min-width: 0; display: grid; gap: 2px; }
+.lst-t b { font-size: var(--fs-16); font-weight: 600; line-height: 1.25; }
+.lst-t span { font-size: var(--fs-14); line-height: 1.3; color: #d9d2c2; }
+.lstat .ico { flex: none; width: 20px; height: 20px; color: #e0c27a; }
 .hnews { margin: 0 auto 34px; display: grid; gap: 10px; }
 .hnews .hh { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; text-shadow: var(--hero-shadow); }
 .hnews .hh h2 { font-size: var(--fs-22); line-height: 1; color: var(--ink); }
@@ -1195,6 +1203,7 @@ dialog.sheet::backdrop { background: rgba(0,0,0,.6); }
     <h1>World of Warcraft <span>Forever</span></h1>
     <p class="lead">Гид по WoW Forever на русском: выбрать класс, билд, куда качаться.</p>
     <p class="hdata">Данные: бета Forever · обновлено @@DATA_UPD@@</p>
+    @@LAUNCH@@
     <nav class="htasks" aria-label="С чего начать"><a class="on" href="guides/launch-checklist/">Я новичок</a><a href="classes/#choose">Выбрать класс и расу</a><a href="guides/builds/" data-tl>Билд моего класса</a><a href="guides/leveling/">Прокачка 1–60</a><a href="guides/tier-list/#pvp">Тир-лист PvP</a><a href="guides/dungeons/">Подземелья</a></nav>
     <p class="hplay"><a href="play/">Второй экран: таймеры и подземелья по уровню</a></p>
     <div class="cd" id="cd" aria-live="polite"></div>
