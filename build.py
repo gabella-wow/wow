@@ -1209,7 +1209,7 @@ def game_hint(lang):
 
 
 def fresh(lang):
-    """«Свежее» at the bottom of the home hero: the three newest of our notes on the game (content.guides.NEWS), in the page
+    """«Свежее» under «Билды и таланты» on the home page (#fresh): the three newest of our notes on the game (content.guides.NEWS), in the page
     language and their source; each opens its place on the news page. The page script merges the newest Wowhead headlines in (assets/news.json).
     The site updates (updates.json) stay the Discord feed and the news page."""
     from content.guides import NEWS
