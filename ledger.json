@@ -1,5 +1,5 @@
 {
- "last_run": "2026-11-02T18:01:02Z",
+ "last_run": "2026-11-02T18:10:58Z",
  "posts": {
   "art-24301455": {
    "checked": "2026-10-29T20:21:03Z",
@@ -64,7 +64,7 @@
    "version": null
   },
   "art-24302547": {
-   "checked": "2026-11-02T18:01:02Z",
+   "checked": "2026-11-02T18:10:58Z",
    "lines": [
     "e463594c3307"
    ],
@@ -433,7 +433,7 @@
    "version": 1
   },
   "eu-631316-1": {
-   "checked": "2026-11-02T18:01:02Z",
+   "checked": "2026-11-02T18:10:58Z",
    "lines": [
     "b980faad67e4",
     "551f003b8fd3",
@@ -571,7 +571,7 @@
    "version": 5
   },
   "eu-631316-4": {
-   "checked": "2026-11-02T18:01:02Z",
+   "checked": "2026-11-02T18:10:58Z",
    "lines": [
     "a9f91ef9a1d3",
     "3f0687de02e8",
@@ -726,7 +726,7 @@
    "version": 3
   },
   "eu-631316-5": {
-   "checked": "2026-11-02T18:01:02Z",
+   "checked": "2026-11-02T18:10:58Z",
    "lines": [
     "862affbc3ad5",
     "3e1771b3fd67",
@@ -864,7 +864,7 @@
    "version": 1
   },
   "eu-631316-6": {
-   "checked": "2026-11-02T18:01:02Z",
+   "checked": "2026-11-02T18:10:58Z",
    "lines": [
     "ba02c8dc2b40",
     "cdd748e437cc",
@@ -1102,7 +1102,7 @@
    "version": 2
   },
   "eu-631316-7": {
-   "checked": "2026-11-02T18:01:02Z",
+   "checked": "2026-11-02T18:10:58Z",
    "lines": [
     "c2f53382556d",
     "157b13cf95b2",
@@ -1130,7 +1130,7 @@
    "version": 4
   },
   "eu-631316-8": {
-   "checked": "2026-11-02T18:01:02Z",
+   "checked": "2026-11-02T18:10:58Z",
    "lines": [
     "180749eee47d",
     "57c724e3010c",
@@ -1332,6 +1332,16 @@
    "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-known-issues-october-8/2352687/7",
    "version": 1
   },
+  "us-2354050-729": {
+   "checked": "2026-11-02T18:10:58Z",
+   "lines": [],
+   "seen": "2026-11-02T18:10:58Z",
+   "sha": "b248d930d769c203d6cc68592028d080a6179be2e9f219ab723359f50281c25d",
+   "title": "[Mac] 8 different graphics bugs, each isolated to one setting — with repro steps for each",
+   "updated_at": "2026-11-02T18:10:20.059Z",
+   "url": "https://us.forums.blizzard.com/en/wow/t/mac-8-different-graphics-bugs-each-isolated-to-one-setting-%E2%80%94-with-repro-steps-for-each/2354050/729",
+   "version": 1
+  },
   "us-2357133-1": {
    "checked": "2026-11-02T01:31:00Z",
    "lines": [],
@@ -1353,7 +1363,7 @@
    "version": 1
   },
   "us-2360696-1": {
-   "checked": "2026-11-02T18:01:02Z",
+   "checked": "2026-11-02T18:10:58Z",
    "lines": [
     "b980faad67e4",
     "551f003b8fd3",
@@ -1491,7 +1501,7 @@
    "version": 5
   },
   "us-2360696-4": {
-   "checked": "2026-11-02T18:01:02Z",
+   "checked": "2026-11-02T18:10:58Z",
    "lines": [
     "a9f91ef9a1d3",
     "3f0687de02e8",
@@ -1646,7 +1656,7 @@
    "version": 4
   },
   "us-2360696-5": {
-   "checked": "2026-11-02T18:01:02Z",
+   "checked": "2026-11-02T18:10:58Z",
    "lines": [
     "862affbc3ad5",
     "3e1771b3fd67",
@@ -1784,7 +1794,7 @@
    "version": 1
   },
   "us-2360696-6": {
-   "checked": "2026-11-02T18:01:02Z",
+   "checked": "2026-11-02T18:10:58Z",
    "lines": [
     "ba02c8dc2b40",
     "cdd748e437cc",
@@ -2022,7 +2032,7 @@
    "version": 2
   },
   "us-2360696-7": {
-   "checked": "2026-11-02T18:01:02Z",
+   "checked": "2026-11-02T18:10:58Z",
    "lines": [
     "c2f53382556d",
     "157b13cf95b2",
@@ -2050,7 +2060,7 @@
    "version": 4
   },
   "us-2360696-8": {
-   "checked": "2026-11-02T18:01:02Z",
+   "checked": "2026-11-02T18:10:58Z",
    "lines": [
     "180749eee47d",
     "57c724e3010c",
@@ -2334,7 +2344,7 @@
   "art-24315820": "d3341d17",
   "art-24316094": "8e0d688b"
  },
- "requests": 13,
+ "requests": 15,
  "sources": {
   "articles:24301455": {
    "fails": 0,
@@ -2354,7 +2364,7 @@
   },
   "articles:24302547": {
    "fails": 0,
-   "ok": "2026-11-02T18:01:02Z"
+   "ok": "2026-11-02T18:10:58Z"
   },
   "articles:24303009": {
    "fails": 0,
@@ -2402,27 +2412,27 @@
   },
   "articles:list": {
    "fails": 0,
-   "ok": "2026-11-02T18:01:01Z"
+   "ok": "2026-11-02T18:10:58Z"
   },
   "eu:c/wow-forever-beta-discussion/362": {
    "fails": 0,
-   "ok": "2026-11-02T18:00:58Z"
+   "ok": "2026-11-02T18:10:54Z"
   },
   "eu:c/wow-forever-beta-discussion/362/new": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-10-31T12:20:58Z",
    "fails": 0,
-   "ok": "2026-11-02T18:00:59Z"
+   "ok": "2026-11-02T18:10:56Z"
   },
   "eu:c/wow-forever/359": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-10-31T12:20:50Z",
    "fails": 0,
-   "ok": "2026-11-02T18:00:56Z"
+   "ok": "2026-11-02T18:10:52Z"
   },
   "eu:c/wow-forever/359/new": {
    "fails": 0,
-   "ok": "2026-11-02T18:00:57Z"
+   "ok": "2026-11-02T18:10:53Z"
   },
   "eu:t/628701": {
    "fails": 0,
@@ -2446,7 +2456,7 @@
   },
   "eu:t/631316": {
    "fails": 0,
-   "ok": "2026-11-02T18:01:00Z"
+   "ok": "2026-11-02T18:10:57Z"
   },
   "eu:t/631603": {
    "fails": 0,
@@ -2656,25 +2666,25 @@
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-01T08:20:49Z",
    "fails": 0,
-   "ok": "2026-11-02T18:00:52Z"
+   "ok": "2026-11-02T18:10:48Z"
   },
   "us:c/wow-forever-beta-discussion/349/new": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-10-27T20:10:54Z",
    "fails": 0,
-   "ok": "2026-11-02T18:00:53Z"
+   "ok": "2026-11-02T18:10:48Z"
   },
   "us:c/wow-forever/346": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-10-27T20:30:49Z",
    "fails": 0,
-   "ok": "2026-11-02T18:00:51Z"
+   "ok": "2026-11-02T18:10:46Z"
   },
   "us:c/wow-forever/346/new": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-10-27T20:40:51Z",
    "fails": 0,
-   "ok": "2026-11-02T18:00:52Z"
+   "ok": "2026-11-02T18:10:47Z"
   },
   "us:t/2352595": {
    "fails": 0,
@@ -2687,6 +2697,14 @@
   "us:t/2352687": {
    "fails": 0,
    "ok": "2026-10-27T19:16:34Z"
+  },
+  "us:t/2354050": {
+   "fails": 0,
+   "ok": "2026-11-02T18:10:51Z"
+  },
+  "us:t/2354050/posts": {
+   "fails": 0,
+   "ok": "2026-11-02T18:10:51Z"
   },
   "us:t/2355846": {
    "fails": 0,
@@ -2710,7 +2728,7 @@
   },
   "us:t/2360696": {
    "fails": 0,
-   "ok": "2026-11-02T18:00:54Z"
+   "ok": "2026-11-02T18:10:49Z"
   },
   "us:t/2361993": {
    "fails": 0,
@@ -2756,7 +2774,7 @@
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-10-27T20:10:57Z",
    "fails": 0,
-   "ok": "2026-11-02T18:00:55Z"
+   "ok": "2026-11-02T18:10:50Z"
   },
   "us:t/2381433": {
    "fails": 0,
@@ -2997,6 +3015,7 @@
   "eu-639024": "2026-11-02T15:35:09.305Z|5",
   "us-2352595": "2026-10-29T06:19:20.777Z|92",
   "us-2352687": "2026-10-08T21:38:40.335Z|7",
+  "us-2354050": "2026-11-02T18:08:06.566Z|729",
   "us-2355846": "2026-10-27T22:31:48.016Z|4",
   "us-2357133": "2026-11-02T01:23:41.086Z|140",
   "us-2359185": "2026-10-30T12:29:37.597Z|138",
