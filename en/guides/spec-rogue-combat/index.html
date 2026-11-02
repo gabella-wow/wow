@@ -65,6 +65,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gabella.site/wow/en/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://gabella.site/wow/en/guides/"},{"@type":"ListItem","position":3,"name":"Combat Rogue Guide","item":"https://gabella.site/wow/en/guides/spec-rogue-combat/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"WoW Forever Combat Rogue Build and Guide (Level 30)","description":"WoW Forever Combat Rogue build for level 30: talents, gear, stats, rotation and leveling. Damage · PvE tier: A*. Blade Flurry: damage to a second target.","inLanguage":"en","url":"https://gabella.site/wow/en/guides/spec-rogue-combat/","dateModified":"2026-11-01","mainEntityOfPage":{"@type":"WebPage","@id":"https://gabella.site/wow/en/guides/spec-rogue-combat/"},"author":{"@type":"Organization","name":"Gabella","url":"https://gabella.site/","logo":"https://gabella.site/wow/assets/icons/icon-512.png?v=48809128","sameAs":["https://discord.gg/ZGpznkX3Zw","https://t.me/gabella_wow"]},"publisher":{"@type":"Organization","name":"Gabella","url":"https://gabella.site/","logo":"https://gabella.site/wow/assets/icons/icon-512.png?v=48809128","sameAs":["https://discord.gg/ZGpznkX3Zw","https://t.me/gabella_wow"]},"isPartOf":{"@type":"WebSite","url":"https://gabella.site/wow/en/"},"image":"https://gabella.site/wow/assets/og/spec-rogue-combat-en.jpg?v=57b2a494"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"en","mainEntity":[{"@type":"Question","name":"How do I copy the build?","acceptedAnswer":{"@type":"Answer","text":"In the Talents section, press “Make your own build”, place the points and press “Copy build”: the points are kept in the link. The button at the top of the page shares a link to this cheat sheet."}},{"@type":"Question","name":"What is the “Leveling” tab in the talents for?","acceptedAnswer":{"@type":"Answer","text":"“General” is the level 30 point layout from the beta. “Leveling” is the order of points from level 10 to 60; levels 31–60 come from the class leveling guide, and we will check them against the game after launch."}},{"@type":"Question","name":"What about the Legacy points?","acceptedAnswer":{"@type":"Answer","text":"The Legacy perk Talented (up to 5 ranks) unlocks talent points earlier than normal, by up to 5 levels. Where to spend them is in the Talents section when the sources name it. All perks are in the Legacy guide."}}]}</script>
+<style>.rep{margin:40px 0 0}.rep+.dcta{margin-top:16px}.rep-b{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1px solid var(--pline);border-radius:7px;background:var(--panel-2);color:var(--muted);font:inherit;font-size:var(--fs-14);font-weight:600;cursor:pointer;transition:border-color .2s,color .2s}.rep-b:hover{border-color:var(--gold);color:var(--fg)}.repd{width:min(480px,calc(100vw - 32px));max-width:none;margin:auto;padding:0;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--fg)}.repd::backdrop{background:rgba(0,0,0,.6)}.rep-f{display:grid;gap:12px;padding:20px}.rep-f h2{margin:0;font-family:var(--font-body);font-size:var(--fs-22);font-weight:600;line-height:1.25}.rep-f label{font-size:var(--fs-14);color:var(--muted)}.rep-f textarea{width:100%;min-height:96px;padding:10px 12px;font:inherit;resize:vertical;border:1px solid var(--fline);border-radius:7px;background:var(--panel-2);color:var(--fg)}.rep-n{margin:0;font-size:var(--fs-13);color:var(--muted)}.rep-s{margin:0;min-height:1.4em;font-size:var(--fs-14)}.rep-s:empty{display:none}.rep-a{display:flex;flex-wrap:wrap;gap:8px}.rep-a .btn{flex:1 1 120px;white-space:normal;text-align:center}.rep-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}</style>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -142,6 +143,7 @@
 </div>
 
 <div class="wrap">
+<p class="rep"><button class="rep-b" type="button" aria-haspopup="dialog" aria-controls="repDlg" data-v="2026-11-01">Found an error</button></p>
 <p class="dcta"><span>Launch groups, questions and news — on the Gabella Discord.</span><a class="btn ghost" href="https://discord.gg/ZGpznkX3Zw" target="_blank" rel="noopener">Open Discord</a></p>
 <section class="gnext" id="next"><div class="sec-head"><h2>Next step</h2></div><nav class="nextl" aria-label="Next step"><a href="../../guides/builds-rogue/"><span>Build and talents level by level</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a><a href="../../guides/leveling-rogue/"><span>Leveling this class 1–60</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a><a href="../../guides/dungeons/"><span>Dungeons by level</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a></nav></section>
 <section id="more" hidden><div class="sec-head"><h2>Other guides</h2></div><nav class="ttiles gtiles" aria-label="Other guides"></nav></section>
@@ -721,6 +723,27 @@ addEventListener('beforeinstallprompt', e => {
     new PerformanceObserver(function (l) { if (img && l.getEntries().some(function (e) { return e.element === img; })) setTimeout(wake, 0); else later(); })
       .observe({ type: 'largest-contentful-paint', buffered: true });
   else later();
+})();
+</script>
+<dialog class="repd" id="repDlg" aria-labelledby="repT" data-l="en" data-u="https://report.gabella.site/" data-m="[&quot;Sending…&quot;, &quot;Sent. We review reports every day.&quot;, &quot;Too many reports. Try again in an hour.&quot;, &quot;Not sent. Try again later or write to us on Discord.&quot;]"><form class="rep-f" method="dialog"><h2 id="repT">Error on this page</h2><label for="repX">What is wrong (optional)</label><textarea id="repX" name="text" rows="4" maxlength="500"></textarea><div class="rep-hp" aria-hidden="true"><label for="repW">Website</label><input id="repW" name="website" tabindex="-1" autocomplete="off"></div><p class="rep-n">We also send the page address, language, screen width and build version. No IP, no personal data.</p><p class="rep-s" role="status" aria-live="polite"></p><div class="rep-a"><button class="btn" type="submit">Send</button><button class="btn ghost rep-c" type="button">Cancel</button></div></form></dialog>
+<script>
+(function () {
+  var b = document.querySelector('.rep-b'), d = document.getElementById('repDlg');
+  if (!b || !d || !d.showModal) { if (b) b.parentNode.hidden = true; return; }
+  var f = d.querySelector('form'), s = d.querySelector('.rep-s'), go = f.querySelector('[type=submit]'), m = JSON.parse(d.dataset.m), t0 = 0;
+  b.addEventListener('click', function () { s.textContent = ''; go.disabled = false; t0 = Date.now(); d.showModal(); });
+  d.querySelector('.rep-c').addEventListener('click', function () { d.close(); });
+  d.addEventListener('click', function (e) { if (e.target === d) d.close(); });
+  d.addEventListener('close', function () { b.focus(); });
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    go.disabled = true; s.textContent = m[0];
+    fetch(d.dataset.u, { method: 'POST', credentials: 'omit', headers: { 'content-type': 'text/plain' }, body: JSON.stringify({
+      url: location.origin + location.pathname, lang: d.dataset.l, w: window.innerWidth, v: b.dataset.v,
+      text: f.elements.text.value.trim(), hp: f.elements.website.value, ms: Date.now() - t0 }) })
+      .then(function (r) { if (r.status === 429) throw 429; if (!r.ok) throw 0; s.textContent = m[1]; f.elements.text.value = ''; setTimeout(function () { if (d.open) d.close(); }, 2000); })
+      .catch(function (x) { s.textContent = x === 429 ? m[2] : m[3]; go.disabled = false; });
+  });
 })();
 </script>
 </body>
