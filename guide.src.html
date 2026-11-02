@@ -67,7 +67,8 @@
   .cpick a { display: grid; justify-items: center; align-content: center; gap: 4px; min-height: 62px; padding: 5px 4px; border-radius: 10px; background: rgb(5 5 5 / .58); border: 1px solid rgb(241 236 224 / .2); color: var(--cc); text-decoration: none; }
   .cpick a:active { background: rgb(5 5 5 / .8); }
   .cpick .av { --s: 30px; --ring-gap: transparent; box-shadow: 0 0 0 1.5px var(--cc); }
-  .cpick b { max-width: 100%; font-size: var(--fs-13); font-weight: 600; line-height: 1.15; text-align: center; overflow-wrap: anywhere; hyphens: auto; text-shadow: none; }
+  .cpick a { container-type: inline-size; }
+  .cpick b { max-width: 100%; font-size: min(var(--fs-13), 13cqi);   /* 320 px: the tile is ~84 px inside, «Warlock» in uk/ru broke mid-word at 13 px (X6-04) */ font-weight: 600; line-height: 1.15; text-align: center; overflow-wrap: anywhere; hyphens: auto; text-shadow: none; }
 }
 .gjump { display: flex; flex-wrap: wrap; gap: 8px; }   /* a spec sheet: its parts one tap away (build_guides.spec_jump); the contents column takes over from 1024 px */
 .gjump a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; border-radius: 6px; background: rgb(5 5 5 / .58); border: 1px solid rgb(241 236 224 / .2); color: #e8d6a6; font-size: var(--fs-16); font-weight: 500; text-decoration: none; }
