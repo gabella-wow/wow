@@ -1237,4 +1237,4 @@ Spec cheat sheet
 PvP tier list
 Talent calculator
 Show in full
-Start checklist
+Launch checklist

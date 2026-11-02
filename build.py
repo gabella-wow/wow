@@ -281,7 +281,7 @@ def tabbar(cur=None, home='@@HOME@@', more=False):
 # Top menu: the same items in the same order on every page; anchors of the home page stay in its own «Ещё» group.
 # Races, all articles, Legacy and the tools live in «Ещё»; «In game» (play/) is in the menu since 29.10: people did not find it in «Ещё»; «News» since 02.11 (2 clicks → 1).
 NAV = (('classes/', 'Классы'), ('guides/builds/', 'Билды и таланты'), ('guides/tier-list/', 'Тир-лист'),
-       ('guides/leveling/', 'Прокачка'), ('guides/dungeons/', 'Подземелья'), ('guides/news/', 'Новости'), ('play/', 'В игре'))
+       ('guides/leveling/', 'Прокачка'), ('guides/dungeons/', 'Подземелья'), ('play/', 'В игре'), ('guides/news/', 'Новости'))
 # Sections sheet («Ещё»): (group, [(path from the language home, label)]); '#…' — a block of the home page.
 # TAB_DUP: pages the phone tab bar already has — the sheet hides them below 720 px (the sheet keeps them for 720–1210 px, no menu there).
 MORE = (
