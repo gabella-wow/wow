@@ -201,6 +201,7 @@
   /* a counter without cookies or ids: once a day per browser one beacon «visit», plus «char» if a hero is saved (the share of visits with a character) */
   function beacon() {
     try {
+      if (navigator.doNotTrack === '1' || navigator.globalPrivacyControl === true) return;   // opted out: nothing is sent, no day mark
       const day = new Date().toISOString().slice(0, 10);
       if (localStorage.getItem('gabella-cnt') === day) return;
       localStorage.setItem('gabella-cnt', day);
