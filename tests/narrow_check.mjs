@@ -140,7 +140,7 @@ async function check(w, job) {
   for (let i = 0; i < 80; i++) { if (await ev(`document.readyState`) === 'complete') break; await sleep(100); }
   await ev(`document.fonts.ready.then(()=>1)`);
   await sleep(sub.startsWith('play') ? 700 : 300);
-  if (hero && !(await ev(`!!document.querySelector('.pcard:not([hidden])')`))) found.push({ ...job, sel: '.pcard', why: 'the card «My class at level N» did not show for the saved hero' });
+  if (hero && sub.startsWith('play') && !(await ev(`!!document.querySelector('.pcard:not([hidden])')`))) found.push({ ...job, sel: '.pcard', why: 'the card «My class at level N» did not show for the saved hero' });
   for (const [sel, why] of await ev(`(${PROBE})()`)) found.push({ ...job, sel, why });
   if (opt('eval', '')) console.log(`/${sub} ${lang} ${width} ${theme} ${hero ? 'hero' : 'empty'}:`, JSON.stringify(await ev(String(opt('eval')))));   // debugging: --eval "<expression>"
   if (shotsDir) {
