@@ -74,6 +74,13 @@ const PROBE = `() => {
     if (r.right > W + 1 && !inScroll(e) && !bad.some(b => b.contains(e))) bad.push(e);
   }
   for (const e of bad.slice(0, 6)) { const r = e.getBoundingClientRect(); out.push([nm(e), 'right edge ' + Math.round(r.right) + ' > ' + W + ' (width ' + Math.round(r.width) + ')']); }
+  // classes/: a one-word class name on a tile is never broken in the middle («Чернокниж/ник»)
+  for (const b of document.querySelectorAll('.cpick b')) {
+    const t = b.textContent.trim(); if (!t || /[\\s-]/.test(t) || !b.getBoundingClientRect().width) continue;
+    const rg = document.createRange(); rg.selectNodeContents(b);
+    const tops = new Set([...rg.getClientRects()].filter(r => r.width > 1).map(r => Math.round(r.top)));
+    if (tops.size > 1) out.push([nm(b), 'one word broken over ' + tops.size + ' lines "' + t + '"']);
+  }
   // the top bar row and its buttons inside the screen (at 320 the row grew to 399 px with the page and pushed the language button off)
   for (const e of document.querySelectorAll('.topbar .in, .topbar .tools > *')) {
     const r = e.getBoundingClientRect(); if (r.width < 1 || !shown(e)) continue;
