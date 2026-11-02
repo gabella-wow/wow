@@ -15,6 +15,7 @@ import build
 from build import CLASSES, LANGS, RACES_PAGE, SITE, page_dir, tr
 import langs
 import live
+import report
 from langs import HREFLANG, LOCALE
 from content.guides import GUIDES, HUB, HUBS
 
@@ -581,6 +582,7 @@ def main():
     meta = page_meta()
     if '--list' in sys.argv:                 # build.py --list / --missing: texts collected, pages were not written
         return
+    data_version = '-'.join(reversed(build.src_date(build.DATA_SRC).split('.')))   # the build version in a report: the date of the game data
     for path, by_lang in meta.items():
         for lang, (title, desc) in by_lang.items():
             if lang != 'ru':
@@ -594,6 +596,7 @@ def main():
             if path.startswith('talents/'):     # a light page: only the styles its elements can use (build.prune_css)
                 html = build.prune_css(html)
             html = build.min_css(html)
+            html = report.inject(html, path, lang, data_version)   # «Нашёл ошибку» on the data pages (report.py)
             open(full, 'w', encoding='utf-8', newline='\n').write(html)
     with open(os.path.join(HERE, 'sitemap.xml'), 'w', encoding='utf-8', newline='\n') as f:
         f.write(sitemap({p: v for p, v in meta.items() if p not in NOINDEX}))
