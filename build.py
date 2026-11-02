@@ -274,7 +274,7 @@ def tabbar(cur=None, home='@@HOME@@', more=False):
     on = ' aria-current="true"'
     tabs = ''.join(f'\n  <a href="{home + p if home or p else "#top"}"{on if p == cur else ""}>'
                    f'<svg class="ico" aria-hidden="true"><use href="#i-{i}"/></svg>{t}</a>' for p, i, t in TABS)
-    return (f'<nav class="tabbar" aria-label="Быстрые разделы">{tabs}\n  <button type="button" class="morebtn"{on if more else ""} aria-haspopup="dialog" aria-controls="moreDlg">'
+    return (f'<nav class="tabbar" aria-label="Быстрые разделы">{tabs}\n  <button type="button" class="morebtn"{on if more else ""} aria-haspopup="dialog" aria-controls="moreDlg" aria-expanded="false">'
             '<svg class="ico" aria-hidden="true"><use href="#i-dots"/></svg>Ещё</button>\n</nav>')
 
 
@@ -731,7 +731,7 @@ SEARCH = {'ru': 'Поиск по сайту', 'en': 'Search the site', 'uk': 'П
 SEARCH_SHORT = {'ru': 'Поиск', 'en': 'Search', 'uk': 'Пошук', 'de': 'Suche', 'fr': 'Recherche', 'es': 'Buscar', 'pt': 'Pesquisar', 'it': 'Cerca', 'pl': 'Szukaj'}
 SEARCH_BTN = ('<button class="iconbtn srchbtn" type="button" aria-label="@@L@@" aria-haspopup="dialog">'
               '<svg class="ico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'
-              '<circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><span class="sl">@@S@@</span><kbd>Ctrl K</kbd></button>\n    ')
+              '<circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><span class="sl">@@S@@</span><kbd aria-hidden="true">Ctrl K</kbd></button>\n    ')
 
 
 def search(html, lang, root):

@@ -229,6 +229,8 @@ function paintBar() { topbar.classList.toggle('solid', !overArt || window.scroll
 window.addEventListener('scroll', () => { if (!barTick) { barTick = true; requestAnimationFrame(paintBar); } }, { passive: true });
 paintBar();
 const moreDlg = $('#moreDlg');
-document.querySelectorAll('.menubtn, .morebtn').forEach(b => b.onclick = () => { if (moreDlg.showModal) moreDlg.showModal(); else moreDlg.setAttribute('open', ''); });
+const moreX = on => document.querySelectorAll('[aria-controls="moreDlg"]').forEach(b => b.setAttribute('aria-expanded', on));
+document.querySelectorAll('.menubtn, .morebtn').forEach(b => b.onclick = () => { if (moreDlg.showModal) moreDlg.showModal(); else moreDlg.setAttribute('open', ''); moreX(true); });
+moreDlg.addEventListener('close', () => moreX(false));
 $('#moreClose').onclick = () => moreDlg.close();
 moreDlg.addEventListener('click', e => { if (e.target === moreDlg || e.target.closest('.toc a')) moreDlg.close(); });
