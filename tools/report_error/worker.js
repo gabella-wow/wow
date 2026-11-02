@@ -39,12 +39,12 @@ export function validate(data) {
   if (typeof text !== 'string' || text.length > MAX_TEXT) return 'text';
   if (!Number.isFinite(ms) || ms < MIN_MS) return 'spam';            // sent by a script the moment the page opened
   if ((text.match(/https?:\/\/|www\.|discord\.gg/gi) || []).length > 1) return 'spam';   // link drops
-  return { url, lang, w, v, text: text.replace(/[\u0000-\u0008\u000B-\u001F\u007F]/g, '').trim() };
+  return { url, lang, w, v, text: text.replace(/[\x00-\x08\x0B-\x1F\x7F]/g, '').trim() };
 }
 
 // The Discord message: plain text, mentions and link previews off, the note in a code block (no markdown tricks).
 export function message(r) {
-  const note = r.text ? '```\n' + r.text.replace(/`/g, 'ˋ') + '\n```' : '(без описания)';
+  const note = r.text ? '```\n' + r.text.replace(/`/g, "'") + '\n```' : '(без описания)';
   return {
     content: `**Ошибка на сайте** · ${r.lang} · ${r.w}px · сборка ${r.v}\n<${r.url}>\n${note}`,
     allowed_mentions: { parse: [] },
