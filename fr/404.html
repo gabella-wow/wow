@@ -894,6 +894,7 @@ ul.verdict li.warn::before { content: "!"; color: var(--horde); left: 7px; }
 .cmp-more[aria-expanded="true"]::before { margin-top: 4px; transform: rotate(-135deg); }
 .cmp-more:hover { color: var(--gold-2); border-color: var(--pline); background: color-mix(in srgb, var(--fg) 5%, transparent); }
 .cmp-more:focus-visible { outline: 2px solid var(--gold-2); outline-offset: 1px; color: var(--gold-2); }
+.cmp-more::after { content: ""; position: absolute; inset: -1px -8px; }   /* inset counts from inside the 1 px border */   /* 44 x 44 to tap, the chevron box stays 30 px wide (X6-05) */
 .cmp-more.fits { visibility: hidden; }   /* the note fits in 3 lines: nothing to show, the place stays (no shift) */
 .rdots { display: grid; grid-template-columns: repeat(3, 34px); gap: 6px; }
 .rdot { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: color-mix(in srgb, var(--fg) 4%, transparent); color: color-mix(in srgb, var(--fg) 22%, transparent); }
@@ -1034,6 +1035,9 @@ dialog.sheet::backdrop { background: rgba(0,0,0,.6); }
   .cmp.cls .cmp-id > span { display: contents; }
   .cmp.cls .cmp-id small { grid-column: 1 / -1; margin: 0; min-height: 2.8em; }
 }
+@container (max-width: 320px) {   /* 320 px screen: the spec names get ~174 px beside the role dots and run to 3 lines in some classes and languages (X6-03) — a box of 3 lines for all, one height */
+  .cmp.cls .cmp-id small { min-height: 4.2em; }
+}
 @media (max-width: 719px) {
   :root { --top: 56px; --fs-h2: var(--fs-28); --fs-hero: var(--fs-40); }
   .wrap, .topbar .in { padding-left: 16px; padding-right: 16px; }
@@ -1152,6 +1156,10 @@ dialog.sheet::backdrop { background: rgba(0,0,0,.6); }
   .bt small { font-size: 11px; letter-spacing: .01em; }   /* «Poradnik WoW Forever», «Guía de WoW Forever» pushed the language button off a 320 px screen */
 }
 @media (min-width: 360px) and (max-width: 479px) { .topbar .iconbtn, .topbar .langbtn { min-width: 44px; min-height: 44px; } .topbar .tools { gap: 4px; } }   /* 360+: header buttons are 44 x 44 */
+@media (max-width: 359px) {   /* 320–359: the buttons stay 38 px wide to the eye, the tap zone is 44 px (3 px each side over the 3 px gap) (X6-05) */
+  .topbar .iconbtn, .topbar .langbtn { position: relative; }
+  .topbar .iconbtn::after, .topbar .langbtn::after { content: ""; display: block; position: absolute; inset: -1px -4px; width: auto; height: auto; margin: 0; border: 0; transform: none; opacity: 0; }
+}
 @media (max-width: 719px) {   /* phone tap targets: 44 px, the look stays */
   .tabs2 [role="tab"], .tabs2 [role="radio"] { min-height: 44px; }
   .crumbs a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 0 10px; margin: -11px -10px; }
@@ -1162,7 +1170,7 @@ dialog.sheet::backdrop { background: rgba(0,0,0,.6); }
   .cd .what a, .gamehint a, .langhint a { padding-block: 14px; }   /* inline links: a 44 px touch area, the line stays */
   .clinks { gap: 0 14px; }
   .clink.two { min-height: 44px; }
-  .clinks { display: grid; width: 100%; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 10px; }
+  .clinks { display: flex; flex-wrap: wrap; width: 100%; gap: 0 16px; }   /* each name at its own width, the next one wraps: two half columns cut the Warlock name (ru, uk, de) at 320–360 px (X6-04) */
   .clink.two small { overflow: hidden; text-overflow: ellipsis; }
 }
 @media (max-width: 374px) { .bt small { display: none; } }   /* 320–374: four buttons (44 px from 360); the subtitle gives way, «Gabella» and the mark stay */
@@ -1212,7 +1220,8 @@ dialog.sheet::backdrop { background: rgba(0,0,0,.6); }
   .cpick a { display: grid; justify-items: center; align-content: center; gap: 4px; min-height: 62px; padding: 5px 4px; border-radius: 10px; background: rgb(5 5 5 / .58); border: 1px solid rgb(241 236 224 / .2); color: var(--cc); text-decoration: none; }
   .cpick a:active { background: rgb(5 5 5 / .8); }
   .cpick .av { --s: 30px; --ring-gap: transparent; box-shadow: 0 0 0 1.5px var(--cc); }
-  .cpick b { max-width: 100%; font-size: var(--fs-13); font-weight: 600; line-height: 1.15; text-align: center; overflow-wrap: anywhere; hyphens: auto; text-shadow: none; }
+  .cpick a { container-type: inline-size; }
+  .cpick b { max-width: 100%; font-size: min(var(--fs-13), 13cqi);   /* 320 px: the tile is ~84 px inside, «Warlock» in uk/ru broke mid-word at 13 px (X6-04) */ font-weight: 600; line-height: 1.15; text-align: center; overflow-wrap: anywhere; hyphens: auto; text-shadow: none; }
 }
 .gjump { display: flex; flex-wrap: wrap; gap: 8px; }   /* a spec sheet: its parts one tap away (build_guides.spec_jump); the contents column takes over from 1024 px */
 .gjump a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; border-radius: 6px; background: rgb(5 5 5 / .58); border: 1px solid rgb(241 236 224 / .2); color: #e8d6a6; font-size: var(--fs-16); font-weight: 500; text-decoration: none; }
@@ -1561,7 +1570,7 @@ a.frc:hover { text-decoration-color: var(--gold); }
   .pgrid { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); align-items: start; }
   .pcol { display: grid; gap: 14px; min-width: 0; }
 }
-.psec { padding: 16px 18px; display: grid; gap: 12px; align-content: start; }
+.psec { padding: 16px 18px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; align-content: start; }   /* one column held to the box: an implicit auto column grew to the widest child at 320 px (X6-01/02) */
 /* stages and my character under the level, radio and timers (journey.src.html) */
 .pjour { margin-top: 24px; }
 .pjour { scroll-margin-top: calc(var(--top) + 16px); }
@@ -1589,21 +1598,21 @@ a.frc:hover { text-decoration-color: var(--gold); }
 #lvIn:focus { outline: 0; border-bottom-color: var(--gold); }
 #lvIn::placeholder { color: var(--muted); }
 /* the character line of the level block: race-true face (none when no picture of that race), class links */
-.pme { display: flex; align-items: center; gap: 12px; }
+.pme { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }   /* a long button label («Charakter zusammenstellen») goes under the face at 320 px, not off the screen */
 .pav { position: relative; flex: none; display: grid; place-items: center; width: 56px; height: 56px; border-radius: 50%; overflow: hidden; border: 1.5px solid var(--cc, var(--pline)); background: color-mix(in srgb, var(--cc, var(--panel-2)) 22%, var(--panel-2)); color: var(--cc, var(--muted)); }
 .pav .ico { width: 26px; height: 26px; }
 .pav img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .pav img[hidden] { display: none; }
-.pme .pwho { flex: 1 1 auto; min-width: 0; display: grid; gap: 2px; }
+.pme .pwho { flex: 1 1 8rem; min-width: 0; display: grid; gap: 2px; }   /* the name stays beside the face; only the button wraps */
 .pme .pwho b { font-size: var(--fs-18); }
 .pme .pwho span { color: var(--muted); font-size: var(--fs-14); }
-.pme .btn { flex: none; min-height: 40px; cursor: pointer; }
+.pme .btn { flex: none; max-width: 100%; min-height: 40px; cursor: pointer; }
 .plinks { display: flex; flex-wrap: wrap; gap: 8px; }
 .plinks[hidden] { display: none; }
 .plinks a { display: inline-flex; align-items: center; min-height: 40px; padding: 0 14px; border: 1px solid var(--pline); border-radius: 999px; color: var(--gold-2); font-size: var(--fs-14); }
 .plinks a:hover { border-color: var(--gold); }
 /* «My class at level N» under the level buttons (JS play renderCard): talents, abilities, gear, dungeons; two columns from 720 px */
-.pcard { display: grid; gap: 10px 22px; padding-top: 10px; border-top: 1px solid var(--pline); }
+.pcard { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px 22px; padding-top: 10px; border-top: 1px solid var(--pline); }
 .pcard[hidden] { display: none; }
 .pcard h3 { margin: 0; font-size: var(--fs-18); }
 .pcard > .pch { grid-column: 1 / -1; }
@@ -1669,7 +1678,7 @@ a.frc:hover { text-decoration-color: var(--gold); }
   .phead::before { background: linear-gradient(180deg, rgb(5 5 5 / .5) 0%, rgb(5 5 5 / 0) 16%, rgb(5 5 5 / 0) calc(var(--top) + 80px), rgb(5 5 5 / .9) calc(var(--top) + 150px), rgb(5 5 5) calc(var(--top) + 190px)); } }
 @media (max-width: 719px) { .pway { padding: 12px 14px; gap: 10px 20px; } .pway .btn { margin-left: 0; } .psec { padding: 14px; } .pform { grid-template-columns: minmax(0, 1fr) 104px; } .pform .pill { grid-column: 1 / -1; justify-content: center; } }
 @media (max-width: 719px) {   /* phone: pills and small links are 44 px to tap */
-  .dbar .pill, .pfac .pill, .ppre .pill, .pform .pill, .pchars .pill, .pform input { min-height: 44px; }
+  .dbar .pill, .pfac .pill, .ppre .pill, .pform .pill, .pchars .pill, .pform input, .pme .btn { min-height: 44px; }
   .pnotify { min-height: 44px; }
   .pmore, .phero a { display: inline-flex; align-items: center; min-height: 44px; }
 }
@@ -1747,9 +1756,9 @@ a.frc:hover { text-decoration-color: var(--gold); }
 <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png?v=00a6a7d9">
 <meta name="apple-mobile-web-app-title" content="Gabella WoW">
 <link rel="stylesheet" href="../assets/radio/radio.css?v=556d7dc63f" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="../assets/search/search.css?v=f60111c18a" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="../assets/search/search.css?v=fde9826c3a" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="../assets/me/me.css?v=f19953bd21" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="../assets/hero/hero.css?v=d902786d1d" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="../assets/hero/hero.css?v=3e4ee26124" media="print" onload="this.media='all'">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -1784,11 +1793,11 @@ a.frc:hover { text-decoration-color: var(--gold); }
   </nav>
   <div class="tools">
     <div class="langsel"><button type="button" class="langbtn" aria-haspopup="true" aria-expanded="false" >FR<span class="sr">, Langue: Français</span></button><ul class="langlist" hidden><li><a href="../" data-lang="ru" hreflang="ru" lang="ru"><span>Русский</span><small>RU</small></a></li><li><a href="../en/" data-lang="en" hreflang="en" lang="en"><span>English</span><small>EN</small></a></li><li><a href="../uk/" data-lang="uk" hreflang="uk" lang="uk"><span>Українська</span><small>UK</small></a></li><li><a href="../de/" data-lang="de" hreflang="de" lang="de"><span>Deutsch</span><small>DE</small></a></li><li><a href="./" data-lang="fr" hreflang="fr" lang="fr" aria-current="page"><span>Français</span><small>FR</small></a></li><li><a href="../es/" data-lang="es" hreflang="es" lang="es"><span>Español</span><small>ES</small></a></li><li><a href="../pt/" data-lang="pt" hreflang="pt-BR" lang="pt-BR"><span>Português (Brasil)</span><small>PT</small></a></li><li><a href="../it/" data-lang="it" hreflang="it" lang="it"><span>Italiano</span><small>IT</small></a></li><li><a href="../pl/" data-lang="pl" hreflang="pl" lang="pl"><span>Polski</span><small>PL</small></a></li></ul></div>
-    <button class="iconbtn srchbtn" type="button" aria-label="Rechercher sur le site" aria-haspopup="dialog"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><span class="sl">Recherche</span><kbd>Ctrl K</kbd></button>
+    <button class="iconbtn srchbtn" type="button" aria-label="Rechercher sur le site" aria-haspopup="dialog"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><span class="sl">Recherche</span><kbd aria-hidden="true">Ctrl K</kbd></button>
     <button class="iconbtn radiobtn" type="button" aria-label="Radio" title="Radio" aria-expanded="false" aria-controls="radioPanel" aria-pressed="false"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg><span class="rdo-eq" aria-hidden="true"><i></i><i></i><i></i></span></button>
     <a class="iconbtn mebtn" href="./profile/" aria-label="Mon profil" title="Mon profil"><svg class="ico" aria-hidden="true"><use href="#i-user"/></svg></a>
     <button class="iconbtn themebtn" type="button" aria-label="Changer de thème" title="Changer de thème"><svg class="ico" aria-hidden="true"><use href="#i-sun"/></svg></button>
-    <button class="iconbtn menubtn" type="button" aria-haspopup="dialog" aria-controls="moreDlg"><svg class="ico" aria-hidden="true"><use href="#i-menu"/></svg><span>Plus</span></button>
+    <button class="iconbtn menubtn" type="button" aria-haspopup="dialog" aria-controls="moreDlg" aria-expanded="false"><svg class="ico" aria-hidden="true"><use href="#i-menu"/></svg><span>Plus</span></button>
   </div>
 </div></header>
 
@@ -1829,7 +1838,7 @@ a.frc:hover { text-decoration-color: var(--gold); }
   <a href="./classes/"><svg class="ico" aria-hidden="true"><use href="#i-users"/></svg>Classes</a>
   <a href="./guides/builds/"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg>Builds</a>
   <a href="./guides/leveling/"><svg class="ico" aria-hidden="true"><use href="#i-up"/></svg>Progression</a>
-  <button type="button" class="morebtn" aria-haspopup="dialog" aria-controls="moreDlg"><svg class="ico" aria-hidden="true"><use href="#i-dots"/></svg>Plus</button>
+  <button type="button" class="morebtn" aria-haspopup="dialog" aria-controls="moreDlg" aria-expanded="false"><svg class="ico" aria-hidden="true"><use href="#i-dots"/></svg>Plus</button>
 </nav>
 
 <dialog class="sheet" id="moreDlg" aria-label="Toutes les sections">
@@ -1862,7 +1871,9 @@ function paintBar() { topbar.classList.toggle('solid', window.scrollY > 24); bar
 window.addEventListener('scroll', () => { if (!barTick) { barTick = true; requestAnimationFrame(paintBar); } }, { passive: true });
 paintBar();
 const dlg = $('#moreDlg');
-document.querySelectorAll('.menubtn, .morebtn').forEach(b => b.onclick = () => { if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', ''); });
+const moreX = on => document.querySelectorAll('[aria-controls="moreDlg"]').forEach(b => b.setAttribute('aria-expanded', on));
+document.querySelectorAll('.menubtn, .morebtn').forEach(b => b.onclick = () => { if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', ''); moreX(true); });
+dlg.addEventListener('close', () => moreX(false));
 $('#moreClose').onclick = () => dlg.close();
 dlg.addEventListener('click', e => { if (e.target === dlg || e.target.closest('.toc a')) dlg.close(); });
 
@@ -1979,8 +1990,8 @@ addEventListener('beforeinstallprompt', e => {
 });
 </script>
 <script src="../assets/radio/radio.js?v=556d7dc63f" data-root="../" defer></script>
-<script src="../assets/search/search.js?v=f60111c18a" data-root="../" defer></script>
+<script src="../assets/search/search.js?v=fde9826c3a" data-root="../" defer></script>
 <script src="../assets/me/me.js?v=f19953bd21" data-root="../" data-home="./" data-lang="fr" data-ach="0" data-teaser="" data-close="Fermer" data-page="404" data-look="2" defer></script>
-<script src="../assets/hero/hero.js?v=d902786d1d" data-root="../" data-home="./" data-data="../assets/hero/fr.json?v=d902786d1d" defer></script>
+<script src="../assets/hero/hero.js?v=3e4ee26124" data-root="../" data-home="./" data-data="../assets/hero/fr.json?v=3e4ee26124" defer></script>
 </body>
 </html>

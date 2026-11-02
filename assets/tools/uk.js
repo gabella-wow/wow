@@ -348,7 +348,7 @@ $('#rFill').onclick = () => {
   R.s.forEach(p => p && used[p.role]++);
   R.s = R.s.map((p, i) => p || newPlayer(i, used)); R.moving = -1; renderRaid();
 };
-function myHero() {   // the hero of this browser (assets/hero/hero.js?v=d902786d1d, localStorage gabella-wf-me)
+function myHero() {   // the hero of this browser (assets/hero/hero.js?v=3e4ee26124, localStorage gabella-wf-me)
   let h = null; try { h = JSON.parse(localStorage.getItem('gabella-wf-me')); } catch (e) {}
   return h && RC[h.race] && CL[h.cls] && RC[h.race].can[h.cls] ? h : null;
 }
@@ -506,7 +506,9 @@ function paintBar() { topbar.classList.toggle('solid', window.scrollY > 24); bar
 window.addEventListener('scroll', () => { if (!barTick) { barTick = true; requestAnimationFrame(paintBar); } }, { passive: true });
 paintBar();
 const dlg = $('#moreDlg');
-document.querySelectorAll('.menubtn, .morebtn').forEach(b => b.onclick = () => { if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', ''); });
+const moreX = on => document.querySelectorAll('[aria-controls="moreDlg"]').forEach(b => b.setAttribute('aria-expanded', on));
+document.querySelectorAll('.menubtn, .morebtn').forEach(b => b.onclick = () => { if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', ''); moreX(true); });
+dlg.addEventListener('close', () => moreX(false));
 $('#moreClose').onclick = () => dlg.close();
 dlg.addEventListener('click', e => { if (e.target === dlg || e.target.closest('.toc a')) dlg.close(); });
 
