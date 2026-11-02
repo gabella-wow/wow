@@ -181,104 +181,6 @@ function renderRaceRef() {
 const $ = s => document.querySelector(s);
 function esc(s) { return String(s).replace(/[&<>"]/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m])); }
 const ROOT = './';
-function raceName(r) { return r.name || r.n; }
-/* Class roster: tall portraits, the hovered or focused one expands */
-const DESC = {
-  warrior: 'Латы, ярость и первый ряд. Держит удар как танк или рубит двуручным оружием.',
-  paladin: 'Святой воин в латах: лечит, танкует и бьёт молотом. Теперь есть и у Орды.',
-  hunter: 'Лук, ловушки и верный зверь рядом. Один из самых быстрых классов в прокачке.',
-  rogue: 'Яды, клинки и тень. Чистый урон из засады и контроль врагов.',
-  priest: 'Свет и Тьма в одних руках. Главный лекарь группы или тёмный заклинатель.',
-  shaman: 'Тотемы и стихии: лечит, бьёт молнией или оружием. Теперь есть и у Альянса.',
-  mage: 'Огонь, лёд и тайная магия. Порталы, еда и вода для группы.',
-  warlock: 'Проклятия, демоны и огонь. Урон со временем и свой демон в помощь.',
-  druid: 'Медведь, кошка, сова или лекарь: все три роли на одном персонаже.'
-};
-const artSet = (id, ext) => [360, 600, 896].map(w => `${ROOT}assets/art/${id}-${w}.${ext}${PV} ${w}w`).join(', ');
-/* A class portrait of the reader's side: the best race of that side (build.portraits), swapped by GabellaPor when the side changes */
-const porPic = id => { const P = window.GabellaPor, u = s => (P ? P.url(s) : s.replace(/[{}]/g, '')), t = `{${id}}`, img = `${ROOT}assets/art/${t}-600.webp${PV}`;
-  return `<picture>${['avif', 'webp'].map(e => `<source type="image/${e}" srcset="${u(artSet(t, e))}" data-por-srcset="${artSet(t, e)}" sizes="${CLS_SIZES}">`).join('')}<img src="${u(img)}" data-por-src="${img}" width="896" height="1200" alt="" loading="lazy" decoding="async"></picture>`; };
-const ART_SIZES = '(max-width: 719px) 78vw, 440px';
-const CLS_SIZES = '(max-width: 1023px) 34vw, 440px';   // class portraits are grid cells on a phone and a tablet
-function renderRoster() {
-  $('#roster').innerHTML = CLASSES.map((c, i) => `<a class="hc${i === 0 ? ' on' : ''}" href="classes/${c.id}/" style="--cc:${CCOL[c.id]}">
-    ${porPic(c.id)}
-    <span class="vn" aria-hidden="true">${esc(c.n)}</span>
-    <span class="info"><b>${esc(c.n)}</b><span class="roles">${c.roles.filter(r => !r.endsWith('?')).map(r => `<span>${ri(r)}${ROLE_RU[r]}</span>`).join('')}</span><span class="d">${esc(DESC[c.id])}</span><span class="more">Подробнее о классе</span></span>
-  </a>`).join('');
-}
-renderRoster();
-/* Race roster: one row of portraits per faction, links to the race pages */
-function renderPeoples() {
-  [['alliance', '#rosterA'], ['horde', '#rosterH']].forEach(([f, sel]) => {
-    $(sel).innerHTML = RACES.filter(r => r.f === f).map((r, i) => `<a class="hc${i === 0 ? ' on' : ''}" href="races/${RSLUG[r.id]}/" style="--cc:var(--${f})">
-    <picture><source type="image/avif" srcset="${artSet(RSLUG[r.id], 'avif')}" sizes="${ART_SIZES}"><source type="image/webp" srcset="${artSet(RSLUG[r.id], 'webp')}" sizes="${ART_SIZES}"><img src="${ROOT}assets/art/${RSLUG[r.id]}-600.webp${PV}" width="896" height="1200" alt="" loading="lazy" decoding="async"></picture>
-    <span class="vn" aria-hidden="true">${esc(raceName(r))}</span>
-    <span class="info"><b>${esc(raceName(r))}</b>${r.paid ? '<span class="tag paid">платная</span>' : ''}<span class="d">${esc(RLEAD[r.id])}</span><span class="more">Подробнее о расе</span></span>
-  </a>`).join('');
-  });
-}
-renderPeoples();
-/* Card titles fit the card (CSS: font-size = room / --k). --k is the width in em of the longest word of the name, or of the whole vertical label, measured in the real font; the words are never broken. */
-function fitCards() {
-  const m = document.createElement('span');
-  m.style.cssText = 'position:absolute;left:-9999px;top:0;visibility:hidden;white-space:pre;line-height:1;font-size:100px';
-  document.body.append(m);
-  const k = (t, v) => { m.textContent = t; m.style.writingMode = v ? 'vertical-rl' : 'horizontal-tb'; const r = m.getBoundingClientRect(); return (v ? r.height : r.width) / 100; };   // vertical labels are measured vertically: ’ and the like stand upright there
-  const ks = new Map();   // one --k per roster and kind of label: the widest name sets the size of all, so no name is set smaller than the rest
-  document.querySelectorAll('.hc .info b, .hc .vn').forEach(el => {
-    const cs = getComputedStyle(el), whole = el.classList.contains('vn');
-    m.style.fontFamily = cs.fontFamily; m.style.fontWeight = cs.fontWeight;
-    m.style.letterSpacing = (parseFloat(cs.letterSpacing) || 0) / parseFloat(cs.fontSize) * 100 + 'px';
-    const parts = whole ? [el.textContent] : el.textContent.match(/[^\s-]+-?/g) || [''];
-    const g = el.closest('.roster, .rr') || document.body, key = g.dataset.fk || (g.dataset.fk = 'r' + ks.size + Math.random().toString(36).slice(2, 6));
-    const id = key + whole; ks.set(id, Math.max(ks.get(id) || 0, ...parts.map(t => k(t, whole))));
-    el.dataset.fid = id;
-  });
-  document.querySelectorAll('[data-fid]').forEach(el => el.style.setProperty('--k', ks.get(el.dataset.fid).toFixed(3)));
-  m.remove();
-}
-fitCards();
-if (document.fonts) { document.fonts.ready.then(fitCards); document.fonts.addEventListener('loadingdone', fitCards); }
-function activate(card) { if (!card || card.classList.contains('on')) return; card.parentElement.querySelectorAll('.hc.on').forEach(x => x.classList.remove('on')); card.classList.add('on'); }
-document.querySelectorAll('.roster').forEach(ro => {
-  ro.addEventListener('mouseover', e => activate(e.target.closest('.hc')));
-  ro.addEventListener('focusin', e => activate(e.target.closest('.hc')));
-});
-
-/* Side switch of the class portraits: GabellaPor is the one source (a hero's side, else a side chosen here, else the time of day) */
-const SIDESW = $('#sidesw'), SIDEBTN = [...SIDESW.querySelectorAll('[role="radio"]')];
-function syncSide() {
-  const f = window.GabellaPor ? GabellaPor.fac() : 'alliance';
-  SIDEBTN.forEach(b => { const on = b.dataset.f === f; b.setAttribute('aria-checked', on); b.tabIndex = on ? 0 : -1; });
-}
-if (window.GabellaPor) {
-  SIDESW.classList.add('on'); syncSide();
-  ['gabella-side', 'gabella-me'].forEach(n => addEventListener(n, syncSide)); document.addEventListener('gabella:tod', syncSide);
-  SIDEBTN.forEach((b, i) => {
-    b.addEventListener('click', () => { GabellaPor.set(b.dataset.f); syncSide(); });
-    b.addEventListener('keydown', e => {
-      const k = { ArrowRight: i + 1, ArrowDown: i + 1, ArrowLeft: i - 1, ArrowUp: i - 1, Home: 0, End: 1 }[e.key];
-      if (k === undefined) return;
-      e.preventDefault(); const n = SIDEBTN[(k + 2) % 2]; GabellaPor.set(n.dataset.f); syncSide(); n.focus();
-    });
-  });
-}
-/* Classes / races: one block, two tabs (arrow keys, Home, End); #peoples (menu, old links) opens the races */
-const TABS = [...document.querySelectorAll('#classes [role="tab"]')];
-function showTab(t, focus) {
-  TABS.forEach(x => { const on = x === t; x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1; document.getElementById(x.getAttribute('aria-controls')).hidden = !on; });
-  SIDESW.hidden = t !== TABS[0];   // the races show both sides: no switch there
-  if (focus) t.focus();
-}
-TABS.forEach((t, i) => {
-  t.addEventListener('click', () => showTab(t));
-  t.addEventListener('keydown', e => {
-    const k = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: TABS.length - 1 }[e.key];
-    if (k === undefined) return;
-    e.preventDefault(); showTab(TABS[(k + TABS.length) % TABS.length], true);
-  });
-});
 document.addEventListener('click', e => {
   const a = e.target.closest('[data-q]');
   if (!a || e.ctrlKey || e.metaKey) return;
@@ -325,6 +227,5 @@ document.addEventListener('click', e => {
     if (all.some(x => wh.includes(x) || bz.includes(x))) row.innerHTML = all.map(x => x.html).join('');
   });
 })();
-function hashTab() { if (location.hash === '#peoples') { showTab(TABS[1]); document.getElementById('classes').scrollIntoView(); } }
-addEventListener('hashchange', hashTab);
-hashTab();
+/* #peoples: the races block of the old home (old links) lives on the races page now */
+if (location.hash === '#peoples') location.replace('races/');
