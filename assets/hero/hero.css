@@ -57,7 +57,8 @@ dialog.hsheet::backdrop { background: rgba(0,0,0,.6); }
   .mh-face { width: 64px; height: 64px; }
   .mh-t h2 { font-size: var(--fs-22); }
   .mh-ch { justify-self: start; padding: 11px 8px; margin: -7px -8px; }   /* «Change»: 44 px to tap, the line stays 30 px (X6-05) */
-  .mh-f > a { justify-self: start; padding-block: 11px; margin-block: -11px; }   /* «Day 1: n of 23»: a 44 px touch area, the list keeps its rhythm */
+  .mh-f > a { justify-self: start; padding-block: 11px; margin-block: -11px; }
+  .mh-f span a { padding-block: 13px; }   /* the inline link at the end of the professions line: a taller touch area, the line stays */   /* «Day 1: n of 23»: a 44 px touch area, the list keeps its rhythm */
   .mh-b { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .mh-b .btn { white-space: normal; text-align: center; }
 }

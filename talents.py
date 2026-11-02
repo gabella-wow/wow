@@ -726,7 +726,7 @@ CSS = """/* Talent trees (talents.py): three trees in a row when there is room, 
 .tt-rib li { display: grid; grid-template-columns: auto auto; grid-template-rows: auto auto; column-gap: 6px; align-items: center; }
 .tt-rib span { grid-column: 1 / -1; font-size: var(--fs-13); color: var(--gold-2); font-variant-numeric: tabular-nums; white-space: nowrap; }
 .tt-rib .tt-t { --s: 36px; }
-.tt-rib .tt-t::after { content: ""; position: absolute; inset: -4px; }   /* 44 x 44 to tap, the icon stays 36 px; the ribbon gaps are 12/18 px, no zone overlaps another (X6-05) */
+.tt-rib .tt-t::after { content: ""; position: absolute; inset: -5px; }   /* 44 x 44 to tap, the icon stays 36 px; the ribbon gaps are 12/18 px, no zone overlaps another (X6-05) */
 .tt-rib .tt-fr { grid-column: 1 / -1; font-size: var(--fs-13); font-style: normal; color: var(--muted); white-space: nowrap; }
 .tt-rib b { font-family: var(--font-body); font-size: var(--fs-14); font-weight: 600; line-height: 1; letter-spacing: 0; color: var(--muted); font-variant-numeric: tabular-nums; }
 .tt-ed[hidden], .tt-ec[hidden], .tt.ed .tt-bs, .tt.ed .tt-ow { display: none; }
