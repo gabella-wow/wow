@@ -20,6 +20,7 @@ HERE = build.HERE
 OUT = os.path.join(HERE, 'assets', 'search')
 SKIP = {'top', 'more', 'others'}          # шапка страницы и плитки «Другие …» — не разделы
 TEXT_MAX = 1500                            # хватает на совпадения и выдержку, индекс языка ~150 КБ
+CLASS_ORDER = ['warrior', 'paladin', 'hunter', 'rogue', 'priest', 'shaman', 'mage', 'warlock', 'druid']
 
 
 BLOCK = re.compile(r'<br\b[^>]*>|</?(?:p|li|ul|ol|h[1-6]|div|dl|dt|dd|tr|td|th|table|section|header|footer|nav|figure|figcaption|summary|details|article|aside|blockquote)\b[^>]*>')
@@ -85,12 +86,27 @@ def dungeons(lang):
     return [(n, e[0], f'{a}–{b}' if a != b else str(a), z) for (n, a, b, z), e in zip(rows(lang), en)]
 
 
+def spec_gear(html, path, lang):
+    """The gear of a spec («Экипировка 13–30» on guides/spec-*): the one part of a spec page that no builds or leveling page
+    has. One entry, no text: the item names would put 27 pages under every word of the site."""
+    gear = re.search(r'<section\b[^>]*\sid="gear"[^>]*>\s*<h2[^>]*>(.*?)</h2>', html, re.S)
+    h1 = re.search(r'<h1[^>]*>(.*?)</h1>', html, re.S)
+    return [[text(gear[1]), text(h1[1]), page_dir(lang, path) + '#gear', 1, '', '']] if gear and h1 else []
+
+
 def index(lang, meta):
-    items = []
-    for path in (p for p in meta if lang in meta[p] and not p.startswith('guides/spec-')):   # spec cheat sheets repeat the builds and leveling pages: search shows those
+    items, gear = [], []
+    for path in (p for p in meta if lang in meta[p]):
         html = open(os.path.join(HERE, page_dir(lang, path), 'index.html'), encoding='utf-8').read()
+        if path.startswith('guides/spec-'):   # spec cheat sheets repeat the builds and leveling pages: search shows those, and their gear
+            gear += [(path.split('-')[1], e) for e in spec_gear(html, path, lang)]
+            continue
         cr = seo.crumbs(path, lang)
         items += page_entries(html, path, lang, cr[-2][0] if cr else '')
+    title = {it[2]: it[0] for it in items if it[3] == 0}
+    for cls, e in sorted(gear, key=lambda g: CLASS_ORDER.index(g[0])):   # in the order of the class list; the key is the builds page
+        e[4] = title.get(page_dir(lang, f'guides/builds-{cls}/'), '')    # title («Билды Мага»): «экипировка мага» is the mage, not «Темная магия»
+        items.append(e)
     dg = next(i for i in items if i[3] == 0 and i[2] == page_dir(lang, 'guides/dungeons/'))
     own = {n: page_dir(lang, f'guides/dungeons/{p["slug"]}/') for n, p in BY_NAME.items()}   # a dungeon with its own page: the result leads there
     for name, en, lv, zone in dungeons(lang):
@@ -194,6 +210,23 @@ SLANG = {
            'lock': 'warlock', 'heal': 'healer', 'uzdrowiciel': 'healer', 'lochy': 'dungeony', 'instancja': 'dungeony',
            'tierlist': 'tier lista', 'lvl': 'poziom', 'expienie': 'levelowanie', 'zawód': 'profesje', 'zawody': 'profesje'},
 }
+# экипировка, как о ней спрашивают («что надеть», «шмот», «бис») -> заголовок блока экипировки на страницах спеков этого языка
+# («Экипировка 13–30»): «что надеть магу» ведёт в экипировку спеков мага. BiS для 60-го нет, блок честно подписан 13–30
+GEAR = {
+    'ru': ('экипировка', 'снаряжение|снаряга|экип|шмот|шмотки|шмотка|шмоток|шмотье|бис|bis|гир|одежда|вещи|надеть|одеть|надевать|обмундирование'),
+    'uk': ('екіпірування', 'екіпіровка|спорядження|екіп|шмот|шмотки|бис|біс|bis|гір|одяг|речі|вдягнути|одягнути|надягти'),
+    'en': ('gear', 'equipment|bis|best in slot|wear|outfit|items'),
+    'de': ('ausrüstung', 'gear|bis|equipment|anziehen|items'),
+    'fr': ('équipement', 'gear|bis|stuff|porter'),
+    'es': ('equipo', 'gear|bis|equipamiento|ponerse|vestir'),
+    'pt': ('equipamento', 'gear|bis|equipar|vestir|usar|itens'),
+    'it': ('equipaggiamento', 'gear|bis|equip|indossare'),
+    'pl': ('ekwipunek', 'gear|bis|eq|sprzęt|ubrać|założyć'),
+}
+# «таланты мага» — это билд мага (ключевые таланты по спекам), а не пустой калькулятор: слово «таланты» находит и страницы билдов
+TALENTS = {'ru': ('билды', 'талант таланты'), 'uk': ('білди', 'талант таланти'), 'en': ('builds', 'talent talents'),
+           'de': ('builds', 'talent talente'), 'fr': ('builds', 'talent talents'), 'es': ('builds', 'talento talentos'),
+           'pt': ('builds', 'talento talentos'), 'it': ('build', 'talento talenti'), 'pl': ('buildy', 'talent talenty')}
 # служебные слова: не обязаны совпадать (вопрос «какой класс выбрать» ищет «класс выбрать»)
 STOP = {
     'ru': 'и в во на с со для по о об от до за из к у как какой какая какое какие каким какую ли есть не что такое такой такая это мне я а но же бы или где когда кто кем чем сколько скока можно нужно нужен нужна стоит лучше',
@@ -401,6 +434,10 @@ def aliases(lang, idx):
             add(alias, local)
     for alias, local in SLANG[lang].items():
         add(alias, local)
+    for table, sep in ((GEAR, '|'), (TALENTS, ' ')):
+        local, words = table[lang]
+        for alias in words.split(sep):
+            add(alias, local)
     return out
 
 

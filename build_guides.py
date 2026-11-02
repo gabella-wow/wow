@@ -628,6 +628,7 @@ const nearLvl = (d, lv) => lv >= d[1] - 3 && lv <= d[2] + 3;
 const HORDE = ['orc', 'undead', 'tauren', 'troll', 'skyH'];
 let dgLvl = 0, dgFac = '';
 try { const m = JSON.parse(localStorage.getItem('gabella-wf-me')) || {}; dgLvl = +m.lvl || 0; dgFac = m.race ? (HORDE.includes(m.race) ? 'horde' : 'alliance') : ''; } catch (e) {}
+{ const q = +(location.search.match(/[?&]lv=(\d+)/) || [])[1]; if (q >= 1 && q <= 60) dgLvl = q; }   /* ?lv=30 (the home search example «подземелья 30»): that level, the hero stays as saved */
 let dgMode = dgLvl ? 'mine' : 'all';
 const lvIn = $('#dgLvl');
 function renderDg() {

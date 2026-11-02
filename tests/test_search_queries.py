@@ -176,6 +176,21 @@ SPEC = [
     ('de', 'prot krieger', SP('warrior', 'protection')), ('es', 'prot guerrero', SP('warrior', 'protection')),
 ]
 DIR2 = [('ru', 'вор как качать', LV('rogue')), ('ru', 'когда релиз вов форевер', START), ('en', 'dungeon list', DUNG)]
+# экипировка (разбор ясности 02.11, п.3): «что надеть», «шмот», «бис» -> блок «Экипировка 13–30» страницы спека; с классом — спека
+# этого класса; «таланты мага» -> билд мага, а не калькулятор (п.2) — тут нужное должно быть ПЕРВЫМ (FIRST)
+SPECS_ALL = sorted(d for d in os.listdir(os.path.join(ROOT, 'guides')) if d.startswith('spec-'))
+GEAR = lambda c='': [f'guides/{d}/#gear' for d in SPECS_ALL if d.startswith(f'spec-{c}')]
+GEARQ = [
+    ('ru', 'экипировка', GEAR()), ('ru', 'что надеть', GEAR()), ('ru', 'шмот', GEAR()), ('ru', 'бис', GEAR()),
+    ('ru', 'экипировка мага', GEAR('mage')), ('ru', 'что надеть воину', GEAR('warrior')), ('ru', 'шмот на шамана', GEAR('shaman')),
+    ('ru', 'бис рога', GEAR('rogue')), ('ru', 'таланты мага', BD('mage')),
+    ('uk', 'екіпірування', GEAR()), ('uk', 'що вдягнути', GEAR()), ('uk', 'екіпіровка мага', GEAR('mage')), ('uk', 'таланти мага', BD('mage')),
+    ('en', 'gear', GEAR()), ('en', 'what to wear', GEAR()), ('en', 'bis', GEAR()), ('en', 'mage gear', GEAR('mage')),
+    ('en', 'best in slot warrior', GEAR('warrior')), ('en', 'mage talents', BD('mage')),
+    ('de', 'ausrüstung', GEAR()), ('de', 'was anziehen', GEAR()), ('de', 'magier ausrüstung', GEAR('mage')), ('de', 'magier talente', BD('mage')),
+    ('fr', 'équipement', GEAR()), ('fr', 'équipement mage', GEAR('mage')), ('es', 'equipo mago', GEAR('mage')),
+    ('pt', 'equipamento', GEAR()), ('it', 'equipaggiamento', GEAR()), ('pl', 'ekwipunek', GEAR()), ('pl', 'mage talenty', BD('mage')),
+]
 KNOWN = set()   # запросы, которые пока не находят нужное: {(lang, query)}
 
 
@@ -196,17 +211,18 @@ def run(js=os.path.join(ROOT, 'assets', 'search', 'engine.js'), index=os.path.jo
         print('SKIP: нет node')
         sys.exit(0)
     r = subprocess.run([node, os.path.join(ROOT, 'tests', 'search_eval.js'), js, index],
-                       input=json.dumps([[l, q] for l, q, _ in Q + HOLD + NEW + DIR + BLIND + BLIND2 + DIR2 + SPEC]), capture_output=True, text=True, encoding='utf-8', check=True)
+                       input=json.dumps([[l, q] for l, q, _ in Q + HOLD + NEW + DIR + BLIND + BLIND2 + DIR2 + SPEC + GEARQ]), capture_output=True, text=True, encoding='utf-8', check=True)
     return json.loads(r.stdout)
 
 
 if __name__ == '__main__':
     res = run(*[a for a in sys.argv[1:] if not a.startswith('-')])   # [search.js [index dir]]: another engine, e.g. the old one
-    sets = [('набор', Q), ('отложенный', HOLD), ('новый', NEW), ('директор', DIR), ('слепой', BLIND), ('слепой-2', BLIND2), ('директор-2', DIR2), ('спеки', SPEC)]
+    sets = [('набор', Q), ('отложенный', HOLD), ('новый', NEW), ('директор', DIR), ('слепой', BLIND), ('слепой-2', BLIND2), ('директор-2', DIR2), ('спеки', SPEC), ('экипировка', GEARQ)]
     allq = [q for _, qs in sets for q in qs]
     good, bad, first = [], [], 0
     for (lang, q, want), urls in zip(allq, res):
-        (good if any(ok(u, lang, want) for u in urls[:3]) else bad).append((lang, q, urls[:3]))
+        top = urls[:1] if (lang, q, want) in GEARQ else urls[:3]   # the gear set: the answer first
+        (good if any(ok(u, lang, want) for u in top) else bad).append((lang, q, urls[:3]))
         first += bool(urls) and ok(urls[0], lang, want)
     if '-v' in sys.argv:
         for x in good:

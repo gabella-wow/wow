@@ -289,6 +289,23 @@ document.addEventListener('click', e => {
   const i = document.querySelector('dialog.srch input');
   if (i && q) { i.value = q; i.dispatchEvent(new Event('input')); }
 });
+/* the search field: its index loads when the field comes into view or the pointer or focus reaches it, so that a tap
+   opens the answers, not the loading line (phones have no hover) */
+(() => {
+  const f = document.querySelector('.hsrch');
+  if (!f) return;
+  let state = 0;   // 0 waiting, 1 waiting for search.js (it comes after this script), 2 loading
+  const warm = () => {
+    if (state === 2) return;
+    if (globalThis.gabellaFind) { state = 2; globalThis.gabellaFind(''); return; }
+    if (state === 0) { state = 1; let n = 0; const t = setInterval(() => { if (globalThis.gabellaFind || ++n > 40) { clearInterval(t); state = 0; if (globalThis.gabellaFind) warm(); } }, 250); }
+  };
+  ['pointerenter', 'pointerdown', 'focus'].forEach(t => f.addEventListener(t, warm, { passive: true }));
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => { if (es.some(x => x.isIntersecting)) { warm(); io.disconnect(); } });
+    io.observe(f);
+  }
+})();
 (() => {
   const row = document.querySelector('.hnews .row3');
   if (!row || !row.dataset.feed) return;

@@ -137,13 +137,13 @@ globalThis.gabellaSearchEngine = (LANG, d) => {
     const out = [{ toks: [t], w: 1 }];
     const more = (k, w) => { for (const x of alias[k] || alias[stem(k)] || []) out.push({ toks: x, w }); };   // "рогу" -> «рога»
     more(t, 0.9);
-    const tr = translit(t), base = [[t, 1]];
+    const tr = translit(t), base = [[t, 1]], named = alias[t] || alias[stem(t)];   // a word with an alias is no typo: "надеть" is not "nadet" ~ "nachtelf"
     if (tr !== t) { base.push([tr, 0.85]); out.push({ toks: [tr], w: 0.85 }); more(tr, 0.8); }
     for (const [x, w] of base) {
       const s = stem(x), c = cut(x);
       if (s !== x) out.push({ toks: [s], w: w * 0.9 });   // another form of the same word
       if (c !== x && c !== s) out.push({ toks: [c], w: w * 0.7 });
-      if (!alias[x]) for (const f of fuzzy(x, x !== t)) { out.push({ toks: [f], w: w * 0.7 }); more(f, w * 0.65); }
+      if (!alias[x] && !named) for (const f of fuzzy(x, x !== t)) { out.push({ toks: [f], w: w * 0.7 }); more(f, w * 0.65); }
     }
     return out;
   }
@@ -173,6 +173,7 @@ globalThis.gabellaSearchEngine = (LANG, d) => {
         for (const t of a.toks) { const [v, x] = hit(it, t); if (!v) { sum = 0; break; } sum += v; n = n || x; }
         let v = sum / a.toks.length * a.w;
         if (v && T.length === 1 && a.toks.join(' ') === it.ntw) v += 20 * a.w;   // the name itself: "warrior" -> «Воин», not «Прокачка Воина»
+        else if (v && T.length === 1 && a.w < 1 && it.ntw.startsWith(a.toks.join(' ') + ' ')) v += 12 * a.w;   // another word for the start of the name, as a query that starts the name: "bis" -> «Gear 13–30» before «Honor gear»
         if (v > best) { best = v; nm = n; }
       }
       if (best) { s += best; named = named || nm; } else miss++;

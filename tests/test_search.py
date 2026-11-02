@@ -50,5 +50,18 @@ for p in pages:
 if len(versions) > 1:
     problems.append(f'разные версии поиска: {versions}')
 
+# the examples under the home search field are answers, not the search again: real pages, the mage builds first (clarity audit 02.11, p.2)
+for lang in LANGS:
+    home = os.path.join(ROOT, build.page_dir(lang), 'index.html')
+    hq = re.search(r'<p class="hq">(.*?)</p>', open(home, encoding='utf-8').read(), re.S)
+    hrefs = re.findall(r'<a href="([^"]+)"', hq[1]) if hq else []
+    if hrefs[:1] != ['guides/builds-mage/'] or len(hrefs) != 3 or 'data-q' in hq[1]:
+        problems.append(f'{lang}: примеры поиска на главной {hrefs}')
+    for h in hrefs:
+        path, _, anchor = h.split('?')[0].partition('#')
+        page = os.path.join(os.path.dirname(home), path, 'index.html')
+        if not os.path.exists(page) or anchor and f' id="{anchor}"' not in open(page, encoding='utf-8').read():
+            problems.append(f'{lang}: пример поиска ведёт в никуда {h}')
+
 assert not problems, '\n'.join(problems[:20])
 print('OK', len(LANGS), 'languages,', sizes['ru'], 'entries,', len(pages), 'pages')
