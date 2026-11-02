@@ -186,6 +186,7 @@ const STATES = [
   { name: 'more', click: '.menubtn, .morebtn', scope: '#moreDlg' },
   { name: 'radio', click: '.radiobtn', scope: '#radioPanel' },
   { name: 'lang', click: '.langbtn', scope: '.langsel' },
+  { name: 'report', click: '.rep-b', scope: '#repDlg' },   // «Нашёл ошибку» dialog (report.py)
 ];
 const found = [];
 let done = 0;
