@@ -606,6 +606,9 @@ ul.dlist li.mine { background: var(--seg-on); }
 @container (max-width: 739px) { .spps:not(.cls9) .spp { grid-template-columns: 32px minmax(0, 1fr); gap: 10px; padding: 8px 10px; } .spps:not(.cls9) .spp-i { width: 32px; height: 32px; } .spps:not(.cls9) .spp-t b { font-size: .9375rem; } }
 @container (max-width: 672px) { .spps:not(.cls9) .spp { grid-template-columns: minmax(0, 1fr); align-content: center; justify-items: start; gap: 8px; padding: 10px 12px; } }
 @container (max-width: 599px) { .spps:not(.cls9) { grid-template-columns: minmax(0, 1fr); grid-auto-rows: auto; } .spps:not(.cls9) .spp { grid-template-columns: 36px minmax(0, 1fr); align-content: normal; justify-items: stretch; gap: 12px; padding: 8px 12px; } }
+/* Home: three plates of a class side by side on a phone too, icon over the name, no role line (the icon carries the role):
+   nine classes in about one screen instead of three */
+@container (max-width: 599px) { .sppm-home .spps:not(.cls9) { grid-template-columns: repeat(3, minmax(0, 1fr)); grid-auto-rows: 1fr; gap: 6px; } .sppm-home .spps:not(.cls9) .spp { grid-template-columns: minmax(0, 1fr); justify-items: center; align-content: center; text-align: center; gap: 4px; min-height: 48px; padding: 8px 4px; } .sppm-home .spps:not(.cls9) .spp-i { width: 28px; height: 28px; } .sppm-home .spps:not(.cls9) .spp-t { width: 100%; } .sppm-home .spps:not(.cls9) .spp-t b { font-size: .8125rem; line-height: 1.25; hyphens: manual; overflow-wrap: anywhere; } .sppm-home .spp-t small { display: none; } }
 .sbtns { display: flex; flex-wrap: wrap; gap: 10px; }
 .more-l { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font-weight: 600; font-size: var(--fs-16); }
 .more-ls { display: flex; flex-wrap: wrap; gap: 0 28px; }
@@ -1261,30 +1264,10 @@ dialog.sheet::backdrop { background: rgba(0,0,0,.6); }
 </section>
 <section class="wrap" id="myHome" aria-live="polite" hidden></section>
 
-<section class="block wrap" id="classes">
-  <div class="sec-head"><div class="row"><h2>Кем играть</h2><div class="tabctl"><div class="tabs2" role="tablist" aria-label="Кем играть"><button type="button" role="tab" id="tabC" aria-controls="pCls" aria-selected="true">Классы</button><button type="button" role="tab" id="tabR" aria-controls="peoples" aria-selected="false" tabindex="-1">Расы</button></div><div class="tabs2 sidesw" id="sidesw" role="radiogroup" aria-label="Фракция"><button type="button" role="radio" data-f="alliance" aria-checked="false" tabindex="-1">Альянс</button><button type="button" role="radio" data-f="horde" aria-checked="false" tabindex="-1">Орда</button></div></div></div></div>
-  <div class="tpanel" id="pCls" role="tabpanel" aria-labelledby="tabC">
-    <p class="tp">Нажмите на портрет, чтобы открыть страницу класса: специализации, расы и что нового в Forever.</p>
-    <div class="roster" id="roster"></div>
-    <p class="swipe">Листайте портреты в сторону.</p>
-    <p><a class="more-l" href="classes/">Сравнить все классы<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
-  </div>
-  <div class="tpanel" id="peoples" role="tabpanel" aria-labelledby="tabR" hidden>
-    <p class="tp">По пять рас у каждой фракции, Скайборн есть у обеих. Нажмите на портрет, чтобы открыть страницу расы: способности, классы и история.</p>
-    <div class="peoples">
-      <div class="pfac alliance"><h3>Альянс</h3><div class="roster rr" id="rosterA"></div></div>
-      <div class="pfac horde"><h3>Орда</h3><div class="roster rr" id="rosterH"></div></div>
-    </div>
-    <p class="swipe">Листайте портреты в сторону.</p>
-    <p><a class="more-l" href="races/">Сравнить все расы<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
-  </div>
-</section>
-
-<section class="block wrap" id="specs" aria-labelledby="hSpecs">
+<section class="block wrap" id="classes" aria-labelledby="hSpecs">
   <div class="sec-head"><h2 id="hSpecs">Билды и таланты</h2></div>
-  <p class="tp">Выберите класс и спек: у каждого есть шпора — билд, таланты, прокачка и группа на одной странице.</p>
+  <p class="tp">Шпора спека: билд, таланты, прокачка и группа.</p>
   @@SPECS@@
-  <p class="more-ls"><a class="more-l" href="guides/builds/">Билды всех классов<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="more-l" href="talents/">Калькулятор талантов<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
 </section>
 
 <section class="block wrap" id="pickban">
@@ -1298,14 +1281,10 @@ dialog.sheet::backdrop { background: rgba(0,0,0,.6); }
   <div class="wrap">
     <div class="sec-head"><h2>Гайды и инструменты</h2></div>
     <nav class="gtiles" aria-label="Гайды и инструменты">
-      <a class="gt" href="guides/leveling/"><picture><source type="image/avif" srcset="@@ROOT@@assets/art/hero_leveling-480.avif 480w, @@ROOT@@assets/art/hero_leveling-960.avif 960w" sizes="(max-width: 1100px) 50vw, 25vw"><img src="@@ROOT@@assets/art/hero_leveling-480.webp" alt="" loading="lazy" fetchpriority="low" decoding="async"></picture><b>Прокачка 1–60</b><span>Маршрут по зонам, темп и отдых</span></a>
-      <a class="gt" href="guides/dungeons/"><picture><source type="image/avif" srcset="@@ROOT@@assets/art/hero_dungeons-480.avif 480w, @@ROOT@@assets/art/hero_dungeons-960.avif 960w" sizes="(max-width: 1100px) 50vw, 25vw"><img src="@@ROOT@@assets/art/hero_dungeons-480.webp" alt="" loading="lazy" fetchpriority="low" decoding="async"></picture><b>Подземелья и рейды</b><span>Все 35 подземелий по уровням и 3 рейда</span></a>
       <a class="gt" href="guides/professions/"><picture><source type="image/avif" srcset="@@ROOT@@assets/art/hero_professions-480.avif 480w, @@ROOT@@assets/art/hero_professions-960.avif 960w" sizes="(max-width: 1100px) 50vw, 25vw"><img src="@@ROOT@@assets/art/hero_professions-480.webp" alt="" loading="lazy" fetchpriority="low" decoding="async"></picture><b>Профессии</b><span>Пары под класс и объекты лагеря</span></a>
-      <a class="gt" href="guides/faq/"><picture><source type="image/avif" srcset="@@ROOT@@assets/art/hero_faq-480.avif 480w, @@ROOT@@assets/art/hero_faq-960.avif 960w" sizes="(max-width: 1100px) 50vw, 25vw"><img src="@@ROOT@@assets/art/hero_faq-480.webp" alt="" loading="lazy" fetchpriority="low" decoding="async"></picture><b>FAQ и даты</b><span>Резерв имён, релиз, рейды и отличия от Era</span></a>
-      <a class="gt" href="tools/#raid"><picture><source type="image/avif" srcset="@@ROOT@@assets/art/hero_roster-480.avif 480w, @@ROOT@@assets/art/hero_roster-960.avif 960w" sizes="(max-width: 1100px) 50vw, 25vw"><img src="@@ROOT@@assets/art/hero_roster-480.webp" alt="" loading="lazy" fetchpriority="low" decoding="async"></picture><b>Состав группы и LFG</b><span>От одного до сорока игроков</span></a>
-      <a class="gt" href="guides/builds/"><picture><source type="image/avif" srcset="@@ROOT@@assets/art/hero_tierlist-480.avif 480w, @@ROOT@@assets/art/hero_tierlist-960.avif 960w" sizes="(max-width: 1100px) 50vw, 25vw"><img src="@@ROOT@@assets/art/hero_tierlist-480.webp" alt="" loading="lazy" fetchpriority="low" decoding="async"></picture><b>Билды</b><span>Таланты и приоритет спеков к 60</span></a>
-      <a class="gt" href="play/"><picture><source type="image/avif" srcset="@@ROOT@@assets/art/hero_requirements-480.avif 480w, @@ROOT@@assets/art/hero_requirements-960.avif 960w" sizes="(max-width: 1100px) 50vw, 25vw"><img src="@@ROOT@@assets/art/hero_requirements-480.webp" alt="" loading="lazy" fetchpriority="low" decoding="async"></picture><b>В игре</b><span>Этапы, персонаж, таймеры</span></a>
+      <a class="gt" href="talents/"><picture><source type="image/avif" srcset="@@ROOT@@assets/art/hero_tierlist-480.avif 480w, @@ROOT@@assets/art/hero_tierlist-960.avif 960w" sizes="(max-width: 1100px) 50vw, 25vw"><img src="@@ROOT@@assets/art/hero_tierlist-480.webp" alt="" loading="lazy" fetchpriority="low" decoding="async"></picture><b>Калькулятор талантов</b><span>Свой билд и ссылка на него</span></a>
       <a class="gt" href="guides/leveling/#legacy"><picture><source type="image/avif" srcset="@@ROOT@@assets/art/hero_guides-480.avif 480w, @@ROOT@@assets/art/hero_guides-960.avif 960w" sizes="(max-width: 1100px) 50vw, 25vw"><img src="@@ROOT@@assets/art/hero_guides-480.webp" alt="" loading="lazy" fetchpriority="low" decoding="async"></picture><b>Legacy</b><span>Очки на весь аккаунт, перки и награды</span></a>
+      <a class="gt" href="guides/faq/"><picture><source type="image/avif" srcset="@@ROOT@@assets/art/hero_faq-480.avif 480w, @@ROOT@@assets/art/hero_faq-960.avif 960w" sizes="(max-width: 1100px) 50vw, 25vw"><img src="@@ROOT@@assets/art/hero_faq-480.webp" alt="" loading="lazy" fetchpriority="low" decoding="async"></picture><b>FAQ и даты</b><span>Резерв имён, релиз, рейды и отличия от Era</span></a>
     </nav>
     <p><a class="more-l" href="guides/">Все гайды<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
   </div>
@@ -1575,104 +1554,6 @@ function renderRaceRef() {
 const $ = s => document.querySelector(s);
 function esc(s) { return String(s).replace(/[&<>"]/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m])); }
 const ROOT = '@@ROOT@@';
-function raceName(r) { return r.name || r.n; }
-/* Class roster: tall portraits, the hovered or focused one expands */
-const DESC = {
-  warrior: 'Латы, ярость и первый ряд. Держит удар как танк или рубит двуручным оружием.',
-  paladin: 'Святой воин в латах: лечит, танкует и бьёт молотом. Теперь есть и у Орды.',
-  hunter: 'Лук, ловушки и верный зверь рядом. Один из самых быстрых классов в прокачке.',
-  rogue: 'Яды, клинки и тень. Чистый урон из засады и контроль врагов.',
-  priest: 'Свет и Тьма в одних руках. Главный лекарь группы или тёмный заклинатель.',
-  shaman: 'Тотемы и стихии: лечит, бьёт молнией или оружием. Теперь есть и у Альянса.',
-  mage: 'Огонь, лёд и тайная магия. Порталы, еда и вода для группы.',
-  warlock: 'Проклятия, демоны и огонь. Урон со временем и свой демон в помощь.',
-  druid: 'Медведь, кошка, сова или лекарь: все три роли на одном персонаже.'
-};
-const artSet = (id, ext) => [360, 600, 896].map(w => `${ROOT}assets/art/${id}-${w}.${ext}${PV} ${w}w`).join(', ');
-/* A class portrait of the reader's side: the best race of that side (build.portraits), swapped by GabellaPor when the side changes */
-const porPic = id => { const P = window.GabellaPor, u = s => (P ? P.url(s) : s.replace(/[{}]/g, '')), t = `{${id}}`, img = `${ROOT}assets/art/${t}-600.webp${PV}`;
-  return `<picture>${['avif', 'webp'].map(e => `<source type="image/${e}" srcset="${u(artSet(t, e))}" data-por-srcset="${artSet(t, e)}" sizes="${CLS_SIZES}">`).join('')}<img src="${u(img)}" data-por-src="${img}" width="896" height="1200" alt="" loading="lazy" decoding="async"></picture>`; };
-const ART_SIZES = '(max-width: 719px) 78vw, 440px';
-const CLS_SIZES = '(max-width: 1023px) 34vw, 440px';   // class portraits are grid cells on a phone and a tablet
-function renderRoster() {
-  $('#roster').innerHTML = CLASSES.map((c, i) => `<a class="hc${i === 0 ? ' on' : ''}" href="classes/${c.id}/" style="--cc:${CCOL[c.id]}">
-    ${porPic(c.id)}
-    <span class="vn" aria-hidden="true">${esc(c.n)}</span>
-    <span class="info"><b>${esc(c.n)}</b><span class="roles">${c.roles.filter(r => !r.endsWith('?')).map(r => `<span>${ri(r)}${ROLE_RU[r]}</span>`).join('')}</span><span class="d">${esc(DESC[c.id])}</span><span class="more">Подробнее о классе</span></span>
-  </a>`).join('');
-}
-renderRoster();
-/* Race roster: one row of portraits per faction, links to the race pages */
-function renderPeoples() {
-  [['alliance', '#rosterA'], ['horde', '#rosterH']].forEach(([f, sel]) => {
-    $(sel).innerHTML = RACES.filter(r => r.f === f).map((r, i) => `<a class="hc${i === 0 ? ' on' : ''}" href="races/${RSLUG[r.id]}/" style="--cc:var(--${f})">
-    <picture><source type="image/avif" srcset="${artSet(RSLUG[r.id], 'avif')}" sizes="${ART_SIZES}"><source type="image/webp" srcset="${artSet(RSLUG[r.id], 'webp')}" sizes="${ART_SIZES}"><img src="${ROOT}assets/art/${RSLUG[r.id]}-600.webp${PV}" width="896" height="1200" alt="" loading="lazy" decoding="async"></picture>
-    <span class="vn" aria-hidden="true">${esc(raceName(r))}</span>
-    <span class="info"><b>${esc(raceName(r))}</b>${r.paid ? '<span class="tag paid">платная</span>' : ''}<span class="d">${esc(RLEAD[r.id])}</span><span class="more">Подробнее о расе</span></span>
-  </a>`).join('');
-  });
-}
-renderPeoples();
-/* Card titles fit the card (CSS: font-size = room / --k). --k is the width in em of the longest word of the name, or of the whole vertical label, measured in the real font; the words are never broken. */
-function fitCards() {
-  const m = document.createElement('span');
-  m.style.cssText = 'position:absolute;left:-9999px;top:0;visibility:hidden;white-space:pre;line-height:1;font-size:100px';
-  document.body.append(m);
-  const k = (t, v) => { m.textContent = t; m.style.writingMode = v ? 'vertical-rl' : 'horizontal-tb'; const r = m.getBoundingClientRect(); return (v ? r.height : r.width) / 100; };   // vertical labels are measured vertically: ’ and the like stand upright there
-  const ks = new Map();   // one --k per roster and kind of label: the widest name sets the size of all, so no name is set smaller than the rest
-  document.querySelectorAll('.hc .info b, .hc .vn').forEach(el => {
-    const cs = getComputedStyle(el), whole = el.classList.contains('vn');
-    m.style.fontFamily = cs.fontFamily; m.style.fontWeight = cs.fontWeight;
-    m.style.letterSpacing = (parseFloat(cs.letterSpacing) || 0) / parseFloat(cs.fontSize) * 100 + 'px';
-    const parts = whole ? [el.textContent] : el.textContent.match(/[^\s-]+-?/g) || [''];
-    const g = el.closest('.roster, .rr') || document.body, key = g.dataset.fk || (g.dataset.fk = 'r' + ks.size + Math.random().toString(36).slice(2, 6));
-    const id = key + whole; ks.set(id, Math.max(ks.get(id) || 0, ...parts.map(t => k(t, whole))));
-    el.dataset.fid = id;
-  });
-  document.querySelectorAll('[data-fid]').forEach(el => el.style.setProperty('--k', ks.get(el.dataset.fid).toFixed(3)));
-  m.remove();
-}
-fitCards();
-if (document.fonts) { document.fonts.ready.then(fitCards); document.fonts.addEventListener('loadingdone', fitCards); }
-function activate(card) { if (!card || card.classList.contains('on')) return; card.parentElement.querySelectorAll('.hc.on').forEach(x => x.classList.remove('on')); card.classList.add('on'); }
-document.querySelectorAll('.roster').forEach(ro => {
-  ro.addEventListener('mouseover', e => activate(e.target.closest('.hc')));
-  ro.addEventListener('focusin', e => activate(e.target.closest('.hc')));
-});
-
-/* Side switch of the class portraits: GabellaPor is the one source (a hero's side, else a side chosen here, else the time of day) */
-const SIDESW = $('#sidesw'), SIDEBTN = [...SIDESW.querySelectorAll('[role="radio"]')];
-function syncSide() {
-  const f = window.GabellaPor ? GabellaPor.fac() : 'alliance';
-  SIDEBTN.forEach(b => { const on = b.dataset.f === f; b.setAttribute('aria-checked', on); b.tabIndex = on ? 0 : -1; });
-}
-if (window.GabellaPor) {
-  SIDESW.classList.add('on'); syncSide();
-  ['gabella-side', 'gabella-me'].forEach(n => addEventListener(n, syncSide)); document.addEventListener('gabella:tod', syncSide);
-  SIDEBTN.forEach((b, i) => {
-    b.addEventListener('click', () => { GabellaPor.set(b.dataset.f); syncSide(); });
-    b.addEventListener('keydown', e => {
-      const k = { ArrowRight: i + 1, ArrowDown: i + 1, ArrowLeft: i - 1, ArrowUp: i - 1, Home: 0, End: 1 }[e.key];
-      if (k === undefined) return;
-      e.preventDefault(); const n = SIDEBTN[(k + 2) % 2]; GabellaPor.set(n.dataset.f); syncSide(); n.focus();
-    });
-  });
-}
-/* Classes / races: one block, two tabs (arrow keys, Home, End); #peoples (menu, old links) opens the races */
-const TABS = [...document.querySelectorAll('#classes [role="tab"]')];
-function showTab(t, focus) {
-  TABS.forEach(x => { const on = x === t; x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1; document.getElementById(x.getAttribute('aria-controls')).hidden = !on; });
-  SIDESW.hidden = t !== TABS[0];   // the races show both sides: no switch there
-  if (focus) t.focus();
-}
-TABS.forEach((t, i) => {
-  t.addEventListener('click', () => showTab(t));
-  t.addEventListener('keydown', e => {
-    const k = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: TABS.length - 1 }[e.key];
-    if (k === undefined) return;
-    e.preventDefault(); showTab(TABS[(k + TABS.length) % TABS.length], true);
-  });
-});
 document.addEventListener('click', e => {
   const a = e.target.closest('[data-q]');
   if (!a || e.ctrlKey || e.metaKey) return;
@@ -1719,9 +1600,8 @@ document.addEventListener('click', e => {
     if (all.some(x => wh.includes(x) || bz.includes(x))) row.innerHTML = all.map(x => x.html).join('');
   });
 })();
-function hashTab() { if (location.hash === '#peoples') { showTab(TABS[1]); document.getElementById('classes').scrollIntoView(); } }
-addEventListener('hashchange', hashTab);
-hashTab();
+/* #peoples: the races block of the old home (old links) lives on the races page now */
+if (location.hash === '#peoples') location.replace('races/');
 /* data:start — read by the other builds from this source (dungeons, camp objects); build_home leaves it off the home page */
 /* Dungeons: [name, min, max, entrance zone, new, other sites' ranges where they differ, side of the entrance, 1 = the other side can go too].
    A side alone: the entrance is in that side's capital (Ragefire Chasm, The Stockade). Pages of single dungeons: content/dungeon_pages.py */

@@ -40,9 +40,12 @@ def test_language_menu_saves_choice():
 def test_class_and_race_links_without_js():
     for lang in LANGS:
         home = page(*lang_dir(lang))
-        roster = re.search(r'id="roster">(.*?)</div>', home).group(1)
-        assert roster.count('href="classes/') == 9, lang
-        assert re.search(r'id="rosterA">(.*?)</div>', home).group(1).count('href="races/') == 5, lang
+        # the home has one class block: «Билды и таланты» (9 classes, 27 spec cheat sheets); class and race portraits live on /classes/, /races/
+        builds = home[home.index('<div class="sppm sppm-home">'):]
+        builds = builds[:builds.index('</section>')]
+        assert len(set(re.findall(r'href="[^"]*guides/builds-(\w+)/"', builds))) == 9, lang
+        assert len(set(re.findall(r'href="[^"]*guides/spec-([\w-]+)/"', builds))) == 27, lang
+        assert 'id="roster"' not in home and 'id="rosterA"' not in home, lang
         assert page(*lang_dir(lang), 'classes').count('href="../classes/') >= 9, lang
         assert page(*lang_dir(lang), 'races').count('href="../races/') >= 10, lang
 

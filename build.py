@@ -1275,10 +1275,34 @@ def sleep_art(html):
 
 
 def home_specs():
-    """Home «Билды и таланты»: nine classes, each with the chips of its three spec cheat sheets (Russian, translate() does the rest)."""
+    """Home «Билды и таланты» (#classes, the one class block of the home): nine classes, each with the chips of its three
+    spec cheat sheets (Russian, translate() does the rest). sppm-home: three plates in a row on a phone too (index.src.html)."""
     return spec_matrix([(c['id'], f'guides/builds-{c["id"]}/', esc(c['n']),
                          [spec_plate(f'guides/spec-{c["id"]}-{sid}/', esc(s['n']), ' · '.join(ROLE[r] for r in s['roles']), c['id'], s['roles'], sid)
-                          for s, sid in zip(c['specs'], SPEC_IDS[c['id']])]) for c in CLASSES])
+                          for s, sid in zip(c['specs'], SPEC_IDS[c['id']])]) for c in CLASSES]).replace('<div class="sppm">', '<div class="sppm sppm-home">', 1)
+
+
+# Home «Билды и таланты» on a phone: three plates of ~85 px in a row (320 px screen), a long spec name breaks at these points
+# (soft hyphens; the browser hyphenation dictionaries are not there on every phone). Every word of 11+ letters in the 9 languages.
+HOME_SHY = {w.replace('|', ''): w.replace('|', '&shy;') for w in (
+    'Совер|шен|ствование', 'Демоно|логия', 'Неистов|ство', 'Вдоскона|лення', 'Непоміт|ність', 'Демоно|логія',
+    'Assassi|nation', 'Marksman|ship', 'Destruc|tion', 'Enhance|ment', 'Resto|ration', 'Retribu|tion',
+    'Wieder|her|stellung', 'Treff|sicher|heit', 'Tier|herr|schaft', 'Gleich|gewicht', 'Dämono|logie', 'Verstär|kung',
+    'Amélio|ration', 'Restau|ration', 'Élémen|taire', 'Démono|logie',
+    'Super|vivencia', 'Restau|ración', 'Destruc|ción', 'Demono|logía',
+    'Aperfei|çoamento', 'Sobre|vivência', 'Restau|ração', 'Subter|fúgio', 'Assassi|nato', 'Retri|buição', 'Demono|logia',
+    'Potenzia|mento', 'Rigene|razione', 'Combatti|mento', 'Soprav|vivenza', 'Distru|zione')}
+
+
+def home_shy(html):
+    """Soft hyphens (HOME_SHY) in the spec names of the home builds block; asserts no long word is left without them."""
+    a = html.index('<div class="sppm sppm-home">')
+    b = html.index('</section>', a)
+    def fix(m):
+        name = ' '.join(HOME_SHY.get(w, w) for w in m[1].split(' '))
+        assert all(len(w) < 11 or '&shy;' in w for w in name.split(' ')), ('HOME_SHY: add a break to', m[1])
+        return f'<span class="spp-t"><b>{name}</b>'
+    return html[:a] + re.sub(r'<span class="spp-t"><b>(.*?)</b>', fix, html[a:b]) + html[b:]
 
 
 def build_home(lang, src):
@@ -1288,6 +1312,7 @@ def build_home(lang, src):
     src = re.sub(r'/\* data:start .*?/\* data:end \*/\n', '', src, count=1, flags=re.S)   # read by the other builds, not used here
     src = chrome(src, tab='', home='')
     html, missing = translate(src, lang)
+    html = home_shy(html)
     html = html.replace('@@FRESH@@', fresh(lang)).replace('@@DATA_UPD@@', data_updated())
     html = html.replace('\n    @@LAUNCH@@', ('\n    ' + launch_card(lang)) if LAUNCH.get('status_card') else '', 1)
     html = sleep_art(html).replace('<b>Gruppenplaner</b>', '<b>Gruppen&shy;planer</b>')   # 320 px tile: a hyphen, not «Gruppenplane / r»
