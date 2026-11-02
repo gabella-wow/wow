@@ -2259,27 +2259,18 @@ def _ck(id_, title, d, href, go, langs=None):
 
 
 def _newbie():
-    """Top of the Day 1 checklist for the «Я новичок» button of the home page: what this is and where to go next, with the main action."""
+    """Top of the Day 1 checklist for the «Я новичок» button of the home page: where to go next, with the main action."""
     from html import escape
     from content.spec_cheats import n9
-    what = n9('Что это: список дел на старт WoW Forever. Отметки остаются в вашем браузере.',
-              'What this is: a to-do list for the WoW Forever launch. Your ticks stay in this browser.',
-              'Що це: список справ на старт WoW Forever. Позначки лишаються у вашому браузері.',
-              'Was das ist: eine Aufgabenliste für den Start von WoW Forever. Deine Häkchen bleiben in diesem Browser.',
-              'De quoi s’agit-il : une liste de tâches pour le lancement de WoW Forever. Vos coches restent dans ce navigateur.',
-              'Qué es: una lista de tareas para el lanzamiento de WoW Forever. Tus marcas se quedan en este navegador.',
-              'O que é: uma lista de tarefas para o lançamento de WoW Forever. Suas marcações ficam neste navegador.',
-              'Che cos’è: una lista di cose da fare per il lancio di WoW Forever. Le tue spunte restano in questo browser.',
-              'Co to jest: lista rzeczy do zrobienia na start WoW Forever. Twoje odhaczenia zostają w tej przeglądarce.')
     nxt = n9('Новичку, по порядку:', 'New player, in order:', 'Новачку, по порядку:', 'Als Neuling der Reihe nach:', 'Débutant, dans l’ordre :',
              'Si eres nuevo, en orden:', 'Para iniciantes, em ordem:', 'Se sei nuovo, in ordine:', 'Dla nowych, po kolei:')
     s1 = n9('Выбрать класс', 'Pick a class', 'Обрати клас', 'Klasse wählen', 'Choisir une classe', 'Elegir clase', 'Escolher classe', 'Scegli la classe', 'Wybierz klasę')
     s2 = n9('Взять билд', 'Take a build', 'Взяти білд', 'Build nehmen', 'Prendre un build', 'Coger un build', 'Pegar uma build', 'Prendi una build', 'Weź build')
     s3 = n9('Прокачка 1–60', 'Leveling 1–60', 'Прокачування 1–60', 'Leveln 1–60', 'Progression 1–60', 'Subida 1–60', 'Evolução 1–60', 'Salita 1–60', 'Levelowanie 1–60')
-    return {l: (f'<p>{escape(what[l])}</p><p class="small">{escape(nxt[l])}</p>'
+    return {l: (f'<p class="small">{escape(nxt[l])}</p>'
                 f'<p class="nsteps"><a class="btn" href="../../classes/#choose">{escape(s1[l])}</a><span class="nr"><span aria-hidden="true">→</span>'
                 f'<a href="../builds/">{escape(s2[l])}</a><span aria-hidden="true">→</span><a href="../leveling/">{escape(s3[l])}</a></span></p>')
-            for l in what}
+            for l in nxt}
 
 
 _NEWBIE = _newbie()
@@ -2293,8 +2284,7 @@ GUIDES.append({
               'What to do before the WoW Forever launch, in the first hours and on the first evening. Your ticks are saved in this browser.',
               'Що зробити до старту WoW Forever, у перші години та першого вечора. Позначки зберігаються в цьому браузері.'),
     'tile': t('Что сделать до старта и в первый вечер', 'What to do before launch and on the first evening', 'Що зробити до старту й першого вечора'),
-    'pills': [t('Старт 04.11.2026, 23:00 UTC (по Киеву 05.11, 01:00)', 'Launch 04.11.2026, 23:00 UTC (Kyiv: 05.11, 01:00)', 'Старт 04.11.2026, 23:00 UTC (за Києвом 05.11, 01:00)'),
-              t('Отметки в браузере', 'Ticks saved in your browser', 'Позначки в браузері')],
+    'pills': [t('Старт 04.11.2026, 23:00 UTC (по Киеву 05.11, 01:00)', 'Launch 04.11.2026, 23:00 UTC (Kyiv: 05.11, 01:00)', 'Старт 04.11.2026, 23:00 UTC (за Києвом 05.11, 01:00)')],
     'sources': [
         (t('Blizzard: старт и коды Invite-A-Friend', 'Blizzard: launch and Invite-A-Friend codes', 'Blizzard: старт і коди Invite-A-Friend'),
          'https://news.blizzard.com/en-us/article/24301508'),
@@ -2311,8 +2301,8 @@ GUIDES.append({
             ('ckbar', {'done': t('Отмечено', 'Ticked', 'Відмічено'), 'reset': t('Снять отметки', 'Clear ticks', 'Зняти позначки')}),
             ('checks', [
                 _ck('time', t('Время старта', 'Launch time', 'Час старту'),
-                    t('В Европе 05.11, в Америке 04.11. Старт в 15:00 по тихоокеанскому, это 23:00 UTC.', '04.11 in the Americas, 05.11 in Europe. Launch is at 15:00 Pacific, which is 23:00 UTC.', 'У Європі 05.11, в Америці 04.11. Старт о 15:00 за тихоокеанським, це 23:00 UTC.'),
-                    'guides/faq/#dates', t('Даты', 'Dates', 'Дати')),
+                    t('В Европе 05.11, в Америке 04.11. Старт в 23:00 UTC.', '04.11 in the Americas, 05.11 in Europe. Launch is at 23:00 UTC.', 'У Європі 05.11, в Америці 04.11. Старт о 23:00 UTC.'),
+                    'guides/faq/#dates', t('Все даты старта', 'All launch dates', 'Усі дати старту')),
                 _ck('sub', t('Подписка или игровое время', 'Subscription or game time', 'Підписка або ігровий час'),
                     t('Forever входит в подписку WoW, отдельно игру покупать не нужно. В Epic Pack и Collection есть 30 дней игрового времени, их начислят в день старта.',
                       'Forever is included in the WoW subscription, you do not buy the game separately. The Epic Pack and Collection include 30 days of game time, added on launch day.',
@@ -2327,12 +2317,12 @@ GUIDES.append({
                     t('Решите с друзьями заранее. Режим выбирают один раз, группа собирается только внутри режима, в PvP на аккаунте одна фракция.',
                       'Agree with your friends in advance. The mode is chosen once, groups form only within a mode, and in PvP an account has one faction.',
                       'Вирішіть із друзями заздалегідь. Режим обирають один раз, група збирається лише в межах режиму, у PvP на акаунті одна фракція.'),
-                    'guides/faq/#modes', t('Режимы и серверы', 'Modes and servers', 'Режими та сервери')),
+                    'guides/faq/#modes', t('Как выбрать режим', 'How to choose a mode', 'Як обрати режим')),
                 _ck('ping', t('Пинг и очередь', 'Ping and queue', 'Пінг і черга'),
                     t('Узнайте свой регион, что делать при высоком пинге и как не потерять место в очереди на входе.',
                       'Find your region, what to do about high ping and how not to lose your place in the login queue.',
                       'Дізнайтеся свій регіон, що робити з високим пінгом і як не втратити місце в черзі на вхід.'),
-                    'tools/#ping', t('Советник по пингу', 'Ping advisor', 'Порадник з пінгу')),
+                    'tools/#ping', t('Проверить пинг', 'Check your ping', 'Перевірити пінг')),
                 _ck('class', t('Класс', 'Class', 'Клас'),
                     t('Тир-лист сравнивает классы и спеки для прокачки, подземелий и PvP по данным беты.',
                       'The tier list compares classes and specs for leveling, dungeons and PvP, based on beta data.',
@@ -2352,7 +2342,7 @@ GUIDES.append({
                     t('С набором приходят коды Invite-A-Friend: по коду друг играет с 04.11 по 11.11 без подписки. Heroic даёт 1 код, Epic и Collection — 3. Коды приходят на почту.',
                       'Packs come with Invite-A-Friend codes: with one, a friend plays from 04.11 to 11.11 without a subscription. Heroic gives 1 code, Epic and Collection give 3. The codes arrive by email.',
                       'З набором приходять коди Invite-A-Friend: з кодом друг грає з 04.11 по 11.11 без підписки. Heroic дає 1 код, Epic і Collection — 3. Коди приходять на пошту.'),
-                    'guides/faq/#editions', t('Неделя для друга', 'A week for a friend', 'Тиждень для друга')),
+                    'guides/faq/#editions', t('Наборы и коды', 'Packs and codes', 'Набори та коди')),
                 _ck('group', t('Группа на старт', 'A group for launch', 'Група на старт'),
                     t('Соберите состав в конструкторе группы и отправьте ссылку друзьям.',
                       'Build the party in the group builder and send the link to your friends.',
@@ -2377,7 +2367,7 @@ GUIDES.append({
                     t('При первом входе игра предлагает набор настроек. Экран выбора больше не появится, но каждую настройку можно поменять отдельно.',
                       'On first login the game offers a set of settings. The choice screen will not come back, but every setting can be changed on its own.',
                       'Під час першого входу гра пропонує набір налаштувань. Екран вибору більше не з’явиться, але кожне налаштування можна змінити окремо.'),
-                    'guides/faq/#graphics', t('Что меняет набор', 'What the set changes', 'Що змінює набір')),
+                    'guides/faq/#graphics', t('Classic и Enhanced: разница', 'Classic and Enhanced: the difference', 'Classic і Enhanced: різниця')),
                 _ck('start', t('Стартовая зона', 'Starting zone', 'Стартова зона'),
                     t('Задания стартовой зоны своей расы до 10 уровня. На 10 уровне открываются таланты.',
                       'Your race’s starting zone quests up to level 10. Talents unlock at level 10.',
@@ -2397,12 +2387,12 @@ GUIDES.append({
                     t('Встроенная панель своих кулдаунов и баффов вместо WeakAuras. По умолчанию выключена: Options → Gameplay Enhancement.',
                       'The built-in panel for your own cooldowns and buffs instead of WeakAuras. Off by default: Options → Gameplay Enhancement.',
                       'Вбудована панель власних кулдаунів і баффів замість WeakAuras. За замовчуванням вимкнена: Options → Gameplay Enhancement.'),
-                    'guides/addons/#builtin', t('Что уже есть в игре', 'What is already in the game', 'Що вже є в грі')),
+                    'guides/addons/#builtin', t('Встроенные замены аддонов', 'Built-in addon replacements', 'Вбудовані заміни аддонів')),
                 _ck('folder', t('Папка аддонов', 'Addon folder', 'Тека аддонів'),
                     t('Папку для релиза Blizzard не называла. Проверьте путь: шестерёнка у кнопки «Играть» в Battle.net → Show in Explorer, аддоны лежат в Interface\\AddOns.',
                       'Blizzard has not named the release folder. Check the path: the gear next to the Play button in Battle.net → Show in Explorer, addons go in Interface\\AddOns.',
                       'Теку для релізу Blizzard не назвала. Перевірте шлях: шестірня біля кнопки «Грати» в Battle.net → Show in Explorer, аддони лежать в Interface\\AddOns.'),
-                    'guides/addons/#install', t('Как установить', 'How to install', 'Як встановити')),
+                    'guides/addons/#install', t('Установка аддонов', 'Installing addons', 'Встановлення аддонів')),
                 _ck('play', t('В игре', 'In game', 'У грі'),
                     t('Откройте «В игре» на телефоне или втором мониторе: зоны под ваш уровень, подземелья, таймер еды и радио.',
                       'Open “In game” on your phone or a second monitor: zones for your level, dungeons, a food timer and radio.',
@@ -3190,10 +3180,10 @@ NOT_FOUND = {
 # Маршрут по зонам и совет про отдых страница берёт из гайда «Прокачка» (секции route и pace), тут только подписи и рубежи.
 PLAY = {
     'slug': 'play', 'path': 'play/', 'og': 'guides', 'art': 'hero_campfire', 'compact': True, 'more': False, 'js': 'play',
-    'title': t('В игре: таймеры и подземелья по уровню', 'In game: timers and dungeons for your level', 'У грі: таймери й підземелля за рівнем'),
-    'lead': t('Второй экран на время игры: радио, зоны и подземелья под ваш уровень, таймеры. После входа — персонажи из профиля.',
-              'A second screen while you play: radio, zones and dungeons for your level, timers. After you log in: characters from your profile.',
-              'Другий екран під час гри: радіо, зони й підземелля під ваш рівень, таймери. Після входу — персонажі з профілю.'),
+    'title': t('В игре', 'In game', 'У грі'),
+    'lead': t('Зоны и подземелья под ваш уровень, таймеры, радио.',
+              'Zones and dungeons for your level, timers, radio.',
+              'Зони й підземелля під ваш рівень, таймери, радіо.'),
     'sections': [],
 }
 # Рубежи по уровню — только факты из гайдов (ездовое — секция pace «Прокачки», Хиджал — маршрут, рейды — «Подземелья и рейды»)

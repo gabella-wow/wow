@@ -4901,7 +4901,7 @@
  "Route and talents 1–60.": "Trasa i talenty 1–60.",
  "Day 1 for your character": "Dzień 1 dla twojej postaci",
  "The launch checklist with your class and race.": "Checklista startu z twoją klasą i rasą.",
- "Zones and dungeons for your level, timers, radio.": "Strefy i dungeony na twój level, timery, radio.",
+ "Zones and dungeons for your level, timers, radio.": "Strefy i dungeony na twój level, minutniki, radio.",
  "Set your level and we will pick dungeons.": "Podaj level, a dobierzemy dungeony.",
  "Weekly reset": "Tygodniowy reset",
  "in %s": "za %s",
@@ -6031,5 +6031,13 @@
  "In game: timers and dungeons for your level": "W grze: minutniki i dungeony na twój poziom",
  "Build: %s": "Build: %s",
  "In game: radio, level, timers": "W grze: radio, level, minutniki",
- "Stages, character, timers": "Etapy, postać, minutniki"
+ "Stages, character, timers": "Etapy, postać, minutniki",
+ "All launch dates": "Wszystkie daty startu",
+ "How to choose a mode": "Jak wybrać tryb",
+ "Check your ping": "Sprawdź ping",
+ "Packs and codes": "Zestawy i kody",
+ "Classic and Enhanced: the difference": "Classic i Enhanced: różnica",
+ "Built-in addon replacements": "Wbudowane zamienniki dodatków",
+ "Installing addons": "Instalacja dodatków",
+ "04.11 in the Americas, 05.11 in Europe. Launch is at 23:00 UTC.": "04.11 w Ameryce, 05.11 w Europie. Start o 23:00 UTC."
 }

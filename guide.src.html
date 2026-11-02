@@ -301,7 +301,7 @@ a.frc:hover { text-decoration-color: var(--gold); }
 .lcd.out .lcu { display: none; }
 .lcal { margin-top: 12px; }
 .lcd.out + .lcal { display: none; }
-.pday { margin-bottom: 14px; }
+.pday { margin: 0; }
 /* the hero of this browser (character/): a gold line, no badge */
 .nmine { display: block; margin-top: 2px; color: var(--gold-2); font-size: var(--fs-13); font-weight: 600; }
 @media (min-width: 720px) { .nitem time ~ .nmine { grid-column: 2; } }   /* phone: one column, the pill stays in it */
@@ -374,7 +374,7 @@ a.frc:hover { text-decoration-color: var(--gold); }
 @media (max-width: 719px) { .lgg { padding: 12px; } .lggrid { grid-template-columns: minmax(0, 1fr); } .lgsum b { font-size: var(--fs-28); } }
 @media (prefers-reduced-motion: reduce) { .lgp span, .dmeter i { transition: none; } }
 /* one line for a guest: sign in to keep the level and characters */
-.pway { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; margin-top: 16px; padding: 14px 20px; }
+.pway { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; padding: 14px 20px; }
 .pway[hidden] { display: none; }
 .pway .pnote { flex: 1 1 260px; }
 .pway .btn { margin-left: auto; }
@@ -421,6 +421,7 @@ a.frc:hover { text-decoration-color: var(--gold); }
 /* stages and my character under the level, radio and timers (journey.src.html) */
 .pjour { margin-top: 24px; }
 .pjour { scroll-margin-top: calc(var(--top) + 16px); }
+.psec[hidden] { display: none; }
 .psec > h2, .phero h2 { margin: 0; font-size: var(--fs-h2); }
 #radio .rdo { border-radius: 10px; }
 .phero { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
@@ -524,6 +525,10 @@ a.frc:hover { text-decoration-color: var(--gold); }
   .phead-art img { object-position: 80% 0; height: calc(var(--top) + 190px); }
   .phead::before { background: linear-gradient(180deg, rgb(5 5 5 / .5) 0%, rgb(5 5 5 / 0) 16%, rgb(5 5 5 / 0) calc(var(--top) + 80px), rgb(5 5 5 / .9) calc(var(--top) + 150px), rgb(5 5 5) calc(var(--top) + 190px)); } }
 @media (max-width: 719px) { .pway { padding: 12px 14px; gap: 10px 20px; } .pway .btn { margin-left: 0; } .psec { padding: 14px; } .pform { grid-template-columns: minmax(0, 1fr) 104px; } .pform .pill { grid-column: 1 / -1; justify-content: center; } }
+@media (max-width: 719px) {   /* phone: the level right under the title (its input and quick buttons before the character line); the login line and the checklist below the blocks */
+  .pway { order: 2; } .pday { order: 3; }
+  #level .phero { order: -3; } #level .plv { order: -2; } #level .plvq { order: -1; }
+}
 @media (max-width: 719px) {   /* phone: pills and small links are 44 px to tap */
   .dbar .pill, .pfac .pill, .ppre .pill, .pform .pill, .pchars .pill, .pform input, .pme .btn { min-height: 44px; }
   .pnotify { min-height: 44px; }

@@ -977,6 +977,8 @@ def play_data(src, lang):
         'rn': {r['id']: build.tr(r['n'], lang) for r in races},
         'cn': {c['id']: build.tr(c['n'], lang) for c in build.CLASSES},
         'face': face, 'col': build.COLOR, 'pages': pages,
+        'prn': {pid: L(langs.derive({'ru': n, 'en': build.T[n][0], 'uk': build.T[n][1]}), lang)   # profession names (home PROFS) for the character line
+                for pid, n in re.findall(r"\['(\w+)', '([^']+)', \d, '[^']+', '[^']+'\]", src)},
         # «My class at level N» (content/play_card.py): talents, abilities, gear and dungeon pages from the data the guides show
         'card': play_card.data(lang, L, build.tr, GUIDES, slugs, HERO.SPEC_IDS, play_card.spec_roles_of(home_src()), dungeon_pages.table_links()),
     }
@@ -997,10 +999,7 @@ def play_head(lang):
            '<script>try{if(window.GabellaPor&&GabellaPor.fac()==="horde")document.querySelectorAll(".phead [data-h-srcset],.phead [data-h-src]").forEach(function(e){'
            'if(e.dataset.hSrcset)e.setAttribute("srcset",e.dataset.hSrcset);if(e.dataset.hSrc)e.setAttribute("src",e.dataset.hSrc)})}catch(e){}</script>')
     return ('<section class="phead" id="top">' + art + '<div class="wrap"><div class="ptitle"><h1>@@TITLE@@</h1><p class="glead">@@LEAD@@</p></div>'
-            '</div></section>'
-            f'<div class="wrap"><section class="frame pway" id="pWay" aria-label="{x("profile")}"><p class="pnote">{x("guest")}</p><a class="btn ghost" href="@@ROOT@@profile/">{x("login")}</a></section></div>'
-            # the guest line is in the page from the start (no jump when me.js comes); signed in on this device: hidden at once
-            '<script>try{if(localStorage.getItem("gabella-me")==="1")document.getElementById("pWay").hidden=true}catch(e){}</script>')
+            '</div></section>')
 
 
 def play_body(lang, root):
@@ -1011,10 +1010,14 @@ def play_body(lang, root):
                + ''.join(f'<button type="button" class="pill" data-min="{m}">{m} {x("min")}</button>' for m in (5, 10, 30)))
     day1 = (f'<a class="gplay frame pday" href="{root}guides/launch-checklist/"><span><b>{x("day1")}</b> {x("day1d")}</span>'   # launch checklist, one line
             f'<span class="btn ghost">{x("day1go")}</span></a>')
+    # the guest line is in the page from the start (no jump when me.js comes); signed in on this device: hidden at once.
+    # On a phone it goes below the blocks, like the checklist line (the level is the first thing under the title)
+    way = (f'<section class="frame pway" id="pWay" aria-label="{x("profile")}"><p class="pnote">{x("guest")}</p><a class="btn ghost" href="{root}profile/">{x("login")}</a></section>'
+           '<script>try{if(localStorage.getItem("gabella-me")==="1")document.getElementById("pWay").hidden=true}catch(e){}</script>')
     htx = deep(HERO.TX, lang)
     # the character line: a race-true face, «race · class», «spec · side», the hero sheet of hero.js (class -> spec -> race in
     # three taps; until hero.js has loaded the link opens character/), and the class pages once a class is set
-    return day1 + f'''<div class="pgrid"><div class="pcol">
+    return way + day1 + f'''<div class="pgrid"><div class="pcol">
 <section class="frame psec" id="level" aria-labelledby="hLvl">
   <div class="phero"><h2 id="hLvl">{x("lvl")}</h2><a href="{root}character/">{E(htx["allSet"], lang)}</a></div>
   <div class="pme"><span class="pav" id="pAv"><svg class="ico" aria-hidden="true"><use href="#i-user"/></svg><img id="pFace" src="data:," alt="" width="56" height="56" hidden></span><div class="pwho"><b id="pWho">{x("noHero")}</b><span id="pSub"></span></div>
@@ -1100,10 +1103,12 @@ function saveLvl() {
 
 const PV = /*PV*/'';   // ?v= of the portraits (build.art_version)
 /* The character line: race-true face (P.face: race + class, else the race; none: no picture), spec from the hero, the class pages */
+/* The two professions of the character, when the profile or the hero has them */
+const profsOf = h => [h.p1, h.p2].map(id => P.prn[id]).filter(Boolean).join(', ');
 function renderWho(m) {
   const h = readHero() || {}, cls = P.cn[m.cls] ? m.cls : '', face = P.face[m.race + '.' + cls] || '', img = $('#pFace'), av = $('#pAv');
   $('#pWho').textContent = P.rn[m.race] || cls ? [P.rn[m.race], P.cn[cls]].filter(Boolean).join(' · ') : TX.noHero;
-  $('#pSub').textContent = [h.specN, TX[P.racef[m.race]]].filter(Boolean).join(' · ');
+  $('#pSub').textContent = [h.specN, TX[P.racef[m.race]], profsOf(h)].filter(Boolean).join(' · ');
   /* only the picture of this race and class; none drawn: the class colour and the role icon, never another race */
   img.hidden = !face;
   if (face) { const src = `${ROOT}assets/art/${face}-face.webp${PV}`; if (img.getAttribute('src') !== src) img.src = src; }
@@ -1211,9 +1216,9 @@ function renderLvl() {
   if (document.activeElement !== $('#lvIn')) $('#lvIn').value = lv || '';
   document.querySelectorAll('#lvQuick button').forEach(b => b.setAttribute('aria-pressed', String(+b.dataset.lv === lv)));
   renderCard(m, lv, fac);
+  $('#dung').hidden = !lv;   // no level: the one hint above, not the same line twice
   if (!lv) {
     $('#pNow').innerHTML = `<p class="pnote">${esc(TX.needLvl)}</p>`;
-    $('#pDg').innerHTML = `<li class="pnote">${esc(TX.needLvl)}</li>`;
     return;
   }
   const route = P.route[fac], nx = route.find(r => r[0] > lv), ms = P.miles.find(x => x[0] >= lv);
