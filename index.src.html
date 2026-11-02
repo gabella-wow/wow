@@ -925,6 +925,7 @@ ul.verdict li.warn::before { content: "!"; color: var(--horde); left: 7px; }
 .cmp-more[aria-expanded="true"]::before { margin-top: 4px; transform: rotate(-135deg); }
 .cmp-more:hover { color: var(--gold-2); border-color: var(--pline); background: color-mix(in srgb, var(--fg) 5%, transparent); }
 .cmp-more:focus-visible { outline: 2px solid var(--gold-2); outline-offset: 1px; color: var(--gold-2); }
+.cmp-more::after { content: ""; position: absolute; inset: 0 -7px; }   /* 44 x 44 to tap, the chevron box stays 30 px wide (X6-05) */
 .cmp-more.fits { visibility: hidden; }   /* the note fits in 3 lines: nothing to show, the place stays (no shift) */
 .rdots { display: grid; grid-template-columns: repeat(3, 34px); gap: 6px; }
 .rdot { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: color-mix(in srgb, var(--fg) 4%, transparent); color: color-mix(in srgb, var(--fg) 22%, transparent); }
@@ -1186,6 +1187,10 @@ dialog.sheet::backdrop { background: rgba(0,0,0,.6); }
   .bt small { font-size: 11px; letter-spacing: .01em; }   /* «Poradnik WoW Forever», «Guía de WoW Forever» pushed the language button off a 320 px screen */
 }
 @media (min-width: 360px) and (max-width: 479px) { .topbar .iconbtn, .topbar .langbtn { min-width: 44px; min-height: 44px; } .topbar .tools { gap: 4px; } }   /* 360+: header buttons are 44 x 44 */
+@media (max-width: 359px) {   /* 320–359: the buttons stay 38 px wide to the eye, the tap zone is 44 px (3 px each side over the 3 px gap) (X6-05) */
+  .topbar .iconbtn, .topbar .langbtn { position: relative; }
+  .topbar .iconbtn::after, .topbar .langbtn::after { content: ""; display: block; position: absolute; inset: 0 -3px; width: auto; height: auto; margin: 0; border: 0; transform: none; opacity: 0; }
+}
 @media (max-width: 719px) {   /* phone tap targets: 44 px, the look stays */
   .tabs2 [role="tab"], .tabs2 [role="radio"] { min-height: 44px; }
   .crumbs a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 0 10px; margin: -11px -10px; }
