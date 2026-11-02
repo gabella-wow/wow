@@ -6,7 +6,9 @@
 //   - /classes/: a chip / tile of «Which class to pick» is wider than its column (the Warlock chip ran 26 px out);
 //   - the top bar «More» button lacks aria-haspopup / aria-expanded, or the search button's name carries the Ctrl K hint.
 //   node tests/narrow_check.mjs            all of it (used by run_all)
-//   options: --langs ru,de  --widths 320  --themes light  --pages play/  --json FILE  --shots DIR
+//   each load twice: phone emulation and a plain window of that width (the phone viewport stretches to wide content, so the top bar
+//   running off at 320 did not show there)
+//   options: --langs ru,de  --widths 320  --themes light  --pages play/  --modes window  --json FILE  --shots DIR
 // Exit code 1 if anything is found; prints ПРОЙДЕНО / УПАЛО.
 import { spawn } from 'node:child_process';
 import { createServer } from 'node:http';
@@ -22,8 +24,9 @@ const ALL_LANGS = ['ru', 'uk', 'en', 'de', 'fr', 'es', 'pt', 'it', 'pl'];
 const langs = String(opt('langs', '') || ALL_LANGS.join(',')).split(',');
 const widths = String(opt('widths', '') || '320,360,375').split(',').map(Number);
 const themes = String(opt('themes', '') || 'light,dark').split(',');
-const subs = String(opt('pages', '') || 'play/,classes/').split(',');
+const subs = String(opt('pages', '') || 'play/,classes/,tools/').split(',');
 const shotsDir = opt('shots', '');
+const modes = String(opt('modes', '') || 'phone,window').split(',');   // phone: mobile emulation (the layout viewport may stretch to the content); window: a desktop window of that width (no stretch)
 const jobs = +opt('jobs', 8);
 const HERO = { race: 'orc', cls: 'shaman', spec: 'enhancement', role: 'dps', lvl: 24 };
 
@@ -71,6 +74,11 @@ const PROBE = `() => {
     if (r.right > W + 1 && !inScroll(e) && !bad.some(b => b.contains(e))) bad.push(e);
   }
   for (const e of bad.slice(0, 6)) { const r = e.getBoundingClientRect(); out.push([nm(e), 'right edge ' + Math.round(r.right) + ' > ' + W + ' (width ' + Math.round(r.width) + ')']); }
+  // the top bar row and its buttons inside the screen (at 320 the row grew to 399 px with the page and pushed the language button off)
+  for (const e of document.querySelectorAll('.topbar .in, .topbar .tools > *')) {
+    const r = e.getBoundingClientRect(); if (r.width < 1 || !shown(e)) continue;
+    if (r.right > W + 1) out.push([nm(e), 'top bar past the screen: right ' + Math.round(r.right) + ' > ' + W]);
+  }
   // classes/: the class cards one height
   const rows = [...document.querySelectorAll('.cmp.cls .cmp-row')].filter(e => e.getBoundingClientRect().height > 0);
   if (rows.length) {
@@ -116,8 +124,8 @@ async function newWorker() {
 const found = [];
 async function check(w, job) {
   const { S, ev } = w;
-  const { lang, sub, width, theme, hero } = job;
-  await S('Emulation.setDeviceMetricsOverride', { width, height: 800, deviceScaleFactor: 1, mobile: width < 720 });
+  const { lang, sub, width, theme, hero, mode } = job;
+  await S('Emulation.setDeviceMetricsOverride', { width, height: 800, deviceScaleFactor: 1, mobile: mode === 'phone' && width < 720 });
   if (w.script) await S('Page.removeScriptToEvaluateOnNewDocument', { identifier: w.script });
   const ls = `localStorage.clear();localStorage.setItem('wf-theme','${theme}');localStorage.setItem('gabella-lang','${lang}');` + (hero ? `localStorage.setItem('gabella-wf-me',${JSON.stringify(JSON.stringify(HERO))});` : '');
   w.script = (await S('Page.addScriptToEvaluateOnNewDocument', { source: `try{${ls}}catch(e){}` })).identifier;
@@ -132,13 +140,13 @@ async function check(w, job) {
     const { cssContentSize } = await S('Page.getLayoutMetrics');
     const r = await S('Page.captureScreenshot', { format: 'png', captureBeyondViewport: true, clip: { x: 0, y: 0, width: Math.max(width, Math.ceil(cssContentSize.width)), height: Math.min(Math.ceil(cssContentSize.height), 6000), scale: 1 } });
     mkdirSync(shotsDir, { recursive: true });
-    writeFileSync(join(shotsDir, `${sub.replace(/\W/g, '') || 'home'}-${lang}-${width}-${theme}${hero ? '-hero' : ''}.png`), Buffer.from(r.data, 'base64'));
+    writeFileSync(join(shotsDir, `${sub.replace(/\W/g, '') || 'home'}-${lang}-${width}-${theme}${hero ? '-hero' : ''}${mode === 'window' ? '-win' : ''}.png`), Buffer.from(r.data, 'base64'));
   }
 }
 
 const queue = [];
 for (const sub of subs) for (const lang of langs) for (const width of widths) for (const theme of themes)
-  for (const hero of sub.startsWith('play') || argv.includes('--hero') ? [false, true] : [false]) queue.push({ sub, lang, width, theme, hero });
+  for (const hero of sub.startsWith('play') || argv.includes('--hero') ? [false, true] : [false]) for (const mode of modes) queue.push({ sub, lang, width, theme, hero, mode });
 const total = queue.length, t0 = Date.now();
 const workers = await Promise.all(Array.from({ length: Math.min(jobs, total) }, newWorker));
 await Promise.all(workers.map(async w => {
@@ -147,10 +155,10 @@ await Promise.all(workers.map(async w => {
     try { await check(w, job); } catch (e) { found.push({ ...job, sel: 'ERROR', why: String(e.message).slice(0, 120) }); }
   }
 }));
-for (const f of found.slice(0, 120)) console.log(`/${f.sub} | ${f.lang} | ${f.width} | ${f.theme} | ${f.hero ? 'hero' : 'empty'} | ${f.sel} | ${f.why}`);
+for (const f of found.slice(0, 120)) console.log(`/${f.sub} | ${f.lang} | ${f.width} | ${f.theme} | ${f.mode} | ${f.hero ? 'hero' : 'empty'} | ${f.sel} | ${f.why}`);
 if (found.length > 120) console.log(`... and ${found.length - 120} more`);
 if (opt('json', '')) writeFileSync(opt('json', ''), JSON.stringify(found, null, 1));
-console.log(`narrow: ${found.length ? 'УПАЛО' : 'ПРОЙДЕНО'} — ${found.length} found in ${total} page loads (${subs.join(' ')} x ${langs.length} languages x ${widths.join('/')} px x ${themes.join('/')}), ${Math.round((Date.now() - t0) / 1000)}s`);
+console.log(`narrow: ${found.length ? 'УПАЛО' : 'ПРОЙДЕНО'} — ${found.length} found in ${total} page loads (${subs.join(' ')} x ${langs.length} languages x ${widths.join('/')} px x ${themes.join('/')} x ${modes.join('/')}), ${Math.round((Date.now() - t0) / 1000)}s`);
 try { await send('Browser.close'); } catch {}
 chrome.kill(); server.close();
 process.exit(found.length ? 1 : 0);
