@@ -8,6 +8,6 @@ routes = [{ pattern = "report.gabella.site", custom_domain = true }]
 
 # Optional: the rate limit shared by all isolates. Create with `npx wrangler kv namespace create RL`,
 # then uncomment and put the id it prints.
-# [[kv_namespaces]]
-# binding = "RL"
-# id = "<KV_NAMESPACE_ID>"
+[[kv_namespaces]]
+binding = "RL"
+id = "c19034f496a84055ba62d5dfde863575"
