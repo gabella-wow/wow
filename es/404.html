@@ -257,7 +257,7 @@ code { font-size: .92em; background: var(--surface-2); padding: 1px 5px; border-
 .hero .btn:hover { background: #e0c27a; border-color: #e0c27a; }
 .hero .btn.ghost { background: rgba(5,5,5,.35); color: var(--ink); border-color: rgba(241,236,224,.45); }
 .hero .btn.ghost:hover { border-color: #e0c27a; background: rgba(5,5,5,.55); }
-/* Fresh: the three newest notes at the bottom of the hero (build.fresh) */
+/* Ask: the search line at the bottom of the hero */
 .hask { width: 100%; min-width: 0; margin: 0 auto 30px; display: grid; gap: 12px; justify-items: start; }
 .hsrch { display: flex; align-items: center; gap: 12px; width: min(100%, 620px); min-height: 54px; padding: 0 12px 0 18px; border: 1px solid rgba(241,236,224,.32); border-radius: 10px; background: rgba(5,5,5,.6); backdrop-filter: blur(6px); color: var(--ink-2); font-size: var(--fs-16); text-decoration: none; transition: border-color .15s; }
 .hsrch:hover, .hsrch:focus-visible { border-color: #e0c27a; color: var(--ink); }
@@ -286,16 +286,15 @@ code { font-size: .92em; background: var(--surface-2); padding: 1px 5px; border-
 .lst-t b { font-size: var(--fs-16); font-weight: 600; line-height: 1.25; }
 .lst-t span { font-size: var(--fs-14); line-height: 1.3; color: #d9d2c2; }
 .lstat .ico { flex: none; width: 20px; height: 20px; color: #e0c27a; }
-.hnews { margin: 0 auto 34px; display: grid; gap: 10px; }
-.hnews .hh { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; text-shadow: var(--hero-shadow); }
-.hnews .hh h2 { font-size: var(--fs-22); line-height: 1; color: var(--ink); }
-.hnews .hh a { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font-weight: 600; color: var(--ink-gold); }
+/* Fresh: the three newest notes under «Builds and talents» (build.fresh); the page script merges the feeds in.
+   Below the first screens, so the swap of the cards never shifts what the reader sees first */
+#fresh.block { padding-top: 64px; gap: 18px; }
 .hnews .row3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
-.nc { display: grid; gap: 4px; align-content: start; padding: 14px 18px 16px; border: 1px solid rgba(255,255,255,.12); border-radius: 10px; background: rgba(10,10,10,.66); backdrop-filter: blur(6px); color: var(--ink); text-decoration: none; transition: border-color .2s; }
-.nc:hover { border-color: #e0c27a; }
-.nc time { font-size: var(--fs-13); color: var(--ink-2); font-variant-numeric: lining-nums tabular-nums; }
+.nc { display: grid; gap: 4px; align-content: start; padding: 14px 18px 16px; border: 1px solid var(--pline); border-radius: 10px; background: var(--panel-2); color: var(--fg); text-decoration: none; transition: border-color .2s; }
+.nc:hover { border-color: var(--gold-2); }
+.nc time { font-size: var(--fs-13); color: var(--muted); font-variant-numeric: lining-nums tabular-nums; }
 .nc b { font-size: var(--fs-16); font-weight: 600; line-height: 1.3; }
-.nc span { font-size: var(--fs-14); color: var(--ink-2); line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.nc span { font-size: var(--fs-14); color: var(--muted); line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 
 /* Section heads */
 main { padding-bottom: 40px; }
@@ -1072,7 +1071,7 @@ dialog.sheet::backdrop { background: rgba(0,0,0,.6); }
   .htasks a.on { grid-column: 1 / -1; }   /* the checklist is a full row, the four goals below it two by two */
   .htasks a { min-height: 48px; padding: 4px 10px; }
   .cta .btn { flex: 1 1 140px; padding: 0 12px; }
-  .hnews { margin-bottom: 20px; gap: 6px; }
+  #fresh.block { padding-top: 40px; gap: 14px; }
   .hnews .row3 { grid-template-columns: minmax(0, 1fr); gap: 8px; }
   .nc { padding: 11px 14px; }
   .nc span { display: none; }
@@ -1757,7 +1756,7 @@ a.frc:hover { text-decoration-color: var(--gold); }
 <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png?v=00a6a7d9">
 <meta name="apple-mobile-web-app-title" content="Gabella WoW">
 <link rel="stylesheet" href="../assets/radio/radio.css?v=556d7dc63f" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="../assets/search/search.css?v=3176deccbe" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="../assets/search/search.css?v=913353b005" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="../assets/me/me.css?v=31a96a9cac" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="../assets/hero/hero.css?v=cc9d30bf3d" media="print" onload="this.media='all'">
 </head>
@@ -1991,7 +1990,7 @@ addEventListener('beforeinstallprompt', e => {
 });
 </script>
 <script src="../assets/radio/radio.js?v=556d7dc63f" data-root="../" defer></script>
-<script src="../assets/search/search.js?v=3176deccbe" data-root="../" defer></script>
+<script src="../assets/search/search.js?v=913353b005" data-root="../" defer></script>
 <script src="../assets/me/me.js?v=31a96a9cac" data-root="../" data-home="./" data-lang="es" data-ach="0" data-teaser="" data-close="Cerrar" data-page="404" data-look="2" defer></script>
 <script src="../assets/hero/hero.js?v=cc9d30bf3d" data-root="../" data-home="./" data-data="../assets/hero/es.json?v=cc9d30bf3d" defer></script>
 </body>
