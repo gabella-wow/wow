@@ -1065,6 +1065,9 @@ dialog.sheet::backdrop { background: rgba(0,0,0,.6); }
   .cmp.cls .cmp-id > span { display: contents; }
   .cmp.cls .cmp-id small { grid-column: 1 / -1; margin: 0; min-height: 2.8em; }
 }
+@container (max-width: 320px) {   /* 320 px screen: the spec names get ~174 px beside the role dots and run to 3 lines in some classes and languages (X6-03) — a box of 3 lines for all, one height */
+  .cmp.cls .cmp-id small { min-height: 4.2em; }
+}
 @media (max-width: 719px) {
   :root { --top: 56px; --fs-h2: var(--fs-28); --fs-hero: var(--fs-40); }
   .wrap, .topbar .in { padding-left: 16px; padding-right: 16px; }
@@ -1193,7 +1196,7 @@ dialog.sheet::backdrop { background: rgba(0,0,0,.6); }
   .cd .what a, .gamehint a, .langhint a { padding-block: 14px; }   /* inline links: a 44 px touch area, the line stays */
   .clinks { gap: 0 14px; }
   .clink.two { min-height: 44px; }
-  .clinks { display: grid; width: 100%; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 10px; }
+  .clinks { display: flex; flex-wrap: wrap; width: 100%; gap: 0 16px; }   /* each name at its own width, the next one wraps: two half columns cut the Warlock name (ru, uk, de) at 320–360 px (X6-04) */
   .clink.two small { overflow: hidden; text-overflow: ellipsis; }
 }
 @media (max-width: 374px) { .bt small { display: none; } }   /* 320–374: four buttons (44 px from 360); the subtitle gives way, «Gabella» and the mark stay */
