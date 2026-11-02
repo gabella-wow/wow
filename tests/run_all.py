@@ -7,6 +7,9 @@ runs = [[f] for f in sorted(glob.glob(os.path.join(HERE, 'test_*.py')))] + [[os.
 failed = []
 # Overflow check in headless Chrome (key pages x 9 languages x 2 widths); the full run: node tests/overflow_check.mjs --full
 runs.append(['--node', os.path.join(HERE, 'overflow_check.mjs'), '--quick'])
+# Narrow phones (audit X6): /play/ (no hero and a saved hero) and /classes/ x 9 languages x 320/360/375 x both themes —
+# no sideways scroll, class cards one height, chips inside their column, «More» aria-expanded, search named without Ctrl K
+runs.append(['--node', os.path.join(HERE, 'narrow_check.mjs')])
 # Alignment check: the content of every button / chip / tab / badge in the middle of its frame, in pixels (full: --full)
 runs.append(['--node', os.path.join(HERE, 'align_check.mjs'), '--quick'])
 for args in runs:
