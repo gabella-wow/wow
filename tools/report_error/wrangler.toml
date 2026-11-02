@@ -1,0 +1,13 @@
+# «Нашёл ошибку» -> Discord. Setup and rollback: docs/wow/X3-REPORT-ERROR.md (outside the repo).
+# Secrets, never here: npx wrangler secret put REPORT_WEBHOOK  ·  npx wrangler secret put RL_SALT
+name = "gabella-report-error"
+main = "worker.js"
+compatibility_date = "2026-10-01"
+workers_dev = false
+routes = [{ pattern = "report.gabella.site", custom_domain = true }]
+
+# Optional: the rate limit shared by all isolates. Create with `npx wrangler kv namespace create RL`,
+# then uncomment and put the id it prints.
+# [[kv_namespaces]]
+# binding = "RL"
+# id = "<KV_NAMESPACE_ID>"
