@@ -471,9 +471,8 @@ GUIDES.append({
     ],
     'sections': [
         {'id': 'list', 'title': t('Подземелья по уровням', 'Dungeons by level', 'Підземелля за рівнями'), 'blocks': [
-            ('text', [t('Все 35 подземелий, из них 9 новых. Уровни по Warcraft Tavern, Sportskeeda даёт те же; у Excavation Site: Wetlands — по заметкам беты Blizzard. Где другие сайты называют иной диапазон, он подписан мелко. Жёстких ограничений по уровню Blizzard не публиковала.',
-                        'All 35 dungeons, 9 of them new. Levels are from Warcraft Tavern, Sportskeeda gives the same; for Excavation Site: Wetlands, from the Blizzard beta notes. Where other sites list a different range, it is shown in small print. Blizzard has not published hard level limits.',
-                        'Усі 35 підземель, з них 9 нових. Рівні за Warcraft Tavern, Sportskeeda дає ті самі; у Excavation Site: Wetlands — за нотатками бети Blizzard. Де інші сайти називають інший діапазон, він підписаний дрібно. Жорстких обмежень за рівнем Blizzard не публікувала.')]),
+            ('text', [t('Жёстких ограничений по уровню Blizzard не публиковала.', 'Blizzard has not published hard level limits.',
+                        'Жорстких обмежень за рівнем Blizzard не публікувала.')]),   # sources: the list at the end; a differing range: under the level in the row
             ('raw', _dg_filter()),
             ('text', [t('Вход в [[Даларан|City of Dalaran]] Орде не закрыт. По заметкам беты Blizzard от 16.10 Орду в самом городе атакуют, едва заметив, но на доступ к подземелью это не влияет. Цепочка заданий Орды на Dalaran Sewer Key больше не даёт свободного прохода по городу.',
                         'The Horde is not locked out of City of Dalaran. Per the Blizzard beta notes of Oct 16, the Horde is attacked on sight in the city itself, but this does not affect access to the dungeon. The Horde questline for the Dalaran Sewer Key no longer grants free passage through the city.',

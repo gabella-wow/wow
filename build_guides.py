@@ -611,13 +611,13 @@ addEventListener('hashchange', openHash); openHash();'''
 
 
 DG_TX = {
-    'ru': {'h': ['Подземелье', 'Уровни', 'Где вход'], 'new': 'новое', 'shown': 'Показано', 'of': 'из',
+    'ru': {'h': ['Подземелье', 'Уровни', 'Где вход'], 'new': 'новое', 'alt': 'другие сайты', 'shown': 'Показано', 'of': 'из',
            'none': 'Под этот уровень подземелий нет.', 'need': 'Укажите свой уровень, чтобы отфильтровать.',
            'only': {'alliance': 'Только Альянс', 'horde': 'Только Орда'}, 'side': {'alliance': 'Альянс, Орде далеко', 'horde': 'Орда, Альянсу далеко'}},
-    'en': {'h': ['Dungeon', 'Levels', 'Entrance'], 'new': 'new', 'shown': 'Showing', 'of': 'of',
+    'en': {'h': ['Dungeon', 'Levels', 'Entrance'], 'new': 'new', 'alt': 'other sites', 'shown': 'Showing', 'of': 'of',
            'none': 'No dungeons for this level.', 'need': 'Enter your level to filter.',
            'only': {'alliance': 'Alliance only', 'horde': 'Horde only'}, 'side': {'alliance': 'Alliance; a long way for the Horde', 'horde': 'Horde; a long way for the Alliance'}},
-    'uk': {'h': ['Підземелля', 'Рівні', 'Де вхід'], 'new': 'нове', 'shown': 'Показано', 'of': 'з',
+    'uk': {'h': ['Підземелля', 'Рівні', 'Де вхід'], 'new': 'нове', 'alt': 'інші сайти', 'shown': 'Показано', 'of': 'з',
            'none': 'Під цей рівень підземель немає.', 'need': 'Вкажіть свій рівень, щоб відфільтрувати.',
            'only': {'alliance': 'Лише Альянс', 'horde': 'Лише Орда'}, 'side': {'alliance': 'Альянс, Орді далеко', 'horde': 'Орда, Альянсу далеко'}},
 }
@@ -637,7 +637,8 @@ function renderDg() {
   if (dgMode === 'mine') rows = dgLvl ? rows.filter(d => nearLvl(d, dgLvl) && (!dgFac || !d[6] || d[6] === dgFac || d[7])) : [];
   $('#dgBody').innerHTML = rows.length ? rows.map(d => {
     const mine = dgLvl && nearLvl(d, dgLvl);
-    const alt = (d[5] || []).map(a => `${a[0]}: ${a[1]}`).join(', ');
+    const alts = [...new Set((d[5] || []).map(a => a[1]))].filter(r => r !== lvRange(d));   /* a mark only where other sites differ, no source names */
+    const alt = alts.length ? `${TX.alt}: ${alts.map(r => r.replace('–', '⁠–⁠')).join(', ')}` : '';   /* a range never breaks at its dash */
     const pg = TX.pg[DUNGEONS.indexOf(d)], nm = pg ? `<a href="${pg}">${esc(d[0])}</a>` : esc(d[0]);   /* a dungeon with its own page links to it */
     return `<tr class="${mine ? 'mine' : ''}"><td data-l="${TX.h[0]}">${nm}${d[4] ? ` <span class="tag new">${TX.new}</span>` : ''}</td>`
       + `<td data-l="${TX.h[1]}"><span class="lvl${mine ? ' gold' : ''}">${lvRange(d)}</span>${alt ? `<span class="alt">${esc(alt)}</span>` : ''}</td>`
