@@ -197,4 +197,17 @@
   addEventListener('gabella-me', e => { if (e.detail !== 'hero') paint(); });
   paint();
   data().then(() => { paintBtn(); paintTalents(); }, () => {});
+
+  /* a counter without cookies or ids: once a day per browser one beacon «visit», plus «char» if a hero is saved (the share of visits with a character) */
+  function beacon() {
+    try {
+      const day = new Date().toISOString().slice(0, 10);
+      if (localStorage.getItem('gabella-cnt') === day) return;
+      localStorage.setItem('gabella-cnt', day);
+      const h = read(), send = k => navigator.sendBeacon('https://report.gabella.site/c', new Blob([JSON.stringify({ k })], { type: 'text/plain' }));
+      send('visit');
+      if (h && h.cls && h.race) send('char');
+    } catch (e) { /* no storage or no beacon: not counted */ }
+  }
+  addEventListener('load', () => (window.requestIdleCallback ? requestIdleCallback(beacon, { timeout: 5000 }) : setTimeout(beacon, 3000)));
 })();

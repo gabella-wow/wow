@@ -1,7 +1,8 @@
 // Worker gabella-report-error: origin, empty, spam, limits, the Discord message. No network. Run: node tests/test_report_worker.mjs
 import assert from 'node:assert/strict';
-import { handle, memStore, message, validate, PER_CLIENT } from '../tools/report_error/worker.js';
+import { handle, memStore, message, validate } from '../tools/report_error/worker.js';
 
+const PER_CLIENT = 3;   // as in worker.js (constants are not exported: the Workers runtime allows only handlers as exports)
 const ENV = { REPORT_WEBHOOK: 'https://discord.invalid/webhook/PLACEHOLDER', RL_SALT: 'test-salt' };
 const GOOD = { url: 'https://gabella.site/wow/en/guides/spec-mage-fire/', lang: 'en', w: 1280, v: '2026-11-01', text: 'Talent row 3 is wrong', ms: 4000, hp: '' };
 

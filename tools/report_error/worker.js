@@ -5,16 +5,18 @@
 // for the hash of the client address in the rate limit. Optional KV binding RL (wrangler.toml) keeps the limit across
 // isolates; without it the limit lives in the memory of one isolate.
 
-export const ORIGINS = ['https://gabella.site'];
-export const PAGE_PREFIX = 'https://gabella.site/wow/';
-export const LANGS = ['ru', 'en', 'uk', 'de', 'es', 'fr', 'it', 'pl', 'pt'];
-export const MAX_BODY = 4096;        // bytes of the request body
-export const MAX_TEXT = 500;         // characters of the note
-export const MAX_URL = 300;
-export const PER_CLIENT = 3;         // reports per client per hour
-export const PER_HOUR = 60;          // reports per hour from everyone (Discord stays quiet during a flood)
-export const MIN_MS = 800;           // a person needs more than this between opening the form and sending it
+const ORIGINS = ['https://gabella.site'];
+const PAGE_PREFIX = 'https://gabella.site/wow/';
+const LANGS = ['ru', 'en', 'uk', 'de', 'es', 'fr', 'it', 'pl', 'pt'];
+const MAX_BODY = 4096;        // bytes of the request body
+const MAX_TEXT = 500;         // characters of the note
+const MAX_URL = 300;
+const PER_CLIENT = 3;         // reports per client per hour
+const PER_HOUR = 60;          // reports per hour from everyone (Discord stays quiet during a flood)
+const MIN_MS = 800;           // a person needs more than this between opening the form and sending it
 const HOUR = 3600 * 1000;
+const COUNT_PATH = '/c';       // the visit beacon: {k:'visit'|'char'}, one per browser per day
+const COUNT_TTL = 120 * 86400; // seconds a day counter lives in KV
 
 function cors(origin) {
   return ORIGINS.includes(origin)
@@ -72,6 +74,23 @@ function kvStore(kv) {
   };
 }
 
+// Day counters cnt:YYYY-MM-DD:visit|char (UTC). Only a number per key: no IP, no user agent, no id. A read+write is not atomic,
+// so under a burst a few hits can be lost; fine for a ratio.
+const countMem = new Map();
+export function dayKey(now, k) { return `cnt:${new Date(now).toISOString().slice(0, 10)}:${k}`; }
+async function count(request, origin, env, deps, now) {
+  const raw = await request.text();
+  if (!raw || raw.length > 64) return reply(400, origin, 'body');
+  let data;
+  try { data = JSON.parse(raw); } catch { return reply(400, origin, 'json'); }
+  if (!data || typeof data !== 'object' || (data.k !== 'visit' && data.k !== 'char')) return reply(400, origin, 'kind');
+  const key = dayKey(now, data.k);
+  if (deps.counts) deps.counts.set(key, (deps.counts.get(key) || 0) + 1);
+  else if (env.RL) await env.RL.put(key, String((Number(await env.RL.get(key)) || 0) + 1), { expirationTtl: COUNT_TTL });
+  else countMem.set(key, (countMem.get(key) || 0) + 1);
+  return reply(204, origin);
+}
+
 export async function handle(request, env, deps = {}) {
   const origin = request.headers.get('Origin') || '';
   const send = deps.fetch || fetch;
@@ -81,6 +100,7 @@ export async function handle(request, env, deps = {}) {
   if (!ORIGINS.includes(origin)) return reply(403, origin, 'origin');
   if (request.method === 'OPTIONS') return reply(204, origin);
   if (request.method !== 'POST') return reply(405, origin, 'method');
+  if (new URL(request.url).pathname === COUNT_PATH) return count(request, origin, env, deps, now);
   if (!env.REPORT_WEBHOOK || !env.RL_SALT) return reply(503, origin, 'not configured');
 
   const raw = await request.text();
