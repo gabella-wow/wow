@@ -279,9 +279,9 @@ def tabbar(cur=None, home='@@HOME@@', more=False):
 
 
 # Top menu: the same items in the same order on every page; anchors of the home page stay in its own «Ещё» group.
-# Races, all articles and players live in «Ещё»; «Second screen» (play/) is in the menu since 29.10: people did not find it in «Ещё».
-NAV = (('classes/', 'Классы'), ('guides/builds/', 'Билды и таланты'), ('guides/tier-list/', 'Тир-лист'), ('guides/legacy/', 'Legacy'),
-       ('guides/leveling/', 'Прокачка'), ('guides/dungeons/', 'Подземелья'), ('tools/', 'Инструменты'), ('play/', 'Второй экран'))
+# Races, all articles, Legacy and the tools live in «Ещё»; «In game» (play/) is in the menu since 29.10: people did not find it in «Ещё»; «News» since 02.11 (2 clicks → 1).
+NAV = (('classes/', 'Классы'), ('guides/builds/', 'Билды и таланты'), ('guides/tier-list/', 'Тир-лист'),
+       ('guides/leveling/', 'Прокачка'), ('guides/dungeons/', 'Подземелья'), ('guides/news/', 'Новости'), ('play/', 'В игре'))
 # Sections sheet («Ещё»): (group, [(path from the language home, label)]); '#…' — a block of the home page.
 # TAB_DUP: pages the phone tab bar already has — the sheet hides them below 720 px (the sheet keeps them for 720–1210 px, no menu there).
 MORE = (
@@ -289,10 +289,9 @@ MORE = (
                     ('guides/leveling/', 'Прокачка 1–60'), ('guides/dungeons/', 'Подземелья и рейды'), ('guides/professions/', 'Профессии'),
                     ('guides/server-status/', 'Статус серверов'), ('guides/name-reservation/', 'Резерв имён'),
                     ('guides/faq/', 'FAQ и даты'), ('guides/news/', 'Новости'), ('guides/', 'Все статьи'))),
-    ('Инструменты', (('talents/', 'Калькулятор талантов'), ('character/', 'Мой персонаж'),('tools/#picker', 'Раса и класс'), ('tools/#raid', 'Состав группы и LFG'), ('play/', 'Второй экран'))),
+    ('Инструменты', (('talents/', 'Калькулятор талантов'), ('character/', 'Мой персонаж'),('tools/#picker', 'Раса и класс'), ('tools/#raid', 'Состав группы и LFG'), ('play/', 'В игре'))),
     ('Сообщество', (('discord', 'Discord'),) + ((('roster/', 'Игроки'),) if SOCIAL else ()) + (('profile/', 'Мой профиль'),)),
 )
-WIDE, NAV_WIDE = {'play/'}, ' class="nwide"'   # from 1440 px «Second screen» takes Discord's place (nine items do not fit); otherwise it is in «Ещё»
 TALENTS, TL = 'guides/builds/', ' data-tl'   # the «Talents» item: hero.js points it at the saved character's spec tree
 TAB_DUP = {p for p, _, _ in TABS if p}
 TAB_SHORT = {'uk': {'Прокачування': 'Прокачка'}}   # a word too long for a fifth of a 320–375 px screen
@@ -306,8 +305,8 @@ def discord_link(src, text='Discord', cls=''):
 def mainnav(cur=None, home='@@HOME@@'):
     """Top menu markup; cur — path of the current item (NAV), home '' — the home page itself."""
     on = ' aria-current="true"'
-    links = ''.join(f'<a href="{home}{p}"{on if p == cur else ""}{TL if p == TALENTS else ""}{NAV_WIDE if p in WIDE else ""}>{t}</a>' for p, t in NAV)
-    return f'<nav class="mainnav" aria-label="Разделы">\n    {links}{discord_link("menu", cls="nnarrow")}\n  </nav>'
+    links = ''.join(f'<a href="{home}{p}"{on if p == cur else ""}{TL if p == TALENTS else ""}>{t}</a>' for p, t in NAV)
+    return f'<nav class="mainnav" aria-label="Разделы">\n    {links}{discord_link("menu")}\n  </nav>'
 
 
 def more_groups(home='@@HOME@@', cur=None):

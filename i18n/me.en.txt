@@ -51,7 +51,7 @@ Ethnographer
 Open the pages of all ten races.
 Polyglot
 Open the guide in three languages.
-Second Screen
+In game
 Open the “In game” page.
 First Note
 Turn on Gabella radio.

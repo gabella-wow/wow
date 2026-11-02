@@ -1,4 +1,4 @@
-"""Отсчёт на главной (решение Р4): два времени резерва имён, у рейдов отсчёта нет. Запуск: python tests/test_countdown.py
+"""Отсчёт на главной (решение Р4): строки про резерв имён нет (убрана 02.11, чистка главной), у рейдов отсчёта нет. Запуск: python tests/test_countdown.py
 Функция renderCountdown вырезается из собранной главной каждого языка и исполняется в node с замороженными часами (TZ=UTC)."""
 import json, os, re, subprocess, sys, unittest
 
@@ -29,19 +29,16 @@ def render(html, lang, now):
 
 
 class Countdown(unittest.TestCase):
-    def test_reserve_times_in_page_source(self):
+    def test_before_launch_shows_units_and_no_reserve_line(self):
         for lang in langs.ALL:
             h = home(lang)
-            self.assertIn(f"r1 = new Date('{R1}')", h, lang)
-            self.assertIn(f"r2 = new Date('{R2}')", h, lang)
-
-    def test_before_launch_shows_both_reserve_times_and_units(self):
-        for lang in langs.ALL:
-            r = render(home(lang), lang, '2026-10-26T12:00:00Z')
+            self.assertNotIn('r1 = new Date', h, lang)
+            self.assertNotIn('hd-line', h, lang)
+            r = render(h, lang, '2026-10-26T12:00:00Z')
             self.assertIn('class="units"', r['html'], lang)
             self.assertEqual(r['html'].count('class="u"'), 3, lang)
-            self.assertIn(r['r1'], r['html'], lang)
-            self.assertIn(r['r2'], r['html'], lang)
+            self.assertNotIn(r['r1'], r['html'], lang)
+            self.assertNotIn(r['r2'], r['html'], lang)
 
     def test_start_time_in_page_source(self):
         for lang in langs.ALL:
@@ -53,16 +50,6 @@ class Countdown(unittest.TestCase):
             for now, dhm in (('2026-11-04T21:30:00Z', ('0', '01', '30')), ('2026-10-26T12:00:00Z', ('9', '11', '00'))):
                 nums = re.findall(r'<div class="u"><b>(\d+)</b>', render(h, lang, now)['html'])
                 self.assertEqual(tuple(nums), dhm, (lang, now))
-
-    def test_reserve_line_switches_exactly_at_r1(self):
-        for lang in langs.ALL:
-            h = home(lang)
-            before = render(h, lang, '2026-10-27T16:59:00Z')
-            after = render(h, lang, '2026-10-27T17:00:00Z')
-            self.assertIn(before['r1'], before['html'], lang)
-            self.assertIn(before['r2'], before['html'], lang)
-            self.assertNotIn(after['r1'], after['html'], lang)
-            self.assertNotIn(after['r2'], after['html'], lang)
 
     def test_raids_have_no_countdown(self):
         for lang in langs.ALL:

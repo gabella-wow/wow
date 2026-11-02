@@ -189,6 +189,11 @@
     document.querySelectorAll('a[data-tl]').forEach(a => {
       a.dataset.tl = a.dataset.tl || a.getAttribute('href');
       a.setAttribute('href', ok ? `${HOME}guides/builds-${h.cls}/${D.sid[h.cls].includes(h.spec) ? '#' + h.spec : ''}` : a.dataset.tl);
+      if (a.hasAttribute('data-tlb')) {   // the hero button of the home page: «Builds and talents» until a spec is saved, then «Build: <spec>»
+        a.dataset.tlt = a.dataset.tlt || a.textContent;
+        const i = ok ? D.sid[h.cls].indexOf(h.spec) : -1;
+        a.textContent = i >= 0 ? fill(D.tx.bSpec, { s: D.sn[h.cls][i] }) : a.dataset.tlt;
+      }
     });
   }
   function paint() { paintBtn(); paintTalents(); if (document.getElementById('myHome')) data().then(paintHome, () => {}); }

@@ -136,9 +136,6 @@ code { font-size: .92em; background: var(--surface-2); padding: 1px 5px; border-
 .mainnav { display: flex; margin-left: auto; }   /* auto on both this and .tools: the free space splits equally left and right of the menu */
 .mainnav a { min-height: 44px; display: grid; place-items: center; padding: 0 9px; color: inherit; opacity: .78; text-decoration: none; font-size: var(--fs-14); white-space: nowrap; font-weight: 500; box-shadow: inset 0 -2px 0 transparent; transition: opacity .2s, box-shadow .2s; }
 .mainnav a:hover { opacity: 1; }
-.mainnav a.nwide { display: none; }
-@media (min-width: 1440px) { .mainnav a.nwide { display: grid; } .mainnav a.nnarrow { display: none; } }
-:lang(es) .mainnav a.nwide { display: none !important; } :lang(es) .mainnav a.nnarrow { display: grid !important; }   /* «Segunda pantalla» runs 48 px off at 1440 */
 /* the top bar row is tight (9 links + language, search, radio, login, theme): measured to fit with room at every width */
 @media (max-width: 1439px) { .mainnav a { padding: 0 6px; } }   /* 1281-1439 too: with 9 px pt / ru ran the theme button off a 1300 px screen */
 @media (min-width: 1261px) and (max-width: 1439px) { :lang(es) .topbar .bt small { display: none; } }   /* es: «Builds y talentos», «Lista de tiers» and the subtitle ran the theme button 2-34 px off a 1261-1366 px screen; the menu stays, the wordmark stands alone */
@@ -232,8 +229,7 @@ code { font-size: .92em; background: var(--surface-2); padding: 1px 5px; border-
 .hero-in { width: 100%; padding-top: calc(var(--top) + clamp(40px, 9vh, 110px)); padding-bottom: 40px; display: grid; gap: 22px; justify-items: start; max-width: var(--wrap); }
 .todsw { min-height: 44px; display: flex; align-items: center; }
 .hero > .todsw { position: absolute; z-index: 1; top: calc(var(--top) + 8px); right: max(20px, calc((100% - var(--wrap)) / 2 + 20px)); font-size: var(--fs-13); text-shadow: var(--hero-shadow); }   /* the scene caption, out of the text column */
-@media (max-width: 719px) { .hero > .todsw { left: 20px; right: auto; min-height: 0; } .hero > .todsw button:not([data-t]) { min-height: 44px; padding: 0 10px; border-radius: 6px; background: rgb(5 5 5 / .5); } }
-.hd-line .dup { display: none; }   /* a date the countdown already says */
+@media (max-width: 719px) { .hero > .todsw { display: none; } }   /* the time-of-day caption says nothing to a phone reader (clarity audit 02.11) */
 .hero h1 { font-size: var(--fs-hero); line-height: .98; letter-spacing: .005em; text-shadow: var(--hero-shadow); }
 .hero h1 span { display: block; color: var(--ink-gold); }
 .hero h1, .hero .lead { text-shadow: var(--hero-shadow); }  /* the castle and the sun sit behind the text */
@@ -261,12 +257,6 @@ code { font-size: .92em; background: var(--surface-2); padding: 1px 5px; border-
 .hero .btn:hover { background: #e0c27a; border-color: #e0c27a; }
 .hero .btn.ghost { background: rgba(5,5,5,.35); color: var(--ink); border-color: rgba(241,236,224,.45); }
 .hero .btn.ghost:hover { border-color: #e0c27a; background: rgba(5,5,5,.55); }
-.hd-line { display: flex; flex-wrap: wrap; gap: 2px 0; margin: 2px 0 0; font-size: var(--fs-14); color: var(--ink-2); text-shadow: var(--hero-shadow); font-variant-numeric: lining-nums tabular-nums; }
-.hd-line span { white-space: nowrap; }
-.hd-line span:not(.dup) ~ span:not(.dup)::before { content: "·"; margin: 0 10px; color: var(--ink-2); }
-.hd-line b { color: var(--ink); font-weight: 600; }
-.hd-line .past { opacity: .62; }
-.hd-line .cur b { color: var(--ink-gold); }
 /* Fresh: the three newest notes at the bottom of the hero (build.fresh) */
 .hask { width: 100%; min-width: 0; margin: 0 auto 30px; display: grid; gap: 12px; justify-items: start; }
 .hsrch { display: flex; align-items: center; gap: 12px; width: min(100%, 620px); min-height: 54px; padding: 0 12px 0 18px; border: 1px solid rgba(241,236,224,.32); border-radius: 10px; background: rgba(5,5,5,.6); backdrop-filter: blur(6px); color: var(--ink-2); font-size: var(--fs-16); text-decoration: none; transition: border-color .15s; }
@@ -277,7 +267,9 @@ code { font-size: .92em; background: var(--surface-2); padding: 1px 5px; border-
 .hq { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 14px; margin: -4px 0 0; font-size: var(--fs-14); color: var(--ink-2); text-shadow: var(--hero-shadow); }
 .hq a { min-height: 36px; display: inline-flex; align-items: center; color: var(--ink); text-decoration: underline; text-decoration-color: rgba(241,236,224,.4); text-underline-offset: 3px; }
 .hq a:hover { text-decoration-color: #e0c27a; }
-.htasks { display: grid; grid-template-columns: repeat(3, 236px); grid-auto-rows: 1fr; gap: 10px; margin-top: 4px; }   /* six goals of one size: the first screen answers «where do I start» */
+.htasks { display: grid; grid-template-columns: repeat(6, 1fr); grid-auto-rows: 1fr; gap: 10px; width: min(100%, 728px); margin-top: 4px; }   /* five goals: three, then two wider; the first screen answers «where do I start» */
+.htasks a { grid-column: span 2; }
+.htasks a:nth-child(n+4) { grid-column: span 3; }
 .htasks a { min-height: 52px; display: flex; align-items: center; justify-content: center; padding: 6px 14px; text-align: center; line-height: 1.2; border: 1px solid rgba(241,236,224,.5); border-radius: 7px; background: rgba(14,14,16,.9); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); color: #f1ece0; font-weight: 600; font-size: var(--fs-16); text-decoration: none; transition: border-color .15s; }
 .htasks a:hover { border-color: #e0c27a; }
 .htasks a.on { border-color: var(--gold); background: var(--gold); color: var(--gold-ink); }
@@ -1073,14 +1065,14 @@ dialog.sheet::backdrop { background: rgba(0,0,0,.6); }
   .cta { width: 100%; }
   .hsrch kbd { display: none; }
   .htasks { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; width: 100%; }
+  .htasks a, .htasks a:nth-child(n+4) { grid-column: auto; }
+  .htasks a.on { grid-column: 1 / -1; }   /* the checklist is a full row, the four goals below it two by two */
   .htasks a { min-height: 48px; padding: 4px 10px; }
   .cta .btn { flex: 1 1 140px; padding: 0 12px; }
   .hnews { margin-bottom: 20px; gap: 6px; }
   .hnews .row3 { grid-template-columns: minmax(0, 1fr); gap: 8px; }
   .nc { padding: 11px 14px; }
   .nc span { display: none; }
-  .hd-line { column-gap: 18px; }
-  .hd-line span + span::before { content: none; }   /* the line wraps on a phone: no dot at the start of the second row */
   #classes.block { padding-top: 48px; }
   #pickban.block { padding-top: 28px; }
   .sec-head .row:has(.tabs2) { align-items: center; }
@@ -1756,9 +1748,9 @@ a.frc:hover { text-decoration-color: var(--gold); }
 <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png?v=00a6a7d9">
 <meta name="apple-mobile-web-app-title" content="Gabella WoW">
 <link rel="stylesheet" href="../assets/radio/radio.css?v=556d7dc63f" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="../assets/search/search.css?v=b56eefe90f" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="../assets/me/me.css?v=f19953bd21" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="../assets/hero/hero.css?v=2653dbd771" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="../assets/search/search.css?v=b568ffc0f2" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="../assets/me/me.css?v=31a96a9cac" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="../assets/hero/hero.css?v=ddf7d65dcc" media="print" onload="this.media='all'">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -1789,7 +1781,7 @@ a.frc:hover { text-decoration-color: var(--gold); }
 <a class="skip" href="#main">До змісту</a><header class="topbar" id="topbar"><div class="in">
   <a class="brand" href="./"><img class="mark" src="../assets/brand/mark.webp?v=2e582991" alt="" width="40" height="40"><span class="bt"><b>Gabella</b><small>Довідник WoW Forever</small></span></a>
   <nav class="mainnav" aria-label="Розділи">
-    <a href="./classes/">Класи</a><a href="./guides/builds/" data-tl>Білди й таланти</a><a href="./guides/tier-list/">Тір-лист</a><a href="./guides/legacy/">Legacy</a><a href="./guides/leveling/">Прокачування</a><a href="./guides/dungeons/">Підземелля</a><a href="./tools/">Інструменти</a><a href="./play/" class="nwide">Другий екран</a><a class="nnarrow" href="https://discord.gg/ZGpznkX3Zw" target="_blank" rel="noopener">Discord</a>
+    <a href="./classes/">Класи</a><a href="./guides/builds/" data-tl>Білди й таланти</a><a href="./guides/tier-list/">Тір-лист</a><a href="./guides/leveling/">Прокачування</a><a href="./guides/dungeons/">Підземелля</a><a href="./guides/news/">Новини</a><a href="./play/">У грі</a><a href="https://discord.gg/ZGpznkX3Zw" target="_blank" rel="noopener">Discord</a>
   </nav>
   <div class="tools">
     <div class="langsel"><button type="button" class="langbtn" aria-haspopup="true" aria-expanded="false" >UK<span class="sr">, Мова: Українська</span></button><ul class="langlist" hidden><li><a href="../" data-lang="ru" hreflang="ru" lang="ru"><span>Русский</span><small>RU</small></a></li><li><a href="../en/" data-lang="en" hreflang="en" lang="en"><span>English</span><small>EN</small></a></li><li><a href="./" data-lang="uk" hreflang="uk" lang="uk" aria-current="page"><span>Українська</span><small>UK</small></a></li><li><a href="../de/" data-lang="de" hreflang="de" lang="de"><span>Deutsch</span><small>DE</small></a></li><li><a href="../fr/" data-lang="fr" hreflang="fr" lang="fr"><span>Français</span><small>FR</small></a></li><li><a href="../es/" data-lang="es" hreflang="es" lang="es"><span>Español</span><small>ES</small></a></li><li><a href="../pt/" data-lang="pt" hreflang="pt-BR" lang="pt-BR"><span>Português (Brasil)</span><small>PT</small></a></li><li><a href="../it/" data-lang="it" hreflang="it" lang="it"><span>Italiano</span><small>IT</small></a></li><li><a href="../pl/" data-lang="pl" hreflang="pl" lang="pl"><span>Polski</span><small>PL</small></a></li></ul></div>
@@ -1829,7 +1821,7 @@ a.frc:hover { text-decoration-color: var(--gold); }
 <div class="wrap">
 <footer id="sources">
   
-  <nav class="fmap" aria-label="Мапа сайту"><div><a class="fh" href="../uk/classes/">Класи</a><ul><li><a href="../uk/classes/warrior/">Воїн</a></li><li><a href="../uk/classes/paladin/">Паладин</a></li><li><a href="../uk/classes/hunter/">Мисливець</a></li><li><a href="../uk/classes/rogue/">Розбійник</a></li><li><a href="../uk/classes/priest/">Жрець</a></li><li><a href="../uk/classes/shaman/">Шаман</a></li><li><a href="../uk/classes/mage/">Маг</a></li><li><a href="../uk/classes/warlock/">Чорнокнижник</a></li><li><a href="../uk/classes/druid/">Друїд</a></li></ul></div><div><a class="fh" href="../uk/races/">Раси</a><ul><li><a href="../uk/races/human/">Людина</a></li><li><a href="../uk/races/dwarf/">Дворф</a></li><li><a href="../uk/races/night-elf/">Нічний ельф</a></li><li><a href="../uk/races/gnome/">Гном</a></li><li><a href="../uk/races/skyborne-alliance/">Високий скайборн</a></li><li><a href="../uk/races/orc/">Орк</a></li><li><a href="../uk/races/undead/">Нежить</a></li><li><a href="../uk/races/tauren/">Таурен</a></li><li><a href="../uk/races/troll/">Троль</a></li><li><a href="../uk/races/skyborne-horde/">Скайборн-вітрорізь</a></li></ul></div><div><a class="fh" href="../uk/guides/">Гайди</a><ul><li><a href="../uk/guides/name-reservation/">Як зарезервувати ім’я у WoW Forever</a></li><li><a href="../uk/guides/launch-checklist/">День 1: чек-лист старту</a></li><li><a href="../uk/guides/launch-day/">День старту: час, черги, статус</a></li><li><a href="../uk/guides/leveling/">Прокачування 1–60</a></li><li><a href="../uk/guides/builds/">Білди й таланти</a></li><li><a href="../uk/guides/best-race/">Найкраща раса для кожного класу</a></li><li><a href="../uk/guides/tier-list/">Тір-лист класів WoW Forever</a></li><li><a href="../uk/guides/pvp/">PvP у WoW Forever</a></li><li><a href="../uk/guides/legacy/">Система Legacy</a></li><li><a href="../uk/guides/dungeons/">Підземелля та рейди</a></li><li><a href="../uk/guides/professions/">Професії</a></li><li><a href="../uk/guides/addons/">Аддони та інтерфейс</a></li><li><a href="../uk/guides/faq/">FAQ і дати</a></li><li><a href="../uk/guides/glossary/">Словник термінів</a></li><li><a href="../uk/guides/requirements/">Системні вимоги</a></li><li><a href="../uk/guides/news/">Новини</a></li><li><a href="../uk/guides/ukrainian/">Як грати українською</a></li></ul></div><div><a class="fh" href="../uk/tools/">Інструменти</a><ul><li><a href="../uk/tools/">Інструменти</a></li><li><a href="../uk/play/">Другий екран: таймери й підземелля за рівнем</a></li></ul></div></nav><div class="legal"><p>Фанатський сайт Gabella. Сайт не пов’язаний з Blizzard Entertainment і не схвалений нею. World of Warcraft, Warcraft і Blizzard Entertainment — торгові марки або зареєстровані торгові марки Blizzard Entertainment, Inc. у США та/або інших країнах.</p><p>© 2026 Gabella<span aria-hidden="true"> · </span><a href="../uk/privacy/">Конфіденційність</a><span aria-hidden="true"> · </span><a href="https://discord.gg/ZGpznkX3Zw" target="_blank" rel="noopener">Discord</a><span aria-hidden="true"> · </span><a href="https://t.me/gabella_wow" target="_blank" rel="noopener">Telegram</a><span aria-hidden="true"> · </span>Зв’язок: <a href="mailto:contact@gabella.site">contact@gabella.site</a></p></div>
+  <nav class="fmap" aria-label="Мапа сайту"><div><a class="fh" href="../uk/classes/">Класи</a><ul><li><a href="../uk/classes/warrior/">Воїн</a></li><li><a href="../uk/classes/paladin/">Паладин</a></li><li><a href="../uk/classes/hunter/">Мисливець</a></li><li><a href="../uk/classes/rogue/">Розбійник</a></li><li><a href="../uk/classes/priest/">Жрець</a></li><li><a href="../uk/classes/shaman/">Шаман</a></li><li><a href="../uk/classes/mage/">Маг</a></li><li><a href="../uk/classes/warlock/">Чорнокнижник</a></li><li><a href="../uk/classes/druid/">Друїд</a></li></ul></div><div><a class="fh" href="../uk/races/">Раси</a><ul><li><a href="../uk/races/human/">Людина</a></li><li><a href="../uk/races/dwarf/">Дворф</a></li><li><a href="../uk/races/night-elf/">Нічний ельф</a></li><li><a href="../uk/races/gnome/">Гном</a></li><li><a href="../uk/races/skyborne-alliance/">Високий скайборн</a></li><li><a href="../uk/races/orc/">Орк</a></li><li><a href="../uk/races/undead/">Нежить</a></li><li><a href="../uk/races/tauren/">Таурен</a></li><li><a href="../uk/races/troll/">Троль</a></li><li><a href="../uk/races/skyborne-horde/">Скайборн-вітрорізь</a></li></ul></div><div><a class="fh" href="../uk/guides/">Гайди</a><ul><li><a href="../uk/guides/name-reservation/">Як зарезервувати ім’я у WoW Forever</a></li><li><a href="../uk/guides/launch-checklist/">День 1: чек-лист старту</a></li><li><a href="../uk/guides/launch-day/">День старту: час, черги, статус</a></li><li><a href="../uk/guides/leveling/">Прокачування 1–60</a></li><li><a href="../uk/guides/builds/">Білди й таланти</a></li><li><a href="../uk/guides/best-race/">Найкраща раса для кожного класу</a></li><li><a href="../uk/guides/tier-list/">Тір-лист класів WoW Forever</a></li><li><a href="../uk/guides/pvp/">PvP у WoW Forever</a></li><li><a href="../uk/guides/legacy/">Система Legacy</a></li><li><a href="../uk/guides/dungeons/">Підземелля та рейди</a></li><li><a href="../uk/guides/professions/">Професії</a></li><li><a href="../uk/guides/addons/">Аддони та інтерфейс</a></li><li><a href="../uk/guides/faq/">FAQ і дати</a></li><li><a href="../uk/guides/glossary/">Словник термінів</a></li><li><a href="../uk/guides/requirements/">Системні вимоги</a></li><li><a href="../uk/guides/news/">Новини</a></li><li><a href="../uk/guides/ukrainian/">Як грати українською</a></li></ul></div><div><a class="fh" href="../uk/tools/">Інструменти</a><ul><li><a href="../uk/tools/">Інструменти</a></li><li><a href="../uk/play/">У грі: таймери й підземелля за рівнем</a></li></ul></div></nav><div class="legal"><p>Фанатський сайт Gabella. Сайт не пов’язаний з Blizzard Entertainment і не схвалений нею. World of Warcraft, Warcraft і Blizzard Entertainment — торгові марки або зареєстровані торгові марки Blizzard Entertainment, Inc. у США та/або інших країнах.</p><p>© 2026 Gabella<span aria-hidden="true"> · </span><a href="../uk/privacy/">Конфіденційність</a><span aria-hidden="true"> · </span><a href="https://discord.gg/ZGpznkX3Zw" target="_blank" rel="noopener">Discord</a><span aria-hidden="true"> · </span><a href="https://t.me/gabella_wow" target="_blank" rel="noopener">Telegram</a><span aria-hidden="true"> · </span>Зв’язок: <a href="mailto:contact@gabella.site">contact@gabella.site</a></p></div>
 </footer>
 </div>
 
@@ -1846,7 +1838,7 @@ a.frc:hover { text-decoration-color: var(--gold); }
   <nav class="toc" aria-label="Усі розділи">
     
     <div class="grp"><div class="gh">Довідник</div><a class="tbd" data-tl href="./guides/builds/">Білди й таланти</a><a href="./guides/tier-list/">Тір-лист</a><a href="./guides/legacy/">Legacy</a><a href="./guides/pvp/">PvP</a><a class="tbd" href="./classes/">Класи</a><a href="./classes/#choose">Який клас обрати</a><a href="./races/">Раси</a><a class="tbd" href="./guides/leveling/">Прокачування 1–60</a><a href="./guides/dungeons/">Підземелля та рейди</a><a href="./guides/professions/">Професії</a><a href="./guides/server-status/">Статус серверів</a><a href="./guides/name-reservation/">Резерв імен</a><a href="./guides/faq/">FAQ і дати</a><a href="./guides/news/">Новини</a><a href="./guides/">Усі статті</a></div>
-    <div class="grp"><div class="gh">Інструменти</div><a href="./talents/">Калькулятор талантів</a><a href="./character/">Мій персонаж</a><a href="./tools/#picker">Раса і клас</a><a href="./tools/#raid">Склад групи та LFG</a><a href="./play/">Другий екран</a></div>
+    <div class="grp"><div class="gh">Інструменти</div><a href="./talents/">Калькулятор талантів</a><a href="./character/">Мій персонаж</a><a href="./tools/#picker">Раса і клас</a><a href="./tools/#raid">Склад групи та LFG</a><a href="./play/">У грі</a></div>
     <div class="grp"><div class="gh">Спільнота</div><a href="https://discord.gg/ZGpznkX3Zw" target="_blank" rel="noopener">Discord</a><a href="./profile/">Мій профіль</a></div>
   </nav>
   <div class="opts">
@@ -1990,8 +1982,8 @@ addEventListener('beforeinstallprompt', e => {
 });
 </script>
 <script src="../assets/radio/radio.js?v=556d7dc63f" data-root="../" defer></script>
-<script src="../assets/search/search.js?v=b56eefe90f" data-root="../" defer></script>
-<script src="../assets/me/me.js?v=f19953bd21" data-root="../" data-home="./" data-lang="uk" data-ach="0" data-teaser="" data-close="Закрити" data-page="404" data-look="2" defer></script>
-<script src="../assets/hero/hero.js?v=2653dbd771" data-root="../" data-home="./" data-data="../assets/hero/uk.json?v=2653dbd771" defer></script>
+<script src="../assets/search/search.js?v=b568ffc0f2" data-root="../" defer></script>
+<script src="../assets/me/me.js?v=31a96a9cac" data-root="../" data-home="./" data-lang="uk" data-ach="0" data-teaser="" data-close="Закрити" data-page="404" data-look="2" defer></script>
+<script src="../assets/hero/hero.js?v=ddf7d65dcc" data-root="../" data-home="./" data-data="../assets/hero/uk.json?v=ddf7d65dcc" defer></script>
 </body>
 </html>

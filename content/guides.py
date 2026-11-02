@@ -2403,7 +2403,7 @@ GUIDES.append({
                       'Blizzard has not named the release folder. Check the path: the gear next to the Play button in Battle.net → Show in Explorer, addons go in Interface\\AddOns.',
                       'Теку для релізу Blizzard не назвала. Перевірте шлях: шестірня біля кнопки «Грати» в Battle.net → Show in Explorer, аддони лежать в Interface\\AddOns.'),
                     'guides/addons/#install', t('Как установить', 'How to install', 'Як встановити')),
-                _ck('play', t('Второй экран', 'Second screen', 'Другий екран'),
+                _ck('play', t('В игре', 'In game', 'У грі'),
                     t('Откройте «В игре» на телефоне или втором мониторе: зоны под ваш уровень, подземелья, таймер еды и радио.',
                       'Open “In game” on your phone or a second monitor: zones for your level, dungeons, a food timer and radio.',
                       'Відкрийте «У грі» на телефоні або другому моніторі: зони під ваш рівень, підземелля, таймер їжі й радіо.'),
@@ -2635,7 +2635,7 @@ GUIDES.append({
                  'd': t('Класс, спек и раса в «Мой персонаж»: главная, таланты и чек-лист подстроятся под него, а на 10 уровне не придётся думать над первым очком.',
                         'Class, spec and race in My character: the home page, talents and checklist adapt to it, and at level 10 your first point is already planned.',
                         'Клас, спек і раса в «Мій персонаж»: головна, таланти й чек-лист підлаштуються під нього, а на 10 рівні перше очко вже сплановане.')},
-                {'t': t('Второй экран', 'Second screen', 'Другий екран'),
+                {'t': t('В игре', 'In game', 'У грі'),
                  'd': t('Откройте «В игре» на телефоне: маршрут прокачки вашей фракции, этапы и таймеры будут под рукой.',
                         'Open In game on your phone: the leveling route for your faction, milestones and timers stay at hand.',
                         'Відкрийте «У грі» на телефоні: маршрут прокачування вашої фракції, етапи й таймери будуть під рукою.')},
@@ -3190,7 +3190,7 @@ NOT_FOUND = {
 # Маршрут по зонам и совет про отдых страница берёт из гайда «Прокачка» (секции route и pace), тут только подписи и рубежи.
 PLAY = {
     'slug': 'play', 'path': 'play/', 'og': 'guides', 'art': 'hero_campfire', 'compact': True, 'more': False, 'js': 'play',
-    'title': t('Второй экран: таймеры и подземелья по уровню', 'Second screen: timers and dungeons for your level', 'Другий екран: таймери й підземелля за рівнем'),
+    'title': t('В игре: таймеры и подземелья по уровню', 'In game: timers and dungeons for your level', 'У грі: таймери й підземелля за рівнем'),
     'lead': t('Второй экран на время игры: радио, зоны и подземелья под ваш уровень, таймеры. После входа — персонажи из профиля.',
               'A second screen while you play: radio, zones and dungeons for your level, timers. After you log in: characters from your profile.',
               'Другий екран під час гри: радіо, зони й підземелля під ваш рівень, таймери. Після входу — персонажі з профілю.'),

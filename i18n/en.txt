@@ -1117,7 +1117,7 @@ News
 Our notes and the Wowhead feed
 All guides
 In game
-Second screen: radio, level, timers
+In game: radio, level, timers
 WoW Forever Reference
 Roster
 My profile
@@ -1150,7 +1150,7 @@ All news
 Every race and class combination, racial abilities and roles. Copy your pick for the group chat.
 Open the picker
 Guides and tools
-Second screen: stages, character, timers
+Stages, character, timers
 Data is cross-checked against several sources. They are listed on every guide page and in the
 Tips are the author’s opinion.
 Build a party in the group builder and share the link. Players also team up on the Gabella Discord server.
@@ -1224,7 +1224,7 @@ Race and class picker, party and raid builder
 Find a race and class for your role or build a party and raid as in the game. The lineup is stored in the link, so you can drop it in Discord.
 Next step
 Second screen
-Second screen: timers and dungeons for your level
+In game: timers and dungeons for your level
 Build and talents level by level
 Professions for your class
 Dungeons by level
@@ -1237,3 +1237,4 @@ Spec cheat sheet
 PvP tier list
 Talent calculator
 Show in full
+Start checklist

@@ -163,7 +163,7 @@ def test_roster_in_navigation():
         toc = re.search(r'<nav class="toc".*?</nav>', html, re.S).group(0)
         hrefs = re.findall(r'href="([^"]*)"', nav)
         assert not [h for h in hrefs if '#' in h], (p, hrefs)
-        assert [re.sub(r'^(\.\./|\./)+', '', h) for h in hrefs[:4]] == ['classes/', 'guides/builds/', 'guides/tier-list/', 'guides/legacy/'], (p, hrefs)
+        assert [re.sub(r'^(\.\./|\./)+', '', h) for h in hrefs[:-1]] == ['classes/', 'guides/builds/', 'guides/tier-list/', 'guides/leveling/', 'guides/dungeons/', 'guides/news/', 'play/'], (p, hrefs)   # no Legacy and tools/ in the menu (clarity 02.11): they live in «Ещё» and in the page bodies
         assert hrefs[-1] == DISCORD_AT['menu'], p
         assert nav.count('aria-current') <= 1, p
         from build import SOCIAL

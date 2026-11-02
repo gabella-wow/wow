@@ -37,7 +37,7 @@ SITE_TILES = [
     {'t': {'ru': 'Конструктор группы и подборщик', 'en': 'Group builder and picker', 'uk': 'Конструктор групи та підбірник'}, 'href': 'tools/', 'art': 'hero_tools',
      'd': {'ru': 'Раса и класс под роль, рамки группы и рейда', 'en': 'Race and class for a role, party and raid frames', 'uk': 'Раса й клас під роль, рамки групи та рейду'}},
     {'t': {'ru': 'В игре', 'en': 'In game', 'uk': 'У грі'}, 'href': 'play/', 'art': 'hero_campfire',
-     'd': {'ru': 'Второй экран: радио, уровень, таймеры', 'en': 'Second screen: radio, level, timers', 'uk': 'Другий екран: радіо, рівень, таймери'}},
+     'd': {'ru': 'В игре: радио, уровень, таймеры', 'en': 'In game: radio, level, timers', 'uk': 'У грі: радіо, рівень, таймери'}},
 ]
 # Wide hero art; everything else is a class/race portrait cut at 360/600/896/1344
 WIDTHS = {'hero_dawn': (960, 1440, 1920, 2560, 3840), 'hero_campfire': (960, 1600, 2560),

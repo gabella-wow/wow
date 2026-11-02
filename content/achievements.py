@@ -26,7 +26,7 @@ ACH = [
     ('classes_all', 'guide', 10, 'progress', {'key': 'class', 'all': True}, 'Знаток классов', 'Открыть страницы всех девяти классов.'),
     ('races_all', 'guide', 10, 'progress', {'key': 'race', 'all': True}, 'Этнограф', 'Открыть страницы всех десяти рас.'),
     ('polyglot', 'guide', 10, 'progress', {'key': 'lang', 'goal': 3, 'set': True}, 'Полиглот', 'Открыть сайт на трёх языках.'),
-    ('play_page', 'guide', 5, 'progress', {'key': 'play_page', 'goal': 1}, 'Второй экран', 'Открыть страницу «В игре».'),
+    ('play_page', 'guide', 5, 'progress', {'key': 'play_page', 'goal': 1}, 'В игре', 'Открыть страницу «В игре».'),
     # Радио
     ('radio_on', 'radio', 5, 'progress', {'key': 'radio_on', 'goal': 1}, 'Первая нота', 'Включить радио Gabella.'),
     ('radio10h', 'radio', 25, 'progress', {'key': 'radio_min', 'goal': 600}, 'Меломан', 'Слушать радио 10 часов.'),
