@@ -416,7 +416,7 @@ a.frc:hover { text-decoration-color: var(--gold); }
   .pgrid { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); align-items: start; }
   .pcol { display: grid; gap: 14px; min-width: 0; }
 }
-.psec { padding: 16px 18px; display: grid; gap: 12px; align-content: start; }
+.psec { padding: 16px 18px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; align-content: start; }   /* one column held to the box: an implicit auto column grew to the widest child at 320 px (X6-01/02) */
 /* stages and my character under the level, radio and timers (journey.src.html) */
 .pjour { margin-top: 24px; }
 .pjour { scroll-margin-top: calc(var(--top) + 16px); }
@@ -444,7 +444,7 @@ a.frc:hover { text-decoration-color: var(--gold); }
 #lvIn:focus { outline: 0; border-bottom-color: var(--gold); }
 #lvIn::placeholder { color: var(--muted); }
 /* the character line of the level block: race-true face (none when no picture of that race), class links */
-.pme { display: flex; align-items: center; gap: 12px; }
+.pme { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }   /* a long button label («Charakter zusammenstellen») goes under the face at 320 px, not off the screen */
 .pav { position: relative; flex: none; display: grid; place-items: center; width: 56px; height: 56px; border-radius: 50%; overflow: hidden; border: 1.5px solid var(--cc, var(--pline)); background: color-mix(in srgb, var(--cc, var(--panel-2)) 22%, var(--panel-2)); color: var(--cc, var(--muted)); }
 .pav .ico { width: 26px; height: 26px; }
 .pav img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
@@ -452,13 +452,13 @@ a.frc:hover { text-decoration-color: var(--gold); }
 .pme .pwho { flex: 1 1 auto; min-width: 0; display: grid; gap: 2px; }
 .pme .pwho b { font-size: var(--fs-18); }
 .pme .pwho span { color: var(--muted); font-size: var(--fs-14); }
-.pme .btn { flex: none; min-height: 40px; cursor: pointer; }
+.pme .btn { flex: none; max-width: 100%; min-height: 40px; cursor: pointer; }
 .plinks { display: flex; flex-wrap: wrap; gap: 8px; }
 .plinks[hidden] { display: none; }
 .plinks a { display: inline-flex; align-items: center; min-height: 40px; padding: 0 14px; border: 1px solid var(--pline); border-radius: 999px; color: var(--gold-2); font-size: var(--fs-14); }
 .plinks a:hover { border-color: var(--gold); }
 /* «My class at level N» under the level buttons (JS play renderCard): talents, abilities, gear, dungeons; two columns from 720 px */
-.pcard { display: grid; gap: 10px 22px; padding-top: 10px; border-top: 1px solid var(--pline); }
+.pcard { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px 22px; padding-top: 10px; border-top: 1px solid var(--pline); }
 .pcard[hidden] { display: none; }
 .pcard h3 { margin: 0; font-size: var(--fs-18); }
 .pcard > .pch { grid-column: 1 / -1; }
