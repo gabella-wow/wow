@@ -1,0 +1,7203 @@
+{
+ "event": "edit",
+ "key": "us-2360696-9",
+ "source": "forum",
+ "region": "us",
+ "topic": 2360696,
+ "post": 9,
+ "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696/9",
+ "title": "WoW Forever Beta Development Notes – Updated November 2",
+ "author": "Kaivax",
+ "role": "Community Manager",
+ "created_at": "2026-11-03T03:20:33.210Z",
+ "updated_at": "2026-11-03T20:47:06.049Z",
+ "version": 2,
+ "category": 349,
+ "beta": true,
+ "sha": "e5607bdf4232593a17cec9af93993b95e029255fdcb34a1698893faca81d775a",
+ "twin_of": null,
+ "also": [
+  "https://eu.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-3-november/631316/9"
+ ],
+ "short_news": {
+  "date": "2026-11-03",
+  "at": "2026-11-03T03:20:33Z",
+  "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696/9",
+  "title_en": "WoW Forever Beta Development Notes – Updated November 2",
+  "kind": "dev-notes",
+  "beta": true
+ },
+ "changes": [
+  {
+   "path": [
+    "Bug Fixes"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Throw"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    0.5
+   ],
+   "text": "Throw will now correctly use the 0.5 second windup timer (was incorrectly using the throwing weapon’s attack speed).",
+   "h": "eabd14472cc2"
+  },
+  {
+   "path": [
+    "Bug Fixes"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Legacy Reward",
+    "Ironforge"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Legacy Reward - Replica Ironforge Air Rifle can now correctly be used on allies that also have one equipped.",
+   "h": "e75ab1fa1bb9"
+  },
+  {
+   "path": [
+    "Bug Fixes",
+    "Legacy Reward - Replica Ironforge Air Rifle can now correctl"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 40,
+     "old": 5,
+     "unit": "s",
+     "old_unit": "min"
+    }
+   ],
+   "nums": [
+    5,
+    40
+   ],
+   "text": "Duration of the quitter debuff reduced to 40 seconds (was 5 minutes).",
+   "h": "11fb81fdf9bf"
+  },
+  {
+   "path": [
+    "Bug Fixes",
+    "Legacy Reward - Replica Ironforge Air Rifle can now correctl"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 2.5,
+     "old": 3,
+     "unit": "s",
+     "old_unit": "s"
+    }
+   ],
+   "nums": [
+    2.5,
+    3
+   ],
+   "text": "Duration of the stun reduced to 2.5 seconds (was 3 seconds).",
+   "h": "e6e9bd313146"
+  },
+  {
+   "path": [
+    "Bug Fixes"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "All Races",
+    "Windshaper Skyborne",
+    "High Order"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 5,
+     "old": 2,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    2,
+    5
+   ],
+   "text": "All Races now have the correct amount of base stats. For example, Tauren Warriors now start with the correct +5 strength relative to Human Warriors (was incorrectly +2). This fix was also applied to High Order and Windshaper Skyborne base stats.",
+   "h": "4ff8ec53f283"
+  },
+  {
+   "path": [
+    "Bug Fixes"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Improved Wing Clip",
+    "Improved Hamstring",
+    "Counterattack",
+    "Entrapment",
+    "Frostbite"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Roots that occur from Procs now correctly have Diminishing Returns. Includes Frostbite, Entrapment, Improved Wing Clip, Counterattack, and Improved Hamstring.",
+   "h": "08efee931d07"
+  },
+  {
+   "path": [
+    "Classes"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Wrath"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Developer’s notes: Over the course of Beta, we came to the realization that trying to hold ourselves roughly to Classic power budgets for each class meant that every new element we added needed to come at the expense of something else. Those reductions left some iconic abilities feeling lackluster, and closed the door to other potentially exciting design options. So over the last two weeks, we’ve raised damage on classes across the game, and have increased the health of higher level creatures to compensate. This additional “headroom” has allowed us to tune things to a place that we hope feels better overall. Beyond that, some of this round of changes reflects areas where we were likely hasty in turning to Burning Crusade- or Wrath-era solutions rather than carving out new ones that better fit into the Forever combat model. Our aim in class design is not perfect numerical equality, but rather for every class to feel valuable to the groups they join, with powerful, unforgettable moments brought on by mastering them. In Forever this is accomplished by doubling down on the strengths and differences that make each class unique, rather than overly unifying them.",
+   "h": "80a7fac63417"
+  },
+  {
+   "path": [
+    "Classes"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Various talents no longer have a penalty to their chance to trigger when casting spells of a low rank.",
+   "h": "19f791202a10"
+  },
+  {
+   "path": [
+    "Classes",
+    "Various talents no longer have a penalty to their chance to "
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Arcane Concentration",
+    "Fingers of Frost",
+    "Frostbite"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    12
+   ],
+   "text": "This penalty does still apply to Blizzard. Blizzard continues to have a reduced chance to trigger Arcane Concentration, Frostbite, and Fingers of Frost when casting a rank learned more than 12 levels lower than the caster’s current level.",
+   "h": "39d6a53d8dbd"
+  },
+  {
+   "path": [
+    "Classes"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Learning new spells will no longer cause them to be automatically added to your action bars.",
+   "h": "55377e99a52e"
+  },
+  {
+   "path": [
+    "Classes",
+    "Training costs on have been adjusted for all classes."
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    1,
+    60,
+    206,
+    207
+   ],
+   "text": "Total cost to train class abilities from 1-60 is now between 206 and 207 gold for all classes.",
+   "h": "6ba754e86b6f"
+  },
+  {
+   "path": [
+    "Classes",
+    "Training costs on have been adjusted for all classes."
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Warlocks costs are reduced by the expected costs of buying Grimoires for their pets.",
+   "h": "e90fe490e240"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "abilities": [
+    "Lacerate"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Lacerate is now a Feral talent and not learned by all Druids.",
+   "h": "c84a2ae37243"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "abilities": [
+    "Ferocious Bite"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    1,
+    24
+   ],
+   "text": "Ferocious Bite has a new Rank 1 at level 24. All the existing ranks were re-labeled one rank higher.",
+   "h": "4402c49ce06d"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "abilities": [
+    "Blessing of Salvation",
+    "Dire Bear Form",
+    "Bear Form"
+   ],
+   "kind": "removed",
+   "pairs": [
+    {
+     "new": 115,
+     "old": 50,
+     "unit": "%",
+     "old_unit": "%"
+    }
+   ],
+   "nums": [
+    50,
+    115
+   ],
+   "text": "Bear Form and Dire Bear Form: Threat bonus increased from 50% to 115%. This is to compensate for Blessing of Salvation being removed.",
+   "h": "49a9e756a1b8"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "abilities": [
+    "Poised"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    10,
+    32
+   ],
+   "text": "Poised: New passive ability learned at level 32. “When you are not in combat and have your maximum Energy, you will gain Poised. Poised reduces the Energy cost of your next Energy ability by 10.”",
+   "h": "e9ca8cabe290"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "abilities": [
+    "Shred"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    155,
+    200
+   ],
+   "text": "Shred: Weapon damage percent increased to 200% from 155%.",
+   "h": "543344d3b12d"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "abilities": [
+    "Claw"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    110,
+    140
+   ],
+   "text": "Claw: Weapon damage percent increased to 140% from 110%.",
+   "h": "785feec6d0b4"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "abilities": [
+    "Ravage"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 435,
+     "old": 350,
+     "unit": "%",
+     "old_unit": "%"
+    }
+   ],
+   "nums": [
+    350,
+    435
+   ],
+   "text": "Ravage: Weapon damage percent increased from 350% to 435%.",
+   "h": "2780bab69076"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "abilities": [
+    "Rip"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    25
+   ],
+   "text": "Rip: Base points and attack power scaling increased by about 25%.",
+   "h": "2a4d5428f43a"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "abilities": [
+    "Rake"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    25
+   ],
+   "text": "Rake: Base points and attack power scaling increased by about 25%.",
+   "h": "48d42576048a"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "abilities": [
+    "Ferocious Bite"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    25
+   ],
+   "text": "Ferocious Bite: Base points and attack power scaling increased by about 25%.",
+   "h": "60d7ac6fa261"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "abilities": [
+    "Pounce"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    25
+   ],
+   "text": "Pounce: Base points and attack power scaling increased by about 25%.",
+   "h": "1b4ffa1e693c"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "abilities": [
+    "Starfire"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    40
+   ],
+   "text": "Starfire: Base damage points increased by about 40%.",
+   "h": "5fe3ce241355"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid",
+    "Balance"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "balance"
+   },
+   "abilities": [
+    "Genesis"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    10
+   ],
+   "text": "Genesis: Now increases periodic damage and healing by 2/4/6/8/10%, up from 1/2/3/4/5%.",
+   "h": "009637033387"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid",
+    "Balance"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "balance"
+   },
+   "abilities": [
+    "Moonkin Form",
+    "Leader of the Pack"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Moonkin Form: The critical strike bonus from this talent is again an increase to all types of critical strikes and is again exclusive with Leader of the Pack.",
+   "h": "8335f2ea8113"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid",
+    "Feral"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "feral"
+   },
+   "abilities": [
+    "Heart of the Wild",
+    "Furor"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Heart of the Wild: The talent has moved to the Restoration tree, swapping with Furor.",
+   "h": "c16c7091be0e"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid",
+    "Feral"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "feral"
+   },
+   "abilities": [
+    "Lacerate",
+    "Primal Bite"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    1,
+    4
+   ],
+   "text": "Lacerate: This is now a 1-point talent on row 4, replacing Primal Bite. Lacerate has two new ranks added to accomodate being learned earlier.",
+   "h": "236908fb4ab9"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid",
+    "Feral"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "feral"
+   },
+   "abilities": [
+    "Predatory Discipline",
+    "Shifting Power",
+    "Ferocious Bite"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [
+    1,
+    3,
+    4
+   ],
+   "text": "Predatory Discipline: This is a new 1-point talent on row 4 in column 3, replacing Shifting Power. “Your Ferocious Bite ability no longer converts extra Energy into damage but still deals extra damage based on your excess Energy.” It has no pre-requisite talents.",
+   "h": "27ab38c83487"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid",
+    "Feral"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "feral"
+   },
+   "abilities": [
+    "Predatory Strikes"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 1,
+     "old": 3,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    1,
+    3
+   ],
+   "text": "Predatory Strikes: Moved to column 1 (was column 3).",
+   "h": "a0b2e08dcea8"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid",
+    "Feral"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "feral"
+   },
+   "abilities": [
+    "Leader of the Pack",
+    "Moonkin Aura"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Leader of the Pack: The critical strike bonus from this talent is again an increase to all types of critical strikes and is again exclusive with Moonkin Aura.",
+   "h": "06f7b7db0788"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid",
+    "Feral"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "feral"
+   },
+   "abilities": [
+    "Natural Instinct"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 4,
+     "old": 1,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    1,
+    4
+   ],
+   "text": "Natural Instinct: Moved to column 4 (was column 1).",
+   "h": "437b99ed6259"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid",
+    "Feral"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "feral"
+   },
+   "abilities": [
+    "Rend and Tear"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 1,
+     "old": 3,
+     "unit": "",
+     "old_unit": ""
+    },
+    {
+     "new": 15,
+     "old": 2,
+     "unit": "%",
+     "old_unit": "%"
+    }
+   ],
+   "nums": [
+    1,
+    2,
+    3,
+    4,
+    6,
+    8,
+    9,
+    10,
+    12,
+    15
+   ],
+   "text": "Rend and Tear: Moved to column 1 (was column 3). Damage bonus increased to 3/6/9/12/15% (was 2/4/6/8/10%).",
+   "h": "a9b0636b6e8d"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid",
+    "Feral"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "feral"
+   },
+   "abilities": [
+    "Berserk"
+   ],
+   "kind": "removed",
+   "pairs": [],
+   "nums": [],
+   "text": "Berserk talent removed.",
+   "h": "d389cccc2e64"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid",
+    "Feral"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "feral"
+   },
+   "abilities": [
+    "Primal Bite",
+    "Leader of the Pack",
+    "Berserk"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    1,
+    2,
+    3,
+    7
+   ],
+   "text": "Primal Bite: Replaces Berserk as a 1-point talent on row 7, column 2, with Leader of the Pack as a pre-requisite. Number of ranks reduced to 3.",
+   "h": "7d6d319fe39d"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid",
+    "Feral"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "feral"
+   },
+   "abilities": [
+    "Shifting Power"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    1,
+    4,
+    7,
+    31
+   ],
+   "text": "Shifting Power: Now a 1-point talent on row 7, with Predatory Discipline as a pre-requisite. Like row 4, we now have two different 31-point talents for Feral – one focused on Bear gameplay and one focused on Cat gameplay.",
+   "h": "e3386e8dc8dc"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid",
+    "Restoration"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "restoration"
+   },
+   "abilities": [
+    "Furor",
+    "Heart of the Wild"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Furor: This talent has moved to the Feral tree, swapping with Heart of the Wild.",
+   "h": "679d82c37cc3"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid",
+    "Restoration"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "restoration"
+   },
+   "abilities": [
+    "Naturalist",
+    "Wild Growth"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    10
+   ],
+   "text": "Naturalist: Now increases all damage by 2/4/6/8/10%, up from 1/2/3/4/5%. Now also reduces the cast time of Wild Growth by 0.1/0.2/0.3/0.4/0.5 seconds.",
+   "h": "70f2cf190075"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid",
+    "Restoration"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "restoration"
+   },
+   "abilities": [
+    "Reflection"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    2,
+    3
+   ],
+   "text": "Reflection: This talent has moved to row 2 from row 3, swapping with Subtlety.",
+   "h": "0d2d63640bc8"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid",
+    "Restoration"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "restoration"
+   },
+   "abilities": [
+    "Reflection"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    2,
+    3
+   ],
+   "text": "Subtlety: This talent has moved to row 3 from row 2, swapping with Reflection.",
+   "h": "825df88ced3c"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid",
+    "Restoration"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "restoration"
+   },
+   "abilities": [
+    "Gift of the Earthmother"
+   ],
+   "kind": "removed",
+   "pairs": [],
+   "nums": [],
+   "text": "Gift of the Earthmother: This talent has been removed.",
+   "h": "cf6ebeda9c78"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid",
+    "Restoration"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "restoration"
+   },
+   "abilities": [
+    "Bloom",
+    "Gift of the Earthmother",
+    "Rejuvenation",
+    "Regrowth"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    1,
+    3,
+    50,
+    100
+   ],
+   "text": "Bloom: New 1-point talent in 3rd row, replacing Gift of the Earthmother. “When your Rejuvenation or Regrowth spell expires due to its duration, the target is instantly healed for an amount equal to 100% of your Spirit. If either spell expires due to being dispelled, the target is healed for 50% of your Spirit instead.”",
+   "h": "0af4363084a5"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid",
+    "Restoration"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "restoration"
+   },
+   "abilities": [
+    "Swiftmend",
+    "Rejuvenation",
+    "Regrowth"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Swiftmend: Now requires the Rejuvenation or Regrowth effect on the target to be one placed by the casting Druid.",
+   "h": "86da65261db1"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid",
+    "Restoration"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "restoration"
+   },
+   "abilities": [
+    "Wild Growth"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    3
+   ],
+   "text": "Wild Growth: Now has a base casting time of 3 seconds.",
+   "h": "ae9d5eed715e"
+  },
+  {
+   "path": [
+    "Classes",
+    "Hunter"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "hunter"
+   },
+   "abilities": [
+    "Hunter’s Mark"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Hunter’s Mark can no longer be applied to a target multiple times by using different ranks of the spell.",
+   "h": "c6dc70c63dd2"
+  },
+  {
+   "path": [
+    "Classes",
+    "Hunter"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "hunter"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [
+    3,
+    4
+   ],
+   "text": "Fixed an issue where Rank 4 Hunter’s Mark was providing less Ranged Attack Power than Rank 3.",
+   "h": "654c9ea567da"
+  },
+  {
+   "path": [
+    "Classes",
+    "Hunter"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "hunter"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue with the wording of the Explosive Trap debuff.",
+   "h": "cd5e7cbbfadf"
+  },
+  {
+   "path": [
+    "Classes",
+    "Hunter"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "hunter"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    30
+   ],
+   "text": "All types of Hunter traps now have the same shared 30 second cooldown, instead of separate cooldowns for Fire-based and Frost-based traps.",
+   "h": "e15e42212511"
+  },
+  {
+   "path": [
+    "Classes",
+    "Hunter"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "hunter"
+   },
+   "abilities": [
+    "Aimed Shot"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    110
+   ],
+   "text": "Aimed Shot: Bonus damage on all ranks increased by ~110%.",
+   "h": "c63ffeafd1ca"
+  },
+  {
+   "path": [
+    "Classes",
+    "Hunter"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "hunter"
+   },
+   "abilities": [
+    "Arcane Shot"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 0.15,
+     "old": 0.1,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    0.1,
+    0.15,
+    30
+   ],
+   "text": "Arcane Shot: Base damage on all ranks increased by ~30% and Attack Power coefficient raised from 0.1 to 0.15.",
+   "h": "37ecdbe5d563"
+  },
+  {
+   "path": [
+    "Classes",
+    "Hunter"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "hunter"
+   },
+   "abilities": [
+    "Serpent Sting"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    3,
+    5,
+    20
+   ],
+   "text": "Serpent Sting: Attack Power coefficient per tick increased to 5% from 3%. Base damage on all ranks increased ~20%.",
+   "h": "098c561633f9"
+  },
+  {
+   "path": [
+    "Classes",
+    "Hunter"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "hunter"
+   },
+   "abilities": [
+    "Aspect of the Hawk"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    1,
+    6,
+    20,
+    35,
+    50,
+    70,
+    90,
+    110
+   ],
+   "text": "Aspect of the Hawk: Ranged Attack Power bonus increased on all ranks. New values: 20, 35, 50, 70, 90, 110 for ranks 1-6.",
+   "h": "c9d0120f0f7d"
+  },
+  {
+   "path": [
+    "Classes",
+    "Hunter"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "hunter"
+   },
+   "abilities": [],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Hunter pets should no longer lose their innate Attack Speed passives when untraining them.",
+   "h": "a20c2882cf35"
+  },
+  {
+   "path": [
+    "Classes",
+    "Hunter",
+    "Beast Mastery"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "hunter",
+    "spec": "beast mastery"
+   },
+   "abilities": [
+    "Pathfinding"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    2,
+    3
+   ],
+   "text": "Pathfinding: This talent moved from 2nd row to 3rd row.",
+   "h": "4534488358a0"
+  },
+  {
+   "path": [
+    "Classes",
+    "Hunter",
+    "Marksmanship"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "hunter",
+    "spec": "marksmanship"
+   },
+   "abilities": [
+    "Barrage"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    3,
+    5,
+    7,
+    10,
+    15
+   ],
+   "text": "Barrage: Damage increase raised to 5/10/15% from 3/7/10%.",
+   "h": "3f13f6fa6643"
+  },
+  {
+   "path": [
+    "Classes",
+    "Hunter",
+    "Marksmanship"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "hunter",
+    "spec": "marksmanship"
+   },
+   "abilities": [
+    "Sniper Shot"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    100
+   ],
+   "text": "Sniper Shot: Bonus damage on all ranks increased by 100%.",
+   "h": "a95a6c15f522"
+  },
+  {
+   "path": [
+    "Classes",
+    "Hunter",
+    "Marksmanship"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "hunter",
+    "spec": "marksmanship"
+   },
+   "abilities": [
+    "Trueshot Aura"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    20,
+    35,
+    50,
+    75,
+    100
+   ],
+   "text": "Trueshot Aura: Ranged Attack Power bonus increased on all ranks. New values: 20, 35, 50, 75, 100.",
+   "h": "dcacc5a8b175"
+  },
+  {
+   "path": [
+    "Classes",
+    "Hunter",
+    "Survival"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "hunter",
+    "spec": "survival"
+   },
+   "abilities": [
+    "Lacerating Strikes"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Lacerating Strikes: This effect will always overwrite an existing one from the same Hunter, even if the new effect is weaker damage per second.",
+   "h": "e08e1c769e9c"
+  },
+  {
+   "path": [
+    "Classes",
+    "Hunter",
+    "Survival"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "hunter",
+    "spec": "survival"
+   },
+   "abilities": [
+    "Lightning Reflexes"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    2,
+    3,
+    4,
+    6,
+    8,
+    9,
+    10,
+    12,
+    15
+   ],
+   "text": "Lightning Reflexes: Agility bonus increased to 3/6/9/12/15% from 2/4/6/8/10%.",
+   "h": "603c253ab5b7"
+  },
+  {
+   "path": [
+    "Classes",
+    "Mage"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "mage"
+   },
+   "abilities": [
+    "Frost Blast"
+   ],
+   "kind": "removed",
+   "pairs": [],
+   "nums": [],
+   "text": "Frost Blast: This spell has been removed.",
+   "h": "c4bb5bc468a5"
+  },
+  {
+   "path": [
+    "Classes",
+    "Mage",
+    "Arcane"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "mage",
+    "spec": "arcane"
+   },
+   "abilities": [
+    "Missile Barrage",
+    "Arcane Missiles"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Missile Barrage is now correctly consumed at the start of the Mage’s Arcane Missiles channel (was consumed at the end).",
+   "h": "7d179fe143ca"
+  },
+  {
+   "path": [
+    "Classes",
+    "Mage",
+    "Arcane"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "mage",
+    "spec": "arcane"
+   },
+   "abilities": [
+    "Missile Barrage"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    1,
+    2
+   ],
+   "text": "Missile Barrage has been moved to the 2nd row from the 1st row.",
+   "h": "43260072ca3b"
+  },
+  {
+   "path": [
+    "Classes",
+    "Mage",
+    "Arcane"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "mage",
+    "spec": "arcane"
+   },
+   "abilities": [
+    "Arcane Resilience"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    1,
+    2,
+    3,
+    75
+   ],
+   "text": "Arcane Resilience has been moved to the 1st row from the 2nd row. It now allows up to 3 talent points to be spent for a maximum armor increase of 75% of Intellect.",
+   "h": "3dfbe4b2cde3"
+  },
+  {
+   "path": [
+    "Classes",
+    "Mage",
+    "Arcane"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "mage",
+    "spec": "arcane"
+   },
+   "abilities": [
+    "Clearcasting",
+    "Arcane Missiles",
+    "Missile Barrage"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Clearcasting is no longer consumed on Arcane Missiles if Missile Barrage is active at the same time.",
+   "h": "9216fc0aec03"
+  },
+  {
+   "path": [
+    "Classes",
+    "Mage",
+    "Arcane"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "mage",
+    "spec": "arcane"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Arcane Missles did not proc Clearcasting.",
+   "h": "1e0cd4bf785a"
+  },
+  {
+   "path": [
+    "Classes",
+    "Mage",
+    "Arcane"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "mage",
+    "spec": "arcane"
+   },
+   "abilities": [
+    "Arcane Focus",
+    "Precision"
+   ],
+   "kind": "removed",
+   "pairs": [],
+   "nums": [],
+   "text": "Arcane Focus: This talent has been removed, as it is now combined into the talent Precision in the Frost tree.",
+   "h": "dc00c93ccfb3"
+  },
+  {
+   "path": [
+    "Classes",
+    "Mage",
+    "Arcane"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "mage",
+    "spec": "arcane"
+   },
+   "abilities": [
+    "Arcane Blast"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 12,
+     "old": 15,
+     "unit": "%",
+     "old_unit": "%"
+    }
+   ],
+   "nums": [
+    12,
+    15,
+    18,
+    100,
+    175
+   ],
+   "text": "Arcane Blast: Mana cost increase per stack reduced to 100% from 175%. Percent of Intellect as Spell Damage reduced from 15% to 12% per stack. Duration increased to 18 seconds.",
+   "h": "96b3b9f2af77"
+  },
+  {
+   "path": [
+    "Classes",
+    "Mage",
+    "Fire"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "mage",
+    "spec": "fire"
+   },
+   "abilities": [
+    "Flamestrike",
+    "Ignite"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Ignite was not applying to Flamestrike damage past the initial instance.",
+   "h": "68b31d7edc57"
+  },
+  {
+   "path": [
+    "Classes",
+    "Mage",
+    "Fire"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "mage",
+    "spec": "fire"
+   },
+   "abilities": [
+    "Incineration"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    3,
+    5,
+    6,
+    10
+   ],
+   "text": "Incineration: This talent now allows spending up to 5 talent points for 10% critical chance on affected spells, up from 3 talent points for 6%.",
+   "h": "500c02df18cc"
+  },
+  {
+   "path": [
+    "Classes",
+    "Mage",
+    "Fire"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "mage",
+    "spec": "fire"
+   },
+   "abilities": [
+    "Improved Fireball",
+    "Arcane Wrath"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    0.5
+   ],
+   "text": "Improved Fireball: Renamed Accelerant. Now also reduces the cast time of Arcane Wrath by up to 0.5 seconds.",
+   "h": "92a28229ff37"
+  },
+  {
+   "path": [
+    "Classes",
+    "Mage",
+    "Fire"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "mage",
+    "spec": "fire"
+   },
+   "abilities": [
+    "Critical Mass"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    3,
+    5,
+    6,
+    10
+   ],
+   "text": "Critical Mass: This talent has been reverted to a maximum of 3 talent points, instead of 5, for a total of 6% critical strike chance increase, down from 10%.",
+   "h": "76452ee2d3d5"
+  },
+  {
+   "path": [
+    "Classes",
+    "Mage",
+    "Fire"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "mage",
+    "spec": "fire"
+   },
+   "abilities": [
+    "Improved Fire Blast"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    1,
+    3
+   ],
+   "text": "Improved Fire Blast moved to 3rd row from 1st row.",
+   "h": "65f2f9adb5ec"
+  },
+  {
+   "path": [
+    "Classes",
+    "Mage",
+    "Frost"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "mage",
+    "spec": "frost"
+   },
+   "abilities": [],
+   "kind": "removed",
+   "pairs": [],
+   "nums": [],
+   "text": "The Piercing ice talent has been removed.",
+   "h": "95ca14c78e8e"
+  },
+  {
+   "path": [
+    "Classes",
+    "Mage",
+    "Frost"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "mage",
+    "spec": "frost"
+   },
+   "abilities": [
+    "Ice Barrier"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    1,
+    5,
+    15
+   ],
+   "text": "Ice Barrier now increases your Frost Damage dealt by 15% for 1minute when activated and grants an additional 5% Frost Damage while the barrier holds.",
+   "h": "a7f0fd07a0df"
+  },
+  {
+   "path": [
+    "Classes",
+    "Mage",
+    "Frost",
+    "Ice Barrier now increases your Frost Damage dealt by 15% for"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "mage",
+    "spec": "frost"
+   },
+   "abilities": [
+    "Piercing Ice",
+    "Ice Barrier"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Developers’ notes: Removing Piercing Ice gives the player a few more talents to play around with early on in the tree, and empowering Ice Barrier gives the Mage a reason to go all the way down the tree for PvE.",
+   "h": "3bd4d11dc0df"
+  },
+  {
+   "path": [
+    "Classes",
+    "Mage",
+    "Frost"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "mage",
+    "spec": "frost"
+   },
+   "abilities": [
+    "Frost Warding",
+    "Ice Barrier"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Frost Warding increases the amount of damage your Ice Barrier and Frost Wards can absorb.",
+   "h": "2bf7be48fb40"
+  },
+  {
+   "path": [
+    "Classes",
+    "Mage",
+    "Frost"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "mage",
+    "spec": "frost"
+   },
+   "abilities": [
+    "Frost Warding"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Frost Warding no longer has a chance to Reflect spells but instead has a chance to fully negate the damage of the spell without depleting the Frost Ward.",
+   "h": "f69e0991eb81"
+  },
+  {
+   "path": [
+    "Classes",
+    "Mage",
+    "Frost"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "mage",
+    "spec": "frost"
+   },
+   "abilities": [
+    "Elemental Precision",
+    "Precision"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 6,
+     "old": 1,
+     "unit": "%",
+     "old_unit": "%"
+    }
+   ],
+   "nums": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "text": "Elemental Precision has been renamed Precision and is back to being a 3-point talent, granting 2/4/6% chance to hit with all spells (was 1/2/3/4/5%).",
+   "h": "1cc4d9ac05f5"
+  },
+  {
+   "path": [
+    "Classes",
+    "Mage",
+    "Frost"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "mage",
+    "spec": "frost"
+   },
+   "abilities": [
+    "Ice Lance",
+    "Fire Blast"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    8,
+    300
+   ],
+   "text": "Ice Lance now has an 8 second cooldown shared with Fire Blast. Bonsu damage to Frozen targets increased back to 300%.",
+   "h": "1c5f5ba317aa"
+  },
+  {
+   "path": [
+    "Classes",
+    "Mage",
+    "Frost"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "mage",
+    "spec": "frost"
+   },
+   "abilities": [
+    "Winter’s Chill",
+    "Cone of Cold"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    20
+   ],
+   "text": "Winter’s Chill: Bonus to Cone of Cold damage increased to 20% per stack.",
+   "h": "c1db20bce048"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin"
+   },
+   "abilities": [
+    "Righteous Fury"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 10,
+     "old": 16,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    10,
+    16
+   ],
+   "text": "Righteous Fury is now available to train at level 10 (was 16). This mirrors the level that other Tanks gain access to their tanking stance.",
+   "h": "ce75f8273d1d"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin"
+   },
+   "abilities": [
+    "Salvation",
+    "Revoke"
+   ],
+   "kind": "removed",
+   "pairs": [],
+   "nums": [],
+   "text": "Salvation, Mass Salvation, and Revoke have been removed.",
+   "h": "db25f03ab494"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin"
+   },
+   "abilities": [
+    "Righteous Fury"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    33,
+    90
+   ],
+   "text": "Righteous Fury now grants a 33% increase to all threat generated, and an additional 90% threat from Holy damage.",
+   "h": "a9d57c6f462a"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin"
+   },
+   "abilities": [
+    "Blessing of Light"
+   ],
+   "kind": "removed",
+   "pairs": [],
+   "nums": [],
+   "text": "Blessing of Light has been removed.",
+   "h": "f2079750680a"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin"
+   },
+   "abilities": [
+    "Righteous Fury",
+    "Legacy"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Righteous Fury is now properly made free by the Legacy Talent, The Quick and the Dead.",
+   "h": "858b537e4929"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin"
+   },
+   "abilities": [
+    "Judgement of Fury’s"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 3,
+     "old": 4,
+     "unit": "s",
+     "old_unit": "s"
+    }
+   ],
+   "nums": [
+    3,
+    4
+   ],
+   "text": "Judgement of Fury’s duration reduced to 3 seconds (Was 4 seconds).",
+   "h": "e84389f19056"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Holy"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "holy"
+   },
+   "abilities": [
+    "Spiritual Focus"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 1,
+     "old": 2,
+     "unit": "",
+     "old_unit": ""
+    },
+    {
+     "new": 5,
+     "old": 2,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    1,
+    2,
+    5
+   ],
+   "text": "Spiritual Focus moved to Row 1 (Was Row 2). Changed to a 5-point talent (Was a 2-point talent). Max rank unchanged.",
+   "h": "bb01a2ad3936"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Holy"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "holy"
+   },
+   "abilities": [
+    "Improved Seals"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 5,
+     "old": 3,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    3,
+    5
+   ],
+   "text": "Improved Seals changed to a 5-point talent (Was a 3-point talent). Max rank unchanged.",
+   "h": "acaa826e7f82"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Holy"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "holy"
+   },
+   "abilities": [
+    "Reverence"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 2,
+     "old": 3,
+     "unit": "",
+     "old_unit": ""
+    },
+    {
+     "new": 2,
+     "old": 3,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    2,
+    3
+   ],
+   "text": "Reverence moved to Row 2 (Was Row 3). Changed to a 2-point talent (Was a 3-point talent). Max rank unchanged.",
+   "h": "c868d1239347"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Holy"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "holy"
+   },
+   "abilities": [
+    "Unyielding Faith"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Unyielding Faith moved to Retribution.",
+   "h": "7d5d5836d8f7"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Holy"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "holy"
+   },
+   "abilities": [
+    "Purifying Power"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 2,
+     "old": 3,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    2,
+    3
+   ],
+   "text": "Purifying Power moved to Row 2 (Was Row 3).",
+   "h": "7dce77e6485b"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Holy"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "holy"
+   },
+   "abilities": [
+    "Voice of Truth"
+   ],
+   "kind": "removed",
+   "pairs": [],
+   "nums": [],
+   "text": "Voice of Truth removed.",
+   "h": "7e7a2758d220"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Holy"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "holy"
+   },
+   "abilities": [
+    "Divine Favor"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 3,
+     "old": 4,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    3,
+    4
+   ],
+   "text": "Divine Favor moved to Row 3 (Was Row 4).",
+   "h": "c031c64429a4"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Holy"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "holy"
+   },
+   "abilities": [
+    "Illumination"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 3,
+     "old": 4,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    3,
+    4
+   ],
+   "text": "Illumination moved to Row 3 (Was Row 4).",
+   "h": "fa955c7ecd16"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Holy"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "holy"
+   },
+   "abilities": [
+    "Holy Conduit"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Holy Conduit moved",
+   "h": "3ef6cbe838bc"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Holy"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "holy"
+   },
+   "abilities": [
+    "Divine Precision",
+    "Silence"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 4,
+     "old": 5,
+     "unit": "",
+     "old_unit": ""
+    },
+    {
+     "new": 8,
+     "old": 6,
+     "unit": "%",
+     "old_unit": "%"
+    }
+   ],
+   "nums": [
+    2,
+    4,
+    5,
+    6,
+    8,
+    10,
+    12,
+    18,
+    20
+   ],
+   "text": "Divine Precision moved to Row 4 (Was Row 5). Changed to a 2-point talent granting 4/8% chance to hit with Holy spells (Was 6/12/18% chance to hit with Holy spells). Additionally, Divine Precision now also reduces the duration of Silence effects on you by 10/20%.",
+   "h": "6a9092b95956"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Holy"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "holy"
+   },
+   "abilities": [
+    "Flash of Light",
+    "Holy Light",
+    "Holy Shock"
+   ],
+   "kind": "added",
+   "pairs": [],
+   "nums": [
+    4,
+    5,
+    8,
+    40
+   ],
+   "text": "New Talent Oath of Light in Row 4. 40-yard range, 8% of Base Mana cost. No cooldown. Swear an Oath to protect target ally for 5 min, increasing the healing of your Holy Light, Flash of Light, and Holy Shock spells. Only one Oath of Light may be sworn by the Paladin at any one time. The amount of bonus healing increases with the player’s level.",
+   "h": "461a8aa77f78"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Holy"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "holy"
+   },
+   "abilities": [
+    "Holy Shock"
+   ],
+   "kind": "added",
+   "pairs": [],
+   "nums": [
+    5,
+    15,
+    30
+   ],
+   "text": "New Talent Boundless Light in Row 5. Passive - Increases the critical strike chance of your Holy Shock spell by 15/30% when cast on allies not affected by your Oath of Light.",
+   "h": "68275c3f49de"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Holy"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "holy"
+   },
+   "abilities": [
+    "Holy Strike",
+    "Holy Power",
+    "Holy Shock"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 50,
+     "old": 3,
+     "unit": "%",
+     "old_unit": "%"
+    }
+   ],
+   "nums": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    9,
+    10,
+    12,
+    15,
+    20,
+    30,
+    40,
+    50
+   ],
+   "text": "Holy Power changed to Increases the critical strike healing bonus of your Holy Spells by 10/20/30/40/50% (Was Increases the critical strike chance of your Holy Shock and Holy Strike spells by 3/6/9/12/15%, and all other spells by 1/2/3/4/5%).",
+   "h": "69afcd3c6cd6"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Holy"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "holy"
+   },
+   "abilities": [
+    "Light’s Vigil"
+   ],
+   "kind": "removed",
+   "pairs": [],
+   "nums": [],
+   "text": "Light’s Vigil is now only usable on friendly targets and has had its offensive capabilities removed. The tooltip has been reworded to reflect this.",
+   "h": "671239e795d4"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Protection"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "protection"
+   },
+   "abilities": [
+    "Reckoning"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Reckoning will now correctly perform its number of attacks based on stacks, and Reckoning will no longer gain stacks while sitting.",
+   "h": "ca6fd15214a2"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Protection"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "protection"
+   },
+   "abilities": [
+    "Divine Intellect"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    1
+   ],
+   "text": "Divine Intellect moved to Row 1 of Protection (was Row 1 of Holy).",
+   "h": "7b38ba1757b6"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Protection"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "protection"
+   },
+   "abilities": [
+    "Sacred Duty"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 2,
+     "old": 3,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    2,
+    3
+   ],
+   "text": "Sacred Duty moved to Row 2 (Was Row 3).",
+   "h": "34fd3d7b4a71"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Protection"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "protection"
+   },
+   "abilities": [
+    "Sacred Duty",
+    "Divine Protection",
+    "Templar’s Bulwark",
+    "Divine Shield"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [
+    1,
+    5,
+    10,
+    30
+   ],
+   "text": "Sacred Duty no longer grants % increase to Stamina. In addition to its cooldown reduction on Divine Shield, Divine Protection, and Templar’s Bulwark by 30sec/1min, it now also reduces the duration of your Forbearance effect by 5/10 seconds.",
+   "h": "81e24fb92c71"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Protection"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "protection"
+   },
+   "abilities": [
+    "Improved Seal of Fury"
+   ],
+   "kind": "removed",
+   "pairs": [],
+   "nums": [],
+   "text": "Improved Seal of Fury removed.",
+   "h": "03d14c005b2b"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Protection"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "protection"
+   },
+   "abilities": [
+    "Templar’s Bulwark"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 3,
+     "old": 5,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    3,
+    5
+   ],
+   "text": "Templar’s Bulwark moved to Row 3 (Was Row 5).",
+   "h": "527f68695033"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Protection"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "protection"
+   },
+   "abilities": [
+    "Templar’s Bulwark"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Templar’s Bulwark is now a Magic effect and dispellable.",
+   "h": "903dea1e6d1f"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Protection"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "protection"
+   },
+   "abilities": [
+    "Improved Righteous Fury’s"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 9,
+     "old": 2,
+     "unit": "%",
+     "old_unit": "%"
+    }
+   ],
+   "nums": [
+    2,
+    3,
+    4,
+    6,
+    9
+   ],
+   "text": "Improved Righteous Fury’s damage reduction changed to 3/6/9% (was 2/4/6%).",
+   "h": "58424deeafe9"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Protection"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "protection"
+   },
+   "abilities": [
+    "Shield Specialization"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    2,
+    4,
+    15,
+    30,
+    50,
+    100
+   ],
+   "text": "Shield Specialization changed to a 2-point talent granting 15/30% increased shield block value, and a 50/100% chance to grant 4% of your Maximum Mana. (Unchanged at max rank).",
+   "h": "0c1788805fe6"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Protection"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "protection"
+   },
+   "abilities": [
+    "Toughness"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 3,
+     "old": 1,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    1,
+    3
+   ],
+   "text": "Toughness moved to Row 3 (Was Row 1).",
+   "h": "013de60addb7"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Protection"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "protection"
+   },
+   "abilities": [
+    "Anticipation"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 4,
+     "old": 2,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    2,
+    4
+   ],
+   "text": "Anticipation moved to Row 4 (Was Row 2).",
+   "h": "5d4d26b732aa"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Protection"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "protection"
+   },
+   "abilities": [
+    "Swift Judgement",
+    "Judgement"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Swift Judgement changed to instantly unleash your active Seal. Does not share a cooldown with Judgement (Was resets the cooldown of your Judgement ability).",
+   "h": "d0211f871067"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Protection"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "protection"
+   },
+   "abilities": [
+    "One-Handed Weapon Specialization"
+   ],
+   "kind": "removed",
+   "pairs": [],
+   "nums": [],
+   "text": "One-Handed Weapon Specialization removed.",
+   "h": "81da58c76ec0"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Protection"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "protection"
+   },
+   "abilities": [],
+   "kind": "added",
+   "pairs": [],
+   "nums": [
+    5,
+    10,
+    20
+   ],
+   "text": "New Talent Stoicism added to Row 5. Reduces the duration of Stun and Charm effects on you by 10/20%.",
+   "h": "055bf39eef11"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Protection"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "protection"
+   },
+   "abilities": [
+    "Holy Shield"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 5,
+     "old": 7,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    5,
+    7
+   ],
+   "text": "Holy Shield moved to Row 5 (Was Row 7).",
+   "h": "023e12df6106"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Protection"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "protection"
+   },
+   "abilities": [
+    "Holy Strike",
+    "Iron Creed"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 3,
+     "old": 5,
+     "unit": "",
+     "old_unit": ""
+    },
+    {
+     "new": 6,
+     "old": 5,
+     "unit": "s",
+     "old_unit": "s"
+    }
+   ],
+   "nums": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    10,
+    15,
+    20,
+    25,
+    30
+   ],
+   "text": "Iron Creed changed to a 3-point talent (Was a 5-point talent) and increases the threat generated by Holy Strike by 10/20/30%, and grants 2/4/6% damage reduction for 6 seconds (was 5/10/15/20/25% increased threat, and 2/4/6/8/10% damage reduction).",
+   "h": "f5419743231a"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Protection"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "protection"
+   },
+   "abilities": [
+    "Holy Strike"
+   ],
+   "kind": "added",
+   "pairs": [],
+   "nums": [
+    4,
+    6,
+    7
+   ],
+   "text": "New Talent Shieldsworn added to Row 7. Reduces the cooldown of your Holy Strike ability by 4 seconds. Additionally, Holy Strike now strikes with your shield, triggering all talents that activate when you block without consuming their charges or triggering their cooldowns, and allowing you to Block spells for 6 seconds.",
+   "h": "3a91f30e3a1b"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Retribution"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "retribution"
+   },
+   "abilities": [
+    "Holy Conduit"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 3,
+     "old": 2,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    2,
+    3
+   ],
+   "text": "Holy Conduit moved to the 3rd Row of the Holy Tree (was 2nd Row of Retribution).",
+   "h": "b5db9264a8f2"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Retribution"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "retribution"
+   },
+   "abilities": [
+    "Sanctified Judgement"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 2,
+     "old": 3,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    2,
+    3
+   ],
+   "text": "Sanctified Judgement has been moved to Row 2 (was Row 3).",
+   "h": "9d94b91c0227"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Retribution"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "retribution"
+   },
+   "abilities": [
+    "Conviction"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 2,
+     "old": 3,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    2,
+    3
+   ],
+   "text": "Conviction moved to Row 2 (Was Row 3).",
+   "h": "b600e5b71da7"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Retribution"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "retribution"
+   },
+   "abilities": [
+    "Conviction"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 6,
+     "old": 1,
+     "unit": "%",
+     "old_unit": "%"
+    }
+   ],
+   "nums": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "text": "Conviction changed to grant 2/4/6% critical strike chance to all spells and attacks (Was 1/2/3/4/5% to just melee attacks).",
+   "h": "ce9d8ec21d67"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Retribution"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "retribution"
+   },
+   "abilities": [
+    "Vindication"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [
+    1,
+    2,
+    3
+   ],
+   "text": "Vindication no longer grants an increase to Attack Power (was 1/2/3% increased Attack Power.",
+   "h": "ef5046915272"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Retribution"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "retribution"
+   },
+   "abilities": [
+    "Unyielding Faith"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 3,
+     "old": 2,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    2,
+    3
+   ],
+   "text": "Unyielding Faith moved to Row 3 of Retribution (was Row 2 of Holy).",
+   "h": "0fac5493e5ca"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Retribution"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "retribution"
+   },
+   "abilities": [
+    "Two-Handed Weapon Specialization"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 4,
+     "old": 5,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    4,
+    5
+   ],
+   "text": "Two-Handed Weapon Specialization moved to Row 4 (was Row 5).",
+   "h": "79bdbe6e2863"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Retribution"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "retribution"
+   },
+   "abilities": [
+    "Two-Handed Weapon Specialization"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    2,
+    4,
+    6
+   ],
+   "text": "Two-Handed Weapon Specialization changed to increase both Holy and Physical damage by 2/4/6% (Was just Physical damage).",
+   "h": "188e9755d2e2"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Retribution"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "retribution"
+   },
+   "abilities": [
+    "Two-Handed Weapon Specialization"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    7,
+    14,
+    20
+   ],
+   "text": "Two-Handed Weapon Specialization changed to also reduce the Threat generated by the Paladin by 7/14/20% while wearing a two-handed melee weapon.",
+   "h": "a5d1c63e2cf6"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Retribution"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "retribution"
+   },
+   "abilities": [
+    "Instrument of Law"
+   ],
+   "kind": "removed",
+   "pairs": [],
+   "nums": [],
+   "text": "Instrument of Law Removed.",
+   "h": "7b10cb1bbcd7"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Retribution"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "retribution"
+   },
+   "abilities": [
+    "Champion of the Light",
+    "Hammer of Wrath"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1,
+    12,
+    24,
+    36,
+    48,
+    60
+   ],
+   "text": "Champion of the Light changed to increasing the Paladin’s spell damage by 12/24/36/48/60% of their Intellect and also reduces the cast time of Hammer of Wrath by 0.2/0.4/0.6/0.8/1.0 seconds.",
+   "h": "76c620d5aa6b"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Retribution"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "retribution"
+   },
+   "abilities": [
+    "Vengeance"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 5,
+     "old": 3,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    3,
+    5
+   ],
+   "text": "Vengeance changed to stacking up to 5 times (Was stacking up to 3 times).",
+   "h": "c397d2a94c0e"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Retribution"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "retribution"
+   },
+   "abilities": [
+    "Vengeance",
+    "Sanctified Judgement",
+    "Seal of Command"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Vengeance now requires Seal of Command (was requiring Sanctified Judgement).",
+   "h": "916c37858ca6"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Retribution"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "retribution"
+   },
+   "abilities": [],
+   "kind": "added",
+   "pairs": [],
+   "nums": [
+    0.5,
+    1,
+    5,
+    10
+   ],
+   "text": "New Talent added to Row 5, Turn Evil - Reduces the cast time of your Turn Undead spell by 0.5/1.0 sec, its cooldown by 5/10 sec, and allows it to affect Demons.",
+   "h": "8786861a2222"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Retribution"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "retribution"
+   },
+   "abilities": [
+    "Twist of Light"
+   ],
+   "kind": "removed",
+   "pairs": [],
+   "nums": [],
+   "text": "Twist of Light removed.",
+   "h": "bfa907f864c8"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Retribution"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "retribution"
+   },
+   "abilities": [
+    "Unsealed Wrath"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    3,
+    15,
+    31
+   ],
+   "text": "Unsealed Wrath is the new 31st talent. Your melee attacks store a copy of your active Seal for 15 sec, stacking up to 3 times. Landing an attack with a different Seal consumes all stacks, giving the stored Seal its normal chance to activate once per stack.",
+   "h": "f87501c75e71"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Retribution"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "retribution"
+   },
+   "abilities": [
+    "Unsealed Wrath",
+    "Repentance"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Unsealed Wrath now requires Repentance.",
+   "h": "2d5be3d35634"
+  },
+  {
+   "path": [
+    "Classes",
+    "Priest"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "priest"
+   },
+   "abilities": [
+    "Power Word",
+    "Power Word: Shield"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Power Word: Shield can now correctly be replaced by a Power Word: Shield of equal or greater rank.",
+   "h": "17bdfd3e0255"
+  },
+  {
+   "path": [
+    "Classes",
+    "Priest"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "priest"
+   },
+   "abilities": [
+    "Shadow Word",
+    "Shadow Word: Death"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [
+    10,
+    30
+   ],
+   "text": "Shadow Word: Death now causes 30% of maximum Health damage to the Priest if it fails to kill the target, up from 10%. Shadow Word: Death will no longer damage the Priest when the spell misses.",
+   "h": "1a39c0777d9d"
+  },
+  {
+   "path": [
+    "Classes",
+    "Priest"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "priest"
+   },
+   "abilities": [
+    "Dark Sacrifice"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue causing Undead Priest’s Dark Sacrifice to still break crowd control effects.",
+   "h": "c18d97cfe825"
+  },
+  {
+   "path": [
+    "Classes",
+    "Priest",
+    "Holy"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "priest",
+    "spec": "holy"
+   },
+   "abilities": [
+    "Binding Heal"
+   ],
+   "kind": "removed",
+   "pairs": [],
+   "nums": [],
+   "text": "Binding Heal removed.",
+   "h": "16f80aa1b4f3"
+  },
+  {
+   "path": [
+    "Classes",
+    "Priest",
+    "Holy"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "priest",
+    "spec": "holy"
+   },
+   "abilities": [
+    "Binding Heal",
+    "Flash Heal"
+   ],
+   "kind": "added",
+   "pairs": [],
+   "nums": [
+    50
+   ],
+   "text": "New talent in Binding Heal’s slot: Holy Binding. When the Priest heals a target other than themselves with Flash Heal, 50% of the healing done by the Flash Heal is also done to the Priest. This healing generates no threat.",
+   "h": "ec950706b725"
+  },
+  {
+   "path": [
+    "Classes",
+    "Priest",
+    "Shadow"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "priest",
+    "spec": "shadow"
+   },
+   "abilities": [
+    "Devouring Contagion",
+    "Devouring Plague"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Devouring Contagion no longer spreads Devouring Plague if it is spreading from a critter.",
+   "h": "8e90174e31c4"
+  },
+  {
+   "path": [
+    "Classes",
+    "Priest",
+    "Shadow"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "priest",
+    "spec": "shadow"
+   },
+   "abilities": [
+    "Vampiric Embrace Healing"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Vampiric Embrace Healing can no longer roll a critical effect.",
+   "h": "f9071dd0b2e9"
+  },
+  {
+   "path": [
+    "Classes",
+    "Priest",
+    "Shadow"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "priest",
+    "spec": "shadow"
+   },
+   "abilities": [
+    "Shadowform"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Cure Disease and Abolish Disease would take the Priest out of Shadowform.",
+   "h": "60a01070fb40"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue"
+   },
+   "abilities": [
+    "Slice and Dice"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Casting Slice and Dice no longer causes the target to stand up if sitting.",
+   "h": "10ef5a15f48b"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue"
+   },
+   "abilities": [
+    "Poised"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    10,
+    18
+   ],
+   "text": "Poised: New passive ability learned at level 18. “When you are not in combat and have your maximum Energy, you will gain Poised. Poised reduces the Energy cost of your next Energy ability by 10.”",
+   "h": "49acac6733a7"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue"
+   },
+   "abilities": [
+    "New Spell Added"
+   ],
+   "kind": "added",
+   "pairs": [],
+   "nums": [
+    2,
+    5,
+    10,
+    15,
+    24,
+    25,
+    44,
+    50
+   ],
+   "text": "New Spell Added: Shank. Learned at level 24. 5 Energy cost. 10 second cooldown. Melee range. Instantly strike with your off-hand weapon, dealing 50% weapon damage and generating 15 Energy. Shank cannot Miss. Rank 2 learned at level 44 and generates 25 Energy.",
+   "h": "e77f49ff3af7"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue"
+   },
+   "abilities": [
+    "Deadly Poison"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 0.009,
+     "old": 0.0045,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    0.0045,
+    0.009
+   ],
+   "text": "Deadly Poison Attack Power coefficient increased to 0.009 (Was 0.0045)",
+   "h": "fc07fcef6029"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue"
+   },
+   "abilities": [
+    "Instant Poison"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 0.01,
+     "old": 0.005,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    0.005,
+    0.01
+   ],
+   "text": "Instant Poison Attack Power coefficient increased to 0.01 (Was 0.005)",
+   "h": "2af8d3fe560e"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Assassination"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "assassination"
+   },
+   "abilities": [
+    "Ruthlessness"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "The Ruthlessness talent activating no longer causes the target to stand up if sitting.",
+   "h": "b22b1e9366ae"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Assassination"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "assassination"
+   },
+   "abilities": [
+    "Improved Expose Armor"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 2,
+     "old": 3,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    2,
+    3
+   ],
+   "text": "Improved Expose Armor moved to Row 2 (Was Row 3).",
+   "h": "3f9e107e75b8"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Assassination"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "assassination"
+   },
+   "abilities": [
+    "Murder"
+   ],
+   "kind": "removed",
+   "pairs": [],
+   "nums": [],
+   "text": "Murder has been removed.",
+   "h": "ea8a055b25ef"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Assassination"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "assassination"
+   },
+   "abilities": [
+    "Lethality"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 20,
+     "old": 5,
+     "unit": "%",
+     "old_unit": "%"
+    }
+   ],
+   "nums": [
+    2,
+    4,
+    5,
+    8,
+    10,
+    12,
+    16,
+    20
+   ],
+   "text": "Lethality changed to a 2-point talent granting 10/20% increased Critical Strike damage to the abilities listed (Was a 5-point talent granting 4/8/12/16/20%).",
+   "h": "b4b4eef0c0de"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Assassination"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "assassination"
+   },
+   "abilities": [
+    "Vigor"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 3,
+     "old": 5,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    3,
+    5
+   ],
+   "text": "Vigor moved to Row 3 (Was Row 5).",
+   "h": "c8eebaab8d89"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Assassination"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "assassination"
+   },
+   "abilities": [
+    "New Talent",
+    "Garrote",
+    "Rupture"
+   ],
+   "kind": "added",
+   "pairs": [],
+   "nums": [
+    1,
+    3,
+    6,
+    9
+   ],
+   "text": "New Talent: Blood Splatter. Passive. 1 point talent in Row 3. Increases the duration of your Rupture ability by 6 seconds and your Garrote ability by 9 seconds.",
+   "h": "8655a4de3e78"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Assassination"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "assassination"
+   },
+   "abilities": [
+    "Relentless Strikes"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 5,
+     "old": 3,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    3,
+    5
+   ],
+   "text": "Relentless Strikes moved to Row 5 (was Row 3).",
+   "h": "0cedf6a430f9"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Assassination"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "assassination"
+   },
+   "abilities": [
+    "Relentless Strikes"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 25,
+     "old": 1,
+     "unit": "pt",
+     "old_unit": "pt"
+    }
+   ],
+   "nums": [
+    1,
+    4,
+    5,
+    8,
+    12,
+    16,
+    20,
+    25
+   ],
+   "text": "Relentless Strikes change to a 5-point talent granting a 4/8/12/16/20% chance per Combo Point to restore 25 Energy (was 1 point granting 20% per combo point).",
+   "h": "8bd632792995"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Assassination"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "assassination"
+   },
+   "abilities": [
+    "Venom"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 5,
+     "old": 7,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    5,
+    7
+   ],
+   "text": "Venom moved to Row 5 (was Row 7).",
+   "h": "c15b1c2db3d1"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Assassination"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "assassination"
+   },
+   "abilities": [
+    "Venom"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    6,
+    20,
+    30
+   ],
+   "text": "Venom is now a Passive that causes your Shank ability to increase your Poison damage by 30% and your chance to apply Poisons by 20% for 6 seconds.",
+   "h": "573ba61fa7d3"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Assassination"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "assassination"
+   },
+   "abilities": [
+    "Seal Fate"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    3,
+    33,
+    66,
+    100
+   ],
+   "text": "Seal Fate changed to a 3-point talent granting your critical strikes from abilities that add Combo Points a 33/66/100% chance to add an additional Combo Point.",
+   "h": "9d16bef191c9"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Assassination"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "assassination"
+   },
+   "abilities": [
+    "Mutilate"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 7,
+     "old": 9,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    7,
+    9
+   ],
+   "text": "Mutilate moved to Row 7 (was Row 9).",
+   "h": "8dd3cc15231a"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Assassination"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "assassination"
+   },
+   "abilities": [
+    "Mutilates"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 90,
+     "old": 75,
+     "unit": "%",
+     "old_unit": "%"
+    }
+   ],
+   "nums": [
+    75,
+    90
+   ],
+   "text": "Mutilates damage increased to 90% of weapon damage plus an additional amount that was also increased (was 75% weapon damage and a lower amount).",
+   "h": "22381db0b511"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Combat"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "combat"
+   },
+   "abilities": [
+    "Improved Eviscerate",
+    "Eviscerate"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    7,
+    13,
+    20
+   ],
+   "text": "Improved Eviscerate has been renamed Coup de Grace, Increasing the damage done by your Eviscerate ability by 7/13/20%, and the damage and storage rate of your Death Mark ability by 7/13/20%.",
+   "h": "566342240464"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Combat"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "combat"
+   },
+   "abilities": [
+    "Improved Sinister Strike",
+    "Sinister Strike",
+    "Hemorrhage"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    3,
+    5
+   ],
+   "text": "Improved Sinister Strike renamed to Efficient Strikes and now reduces the Energy costs of Sinister Strike and Hemorrhage by 3/5 (was just Sinister Strike discounted).",
+   "h": "344e13cfd44b"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Combat"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "combat"
+   },
+   "abilities": [
+    "Improved Sprint"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 2,
+     "old": 3,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    2,
+    3
+   ],
+   "text": "Improved Sprint moved to Row 2 (was Row 3).",
+   "h": "7326695e326e"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Combat"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "combat"
+   },
+   "abilities": [
+    "New Talent"
+   ],
+   "kind": "added",
+   "pairs": [],
+   "nums": [
+    2,
+    3,
+    5,
+    10
+   ],
+   "text": "New Talent: Composure. Passive. 2-point talent in Row 3. Increases the Energy cost reduction of your Poised ability by 5/10.",
+   "h": "5293cf46ad20"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Combat"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "combat"
+   },
+   "abilities": [
+    "Flawless Execution"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 15,
+     "old": 10,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    10,
+    15
+   ],
+   "text": "Flawless Execution energy cost reduction increased to 15 (was 10).",
+   "h": "f0e5296f5a15"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Combat"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "combat"
+   },
+   "abilities": [
+    "Weapon Expertise"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 4,
+     "old": 6,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    4,
+    6
+   ],
+   "text": "Weapon Expertise moved to Row 4 (was Row 6).",
+   "h": "02197eb7a95f"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Combat"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "combat"
+   },
+   "abilities": [
+    "Aggression"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 4,
+     "old": 6,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    4,
+    6
+   ],
+   "text": "Aggression moved to Row 4 (was Row 6).",
+   "h": "73605f6a8734"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Combat"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "combat"
+   },
+   "abilities": [
+    "Sinister Strike",
+    "Aggression",
+    "Eviscerate",
+    "Backstab"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 15,
+     "old": 2,
+     "unit": "%",
+     "old_unit": "%"
+    }
+   ],
+   "nums": [
+    2,
+    4,
+    5,
+    6,
+    10,
+    15
+   ],
+   "text": "Aggression changed to increasing the damage of Sinister Strike and Eviscerate by 5/10/15% (was Sinister Strike, Eviscerate, and Backstab by 2/4/6%).",
+   "h": "3225dc824921"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Combat"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "combat"
+   },
+   "abilities": [
+    "Dual Wield Specialization"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 5,
+     "old": 4,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    4,
+    5
+   ],
+   "text": "Dual Wield Specialization moved to Row 5 (was Row 4).",
+   "h": "542d131d44bc"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Combat"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "combat"
+   },
+   "abilities": [
+    "Dual Wield Specialization"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 50,
+     "old": 5,
+     "unit": "%",
+     "old_unit": "%"
+    }
+   ],
+   "nums": [
+    2,
+    5,
+    10,
+    15,
+    20,
+    25,
+    50
+   ],
+   "text": "Dual Wield Specialization changed to a 2-point talent granting 25/50% increased off-hand weapon damage (was 5 a points granting 5/10/15/20/25% off-hand weapon damage).",
+   "h": "ab3dd74c0e74"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Combat"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "combat"
+   },
+   "abilities": [
+    "New Talent"
+   ],
+   "kind": "added",
+   "pairs": [],
+   "nums": [
+    0.4,
+    0.8,
+    1.2,
+    1.6,
+    2,
+    3,
+    5,
+    6,
+    9,
+    12,
+    15
+   ],
+   "text": "New Talent: Flash of Steel. Passive. 5-point talent in Row 6. Increases the energy generated by your Shank ability by 3/6/9/12/15 and reduces its cooldown by 0.4/0.8/1.2/1.6/2.0 seconds.",
+   "h": "323b4a44e616"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Subtlety"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "subtlety"
+   },
+   "abilities": [
+    "Ghostly Strike",
+    "Hemorrhage"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Hemorrhage and Ghostly Strike were dealing much more damage than intended when using a Dagger.",
+   "h": "2b8bb380c851"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Subtlety"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "subtlety"
+   },
+   "abilities": [
+    "Setup"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 1,
+     "old": 2,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    1,
+    2
+   ],
+   "text": "Setup moved to Row 1 (was Row 2).",
+   "h": "4e6160525d32"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Subtlety"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "subtlety"
+   },
+   "abilities": [
+    "Setup"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    15,
+    30,
+    33,
+    45,
+    66,
+    100
+   ],
+   "text": "Setup changed to a 15/30/45% chance to add a Combo Point to your target after Dodging their attack or fully resisting one of their spells (was 33/66/100% chance).",
+   "h": "cc1e24de8ce6"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Subtlety"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "subtlety"
+   },
+   "abilities": [
+    "Opportunity",
+    "Mutilate",
+    "Backstab",
+    "Garrote",
+    "Ambush"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 20,
+     "old": 2,
+     "unit": "%",
+     "old_unit": "pt"
+    }
+   ],
+   "nums": [
+    2,
+    4,
+    5,
+    8,
+    10,
+    12,
+    16,
+    20
+   ],
+   "text": "Opportunity changed to a 5-point talent granting 4/8/12/16/20% increased damage to Backstab, Garrote, Ambush, and Mutilate (was 2 points granting 5/10%).",
+   "h": "b95ace849991"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Subtlety"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "subtlety"
+   },
+   "abilities": [
+    "Dirty Deeds"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 2,
+     "old": 5,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    2,
+    5
+   ],
+   "text": "Dirty Deeds moved to Row 2 (was Row 5).",
+   "h": "cef23e2355f6"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Subtlety"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "subtlety"
+   },
+   "abilities": [
+    "Camouflage"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 2,
+     "old": 1,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    1,
+    2
+   ],
+   "text": "Camouflage moved to Row 2 (was Row 1).",
+   "h": "685f6ab4765f"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Subtlety"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "subtlety"
+   },
+   "abilities": [
+    "Camouflage"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 6,
+     "old": 5,
+     "unit": "s",
+     "old_unit": "pt"
+    }
+   ],
+   "nums": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    9,
+    10,
+    12,
+    15
+   ],
+   "text": "Camouflage changed to a 3-point talent granting 5/10/15% increased movement speed in stealth and reduces stealth’s cooldown by 2/4/6 seconds (was 5 points granting 3/6/9/12/15% and 2/3/4/5/6).",
+   "h": "c464159d73d1"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Subtlety"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "subtlety"
+   },
+   "abilities": [
+    "Premeditation"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 3,
+     "old": 4,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    3,
+    4
+   ],
+   "text": "Premeditation moved to Row 3 (was Row 4).",
+   "h": "b768f9a21ef2"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Subtlety"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "subtlety"
+   },
+   "abilities": [
+    "Serrated Blades"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 3,
+     "old": 4,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    3,
+    4
+   ],
+   "text": "Serrated Blades moved to Row 3 (was Row 4).",
+   "h": "2b78845859b9"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Subtlety"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "subtlety"
+   },
+   "abilities": [
+    "Elusiveness"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 4,
+     "old": 2,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    2,
+    4
+   ],
+   "text": "Elusiveness moved to Row 4 (was Row 2).",
+   "h": "40a1555ee29c"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Subtlety"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "subtlety"
+   },
+   "abilities": [
+    "Ghostly Strike"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 4,
+     "old": 3,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    3,
+    4
+   ],
+   "text": "Ghostly Strike moved to Row 4 (was Row 3).",
+   "h": "24456f6e2509"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Subtlety"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "subtlety"
+   },
+   "abilities": [
+    "Ghostly Strike",
+    "Stealth",
+    "Garrote",
+    "Ambush"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    7
+   ],
+   "text": "Ghostly Strike now also causes your next Ambush or Garrote cast within 7 seconds to not require Stealth.",
+   "h": "04e84b5eaf81"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Subtlety"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "subtlety"
+   },
+   "abilities": [
+    "Improved Distract"
+   ],
+   "kind": "removed",
+   "pairs": [],
+   "nums": [],
+   "text": "Improved Distract removed.",
+   "h": "785208cf40d0"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Subtlety"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "subtlety"
+   },
+   "abilities": [
+    "New Talent"
+   ],
+   "kind": "added",
+   "pairs": [],
+   "nums": [
+    1,
+    2,
+    3,
+    4,
+    15,
+    30
+   ],
+   "text": "New Talent: Quick Getaway. Passive. 2-point talent in Row 4. Increases the maximum number of targets you may have Sapped by 1/1 and increases your movement speed by 15/30% for 3 seconds after sapping a target.",
+   "h": "f2b658c60de2"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Subtlety"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "subtlety"
+   },
+   "abilities": [
+    "Heightened Senses"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 5,
+     "old": 4,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    4,
+    5
+   ],
+   "text": "Heightened Senses moved to Row 5 (was Row 4).",
+   "h": "65de788a340a"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Subtlety"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "subtlety"
+   },
+   "abilities": [
+    "Hemorrhage",
+    "Garrote",
+    "Rupture"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    15
+   ],
+   "text": "Hemorrhage changed to increase the damage of the caster’s Rupture and Garrote abilities by 15% (was only increasing Rupture by 15%).",
+   "h": "7e78caaa689f"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Subtlety"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "subtlety"
+   },
+   "abilities": [
+    "Quietus"
+   ],
+   "kind": "removed",
+   "pairs": [],
+   "nums": [],
+   "text": "Quietus has been removed.",
+   "h": "9ec7ca81e8a9"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Subtlety"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "subtlety"
+   },
+   "abilities": [
+    "Cutthroat"
+   ],
+   "kind": "removed",
+   "pairs": [],
+   "nums": [],
+   "text": "Cutthroat has been removed.",
+   "h": "2403b3750369"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Subtlety"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "subtlety"
+   },
+   "abilities": [
+    "New Talent"
+   ],
+   "kind": "added",
+   "pairs": [],
+   "nums": [
+    2,
+    5,
+    6,
+    20,
+    40,
+    60,
+    80,
+    100
+   ],
+   "text": "New Talent: Boot Knife. Passive. 5-point talent in Row 6. Gives your Shank ability a 20/40/60/80/100% chance to add 2 Combo Points to the target.",
+   "h": "5bf466fb6be1"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Subtlety"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "subtlety"
+   },
+   "abilities": [
+    "Thousand Cuts"
+   ],
+   "kind": "removed",
+   "pairs": [],
+   "nums": [],
+   "text": "Thousand Cuts has been removed.",
+   "h": "9ab4b77e01f5"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Subtlety"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "subtlety"
+   },
+   "abilities": [
+    "New Talent",
+    "Garrote",
+    "Rupture"
+   ],
+   "kind": "added",
+   "pairs": [],
+   "nums": [
+    1,
+    6,
+    7,
+    10,
+    20,
+    25
+   ],
+   "text": "New Talent: Death Mark. Active. 1 point talent in Row 7. 25 Energy cost. 20-yard range. 10 second cooldown. Curse. Finishing move that marks the target, storing a portion of the damage dealt by your attacks per Combo Point. Garrote and Rupture damage is stored at twice the rate. After 6 sec, the stored damage is dealt up to a maximum increased by Attack Power and Critical Strike chance.",
+   "h": "79253f58323d"
+  },
+  {
+   "path": [
+    "Classes",
+    "Shaman"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "shaman"
+   },
+   "abilities": [
+    "Windfury Weapon"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Windfury Weapon now causes the Shaman to animate an additional weapon swing attack.",
+   "h": "b8cd8964ca27"
+  },
+  {
+   "path": [
+    "Classes",
+    "Shaman"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "shaman"
+   },
+   "abilities": [
+    "Windfury Totem"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Windfury Totem now causes the player to animate an additional weapon swing attack.",
+   "h": "5827fa3a3fc0"
+  },
+  {
+   "path": [
+    "Classes",
+    "Shaman"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "shaman"
+   },
+   "abilities": [
+    "Totemic Projection"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    30
+   ],
+   "text": "Totemic Projection renamed Totemic Call. It now teleports the Shaman’s totems to the Shaman’s own location, and its cooldown is reduced to 30 seconds.",
+   "h": "39c2b0a17271"
+  },
+  {
+   "path": [
+    "Classes",
+    "Shaman"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "shaman"
+   },
+   "abilities": [
+    "Lightning Bolt"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    78,
+    80
+   ],
+   "text": "Lightning Bolt: Base damage of all ranks increased, with larger percentage increases on the higher ranks. Max rank was increased by 80%. Each rank’s new base damage is roughly 78% of the base damage as the Classic Era version (but cast time is lower than Classic Era).",
+   "h": "81392d35016e"
+  },
+  {
+   "path": [
+    "Classes",
+    "Shaman"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "shaman"
+   },
+   "abilities": [
+    "Lightning Bolt"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    2.5,
+    145,
+    225
+   ],
+   "text": "Chain Lightning cast time increased to 2.5 seconds. Primary target base damage increased to approximately 145% of comparable rank Lightning Bolt base damage. Mana cost increased to approximately 225% of comparable rank Lightning Bolt Mana cost.",
+   "h": "734bb28c3b2a"
+  },
+  {
+   "path": [
+    "Classes",
+    "Shaman"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "shaman"
+   },
+   "abilities": [
+    "Shocks"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Shocks: All shock base damage reverted to match Classic Era values (higher than previous Forever Beta values).",
+   "h": "e22062a1ef7a"
+  },
+  {
+   "path": [
+    "Classes",
+    "Shaman",
+    "Elemental"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "shaman",
+    "spec": "elemental"
+   },
+   "abilities": [
+    "Lightning Overload"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    3,
+    7,
+    10,
+    20,
+    30
+   ],
+   "text": "Lightning Overload: Talent now grants a 10/20/30% chance to trigger a duplicate spell, up from 3/7/10% chance.",
+   "h": "112e1e000bb0"
+  },
+  {
+   "path": [
+    "Classes",
+    "Shaman",
+    "Elemental"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "shaman",
+    "spec": "elemental"
+   },
+   "abilities": [
+    "Lava Burst",
+    "Lightning Bolt"
+   ],
+   "kind": "removed",
+   "pairs": [],
+   "nums": [
+    5
+   ],
+   "text": "Lava Burst: Removed. Replaced with Call of Thunder, which increases critical strike chance of Lightning Bolt and Chain Lightning by 5%. All references to Lava Burst removed.",
+   "h": "607b3f7bf6ad"
+  },
+  {
+   "path": [
+    "Classes",
+    "Shaman",
+    "Elemental"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "shaman",
+    "spec": "elemental"
+   },
+   "abilities": [
+    "Elemental Mastery"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Elemental Mastery renamed Lightning Mastery. Icon changed.",
+   "h": "f0bac36e7589"
+  },
+  {
+   "path": [
+    "Classes",
+    "Shaman",
+    "Elemental"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "shaman",
+    "spec": "elemental"
+   },
+   "abilities": [
+    "Elemental Reach",
+    "Totemic Projection"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Elemental Reach no longer reduces the cooldown of Totemic Projection.",
+   "h": "8260056e0a2c"
+  },
+  {
+   "path": [
+    "Classes",
+    "Shaman",
+    "Enhancement"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "shaman",
+    "spec": "enhancement"
+   },
+   "abilities": [
+    "Improved Ghost Wolf"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    2,
+    4
+   ],
+   "text": "Improved Ghost Wolf moved from 2nd row to 4th row.",
+   "h": "62abf530ab51"
+  },
+  {
+   "path": [
+    "Classes",
+    "Shaman",
+    "Enhancement"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "shaman",
+    "spec": "enhancement"
+   },
+   "abilities": [
+    "Maelstrom Weapon"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Maelstrom Weapon: Chance to trigger doubled.",
+   "h": "1cd928c622e0"
+  },
+  {
+   "path": [
+    "Classes",
+    "Shaman",
+    "Enhancement"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "shaman",
+    "spec": "enhancement"
+   },
+   "abilities": [
+    "Stormstrike"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    6,
+    8,
+    100,
+    150
+   ],
+   "text": "Stormstrike: Now deals 150% normalized weapon damage, up from 100%. Cooldown reduced to 6 seconds from 8 seconds.",
+   "h": "8cd1dff34eb7"
+  },
+  {
+   "path": [
+    "Classes",
+    "Shaman",
+    "Enhancement"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "shaman",
+    "spec": "enhancement"
+   },
+   "abilities": [
+    "Mental Dexterity"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    33,
+    50,
+    67,
+    100,
+    150
+   ],
+   "text": "Mental Dexterity: Now increases the Shaman’s Attack Power by 50/100/150% of Intellect, up from 33/67/100%.",
+   "h": "7143534f33c3"
+  },
+  {
+   "path": [
+    "Classes",
+    "Shaman",
+    "Enhancement"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "shaman",
+    "spec": "enhancement"
+   },
+   "abilities": [
+    "Flurry"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    5,
+    6,
+    10,
+    12,
+    15,
+    18,
+    20,
+    24,
+    25,
+    30
+   ],
+   "text": "Flurry: Now increases attack speed by 6/12/18/24/30%, up from 5/10/15/20/25%.",
+   "h": "4e371768c288"
+  },
+  {
+   "path": [
+    "Classes",
+    "Shaman",
+    "Restoration"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "shaman",
+    "spec": "restoration"
+   },
+   "abilities": [
+    "Riptide"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [
+    6,
+    12,
+    40
+   ],
+   "text": "Riptide: Mana cost reduced by about 40%. Cooldown increased to 12 seconds from 6 seconds. Riptide no longer deals any initial healing, just healing over time.",
+   "h": "8d3caa1f492b"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warlock"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warlock"
+   },
+   "abilities": [
+    "Spellstones"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Spellstones now correctly only increase Shadow damage (was increasing Shadow and Fire damage).",
+   "h": "d4379af99c13"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warlock"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warlock"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 2,
+     "old": 7.5,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    2,
+    7.5
+   ],
+   "text": "Pets now gain 2 Health per point of Master’s Stamina (was 7.5 Health per point of Master’s Stamina).",
+   "h": "6c7ac2b5d2b8"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warlock"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warlock"
+   },
+   "abilities": [
+    "Bane of Agony"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Bane of Agony now correctly dynamically updates its damage.",
+   "h": "c5b54ca0f452"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warlock"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warlock"
+   },
+   "abilities": [
+    "Drain Soul"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Drain Soul: This chance for this spell to grant a Soul Shard on dealing damage (not a kill) has been reduced significantly.",
+   "h": "6d87e0551668"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warlock",
+    "Affliction"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warlock",
+    "spec": "affliction"
+   },
+   "abilities": [
+    "Amplify Curse",
+    "Curse of Exhaustion",
+    "Bane of Agony"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Amplify Curse now correctly affects Curse of Exhaustion and Bane of Agony.",
+   "h": "8618d1077220"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warlock",
+    "Affliction"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warlock",
+    "spec": "affliction"
+   },
+   "abilities": [
+    "Improved Drains",
+    "Wrack"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Improved Drains: Now increases Drain Mana’s amount of Mana drained but no longer increases Wrack damage.",
+   "h": "ad2c04ce72cd"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warlock",
+    "Affliction"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warlock",
+    "spec": "affliction"
+   },
+   "abilities": [
+    "Wrack"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 86,
+     "old": 36,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    0.286,
+    2.5,
+    36,
+    60,
+    86
+   ],
+   "text": "Wrack: Spell damage coefficient doubled, to match the expected coefficient per cast time of 0.286 per second. Base damage per second now increases with each level by 2.5. Base damage per second at level 60 effectively increased from 36 to 86.",
+   "h": "50003cdf4de9"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warlock",
+    "Destruction"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warlock",
+    "spec": "destruction"
+   },
+   "abilities": [
+    "Shadow and Flame"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    16,
+    20
+   ],
+   "text": "Shadow and Flame: The damage bonuses from this talent now increase Fire or Shadow damage by 4/8/12/16/20%, up from 2/4/6/8/10%.",
+   "h": "742eeb964ced"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warrior"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warrior"
+   },
+   "abilities": [
+    "Victory Rush"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue with the tooltip of Victory Rush incorrectly displaying the amount of damage it would deal.",
+   "h": "bcb46ff0e67c"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warrior"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warrior"
+   },
+   "abilities": [
+    "Defensive Stance"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 80,
+     "old": 30,
+     "unit": "%",
+     "old_unit": "%"
+    }
+   ],
+   "nums": [
+    30,
+    80
+   ],
+   "text": "Defensive Stance: Threat bonus increased from 30% to 80%.",
+   "h": "981d6cfd49d1"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warrior"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warrior"
+   },
+   "abilities": [
+    "Slam"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 15,
+     "old": 18,
+     "unit": "s",
+     "old_unit": "s"
+    }
+   ],
+   "nums": [
+    15,
+    18
+   ],
+   "text": "The cooldown of Slam has been reduced to 15 seconds (was 18 seconds).",
+   "h": "497c107bd69f"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warrior",
+    "Arms"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warrior",
+    "spec": "arms"
+   },
+   "abilities": [
+    "Improved Tactical Mastery"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 15,
+     "old": 5,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    3,
+    5,
+    6,
+    9,
+    10,
+    12,
+    15
+   ],
+   "text": "Improved Tactical Mastery changed to a 3-point talent granting the ability to retain 5/10/15 additional Rage when changing stances (was a 5-point talent granting 3/6/9/12/15 Rage retention).",
+   "h": "af5ca27aed53"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warrior",
+    "Arms"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warrior",
+    "spec": "arms"
+   },
+   "abilities": [
+    "Two-Handed Weapon Specialization"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 6,
+     "old": 1,
+     "unit": "%",
+     "old_unit": "%"
+    }
+   ],
+   "nums": [
+    1,
+    2,
+    3,
+    4,
+    6
+   ],
+   "text": "Two-Handed Weapon Specialization changed to grant 2/4/6% increased damage when using a two-handed melee weapon (was 1/2/3% increased damage).",
+   "h": "850c4234a2d5"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warrior",
+    "Arms"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warrior",
+    "spec": "arms"
+   },
+   "abilities": [
+    "Bloodthrill",
+    "Overpower",
+    "Rend"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 20,
+     "old": 5,
+     "unit": "%",
+     "old_unit": "%"
+    }
+   ],
+   "nums": [
+    2,
+    4,
+    5,
+    8,
+    10,
+    12,
+    16,
+    20
+   ],
+   "text": "Bloodthrill changed to a 2-point talent granting your Main Hand melee attacks against enemies afflicted by your Rend a 10/20% chance to allow an activation of Overpower (was a 5-point talent granting a 4/8/12/16/20% chance).",
+   "h": "1c8880285f11"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warrior",
+    "Arms"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warrior",
+    "spec": "arms"
+   },
+   "abilities": [
+    "Improved Slam",
+    "Slam"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 5,
+     "old": 3,
+     "unit": "s",
+     "old_unit": "s"
+    }
+   ],
+   "nums": [
+    2.5,
+    3,
+    5
+   ],
+   "text": "Improved Slam’s reduction to Slam’s cooldown changed to 2.5/5 seconds (was 3.0/3.0).",
+   "h": "9d12e70922fb"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warrior",
+    "Fury"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warrior",
+    "spec": "fury"
+   },
+   "abilities": [
+    "Gore Drinker",
+    "Blood Craze"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "The Blood Craze and Gore Drinker talents no longer generate threat when restoring Health to the Warrior.",
+   "h": "974a4947afd3"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warrior",
+    "Fury"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warrior",
+    "spec": "fury"
+   },
+   "abilities": [
+    "Blood Craze"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Blood Craze will no longer activate when sitting.",
+   "h": "283e69027429"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warrior",
+    "Fury"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warrior",
+    "spec": "fury"
+   },
+   "abilities": [
+    "Piercing Howl"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    5,
+    10,
+    15,
+    20,
+    25
+   ],
+   "text": "Booming voice now also reduces the Rage cost of Piercing Howl by 5/10/15/20/25%.",
+   "h": "fa7757990dbe"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warrior",
+    "Fury"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warrior",
+    "spec": "fury"
+   },
+   "abilities": [
+    "Enrage"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 3,
+     "old": 4,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    3,
+    4
+   ],
+   "text": "Enrage moved to Row 3 (was Row 4).",
+   "h": "8bfe223c0214"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warrior",
+    "Fury"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warrior",
+    "spec": "fury"
+   },
+   "abilities": [
+    "New Talent"
+   ],
+   "kind": "added",
+   "pairs": [],
+   "nums": [
+    1,
+    4,
+    5,
+    8,
+    15,
+    25
+   ],
+   "text": "New Talent: Reckless Swings. Row 4. 1 Point. 15 second cooldown. Costs 25% of base health. Your next 4 melee attacks generate 5 additional Rage. Lasts 8 seconds.",
+   "h": "ed97106fc18b"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warrior",
+    "Fury"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warrior",
+    "spec": "fury"
+   },
+   "abilities": [
+    "Gore Drinker",
+    "Blood Craze",
+    "Enrage"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 5,
+     "old": 6,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    5,
+    6
+   ],
+   "text": "Gore Drinker moved to Row 5 (was Row 6) and is connected to Blood Craze now instead of Enrage.",
+   "h": "6686a0fab714"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warrior",
+    "Fury"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warrior",
+    "spec": "fury"
+   },
+   "abilities": [
+    "Death Wish",
+    "Flurry"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Death Wish is no longer required for Flurry.",
+   "h": "216b5795be3e"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warrior",
+    "Fury"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warrior",
+    "spec": "fury"
+   },
+   "abilities": [
+    "Flurry"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 3,
+     "old": 5,
+     "unit": "pt",
+     "old_unit": "pt"
+    }
+   ],
+   "nums": [
+    3,
+    5,
+    10,
+    15,
+    20,
+    25,
+    30
+   ],
+   "text": "Flurry changed to a 3-point granting 10/20/30% increased attack speed for 3 swings after a critical strike (was 5 points granting 5/10/15/20/25% increased attack speed).",
+   "h": "3e2a78c91ed8"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warrior",
+    "Fury"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warrior",
+    "spec": "fury"
+   },
+   "abilities": [
+    "New Talent",
+    "Whirlwind"
+   ],
+   "kind": "added",
+   "pairs": [],
+   "nums": [
+    1,
+    2,
+    6,
+    15,
+    30
+   ],
+   "text": "New Talent: Improved Whirlwind. Row 6. 2 Point. Passive. Reduces the cooldown of your Whirlwind ability by 1/2 seconds and increases the damage it deals to the closest enemy by 15/30%.",
+   "h": "e73d006fd3f4"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warrior",
+    "Fury"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warrior",
+    "spec": "fury"
+   },
+   "abilities": [
+    "Bloodthirst",
+    "Death Wish"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Bloodthirst now has Death Wish as a required talent.",
+   "h": "a64f7bae85cb"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warrior",
+    "Protection"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warrior",
+    "spec": "protection"
+   },
+   "abilities": [
+    "Defiance"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    5,
+    7,
+    10,
+    13,
+    15,
+    20
+   ],
+   "text": "Defiance: Threat bonus increased to 7/13/20% from 5/10/15%.",
+   "h": "84c8f6d609cd"
+  },
+  {
+   "path": [
+    "Player versus Player"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Darkspear Islands"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "In the Darkspear Islands battleground, dropping the flag no longer places the “Recently Dropped Flag” debuff on the player who dropped it.",
+   "h": "8cd50539d79c"
+  },
+  {
+   "path": [
+    "Races",
+    "Dwarf"
+   ],
+   "subject": {
+    "type": "race",
+    "id": "dwarf"
+   },
+   "abilities": [
+    "Earth Fury"
+   ],
+   "kind": "removed",
+   "pairs": [],
+   "nums": [
+    2
+   ],
+   "text": "Earth Fury (2% increased critical strike damage and healing) removed.",
+   "h": "fd06e8dd60bc"
+  },
+  {
+   "path": [
+    "Races",
+    "Dwarf"
+   ],
+   "subject": {
+    "type": "race",
+    "id": "dwarf"
+   },
+   "abilities": [
+    "Artisan’s Precision"
+   ],
+   "kind": "added",
+   "pairs": [],
+   "nums": [
+    1
+   ],
+   "text": "Added: Artisan’s Precision - Increases hit chance with spells and attacks by 1%.",
+   "h": "6b70ee12b527"
+  },
+  {
+   "path": [
+    "Races",
+    "Human"
+   ],
+   "subject": {
+    "type": "race",
+    "id": "human"
+   },
+   "abilities": [
+    "Ruthless"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 1,
+     "old": 2,
+     "unit": "%",
+     "old_unit": "%"
+    }
+   ],
+   "nums": [
+    1,
+    2
+   ],
+   "text": "Ruthless now increases critical chance by 1% (was 2%).",
+   "h": "c2f53382556d"
+  },
+  {
+   "path": [
+    "Races",
+    "Human"
+   ],
+   "subject": {
+    "type": "race",
+    "id": "human"
+   },
+   "abilities": [
+    "Human Spirit"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 10,
+     "old": 5,
+     "unit": "%",
+     "old_unit": "%"
+    }
+   ],
+   "nums": [
+    5,
+    10
+   ],
+   "text": "Human Spirit now increases Spirit by 10% (was 5%).",
+   "h": "157b13cf95b2"
+  },
+  {
+   "path": [
+    "Races",
+    "Orc"
+   ],
+   "subject": {
+    "type": "race",
+    "id": "orc"
+   },
+   "abilities": [
+    "Savage"
+   ],
+   "kind": "removed",
+   "pairs": [],
+   "nums": [
+    1
+   ],
+   "text": "Savage removed (1% increased critical strike chance).",
+   "h": "b34090698c4d"
+  },
+  {
+   "path": [
+    "Races",
+    "Orc"
+   ],
+   "subject": {
+    "type": "race",
+    "id": "orc"
+   },
+   "abilities": [
+    "Command"
+   ],
+   "kind": "added",
+   "pairs": [],
+   "nums": [
+    5
+   ],
+   "text": "Command re-added, increasing Warlock and Hunter pet damage by 5%.",
+   "h": "7b4eb54eda18"
+  },
+  {
+   "path": [
+    "Races",
+    "Orc"
+   ],
+   "subject": {
+    "type": "race",
+    "id": "orc"
+   },
+   "abilities": [
+    "Blood Fury’s"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 2,
+     "old": 3,
+     "unit": "min",
+     "old_unit": "min"
+    }
+   ],
+   "nums": [
+    2,
+    3
+   ],
+   "text": "Blood Fury’s cooldown reduced to 2 minutes (was 3 minutes).",
+   "h": "180749eee47d"
+  },
+  {
+   "path": [
+    "Races",
+    "Skyborne"
+   ],
+   "subject": {
+    "type": "race",
+    "id": "skyborne"
+   },
+   "abilities": [
+    "Wind-Blessed Haste"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 2,
+     "old": 3,
+     "unit": "%",
+     "old_unit": "%"
+    }
+   ],
+   "nums": [
+    2,
+    3
+   ],
+   "text": "Wind-Blessed Haste bonus reduced to 2% (was 3%).",
+   "h": "bd777afe08c3"
+  },
+  {
+   "path": [
+    "Races",
+    "Skyborne"
+   ],
+   "subject": {
+    "type": "race",
+    "id": "skyborne"
+   },
+   "abilities": [
+    "Read Leyline",
+    "Innervate"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 50,
+     "old": 100,
+     "unit": "%",
+     "old_unit": "%"
+    }
+   ],
+   "nums": [
+    15,
+    50,
+    100
+   ],
+   "text": "Read Leyline now increases Mana and Health regeneration by 50% (was 100%), with a 15-second duration. This ability cannot be used while Innervate is active, and will be replaced by Innervate as a more powerful effect.",
+   "h": "03b89e27fa4a"
+  },
+  {
+   "path": [
+    "Races",
+    "Skyborne"
+   ],
+   "subject": {
+    "type": "race",
+    "id": "skyborne"
+   },
+   "abilities": [
+    "Read Leyline"
+   ],
+   "kind": "removed",
+   "pairs": [],
+   "nums": [
+    1,
+    100
+   ],
+   "text": "Using Read Leyline at a Ley Line now also grants “Attuned” for 1 hour. While Attuned, the benefit of Read Leyline is increased to 100% regeneration increase. Attuned persists through death, and is removed upon entering a raid.",
+   "h": "d8e53350c046"
+  },
+  {
+   "path": [
+    "Races",
+    "Skyborne"
+   ],
+   "subject": {
+    "type": "race",
+    "id": "skyborne"
+   },
+   "abilities": [
+    "Skysight"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 15,
+     "old": 10,
+     "unit": "%",
+     "old_unit": "%"
+    }
+   ],
+   "nums": [
+    10,
+    15
+   ],
+   "text": "Skysight is now a 15% increased movement speed (was 10%), with a 15-second duration.",
+   "h": "ed3eaaf8a61b"
+  },
+  {
+   "path": [
+    "Races",
+    "Skyborne"
+   ],
+   "subject": {
+    "type": "race",
+    "id": "skyborne"
+   },
+   "abilities": [
+    "Skysight"
+   ],
+   "kind": "removed",
+   "pairs": [],
+   "nums": [
+    1,
+    30
+   ],
+   "text": "Using Skysight at an elemental convergence now also grants “Charged” for 1 hour. While Charged, the benefit of Skysight is a 30% movement speed increase. Charged persists through death, and is removed upon entering a raid.",
+   "h": "48a662c385e6"
+  },
+  {
+   "path": [
+    "Races",
+    "Tauren"
+   ],
+   "subject": {
+    "type": "race",
+    "id": "tauren"
+   },
+   "abilities": [
+    "Plainsrunning"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 2,
+     "old": 1,
+     "unit": "%",
+     "old_unit": "%"
+    },
+    {
+     "new": 60,
+     "old": 30,
+     "unit": "%",
+     "old_unit": "%"
+    }
+   ],
+   "nums": [
+    1,
+    2,
+    30,
+    60
+   ],
+   "text": "Plainsrunning now grants 2% movement speed per stack (was 1%), for a total max increase of 60% (was 30%).",
+   "h": "0d0dd5473420"
+  },
+  {
+   "path": [
+    "Races",
+    "Tauren"
+   ],
+   "subject": {
+    "type": "race",
+    "id": "tauren"
+   },
+   "abilities": [
+    "Plainsrunning"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Plainsrunning no longer increases mounted movement speed.",
+   "h": "0c826b6eac53"
+  },
+  {
+   "path": [
+    "Races",
+    "Tauren"
+   ],
+   "subject": {
+    "type": "race",
+    "id": "tauren"
+   },
+   "abilities": [
+    "Endurance"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [
+    5
+   ],
+   "text": "Endurance no longer provides any modifiers beyond 5% increased Health (no hit chance or critical damage modifiers).",
+   "h": "7d6780049a5f"
+  },
+  {
+   "path": [
+    "Races",
+    "Troll"
+   ],
+   "subject": {
+    "type": "race",
+    "id": "troll"
+   },
+   "abilities": [
+    "Berserking"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 15,
+     "old": 10,
+     "unit": "s",
+     "old_unit": "s"
+    }
+   ],
+   "nums": [
+    10,
+    15
+   ],
+   "text": "Berserking duration increased to 15 seconds (was 10 seconds).",
+   "h": "57c724e3010c"
+  },
+  {
+   "path": [
+    "Races",
+    "Undead"
+   ],
+   "subject": {
+    "type": "race",
+    "id": "undead"
+   },
+   "abilities": [
+    "Cannibalize"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Cannibalize can once again be used while immune to Physical damage.",
+   "h": "4e07118956ba"
+  },
+  {
+   "path": [
+    "Races",
+    "Undead"
+   ],
+   "subject": {
+    "type": "race",
+    "id": "undead"
+   },
+   "abilities": [
+    "Touch of the Grave"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Touch of the Grave was not activating frequently enough.",
+   "h": "ffea5d0be584"
+  },
+  {
+   "path": [
+    "Races",
+    "Undead"
+   ],
+   "subject": {
+    "type": "race",
+    "id": "undead"
+   },
+   "abilities": [
+    "Touch of the Grave"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Touch of the Grave was leaving a beam visual behind.",
+   "h": "181b82744535"
+  },
+  {
+   "path": [
+    "Races",
+    "Undead"
+   ],
+   "subject": {
+    "type": "race",
+    "id": "undead"
+   },
+   "abilities": [
+    "Touch of the Grave"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 15,
+     "old": 25,
+     "unit": "s",
+     "old_unit": "s"
+    }
+   ],
+   "nums": [
+    15,
+    25
+   ],
+   "text": "Touch of the Grave internal cooldown reduced to 15 seconds (was 25 seconds).",
+   "h": "e973240c1f10"
+  },
+  {
+   "path": [
+    "Gamepad Support"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Gamepad Support"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Gamepad Support has entered a functional Beta state.",
+   "h": "8e5b2a59774e"
+  },
+  {
+   "path": [
+    "Gamepad Support",
+    "Gamepad Support has entered a functional Beta state."
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "In World of Warcraft"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "In World of Warcraft: Forever, all major gameplay and core user interface experiences can be played with a controller, including movement, spells, interactions, UI navigation, etc.",
+   "h": "cdcc6301e8e0"
+  },
+  {
+   "path": [
+    "Gamepad Support",
+    "Action Bars"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "AoE items bound to the Gamepad Action Bar can now be used and placed at a targeted location.",
+   "h": "9db68923b7e9"
+  },
+  {
+   "path": [
+    "Gamepad Support",
+    "Action Bars"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where changing the current keyboard and mouse Action Bar page would cause Gamepad Action Bar buttons to be offset.",
+   "h": "ac59ea0f4f48"
+  },
+  {
+   "path": [
+    "Gamepad Support",
+    "Action Bars"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Gamepad Action Bar settings were not immediately reflected while in Edit Mode.",
+   "h": "264ce26dd1cd"
+  },
+  {
+   "path": [
+    "Gamepad Support",
+    "Bags and Inventory"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Gamepad focus could move away from the inventory after confirming or canceling the destruction of an item.",
+   "h": "c269e98abf2b"
+  },
+  {
+   "path": [
+    "Gamepad Support",
+    "Bags and Inventory"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where horizontal Gamepad navigation could behave incorrectly when moving between bag columns of different heights.",
+   "h": "b401940767e2"
+  },
+  {
+   "path": [
+    "Gamepad Support",
+    "Bags and Inventory"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where navigating the inventory with a Gamepad during a trade could cause a Lua error.",
+   "h": "3813ad5da479"
+  },
+  {
+   "path": [
+    "Gamepad Support",
+    "Bags and Inventory"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where opening individual bags with the keyboard and mouse UI could cause a Lua error after switching from the Gamepad UI.",
+   "h": "f8fa38c614e6"
+  },
+  {
+   "path": [
+    "Gamepad Support",
+    "Bags and Inventory",
+    "Improved the Gamepad Bag UI."
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "added",
+   "pairs": [],
+   "nums": [],
+   "text": "Added updated visuals and clearer bag states.",
+   "h": "4397db50088d"
+  },
+  {
+   "path": [
+    "Gamepad Support",
+    "Bags and Inventory",
+    "Improved the Gamepad Bag UI."
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "added",
+   "pairs": [],
+   "nums": [],
+   "text": "Added remaining bag space and ammo count indicators.",
+   "h": "cf7b2500939b"
+  },
+  {
+   "path": [
+    "Gamepad Support",
+    "Character Select & Ruleset Selection"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "added",
+   "pairs": [],
+   "nums": [],
+   "text": "Added Gamepad support for navigating and interacting with ruleset selection screens.",
+   "h": "a58d9c85b4f6"
+  },
+  {
+   "path": [
+    "Gamepad Support",
+    "Character Select & Ruleset Selection"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where newly created characters were not automatically selected when returning to the Character Select screen while using a Gamepad.",
+   "h": "9c3581290bfe"
+  },
+  {
+   "path": [
+    "Gamepad Support",
+    "Cinematics"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "added",
+   "pairs": [],
+   "nums": [],
+   "text": "Added Gamepad support for skipping or exiting cinematics.",
+   "h": "c0500d597682"
+  },
+  {
+   "path": [
+    "Gamepad Support",
+    "Combat and Targeting"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "added",
+   "pairs": [],
+   "nums": [],
+   "text": "Added Gamepad support for targeting a previously assigned Focus Target.",
+   "h": "7d413c967fca"
+  },
+  {
+   "path": [
+    "Gamepad Support",
+    "Combat and Targeting"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Friendly corpses can now be targeted with a Gamepad.",
+   "h": "12af89493c53"
+  },
+  {
+   "path": [
+    "Gamepad Support",
+    "Combat and Targeting",
+    "Friendly corpses can now be targeted with a Gamepad."
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Friendly Analog Targeting"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Friendly Analog Targeting can target friendly corpses.",
+   "h": "d54379aa6c24"
+  },
+  {
+   "path": [
+    "Gamepad Support",
+    "Combat and Targeting",
+    "Friendly corpses can now be targeted with a Gamepad."
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Friendly Tab Targeting"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Friendly Tab Targeting can target friendly corpses.",
+   "h": "3027b91d4a44"
+  },
+  {
+   "path": [
+    "Gamepad Support",
+    "Combat and Targeting",
+    "Improved Gamepad targeting for critters."
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Hostile Analog Targeting"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Hostile Analog Targeting can target critters.",
+   "h": "2cceee25dcb5"
+  },
+  {
+   "path": [
+    "Gamepad Support",
+    "Combat and Targeting",
+    "Improved Gamepad targeting for critters."
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Soft Targeting"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Soft Targeting can target critters.",
+   "h": "dcf8e202fbb4"
+  },
+  {
+   "path": [
+    "Gamepad Support",
+    "Combat and Targeting",
+    "Improved Gamepad targeting of enemy players."
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Enemy players can no longer be selected by Friendly Analog Targeting.",
+   "h": "d297b7084e35"
+  },
+  {
+   "path": [
+    "Gamepad Support",
+    "Combat and Targeting"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Units behind the player can now be selected with Analog Targeting when they remain visible on screen.",
+   "h": "02de7613563b"
+  },
+  {
+   "path": [
+    "Gamepad Support",
+    "Combat and Targeting"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Feign Death"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Feign Death units that remain attackable can now be targeted if and only if the Gamepad reticle is positioned over them.",
+   "h": "1bb9972f49c8"
+  },
+  {
+   "path": [
+    "Gamepad Support",
+    "Combat and Targeting"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where certain attackable enemies could incorrectly display an Interact icon when using a Gamepad.",
+   "h": "3db39e2f3c55"
+  },
+  {
+   "path": [
+    "Gamepad Support",
+    "Combat and Targeting"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where looting or closing the loot window could leave a corpse incorrectly locked as the player’s target.",
+   "h": "5c1998b8335a"
+  },
+  {
+   "path": [
+    "Gamepad Support",
+    "Flight Paths"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "added",
+   "pairs": [],
+   "nums": [],
+   "text": "Added Gamepad support for ending a flight path early using the Back/Cancel action.",
+   "h": "dff7dc72602a"
+  },
+  {
+   "path": [
+    "Gamepad Support",
+    "Navigation and Focus"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Gamepad focus could be lost from the Options panel after closing a graphics settings confirmation dialog.",
+   "h": "fa99117a2d06"
+  },
+  {
+   "path": [
+    "Gamepad Support",
+    "Navigation and Focus"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Updated popup behavior so non-user-initiated popups no longer automatically steal Gamepad focus.",
+   "h": "79d9f07f06ca"
+  },
+  {
+   "path": [
+    "Gamepad Support",
+    "Pets"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "added",
+   "pairs": [],
+   "nums": [],
+   "text": "Added Gamepad support for the Pet Move command.",
+   "h": "c591b6a0ad3a"
+  },
+  {
+   "path": [
+    "Gamepad Support",
+    "Professions"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Gamepad users could not use the Train action at Profession Trainers when a skill upgrade was the only available option.",
+   "h": "b368b5ea57a3"
+  },
+  {
+   "path": [
+    "Gamepad Support",
+    "Professions"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where the Gamepad prompt for removing a Profession did not indicate that the button needed to be held.",
+   "h": "dfc17736fe1c"
+  },
+  {
+   "path": [
+    "Gamepad Support",
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where viewing quest details in a different map region with a Gamepad could cause a Lua error.",
+   "h": "a4cf95b47242"
+  },
+  {
+   "path": [
+    "Gamepad Support",
+    "Swing Timers"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where the Off-Hand Swing Timer could fail to appear after logging in on dual-wielding characters.",
+   "h": "9ed6c416d83e"
+  },
+  {
+   "path": [
+    "Gamepad Support",
+    "Tooltips and UI"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "added",
+   "pairs": [],
+   "nums": [],
+   "text": "Added Gamepad support for adjusting opacity in the Color Picker.",
+   "h": "10b4d485449c"
+  },
+  {
+   "path": [
+    "Gamepad Support",
+    "Tooltips and UI"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Gamepad LB and RB prompts could incorrectly appear in the Equipment Manager while using the keyboard and mouse UI.",
+   "h": "dc3f0a991d1b"
+  },
+  {
+   "path": [
+    "Items",
+    "Bags"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Bags"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Bags will no longer automatically equip into available bag slots and must now be manually equipped by the player.",
+   "h": "bbce5a41abd8"
+  },
+  {
+   "path": [
+    "Quests and World"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "added",
+   "pairs": [],
+   "nums": [],
+   "text": "Added mouseover tooltips for objectives on various quests.",
+   "h": "99d649523a36"
+  },
+  {
+   "path": [
+    "Quests and World"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "added",
+   "pairs": [],
+   "nums": [],
+   "text": "Added missing point-of-interest markers and adjusted incorrect ones on various quests.",
+   "h": "98bf9e4d7e87"
+  },
+  {
+   "path": [
+    "Quests and World"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed incorrect zone sorts in the quest log on various quests.",
+   "h": "f12d777f69e5"
+  },
+  {
+   "path": [
+    "Quests and World"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed various quests where destroying the associated item would not abandon the quest, and vice versa.",
+   "h": "b85b7de0c3d3"
+  },
+  {
+   "path": [
+    "Quests and World"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    100
+   ],
+   "text": "Fixed an issue where some satyr were classified as humanoids instead of demons. They are now 100% more scared of Paladins.",
+   "h": "b36ede4d5285"
+  },
+  {
+   "path": [
+    "Quests and World",
+    "Alterac Mountains"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Dalaran"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Dalaran Summoners were really amazingly good at summoning and would summon until their little hearts couldn’t summon anymore. And then they’d summon some more anyway.",
+   "h": "0b579a3fa015"
+  },
+  {
+   "path": [
+    "Quests and World",
+    "Barrens"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "You",
+    "Counterattack"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "You can now speak to Rethgar Deathgate to begin the event for “Counterattack!” if it is not currently active.",
+   "h": "4c62d4f04613"
+  },
+  {
+   "path": [
+    "Quests and World",
+    "Barrens"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "The Alliance Outrunners"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "The Alliance Outrunners now spawn in random locations.",
+   "h": "29253c3b5f85"
+  },
+  {
+   "path": [
+    "Quests and World",
+    "Darkshore"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "The quest “Holy Diver” now gives an XP reward.",
+   "h": "cd254fd449cc"
+  },
+  {
+   "path": [
+    "Quests and World",
+    "Mulgore"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Gloomrise Hatchlings"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Gloomrise Hatchlings now give lower XP, commensurate with their lower health values.",
+   "h": "4864fe0ed9cb"
+  },
+  {
+   "path": [
+    "Quests and World",
+    "Orgrimmar"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue during “Hidden Enemies” where the Lieutenant’s Insignia would remain in inventory after quest completion.",
+   "h": "5e5b011cded1"
+  },
+  {
+   "path": [
+    "Quests and World",
+    "Ruins of Lordaeron"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Ruins of Lordaeron"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    15,
+    16
+   ],
+   "text": "Ruins of Lordaeron dungeon quests now consistently require a minimum of level 15 to start (was a mix of 15 and 16), and some pre-requisites have been adjusted.",
+   "h": "b430957f71a7"
+  },
+  {
+   "path": [
+    "Quests and World",
+    "Teldrassil"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "The Cleft"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "The Cleft - There are now slightly fewer spiders in this area for the quest “Twisted Hatred”.",
+   "h": "d5530f808557"
+  },
+  {
+   "path": [
+    "Quests and World",
+    "Wetlands"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Carnage reset near the end of the fight for the quest “Carnage”.",
+   "h": "fb332b441139"
+  },
+  {
+   "path": [
+    "Quests and World",
+    "Wetlands"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue during “Destruction in Deadmines” where Alba Fairmoon would become unavailable to turn-in the quest.",
+   "h": "cf2142a1beac"
+  }
+ ],
+ "new_lines": [
+  "8e5b2a59774e"
+ ],
+ "gone_lines": [
+  "2f9c05d35b6e"
+ ],
+ "outdated": [],
+ "to_check": [],
+ "check": [],
+ "detected_at": "2026-11-03T20:51:37Z"
+}
