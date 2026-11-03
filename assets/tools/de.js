@@ -348,7 +348,7 @@ $('#rFill').onclick = () => {
   R.s.forEach(p => p && used[p.role]++);
   R.s = R.s.map((p, i) => p || newPlayer(i, used)); R.moving = -1; renderRaid();
 };
-function myHero() {   // the hero of this browser (assets/hero/hero.js?v=cc9d30bf3d, localStorage gabella-wf-me)
+function myHero() {   // the hero of this browser (assets/hero/hero.js?v=c87ea2ee87, localStorage gabella-wf-me)
   let h = null; try { h = JSON.parse(localStorage.getItem('gabella-wf-me')); } catch (e) {}
   return h && RC[h.race] && CL[h.cls] && RC[h.race].can[h.cls] ? h : null;
 }
