@@ -1,5 +1,90 @@
 [
  {
+  "id": "art-24315821",
+  "sha": "1e888382",
+  "date": "2026-11-03",
+  "at": "2026-11-03T18:00:00Z",
+  "url": "https://worldofwarcraft.blizzard.com/en-us/news/24315821/wow-forever-whats-new-and-what-feels-familiar",
+  "kind": "article",
+  "beta": false,
+  "title_en": "WoW: Forever—What’s New and What Feels Familiar",
+  "n": 1,
+  "t": {
+   "ru": {
+    "h": "WoW: Forever—What’s New and What Feels Familiar",
+    "en": 1,
+    "src": "Blizzard, на английском",
+    "sum": [],
+    "site": "https://gabella.site/wow/guides/news/",
+    "site_t": "Подробнее на сайте"
+   },
+   "en": {
+    "h": "WoW: Forever—What’s New and What Feels Familiar",
+    "en": 1,
+    "src": "Blizzard",
+    "sum": [],
+    "site": "https://gabella.site/wow/en/guides/news/",
+    "site_t": "More on the site"
+   },
+   "uk": {
+    "h": "WoW: Forever—What’s New and What Feels Familiar",
+    "en": 1,
+    "src": "Blizzard, англійською",
+    "sum": [],
+    "site": "https://gabella.site/wow/uk/guides/news/",
+    "site_t": "Детальніше на сайті"
+   },
+   "de": {
+    "h": "WoW: Forever—What’s New and What Feels Familiar",
+    "en": 1,
+    "src": "Blizzard, auf Englisch",
+    "sum": [],
+    "site": "https://gabella.site/wow/de/guides/news/",
+    "site_t": "Mehr auf der Seite"
+   },
+   "fr": {
+    "h": "WoW: Forever—What’s New and What Feels Familiar",
+    "en": 1,
+    "src": "Blizzard, en anglais",
+    "sum": [],
+    "site": "https://gabella.site/wow/fr/guides/news/",
+    "site_t": "Plus sur le site"
+   },
+   "es": {
+    "h": "WoW: Forever—What’s New and What Feels Familiar",
+    "en": 1,
+    "src": "Blizzard, en inglés",
+    "sum": [],
+    "site": "https://gabella.site/wow/es/guides/news/",
+    "site_t": "Más en la web"
+   },
+   "pt": {
+    "h": "WoW: Forever—What’s New and What Feels Familiar",
+    "en": 1,
+    "src": "Blizzard, em inglês",
+    "sum": [],
+    "site": "https://gabella.site/wow/pt/guides/news/",
+    "site_t": "Mais no site"
+   },
+   "it": {
+    "h": "WoW: Forever—What’s New and What Feels Familiar",
+    "en": 1,
+    "src": "Blizzard, in inglese",
+    "sum": [],
+    "site": "https://gabella.site/wow/it/guides/news/",
+    "site_t": "Di più sul sito"
+   },
+   "pl": {
+    "h": "WoW: Forever—What’s New and What Feels Familiar",
+    "en": 1,
+    "src": "Blizzard, po angielsku",
+    "sum": [],
+    "site": "https://gabella.site/wow/pl/guides/news/",
+    "site_t": "Więcej na stronie"
+   }
+  }
+ },
+ {
   "id": "eu-631316-9",
   "sha": "f8563c48",
   "date": "2026-11-03",
