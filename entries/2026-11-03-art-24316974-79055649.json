@@ -1,0 +1,203 @@
+{
+ "event": "new",
+ "key": "art-24316974",
+ "source": "article",
+ "region": "us",
+ "topic": null,
+ "post": null,
+ "url": "https://worldofwarcraft.blizzard.com/en-us/news/24316974/explore-wow-forever-with-a-gamepad",
+ "title": "Explore WoW: Forever with a Gamepad",
+ "author": "Blizzard Entertainment",
+ "role": "Blizzard News",
+ "created_at": "2026-11-03T20:00:00.000Z",
+ "updated_at": null,
+ "version": null,
+ "category": null,
+ "beta": false,
+ "sha": "79055649f45ed057d9fbb0d045d75699294e428245354344615e9d9938c9d6e5",
+ "twin_of": null,
+ "also": [],
+ "short_news": {
+  "date": "2026-11-03",
+  "at": "2026-11-03T20:00:00Z",
+  "url": "https://worldofwarcraft.blizzard.com/en-us/news/24316974/explore-wow-forever-with-a-gamepad",
+  "title_en": "Explore WoW: Forever with a Gamepad",
+  "kind": "article",
+  "beta": false
+ },
+ "changes": [
+  {
+   "path": [
+    "Get to Know Your Gamepad Experience"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "WoW"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "WoW: Forever supports all XInput-compatible controllers and includes Xbox and PlayStation button icons to help you recognize the controls.",
+   "h": "f84c4911cbf0"
+  },
+  {
+   "path": [
+    "Get to Know Your Gamepad Experience",
+    "More Abilities, Familiar Buttons"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Up",
+    "Polymorph"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Up: Polymorph (Sheep)",
+   "h": "d685488044e1"
+  },
+  {
+   "path": [
+    "Get to Know Your Gamepad Experience",
+    "More Abilities, Familiar Buttons"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Fireball"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "LT + Up: Fireball",
+   "h": "286e48cc7e77"
+  },
+  {
+   "path": [
+    "Get to Know Your Gamepad Experience",
+    "More Abilities, Familiar Buttons"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Frostbolt"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "RT + Up: Frostbolt",
+   "h": "74320df0e7ea"
+  },
+  {
+   "path": [
+    "Get to Know Your Gamepad Experience",
+    "More Abilities, Familiar Buttons"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "These are example assignments, not fixed bindings—choose the spells and abilities that suit you.",
+   "h": "90f292dd91dc"
+  },
+  {
+   "path": [
+    "Get to Know Your Gamepad Experience",
+    "Reach Your HUD with Shortcuts"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "You"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "You can also access these features through the main radial menu. The shortcuts let you reach them directly with your gamepad; typing in chat still requires a keyboard.",
+   "h": "77c238da667a"
+  },
+  {
+   "path": [
+    "The Journey Continues"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Reducing the need for keyboard input remains a development goal, with a keyboard-free experience as the longer-term aim. For now, keep a keyboard within reach for tasks such as typing in-game chat.",
+   "h": "65621f03dd34"
+  },
+  {
+   "path": [
+    "The Journey Continues"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Azeroth"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Ready your gamepad and gather your party. Try the controls, adjust the settings to suit you, and enjoy a little time in Azeroth together.",
+   "h": "c1c2a8d1d6be"
+  }
+ ],
+ "new_lines": [
+  "f84c4911cbf0",
+  "aca59faf5ae4",
+  "6abccdb30593",
+  "e57967a0cef6",
+  "78ab3819814f",
+  "5b2b06fd5d4c",
+  "52a6233fe5c1",
+  "225c93695f9b",
+  "3d0910f62188",
+  "2f90a83e8639",
+  "39f3efff8755",
+  "4c3a2310c199",
+  "fc76c17ac569",
+  "31c584846670",
+  "dd6c69bba762",
+  "2086fee34d43",
+  "d685488044e1",
+  "286e48cc7e77",
+  "74320df0e7ea",
+  "0c5f771f6c9a",
+  "90f292dd91dc",
+  "d6fee2aba5ee",
+  "4d328b959c37",
+  "d661067550c8",
+  "813613e3dbf3",
+  "99c144869ca9",
+  "6268dcafa4c0",
+  "c510da88b735",
+  "77c238da667a",
+  "b06e6c64f033",
+  "b9b3413503eb",
+  "272a045245bf",
+  "ae0f266d53b7",
+  "19d1845aa6d0",
+  "65621f03dd34",
+  "c1c2a8d1d6be"
+ ],
+ "gone_lines": [],
+ "outdated": [],
+ "to_check": [],
+ "check": [],
+ "detected_at": "2026-11-03T20:01:08Z"
+}
