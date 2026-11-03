@@ -717,9 +717,12 @@ CSS = """/* Talent trees (talents.py): three trees in a row when there is room, 
 .tt-ow[hidden] { display: none; }
 .tt-ow .tt-oh { margin-top: 0; }
 .tt-card { min-height: 48px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 8px; }
-.tt-card .h { display: block; margin: 0 0 2px; font-family: var(--font-body); font-size: var(--fs-16); font-weight: 600; line-height: 1.3; letter-spacing: 0; color: var(--fg); }
-.tt-card .m { margin: 0 0 6px; font-size: var(--fs-13); color: var(--gold-2); }
-.tt-card p { margin: 0; color: var(--fg); font-size: var(--fs-14); }
+.tt-card .h, .tt-tip .h { display: block; margin: 0 0 2px; font-family: var(--font-body); font-size: var(--fs-16); font-weight: 600; line-height: 1.3; letter-spacing: 0; color: var(--fg); }
+.tt-card .m, .tt-tip .m { margin: 0 0 6px; font-size: var(--fs-13); color: var(--gold-2); }
+.tt-card p, .tt-tip p { margin: 0; color: var(--fg); font-size: var(--fs-14); }
+/* The tip by the icon under a mouse (and keyboard focus); touch keeps the card under the tree */
+.tt-tip { position: fixed; left: 0; top: 0; z-index: 90; width: max-content; max-width: min(340px, calc(100vw - 16px)); padding: 10px 12px; border: 1px solid var(--line-2); border-radius: 6px; background: var(--panel-2); color: var(--fg); line-height: 1.45; box-shadow: 0 10px 28px rgba(0,0,0,.5); pointer-events: none; }
+.tt-tip[hidden] { display: none; }
 .tt-card .tt-hint { color: var(--muted); }
 .tt-oh { margin: 6px 0 0; font-family: var(--font-body); font-size: var(--fs-14); font-weight: 600; line-height: 1.3; letter-spacing: 0; color: var(--fg); }
 .tt-rib { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 12px 18px; margin: 0; padding: 0; list-style: none; }
@@ -761,7 +764,7 @@ CSS = """/* Talent trees (talents.py): three trees in a row when there is room, 
 .tt.ed .tt-grid .tt-t.tt-op:not(.on) { border-color: var(--line-2); }
 .tt.ed .tt-grid .tt-t.tt-op:not(.on) .tt-ic { filter: none; }
 .tt.ed .tt-grid .tt-t { -webkit-touch-callout: none; user-select: none; touch-action: manipulation; }
-.tt-card .e { color: var(--muted); }
+.tt-card .e, .tt-tip .e { color: var(--muted); }
 @media (prefers-reduced-motion: no-preference) { .tt.ed .tt-t { transition: border-color .12s; } }
 @container (max-width: 759px) {
   .tt-er > * { flex: 1 1 100%; }
@@ -777,7 +780,7 @@ CSS = """/* Talent trees (talents.py): three trees in a row when there is room, 
 """
 
 JS = r"""<script>
-/* Talent trees: the card under the tree on tap (and on hover with a mouse), the tabs on narrow screens, the sprite near the screen,
+/* Talent trees: the card under the tree on tap, a tip by the icon under a mouse or keyboard focus, the tabs on narrow screens, the sprite near the screen,
    and the editor (your own build over the same tree). #ttData: {u: texts, t: {id: [name, ranks, row, client text]},
    q: {id: prerequisite id}, o: [[ids of a tree in row/column order]], cap, f: first talent level, rp: points per row};
    a block's data-p: {id: [points, from, to, our line]}. The editor keeps the build as #<spec>/<code> and in localStorage. */
@@ -793,6 +796,21 @@ JS = r"""<script>
   D.o.forEach(function (ids, i) { ids.forEach(function (k) { trOf[k] = i; }); });
   function f(s, o) { return s.replace(/\{(\w)\}/g, function (_, k) { return o[k]; }); }
   function lv(a, b) { return f(U.lv, { a: b > a ? a + '–' + b : a }); }
+  /* one tip for the page: fixed by the icon, to its right, else to its left, else under or over it; never past the screen */
+  var tip = null, tipB = null;
+  function hideTip() { if (tip) tip.hidden = true; tipB = null; }
+  function place(b) {
+    var r = b.getBoundingClientRect(), vw = document.documentElement.clientWidth, vh = innerHeight, g = 8;
+    tip.style.left = tip.style.top = '0';
+    var tw = tip.offsetWidth, th = tip.offsetHeight, x = r.right + g, y = r.top;
+    if (x + tw > vw - g) x = r.left - g - tw;
+    if (x < g) { x = Math.min(Math.max(g, r.left + r.width / 2 - tw / 2), vw - g - tw); y = r.bottom + g; if (y + th > vh - g) y = r.top - g - th; }
+    else if (y + th > vh - g) y = r.bottom - th;
+    tip.style.left = Math.max(g, x) + 'px'; tip.style.top = Math.max(g, Math.min(y, vh - g - th)) + 'px';
+  }
+  addEventListener('scroll', hideTip, { passive: true });
+  addEventListener('resize', hideTip);
+  addEventListener('keydown', function (e) { if (e.key === 'Escape') hideTip(); });
   /* The rules of the tree, all read from #ttData: a talent opens with rp points per row spent in the rows above it in its tree,
      its prerequisite must be at full rank, cap points in all. S: {id: points}. */
   function above(S, i, row) { var n = 0; D.o[i].forEach(function (k) { if (D.t[k][2] < row) n += S[k] || 0; }); return n; }
@@ -832,22 +850,34 @@ JS = r"""<script>
     var tp = w.querySelector('.tt-edt'), S = null, mode = 1, calc = !!w.dataset.calc;
     if (tp) tp.parentNode.replaceChild(tp.content.cloneNode(true), tp);   /* the calculator page has the bar in the page already */
     var ed = w.querySelector('.tt-ed');
-    function line(cls, text) { var e = document.createElement(cls === 'h' ? 'b' : 'p'); e.className = cls; e.textContent = text; card.appendChild(e); }
-    function show(b) {
+    function put(el, cls, text) { var e = document.createElement(cls === 'h' ? 'b' : 'p'); e.className = cls; e.textContent = text; el.appendChild(e); }
+    function line(cls, text) { put(card, cls, text); }
+    /* the talent's name, rank and level, its text: into the card under the tree or into the tip */
+    function fill(el, b) {
       var k = b.dataset.k, p = P[k], t = D.t[k], meta = [];
-      if (cur) cur.removeAttribute('aria-pressed');
-      cur = b; b.setAttribute('aria-pressed', 'true');
-      card.textContent = '';
-      if (!t) { line('h', U.free); line('m', lv(p[1], p[2])); line('w', U.free_d); return; }
+      el.textContent = '';
+      if (!t) { put(el, 'h', U.free); put(el, 'm', lv(p[1], p[2])); put(el, 'w', U.free_d); return; }
       if (S) meta.push(f(U.rank, { p: S[k] || 0, m: t[1] }));
       else {
         meta.push(p ? f(U.take, { p: p[0], m: t[1] }) : f(U.skip, { m: t[1] }));
         if (p) meta.push(p[4] ? f(U.lv, { a: p[4] }) : lv(p[1], p[2]));
       }
       if (t[2] > 1) meta.push(f(U.row, { n: D.rp * (t[2] - 1) }));
-      line('h', t[0]); line('m', meta.join(' · '));
+      put(el, 'h', t[0]); put(el, 'm', meta.join(' · '));
       var w2 = S ? t[3] : (p && p[3]) || t[3];
-      if (w2) line('w', w2);
+      if (w2) put(el, 'w', w2);
+    }
+    function show(b) {
+      if (cur) cur.removeAttribute('aria-pressed');
+      cur = b; b.setAttribute('aria-pressed', 'true');
+      fill(card, b);
+    }
+    function tipShow(b, err) {             /* aria-hidden: a screen reader hears the button's name and the card on a press */
+      if (!tip) { tip = document.createElement('div'); tip.className = 'tt-tip'; tip.setAttribute('aria-hidden', 'true'); document.body.appendChild(tip); }
+      fill(tip, b);
+      if (err) put(tip, 'e', err);
+      tip.hidden = false; tipB = b;
+      place(b);
     }
     function pickTree(key) {
       w.querySelectorAll('.tt-tab').forEach(function (x) { x.setAttribute('aria-selected', x.dataset.t === key ? 'true' : 'false'); });
@@ -943,6 +973,7 @@ JS = r"""<script>
       if (!r) update();
       show(b);
       if (r && r !== 'max') line('e', r);
+      if (tipB === b) tipShow(b, r !== 'max' && r);
     }
     eb.addEventListener('click', function () {
       if (S) { close(); return; }
@@ -1020,7 +1051,23 @@ JS = r"""<script>
       if (e.key === 'Delete' || e.key === 'Backspace' || e.key === '-') { e.preventDefault(); step(b, -1); }
       else if (e.key === '+' || e.key === '=') { e.preventDefault(); step(b, 1); }
     });
-    if (hover) w.addEventListener('mouseover', function (e) { var b = e.target.closest('[data-k]'); if (b && b !== cur) show(b); });
+    /* a mouse: the tip by the icon (out and over come in one task when the mouse moves to the next icon: no blink) */
+    if (hover) {
+      w.addEventListener('pointerover', function (e) {
+        var b = e.pointerType === 'mouse' && e.target.closest('[data-k]');
+        if (b && b !== tipB) tipShow(b);
+      });
+      w.addEventListener('pointerout', function (e) {
+        var b = e.pointerType === 'mouse' && e.target.closest('[data-k]');
+        if (b && b === tipB && !b.contains(e.relatedTarget)) hideTip();
+      });
+    }
+    w.addEventListener('focusin', function (e) {                    /* the keyboard: the tip by the focused icon */
+      var b = e.target.closest('[data-k]'), kb = false;
+      try { kb = b && b.matches(':focus-visible'); } catch (x) {}
+      if (kb) tipShow(b);
+    });
+    w.addEventListener('focusout', function (e) { if (tipB && tipB === e.target) hideTip(); });
   });
   function fromHash(e) {
     var h = ''; try { h = decodeURIComponent(location.hash.slice(1)); } catch (x) {}
