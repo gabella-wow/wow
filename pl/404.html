@@ -1208,6 +1208,7 @@ dialog.sheet::backdrop { background: rgba(0,0,0,.6); }
 .thero .crumbs, .ghero .crumbs, .gfacts { text-shadow: 0 1px 8px rgba(0,0,0,.7); }
 .ghero h1 { max-width: 8em; font-size: var(--fs-hero); line-height: .98; color: var(--ink); text-shadow: 0 2px 18px rgba(0,0,0,.5); }
 .glead { max-width: 46ch; color: var(--ink-2); font-size: var(--fs-18); text-shadow: 0 1px 10px rgba(0,0,0,.6); }
+:root[data-theme="light"] .chead :is(.upd, .glead) { color: var(--muted); text-shadow: none; }   /* the text heading (talents/) has no dark picture under it: the light ink */
 .gfacts { max-width: 60ch; font-size: var(--fs-16); font-weight: 500; color: var(--ink-2); }
 .gfacts:empty { display: none; }
 .cpick { display: none; }
