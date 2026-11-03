@@ -1,5 +1,5 @@
 {
- "last_run": "2026-11-03T19:02:37Z",
+ "last_run": "2026-11-03T19:11:44Z",
  "posts": {
   "art-24301455": {
    "checked": "2026-10-29T20:21:03Z",
@@ -64,7 +64,7 @@
    "version": null
   },
   "art-24302547": {
-   "checked": "2026-11-03T19:02:37Z",
+   "checked": "2026-11-03T19:11:44Z",
    "lines": [
     "e463594c3307"
    ],
@@ -338,7 +338,7 @@
    "version": null
   },
   "art-24316094": {
-   "checked": "2026-11-03T13:10:58Z",
+   "checked": "2026-11-03T19:11:44Z",
    "lines": [
     "46424f8a4ec8",
     "6f3ec91c2784",
@@ -453,7 +453,7 @@
    "version": 1
   },
   "eu-631316-1": {
-   "checked": "2026-11-03T19:02:37Z",
+   "checked": "2026-11-03T19:11:44Z",
    "lines": [
     "b980faad67e4",
     "551f003b8fd3",
@@ -591,7 +591,7 @@
    "version": 5
   },
   "eu-631316-4": {
-   "checked": "2026-11-03T19:02:37Z",
+   "checked": "2026-11-03T19:11:44Z",
    "lines": [
     "a9f91ef9a1d3",
     "3f0687de02e8",
@@ -746,7 +746,7 @@
    "version": 3
   },
   "eu-631316-5": {
-   "checked": "2026-11-03T19:02:37Z",
+   "checked": "2026-11-03T19:11:44Z",
    "lines": [
     "862affbc3ad5",
     "3e1771b3fd67",
@@ -884,7 +884,7 @@
    "version": 1
   },
   "eu-631316-6": {
-   "checked": "2026-11-03T19:02:37Z",
+   "checked": "2026-11-03T19:11:44Z",
    "lines": [
     "ba02c8dc2b40",
     "cdd748e437cc",
@@ -1122,7 +1122,7 @@
    "version": 2
   },
   "eu-631316-7": {
-   "checked": "2026-11-03T19:02:37Z",
+   "checked": "2026-11-03T19:11:44Z",
    "lines": [
     "c2f53382556d",
     "157b13cf95b2",
@@ -1150,7 +1150,7 @@
    "version": 4
   },
   "eu-631316-8": {
-   "checked": "2026-11-03T19:02:37Z",
+   "checked": "2026-11-03T19:11:44Z",
    "lines": [
     "180749eee47d",
     "57c724e3010c",
@@ -1167,7 +1167,7 @@
    "version": 2
   },
   "eu-631316-9": {
-   "checked": "2026-11-03T19:02:37Z",
+   "checked": "2026-11-03T19:11:44Z",
    "lines": [
     "eabd14472cc2",
     "e75ab1fa1bb9",
@@ -1710,7 +1710,7 @@
    "version": 3
   },
   "us-2360696-1": {
-   "checked": "2026-11-03T19:02:37Z",
+   "checked": "2026-11-03T19:11:44Z",
    "lines": [
     "b980faad67e4",
     "551f003b8fd3",
@@ -1848,7 +1848,7 @@
    "version": 5
   },
   "us-2360696-4": {
-   "checked": "2026-11-03T19:02:37Z",
+   "checked": "2026-11-03T19:11:44Z",
    "lines": [
     "a9f91ef9a1d3",
     "3f0687de02e8",
@@ -2003,7 +2003,7 @@
    "version": 4
   },
   "us-2360696-5": {
-   "checked": "2026-11-03T19:02:37Z",
+   "checked": "2026-11-03T19:11:44Z",
    "lines": [
     "862affbc3ad5",
     "3e1771b3fd67",
@@ -2141,7 +2141,7 @@
    "version": 1
   },
   "us-2360696-6": {
-   "checked": "2026-11-03T19:02:37Z",
+   "checked": "2026-11-03T19:11:44Z",
    "lines": [
     "ba02c8dc2b40",
     "cdd748e437cc",
@@ -2379,7 +2379,7 @@
    "version": 2
   },
   "us-2360696-7": {
-   "checked": "2026-11-03T19:02:37Z",
+   "checked": "2026-11-03T19:11:44Z",
    "lines": [
     "c2f53382556d",
     "157b13cf95b2",
@@ -2407,7 +2407,7 @@
    "version": 4
   },
   "us-2360696-8": {
-   "checked": "2026-11-03T19:02:37Z",
+   "checked": "2026-11-03T19:11:44Z",
    "lines": [
     "180749eee47d",
     "57c724e3010c",
@@ -2424,7 +2424,7 @@
    "version": 2
   },
   "us-2360696-9": {
-   "checked": "2026-11-03T19:02:37Z",
+   "checked": "2026-11-03T19:11:44Z",
    "lines": [
     "eabd14472cc2",
     "e75ab1fa1bb9",
@@ -3021,7 +3021,7 @@
   "eu-631316-9": "f8563c48",
   "us-2360696-9": "f8563c48"
  },
- "requests": 13,
+ "requests": 14,
  "sources": {
   "articles:24301455": {
    "fails": 0,
@@ -3041,7 +3041,7 @@
   },
   "articles:24302547": {
    "fails": 0,
-   "ok": "2026-11-03T19:02:37Z"
+   "ok": "2026-11-03T19:11:44Z"
   },
   "articles:24303009": {
    "fails": 0,
@@ -3089,31 +3089,31 @@
   },
   "articles:24316094": {
    "fails": 0,
-   "ok": "2026-11-03T13:10:58Z"
+   "ok": "2026-11-03T19:11:44Z"
   },
   "articles:list": {
    "fails": 0,
-   "ok": "2026-11-03T19:02:37Z"
+   "ok": "2026-11-03T19:11:43Z"
   },
   "eu:c/wow-forever-beta-discussion/362": {
    "fails": 0,
-   "ok": "2026-11-03T19:02:34Z"
+   "ok": "2026-11-03T19:11:41Z"
   },
   "eu:c/wow-forever-beta-discussion/362/new": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-10-31T12:20:58Z",
    "fails": 0,
-   "ok": "2026-11-03T19:02:35Z"
+   "ok": "2026-11-03T19:11:42Z"
   },
   "eu:c/wow-forever/359": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-10-31T12:20:50Z",
    "fails": 0,
-   "ok": "2026-11-03T19:02:32Z"
+   "ok": "2026-11-03T19:11:39Z"
   },
   "eu:c/wow-forever/359/new": {
    "fails": 0,
-   "ok": "2026-11-03T19:02:33Z"
+   "ok": "2026-11-03T19:11:40Z"
   },
   "eu:t/628701": {
    "fails": 0,
@@ -3137,7 +3137,7 @@
   },
   "eu:t/631316": {
    "fails": 0,
-   "ok": "2026-11-03T19:02:36Z"
+   "ok": "2026-11-03T19:11:43Z"
   },
   "eu:t/631603": {
    "fails": 0,
@@ -3359,25 +3359,25 @@
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-01T08:20:49Z",
    "fails": 0,
-   "ok": "2026-11-03T19:02:28Z"
+   "ok": "2026-11-03T19:11:35Z"
   },
   "us:c/wow-forever-beta-discussion/349/new": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-10-27T20:10:54Z",
    "fails": 0,
-   "ok": "2026-11-03T19:02:29Z"
+   "ok": "2026-11-03T19:11:36Z"
   },
   "us:c/wow-forever/346": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-10-27T20:30:49Z",
    "fails": 0,
-   "ok": "2026-11-03T19:02:27Z"
+   "ok": "2026-11-03T19:11:33Z"
   },
   "us:c/wow-forever/346/new": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-10-27T20:40:51Z",
    "fails": 0,
-   "ok": "2026-11-03T19:02:27Z"
+   "ok": "2026-11-03T19:11:34Z"
   },
   "us:t/2352595": {
    "fails": 0,
@@ -3429,7 +3429,7 @@
   },
   "us:t/2360696": {
    "fails": 0,
-   "ok": "2026-11-03T19:02:30Z"
+   "ok": "2026-11-03T19:11:37Z"
   },
   "us:t/2361993": {
    "fails": 0,
@@ -3475,7 +3475,7 @@
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-10-27T20:10:57Z",
    "fails": 0,
-   "ok": "2026-11-03T19:02:31Z"
+   "ok": "2026-11-03T19:11:38Z"
   },
   "us:t/2381433": {
    "fails": 0,
