@@ -523,8 +523,9 @@ def page_data(data, lang):
             'cap': EDIT_CAP, 'f': FIRST_LEVEL, 'rp': ROW_POINTS}
 
 
-def _trees(data, titles, picked, main, lang):
-    """The tabs (narrow screens) and the three drawn trees with the points of `picked` {talent id: points}."""
+def _trees(data, titles, picked, main, lang, hl=3):
+    """The tabs (narrow screens) and the three drawn trees with the points of `picked` {talent id: points}.
+    hl: the level of the tree headings, 3 under a guide's h2, 2 on the calculator page (its trees come right after the h1)."""
     tabs, trees = [], []
     for tree in data['trees']:
         key = tree['key']
@@ -542,7 +543,7 @@ def _trees(data, titles, picked, main, lang):
                          f'aria-label="{escape(name)}{f" {p}/{t["m"]}" if p else ""}">{_icon(t, _letters(name))}{f"<b>{p}</b>" if p else ""}</button>')
         rows_n = max(t['r'] for t in tree['talents'])
         trees.append(f'<div class="tt-tree{" on" if on else ""}" data-t="{key}" role="group" aria-label="{title}">'
-                     f'<h3>{title}<span{" class=on" if n else ""}>{n}</span></h3>'
+                     f'<h{hl}>{title}<span{" class=on" if n else ""}>{n}</span></h{hl}>'
                      f'<div class="tt-grid" style="--rows:{rows_n}">{_arrows(tree, picked, True)}{"".join(cells)}</div></div>')
     return f'<div class="tt-tabs" role="tablist">{"".join(tabs)}</div>', f'<div class="tt-trees">{"".join(trees)}</div>'
 
@@ -636,7 +637,7 @@ def render_calc(cid, specs, titles, lang, root):
         return ''
     titles = tree_titles(titles, lang)
     PAGE[(cid, lang)] = page_data(data, lang)
-    tabs_html, trees_html = _trees(data, titles, {}, data['trees'][0]['key'], lang)
+    tabs_html, trees_html = _trees(data, titles, {}, data['trees'][0]['key'], lang, 2)
     basis = data.get('basis')
     note = f'<p class="tt-note">{UI[basis][lang]} · {day(data["date"], lang)}</p>' if basis in ('beta', 'classic') else ''
     box = (f'<div class="tt calc ed" id="calc" data-c="{cid}" data-l="{lang}" data-sp="{cid}" data-calc="1" data-w="" '
@@ -672,9 +673,9 @@ CSS = """/* Talent trees (talents.py): three trees in a row when there is room, 
 .tt-tab[aria-selected="true"] { background: var(--seg-on); color: var(--gold-2); }
 .tt-trees { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
 .tt-tree { --s: 44px; --g: 20px; --u: calc(var(--s) + var(--g)); padding: 12px 12px 18px; border-radius: 8px; background: var(--panel-2); min-width: 0; }
-.tt-tree h3 { color: var(--fg); display: flex; justify-content: space-between; margin: 0 0 14px; font-family: var(--font-body); font-size: var(--fs-14); font-weight: 600; line-height: 1.3; letter-spacing: 0; }
-.tt-tree h3 span { color: var(--muted); font-variant-numeric: tabular-nums; }
-.tt-tree h3 span.on { color: var(--gold-2); }
+.tt-tree :is(h2, h3) { color: var(--fg); display: flex; justify-content: space-between; margin: 0 0 14px; font-family: var(--font-body); font-size: var(--fs-14); font-weight: 600; line-height: 1.3; letter-spacing: 0; }
+.tt-tree :is(h2, h3) span { color: var(--muted); font-variant-numeric: tabular-nums; }
+.tt-tree :is(h2, h3) span.on { color: var(--gold-2); }
 .tt-grid { position: relative; display: grid; grid-template-columns: repeat(4, var(--s)); grid-template-rows: repeat(var(--rows), var(--s)); gap: var(--g); width: max-content; margin: 0 auto; }
 .tt-t { position: relative; grid-row: var(--r); grid-column: var(--c); width: var(--s); height: var(--s); padding: 0; border: 1px solid var(--line-2); border-radius: 6px; background: #101114; cursor: pointer; }
 .tt-ic { position: absolute; inset: 1px; border-radius: 4px; background: #16181c no-repeat 0 0 / calc(var(--n) * 100%) 100%; background-position-x: calc(var(--i) / (var(--n) - 1) * 100%); }
@@ -775,7 +776,7 @@ CSS = """/* Talent trees (talents.py): three trees in a row when there is room, 
   .tt-trees { grid-template-columns: minmax(0, 1fr); }
   .tt-tree:not(.on) { display: none; }
   .tt-tree { --s: 44px; --g: min(26px, calc((100cqi - 24px - 4 * var(--s)) / 3)); }
-  .tt-tree h3 { display: none; }
+  .tt-tree :is(h2, h3) { display: none; }
 }
 """
 
@@ -897,7 +898,7 @@ JS = r"""<script>
       });
       w.querySelectorAll('.tt-ar').forEach(function (a) { a.classList.toggle('on', !!(P[a.dataset.s] && P[a.dataset.d])); });
       w.querySelectorAll('.tt-tab').forEach(function (x) { x.querySelector('span').textContent = sum[x.dataset.t] || 0; });
-      w.querySelectorAll('.tt-tree h3 span').forEach(function (x) {
+      w.querySelectorAll('.tt-tree :is(h2, h3) span').forEach(function (x) {
         var n = sum[x.parentNode.parentNode.dataset.t] || 0; x.textContent = n; x.classList.toggle('on', n > 0);
       });
     }
