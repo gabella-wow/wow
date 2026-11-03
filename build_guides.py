@@ -346,6 +346,10 @@ def render_block(kind, data, lang, root, inner=False):
         rows = ''.join('<tr>' + ''.join(td(h, cell(c, lang, root), i, r, lang) for i, (h, c) in enumerate(zip(head, r))) + '</tr>'
                        for r in data['rows'])
         return f'<table class="gtable"><thead><tr>{th}</tr></thead><tbody>{rows}</tbody></table>'
+    if kind == 'addons':                                          # Addons «install first»: name, one line, a CurseForge button; 'langs' keeps a row to those languages
+        go = lambda u: Raw(f'<a class="btn ghost" href="{escape(u)}" target="_blank" rel="noopener">CurseForge ↗</a>')   # noqa: E731
+        rows = [[x['n'], x['d'], go(x['url'])] for x in data['items'] if lang in x.get('langs', (lang,))]
+        return render_block('table', {'head': data['head'], 'rows': rows}, lang, root)
     if kind == 'picks':                                           # table whose second column links class pages
         head = [E(h, lang) for h in data['head']]
         name = {c['id']: build.tr(c['n'], lang) for c in build.CLASSES}
