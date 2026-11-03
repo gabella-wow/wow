@@ -964,9 +964,9 @@ def play_data(src, lang):
     races = build.parse_races(src)
     art = os.path.join(HERE, 'assets', 'art')
     has = lambda n: os.path.isfile(os.path.join(art, f'{n}-face.webp'))   # noqa: E731
-    # the face of the level block: only a picture drawn for this very race and class (<class>-<race>-face.webp). The bare class
-    # portraits (<class>-face, e.g. rogue = a Forsaken) and the race arts (any class) are never used: no pair drawn — the
-    # neutral class badge (class colour + role icon), never another race (tests/test_play_portrait.py)
+    # the face of the level block: the picture drawn for this very race and class (<class>-<race>-face.webp); no pair drawn —
+    # the class face of the race's side (build.side_faces, P.kf), and the caption then names the class and the side, not
+    # the race. The bare class portraits (<class>-face, e.g. rogue = a Forsaken) are never used (tests/test_play_portrait.py)
     face = {f'{r["id"]}.{c}': f'{c}-{r["id"]}' for r in races for c in r['can'] if has(f'{c}-{r["id"]}')}
     slugs = {g['slug'] for g in GUIDES if lang in g.get('langs', (lang,))}
     pages = {c['id']: [1, int(f'builds-{c["id"]}' in slugs), int(f'leveling-{c["id"]}' in slugs)] for c in build.CLASSES}   # class page, builds, class leveling
@@ -977,7 +977,7 @@ def play_data(src, lang):
         'racef': {r['id']: r['f'] for r in races},
         'rn': {r['id']: build.tr(r['n'], lang) for r in races},
         'cn': {c['id']: build.tr(c['n'], lang) for c in build.CLASSES},
-        'face': face, 'col': build.COLOR, 'pages': pages,
+        'face': face, 'kf': build.side_faces(), 'col': build.COLOR, 'pages': pages,
         'prn': {pid: L(langs.derive({'ru': n, 'en': build.T[n][0], 'uk': build.T[n][1]}), lang)   # profession names (home PROFS) for the character line
                 for pid, n in re.findall(r"\['(\w+)', '([^']+)', \d, '[^']+', '[^']+'\]", src)},
         # «My class at level N» (content/play_card.py): talents, abilities, gear and dungeon pages from the data the guides show
@@ -1103,14 +1103,16 @@ function saveLvl() {
 }
 
 const PV = /*PV*/'';   // ?v= of the portraits (build.art_version)
-/* The character line: race-true face (P.face: race + class, else the race; none: no picture), spec from the hero, the class pages */
+/* The character line: the face of this race and class (P.face), else the class face of the race's side (P.kf) under a
+   caption of the class alone (the side is in the line below); spec from the hero, the class pages */
 /* The two professions of the character, when the profile or the hero has them */
 const profsOf = h => [h.p1, h.p2].map(id => P.prn[id]).filter(Boolean).join(', ');
 function renderWho(m) {
-  const h = readHero() || {}, cls = P.cn[m.cls] ? m.cls : '', face = P.face[m.race + '.' + cls] || '', img = $('#pFace'), av = $('#pAv');
-  $('#pWho').textContent = P.rn[m.race] || cls ? [P.rn[m.race], P.cn[cls]].filter(Boolean).join(' · ') : TX.noHero;
+  const h = readHero() || {}, cls = P.cn[m.cls] ? m.cls : '', own = P.face[m.race + '.' + cls] || '', img = $('#pFace'), av = $('#pAv');
+  const kf = !own && cls && P.kf[cls] && P.kf[cls][P.racef[m.race]] || '', face = own || kf;
+  $('#pWho').textContent = P.rn[m.race] || cls ? (kf ? P.cn[cls] : [P.rn[m.race], P.cn[cls]].filter(Boolean).join(' · ')) : TX.noHero;
   $('#pSub').textContent = [h.specN, TX[P.racef[m.race]], profsOf(h)].filter(Boolean).join(' · ');
-  /* only the picture of this race and class; none drawn: the class colour and the role icon, never another race */
+  /* no class or race known: the class colour and the role icon */
   img.hidden = !face;
   if (face) { const src = `${ROOT}assets/art/${face}-face.webp${PV}`; if (img.getAttribute('src') !== src) img.src = src; }
   av.style.setProperty('--cc', P.col[cls] || '');

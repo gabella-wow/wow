@@ -26,15 +26,30 @@
   const valid = h => !!(h && D.cn[h.cls] && raceOf(h.race) && raceOf(h.race)[2].includes(h.cls));
   const specIx = h => D.sid[h.cls].indexOf(h.spec);
   // a class face: the portrait of side f (the best race of that side, build.portraits), else of the reader's side (build.por_js)
+  // the side of a class tile before a hero is chosen: the mixed set of build.PRE_SIDE, else the reader's side (build.por_js)
+  const pre = c => (window.GabellaPor ? (GabellaPor.pre ? GabellaPor.pre(c) : GabellaPor.fac()) : 'alliance');
   const face = (id, f) => `${ROOT}assets/art/${window.GabellaPor ? GabellaPor.id(id, f || undefined) : id}-face.webp${PV}`;
-  /* the hero's own face (as play/): only a picture drawn for this very race and class (<class>-<race>-face.webp, build.pair_faces);
-     none drawn — the neutral class badge (class colour + role icon), never another race. FM: f = the pairs, c = class colours */
-  const FM = /*FACES*/{"f":{"dwarf.shaman":"shaman-dwarf","gnome.mage":"mage-gnome","gnome.priest":"priest-gnome","gnome.warlock":"warlock-gnome","human.paladin":"paladin-human","human.warrior":"warrior-human","nightelf.druid":"druid-nightelf","nightelf.hunter":"hunter-nightelf","nightelf.rogue":"rogue-nightelf","orc.hunter":"hunter-orc","orc.mage":"mage-orc","orc.rogue":"rogue-orc","orc.shaman":"shaman-orc","orc.warlock":"warlock-orc","orc.warrior":"warrior-orc","tauren.druid":"druid-tauren","undead.paladin":"paladin-undead","undead.priest":"priest-undead"},"c":{"warrior":"#c79c6e","paladin":"#f58cba","hunter":"#abd473","rogue":"#fff569","priest":"#e8e8e8","shaman":"#2f8cf0","mage":"#40c7eb","warlock":"#8788ee","druid":"#ff7d0a"}};
+  /* the hero's face: the picture drawn for this very race and class (<class>-<race>-face.webp, build.pair_faces); none drawn
+     yet — the class face of the race's side (build.side_faces), never a grey badge and never a face of the other side.
+     The badge (class colour + role icon) stays for a hero without a known class or race only.
+     FM: f = the pairs, k = class -> side -> face, r = race -> side, c = class colours */
+  const FM = /*FACES*/{"f":{"dwarf.shaman":"shaman-dwarf","gnome.mage":"mage-gnome","gnome.priest":"priest-gnome","gnome.warlock":"warlock-gnome","human.paladin":"paladin-human","human.warrior":"warrior-human","nightelf.druid":"druid-nightelf","nightelf.hunter":"hunter-nightelf","nightelf.rogue":"rogue-nightelf","orc.hunter":"hunter-orc","orc.mage":"mage-orc","orc.rogue":"rogue-orc","orc.shaman":"shaman-orc","orc.warlock":"warlock-orc","orc.warrior":"warrior-orc","tauren.druid":"druid-tauren","undead.paladin":"paladin-undead","undead.priest":"priest-undead"},"k":{"warrior":{"alliance":"warrior-human","horde":"warrior-orc"},"paladin":{"alliance":"paladin-human","horde":"paladin-undead"},"hunter":{"alliance":"hunter-nightelf","horde":"hunter-orc"},"rogue":{"alliance":"rogue-nightelf","horde":"rogue-orc"},"priest":{"alliance":"priest-gnome","horde":"priest-undead"},"shaman":{"alliance":"shaman-dwarf","horde":"shaman-orc"},"mage":{"alliance":"mage-gnome","horde":"mage-orc"},"warlock":{"alliance":"warlock-gnome","horde":"warlock-orc"},"druid":{"alliance":"druid-nightelf","horde":"druid-tauren"}},"r":{"human":"alliance","dwarf":"alliance","nightelf":"alliance","gnome":"alliance","skyA":"alliance","orc":"horde","undead":"horde","tauren":"horde","troll":"horde","skyH":"horde"},"c":{"warrior":"#c79c6e","paladin":"#f58cba","hunter":"#abd473","rogue":"#fff569","priest":"#e8e8e8","shaman":"#2f8cf0","mage":"#40c7eb","warlock":"#8788ee","druid":"#ff7d0a"}};
+  /* {n: the face file, own: it shows the hero's race, side}: the caption next to a face that is not the hero's race names
+     the class and the side, not the race (heroMeta) */
+  function faceOf(h) {
+    const side = h && FM.r[h.race], own = h && FM.f[h.race + '.' + h.cls], k = !own && side && FM.k[h.cls] && FM.k[h.cls][side];
+    return { n: own || k || '', own: !!own, side: side || '' };
+  }
   function heroFace(h, size, cls) {
-    const n = h && FM.f[h.race + '.' + h.cls];
-    if (n) return `<img${cls ? ` class="${cls}"` : ''} src="${ROOT}assets/art/${n}-face.webp${PV}" alt="" width="${size}" height="${size}">`;
+    const w = faceOf(h);
+    if (w.n) return `<img${cls ? ` class="${cls}"` : ''} src="${ROOT}assets/art/${w.n}-face.webp${PV}" alt=""${w.own ? '' : ` data-side="${w.side}"`} width="${size}" height="${size}">`;
     const ico = ['tank', 'heal', 'dps'].includes(h && h.role) ? h.role : 'user';
     return `<span class="hface${cls ? ' ' + cls : ''}" style="--cc:${FM.c[h && h.cls] || ''}"><svg class="ico" aria-hidden="true"><use href="#i-${ico}"/></svg></span>`;
+  }
+  /* the line under «Your <class>»: race (or the side, when the face is the class face of the side) · spec · role · level */
+  function heroMeta(h) {
+    const i = specIx(h), w = faceOf(h);
+    return [w.own ? D.rn[h.race] : D.fn[w.side] || D.rn[h.race], i >= 0 ? D.sn[h.cls][i] : '', h.role && D.role[h.role], h.lvl ? fill(D.tx.levelN, { n: h.lvl }) : ''].filter(Boolean).join(' · ');
   }
   const bestOf = (c, f, s) => { const b = (D.best[c] || {})[f]; return b ? (b[s] || b['*']) : null; };
 
@@ -77,14 +92,14 @@
     write({ race: draft.race, cls: draft.cls, spec: draft.spec, role: roles.includes(old.role) && old.cls === draft.cls ? old.role : roles[0] });
   }
   function pickRace() {   // the race keeps the side: the best one of the class and spec, else the first that can play it
-    const f = draft.f || (draft.race && raceOf(draft.race)[1]) || (window.GabellaPor ? GabellaPor.fac() : 'alliance');   // no side yet: the side whose portraits the tiles show (by the time of day, as the home page)
+    const f = draft.f || (draft.race && raceOf(draft.race)[1]) || pre(draft.cls);   // no side yet: the side of the face on the tapped class tile
     if (draft.race && raceOf(draft.race)[2].includes(draft.cls) && (!f || raceOf(draft.race)[1] === f)) return;
     const b = f && bestOf(draft.cls, f, draft.spec), can = D.races.filter(r => r[2].includes(draft.cls) && (!f || r[1] === f) && !r[3]);
     draft.race = (b && b[0][0]) || (can[0] || [''])[0];
   }
   function drawSheet() {
     const T = D.tx, d = draft, has = valid(read());
-    const cls = D.cls.map(c => `<button type="button" data-c="${c}" aria-pressed="${d.cls === c}" style="--cc:${D.color[c]}"><img src="${face(c, d.f)}" alt="" width="48" height="48" loading="lazy"><span class="hs-n">${esc(D.cn[c])}</span></button>`).join('');
+    const cls = D.cls.map(c => `<button type="button" data-c="${c}" aria-pressed="${d.cls === c}" style="--cc:${D.color[c]}"><img src="${face(c, d.f || pre(c))}" alt="" width="48" height="48" loading="lazy"><span class="hs-n">${esc(D.cn[c])}</span></button>`).join('');
     let h = `<div class="hs-h"><b>${esc(has ? T.change : T.collect)}</b><button type="button" class="iconbtn" data-x aria-label="${esc(T.close)}"><svg class="ico" aria-hidden="true"><use href="#i-x"/></svg></button></div>`
       + (has ? '' : `<p class="hs-d">${esc(T.collectD)}</p>`)
       + `<div class="hs-l">${esc(T.cls)}</div><div class="hs-cls">${cls}</div>`;
@@ -147,8 +162,8 @@
     if (!box) return;
     const h = read();
     if (!valid(h)) { box.hidden = true; box.innerHTML = ''; if (plaque) plaque.hidden = false; return; }
-    const T = D.tx, i = specIx(h), sn = i >= 0 ? D.sn[h.cls][i] : '', pr = D.prof[h.cls], r = h.reg && nextReset(h.reg);
-    const meta = [D.rn[h.race], sn, h.role && D.role[h.role], h.lvl ? fill(T.levelN, { n: h.lvl }) : ''].filter(Boolean).join(' · ');
+    const T = D.tx, i = specIx(h), pr = D.prof[h.cls], r = h.reg && nextReset(h.reg);
+    const meta = heroMeta(h);
     const a = (href, t, cls) => `<a class="btn${cls || ' ghost'}" href="${HOME}${href}">${esc(t)}</a>`;
     const facts = [`<span><b>${esc(T.profsL)}:</b> ${pr.slice(0, -1).map(x => `${esc(x[0])}: ${esc(x[1])}`).join('. ')}. <a href="${HOME}guides/professions/#pairs=${h.cls}">${esc(T.pairs)}</a></span>`,
       `<a href="${HOME}guides/launch-checklist/">${esc(fill(T.day1n, { n: day1(), t: D.ck }))}</a>`];

@@ -785,6 +785,26 @@ def portraits():
     return _POR
 
 
+def side_faces():
+    """The class portrait of each side as {class: {"alliance": "<class>-<race>", "horde": …}}: the fallback face of a hero
+    whose own pair is not drawn yet (decision 03.11: the class face of the hero's side, not a grey badge). Only a picture
+    of a race of that very side (portraits() takes it from BEST[class][side]); the bare old <class> portrait is not used."""
+    sides = race_sides()
+    return {c: {f: n for f, n in m.items() if sides.get(n.partition('-')[2]) == f} for c, m in portraits().items()}
+
+
+def hero_faces():
+    """/*FACES*/ of hero.js: f = the drawn pairs (pair_faces), k = the class face of each side (side_faces) for a pair not
+    drawn, r = race -> side, c = class colours."""
+    return {'f': dict(sorted(pair_faces().items())), 'k': side_faces(), 'r': race_sides(), 'c': COLOR}
+
+
+# Before a hero is chosen the sheet of hero.js shows the class tiles in a mixed set (the side each class is drawn
+# for here) instead of all of one side by the time of day (03.11: «all Horde faces at night»). None: the old behaviour.
+PRE_SIDE = {'warrior': 'horde', 'paladin': 'alliance', 'hunter': 'alliance', 'rogue': 'horde', 'priest': 'horde',
+            'shaman': 'alliance', 'mage': 'alliance', 'warlock': 'horde', 'druid': 'horde'}
+
+
 def pair_faces():
     """The face of a hero: only a picture drawn for this very race and class, {"<race>.<class>": "<class>-<race>"} for each
     pair the race can play that has assets/art/<class>-<race>-face.webp. No pair drawn: no key, the page draws the neutral
@@ -810,7 +830,7 @@ def por_js():
     A new hero (the switch sheet, another tab), the switch or another time of day on the home page swaps them at once."""
     if _PORJS:
         return _PORJS[0]
-    data = json.dumps({'m': portraits(), 'r': race_sides(), 'b': tod.bounds()}, separators=(',', ':'))
+    data = json.dumps({'m': portraits(), 'r': race_sides(), 'b': tod.bounds(), 'x': PRE_SIDE or {}}, separators=(',', ':'))
     _PORJS.append('<script>(function(){var D=' + data + ',M=D.m,R=D.r,B=D.b,K="gabella-side";'
             'function rd(k){var v=null;try{v=JSON.parse(localStorage.getItem(k))}catch(e){}return v}'
             'function st(h){return h&&R[h.race]?h.race+"."+h.cls:""}'
@@ -820,12 +840,14 @@ def por_js():
             'var H=new Date().getHours();t=/^(dawn|day|dusk|night)$/.test(s)?s:H>=B[0]&&H<B[2]?"day":"night"}'
             'return t=="dusk"||t=="night"?"horde":"alliance"}'
             'function id(c,f){return M[c]?M[c][f||fac()]:c}'
+            # pre(c): the side of class c in a tile before a hero is chosen: the hero's / a hand-picked side, else PRE_SIDE (D.x)
+            'function pre(c){var h=rd("gabella-wf-me"),m=rd(K);if((h&&R[h.race])||(m&&m.h===st(h)&&(m.f=="alliance"||m.f=="horde")))return fac();return D.x[c]||fac()}'
             r'function url(s,f){return s.replace(/\{(\w+)\}/g,function(x,c){return M[c]?id(c,f):x})}'
             'function fill(el,f){el=el||document;el.querySelectorAll("[data-por-srcset]").forEach(function(e){var v=url(e.getAttribute("data-por-srcset"),f);if(e.getAttribute("srcset")!==v)e.setAttribute("srcset",v)});'
             'el.querySelectorAll("[data-por-src]").forEach(function(e){var v=url(e.getAttribute("data-por-src"),f);if(e.getAttribute("src")!==v)e.setAttribute("src",v)})}'
             'function set(f){try{localStorage.setItem(K,JSON.stringify({f:f,h:st(rd("gabella-wf-me"))}))}catch(e){}'
             'fill();dispatchEvent(new Event("gabella-side"))}'
-            'window.GabellaPor={map:M,side:R,fac:fac,id:id,url:url,fill:fill,set:set};'
+            'window.GabellaPor={map:M,side:R,fac:fac,pre:pre,id:id,url:url,fill:fill,set:set};'
             'var re=function(){fill()};document.addEventListener("DOMContentLoaded",re);addEventListener("gabella-me",re);document.addEventListener("gabella:tod",re);'
             'addEventListener("storage",function(e){if(e.key=="gabella-wf-me"||e.key==K){re();dispatchEvent(new Event("gabella-side"))}})})();</script>\n')
     return _PORJS[0]
@@ -987,12 +1009,12 @@ def art_version():
                                                           if f"'{f.rsplit('.', 1)[0]}'" in html or f'"{f.rsplit(".", 1)[0]}"' in extra}, separators=(',', ':'))
     # scripts of assets/ draw portraits and scenes by name too: me.js (the small portrait), radio.js (the cover is the art of a
     # station, named in stations.json). They are hashed after this pass (me_version, radio_version).
-    faces = json.dumps({'f': dict(sorted(pair_faces().items())), 'c': COLOR}, separators=(',', ':'))
+    faces = json.dumps(hero_faces(), separators=(',', ':'))
     for js, named in (('me/me.js', ''), ('hero/hero.js', ''), ('radio/radio.js', open(os.path.join(HERE, 'assets', 'radio', 'stations.json'), encoding='utf-8').read())):
         p = os.path.join(HERE, 'assets', js)
         was = open(p, encoding='utf-8').read()
         new = re.sub(r"/\*PV\*/'[^']*'", f"/*PV*/'{pv}'", re.sub(r'/\*ARTV\*/\{[^}]*\}', lambda _: artv(was, named), was))
-        new = re.sub(r'/\*FACES\*/\{"f":\{[^}]*\},"c":\{[^}]*\}\}', lambda _: '/*FACES*/' + faces, new)   # hero.js: the hero's own face
+        new = re.sub(r'/\*FACES\*/\{[^\n]*?\}(?=;\n)', lambda _: '/*FACES*/' + faces, new)   # hero.js: the hero's own face
         if new != was:
             open(p, 'w', encoding='utf-8', newline='\n').write(new)
     n = 0
