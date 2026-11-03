@@ -72,7 +72,7 @@
     dlg.addEventListener('click', e => { if (e.target === dlg) close(); });   // click on the backdrop
     dlg.addEventListener('close', () => { document.documentElement.classList.remove('srch-on'); if (opener) opener.focus({ preventScroll: true }); });
     list.addEventListener('click', e => { if (e.target.closest('a')) dlg.close(); });
-    list.addEventListener('mousemove', e => { const li = e.target.closest('li[role="option"]'); if (li) pick(+li.dataset.i, false); });
+    list.addEventListener('mousemove', e => { const li = e.target.closest('[role="option"]'); if (li) pick(+li.dataset.i, false); });
   }
 
   function open() {
@@ -126,7 +126,7 @@
 
   function row(it, i, toks) {
     const ex = excerpt(it, toks);
-    return `<li role="option" id="sr-${i}" data-i="${i}" aria-selected="false"><a href="${esc(ROOT + it.u)}" tabindex="-1">`
+    return `<li role="presentation"><a role="option" id="sr-${i}" data-i="${i}" aria-selected="false" href="${esc(ROOT + it.u)}" tabindex="-1">`
       + `<svg class="ico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${ICON[it.k]}</svg>`
       + `<span class="srch-t"><b>${toks ? mark(it.t, it.nt, toks) : esc(it.t)}</b>${it.s ? `<small>${esc(it.s)}</small>` : ''}${ex ? `<span class="srch-x2">${ex}</span>` : ''}</span></a></li>`;
   }
@@ -180,7 +180,7 @@
       if (shown.length) pick((sel + (e.key === 'ArrowDown' ? 1 : -1) + shown.length) % shown.length);
     } else if (e.key === 'Enter' && sel >= 0) {
       e.preventDefault();
-      const a = list.querySelector(`#sr-${sel} a`);
+      const a = list.querySelector(`#sr-${sel}`);
       if (e.ctrlKey || e.metaKey) { window.open(a.href, '_blank', 'noopener'); return; }
       dlg.close();
       a.click();
