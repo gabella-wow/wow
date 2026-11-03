@@ -1,5 +1,153 @@
 [
  {
+  "id": "eu-631316-9",
+  "sha": "f8563c48",
+  "date": "2026-11-03",
+  "at": "2026-11-03T03:21:28Z",
+  "url": "https://eu.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-3-november/631316/9",
+  "kind": "dev-notes",
+  "beta": true,
+  "title_en": "WoW Forever Beta Development Notes – Updated 3 November",
+  "n": 235,
+  "t": {
+   "ru": {
+    "h": "Заметки разработчиков от 03.11 (бета)",
+    "src": "Blizzard, на английском",
+    "sum": [
+     "All Races: 2 → 5",
+     "Друид · Ravage: 350% → 435%",
+     "Друид · Удары хищника (Predatory Strikes): 3 → 1",
+     "Друид · Natural Instinct: 1 → 4",
+     "Друид · Rend and Tear: 3 → 1, 2% → 15%",
+     "Охотник · Чародейский выстрел (Arcane Shot): 0,1 → 0,15"
+    ],
+    "more": "Ещё изменений: 229",
+    "site": "https://gabella.site/wow/guides/news/",
+    "site_t": "Подробнее на сайте"
+   },
+   "en": {
+    "h": "Developer notes of Nov 3 (beta)",
+    "src": "Blizzard",
+    "sum": [
+     "All Races: 2 → 5",
+     "Druid · Ravage: 350% → 435%",
+     "Druid · Predatory Strikes: 3 → 1",
+     "Druid · Natural Instinct: 1 → 4",
+     "Druid · Rend and Tear: 3 → 1, 2% → 15%",
+     "Hunter · Arcane Shot: 0.1 → 0.15"
+    ],
+    "more": "229 more changes",
+    "site": "https://gabella.site/wow/en/guides/news/",
+    "site_t": "More on the site"
+   },
+   "uk": {
+    "h": "Нотатки розробників від 03.11 (бета)",
+    "src": "Blizzard, англійською",
+    "sum": [
+     "All Races: 2 → 5",
+     "Друїд · Ravage: 350% → 435%",
+     "Друїд · Predatory Strikes: 3 → 1",
+     "Друїд · Natural Instinct: 1 → 4",
+     "Друїд · Rend and Tear: 3 → 1, 2% → 15%",
+     "Мисливець · Arcane Shot: 0,1 → 0,15"
+    ],
+    "more": "Ще змін: 229",
+    "site": "https://gabella.site/wow/uk/guides/news/",
+    "site_t": "Детальніше на сайті"
+   },
+   "de": {
+    "h": "Entwicklerhinweise vom 03.11 (Beta)",
+    "src": "Blizzard, auf Englisch",
+    "sum": [
+     "All Races: 2 → 5",
+     "Druide · Ravage: 350% → 435%",
+     "Druide · Raubtierschläge: 3 → 1",
+     "Druide · Natural Instinct: 1 → 4",
+     "Druide · Rend and Tear: 3 → 1, 2% → 15%",
+     "Jäger · Arkaner Schuss: 0,1 → 0,15"
+    ],
+    "more": "Weitere Änderungen: 229",
+    "site": "https://gabella.site/wow/de/guides/news/",
+    "site_t": "Mehr auf der Seite"
+   },
+   "fr": {
+    "h": "Notes des développeurs du 03.11 (bêta)",
+    "src": "Blizzard, en anglais",
+    "sum": [
+     "All Races: 2 → 5",
+     "Druide · Ravage: 350% → 435%",
+     "Druide · Frappes de prédateur: 3 → 1",
+     "Druide · Natural Instinct: 1 → 4",
+     "Druide · Rend and Tear: 3 → 1, 2% → 15%",
+     "Chasseur · Tir des arcanes: 0,1 → 0,15"
+    ],
+    "more": "Autres changements : 229",
+    "site": "https://gabella.site/wow/fr/guides/news/",
+    "site_t": "Plus sur le site"
+   },
+   "es": {
+    "h": "Notas de los desarrolladores del 03.11 (beta)",
+    "src": "Blizzard, en inglés",
+    "sum": [
+     "All Races: 2 → 5",
+     "Druida · Ravage: 350% → 435%",
+     "Druida · Golpes depredadores: 3 → 1",
+     "Druida · Natural Instinct: 1 → 4",
+     "Druida · Rend and Tear: 3 → 1, 2% → 15%",
+     "Cazador · Tiro Arcano: 0,1 → 0,15"
+    ],
+    "more": "Más cambios: 229",
+    "site": "https://gabella.site/wow/es/guides/news/",
+    "site_t": "Más en la web"
+   },
+   "pt": {
+    "h": "Notas dos desenvolvedores de 03.11 (beta)",
+    "src": "Blizzard, em inglês",
+    "sum": [
+     "All Races: 2 → 5",
+     "Druida · Ravage: 350% → 435%",
+     "Druida · Golpes Predatórios: 3 → 1",
+     "Druida · Natural Instinct: 1 → 4",
+     "Druida · Rend and Tear: 3 → 1, 2% → 15%",
+     "Caçador · Tiro Arcano: 0,1 → 0,15"
+    ],
+    "more": "Mais mudanças: 229",
+    "site": "https://gabella.site/wow/pt/guides/news/",
+    "site_t": "Mais no site"
+   },
+   "it": {
+    "h": "Note degli sviluppatori del 03.11 (beta)",
+    "src": "Blizzard, in inglese",
+    "sum": [
+     "All Races: 2 → 5",
+     "Druido · Ravage: 350% → 435%",
+     "Druido · Predatory Strikes: 3 → 1",
+     "Druido · Natural Instinct: 1 → 4",
+     "Druido · Rend and Tear: 3 → 1, 2% → 15%",
+     "Cacciatore · Arcane Shot: 0,1 → 0,15"
+    ],
+    "more": "Altre modifiche: 229",
+    "site": "https://gabella.site/wow/it/guides/news/",
+    "site_t": "Di più sul sito"
+   },
+   "pl": {
+    "h": "Notatki deweloperów z 03.11 (beta)",
+    "src": "Blizzard, po angielsku",
+    "sum": [
+     "All Races: 2 → 5",
+     "Druid · Ravage: 350% → 435%",
+     "Druid · Predatory Strikes: 3 → 1",
+     "Druid · Natural Instinct: 1 → 4",
+     "Druid · Rend and Tear: 3 → 1, 2% → 15%",
+     "Hunter · Arcane Shot: 0,1 → 0,15"
+    ],
+    "more": "Więcej zmian: 229",
+    "site": "https://gabella.site/wow/pl/guides/news/",
+    "site_t": "Więcej na stronie"
+   }
+  }
+ },
+ {
   "id": "us-2360696-9",
   "sha": "f8563c48",
   "date": "2026-11-03",
