@@ -1,0 +1,215 @@
+{
+ "event": "new",
+ "key": "art-24315821",
+ "source": "article",
+ "region": "us",
+ "topic": null,
+ "post": null,
+ "url": "https://worldofwarcraft.blizzard.com/en-us/news/24315821/wow-forever-whats-new-and-what-feels-familiar",
+ "title": "WoW: Forever—What’s New and What Feels Familiar",
+ "author": "Blizzard Entertainment",
+ "role": "Blizzard News",
+ "created_at": "2026-11-03T18:00:00.000Z",
+ "updated_at": null,
+ "version": null,
+ "category": null,
+ "beta": false,
+ "sha": "1e88838271c977750e812c9698c5feea2c19ff335730cc5dc50abe92029f38f3",
+ "twin_of": null,
+ "also": [],
+ "short_news": {
+  "date": "2026-11-03",
+  "at": "2026-11-03T18:00:00Z",
+  "url": "https://worldofwarcraft.blizzard.com/en-us/news/24315821/wow-forever-whats-new-and-what-feels-familiar",
+  "title_en": "WoW: Forever—What’s New and What Feels Familiar",
+  "kind": "article",
+  "beta": false
+ },
+ "changes": [
+  {
+   "path": [
+    "Controls and Conveniences"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Transmog"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Transmog: Keep character appearance part of your adventure.",
+   "h": "86e78bb7726f"
+  },
+  {
+   "path": [
+    "More to Explore at Levels 1–60"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Eastern Kingdoms",
+    "Kalimdor"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    60
+   ],
+   "text": "The Eastern Kingdoms and Kalimdor provide the setting for leveling to 60. New and expanded zones, quests, and character options build on original WoW’s foundation, giving explorers more to investigate across these continents, but sticks to a level cap of 60 without going beyond. This leaves room for an expanding game without an expansion of levels.",
+   "h": "c806d5d5ce64"
+  },
+  {
+   "path": [
+    "More to Explore at Levels 1–60"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Eastern Kingdoms",
+    "Kalimdor"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    13,
+    60
+   ],
+   "text": "Nine new five-player dungeons cover levels 13 through 60, adding threats and quests throughout the Eastern Kingdoms and Kalimdor. For players who enjoy working through encounters with a party, that means new group content to seek out during leveling and at the level cap.",
+   "h": "e3b62d3cdc38"
+  },
+  {
+   "path": [
+    "More to Explore at Levels 1–60"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Windshaper Skyborne",
+    "High Order Skyborne",
+    "Zephras Isle"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "The Skyborne add another perspective as a new playable race with a starting experience on Zephras Isle. At character creation, choose Horde-aligned Windshaper Skyborne or Alliance-aligned High Order Skyborne. Story fans can get to know these people through their own unique introduction.",
+   "h": "c4e69179f257"
+  },
+  {
+   "path": [
+    "Same Class, Familiar Races, Different Toolkit"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "added",
+   "pairs": [],
+   "nums": [],
+   "text": "New race-and-class combinations offer more ways to revisit a favorite class. Play an Undead Paladin, Dwarf Shaman, Gnome Priest, Human Hunter, Orc Mage, or Troll Warlock—options added to the original WoW lineup. A different pairing could be just the inspiration for your next character.",
+   "h": "d877fe7ef6a8"
+  },
+  {
+   "path": [
+    "Progress Beyond Your Level"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Resourcefulness",
+    "Legacy"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "The Legacy System adds account-wide progression through challenges, Legacy Points, character-specific perks, and cosmetic rewards. Each character can spend points differently across Professions, Adventure, and Resourcefulness, so your interests can help shape how you use the system.",
+   "h": "567f33df2ce1"
+  },
+  {
+   "path": [
+    "Progress Beyond Your Level"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Legacy"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    16
+   ],
+   "text": "At launch, each character can spend up to 16 Legacy Points. You can reach that spending cap on a single character; creating alternate characters isn’t required. If you enjoy exploring different classes and professions, you have room to do so—but a favorite character can benefit, too.",
+   "h": "a83363f8f77c"
+  },
+  {
+   "path": [
+    "Progress Beyond Your Level"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Azeroth"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Camping gives you another reason to pause along the road. Campsites and profession features bring players together out in the world, and sitting briefly by a campfire to become rested lets you receive campsite buffs before setting out again. Choose your spot with care: stopping to rest doesn’t put the dangers of Azeroth on hold.",
+   "h": "aa6fae402510"
+  },
+  {
+   "path": [
+    "Room for Both, on Your Terms"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Azeroth"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Keep the plans you look forward to and see where the next session takes you. Whichever character you log in with, we’re glad to share Azeroth with you. Learn more about World of Warcraft: Forever here on the official news site.",
+   "h": "2e8e0587e9ce"
+  }
+ ],
+ "new_lines": [
+  "d2c7ba7e26f7",
+  "3433b2b894ac",
+  "c6148b456858",
+  "eeb4c83452bc",
+  "86e78bb7726f",
+  "7c4b5ee68531",
+  "58174d1e5217",
+  "ee4062760950",
+  "d712fae0de5a",
+  "9307ed4db473",
+  "c806d5d5ce64",
+  "e3b62d3cdc38",
+  "c4e69179f257",
+  "4abeb5059e40",
+  "fa0b0f6ca5ba",
+  "d877fe7ef6a8",
+  "e92b53dc19f4",
+  "567f33df2ce1",
+  "a83363f8f77c",
+  "aa6fae402510",
+  "9a16a6b391c7",
+  "946602b01ed6",
+  "02fd69615752",
+  "2e8e0587e9ce"
+ ],
+ "gone_lines": [],
+ "outdated": [],
+ "to_check": [],
+ "check": [],
+ "detected_at": "2026-11-03T18:01:09Z"
+}
