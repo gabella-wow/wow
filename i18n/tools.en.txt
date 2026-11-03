@@ -84,7 +84,7 @@ Login queue
 Do not leave the queue: when you log in again you go to the back of it.
 In the beta many players were disconnected after the queue and put at the back of a new one.
 If you are disconnected, log in again right away.
-Heroic, Epic and Collection owners claim their name in advance, from 27.10 to 03.11: on launch day nobody takes it while you wait in the queue.
+Heroic, Epic and Collection owners could claim their name in advance, from 27.10 to 03.11: on launch day nobody takes it while you wait in the queue.
 Blizzard: rulesets instead of realms
 Blizzard forums: stress test regions
 Warcraft Tavern: VPN in the beta

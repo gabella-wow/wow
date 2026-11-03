@@ -482,8 +482,8 @@ ClassicWoW.gg: dates and raids
 Before launch
 until Nov 4–5
 Early name reservation 27.10 – 03.11 for owners of the Heroic, Epic and Collection packs. First come, first served.
-You can reserve up to three characters per account. A character has a first name and a surname, and the pair must be unique within the region.
-Pick three names with surnames, plus backups: the reservation runs until 03.11.
+You could reserve up to three characters per account. A character has a first name and a surname, and the pair must be unique within the region.
+Pick a name with a surname, plus backups: early reservation ended on 03.11, other names are claimed at launch.
 The first dungeons open at level 13.
 Each character gets two primary professions plus all three secondary ones: Cooking, First Aid and Fishing.
 Each profession places its own camp object with a buff similar to a class buff.
