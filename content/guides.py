@@ -283,7 +283,7 @@ GUIDES.append({
                  'a': [t('Ранний резерв для владельцев Heroic, Epic и Collection шёл с 27.10 по 03.11 и закончился. Теперь имя занимают на старте, при создании персонажа.',
                          'Early reservation for Heroic, Epic and Collection owners ran from 27.10 to 03.11 and has ended. Now you claim a name at launch, when you create a character.',
                          'Ранній резерв для власників Heroic, Epic і Collection тривав з 27.10 по 03.11 і закінчився. Тепер ім’я займають на старті, під час створення персонажа.')],
-                 'link': (t('Как занять имя', 'How to claim a name', 'Як зайняти ім’я'), '../name-reservation/')},
+                 'link': (t('Как занимали имя', 'How names were claimed', 'Як займали ім’я'), '../name-reservation/')},
                 {'id': 'surname', 'q': t('Зачем фамилия и можно ли взять то же имя, что у друга?', 'Why a surname, and can two people share a name?', 'Навіщо прізвище і чи можна взяти те саме ім’я, що в друга?'),
                  'a': [t('Реалмов нет, поэтому уникальным должно быть полное имя во всём регионе. Одно имя у двоих возможно, если фамилии разные. Фамилию можно скрыть: Esc → Options → Nameplates → My Secondary Name.',
                          'There are no realms, so the full name must be unique across the whole region. Two players can share a first name if their surnames differ. You can hide the surname: Esc → Options → Nameplates → My Secondary Name.',
@@ -2749,7 +2749,7 @@ _ld_status['blocks'] = _ld_status['blocks'] + [('table', {'head': _tbl(_ld_wait)
 # Киев после 25.10 = UTC+2: 18:00 CET = 19:00, 13:00 PDT = 22:00, 07:00 KST (28.10) = 00:00, 07:00 Тайвань (UTC+8) = 01:00.
 # Океания и час конца окна в статье не указаны — так и пишем.
 
-NR_HOW = t('Как занять имя', 'How to claim a name', 'Як зайняти ім’я')
+NR_HOW = t('Как занимали имя', 'How names were claimed', 'Як займали ім’я')
 GUIDES.append({
     'slug': 'name-reservation', 'art': 'hero_dusk', 'hero': 'hero_dusk', 'og': 'guides',
     'title': t('Ранний резерв имён в WoW Forever закончился', 'WoW Forever Early Name Reservation Has Ended', 'Ранній резерв імен у WoW Forever закінчився'),
@@ -2785,7 +2785,7 @@ GUIDES.append({
                 [t('Конец резерва', 'End of reservation', 'Кінець резерву'), t('03.11, время не указано', '03.11, time not given', '03.11, час не вказано')],
             ]}),
         ]},
-        {'id': 'steps', 'title': NR_HOW, 'blocks': [
+        {'id': 'steps', 'title': NR_HOW, 'fold': True, 'blocks': [
             ('steps', [
                 {'t': t('Обновите драйверы', 'Update your drivers', 'Оновіть драйвери'),
                  'd': t('Blizzard советует начать со свежих драйверов видеокарты.', 'Blizzard recommends starting with up-to-date graphics drivers.',
@@ -2828,7 +2828,7 @@ GUIDES.append({
                         'Blizzard не гарантує потрібне ім’я. Рідкісне краще зайняти одразу й тримати запасне прізвище.')},
             ]),
         ]},
-        {'id': 'fail', 'title': t('Если не получилось', 'If it does not work', 'Якщо не вийшло'), 'blocks': [
+        {'id': 'fail', 'title': t('Если не получилось', 'If it does not work', 'Якщо не вийшло'), 'fold': True, 'blocks': [
             ('table', {'head': [t('Что случилось', 'What happened', 'Що сталося'), t('Что делать', 'What to do', 'Що робити')], 'rows': [
                 [t('Имя занято', 'The name is taken', 'Ім’я зайняте'),
                  t('Смените фамилию: уникальным должно быть только сочетание. Или возьмите запасной вариант.',

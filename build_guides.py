@@ -528,9 +528,13 @@ def render_guide(g, lang, root):
         if tier and s['id'] == 'classes':                       # the switch and the grid open the section, the table with the reasons follows
             html = (side_switch(g['side'], lang, root) if g.get('side') else '') + tier_grid(next(d for k, d in s['blocks'] if k == 'table'), lang, root) + html
         return html
-    body = '\n'.join(f'<section class="frame gsec" id="{s["id"]}"' + (f' data-toc="{s["toc"]}"' if s.get('toc') else '')
-                     + f'><h2>{E(s["title"], lang)}</h2>' + blocks(s) + '</section>'
-                      for s in sections)
+    def section(s):
+        if s.get('fold'):                                       # 'fold': a closed <details> in the .pjour style (outdated how-to, kept for reference)
+            return (f'<details class="frame pjour" id="{s["id"]}"><summary><h2>{E(s["title"], lang)}</h2></summary>'
+                    f'<div class="pjin">{blocks(s)}</div></details>')
+        return (f'<section class="frame gsec" id="{s["id"]}"' + (f' data-toc="{s["toc"]}"' if s.get('toc') else '')
+                + f'><h2>{E(s["title"], lang)}</h2>' + blocks(s) + '</section>')
+    body = '\n'.join(section(s) for s in sections)
     return toc, body
 
 

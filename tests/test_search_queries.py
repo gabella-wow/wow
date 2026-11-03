@@ -69,7 +69,7 @@ HOLD = [
     ('ru', 'рейд', RAID), ('ru', 'аддоны', ['guides/addons/']), ('ru', 'тир лист', ['guides/tier-list/']),
     ('ru', 'русский язык', ['guides/faq/#language']), ('ru', 'скайборн', SKY), ('ru', 'skyborne', SKY), ('ru', 'hunter', ['classes/hunter/']),
     ('ru', 'undead', ['races/undead/']), ('ru', 'gnome', ['races/gnome/']), ('ru', 'нужна ли подписка', ['guides/faq/#subscription']),
-    ('ru', 'как занять имя', ['guides/faq/#reserve']), ('ru', 'требования к пк', ['guides/requirements/', 'guides/faq/#requirements']),
+    ('ru', 'как занять имя', ['guides/faq/#reserve', 'guides/name-reservation/']), ('ru', 'требования к пк', ['guides/requirements/', 'guides/faq/#requirements']),
     ('ru', 'когда откроются рейды', ['guides/faq/#raids']), ('ru', 'палладин', ['classes/paladin/']), ('ru', 'прокачка мага', ['guides/leveling-mage/']),
     ('ru', 'билд воина', ['guides/builds-warrior/']), ('ru', 'билды паладина', ['guides/builds-paladin/']), ('ru', 'профессии', ['guides/professions/']),
     ('ru', 'цена', PRICE), ('ru', 'какой класс выбрать', CLASS),
