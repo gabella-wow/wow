@@ -1,5 +1,100 @@
 [
  {
+  "id": "art-24315820",
+  "sha": "93eb6a45",
+  "date": "2026-11-04",
+  "at": "2026-11-04T23:00:00Z",
+  "url": "https://worldofwarcraft.blizzard.com/en-us/news/24315820/world-of-warcraft-forever-now-live",
+  "kind": "article",
+  "beta": false,
+  "title_en": "World of Warcraft: Forever Now Live!",
+  "n": 1,
+  "upd": "2026-11-04T23:11:29Z",
+  "t": {
+   "ru": {
+    "h": "World of Warcraft: Forever Now Live!",
+    "en": 1,
+    "src": "Blizzard, на английском",
+    "upd": "обновлено 04.11",
+    "sum": [],
+    "site": "https://gabella.site/wow/guides/news/",
+    "site_t": "Подробнее на сайте"
+   },
+   "en": {
+    "h": "World of Warcraft: Forever Now Live!",
+    "en": 1,
+    "src": "Blizzard",
+    "upd": "updated Nov 4",
+    "sum": [],
+    "site": "https://gabella.site/wow/en/guides/news/",
+    "site_t": "More on the site"
+   },
+   "uk": {
+    "h": "World of Warcraft: Forever Now Live!",
+    "en": 1,
+    "src": "Blizzard, англійською",
+    "upd": "оновлено 04.11",
+    "sum": [],
+    "site": "https://gabella.site/wow/uk/guides/news/",
+    "site_t": "Детальніше на сайті"
+   },
+   "de": {
+    "h": "World of Warcraft: Forever Now Live!",
+    "en": 1,
+    "src": "Blizzard, auf Englisch",
+    "upd": "aktualisiert am 04.11",
+    "sum": [],
+    "site": "https://gabella.site/wow/de/guides/news/",
+    "site_t": "Mehr auf der Seite"
+   },
+   "fr": {
+    "h": "World of Warcraft: Forever Now Live!",
+    "en": 1,
+    "src": "Blizzard, en anglais",
+    "upd": "mis à jour le 04.11",
+    "sum": [],
+    "site": "https://gabella.site/wow/fr/guides/news/",
+    "site_t": "Plus sur le site"
+   },
+   "es": {
+    "h": "World of Warcraft: Forever Now Live!",
+    "en": 1,
+    "src": "Blizzard, en inglés",
+    "upd": "actualizado el 04.11",
+    "sum": [],
+    "site": "https://gabella.site/wow/es/guides/news/",
+    "site_t": "Más en la web"
+   },
+   "pt": {
+    "h": "World of Warcraft: Forever Now Live!",
+    "en": 1,
+    "src": "Blizzard, em inglês",
+    "upd": "atualizado em 04.11",
+    "sum": [],
+    "site": "https://gabella.site/wow/pt/guides/news/",
+    "site_t": "Mais no site"
+   },
+   "it": {
+    "h": "World of Warcraft: Forever Now Live!",
+    "en": 1,
+    "src": "Blizzard, in inglese",
+    "upd": "aggiornato il 04.11",
+    "sum": [],
+    "site": "https://gabella.site/wow/it/guides/news/",
+    "site_t": "Di più sul sito"
+   },
+   "pl": {
+    "h": "World of Warcraft: Forever Now Live!",
+    "en": 1,
+    "src": "Blizzard, po angielsku",
+    "upd": "zaktualizowano 04.11",
+    "sum": [],
+    "site": "https://gabella.site/wow/pl/guides/news/",
+    "site_t": "Więcej na stronie"
+   }
+  }
+ },
+ {
   "id": "us-2400905-1",
   "sha": "490dee31",
   "date": "2026-11-04",
@@ -258,101 +353,6 @@
     "h": "WoW: Forever—What’s New and What Feels Familiar",
     "en": 1,
     "src": "Blizzard, po angielsku",
-    "sum": [],
-    "site": "https://gabella.site/wow/pl/guides/news/",
-    "site_t": "Więcej na stronie"
-   }
-  }
- },
- {
-  "id": "art-24315820",
-  "sha": "75da8e10",
-  "date": "2026-11-03",
-  "at": "2026-11-03T17:12:00Z",
-  "url": "https://worldofwarcraft.blizzard.com/en-us/news/24315820/world-of-warcraft-forever-goes-live-globally-november-4",
-  "kind": "article",
-  "beta": false,
-  "title_en": "World of Warcraft: Forever Goes Live Globally November 4!",
-  "n": 1,
-  "upd": "2026-11-04T20:51:20Z",
-  "t": {
-   "ru": {
-    "h": "World of Warcraft: Forever Goes Live Globally November 4!",
-    "en": 1,
-    "src": "Blizzard, на английском",
-    "upd": "обновлено 04.11",
-    "sum": [],
-    "site": "https://gabella.site/wow/guides/news/",
-    "site_t": "Подробнее на сайте"
-   },
-   "en": {
-    "h": "World of Warcraft: Forever Goes Live Globally November 4!",
-    "en": 1,
-    "src": "Blizzard",
-    "upd": "updated Nov 4",
-    "sum": [],
-    "site": "https://gabella.site/wow/en/guides/news/",
-    "site_t": "More on the site"
-   },
-   "uk": {
-    "h": "World of Warcraft: Forever Goes Live Globally November 4!",
-    "en": 1,
-    "src": "Blizzard, англійською",
-    "upd": "оновлено 04.11",
-    "sum": [],
-    "site": "https://gabella.site/wow/uk/guides/news/",
-    "site_t": "Детальніше на сайті"
-   },
-   "de": {
-    "h": "World of Warcraft: Forever Goes Live Globally November 4!",
-    "en": 1,
-    "src": "Blizzard, auf Englisch",
-    "upd": "aktualisiert am 04.11",
-    "sum": [],
-    "site": "https://gabella.site/wow/de/guides/news/",
-    "site_t": "Mehr auf der Seite"
-   },
-   "fr": {
-    "h": "World of Warcraft: Forever Goes Live Globally November 4!",
-    "en": 1,
-    "src": "Blizzard, en anglais",
-    "upd": "mis à jour le 04.11",
-    "sum": [],
-    "site": "https://gabella.site/wow/fr/guides/news/",
-    "site_t": "Plus sur le site"
-   },
-   "es": {
-    "h": "World of Warcraft: Forever Goes Live Globally November 4!",
-    "en": 1,
-    "src": "Blizzard, en inglés",
-    "upd": "actualizado el 04.11",
-    "sum": [],
-    "site": "https://gabella.site/wow/es/guides/news/",
-    "site_t": "Más en la web"
-   },
-   "pt": {
-    "h": "World of Warcraft: Forever Goes Live Globally November 4!",
-    "en": 1,
-    "src": "Blizzard, em inglês",
-    "upd": "atualizado em 04.11",
-    "sum": [],
-    "site": "https://gabella.site/wow/pt/guides/news/",
-    "site_t": "Mais no site"
-   },
-   "it": {
-    "h": "World of Warcraft: Forever Goes Live Globally November 4!",
-    "en": 1,
-    "src": "Blizzard, in inglese",
-    "upd": "aggiornato il 04.11",
-    "sum": [],
-    "site": "https://gabella.site/wow/it/guides/news/",
-    "site_t": "Di più sul sito"
-   },
-   "pl": {
-    "h": "World of Warcraft: Forever Goes Live Globally November 4!",
-    "en": 1,
-    "src": "Blizzard, po angielsku",
-    "upd": "zaktualizowano 04.11",
     "sum": [],
     "site": "https://gabella.site/wow/pl/guides/news/",
     "site_t": "Więcej na stronie"
