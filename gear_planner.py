@@ -54,7 +54,7 @@ TX = {
     'spec': n9('Спек', 'Spec', 'Спек', 'Skillung', 'Spé', 'Especialización', 'Especialização', 'Specializzazione', 'Specjalizacja'),
     'nospec': n9('Без спека', 'No spec', 'Без спеку', 'Keine Skillung', 'Sans spé', 'Sin especialización', 'Sem especialização',
                  'Nessuna specializzazione', 'Bez specjalizacji'),
-    'race': n9('Раса', 'Race', 'Раса', 'Rasse', 'Race', 'Raza', 'Raça', 'Razza', 'Rasa'),
+    'race': n9('Раса', 'Race', 'Раса', 'Volk', 'Race', 'Raza', 'Raça', 'Razza', 'Rasa'),
     'lvl': n9('Уровень', 'Level', 'Рівень', 'Stufe', 'Niveau', 'Nivel', 'Nível', 'Livello', 'Poziom'),
     'lvlDown': n9('Уровень ниже', 'Lower level', 'Нижчий рівень', 'Niedrigere Stufe', 'Niveau inférieur', 'Nivel menor', 'Nível menor',
                   'Livello inferiore', 'Niższy poziom'),
@@ -128,7 +128,7 @@ TX = {
     'statsNote': n9('Сумма статов надетых предметов. Базовых статов класса и расы здесь нет: на сайте их данных пока нет.',
                     'The sum of the equipped items. No base stats of class and race: the site has no data for them yet.',
                     'Сума характеристик вдягнених предметів. Базових характеристик класу й раси тут немає: на сайті їхніх даних поки немає.',
-                    'Summe der angelegten Gegenstände. Ohne Grundwerte von Klasse und Rasse: Dafür hat die Seite noch keine Daten.',
+                    'Summe der angelegten Gegenstände. Ohne Grundwerte von Klasse und Volk: Dafür hat die Seite noch keine Daten.',
                     'La somme des objets équipés. Sans les caractéristiques de base de la classe et de la race : le site n’a pas encore ces données.',
                     'La suma de los objetos equipados. Sin las estadísticas base de clase y raza: el sitio aún no tiene esos datos.',
                     'A soma dos itens equipados. Sem os atributos base de classe e raça: o site ainda não tem esses dados.',
@@ -173,7 +173,7 @@ TX = {
                 'Itens e ícones do catálogo Classic Era da Blizzard; as mudanças do Forever virão após o lançamento.',
                 'Armature e armi secondo le regole Classic: maglia per cacciatori e sciamani e piastre per guerrieri e paladini dal livello 40. '
                 'Oggetti e icone dal catalogo Classic Era di Blizzard; le modifiche di Forever arriveranno dopo il lancio.',
-                'Pancerz i broń według zasad Classic: kolczuga dla łowcy i szamana, płyty dla wojownika i paladyna od 40 poziomu. '
+                'Pancerz i broń według zasad Classic: kolczuga dla Huntera i Shamana, płyty dla Warriora i Paladina od 40 poziomu. '
                 'Przedmioty i ikony z katalogu Blizzard dla Classic Era; zmiany Forever pojawią się po starcie gry.'),
     'right': n9('Правая рука', 'Main hand', 'Права рука', 'Waffenhand', 'Main droite', 'Mano derecha', 'Mão principal', 'Mano primaria',
                 'Główna ręka'),
@@ -198,8 +198,8 @@ SHORT = {
     'pt': {'str': 'For', 'agi': 'Agi', 'sta': 'Vig', 'int': 'Int', 'spi': 'Esp', 'armor': 'Armadura', 'sp': 'PM', 'hp': 'Cura', 'ap': 'PA',
            'crit': 'Crít', 'hit': 'Acerto', 'mp5': 'MP5', 'def': 'Def', 'dps': 'DPS'},
     'it': {'str': 'For', 'agi': 'Agi', 'sta': 'Res', 'int': 'Int', 'spi': 'Spi', 'armor': 'Armatura', 'sp': 'PM', 'hp': 'Cura', 'ap': 'PA',
-           'crit': 'Crit', 'hit': 'Colp', 'mp5': 'MP5', 'def': 'Dif', 'dps': 'DPS'},
-    'pl': {'str': 'Sił', 'agi': 'Zr', 'sta': 'Wyt', 'int': 'Int', 'spi': 'Duch', 'armor': 'pancerza', 'sp': 'MZ', 'hp': 'Lecz', 'ap': 'MA',
+           'crit': 'Crit', 'hit': 'Imp', 'mp5': 'MP5', 'def': 'Dif', 'dps': 'DPS'},
+    'pl': {'str': 'Sił', 'agi': 'Zr', 'sta': 'Wyt', 'int': 'Int', 'spi': 'Duch', 'armor': 'Panc', 'sp': 'MZ', 'hp': 'Lecz', 'ap': 'MA',
            'crit': 'Kryt', 'hit': 'Traf', 'mp5': 'MP5', 'def': 'Obr', 'dps': 'DPS'},
 }
 # the page heading, the search title and description (seo.py)
