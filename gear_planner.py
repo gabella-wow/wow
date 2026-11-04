@@ -143,6 +143,25 @@ TX = {
                    'Notre build n’a pas d’objets pour cette spé et ce niveau.', 'Nuestro build no tiene objetos para esta especialización y nivel.',
                    'Nossa build não tem itens para esta especialização e nível.', 'La nostra build non ha oggetti per questa specializzazione e livello.',
                    'Nasz build nie ma przedmiotów dla tej specjalizacji i poziomu.'),
+    'auto': n9('подбор по статам', 'stat pick', 'підбір за характеристиками', 'nach Werten gewählt', 'choisi selon les stats',
+               'elegido por estadísticas', 'escolhido por atributos', 'scelto per statistiche', 'dobrane wg statystyk'),
+    'fillMix': n9('Заполнено ячеек: {n}. Из нашей сборки: {a}, подбор по статам: {b}.', 'Slots filled: {n}. From our build: {a}, stat pick: {b}.',
+                  'Заповнено комірок: {n}. З нашої збірки: {a}, підбір за характеристиками: {b}.',
+                  'Plätze belegt: {n}. Aus unserem Build: {a}, nach Werten gewählt: {b}.',
+                  'Emplacements remplis : {n}. De notre build : {a}, choisis selon les stats : {b}.',
+                  'Ranuras llenas: {n}. De nuestro build: {a}, elegidas por estadísticas: {b}.',
+                  'Espaços preenchidos: {n}. Da nossa build: {a}, escolhidos por atributos: {b}.',
+                  'Slot riempiti: {n}. Dalla nostra build: {a}, scelti per statistiche: {b}.',
+                  'Wypełniono miejsc: {n}. Z naszego buildu: {a}, dobrane wg statystyk: {b}.'),
+    'fillOut': n9('Наша сборка — на {a}–{b} ур. Здесь всё подобрано по статам спека: ячеек {n}.',
+                  'Our build covers levels {a}–{b}. Here every slot is a pick by the spec’s stats: {n} slots.',
+                  'Наша збірка — на {a}–{b} рів. Тут усе підібрано за характеристиками спеку: комірок {n}.',
+                  'Unser Build deckt Stufe {a}–{b} ab. Hier ist alles nach den Werten der Skillung gewählt: {n} Plätze.',
+                  'Notre build couvre les niveaux {a} à {b}. Ici, tout est choisi selon les stats de la spé : {n} emplacements.',
+                  'Nuestro build cubre los niveles {a}–{b}. Aquí todo se elige por las estadísticas de la especialización: {n} ranuras.',
+                  'Nossa build cobre os níveis {a}–{b}. Aqui tudo é escolhido pelos atributos da especialização: {n} espaços.',
+                  'La nostra build copre i livelli {a}–{b}. Qui tutto è scelto secondo le statistiche della specializzazione: {n} slot.',
+                  'Nasz build obejmuje poziomy {a}–{b}. Tu wszystko dobrano wg statystyk specjalizacji: {n} miejsc.'),
     'needSpec': n9('Сначала выберите спек.', 'Pick a spec first.', 'Спершу оберіть спек.', 'Wähle zuerst eine Skillung.', 'Choisissez d’abord une spé.',
                    'Elige primero una especialización.', 'Escolha primeiro uma especialização.', 'Scegli prima una specializzazione.',
                    'Najpierw wybierz specjalizację.'),
@@ -267,9 +286,39 @@ def _src_text(src, lang, tr):
     return None
 
 
+# the side of an item the catalog does not mark: PvP rewards and city guards by the English name (Classic: Arathi Basin Highlander's /
+# Defiler's, Warsong Gulch Sentinel's / Outrunner's and Outrider's, Alterac Valley Stormpike / Frostwolf, the honor ranks)
+FACTION_RX = {
+    'a': r"^(Highlander's|Sentinel's|Stormpike|Stormwind Guard|Knight-Lieutenant's|Knight-Captain's|Lieutenant Commander's|Sergeant Major's|"
+         r"Master Sergeant's|(Field |Grand )?Marshal's (Chain|Dragonhide|Dreadweave|Lamellar|Leather|Mail|Plate|Satin|Silk))|^Talisman of Arathor$",
+    'h': r"^(Defiler's|Outrunner's|Outrider's|Frostwolf|Legionnaire's|Blood Guard's|First Sergeant's|Senior Sergeant's|Stone Guard's|"
+         r"(High )?Warlord's|(Lieutenant )?General's (Chain|Dragonhide|Dreadweave|Lamellar|Leather|Mail|Plate|Satin|Silk)|"
+         r"Champion's (Chain|Dragonhide|Dreadweave|Lamellar|Leather|Mail|Plate|Satin|Silk))",
+}
+
+
+# items of the catalog no player gets: Blizzard's test and staff items
+JUNK = __import__('re').compile(r"^\d|^The 1 Ring$|Gamemaster|\bTest\b|\[PH\]|Deprecated|^Monster ")
+# the levels our build (data/gear30.json) is made for: as content/play_card.GEAR_LO, GEAR_HI; «Fill» above them picks by stats
+COVER = [16, 30]
+
+
+def faction_of(en, srcs):
+    """'a', 'h' or '' (both sides): the item's English name (FACTION_RX), else its guide sources when every one is a quest of one side."""
+    import re
+    for f, rx in FACTION_RX.items():
+        if re.search(rx, en or ''):
+            return f
+    fs = {(s.get('faction') or '') for s in srcs or []}
+    if srcs and all(s.get('kind') == 'quest' for s in srcs) and len(fs) == 1 and '' not in fs:
+        return fs.pop()[0]
+    return ''
+
+
 def planner_data(lang, tr=None, catalog=None, gear=None):
     """The data file of one language: items [id, slot, quality, item level, required level, class, subclass, icon, name, stats],
-    sources of the items the guides list, and our build per spec (data/gear30.json, the ids the catalog has)."""
+    sources of the items the guides list, our build per spec (data/gear30.json, the ids the catalog has) and the side of the items
+    of one faction (fa: id -> 'a' | 'h')."""
     tr = tr or (lambda s, l: s)
     cat = catalog or json.load(open(CATALOG, encoding='utf-8'))
     li = cat['langs'].index(lang) if lang in cat['langs'] else 0
@@ -281,6 +330,8 @@ def planner_data(lang, tr=None, catalog=None, gear=None):
         if it.get('c') != 'equip' or it.get('s') not in SL:
             continue
         if tuple(it['k']) == (2, 20):                  # fishing poles
+            continue
+        if (it.get('il') or 0) < 2 or JUNK.search(it['n'][0] or ''):   # Gamemaster gear, test items, festival trinkets of item level 1
             continue
         st = []
         for k, v in (it.get('st') or {}).items():
@@ -298,7 +349,17 @@ def planner_data(lang, tr=None, catalog=None, gear=None):
                 if got:
                     src[str(e['id'])] = [got[0][0], ' / '.join(dict.fromkeys(t for _, t in got))]
     ours = {key: [e['id'] for e in rows if e['id'] in have] for key, rows in (gear.get('specs') or {}).items()}
-    return {'v': 1, 'k': K, 'sl': SL, 'it': items, 'src': src, 'b': {k: v for k, v in ours.items() if v}}
+    srcs = {}
+    for rows in (gear.get('specs') or {}).values():
+        for e in rows:
+            srcs.setdefault(e['id'], []).extend(e.get('src') or [])
+    fa = {}
+    for iid, it in cat['items'].items():
+        if int(iid) in have:
+            f = faction_of(it['n'][0], srcs.get(int(iid)))
+            if f:
+                fa[iid] = f
+    return {'v': 1, 'k': K, 'sl': SL, 'it': items, 'src': src, 'b': {k: v for k, v in ours.items() if v}, 'fa': fa, 'cv': COVER}
 
 
 def vhash(path):
@@ -492,10 +553,11 @@ def config(lang, core, races):
     """The script's data: texts, classes with specs, races, slot names, stat names, weights, file addresses."""
     tx = {k: v[lang] for k, v in TX.items() if k not in ('lead', 'rules', 'name')}
     import build
+    slug = {r['id']: r['slug'] for r in build.RACES_PAGE}   # the race in the address as on the site (night-elf); the old ids still read
     cls = [[c['id'], core['cn'][c['id']], core['sid'][c['id']], core['sn'][c['id']]] for c in build.CLASSES]
     return {
         'tx': tx, 'cls': cls, 'color': build.COLOR,
-        'races': [[r['id'], core['rn'][r['id']], r['f'], list(r['can'])] for r in races],
+        'races': [[r['id'], core['rn'][r['id']], r['f'], list(r['can']), slug.get(r['id'], r['id'])] for r in races],
         'cells': CELLS, 'icons': {c: ICONS[icon_of(c)] for c in CELLS}, 'slot': {c: slot_name(c, lang) for c in CELLS}, 'short': SHORT[lang], 'long': stat_names(lang),
         'w': spec_weights(), 'data': f'@@ROOT@@assets/gear/planner-{lang}.json?v={data_v(lang)}',
         'sprite': f'@@ROOT@@assets/gear/catalog.webp?v={vhash(SPRITE)}', 'dec': ',' if lang not in ('en',) else '.',

@@ -62,10 +62,59 @@ assert.deepStrictEqual(C.equip(g, 'main', null), {});
 const t = C.sum([{ cell: 'head', it: by[1] }, { cell: 'main', it: by[5] }, { cell: 'ranged', it: by[10] }, null]);
 assert.deepStrictEqual(t, { int: 5, sta: 2, agi: 4, dps: 12, sp: 5 });
 
-// our build: best per cell within the level, a second ring other than the first, two-hander against main + off
-const ours = C.fill(items, [1, 2, 4, 5, 7, 8, 9], { c: 'mage', l: 30 }, w);
-assert.deepStrictEqual(ours, { head: 1, finger1: 8, finger2: 9, main: 4 });
-assert.deepStrictEqual(C.fill(items, [1, 8], { c: 'mage', l: 16 }, w), { head: 1 });
+// our build: best per cell within the level, a second ring other than the first, two-hander against main + off;
+// the other cells by the spec's stats from the whole catalog, marked as a stat pick
+const ours = C.fill(items, [1, 2, 4, 5, 7, 8, 9], { c: 'mage', l: 30 }, w, [16, 30]);
+assert.deepStrictEqual(ours.g, { head: 1, finger1: 8, finger2: 9, main: 4 });   // the wand has nothing of int, sta: no stat pick
+assert.deepStrictEqual(ours.auto, []);
+assert.deepStrictEqual(C.fill(items, [1, 8], { c: 'mage', l: 30 }, { int: 1, sp: 1 }, [16, 30]).auto, ['main', 'ranged']);   // with spell power: staff and wand
+assert.strictEqual(ours.ours, 4);
+assert.ok(!ours.out);
+let r = C.fill(items, [1, 8], { c: 'mage', l: 16 }, w, [16, 30]);
+assert.deepStrictEqual(r.g, { head: 1 });                             // Ring A needs 22: nothing else fits 16 with these weights
+assert.deepStrictEqual(r.auto, []);
+
+// «Fill» at every level 1–60 gives something sensible: the catalog fills what our build lacks, the level, armor and side hold
+const F = { k: D.k, sl: D.sl, src: {}, b: {}, fa: { 21: 'a', 22: 'h' },
+  it: [[20, 7, 1, 5, 1, 4, 1, 1, 'Starter Belt', [2, 1]],             // common cloth belt lvl 1
+       [21, 7, 2, 12, 8, 4, 1, 1, 'Alliance Belt', [3, 4]],           // uncommon, Alliance only
+       [22, 7, 2, 12, 8, 4, 1, 1, 'Horde Belt', [3, 3]],              // uncommon, Horde only
+       [23, 7, 2, 25, 20, 4, 1, 1, 'Belt 20', [3, 6]],
+       [24, 7, 3, 50, 45, 4, 1, 1, 'Belt 45', [3, 10]],
+       [25, 7, 3, 65, 60, 4, 1, 1, 'Belt 60', [3, 14]],
+       [26, 7, 4, 70, 60, 4, 1, 1, 'Epic Belt', [3, 30]],             // epic: not in an automatic pick
+       [27, 7, 3, 50, 45, 4, 4, 1, 'Plate Belt', [3, 40]],            // plate: never for a mage
+       [28, 7, 2, 30, 25, 4, 1, 1, 'Our Belt', [3, 1]]] };            // our build, weak on stats but ours
+const fi = C.unpack(F), fb = {}; fi.forEach(i => fb[i.id] = i);
+const belt = (l, f, ids) => C.fill(fi, ids || [28], { c: 'mage', l: l, f: f }, w, [16, 30]);
+assert.strictEqual(belt(1, 'a').g.waist, 20);                          // level 1: common is fine
+assert.deepStrictEqual(belt(1, 'a').auto, ['waist']);
+assert.strictEqual(belt(10, 'a').g.waist, 21);                        // the Alliance belt for a gnome
+assert.strictEqual(belt(10, 'h').g.waist, 22);                        // the Horde one for an orc
+assert.strictEqual(belt(10, '').g.waist, 21);                         // no race: both sides
+assert.strictEqual(belt(20, 'h').g.waist, 23);
+assert.strictEqual(belt(30, 'h').g.waist, 28);                        // in our range our item wins
+assert.deepStrictEqual(belt(30, 'h').auto, []);
+assert.strictEqual(belt(45, 'h').g.waist, 24);                        // above it (30 + 5): a stat pick, not our old belt
+assert.ok(belt(45, 'h').out && belt(45, 'h').auto.indexOf('waist') > -1);
+assert.strictEqual(belt(60, 'a').g.waist, 25);                        // no epic, no plate
+for (const l of [1, 10, 20, 45, 60]) assert.ok(Object.keys(belt(l, 'h').g).length, l);
+// the picker hides the other side's items
+assert.deepStrictEqual(C.cands(fi, 'waist', { c: 'mage', l: 10, f: 'h' }, f, w).map(i => i.id), [22, 20]);
+assert.deepStrictEqual(C.cands(fi, 'waist', { c: 'mage', l: 10, f: 'a' }, f, w).map(i => i.id), [21, 20]);
+assert.deepStrictEqual(C.cands(fi, 'waist', { c: 'warrior', l: 45, f: 'a' }, f, w).map(i => i.id)[0], 27);   // plate for a warrior from 40
+
+// races of an address: the site's addresses (night-elf) and the old ids (nightelf, skyA) both read; the address writes the site's one
+const R = [['nightelf', 'Night Elf', 'alliance', [], 'night-elf'], ['skyA', 'Skyborne', 'alliance', [], 'skyborne-alliance'], ['orc', 'Orc', 'horde', [], 'orc']];
+assert.strictEqual(C.race('night-elf', R), 'nightelf');
+assert.strictEqual(C.race('nightelf', R), 'nightelf');
+assert.strictEqual(C.race('skyA', R), 'skyA');
+assert.strictEqual(C.race('skyborne-alliance', R), 'skyA');
+assert.strictEqual(C.race('SKYA', R), 'skyA');
+assert.strictEqual(C.race('elf', R), '');
+assert.strictEqual(C.dec('#c=hunter&r=skyA').r, 'skyA');                // the old id with its capital letter survives the address
+assert.strictEqual(C.dec('#c=hunter&r=night-elf').r, 'night-elf');
+assert.strictEqual(C.enc({ c: 'hunter', r: 'nightelf' }, { nightelf: 'night-elf' }), 'c=hunter&r=night-elf');
 // the picker compares with the item of THIS cell only: an empty cell has nothing to unequip and every change is a plus
 const gw = { head: 1, finger1: 8, trinket1: 0 };
 assert.strictEqual(C.worn(gw, 'feet', by), null);
@@ -88,6 +137,7 @@ def main():
     out = subprocess.run(['node', '-e', JS, os.path.join(ROOT, 'assets', 'gear', 'planner.js')], capture_output=True, text=True, encoding='utf-8')
     assert out.returncode == 0, out.stderr[-2000:]
     import gear_planner as gp
+    from content import play_card as pc
     w = gp.weights('sp crit hit int')
     assert w['sp'] == 1 and w['int'] == .5 * gp.UNIT['int'] and w['crit'] > w['hit'], w
     sizes = {}
@@ -99,6 +149,13 @@ def main():
         assert len(d['it']) > 8000 and d['k'] == gp.K and d['sl'] == gp.SL, lang
         assert all(a[4] <= 60 for a in d['it']), lang
         assert len(d['b']) == 27, (lang, len(d['b']))
+        assert d['cv'] == [pc.GEAR_LO, pc.GEAR_HI], d['cv']
+        by = {a[0]: a for a in d['it']}
+        assert d['fa'].get('20126') == 'a' and d['fa'].get('20207') == 'h', lang     # Highlander's / Defiler's Plate Girdle 28
+        assert not d['fa'].get('1156'), lang                                       # a Deadmines drop: both sides
+        assert 12064 not in by and 8350 not in by, lang                           # Gamemaster Hood, The 1 Ring
+        assert by[20126][5:7] == [4, 3], lang   # the level-28 «plate» girdle of Arathi Basin is mail in the catalog: a warrior may wear it before 40
+        assert all(len(r) == 5 for r in cfg_races(lang)), lang
         html = open(os.path.join(ROOT, build_dir(lang), 'character', 'gear', 'index.html'), encoding='utf-8').read()
         assert 'id="gpData"' in html and 'assets/gear/planner.js?v=' in html, lang
         cfg = json.loads(re.search(r'<script type="application/json" id="gpData">(.*?)</script>', html, re.S)[1])
@@ -112,6 +169,11 @@ def main():
     assert any(re.search('[а-я]', a[8]) for a in ru['it'][:200]), 'ru item names'
     assert max(sizes.values()) < 400 * 1024, sizes
     print(f'OK gear planner: core, {len(sizes)} languages, data gzip {min(sizes.values()) // 1024}–{max(sizes.values()) // 1024} KB')
+
+
+def cfg_races(lang):
+    html = open(os.path.join(ROOT, build_dir(lang), 'character', 'gear', 'index.html'), encoding='utf-8').read()
+    return json.loads(re.search(r'<script type="application/json" id="gpData">(.*?)</script>', html, re.S)[1])['races']
 
 
 def build_dir(lang):

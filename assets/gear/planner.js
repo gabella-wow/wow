@@ -49,13 +49,15 @@
     for (var k in it.st) if (w[k]) s += w[k] * it.st[k];
     return s;
   }
-  /* the candidates of a cell: f = {lvl, arm, rare, drop, quest, craft, q} filters, st = {c, l} */
+  /* an item of the other side (fa 'a' | 'h', from the data file) is not for this faction ('a' | 'h'; '' = any) */
+  function side(it, f) { return !f || !it.fa || it.fa === f; }
+  /* the candidates of a cell: f = {lvl, arm, rare, drop, quest, craft, q} filters, st = {c, l, f: faction 'a' | 'h'} */
   function cands(items, cell, st, f, w) {
     var src = [f.drop, f.quest, f.craft], anySrc = src[0] || src[1] || src[2], q = norm(f.q || '');
     var out = [];
     for (var i = 0; i < items.length; i++) {
       var it = items[i];
-      if (!fits(it, cell, st.c)) continue;
+      if (!fits(it, cell, st.c) || !side(it, st.f)) continue;
       if (f.lvl && need(it) > st.l) continue;
       if (f.arm && !canWear(it, st.c, st.l)) continue;
       if (f.rare && it.q < 3) continue;
@@ -105,12 +107,13 @@
     return d;
   }
   function offLocked(g, byId) { var m = g.main && byId[g.main]; return !!(m && m.s === 'two'); }
-  /* address <-> state: #c=mage&s=frost&r=gnome&l=24&g=head:1234,neck:5678&t=<talent code> */
-  function enc(S) {
+  /* address <-> state: #c=mage&s=frost&r=gnome&l=24&g=head:1234,neck:5678&t=<talent code>; slugs: race id -> its address on the
+     site (night-elf), written instead of the id */
+  function enc(S, slugs) {
     var p = [];
     if (S.c) p.push('c=' + S.c);
     if (S.s) p.push('s=' + S.s);
-    if (S.r) p.push('r=' + S.r);
+    if (S.r) p.push('r=' + (slugs && slugs[S.r] || S.r));
     if (S.l) p.push('l=' + S.l);
     var g = CELLS.filter(function (c) { return S.g && S.g[c]; }).map(function (c) { return c + ':' + S.g[c]; }).join(',');
     if (g) p.push('g=' + g);
@@ -122,7 +125,8 @@
     String(h || '').replace(/^#/, '').split('&').forEach(function (kv) {
       var i = kv.indexOf('='), k = kv.slice(0, i), v = kv.slice(i + 1);
       if (i < 1) return;
-      if (k === 'c' || k === 's' || k === 'r') { if (/^[a-z-]{2,20}$/.test(v)) S[k] = v; }
+      if (k === 'c' || k === 's') { if (/^[a-z-]{2,20}$/.test(v)) S[k] = v; }
+      else if (k === 'r') { if (/^[a-zA-Z-]{2,20}$/.test(v)) S.r = v; }
       else if (k === 'l') { var n = parseInt(v, 10); if (n >= 1 && n <= 60) S.l = n; }
       else if (k === 't') { if (/^[0-9-]{1,120}$/.test(v)) S.t = v; }
       else if (k === 'g') v.split(',').forEach(function (p) {
@@ -132,41 +136,69 @@
     });
     return S;
   }
+  /* a race of an address or a saved hero -> its id: the id (nightelf, skyA) or the site's address (night-elf, skyborne-alliance),
+     any case; races = [[id, name, side, classes, slug]]; unknown: '' */
+  function race(v, races) {
+    var l = String(v || '').toLowerCase();
+    for (var i = 0; l && i < races.length; i++) if (races[i][0].toLowerCase() === l || String(races[i][4] || '').toLowerCase() === l) return races[i][0];
+    return '';
+  }
   function unpack(D) {   /* the data file -> item objects */
     var K = D.k, SL = D.sl;
     return D.it.map(function (a) {
       var st = {};
       for (var i = 0; i < a[9].length; i += 2) st[K[a[9][i]]] = a[9][i + 1];
       return { id: a[0], s: SL[a[1]], q: a[2], il: a[3], lv: a[4], kc: a[5], ks: a[6], ic: a[7], n: a[8], low: norm(a[8]), st: st,
-        src: D.src[a[0]] || null };
+        src: D.src[a[0]] || null, fa: (D.fa || {})[a[0]] || '' };
     });
   }
-  /* our build of a spec for a level: the best of its list in every cell (two-hander against main + off) */
-  function fill(items, ids, st, w) {
-    var set = {}, g = {};
-    ids.forEach(function (id) { set[id] = 1; });
-    var pool = items.filter(function (it) { return set[it.id] && need(it) <= st.l && canWear(it, st.c, st.l); });
-    var val = function (it) { return w ? score(it, w) : it.il; };
-    var best = function (cell, skip) {
-      var c = pool.filter(function (it) { return fits(it, cell, st.c) && it.id !== skip; });
-      c.sort(function (a, b) { return (val(b) - val(a)) || (b.il - a.il); });
+  /* fill the empty cells of `have` ({cell: item}) from `pool`, the best by val in every cell (two-hander against main + off, the
+     second ring and trinket other than the first). minq: prefer this quality and up where the cell has one; pos: only items val > 0 */
+  function pickCells(pool, st, val, have, minq, pos) {
+    var g = {}, k;
+    for (k in have) g[k] = have[k];
+    var best = function (cell, skip, slot) {
+      var c = pool.filter(function (it) { return it !== skip && (!slot || it.s === slot) && fits(it, cell, st.c) && (!pos || val(it) > 0); });
+      if (minq) { var hi = c.filter(function (it) { return it.q >= minq; }); if (hi.length) c = hi; }
+      c.sort(function (a, b) { return (val(b) - val(a)) || (b.il - a.il) || (a.id - b.id); });
       return c[0] || null;
     };
     CELLS.forEach(function (cell) {
-      if (cell === 'main' || cell === 'off') return;
-      var skip = cell === 'finger2' ? g.finger1 : cell === 'trinket2' ? g.trinket1 : 0;
-      var it = best(cell, skip);
-      if (it) g[cell] = it.id;
+      if (cell === 'main' || cell === 'off' || g[cell]) return;
+      var mate = { finger1: 'finger2', finger2: 'finger1', trinket1: 'trinket2', trinket2: 'trinket1' }[cell];
+      var it = best(cell, mate ? g[mate] : null);
+      if (it) g[cell] = it;
     });
-    var one = pool.filter(function (it) { return it.s === 'main' && fits(it, 'main', st.c); }).sort(function (a, b) { return val(b) - val(a); })[0];
-    var two = pool.filter(function (it) { return it.s === 'two' && fits(it, 'main', st.c); }).sort(function (a, b) { return val(b) - val(a); })[0];
-    var off = best('off', one ? one.id : 0);
-    if (two && (!one || val(two) >= val(one) + (off ? val(off) : 0))) g.main = two.id;
-    else { if (one) g.main = one.id; if (off) g.off = off.id; }
+    if (!g.main) {
+      var one = best('main', g.off || null, 'main'), two = best('main', null, 'two'), off = g.off || best('off', one);
+      if (two && (!one || val(two) >= val(one) + (off ? val(off) : 0))) { g.main = two; delete g.off; }
+      else { if (one) g.main = one; if (off) g.off = off; }
+    } else if (g.main.s !== 'two' && !g.off) {
+      var o = best('off', g.main);
+      if (o) g.off = o;
+    }
     return g;
   }
+  /* «Fill»: our build of the spec (ids, data/gear30.json) while the level is within its levels cv = [lowest, highest] and 5 above,
+     the empty cells and every cell outside that range picked from the whole catalog by the spec's stats: required level up to the
+     level, armor and weapons of the class, the side of the race, uncommon and rare (common too up to level 10; common where a cell has
+     nothing better). st = {c, l, f}. -> {g: {cell: id}, auto: [cells of the stat pick], ours: cells from our build, out: the level is
+     outside our build} */
+  function fill(items, ids, st, w, cv) {
+    var set = {};
+    ids.forEach(function (id) { set[id] = 1; });
+    cv = cv || [16, 30];
+    var val = function (it) { return w ? score(it, w) : it.il; };
+    var ok = function (it) { return need(it) <= st.l && canWear(it, st.c, st.l) && side(it, st.f); };
+    var out = !ids.length || st.l > cv[1] + 5;
+    var mine = out ? {} : pickCells(items.filter(function (it) { return set[it.id] && ok(it); }), st, val, {}, 0, false);
+    var pool = items.filter(function (it) { return it.q >= 1 && it.q <= 3 && ok(it); });
+    var got = pickCells(pool, st, val, mine, st.l <= 10 ? 1 : 2, true), g = {}, auto = [], n = 0;
+    CELLS.forEach(function (c) { if (got[c]) { g[c] = got[c].id; if (mine[c] === got[c]) n++; else auto.push(c); } });
+    return { g: g, auto: auto, ours: n, out: out };
+  }
   var Core = { CELLS: CELLS, canWear: canWear, fits: fits, need: need, score: score, cands: cands, sum: sum, equip: equip, offLocked: offLocked,
-    worn: worn, clean: clean, diff: diff, enc: enc, dec: dec, unpack: unpack, fill: fill, norm: norm };
+    worn: worn, clean: clean, diff: diff, enc: enc, dec: dec, unpack: unpack, fill: fill, pickCells: pickCells, norm: norm, side: side, race: race };
   if (typeof module !== 'undefined' && module.exports) module.exports = Core;
   if (typeof document === 'undefined' || !document.getElementById('gpData')) return;
 
@@ -179,16 +211,22 @@
   var fmt = function (s, o) { return s.replace(/\{(\w)\}/g, function (_, k) { return o[k]; }); };
   var num = function (v) { return String(v).replace('.', C.dec); };
   var clsOk = function (c) { return C.cls.some(function (x) { return x[0] === c; }); };
+  var SLUG = {};
+  C.races.forEach(function (r) { SLUG[r[0]] = r[4] || r[0]; });
+  var rid = function (v) { return race(v, C.races); };
+  /* the state the core filters by: class, level and the side of the race ('a' | 'h') */
+  function st() { var r = C.races.filter(function (x) { return x[0] === S.r; })[0]; return { c: S.c, l: S.l, f: r ? r[2].charAt(0) : '' }; }
+  function noAuto(cell) { S.a = (S.a || []).filter(function (c) { return c !== cell && !(cell === 'main' && c === 'off'); }); }
 
   function readJSON(k) { try { return JSON.parse(localStorage.getItem(k) || 'null'); } catch (e) { return null; } }
   function start() {
     var h = dec(location.hash), saved = readJSON(KEY), me = readJSON('gabella-wf-me') || {};
     var base = clsOk(h.c) ? h : (saved && clsOk(saved.c) ? saved : null);
-    S = base ? { c: base.c, s: base.s || '', r: base.r || '', l: base.l || 0, g: base.g || {}, t: base.t || '' }
-      : { c: clsOk(me.cls) ? me.cls : 'warrior', s: me.spec || '', r: me.race || '', l: +me.lvl || 0, g: {}, t: '' };
+    S = base ? { c: base.c, s: base.s || '', r: rid(base.r), l: base.l || 0, g: base.g || {}, t: base.t || '', a: base === saved && base.a || [] }
+      : { c: clsOk(me.cls) ? me.cls : 'warrior', s: me.spec || '', r: rid(me.race), l: +me.lvl || 0, g: {}, t: '', a: [] };
     if (base === h && !h.l && me.cls === h.c && +me.lvl) S.l = +me.lvl;
     if (!S.l) S.l = 30;
-    if (base === h && !h.r && me.race) S.r = me.race;
+    if (base === h && !h.r && me.race) S.r = rid(me.race);
     fix();
   }
   function cleanS() { S.g = clean(S.g, byId, S.c); }
@@ -199,7 +237,7 @@
     if (!ok.some(function (r) { return r[0] === S.r; })) S.r = ok.length ? ok[0][0] : '';
   }
   function save() {
-    var h = enc(S);
+    var h = enc(S, SLUG);
     try { history.replaceState(null, '', location.pathname + location.search + '#' + h); } catch (e) {}
     try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {}
   }
@@ -220,7 +258,7 @@
       items = unpack(D);
       items.forEach(function (it) { byId[it.id] = it; });
       cleanS();
-      C.b = D.b;
+      C.b = D.b; C.cv = D.cv || [16, 30];
       gp.style.setProperty('--gsp', 'url("' + C.sprite + '")');
       dlg.style.setProperty('--gsp', 'url("' + C.sprite + '")');
       return items;
@@ -243,7 +281,11 @@
     return out.join(' · ');
   }
   function ours(it) { var b = S.s && C.b && C.b[S.c + '-' + S.s]; return !!(b && b.indexOf(it.id) > -1); }
-  function srcLine(it) { return [it.src ? it.src[1] : '', ours(it) ? T.ours : ''].filter(Boolean).join(' · '); }
+  /* the source and «our build»; a cell «Fill» picked by stats says so instead */
+  function srcLine(it, cell) {
+    var auto = cell && (S.a || []).indexOf(cell) > -1;
+    return [it.src ? it.src[1] : '', auto ? T.auto : ours(it) ? T.ours : ''].filter(Boolean).join(' · ');
+  }
   function drawCell(cell) {
     var w = gp.querySelector('[data-cell="' + cell + '"]'), it = worn(S.g, cell, byId, S.c), name = C.slot[cell];
     var lock = cell === 'off' && offLocked(S.g, byId);
@@ -253,7 +295,7 @@
         '</span><span class="gptx"><b class="gpn">' + esc(name) + ' · ' + esc(lock ? T.locked : T.pick) + '</b></span></button>';
       return;
     }
-    var meta = srcLine(it), sl = statLine(it.st);
+    var meta = srcLine(it, cell), sl = statLine(it.st);
     w.className = 'gpsw on';
     w.innerHTML = '<button class="gpsl" type="button" aria-haspopup="dialog" aria-label="' + esc(name + ': ' + it.n + '. ' + fmt(T.il, { n: it.il }) + '. ' + T.change) + '">' +
       icon(it, '<b>' + it.il + '</b>') + '<span class="gptx"><span class="gpkk">' + esc(name) + '</span><b class="gpn iq' + it.q + '">' + esc(it.n) + '</b>' +
@@ -328,7 +370,7 @@
   function render(reset) {
     if (!items || !dlg.open) return;
     var f = { lvl: F.lvl, arm: F.arm, rare: F.rare, drop: F.drop, quest: F.quest, craft: F.craft, q: $('gpQ').value };
-    rows = cands(items, openCell, S, f, weights());
+    rows = cands(items, openCell, st(), f, weights());
     inner.style.height = rows.length * ROW + 'px';
     var w = weights(), sn = S.s ? C.cls.filter(function (x) { return x[0] === S.c; })[0] : null;
     var note = !S.s ? T.sortNone : w ? fmt(T.sortSpec, { s: sn[3][sn[2].indexOf(S.s)] }) : T.sortIl;
@@ -340,7 +382,7 @@
     paint(true);
   }
   function choose(it) {
-    S.g = equip(S.g, openCell, it);
+    S.g = equip(S.g, openCell, it); noAuto(openCell);
     dlg.close();
     draw(); save();
   }
@@ -380,7 +422,7 @@
     var w = e.target.closest('.gpsw'); if (!w) return;
     var cell = w.dataset.cell;
     if (e.target.closest('.gpx')) {
-      S.g = equip(S.g, cell, null); draw(); save();
+      S.g = equip(S.g, cell, null); noAuto(cell); draw(); save();
       var b = w.querySelector('.gpsl'); if (b) b.focus();
       return;
     }
@@ -398,15 +440,17 @@
   $('gpFill').addEventListener('click', function () {
     if (!S.s) { toast(T.needSpec); selS.focus(); return; }
     load().then(function () {
-      var ids = (C.b || {})[S.c + '-' + S.s] || [], g = fill(items, ids, S, weights()), n = Object.keys(g).length;
+      var ids = (C.b || {})[S.c + '-' + S.s] || [], r = fill(items, ids, st(), weights(), C.cv), n = Object.keys(r.g).length;
       if (!n) { toast(T.fillNone); return; }
-      S.g = g; draw(); save(); toast(fmt(T.filled, { n: n }));
+      S.g = r.g; S.a = r.auto; draw(); save();
+      toast(r.out || !r.ours ? fmt(T.fillOut, { a: C.cv[0], b: C.cv[1], n: n })
+        : r.auto.length ? fmt(T.fillMix, { n: n, a: r.ours, b: r.auto.length }) : fmt(T.filled, { n: n }));
     }, function () { toast(T.loadErr); });
   });
-  $('gpClear').addEventListener('click', function () { S.g = {}; draw(); save(); toast(T.cleared); });
+  $('gpClear').addEventListener('click', function () { S.g = {}; S.a = []; draw(); save(); toast(T.cleared); });
   $('gpCopy').addEventListener('click', function () {
     save();
-    var url = location.href.split('#')[0] + '#' + enc(S);
+    var url = location.href.split('#')[0] + '#' + enc(S, SLUG);
     var no = function () {
       var a = document.createElement('textarea'), done = false;
       a.value = url; a.setAttribute('readonly', ''); a.style.cssText = 'position:fixed;top:0;left:0;opacity:0';
@@ -417,14 +461,19 @@
     };
     try { navigator.clipboard.writeText(url).then(function () { toast(T.copied); }, no); } catch (x) { no(); }
   });
-  addEventListener('hashchange', function () {
+  /* another build in the address of this tab (a pasted link, back and forward): the doll follows it */
+  function fromHash() {
     var h = dec(location.hash);
-    if (!clsOk(h.c) || enc(h) === enc(S)) return;
-    S = { c: h.c, s: h.s, r: h.r, l: h.l || S.l, g: h.g, t: h.t };
+    if (!clsOk(h.c)) return;
+    h.r = rid(h.r);
+    if (enc(h, SLUG) === enc(S, SLUG)) return;
+    S = { c: h.c, s: h.s, r: h.r, l: h.l || S.l, g: h.g, t: h.t, a: [] };
     if (items) cleanS();
     changed();
-    if (Object.keys(S.g).length) load().then(draw);
-  });
+    if (Object.keys(S.g).length) load().then(function () { cleanS(); draw(); });
+  }
+  addEventListener('hashchange', fromHash);
+  addEventListener('popstate', fromHash);
   /* the items come on the first wish to pick: a pointer over the doll, a focus inside it, or a saved build to draw */
   var warm = function () { load().then(function () { draw(); save(); }, function () {}); };
   ['pointerover', 'focusin', 'touchstart'].forEach(function (ev) { gp.addEventListener(ev, warm, { once: true, passive: true }); });
