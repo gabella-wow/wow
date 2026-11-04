@@ -1116,5 +1116,8 @@ def page(html):
         return html
     data = json.dumps(PAGE[(m.group(1), m.group(2))], ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
     html = html.replace('</style>', CSS + '</style>', 1)
+    sp = re.search(r'<div class="tt calc[^>]*--sp:url\(([^)]+)\)', html)
+    if sp:   # the calculator (talents/<class>/): the tree is the first screen, so its sprite comes along at low priority, not after paint
+        html = html.replace('</head>', f'<link rel="preload" as="image" type="image/webp" fetchpriority="low" href="{sp.group(1)}">\n</head>', 1)
     html = html.replace('</head>', '<noscript><style>.tt .tt-ic:not(.no){background-image:var(--sp)}.tt-bs,.tt.calc .tt-ed,.tt.calc .tt-ours{display:none}</style></noscript></head>', 1)
     return html.replace('</body>', f'<script type="application/json" id="ttData">{data}</script>\n' + JS + '</body>', 1)

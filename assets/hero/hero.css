@@ -22,7 +22,7 @@ dialog.hsheet::backdrop { background: rgba(0,0,0,.6); }
 .hs-row { display: flex; flex-wrap: wrap; gap: 8px; }
 .hs-row button { min-height: 44px; padding: 0 14px; border: 1px solid var(--pline); border-radius: 7px; background: var(--panel-2); color: var(--fg); font: inherit; font-size: var(--fs-14); cursor: pointer; }
 .hs-row small { margin-left: 6px; color: var(--muted); }
-.hs-cls button:hover, .hs-row button:hover { border-color: var(--gold); }
+@media (hover: hover) { .hs-cls button:hover, .hs-row button:hover { border-color: var(--gold); } }   /* a tap leaves no hover on phones: one gold chip, the chosen one */
 .hs-cls button[aria-pressed="true"], .hs-row button[aria-pressed="true"] { border-color: var(--gold); background: var(--seg-on); color: var(--gold-2); }
 .hs-f { display: inline-block; width: 8px; height: 8px; margin-right: 6px; border-radius: 50%; background: var(--alliance); vertical-align: middle; }
 .hs-f.horde { background: var(--horde); }
