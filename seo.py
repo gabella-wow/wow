@@ -355,6 +355,9 @@ def calc_meta():
 
 from content import dungeon_pages  # noqa: E402
 
+import gear_planner  # noqa: E402
+
+META[gear_planner.PATH] = ({l: v[0] for l, v in gear_planner.SEO.items()}, {l: v[1] for l, v in gear_planner.SEO.items()})   # character/gear/
 META.update(dungeon_pages.SEO)   # pages of single dungeons: guides/dungeons/<slug>/
 from content import tierlist_live  # noqa: E402
 
@@ -423,6 +426,9 @@ def crumbs(path, lang):
         return items
     if top in names:
         items.append((names[top][lang], base + top))
+        if path == 'character/gear/':                              # the planner under «My character»
+            import gear_planner
+            items.append((gear_planner.TX['name'][lang], base + path))
         return items
     if top == 'talents/':                                          # the calculator: its class list, then the class
         items.append((CALC_NAME[lang], base + top))

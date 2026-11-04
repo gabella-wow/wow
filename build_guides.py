@@ -10,6 +10,7 @@ import build
 import seo
 import talents
 import tod
+import gear_planner as GP
 from build import LANGS, SITE, page_dir, rel, localize, translate
 import langs
 from content import hero as HERO, looks as LK
@@ -1607,7 +1608,8 @@ def hero_body(lang, root):
             f'<section class="frame mcard" id="hcCard" aria-live="polite"><div class="who"><span class="k">{escape(tx["title"])}</span>'
             f'<h2>{escape(tx["none"])}</h2><p class="mnote">{escape(tx["local"])}</p></div></section>'
             '<section class="frame mwiz" id="hcWiz" hidden></section>'
-            '<div class="mout" id="hcOut"></div></div>')
+            '<div class="mout" id="hcOut"></div></div>'
+            f'<p class="gbtns"><a class="btn ghost" href="{root}{GP.PATH}">{escape(GP.TX["go"][lang])}</a></p>')
 
 
 JS['hero'] = r'''/* My character: the hero of this browser ("gabella-wf-me") made in a wizard without a login, and what the guide
@@ -1945,6 +1947,10 @@ def build_page(g, lang, tpl, base_css, sprite, src):
         html = re.sub(r'<section class="stband ghero" id="top">.*?</section>', lambda mt: calc_head(mt.group(0), g, lang), html, count=1, flags=re.S)
         html = html.replace('<body>', '<body class="compact">', 1).replace('<div class="wrap gbody', '<div class="wrap gbody calcp', 1)
         body = calc_body(g, lang, root)
+    elif g.get('compact') == 'gear':                              # character/gear/: a text heading, the planner is the first screen
+        html = re.sub(r'<section class="stband ghero" id="top">.*?</section>', lambda mt: GP.head(mt.group(0), lang), html, count=1, flags=re.S)
+        html = html.replace('<body>', '<body class="compact">', 1).replace('<div class="wrap gbody', '<div class="wrap gbody calcp', 1)
+        body = GP.body(lang, root, hero_core(lang), build.parse_races(home_src()))
     elif g.get('compact'):                                        # /play/: small heading instead of the art band
         html = re.sub(r'<section class="stband ghero" id="top">.*?</section>', lambda _: play_head(lang), html, count=1, flags=re.S)
         html = html.replace('<body>', '<body class="compact">', 1).replace('<div class="wrap gbody', '<div class="wrap gbody play', 1)
@@ -2138,7 +2144,7 @@ def main():
     pages, allmissing = [], []
     for lang in LANGS:
         pages.append((f'assets/hero/{lang}.json', hero_json(lang)))   # assets/hero/hero.js: the top-bar switch and the home block
-        for g in [HUB] + lang_guides(lang) + HUBS + PAGES + CALC_PAGES:
+        for g in [HUB] + lang_guides(lang) + HUBS + PAGES + CALC_PAGES + [GP.PAGE]:
             path, html, missing = build_page(g, lang, tpl, base_css, sprite, src)
             assert '@@' not in html, (path, re.findall(r'@@\w+@@', html)[:5])
             pages.append((path, html))
