@@ -479,7 +479,8 @@ def page_updated(path):
 SITEMAP_SRC = {'': ('index.src.html', 'i18n/ru.txt', 'i18n/en.txt', 'i18n/uk.txt', 'content/guides.py'),   # «Свежее» = NEWS
                'guides/news/': ('content/guides.py', 'assets/news.json'),   # our notes + the Wowhead feed the page loads
                'play/': ('content/guides.py', 'journey.src.html'),   # PLAY texts and the game stages
-               'privacy/': ('content/guides.py',)}
+               'privacy/': ('content/guides.py',),
+               'character/gear/': ('gear_planner.py', 'assets/gear/planner.js', 'data/items_catalog.json', 'data/gear30.json')}   # the gear planner
 
 
 def sitemap_lastmod(path):
