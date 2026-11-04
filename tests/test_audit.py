@@ -180,6 +180,14 @@ def test_portraits_match_the_race():
     assert 'art(p.cls' not in tools and 'unitArt(p' in tools
     painted = re.search(r'PAINTED\s*=\s*(\[[^\]]*\])', tools_js('ru'))
     assert painted and sorted(json.loads(painted[1])) == sorted(painted_pairs()), painted and painted[1]
+    # the hero face (hero.js, play/): a pair not drawn takes the class face of its side (03.11), so the caption next to it
+    # names the class and the side, never the race (tests/test_hero_button_portrait.py runs it on all 56 pairs)
+    import build
+    for c, by in build.side_faces().items():
+        assert {f: build.race_sides()[n.partition('-')[2]] for f, n in by.items()} == {'alliance': 'alliance', 'horde': 'horde'}, (c, by)
+    hero = open(os.path.join(ROOT, 'assets', 'hero', 'hero.js'), encoding='utf-8').read()
+    assert 'w.own ? D.rn[h.race] : D.fn[w.side]' in hero and 'const meta = heroMeta(h);' in hero
+    assert '(kf ? P.cn[cls] : [P.rn[m.race], P.cn[cls]]' in page('play')
 
 
 def test_tools_script_is_a_cached_file():

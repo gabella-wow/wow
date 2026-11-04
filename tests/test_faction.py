@@ -23,7 +23,7 @@ for (const c of cases) {
   if (c.me) store['gabella-wf-me'] = JSON.stringify(c.me);
   if (c.side) store['gabella-side'] = JSON.stringify(c.side);
   if (c.tod) attrs['data-tod'] = c.tod;
-  out.push({ fac: GabellaPor.fac(), id: GabellaPor.id(c.cls) });
+  out.push({ fac: GabellaPor.fac(), id: GabellaPor.id(c.cls), pre: GabellaPor.pre ? GabellaPor.pre(c.cls) : null });
 }
 console.log(JSON.stringify(out));
 '''
@@ -81,6 +81,19 @@ class Pages(unittest.TestCase):
         bad = re.search(r"mine \? HC\.rf\[mine\.race\] : 'alliance'", src)
         self.assertFalse(bad, 'Поделиться: сторона по умолчанию Альянс')
 
+
+    def test_mixed_tiles_before_a_hero(self):
+        """No hero and no hand-picked side: the class tiles of the hero sheet take build.PRE_SIDE (both sides at any time
+        of day, 03.11 «all Horde faces at night»); a hero or a hand-picked side: its side for every class."""
+        self.assertTrue(build.PRE_SIDE)
+        self.assertEqual(set(build.PRE_SIDE), set(build.portraits()))
+        self.assertEqual(set(build.PRE_SIDE.values()), {'alliance', 'horde'})
+        cases = [{'cls': c, 'tod': t} for c in build.PRE_SIDE for t in ('day', 'night')]
+        for case, got in zip(cases, run(cases)):
+            self.assertEqual(got['pre'], build.PRE_SIDE[case['cls']], case)
+        got = run([{'me': {'race': 'orc', 'cls': 'warrior'}, 'cls': 'paladin', 'tod': 'day'},
+                   {'cls': 'paladin', 'tod': 'day', 'side': {'f': 'horde', 'h': ''}}])
+        self.assertEqual([g['pre'] for g in got], ['horde', 'horde'])
 
 if __name__ == '__main__':
     unittest.main()
