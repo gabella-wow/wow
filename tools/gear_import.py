@@ -14,6 +14,8 @@ Two inputs, one schema. Nothing here goes to the network.
      The client gives the items (name in every dumped language, slot, levels, quality, stats); the sources are what the
      addon saw while playing (loot of a dungeon boss, quest rewards, recipes of the open profession window). The picks for
      each spec are made here by the spec's stat priority (content/spec_cheats.STATS). Items marked provenance "client-dump".
+     Dump v2 (GabellaGear 2, 04.11) also keeps consumables, reagents and trade goods (no slot: left out of the specs here,
+     read with addon_items()) and names the class and subclass iclass / isub (cls / sub of v1 are still read).
 
   --date YYYY-MM-DD   the day of the data (default today);  --fixture   test data (tests/fixtures): tests refuse it in data/.
 
@@ -664,11 +666,38 @@ def tip_stats(lines, stats):
                     stats.setdefault(k, int(m.group(1)))
 
 
-def from_addon(path):
+def _by_id(t):
+    """An int-keyed Lua table reads as a list or a dict: (key, value) pairs either way."""
+    return t.items() if isinstance(t, dict) else ((i, v) for i, v in enumerate(t or [], 1) if v is not None)
+
+
+def _read_db(path):
     sys.path.insert(0, os.path.join(HERE, 'tools'))
     from talent_import import parse_lua                       # the same SavedVariables reader as the talents
-    db = parse_lua(open(path, encoding='utf-8').read())['GabellaGearDB']
-    by_id = lambda t: t.items() if isinstance(t, dict) else ((i, v) for i, v in enumerate(t or [], 1) if v is not None)  # noqa: E731  an int-keyed table reads as a list
+    return parse_lua(open(path, encoding='utf-8').read())['GabellaGearDB']
+
+
+# item class of the client -> kind (0 consumable, 2 weapon, 4 armor, 5 reagent, 7 trade goods)
+ICLASS = {0: 'consumable', 2: 'weapon', 4: 'armor', 5: 'reagent', 7: 'trade'}
+
+
+def addon_items(path):
+    """Every item of a dump, v1 or v2: {id: {kind, iclass, isub, slot (INVTYPE_* or None), lvl, il, q, icon (file id),
+    names {lang}, stats {our keys}, tip {lang: [lines]}}}; for the item catalog and the icons of consumables."""
+    db, out = _read_db(path), {}
+    for num, d in _by_id(db.get('items')):
+        c = d.get('iclass', d.get('cls'))
+        stats = {CL_STATS[k]: round(v, 1) for k, v in (d.get('stats') or {}).items() if k in CL_STATS and v}
+        out[int(num)] = {'kind': ICLASS.get(c), 'iclass': c, 'isub': d.get('isub', d.get('sub')), 'slot': d.get('slot') or None,
+                         'lvl': d.get('req') or None, 'il': d.get('ilvl') or None, 'q': d.get('q', 1), 'icon': d.get('icon'),
+                         'names': {LOC[loc]: n for loc, n in (d.get('name') or {}).items() if loc in LOC}, 'stats': stats,
+                         'tip': {LOC[loc]: v for loc, v in (d.get('tip') or {}).items() if loc in LOC}}
+    return out
+
+
+def from_addon(path):
+    db = _read_db(path)
+    by_id = _by_id
     names = json.load(open(os.path.join(HERE, 'i18n', 'names.json'), encoding='utf-8'))
     prof_any = {n.lower(): p for p in PROFS for en in [p.title().replace('Firstaid', 'First Aid')] for n in [en, *names.get(en, {}).values()]}
     pool = {}
@@ -683,7 +712,7 @@ def from_addon(path):
         tip_stats((d.get('tip') or {}).get('enUS') or (d.get('tip') or {}).get('enGB'), stats)
         pool[int(num)] = {'id': int(num), 'slot': slot, 'lvl': d.get('req') or None, 'il': d.get('ilvl') or None, 'q': d.get('q', 1),
                           'names': {LOC[loc]: n for loc, n in (d.get('name') or {}).items() if loc in LOC}, 'stats': stats,
-                          'provenance': 'client-dump', 'cls': d.get('cls'), 'sub': d.get('sub')}
+                          'provenance': 'client-dump', 'cls': d.get('iclass', d.get('cls')), 'sub': d.get('isub', d.get('sub'))}
     srcs = {}
     for num, recs in by_id(db.get('src')):
         out = []

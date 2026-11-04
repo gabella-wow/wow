@@ -320,6 +320,22 @@ def test_gear_import_addon():
     holy = {e['id']: e['src'] for e in specs['priest-holy']}
     assert 900103 not in holy and holy[900106] == [{'kind': 'craft', 'prof': 'tailoring'}]    # mail is not for a priest; a recipe in Russian
     assert items[900101]['stats']['hp'] == 9 and items[900101]['provenance'] == 'client-dump'   # the «Equip:» line of the tooltip
+    assert 900107 in war and 900107 not in holy                             # v2: iclass / isub instead of cls / sub
+    assert not {900108, 900109, 900110} & set(items)                         # consumables and trade goods are not gear
+
+
+def test_gear_import_addon_v2():
+    """Dump v2: every kept item with its kind, icon file id, names and tooltip; v1 fields still read."""
+    sys.path.insert(0, os.path.join(bg.HERE, 'tools'))
+    import gear_import as gi
+    al = gi.addon_items(os.path.join(FIX, 'gear_dump.lua'))
+    assert al[900108] == {'kind': 'consumable', 'iclass': 0, 'isub': 0, 'slot': None, 'lvl': 15, 'il': 25, 'q': 1, 'icon': 134831,
+                          'names': {'en': 'Test Healing Potion', 'ru': 'Тестовое лечебное зелье'}, 'stats': {},
+                          'tip': {'en': ['Test Healing Potion', 'Use: Restores 140 to 180 health.']}}
+    assert al[900109]['kind'] == 'trade' and al[900109]['lvl'] is None and al[900109]['names'] == {'ru': 'Тестовая ткань'}
+    assert al[900110]['lvl'] == 50                                         # up to 60 in v2
+    assert al[900101]['kind'] == 'armor' and al[900101]['isub'] == 1 and al[900101]['icon'] is None    # v1 item: cls / sub
+    assert al[900107]['slot'] == 'INVTYPE_WAIST' and al[900107]['stats'] == {'str': 6, 'sta': 5}
 
 
 def test_gear_section():

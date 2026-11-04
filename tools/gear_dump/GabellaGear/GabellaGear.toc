@@ -1,5 +1,6 @@
 ## Interface: 11507
 ## Title: Gabella Gear
-## Notes: Saves equipment up to level 30 and where it comes from (boss loot, quest rewards, recipes) for gabella.site. Type /ggd.
+## Notes: Saves equipment, consumables, reagents and trade goods and where they come from (boss loot, quest rewards, recipes) for gabella.site. Type /ggd all.
+## Version: 2
 ## SavedVariables: GabellaGearDB
 GabellaGear.lua
