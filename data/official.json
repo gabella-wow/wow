@@ -499,15 +499,15 @@
  },
  {
   "id": "us-2360696-9",
-  "sha": "f72bc7e8",
+  "sha": "daaf1cbc",
   "date": "2026-11-03",
   "at": "2026-11-03T03:20:33Z",
   "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696/9",
   "kind": "dev-notes",
   "beta": true,
   "title_en": "WoW Forever Beta Development Notes – Updated November 2",
-  "n": 235,
-  "upd": "2026-11-04T02:21:20Z",
+  "n": 241,
+  "upd": "2026-11-04T19:41:41Z",
   "t": {
    "ru": {
     "h": "Заметки разработчиков от 03.11 (бета)",
@@ -521,7 +521,7 @@
      "Друид · Rend and Tear: 3 → 1, 2% → 15%",
      "Охотник · Чародейский выстрел (Arcane Shot): 0,1 → 0,15"
     ],
-    "more": "Ещё изменений: 229",
+    "more": "Ещё изменений: 235",
     "site": "https://gabella.site/wow/guides/news/",
     "site_t": "Подробнее на сайте"
    },
@@ -537,7 +537,7 @@
      "Druid · Rend and Tear: 3 → 1, 2% → 15%",
      "Hunter · Arcane Shot: 0.1 → 0.15"
     ],
-    "more": "229 more changes",
+    "more": "235 more changes",
     "site": "https://gabella.site/wow/en/guides/news/",
     "site_t": "More on the site"
    },
@@ -553,7 +553,7 @@
      "Друїд · Rend and Tear: 3 → 1, 2% → 15%",
      "Мисливець · Arcane Shot: 0,1 → 0,15"
     ],
-    "more": "Ще змін: 229",
+    "more": "Ще змін: 235",
     "site": "https://gabella.site/wow/uk/guides/news/",
     "site_t": "Детальніше на сайті"
    },
@@ -569,7 +569,7 @@
      "Druide · Rend and Tear: 3 → 1, 2% → 15%",
      "Jäger · Arkaner Schuss: 0,1 → 0,15"
     ],
-    "more": "Weitere Änderungen: 229",
+    "more": "Weitere Änderungen: 235",
     "site": "https://gabella.site/wow/de/guides/news/",
     "site_t": "Mehr auf der Seite"
    },
@@ -585,7 +585,7 @@
      "Druide · Rend and Tear: 3 → 1, 2% → 15%",
      "Chasseur · Tir des arcanes: 0,1 → 0,15"
     ],
-    "more": "Autres changements : 229",
+    "more": "Autres changements : 235",
     "site": "https://gabella.site/wow/fr/guides/news/",
     "site_t": "Plus sur le site"
    },
@@ -601,7 +601,7 @@
      "Druida · Rend and Tear: 3 → 1, 2% → 15%",
      "Cazador · Tiro Arcano: 0,1 → 0,15"
     ],
-    "more": "Más cambios: 229",
+    "more": "Más cambios: 235",
     "site": "https://gabella.site/wow/es/guides/news/",
     "site_t": "Más en la web"
    },
@@ -617,7 +617,7 @@
      "Druida · Rend and Tear: 3 → 1, 2% → 15%",
      "Caçador · Tiro Arcano: 0,1 → 0,15"
     ],
-    "more": "Mais mudanças: 229",
+    "more": "Mais mudanças: 235",
     "site": "https://gabella.site/wow/pt/guides/news/",
     "site_t": "Mais no site"
    },
@@ -633,7 +633,7 @@
      "Druido · Rend and Tear: 3 → 1, 2% → 15%",
      "Cacciatore · Arcane Shot: 0,1 → 0,15"
     ],
-    "more": "Altre modifiche: 229",
+    "more": "Altre modifiche: 235",
     "site": "https://gabella.site/wow/it/guides/news/",
     "site_t": "Di più sul sito"
    },
@@ -649,7 +649,7 @@
      "Druid · Rend and Tear: 3 → 1, 2% → 15%",
      "Hunter · Arcane Shot: 0,1 → 0,15"
     ],
-    "more": "Więcej zmian: 229",
+    "more": "Więcej zmian: 235",
     "site": "https://gabella.site/wow/pl/guides/news/",
     "site_t": "Więcej na stronie"
    }
