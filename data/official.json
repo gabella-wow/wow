@@ -1,5 +1,90 @@
 [
  {
+  "id": "us-2400905-1",
+  "sha": "23fd4d9b",
+  "date": "2026-11-04",
+  "at": "2026-11-04T18:13:53Z",
+  "url": "https://us.forums.blizzard.com/en/wow/t/world-of-warcraft-forever-launch-time/2400905/1",
+  "kind": "post",
+  "beta": false,
+  "title_en": "World of Warcraft: Forever Launch Time",
+  "n": 0,
+  "t": {
+   "ru": {
+    "h": "World of Warcraft: Forever Launch Time",
+    "en": 1,
+    "src": "Blizzard, на английском",
+    "sum": [],
+    "site": "https://gabella.site/wow/guides/news/",
+    "site_t": "Подробнее на сайте"
+   },
+   "en": {
+    "h": "World of Warcraft: Forever Launch Time",
+    "en": 1,
+    "src": "Blizzard",
+    "sum": [],
+    "site": "https://gabella.site/wow/en/guides/news/",
+    "site_t": "More on the site"
+   },
+   "uk": {
+    "h": "World of Warcraft: Forever Launch Time",
+    "en": 1,
+    "src": "Blizzard, англійською",
+    "sum": [],
+    "site": "https://gabella.site/wow/uk/guides/news/",
+    "site_t": "Детальніше на сайті"
+   },
+   "de": {
+    "h": "World of Warcraft: Forever Launch Time",
+    "en": 1,
+    "src": "Blizzard, auf Englisch",
+    "sum": [],
+    "site": "https://gabella.site/wow/de/guides/news/",
+    "site_t": "Mehr auf der Seite"
+   },
+   "fr": {
+    "h": "World of Warcraft: Forever Launch Time",
+    "en": 1,
+    "src": "Blizzard, en anglais",
+    "sum": [],
+    "site": "https://gabella.site/wow/fr/guides/news/",
+    "site_t": "Plus sur le site"
+   },
+   "es": {
+    "h": "World of Warcraft: Forever Launch Time",
+    "en": 1,
+    "src": "Blizzard, en inglés",
+    "sum": [],
+    "site": "https://gabella.site/wow/es/guides/news/",
+    "site_t": "Más en la web"
+   },
+   "pt": {
+    "h": "World of Warcraft: Forever Launch Time",
+    "en": 1,
+    "src": "Blizzard, em inglês",
+    "sum": [],
+    "site": "https://gabella.site/wow/pt/guides/news/",
+    "site_t": "Mais no site"
+   },
+   "it": {
+    "h": "World of Warcraft: Forever Launch Time",
+    "en": 1,
+    "src": "Blizzard, in inglese",
+    "sum": [],
+    "site": "https://gabella.site/wow/it/guides/news/",
+    "site_t": "Di più sul sito"
+   },
+   "pl": {
+    "h": "World of Warcraft: Forever Launch Time",
+    "en": 1,
+    "src": "Blizzard, po angielsku",
+    "sum": [],
+    "site": "https://gabella.site/wow/pl/guides/news/",
+    "site_t": "Więcej na stronie"
+   }
+  }
+ },
+ {
   "id": "art-24316974",
   "sha": "79055649",
   "date": "2026-11-03",
