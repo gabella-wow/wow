@@ -59,9 +59,9 @@
 <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png?v=00a6a7d9">
 <meta name="apple-mobile-web-app-title" content="Gabella WoW">
 <link rel="stylesheet" href="../../assets/radio/radio.css?v=556d7dc63f" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="../../assets/search/search.css?v=da1c064a38" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="../../assets/me/me.css?v=31a96a9cac" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="../../assets/hero/hero.css?v=c87ea2ee87" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="../../assets/search/search.css?v=0085fa8f51" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="../../assets/me/me.css?v=b0164179dc" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="../../assets/hero/hero.css?v=f70745f9fb" media="print" onload="this.media='all'">
 <meta name="msvalidate.01" content="73FA74F8B7D415104D305A58E9706FE7">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://gabella.site/wow/pt/"},{"@type":"ListItem","position":2,"name":"Meu perfil","item":"https://gabella.site/wow/pt/profile/"}]}</script>
 </head>
@@ -638,7 +638,7 @@ function screen(kind, arg) {
     tgConfig();
     v.innerHTML = `${noticeHtml()}<section class="frame login"><div><h2>Entre no seu perfil</h2>
       <p>Não há senha: entre como preferir. O que recebemos de cada serviço está em <a href="${HOME}privacy/#account">Privacidade</a>.</p>
-      <ul><li>Até dez personagens. O perfil guarda os seus personagens e a assinatura de novidades.</li>${ACH ? '<li>Conquistas, postos e molduras de retrato.</li>' : ''}<li>A moldura «Fundador» para quem entrar antes de 3 de novembro, 21:00 UTC.</li></ul></div>
+      <ul><li>Até dez personagens. O perfil guarda os seus personagens e a assinatura de novidades.</li>${ACH ? '<li>Conquistas, postos e molduras de retrato.</li>' : ''}<li>A moldura “Fundador” para quem entrar antes de 3 de novembro, 21:00 UTC.</li></ul></div>
       <div class="wayc">${loginWays()}${mailForm()}</div></section>`;
   } else if (kind === 'confirm') {
     v.innerHTML = `<section class="frame state"><h2>Entrar por este link?</h2><p>${esc(arg.why)} ${esc(arg.who ? fill('Entrar como %e?', { e: arg.who }) : 'Entrar?')}</p>
@@ -1379,9 +1379,9 @@ addEventListener('beforeinstallprompt', e => {
 });
 </script>
 <script src="../../assets/radio/radio.js?v=556d7dc63f" data-root="../../" defer></script>
-<script src="../../assets/search/search.js?v=da1c064a38" data-root="../../" defer></script>
-<script src="../../assets/me/me.js?v=31a96a9cac" data-root="../../" data-home="../" data-lang="pt" data-ach="0" data-teaser="" data-close="Fechar" data-page="profile/" data-look="2" defer></script>
-<script src="../../assets/hero/hero.js?v=c87ea2ee87" data-root="../../" data-home="../" data-data="../../assets/hero/pt.json?v=c87ea2ee87" defer></script>
+<script src="../../assets/search/search.js?v=0085fa8f51" data-root="../../" defer></script>
+<script src="../../assets/me/me.js?v=b0164179dc" data-root="../../" data-home="../" data-lang="pt" data-ach="0" data-teaser="" data-close="Fechar" data-page="profile/" data-look="2" defer></script>
+<script src="../../assets/hero/hero.js?v=f70745f9fb" data-root="../../" data-home="../" data-data="../../assets/hero/pt.json?v=f70745f9fb" defer></script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "ee1d216e690040389063e8d72384c2c7"}'></script>
 </body>
 </html>

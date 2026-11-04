@@ -59,7 +59,7 @@ const CLASSES = [
 const ROLE_RU = { tank:'Tank', heal:'Soigneur', dps:'Dégâts', 'tank?':'Tank (incertain)' };
 const ri = r => `<svg class="ri" aria-hidden="true"><use href="#i-${r.replace('?','')}"/></svg>`;
 const CCOL = { warrior:'#c79c6e', paladin:'#f58cba', hunter:'#abd473', rogue:'#fff569', priest:'#e8e8e8', shaman:'#2f8cf0', mage:'#40c7eb', warlock:'#8788ee', druid:'#ff7d0a' };
-const BUFF = { warrior:'Cri de guerre', paladin:'Bénédiction des rois', hunter:'Aura de précision', priest:'Mot de pouvoir : Robustesse, Esprit divin', shaman:'Totems (Force de la Terre, Furie-des-vents, Langue de feu, Grâce aérienne)', mage:'Intelligence des arcanes, portails, nourriture et eau', druid:'Marque du fauve, Chef de la meute, Aura de sélénien' };
+const BUFF = { warrior:'Cri de guerre', paladin:'Bénédiction des rois', hunter:'Aura de précision', priest:'Mot de pouvoir : Robustesse, Esprit divin', shaman:'Totems (Force de la Terre, Furie-des-vents, Langue de feu, Grâce aérienne)', mage:'Intelligence des arcanes, portails, nourriture et eau', druid:'Marque du fauve, Chef de la meute, Aura de sélénien' };
 
 const RACES = [
   { id:'human', n:'Humain', f:'alliance',
@@ -80,8 +80,8 @@ const RACES = [
     tip:'Pensée expansive aide surtout les classes à énergie.' },
   { id:'skyA', n:'Skyborne (Alliance)', f:'alliance', paid:true, name:'Skyborne High Order',
     cls:['warrior','hunter','rogue','mage','druid'],
-    rac:[['a','Walk on Air','Planez pendant 10 s, sans dégâts de chute'],['a','Read Ley Line','Régénération de vie et de mana +50% pendant 15 s. Près d’une Ley Line, Attuned en plus pendant 1 heure : +100%, conservé après la mort'],['p','Wind Blessed','+2% de vitesse d’attaque et d’incantation'],['p','Elemental Insight','+5% de dégâts contre les élémentaires']],
-    tip:'Race payante : pack Héroïque dès $29.99. Débute sur Zephras Isle (niveaux 1–12).' },
+    rac:[['a','Walk on Air','Planez pendant 10 s, sans dégâts de chute'],['a','Read Ley Line','Régénération de vie et de mana +50% pendant 15 s. Près d’une Ley Line, Attuned en plus pendant 1 heure : +100%, conservé après la mort'],['p','Wind Blessed','+2% de vitesse d’attaque et d’incantation'],['p','Elemental Insight','+5% de dégâts contre les élémentaires']],
+    tip:'Race payante : Heroic Pack dès $29.99. Débute sur Zephras Isle (niveaux 1–12).' },
   { id:'orc', n:'Orc', f:'horde',
     cls:['warrior','hunter','rogue','shaman','warlock','mage*'],
     rac:[['a','Fureur sanguinaire','+10% de puissance d’attaque et de puissance des sorts pendant 15 s'],['a','Shatter Curse','Retire malédictions et corruption, −5% de dégâts magiques subis pendant 8 s'],['p','Commandement','+5% de dégâts des familiers de démoniste et de chasseur'],['p','Solidité','Étourdissements 20% plus courts']],
@@ -89,7 +89,7 @@ const RACES = [
   { id:'undead', n:'Mort-vivant', f:'horde',
     cls:['warrior','rogue','mage','priest','warlock','paladin*'],
     rac:[['a','Volonté des Réprouvés','Supprime charme, peur et sommeil'],['a','Cannibalisme','Rend 35% de la vie et du mana sur la durée'],['p','Respiration aquatique','Respirez plus longtemps sous l’eau'],['p','Toucher du tombeau','Chance de drainer de la vie en attaquant']],
-    tip:'Nouvelle combinaison : un paladin pour la Horde, où cette classe n’existait pas.' },
+    tip:'Nouvelle combinaison : un paladin pour la Horde, où cette classe n’existait pas.' },
   { id:'tauren', n:'Tauren', f:'horde',
     cls:['warrior','hunter','shaman','druid'],
     rac:[['a','Choc martial','Étourdit les ennemis proches pendant 2 s, temps de recharge 90 s'],['a','Culture','Fait pousser des herbes récoltables sans Herboristerie, temps de recharge 15 min'],['p','Course dans les plaines','Tant que vous bougez, la vitesse de course augmente de 2% par cumul, jusqu’à +60%. Sans effet sur la vitesse en monture'],['p','Endurcissement','+5% de vie']],
@@ -97,11 +97,11 @@ const RACES = [
   { id:'troll', n:'Troll', f:'horde',
     cls:['warrior','hunter','rogue','priest','shaman','mage','warlock*'],
     rac:[['a','Berserker','+10 % de vitesse d’attaque et d’incantation pendant 12 s, récupération de 3 min'],['a','Régénération rapide','Rend de la vie sur la durée'],['p','Tueur de bêtes','+5% de dégâts contre les bêtes'],['p','Régénération','La vie se régénère aussi en combat']],
-    tip:'Le plus de choix de classes dans la Horde : sept.' },
+    tip:'Le plus de choix de classes dans la Horde : sept.' },
   { id:'skyH', n:'Skyborne (Horde)', f:'horde', paid:true, name:'Skyborne Windshaper',
     cls:['warrior','hunter','rogue','shaman','druid'],
-    rac:[['a','Walk on Air','Planez pendant 10 s, sans dégâts de chute'],['a','Skysight','+15% de vitesse de course pendant 15 s. Près d’une Elemental Convergence, Charged en plus pendant 1 heure : +30%, conservé après la mort'],['p','Wind Blessed','+2% de vitesse d’attaque et d’incantation'],['p','Elemental Insight','+5% de dégâts contre les élémentaires']],
-    tip:'Race payante : pack Héroïque dès $29.99. Seule la Horde peut avoir un chaman, seule l’Alliance un mage.' }
+    rac:[['a','Walk on Air','Planez pendant 10 s, sans dégâts de chute'],['a','Skysight','+15% de vitesse de course pendant 15 s. Près d’une Elemental Convergence, Charged en plus pendant 1 heure : +30%, conservé après la mort'],['p','Wind Blessed','+2% de vitesse d’attaque et d’incantation'],['p','Elemental Insight','+5% de dégâts contre les élémentaires']],
+    tip:'Race payante : Heroic Pack dès $29.99. Seule la Horde peut avoir un chaman, seule l’Alliance un mage.' }
 ];
 RACES.forEach(r => { r.can = {}; r.cls.forEach(c => { const isNew = c.endsWith('*'); r.can[isNew ? c.slice(0,-1) : c] = isNew ? 'new' : 'ok'; }); });
 const CL = Object.fromEntries(CLASSES.map(c => [c.id, c]));
@@ -109,7 +109,7 @@ const BETA = '<span class="beta-note">d’après la bêta</span>';
 const BMARK = '{' + 'beta}';   // split so the guide build (which swaps the marker for the span everywhere) leaves it alone
 const racx = s => String(s).split(BETA).join(BMARK).split(BMARK).map(esc).join(BETA);
 const RC = Object.fromEntries(RACES.map(r => [r.id, r]));
-const RLEAD = {"human": "La race la plus nombreuse de l’Alliance. Polyvalente et forte en JcJ grâce à Volonté de survie.", "dwarf": "Robustes mineurs et fusiliers de Forgefer. Pour la première fois, l’Alliance a des chamans, et ce sont des nains : Classic n’en avait pas.", "nightelf": "Un peuple ancien des forêts. Insaisissables : leur propre façon de se cacher, d’esquiver et de courir vite.", "gnome": "Les inventeurs de Gnomeregan. Petits, rusés et avec la meilleure capacité d’évasion du jeu.", "skyA": "Une nouvelle race dans Forever. Le High Order : des elfes du vent en quête de la magie des arcanes perdue de leurs ancêtres.", "orc": "Le cœur de la Horde. Les meilleurs guerriers et maîtres du JcJ grâce à Fureur sanguinaire et Solidité.", "undead": "Les Réprouvés : d’anciens humains libérés du roi-liche. Immunisés contre la peur et le sommeil quand ça compte.", "tauren": "Paisibles géants des plaines. Le plus de vie et leur propre étourdissement de zone.", "troll": "La tribu Sombrelance. Le plus de classes de la Horde et un puissant Berserker pour les dégâts.", "skyH": "Une nouvelle race dans Forever. Les Windshapers : guides spirituels des Skyborne, proches des éléments."}; // race page leads and URL slugs, filled in by build.py
+const RLEAD = {"human": "La race la plus nombreuse de l’Alliance. Polyvalente et forte en JcJ grâce à Volonté de survie.", "dwarf": "Robustes mineurs et fusiliers de Forgefer. Pour la première fois, l’Alliance a des chamans, et ce sont des nains : Classic n’en avait pas.", "nightelf": "Un peuple ancien des forêts. Insaisissables : leur propre façon de se cacher, d’esquiver et de courir vite.", "gnome": "Les inventeurs de Gnomeregan. Petits, rusés et avec la meilleure capacité d’évasion du jeu.", "skyA": "Une nouvelle race dans Forever. Le High Order : des elfes du vent en quête de la magie des arcanes perdue de leurs ancêtres.", "orc": "Le cœur de la Horde. Les meilleurs guerriers et maîtres du JcJ grâce à Fureur sanguinaire et Solidité.", "undead": "Les Réprouvés : d’anciens humains libérés du roi-liche. Immunisés contre la peur et le sommeil quand ça compte.", "tauren": "Paisibles géants des plaines. Le plus de vie et leur propre étourdissement de zone.", "troll": "La tribu Sombrelance. Le plus de classes de la Horde et un puissant Berserker pour les dégâts.", "skyH": "Une nouvelle race dans Forever. Les Windshapers : guides spirituels des Skyborne, proches des éléments."}; // race page leads and URL slugs, filled in by build.py
 const RSLUG = {"human": "human", "dwarf": "dwarf", "nightelf": "night-elf", "gnome": "gnome", "skyA": "skyborne-alliance", "orc": "orc", "undead": "undead", "tauren": "tauren", "troll": "troll", "skyH": "skyborne-horde"};
 
 const EN = {
@@ -151,7 +151,7 @@ function renderClassRef() {
   const box = $('#classRef');
   box.innerHTML = head + CLASSES.map(c => `<div class="cmp-row" style="--cc:${CCOL[c.id]};--art:url('../assets/art/${window.GabellaPor ? GabellaPor.id(c.id) : c.id}-360.webp${PV}')">
     <span class="cmp-id">${face(c.id, CCOL[c.id])}<span><b><a class="cmp-a" href="${HOME}classes/${c.id}/">${esc(c.n)}</a></b><small>${c.specs.map(s => esc(s[0])).join(' · ')}</small></span></span>
-    <span class="rdots" role="img" aria-label="Rôles : ${c.roles.map(x => ROLE_RU[x]).join(', ')}">${roles.map(x => { const on = c.roles.includes(x), q = c.roles.includes(x + '?'); return `<span class="rdot${on ? ' on' : q ? ' q' : ''}" title="${ROLE_RU[q ? x + '?' : x]}">${ri(x)}</span>`; }).join('')}</span>
+    <span class="rdots" role="img" aria-label="Rôles : ${c.roles.map(x => ROLE_RU[x]).join(', ')}">${roles.map(x => { const on = c.roles.includes(x), q = c.roles.includes(x + '?'); return `<span class="rdot${on ? ' on' : q ? ' q' : ''}" title="${ROLE_RU[q ? x + '?' : x]}">${ri(x)}</span>`; }).join('')}</span>
     ${lvlMeter(c)}
     <span class="cmp-d"><span class="cmp-txt" id="crt-${c.id}">${esc(c.raid)}</span><button type="button" class="cmp-more" aria-expanded="false" aria-controls="crt-${c.id}" aria-label="Afficher en entier" title="Afficher en entier"></button></span>
     <span class="go" aria-hidden="true"><svg class="ico"><use href="#i-arrow"/></svg></span>
@@ -172,7 +172,7 @@ function renderRaceRef() {
   const head = `<div class="cmp-h" aria-hidden="true"><span>Race</span><span>Classes</span><span class="abl">Capacités <span class="abt">active</span><span class="abt p">passive</span></span><span></span></div>`;
   $('#raceRef').innerHTML = ['alliance', 'horde'].map(f => `<div class="rgroup ${f}"><h3>${facName(f)}</h3>${head}` + RACES.filter(r => r.f === f).map(r => `<a class="cmp-row" href="${HOME}races/${RSLUG[r.id]}/" style="--cc:var(--${f});--art:url('../assets/art/${RSLUG[r.id]}-360.webp${PV}')">
     <span class="cmp-id">${face(RSLUG[r.id], `var(--${f})`)}<span><b>${esc(r.n)}${r.paid ? '<span class="paid">payant</span>' : ''}</b>${r.en ? `<small>${esc(r.en)}</small>` : ''}</span></span>
-    <span class="ccl" role="img" aria-label="Classes : ${Object.keys(r.can).map(id => CL[id].n).join(', ')}">${CLASSES.map(c => { const v = r.can[c.id]; return face(c.id, CCOL[c.id], v ? (v === 'new' ? 'nw' : '') : 'off', c.n + (v === 'new' ? ', nouveau' : v ? '' : ', indisponible'), f); }).join('')}</span>
+    <span class="ccl" role="img" aria-label="Classes : ${Object.keys(r.can).map(id => CL[id].n).join(', ')}">${CLASSES.map(c => { const v = r.can[c.id]; return face(c.id, CCOL[c.id], v ? (v === 'new' ? 'nw' : '') : 'off', c.n + (v === 'new' ? ', nouveau' : v ? '' : ', indisponible'), f); }).join('')}</span>
     <span class="abs">${r.rac.map(x => `<span><b class="${x[0] === 'a' ? '' : 'p'}">${bi(x[1])}</b><span>${racx(x[2])}</span></span>`).join('')}</span>
     <span class="go" aria-hidden="true"><svg class="ico"><use href="#i-arrow"/></svg></span>
   </a>`).join('') + '</div>').join('');

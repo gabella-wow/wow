@@ -325,7 +325,7 @@ function renderRaid(touched = true) {
   const have = new Set(list.map(p => p.cls));
   $('#rBuffs').innerHTML = CLASSES.filter(c => BUFF[c.id]).map(c => `<li class="${have.has(c.id) ? '' : 'off'}" style="--cc:${CCOL[c.id]}"><span class="cdot"></span><span><b>${esc(c.n)}:</b> ${esc(BUFF[c.id])}</span></li>`).join('');
   const n = list.length;
-  $('#rRaids').innerHTML = n ? RAIDS.map(([size, name]) => `<li class="${n >= size ? 'good' : ''}">${n >= size ? `Raide para ${size} (${name}): jogadores suficientes.` : `Raide para ${size} (${name}): faltam ${size - n}.`}</li>`).join('') : '<li>Ainda não há ninguém. Clique em «Meu personagem», «Preencher vazios» ou num quadro livre.</li>';
+  $('#rRaids').innerHTML = n ? RAIDS.map(([size, name]) => `<li class="${n >= size ? 'good' : ''}">${n >= size ? `Raide para ${size} (${name}): jogadores suficientes.` : `Raide para ${size} (${name}): faltam ${size - n}.`}</li>`).join('') : '<li>Ainda não há ninguém. Clique em “Meu personagem”, “Preencher vazios” ou num quadro livre.</li>';
 
   const link = n ? teamLink() : '';
   $('#rLink').value = link;
@@ -348,7 +348,7 @@ $('#rFill').onclick = () => {
   R.s.forEach(p => p && used[p.role]++);
   R.s = R.s.map((p, i) => p || newPlayer(i, used)); R.moving = -1; renderRaid();
 };
-function myHero() {   // the hero of this browser (assets/hero/hero.js?v=c87ea2ee87, localStorage gabella-wf-me)
+function myHero() {   // the hero of this browser (assets/hero/hero.js?v=f70745f9fb, localStorage gabella-wf-me)
   let h = null; try { h = JSON.parse(localStorage.getItem('gabella-wf-me')); } catch (e) {}
   return h && RC[h.race] && CL[h.cls] && RC[h.race].can[h.cls] ? h : null;
 }
