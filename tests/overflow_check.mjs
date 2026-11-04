@@ -25,7 +25,7 @@ const widths = (opt('widths', '') || (FULL ? '360,768,1280,1920' : '360,1280')).
 const themes = (opt('themes', '') || (FULL ? 'light,dark' : 'dark')).split(',');   // layout is the same in both themes; --quick checks dark only
 const jobs = +opt('jobs', 8);
 const shotsDir = opt('shots', '');
-const KEY = ['', 'classes/', 'classes/warlock/', 'races/', 'guides/', 'guides/leveling/', 'tools/', 'character/', 'play/', 'guides/builds/', 'guides/news/'];
+const KEY = ['', 'classes/', 'classes/warlock/', 'races/', 'guides/', 'guides/leveling/', 'tools/', 'character/', 'character/gear/', 'play/', 'guides/builds/', 'guides/news/'];
 const only = (opt('pages', '') || '').split(',').filter(Boolean).map(o => o === 'home' ? '' : o);   // 'home' = the home page
 const onlyHome = (opt('pages', '') || '').split(',').includes('home');
 const HEADER_PAGES = ['', 'tools/', 'guides/builds-paladin/'];

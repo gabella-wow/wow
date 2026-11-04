@@ -179,7 +179,8 @@ DIR2 = [('ru', 'вор как качать', LV('rogue')), ('ru', 'когда р
 # экипировка (разбор ясности 02.11, п.3): «что надеть», «шмот», «бис» -> блок «Экипировка 13–30» страницы спека; с классом — спека
 # этого класса; «таланты мага» -> билд мага, а не калькулятор (п.2) — тут нужное должно быть ПЕРВЫМ (FIRST)
 SPECS_ALL = sorted(d for d in os.listdir(os.path.join(ROOT, 'guides')) if d.startswith('spec-'))
-GEAR = lambda c='': [f'guides/{d}/#gear' for d in SPECS_ALL if d.startswith(f'spec-{c}')]
+# без класса годится и сборщик экипировки character/gear/ (04.11): он открывается под уровень и спек читателя
+GEAR = lambda c='': [f'guides/{d}/#gear' for d in SPECS_ALL if d.startswith(f'spec-{c}')] + ([] if c else ['character/gear/'])
 GEARQ = [
     ('ru', 'экипировка', GEAR()), ('ru', 'что надеть', GEAR()), ('ru', 'шмот', GEAR()), ('ru', 'бис', GEAR()),
     ('ru', 'экипировка мага', GEAR('mage')), ('ru', 'что надеть воину', GEAR('warrior')), ('ru', 'шмот на шамана', GEAR('shaman')),
