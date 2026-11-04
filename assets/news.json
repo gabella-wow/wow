@@ -1,6 +1,11 @@
 [
  {
   "date": "2026-11-04",
+  "title": "New Nvidia Drivers for World of Warcraft: Forever",
+  "url": "https://www.wowhead.com/news=383738/new-nvidia-drivers-for-world-of-warcraft-forever"
+ },
+ {
+  "date": "2026-11-04",
   "title": "Introducing The Forever Files: Wowhead's Forever Newsletter",
   "url": "https://www.wowhead.com/news=383736/introducing-the-forever-files-wowheads-forever-newsletter"
  },
@@ -143,10 +148,5 @@
   "date": "2026-10-29",
   "title": "Forced World Refreshes Will Be Significantly Reduced for WoW: Forever",
   "url": "https://www.wowhead.com/news=383649/forced-world-refreshes-will-be-significantly-reduced-for-wow-forever"
- },
- {
-  "date": "2026-10-29",
-  "title": "Return to Azeroth Recap for World of Warcraft: Forever",
-  "url": "https://www.wowhead.com/news=383653/return-to-azeroth-recap-for-world-of-warcraft-forever"
  }
 ]
