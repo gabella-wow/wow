@@ -319,7 +319,7 @@
  },
  {
   "id": "us-2360696-9",
-  "sha": "e5607bdf",
+  "sha": "f72bc7e8",
   "date": "2026-11-03",
   "at": "2026-11-03T03:20:33Z",
   "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696/9",
@@ -327,12 +327,12 @@
   "beta": true,
   "title_en": "WoW Forever Beta Development Notes – Updated November 2",
   "n": 235,
-  "upd": "2026-11-03T20:51:37Z",
+  "upd": "2026-11-04T02:21:20Z",
   "t": {
    "ru": {
     "h": "Заметки разработчиков от 03.11 (бета)",
     "src": "Blizzard, на английском",
-    "upd": "обновлено 03.11",
+    "upd": "обновлено 04.11",
     "sum": [
      "All Races: 2 → 5",
      "Друид · Ravage: 350% → 435%",
@@ -348,7 +348,7 @@
    "en": {
     "h": "Developer notes of Nov 3 (beta)",
     "src": "Blizzard",
-    "upd": "updated Nov 3",
+    "upd": "updated Nov 4",
     "sum": [
      "All Races: 2 → 5",
      "Druid · Ravage: 350% → 435%",
@@ -364,7 +364,7 @@
    "uk": {
     "h": "Нотатки розробників від 03.11 (бета)",
     "src": "Blizzard, англійською",
-    "upd": "оновлено 03.11",
+    "upd": "оновлено 04.11",
     "sum": [
      "All Races: 2 → 5",
      "Друїд · Ravage: 350% → 435%",
@@ -380,7 +380,7 @@
    "de": {
     "h": "Entwicklerhinweise vom 03.11 (Beta)",
     "src": "Blizzard, auf Englisch",
-    "upd": "aktualisiert am 03.11",
+    "upd": "aktualisiert am 04.11",
     "sum": [
      "All Races: 2 → 5",
      "Druide · Ravage: 350% → 435%",
@@ -396,7 +396,7 @@
    "fr": {
     "h": "Notes des développeurs du 03.11 (bêta)",
     "src": "Blizzard, en anglais",
-    "upd": "mis à jour le 03.11",
+    "upd": "mis à jour le 04.11",
     "sum": [
      "All Races: 2 → 5",
      "Druide · Ravage: 350% → 435%",
@@ -412,7 +412,7 @@
    "es": {
     "h": "Notas de los desarrolladores del 03.11 (beta)",
     "src": "Blizzard, en inglés",
-    "upd": "actualizado el 03.11",
+    "upd": "actualizado el 04.11",
     "sum": [
      "All Races: 2 → 5",
      "Druida · Ravage: 350% → 435%",
@@ -428,7 +428,7 @@
    "pt": {
     "h": "Notas dos desenvolvedores de 03.11 (beta)",
     "src": "Blizzard, em inglês",
-    "upd": "atualizado em 03.11",
+    "upd": "atualizado em 04.11",
     "sum": [
      "All Races: 2 → 5",
      "Druida · Ravage: 350% → 435%",
@@ -444,7 +444,7 @@
    "it": {
     "h": "Note degli sviluppatori del 03.11 (beta)",
     "src": "Blizzard, in inglese",
-    "upd": "aggiornato il 03.11",
+    "upd": "aggiornato il 04.11",
     "sum": [
      "All Races: 2 → 5",
      "Druido · Ravage: 350% → 435%",
@@ -460,7 +460,7 @@
    "pl": {
     "h": "Notatki deweloperów z 03.11 (beta)",
     "src": "Blizzard, po angielsku",
-    "upd": "zaktualizowano 03.11",
+    "upd": "zaktualizowano 04.11",
     "sum": [
      "All Races: 2 → 5",
      "Druid · Ravage: 350% → 435%",
