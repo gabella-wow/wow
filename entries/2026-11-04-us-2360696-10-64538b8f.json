@@ -1,0 +1,146 @@
+{
+ "event": "new",
+ "key": "us-2360696-10",
+ "source": "forum",
+ "region": "us",
+ "topic": 2360696,
+ "post": 10,
+ "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696/10",
+ "title": "WoW Forever Beta Development Notes – Updated November 2",
+ "author": "Kaivax",
+ "role": "Community Manager",
+ "created_at": "2026-11-04T19:35:16.582Z",
+ "updated_at": "2026-11-04T19:35:16.582Z",
+ "version": 1,
+ "category": 349,
+ "beta": true,
+ "sha": "64538b8f48192b07d87a7c32b231aca461944b792a78dc7472bded4ca6c67335",
+ "twin_of": null,
+ "also": [
+  "https://eu.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-3-november/631316/10"
+ ],
+ "short_news": {
+  "date": "2026-11-04",
+  "at": "2026-11-04T19:35:16Z",
+  "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696/10",
+  "title_en": "WoW Forever Beta Development Notes – Updated November 2",
+  "kind": "dev-notes",
+  "beta": true
+ },
+ "changes": [
+  {
+   "path": [
+    "User Interface and Accessibility"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Swing Timer bar will no longer fade out due to distance until the swing finishes.",
+   "h": "65ad0c5dbf28"
+  },
+  {
+   "path": [
+    "User Interface and Accessibility"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Nameplates did not display Elite enemy status.",
+   "h": "ce9a126c7693"
+  },
+  {
+   "path": [
+    "User Interface and Accessibility"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Debuff icons on the Nameplate can now be clicked through.",
+   "h": "7af7170ad89c"
+  },
+  {
+   "path": [
+    "User Interface and Accessibility"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Spellbook and Talents frame now opens at the same height as other panels.",
+   "h": "9901c029de7c"
+  },
+  {
+   "path": [
+    "User Interface and Accessibility"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Combat mode for the Spellbook frame has been reduced in size.",
+   "h": "17ad62d3d3cf"
+  },
+  {
+   "path": [
+    "User Interface and Accessibility"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Killing a player while at Honor cap will no longer show honor gained in floating text or chat messages.",
+   "h": "74239533c4c1"
+  },
+  {
+   "path": [
+    "User Interface and Accessibility"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "While in keybinds menu, hovering over an action bar keybind will now highlight the button on the action bar.",
+   "h": "e1c478e98d97"
+  }
+ ],
+ "new_lines": [
+  "65ad0c5dbf28",
+  "2c92b78b71f6",
+  "ce9a126c7693",
+  "7af7170ad89c",
+  "9901c029de7c",
+  "17ad62d3d3cf",
+  "9f0db8f51859",
+  "74239533c4c1",
+  "e1c478e98d97"
+ ],
+ "gone_lines": [],
+ "outdated": [],
+ "to_check": [],
+ "check": [],
+ "detected_at": "2026-11-04T19:41:41Z"
+}
