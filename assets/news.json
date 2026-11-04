@@ -1,6 +1,11 @@
 [
  {
   "date": "2026-11-04",
+  "title": "WoW: Forever Development Notes Updated - UI and Accessibility Updates",
+  "url": "https://www.wowhead.com/news=383741/wow-forever-development-notes-updated-ui-and-accessibility-updates"
+ },
+ {
+  "date": "2026-11-04",
   "title": "New Nvidia Drivers for World of Warcraft: Forever",
   "url": "https://www.wowhead.com/news=383738/new-nvidia-drivers-for-world-of-warcraft-forever"
  },
@@ -143,10 +148,5 @@
   "date": "2026-10-29",
   "title": "Everything You Need to Know for WoW: Forever's Global Launch",
   "url": "https://www.wowhead.com/news=383656/everything-you-need-to-know-for-wow-forevers-global-launch"
- },
- {
-  "date": "2026-10-29",
-  "title": "Forced World Refreshes Will Be Significantly Reduced for WoW: Forever",
-  "url": "https://www.wowhead.com/news=383649/forced-world-refreshes-will-be-significantly-reduced-for-wow-forever"
  }
 ]
