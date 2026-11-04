@@ -6070,5 +6070,6 @@
  "Your own cooldowns and buffs are shown without addons by the built-in Cooldown Manager: Options → Gameplay Enhancement.": "Własne cooldowny i buffy bez addonów pokazuje wbudowany Cooldown Manager: Options → Gameplay Enhancement.",
  "ForeverAuras on CurseForge": "ForeverAuras na CurseForge",
  "Don’t install addons that read the combat log or live only in Classic. As of November 4, 2026, these either have no Forever version or are useless:": "Nie instaluj addonów, które czytają dziennik walki albo żyją tylko w Classic. Na 4 listopada 2026 te albo nie mają wersji Forever, albo są bezużyteczne:",
- "Every addon below has a “WoW Forever” file on CurseForge (checked on November 4, 2026). Install three or four and add more as you need them: every extra addon is one more source of errors after a patch.": "Każdy z poniższych addonów ma na CurseForge plik „WoW Forever” (sprawdzono 4 listopada 2026). Zainstaluj trzy lub cztery i dodawaj kolejne w miarę potrzeby: każdy zbędny addon to kolejne źródło błędów po patchu."
+ "Every addon below has a “WoW Forever” file on CurseForge (checked on November 4, 2026). Install three or four and add more as you need them: every extra addon is one more source of errors after a patch.": "Każdy z poniższych addonów ma na CurseForge plik „WoW Forever” (sprawdzono 4 listopada 2026). Zainstaluj trzy lub cztery i dodawaj kolejne w miarę potrzeby: każdy zbędny addon to kolejne źródło błędów po patchu.",
+ "Gear planner": "Planer ekwipunku"
 }

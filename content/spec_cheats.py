@@ -616,6 +616,11 @@ NEXT_PFX = n9('Дальше', 'Next', 'Далі', 'Weiter', 'Suite', 'Siguiente'
 ROWS_ON = [i for i in range(len(GEAR_ROWS)) if any(i in g for g in GEAR.values())]
 
 
+def _gp():
+    import gear_planner   # noqa: E402  the planner's button text (character/gear/)
+    return gear_planner
+
+
 def _name(x, lang):
     return x if isinstance(x, str) else (x.get(lang) or x['en'])
 
@@ -1024,6 +1029,7 @@ def finish(guides, hero_core, langs_mod):
                          f'</dl>'
                          f'<p class="gbtns"><a class="btn cxnext" href="{leveling_href}">{escape(NEXT_PFX[lang])}: {escape(TAB["leveling"][lang])} →</a> '
                          f'<a class="btn ghost" id="cheatPick" href="../../tools/#pick={cid}">{escape(PICK[lang])}</a> '
+                         f'<a class="btn ghost" id="cheatGear" href="../../character/gear/#c={cid}&amp;s={spec}">{escape(_gp().TX["go"][lang])}</a> '
                          f'<button type="button" class="btn ghost" id="cheatShare">{escape(n["tx"]["share"])}</button> '
                          f'<span class="small" role="status" id="cheatMsg"></span></p></div>')
         g['title'], g['lead'], g['crumb'] = h1, lead, title

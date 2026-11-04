@@ -1240,3 +1240,4 @@ Show in full
 Launch checklist
 Spec cheat sheet: build, talents, leveling and group.
 Your build and a link to share it
+Gear planner
