@@ -13,6 +13,7 @@ import langs  # noqa: E402
 import talents  # noqa: E402
 from content import class_guides, spec_builds  # noqa: E402
 from content.hero import SPEC_IDS  # noqa: E402
+import gear_planner as GP  # noqa: E402
 
 LANGS = {'ru': '', 'en': 'en/', 'uk': 'uk/', 'de': 'de/', 'fr': 'fr/', 'es': 'es/', 'pt': 'pt/', 'it': 'it/', 'pl': 'pl/'}
 GEAR = json.load(open(os.path.join(ROOT, 'data', 'gear30.json'), encoding='utf-8'))
@@ -112,7 +113,8 @@ class PlayCard(unittest.TestCase):
                         self.assertEqual(mine[0], it['lvl'], (lang, iid))
                         self.assertTrue(16 <= mine[0] <= 30, (lang, iid))
                         self.assertEqual(mine[2], it['names'].get(lang) or it['names']['en'], (lang, iid))
-            self.assertIn('05.11' if lang == 'ru' else '5', c['tx']['gearHole'], lang)
+            self.assertNotIn('gearHole', c['tx'], lang)                      # no «no data yet»: the planner instead
+            self.assertEqual(c['tx']['gearGo'], GP.TX['go'][lang], lang)
 
     def test_no_names_in_code(self):
         code = read('build_guides.py')

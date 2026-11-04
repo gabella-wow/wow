@@ -1175,8 +1175,10 @@ function cardAb(c, lv) {
   const rows = past.slice(-Math.max(1, 4 - up.length)).concat(up);   // 4 lines: the last one taken, the next ones; «why» for the next ones only
   return `<ul class="pcl">${rows.map(r => liC(r[0], r[0] > lv, esc(r[1]), r[0] > lv && r[2] !== '—' ? esc(r[2]) : '')).join('')}</ul><p class="pcn">${esc(CT.abBeta)}</p>`;
 }
-function cardGear(sp, lv, fac) {
-  if (!sp.g) return `<p class="pcn">${esc(CT.gearHole)}</p>`;
+/* the gear planner on this hero: class, spec, race and level in its address (character/gear/, gear_planner.py) */
+const gearGo = (h, lv) => `<p class="pcgo"><a class="btn ghost" href="${HOME}character/gear/#c=${h.cls}${h.spec ? '&s=' + h.spec : ''}${h.race ? '&r=' + h.race : ''}&l=${lv}">${esc(CT.gearGo)}</a></p>`;
+function cardGear(sp, lv, fac, hero) {
+  if (!sp.g) return gearGo(hero, lv);
   const its = sp.g.filter(g => !g[1] || g[1] === fac).map(g => [g, C.it[g[0]]]);
   const li = ([g, it]) => liC(it[0], it[0] > lv, `<b class="iq${it[3]}">${esc(it[2])}</b>`, esc([it[1], g[2]].filter(Boolean).join(' · ')));
   let h;
@@ -1189,7 +1191,7 @@ function cardGear(sp, lv, fac) {
     const now = [...best.values()].sort((a, b) => b[1][0] - a[1][0]).slice(0, 4);
     h = now.length ? `<ul class="pcl" aria-label="${esc(CT.gearNow)}">${now.map(li).join('')}</ul>` : `<p class="pcn">${esc(fmtC(CT.gearNone, { n: cap }))}</p>`;
   }
-  return h + `<p class="pcn">${esc(CT.gearBeta)}${lv > 30 ? ' ' + esc(CT.gearUp) : ''}</p>`;
+  return h + `<p class="pcn">${esc(CT.gearBeta)}${lv > 30 ? ' ' + esc(CT.gearUp) : ''}</p>` + gearGo(hero, lv);
 }
 function cardDg(sp, m, lv, fac) {
   const R = ['tank', 'heal', 'dps'], role = sp ? (sp.r.includes(m.role) ? m.role : sp.r[0]) : R.includes(m.role) ? m.role : '';
@@ -1207,7 +1209,7 @@ function renderCard(m, lv, fac) {
   if (sp) $('#pLinks').hidden = true;
   if (sp) x += part(CT.tal, cardTal(sp, lv), moreC(sp.tU, CT.talAll));
   x += part(CT.ab, cardAb(c, lv), moreC(c.abU, CT.abAll));
-  if (sp) x += part(CT.gear, cardGear(sp, lv, fac), moreC(sp.gU, CT.gearAll));
+  if (sp) x += part(CT.gear, cardGear(sp, lv, fac, h), moreC(sp.gU, CT.gearAll));
   else x += `<div class="pcx"><p class="pcn">${esc(CT.noSpec)}</p><a class="btn ghost" href="${HOME}character/" data-hero-open>${esc(CT.pickSpec)}</a></div>`;
   x += part(CT.dg, cardDg(sp, m, lv, fac), '');
   box.innerHTML = x;
@@ -1607,9 +1609,9 @@ def hero_body(lang, root):
     return (HERO_CSS + '<div class="mch" id="hc">'
             f'<section class="frame mcard" id="hcCard" aria-live="polite"><div class="who"><span class="k">{escape(tx["title"])}</span>'
             f'<h2>{escape(tx["none"])}</h2><p class="mnote">{escape(tx["local"])}</p></div></section>'
+            f'<p class="gbtns" id="hcGear"><a class="btn ghost" href="{root}{GP.PATH}">{escape(GP.TX["go"][lang])}</a></p>'
             '<section class="frame mwiz" id="hcWiz" hidden></section>'
-            '<div class="mout" id="hcOut"></div></div>'
-            f'<p class="gbtns"><a class="btn ghost" href="{root}{GP.PATH}">{escape(GP.TX["go"][lang])}</a></p>')
+            '<div class="mout" id="hcOut"></div></div>')
 
 
 JS['hero'] = r'''/* My character: the hero of this browser ("gabella-wf-me") made in a wizard without a login, and what the guide
@@ -1781,7 +1783,11 @@ function lfgText() {
   return fill(near ? TX.lfgT : TX.lfgT0, { p: fill(TX.lfgP[me.role] || TX.lfgP.dps, { c: HC.cn[me.cls] }), d: near ? near[0] : '', l: lv });
 }
 function out() {
-  const box = $('#hcOut');
+  const box = $('#hcOut'), gear = $('#hcGear');
+  if (gear) {   /* the gear planner right under the card, on this hero: class, spec, race, level in its address (gear_planner.py) */
+    gear.hidden = !!wiz;
+    gear.firstChild.href = HOME + 'character/gear/' + (!wiz && valid(me) ? `#c=${me.cls}${me.spec ? '&s=' + me.spec : ''}${me.race ? '&r=' + me.race : ''}${+me.lvl ? '&l=' + +me.lvl : ''}` : '');
+  }
   if (wiz || !valid(me)) { box.innerHTML = ''; return; }
   const c = me.cls, sn = me.spec && sidx(c, me.spec) >= 0 ? HC.sn[c][sidx(c, me.spec)] : '';
   const link = (href, t, d) => `<a href="${HOME}${href}"><b>${esc(t)}</b><span>${esc(d)}</span></a>`;
@@ -2043,85 +2049,28 @@ def build_page(g, lang, tpl, base_css, sprite, src):
     return here + 'index.html', html, missing
 
 
-# 404.html at the root: GitHub Pages serves it for any bad address, in one language for everybody. A light page (no site chrome, no
-# redirect): every language holds its own block of text, a head script only picks one (path /wow/<lang>/..., saved choice, browser, en);
-# without JS all blocks show as a short list. The full localized pages stay at <lang>/404.html. The link preview is the same for every
-# language (assets/og/404.jpg: mark and name, no words of a language; tools/make_og.py), because one file answers every bad address.
-NOT_FOUND_LIGHT = r"""<!doctype html>
-<html lang="ru">
-<head>
-<meta charset="utf-8">
-<meta name="robots" content="noindex">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>@@TITLE@@ · Gabella</title>
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Gabella">
-<meta property="og:title" content="Gabella · WoW Forever">
-<meta property="og:description" content="gabella.site/wow/">
-<meta property="og:image" content="https://gabella.site/wow/assets/og/404.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" type="image/png" sizes="48x48" href="/wow/assets/icons/favicon-48.png">
-<script>
+# the root 404.html is the Russian page; a reader of another language (the address /wow/<lang>/…, the saved choice, the browser, as
+# the guide root build.AUTO_JS) goes on to the full page of that language, <lang>/404.html
+NOT_FOUND_LANG = r"""<script>
 (function () {
-  // the same order as the guide root (build.AUTO_JS): the language of the address, the saved choice, the browser, else English
   var L = '@@LANGS@@'.split(' '), A = { be: 'ru', kk: 'ru' }, m = location.pathname.match(/^\/wow\/([a-z]{2})\//), l = m && L.indexOf(m[1]) > -1 ? m[1] : '';
   if (!l) { try { var w = localStorage.getItem('gabella-lang'); if (L.indexOf(w) > -1) l = w; } catch (e) {} }
   for (var i = 0, n = navigator.languages || [navigator.language || '']; !l && i < n.length; i++) { var c = String(n[i]).toLowerCase().split('-')[0]; c = A[c] || c; if (L.indexOf(c) > -1) l = c; }
   l = l || 'en';
-  var T = @@TITLES@@, d = document.documentElement;   // the chosen language: lang and title of the page follow it (screen readers, tabs)
-  if (l) { d.setAttribute('data-l', l); d.lang = T[l][0]; document.title = T[l][1] + ' · Gabella'; }
+  if (l !== 'ru') location.replace('/wow/' + l + '/404.html');
 })();
-</script>
-<style>
-:root { color-scheme: dark light; --bg: #050505; --fg: #ece6d8; --muted: #a8a294; --gold: #c9a54a; --line: #2a2820; }
-@media (prefers-color-scheme: light) { :root { --bg: #f6f1e6; --fg: #1d1a14; --muted: #5f594b; --gold: #7a5a14; --line: #d8cfba; } }
-* { box-sizing: border-box; }
-body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px 16px; background: var(--bg); color: var(--fg); font: 1rem/1.5 Georgia, "Times New Roman", serif; }
-main { width: 100%; max-width: 520px; }
-.brand { margin: 0 0 20px; font-size: .85rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
-section { padding: 14px 0; border-top: 1px solid var(--line); }
-h1 { margin: 0 0 8px; font-size: 1.5rem; font-weight: 600; line-height: 1.2; }
-section p { margin: 0 0 8px; }
-.why { color: var(--muted); }
-a { color: var(--gold); text-underline-offset: 3px; }
-:root[data-l] section { display: none; border-top: 0; padding-top: 0; }
-@@SHOW@@
-</style>
-</head>
-<body>
-<main>
-<p class="brand">Gabella · WoW Forever</p>
-@@BLOCKS@@
-</main>
-</body>
-</html>
-"""
-
-
-def not_found_light():
-    """The root 404.html: one block per language (title, why, the way home), see NOT_FOUND_LIGHT. The reason is the first
-    sentence of the full page's lead (the rest points at sections the light page does not have)."""
-    why = {l: re.split(r'(?<=\.)\s', NOT_FOUND['lead'][l], maxsplit=1)[0] for l in LANGS}
-    blocks = '\n'.join(
-        f'<section lang="{langs.HREFLANG[l]}" data-k="{l}"><h1>{NOT_FOUND["title"][l]}</h1><p class="why">{why[l]}</p><p><a href="/wow/{"" if l == "ru" else l + "/"}">{langs.AUTONYM[l]} · gabella.site/wow/</a></p></section>'
-        for l in LANGS)
-    titles = json.dumps({l: [langs.HREFLANG[l], NOT_FOUND['title'][l]] for l in LANGS}, ensure_ascii=False)
-    html = NOT_FOUND_LIGHT.replace('@@TITLE@@', NOT_FOUND['title']['ru']).replace('@@LANGS@@', ' '.join(LANGS)).replace('@@BLOCKS@@', blocks).replace('@@TITLES@@', titles)
-    html = html.replace('@@SHOW@@', '\n'.join(f':root[data-l="{l}"] section[data-k="{l}"] {{ display: block; }}' for l in LANGS))
-    return html
+</script>"""
 
 
 def not_found_page(tpl, base_css, sprite, src, lang='ru'):
-    """404.html at the root: the light page for every language (GitHub Pages serves it at any depth under /wow/).
-    <lang>/404.html: the full page per language, noindex, not canonical; <base> keeps its relative links working."""
-    if lang == 'ru':
-        return '404.html', not_found_light(), []
+    """404.html: the full page with the site's header, search and fonts, noindex, not canonical; <base> keeps its relative links
+    working at any depth. The root one (GitHub Pages serves it for any bad address under /wow/) is Russian and sends a reader of
+    another language on to <lang>/404.html (NOT_FOUND_LANG)."""
     _, html, missing = build_page(NOT_FOUND, lang, tpl, base_css, sprite, src)
     html = re.sub(r'<link rel="(canonical|alternate)"[^>]*>\n', '', html)
     html = re.sub(r'<meta property="og:[^>]*>\n', '', html)
-    html = html.replace('<head>', f'<head>\n<base href="/wow/{page_dir(lang)}">\n<meta name="robots" content="noindex">', 1)
+    go = NOT_FOUND_LANG.replace('@@LANGS@@', ' '.join(LANGS)) + '\n' if lang == 'ru' else ''
+    html = html.replace('<head>', f'<head>\n<base href="/wow/{page_dir(lang)}">\n<meta name="robots" content="noindex">\n{go}', 1)
     html = html.replace('data-page=""', 'data-page="404"', 1)   # me.js: the secret for getting lost
     return page_dir(lang, '404.html'), html, missing
 

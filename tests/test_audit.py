@@ -59,25 +59,22 @@ def test_launch_time_local_not_kyiv():
 
 
 def test_not_found_per_language():
-    """Root 404.html (GitHub Pages serves it for any bad address): a light page, no redirect, a block of text per language that shows
-    without JS; the head script only picks the block of the address or the browser. <lang>/404.html: the full page, noindex."""
-    root = page('404.html')
-    assert 'noindex' in root and 'location.replace' not in root and 'sessionStorage' not in root
-    assert len(root.encode('utf-8')) < 8000, len(root)
-    assert re.findall(r'<section lang="[^"]+" data-k="(\w+)"', root) == list(LANGS)
+    """404.html (GitHub Pages serves the root one for any bad address): the full page of the site (header, search, fonts), noindex,
+    <base> for its relative links at any depth. The root page is Russian; its head script sends a reader of another language
+    (the address /wow/<lang>/…, the saved choice, the browser, else English) on to <lang>/404.html. Every home link has its own name."""
     for lang in LANGS:
-        assert f':root[data-l="{lang}"] section[data-k="{lang}"]' in root, lang
-        assert re.search(rf'data-k="{lang}"><h1>[^<]+</h1><p class="why">[^<]+\.</p><p><a href="/wow/{"" if lang == "ru" else lang + "/"}">', root), lang
-    assert "localStorage.getItem('gabella-lang')" in root and "l = l || 'en'" in root   # as the guide root: saved choice, else English
-    # the chosen language also sets <html lang> and the tab title (screen readers read the page in its language)
-    titles = json.loads(re.search(r'var T = (\{.*?\}), d = ', root).group(1))
-    assert list(titles) == list(LANGS) and all(len(v) == 2 and v[1] for v in titles.values()), titles
-    assert 'd.lang = T[l][0]' in root and 'document.title = T[l][1]' in root
-    for lang in LANGS[1:]:
-        nf = page(lang, '404.html')
-        assert f'<base href="/wow/{lang}/">' in nf and 'noindex' in nf and 'location.replace(' not in nf, lang
+        nf = page('404.html') if lang == 'ru' else page(lang, '404.html')
+        d = '' if lang == 'ru' else lang + '/'
+        assert f'<base href="/wow/{d}">' in nf and 'noindex' in nf and 'rel="canonical"' not in nf, lang
+        assert 'class="iconbtn srchbtn"' in nf, lang                                     # the site's search in the header
+        assert 'assets/fonts/' in nf, lang                                                  # the site's fonts, not the system serif
         links = re.search(r'<p class="nf-langs">(.*?)</p>', nf).group(1)   # "where next": absolute links to every home, not ./en/ under <base>
         assert re.findall(r'href="([^"]+)"', links) == ['/wow/'] + [f'/wow/{l}/' for l in LANGS[1:]], lang
+        names = re.findall(r'>([^<]+)</a>', links)
+        assert len(set(names)) == len(LANGS), names                                      # no nine links with one caption
+        assert ('location.replace(' in nf) == (lang == 'ru'), lang
+    root = page('404.html')
+    assert "localStorage.getItem('gabella-lang')" in root and "l = l || 'en'" in root and "if (l !== 'ru') location.replace('/wow/' + l + '/404.html')" in root
 
 
 def test_home_waits_for_the_hero():

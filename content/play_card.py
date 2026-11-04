@@ -53,15 +53,6 @@ TX = {
                   'Indossabile ora', 'Możesz założyć'),
     'gearSoon': n9('С {n} уровня', 'From level {n}', 'З {n} рівня', 'Ab Stufe {n}', 'Dès le niveau {n}', 'Desde el nivel {n}',
                    'A partir do nível {n}', 'Dal livello {n}', 'Od poziomu {n}'),
-    'gearHole': n9('Данных пока нет: в гайдах беты список для этого спека неполный. Соберём его из клиента игры после 05.11.',
-                   'No data yet: the beta guides give this spec an incomplete list. We will collect it from the game client after Nov 4–5.',
-                   'Даних поки немає: у гайдах бети список для цього спеку неповний. Зберемо його з клієнта гри після 5 листопада.',
-                   'Noch keine Daten: Die Beta-Guides haben für diese Skillung nur eine lückenhafte Liste. Wir lesen sie nach dem 5. November aus dem Spielclient aus.',
-                   'Pas encore de données : les guides de la bêta donnent une liste incomplète pour cette spécialisation. Nous la tirerons du client du jeu après le 5 novembre.',
-                   'Aún no hay datos: las guías de la beta dan una lista incompleta para esta especialización. La sacaremos del cliente del juego después del 5 de noviembre.',
-                   'Ainda não há dados: os guias da beta trazem uma lista incompleta para esta especialização. Vamos tirá-la do cliente do jogo depois de 5 de novembro.',
-                   'Ancora nessun dato: le guide della beta danno un elenco incompleto per questa specializzazione. Lo ricaveremo dal client del gioco dopo il 5 novembre.',
-                   'Na razie brak danych: poradniki z bety mają dla tej specjalizacji niepełną listę. Zbierzemy ją z klienta gry po 5 listopada.'),
     'gearNone': n9('Предметов с уровнем до {n} в списке нет.', 'The list has no items up to level {n}.', 'Предметів із рівнем до {n} у списку немає.',
                    'Die Liste hat keine Gegenstände bis Stufe {n}.', 'La liste n’a aucun objet jusqu’au niveau {n}.', 'La lista no tiene objetos hasta el nivel {n}.',
                    'A lista não tem itens até o nível {n}.', 'L’elenco non ha oggetti fino al livello {n}.', 'Lista nie ma przedmiotów do poziomu {n}.'),
@@ -168,7 +159,7 @@ def data(lang, L, tr, guides, slugs, spec_ids, spec_roles, dungeon_links):
     tx = {k: v[lang] for k, v in TX.items()}
     tx.update({'free': talents.UI['free'][lang], 'perk': talents.UI['perk'][lang], 'lvnote': talents.UI['lvnote'][lang],
                'beta': talents.UI['beta'][lang], 'gearBeta': SC.G_TEMP[lang], 'gearAll': SC.G_GO[lang], 'gearUp': SC.G_L60[lang],
-               'abBeta': BETA_TRAINER[lang],
+               'abBeta': BETA_TRAINER[lang], 'gearGo': __import__('gear_planner').TX['go'][lang],
                'roles': {'tank': tr('Танк', lang), 'heal': tr('Лекарь', lang), 'dps': tr('Урон', lang)}})
     cls, items = {}, {}
     for cid, specs in spec_ids.items():
