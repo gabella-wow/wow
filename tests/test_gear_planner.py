@@ -66,6 +66,20 @@ assert.deepStrictEqual(t, { int: 5, sta: 2, agi: 4, dps: 12, sp: 5 });
 const ours = C.fill(items, [1, 2, 4, 5, 7, 8, 9], { c: 'mage', l: 30 }, w);
 assert.deepStrictEqual(ours, { head: 1, finger1: 8, finger2: 9, main: 4 });
 assert.deepStrictEqual(C.fill(items, [1, 8], { c: 'mage', l: 16 }, w), { head: 1 });
+// the picker compares with the item of THIS cell only: an empty cell has nothing to unequip and every change is a plus
+const gw = { head: 1, finger1: 8, trinket1: 0 };
+assert.strictEqual(C.worn(gw, 'feet', by), null);
+assert.strictEqual(C.worn(gw, 'head', by).id, 1);
+assert.strictEqual(C.worn(gw, 'finger1', by).id, 8);
+assert.strictEqual(C.worn(gw, 'finger2', by), null);                  // ring 2 is its own cell
+assert.strictEqual(C.worn({ feet: 1 }, 'feet', by), null);            // a head item under «feet» counts as nothing
+assert.deepStrictEqual(C.diff(by[9], null), { sta: 3 });              // empty cell: all plus
+assert.deepStrictEqual(C.diff(by[9], C.worn(gw, 'finger1', by)), { int: -4, sta: 3 });
+assert.deepStrictEqual(C.diff(by[8], C.worn(gw, 'finger2', by)), { int: 4 });
+// an address with an item in a foreign cell, an unknown id and a shield beside a two-hander: cleaned
+assert.deepStrictEqual(C.clean({ feet: 1, head: 1, neck: 999, main: 4, off: 6, finger2: 9 }, by, 'warrior'), { head: 1, main: 4, finger2: 9 });
+assert.deepStrictEqual(C.clean({ off: 5 }, by, 'mage'), {});          // a dagger in the off hand: dual wielders only
+assert.deepStrictEqual(C.clean({ off: 5 }, by, 'rogue'), { off: 5 });
 console.log('core ok');
 '''
 

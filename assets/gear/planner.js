@@ -87,6 +87,23 @@
     if (cell === 'main' && it.s === 'two') delete n.off;
     return n;
   }
+  /* the item worn in THIS cell (finger1 and finger2, trinket1 and trinket2 apart), or null: an id that does not fit the cell counts as nothing */
+  function worn(g, cell, byId, c) { var it = g[cell] && byId[g[cell]]; return it && fits(it, cell, c || '') ? it : null; }
+  /* gear of an address: ids the catalog lacks or that do not fit their cell are dropped, a two-hander empties the off hand */
+  function clean(g, byId, c) {
+    var n = {};
+    for (var k in g) if (CELLS.indexOf(k) > -1 && worn(g, k, byId, c)) n[k] = g[k];
+    if (offLocked(n, byId)) delete n.off;
+    return n;
+  }
+  /* stat changes from `was` (null: an empty cell) to `it`: {stat: difference}, zeros left out */
+  function diff(it, was) {
+    var d = {}, ks = {}, k;
+    for (k in it.st) ks[k] = 1;
+    if (was) for (k in was.st) ks[k] = 1;
+    for (k in ks) { var v = Math.round(((it.st[k] || 0) - (was ? was.st[k] || 0 : 0)) * 10) / 10; if (v) d[k] = v; }
+    return d;
+  }
   function offLocked(g, byId) { var m = g.main && byId[g.main]; return !!(m && m.s === 'two'); }
   /* address <-> state: #c=mage&s=frost&r=gnome&l=24&g=head:1234,neck:5678&t=<talent code> */
   function enc(S) {
@@ -149,7 +166,7 @@
     return g;
   }
   var Core = { CELLS: CELLS, canWear: canWear, fits: fits, need: need, score: score, cands: cands, sum: sum, equip: equip, offLocked: offLocked,
-    enc: enc, dec: dec, unpack: unpack, fill: fill, norm: norm };
+    worn: worn, clean: clean, diff: diff, enc: enc, dec: dec, unpack: unpack, fill: fill, norm: norm };
   if (typeof module !== 'undefined' && module.exports) module.exports = Core;
   if (typeof document === 'undefined' || !document.getElementById('gpData')) return;
 
@@ -174,10 +191,7 @@
     if (base === h && !h.r && me.race) S.r = me.race;
     fix();
   }
-  function clean() {   /* ids of the address that the catalog lacks or that do not fit their slot are dropped */
-    for (var c in S.g) { var it = byId[S.g[c]]; if (!it || !fits(it, c, S.c)) delete S.g[c]; }
-    if (offLocked(S.g, byId)) delete S.g.off;
-  }
+  function cleanS() { S.g = clean(S.g, byId, S.c); }
   function fix() {   /* spec and race that belong to the class */
     var cl = C.cls.filter(function (x) { return x[0] === S.c; })[0];
     if (cl[2].indexOf(S.s) < 0) S.s = '';
@@ -205,7 +219,7 @@
     if (!loading) loading = fetch(C.data).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).then(function (D) {
       items = unpack(D);
       items.forEach(function (it) { byId[it.id] = it; });
-      clean();
+      cleanS();
       C.b = D.b;
       gp.style.setProperty('--gsp', 'url("' + C.sprite + '")');
       dlg.style.setProperty('--gsp', 'url("' + C.sprite + '")');
@@ -231,7 +245,7 @@
   function ours(it) { var b = S.s && C.b && C.b[S.c + '-' + S.s]; return !!(b && b.indexOf(it.id) > -1); }
   function srcLine(it) { return [it.src ? it.src[1] : '', ours(it) ? T.ours : ''].filter(Boolean).join(' · '); }
   function drawCell(cell) {
-    var w = gp.querySelector('[data-cell="' + cell + '"]'), id = S.g[cell], it = id && byId[id], name = C.slot[cell];
+    var w = gp.querySelector('[data-cell="' + cell + '"]'), it = worn(S.g, cell, byId, S.c), name = C.slot[cell];
     var lock = cell === 'off' && offLocked(S.g, byId);
     if (!it) {
       w.className = 'gpsw';
@@ -247,7 +261,7 @@
       '</span></button><button class="gpx" type="button" aria-label="' + esc(T.remove + ': ' + it.n) + '">✕</button>';
   }
   function drawStats() {
-    var eq = CELLS.map(function (c) { var it = S.g[c] && byId[S.g[c]]; return it ? { cell: c, it: it } : null; });
+    var eq = CELLS.map(function (c) { var it = worn(S.g, c, byId, S.c); return it ? { cell: c, it: it } : null; });
     var t = sum(eq), keys = ['str', 'agi', 'sta', 'int', 'spi', 'armor'];
     Object.keys(C.long).forEach(function (k) { if (keys.indexOf(k) < 0 && t[k]) keys.push(k); });
     $('gpStL').innerHTML = keys.map(function (k) {
@@ -283,10 +297,7 @@
     if (!matchMedia('(pointer: coarse)').matches) $('gpQ').focus();
   }
   function delta(it, was) {
-    var w = weights(), d = {}, ks = {};
-    for (var k in it.st) ks[k] = 1;
-    if (was) for (k in was.st) ks[k] = 1;
-    for (k in ks) { var v = Math.round(((it.st[k] || 0) - (was ? was.st[k] || 0 : 0)) * 10) / 10; if (v) d[k] = v; }
+    var w = weights(), d = diff(it, was), k;
     var wt = function (k) { return w ? (w[k] || 0) : (k === 'armor' ? .02 : k === 'dps' ? .5 : 1); };
     var keys = Object.keys(d).sort(function (a, b) { return Math.abs(d[b] * wt(b)) - Math.abs(d[a] * wt(a)); }).slice(0, 2);
     var tot = 0;
@@ -309,7 +320,7 @@
     if (!force && a === drawn[0] && b === drawn[1]) return;
     var focus = document.activeElement && document.activeElement.dataset && document.activeElement.dataset.i;
     drawn = [a, b];
-    var was = S.g[openCell] && byId[S.g[openCell]], html = '';
+    var was = worn(S.g, openCell, byId, S.c), html = '';
     for (var i = a; i < b; i++) html += row(rows[i], i, was);
     inner.innerHTML = html;
     if (focus !== undefined && focus !== null) { var f = inner.querySelector('[data-i="' + focus + '"]'); if (f) f.focus({ preventScroll: true }); }
@@ -322,7 +333,7 @@
     var w = weights(), sn = S.s ? C.cls.filter(function (x) { return x[0] === S.c; })[0] : null;
     var note = !S.s ? T.sortNone : w ? fmt(T.sortSpec, { s: sn[3][sn[2].indexOf(S.s)] }) : T.sortIl;
     $('gpKm').textContent = (rows.length ? fmt(T.count, { n: rows.length }) : T.none.replace(/[.。]$/, '')) + '. ' + note;
-    var was = S.g[openCell] && byId[S.g[openCell]];
+    var was = worn(S.g, openCell, byId, S.c);   /* «Unequip» only when this very cell has an item */
     $('gpOff').innerHTML = was ? '<button class="gpr off" type="button" data-off="1"><span class="gpi no" aria-hidden="true">✕</span><span class="gpt"><span class="gpn">' +
       esc(T.remove) + '</span><span class="gpm">' + esc(was.n) + '</span></span></button>' : '';
     if (reset) list.scrollTop = 0;
@@ -410,7 +421,7 @@
     var h = dec(location.hash);
     if (!clsOk(h.c) || enc(h) === enc(S)) return;
     S = { c: h.c, s: h.s, r: h.r, l: h.l || S.l, g: h.g, t: h.t };
-    if (items) clean();
+    if (items) cleanS();
     changed();
     if (Object.keys(S.g).length) load().then(draw);
   });
