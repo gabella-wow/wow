@@ -16,6 +16,7 @@ on:
 permissions:
   contents: write
   issues: write
+  actions: read
 concurrency: { group: news-auto, cancel-in-progress: false }
 jobs:
   watch:
@@ -60,10 +61,21 @@ jobs:
           exit 1
       - name: Save state
         if: always()
+        env: { GH_TOKEN: '${{ secrets.GITHUB_TOKEN }}' }
         run: |
           rm -f state/published.txt
           cd state
           git add -A
           git diff --cached --quiet && exit 0
           git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -q -m "news-data $(date -u +%Y-%m-%dT%H:%MZ)"
-          git push origin HEAD:news-data
+          # GitHub answers 500 now and then (04.11: 4 of 6 runs): retry after 5/15/45 s, fetch+rebase before each repeat.
+          # The state is lost only if all four pushes fail; then the run is red only when the two runs before it were red too.
+          for wait in 0 5 15 45; do
+            sleep $wait
+            git push origin HEAD:news-data && exit 0
+            git fetch -q origin news-data && git -c user.name=x -c user.email=x@x rebase -q FETCH_HEAD || git rebase --abort || true
+          done
+          echo '::warning::news-data push failed 4 times; state of this run is lost, the next run repeats the check'
+          red=$(gh run list --workflow news-auto.yml --status completed --limit 2 --json conclusion --jq '[.[]|select(.conclusion=="failure")]|length')
+          [ "${red:-0}" -ge 2 ] && exit 1
+          exit 0
