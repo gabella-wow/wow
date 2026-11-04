@@ -14,7 +14,7 @@
 <link rel="icon" type="image/png" sizes="96x96" href="../assets/icons/favicon-96.png?v=8838ef8f">
 <link rel="preload" href="../assets/fonts/spectral-sc-ru-uk.woff2?v=5fb5d8ed" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../assets/fonts/golos-text-ru-uk.woff2?v=14d5f312" as="font" type="font/woff2" crossorigin>
-<script>(function(){var D={"m":{"warrior":{"alliance":"warrior-human","horde":"warrior-orc"},"paladin":{"alliance":"paladin-human","horde":"paladin-undead"},"hunter":{"alliance":"hunter-nightelf","horde":"hunter-orc"},"rogue":{"alliance":"rogue-nightelf","horde":"rogue-orc"},"priest":{"alliance":"priest-gnome","horde":"priest-undead"},"shaman":{"alliance":"shaman-dwarf","horde":"shaman-orc"},"mage":{"alliance":"mage-gnome","horde":"mage-orc"},"warlock":{"alliance":"warlock-gnome","horde":"warlock-orc"},"druid":{"alliance":"druid-nightelf","horde":"druid-tauren"}},"r":{"human":"alliance","dwarf":"alliance","nightelf":"alliance","gnome":"alliance","skyA":"alliance","orc":"horde","undead":"horde","tauren":"horde","troll":"horde","skyH":"horde"},"b":[6,11,17,23]},M=D.m,R=D.r,B=D.b,K="gabella-side";function rd(k){var v=null;try{v=JSON.parse(localStorage.getItem(k))}catch(e){}return v}function st(h){return h&&R[h.race]?h.race+"."+h.cls:""}function fac(){var h=rd("gabella-wf-me"),m=rd(K);if(m&&(m.f=="alliance"||m.f=="horde")&&m.h===st(h))return m.f;if(h&&R[h.race])return R[h.race];var t=document.documentElement.getAttribute("data-tod"),s=null;if(!t){try{s=localStorage.getItem("gabella-tod")}catch(e){}var H=new Date().getHours();t=/^(dawn|day|dusk|night)$/.test(s)?s:H>=B[0]&&H<B[2]?"day":"night"}return t=="dusk"||t=="night"?"horde":"alliance"}function id(c,f){return M[c]?M[c][f||fac()]:c}function url(s,f){return s.replace(/\{(\w+)\}/g,function(x,c){return M[c]?id(c,f):x})}function fill(el,f){el=el||document;el.querySelectorAll("[data-por-srcset]").forEach(function(e){var v=url(e.getAttribute("data-por-srcset"),f);if(e.getAttribute("srcset")!==v)e.setAttribute("srcset",v)});el.querySelectorAll("[data-por-src]").forEach(function(e){var v=url(e.getAttribute("data-por-src"),f);if(e.getAttribute("src")!==v)e.setAttribute("src",v)})}function set(f){try{localStorage.setItem(K,JSON.stringify({f:f,h:st(rd("gabella-wf-me"))}))}catch(e){}fill();dispatchEvent(new Event("gabella-side"))}window.GabellaPor={map:M,side:R,fac:fac,id:id,url:url,fill:fill,set:set};var re=function(){fill()};document.addEventListener("DOMContentLoaded",re);addEventListener("gabella-me",re);document.addEventListener("gabella:tod",re);addEventListener("storage",function(e){if(e.key=="gabella-wf-me"||e.key==K){re();dispatchEvent(new Event("gabella-side"))}})})();</script>
+<script>(function(){var D={"m":{"warrior":{"alliance":"warrior-human","horde":"warrior-orc"},"paladin":{"alliance":"paladin-human","horde":"paladin-undead"},"hunter":{"alliance":"hunter-nightelf","horde":"hunter-orc"},"rogue":{"alliance":"rogue-nightelf","horde":"rogue-orc"},"priest":{"alliance":"priest-gnome","horde":"priest-undead"},"shaman":{"alliance":"shaman-dwarf","horde":"shaman-orc"},"mage":{"alliance":"mage-gnome","horde":"mage-orc"},"warlock":{"alliance":"warlock-gnome","horde":"warlock-orc"},"druid":{"alliance":"druid-nightelf","horde":"druid-tauren"}},"r":{"human":"alliance","dwarf":"alliance","nightelf":"alliance","gnome":"alliance","skyA":"alliance","orc":"horde","undead":"horde","tauren":"horde","troll":"horde","skyH":"horde"},"b":[6,11,17,23],"x":{"warrior":"horde","paladin":"alliance","hunter":"alliance","rogue":"horde","priest":"horde","shaman":"alliance","mage":"alliance","warlock":"horde","druid":"horde"}},M=D.m,R=D.r,B=D.b,K="gabella-side";function rd(k){var v=null;try{v=JSON.parse(localStorage.getItem(k))}catch(e){}return v}function st(h){return h&&R[h.race]?h.race+"."+h.cls:""}function fac(){var h=rd("gabella-wf-me"),m=rd(K);if(m&&(m.f=="alliance"||m.f=="horde")&&m.h===st(h))return m.f;if(h&&R[h.race])return R[h.race];var t=document.documentElement.getAttribute("data-tod"),s=null;if(!t){try{s=localStorage.getItem("gabella-tod")}catch(e){}var H=new Date().getHours();t=/^(dawn|day|dusk|night)$/.test(s)?s:H>=B[0]&&H<B[2]?"day":"night"}return t=="dusk"||t=="night"?"horde":"alliance"}function id(c,f){return M[c]?M[c][f||fac()]:c}function pre(c){var h=rd("gabella-wf-me"),m=rd(K);if((h&&R[h.race])||(m&&m.h===st(h)&&(m.f=="alliance"||m.f=="horde")))return fac();return D.x[c]||fac()}function url(s,f){return s.replace(/\{(\w+)\}/g,function(x,c){return M[c]?id(c,f):x})}function fill(el,f){el=el||document;el.querySelectorAll("[data-por-srcset]").forEach(function(e){var v=url(e.getAttribute("data-por-srcset"),f);if(e.getAttribute("srcset")!==v)e.setAttribute("srcset",v)});el.querySelectorAll("[data-por-src]").forEach(function(e){var v=url(e.getAttribute("data-por-src"),f);if(e.getAttribute("src")!==v)e.setAttribute("src",v)})}function set(f){try{localStorage.setItem(K,JSON.stringify({f:f,h:st(rd("gabella-wf-me"))}))}catch(e){}fill();dispatchEvent(new Event("gabella-side"))}window.GabellaPor={map:M,side:R,fac:fac,pre:pre,id:id,url:url,fill:fill,set:set};var re=function(){fill()};document.addEventListener("DOMContentLoaded",re);addEventListener("gabella-me",re);document.addEventListener("gabella:tod",re);addEventListener("storage",function(e){if(e.key=="gabella-wf-me"||e.key==K){re();dispatchEvent(new Event("gabella-side"))}})})();</script>
 <style>
 /* Game-portal layout: full-screen art hero, faction banners, class portrait roster, tools, guides band. Night + gold, light paper theme for content. */
 @font-face { font-family: "Spectral SC"; font-style: normal; font-weight: 400 700; font-display: swap; src: url(../assets/fonts/spectral-sc-latin-ext.woff2?v=1ba52ac6) format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
@@ -1397,6 +1397,15 @@ a.frc:hover { text-decoration-color: var(--gold); }
 .cxrows dd a { color: var(--gold-2); }
 .btn.cxnext { min-height: 52px; padding: 0 26px; font-size: var(--fs-16); }
 @media (max-width: 719px) { .cxrows > div { grid-template-columns: minmax(0, 1fr); } .btn.cxnext { width: 100%; justify-content: center; text-align: center; } }
+/* Pages of single dungeons: the bosses in order, one plate each, the three roles as rows (content/dungeon_pages.py) */
+.dgboss { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 10px; }
+.dgboss > li { padding: 16px 18px 8px; border-radius: 6px; background: var(--panel-2); }
+.dgboss h3 { margin: 0 0 6px; font-size: var(--fs-18); }
+.dgboss .dgm { color: var(--muted); font-family: var(--font-body); font-size: var(--fs-14); font-weight: 400; }
+.dgboss > li > p { margin: 0 0 8px; }
+.dgboss .cxrows { margin: 10px 0 8px; }
+.dgboss .cxrows > div:last-child { border-bottom: 0; padding-bottom: 0; }
+@media (min-width: 720px) { .dgboss .cxrows > div { grid-template-columns: 110px minmax(0, 1fr); } }
 /* Spec cheat sheet, gear up to level 30: one table by slot, the slot named once, item names in the game's quality colours (toned for black and cream) */
 :root { --q0: #8f8f8f; --q2: #5cb84c; --q3: #4b97e3; --q4: #b07ce6; --q5: #e0913f; }
 :root[data-theme="light"] { --q0: #6e6e6e; --q2: #2c7a21; --q3: #1d5fae; --q4: #7a40b0; --q5: #a65a17; }
@@ -1436,6 +1445,22 @@ a.frc:hover { text-decoration-color: var(--gold); }
 }
 .gplay .btn { margin-left: auto; }
 .gbody.play { padding-top: 14px; }
+/* Talent calculator (talents/, build_guides.calc_*): a text heading, no picture, the tool right under it */
+.chead { padding: calc(var(--top) + 28px) 0 4px; }
+.chead .wrap { display: grid; gap: 10px; justify-items: start; }
+.chead .crumbs { display: flex; flex-wrap: wrap; gap: 6px 10px; font-size: var(--fs-14); color: var(--muted); }
+.chead .crumbs a { color: var(--muted); text-decoration: none; }
+.chead .crumbs a:hover { color: var(--fg); text-decoration: underline; }
+.chead h1 { font-size: var(--fs-40); line-height: 1.05; color: var(--fg); }
+:root .chead h1.long { font-size: min(var(--fs-40), calc((100vw - 64px) / (var(--lw, 12) * .74))); }
+.chead .upd { margin: 0; color: var(--muted); text-shadow: none; }
+.chead .glead { margin: 0; max-width: 72ch; font-size: var(--fs-16); color: var(--muted); }
+.chead :is(h1, .glead, .crumbs) { text-shadow: none; }   /* no picture under the heading: no shade for the text either */
+.gbody.calcp { padding-top: 16px; }
+.calcs { padding: 18px; }
+.calcl { margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr)); }
+.calcl a[aria-current] { border-color: var(--gold); }
+@media (max-width: 719px) { .chead { padding-top: calc(var(--top) + 16px); } .chead .wrap { gap: 8px; } .chead :is(.crumbs, .upd) { display: none; }   /* phones: the tree on the first screen; the tab bar is the way back */ .chead h1 { font-size: var(--fs-28); } :root .chead h1.long { font-size: min(var(--fs-28), calc((100vw - 32px) / (var(--lw, 12) * .74))); } .calcs { padding: 14px 12px; } }
 /* the beta mark after a fact Blizzard has not confirmed (<span class="beta-note">за даними бети</span> in a guide text, as on the home page) */
 .beta-note { color: var(--muted); font-size: var(--fs-13); font-weight: 400; font-style: normal; white-space: nowrap; }
 .beta-note::before { content: "("; } .beta-note::after { content: ")"; }
@@ -1758,9 +1783,9 @@ a.frc:hover { text-decoration-color: var(--gold); }
 <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png?v=00a6a7d9">
 <meta name="apple-mobile-web-app-title" content="Gabella WoW">
 <link rel="stylesheet" href="../assets/radio/radio.css?v=556d7dc63f" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="../assets/search/search.css?v=d662144818" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="../assets/search/search.css?v=d8ecf0a81c" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="../assets/me/me.css?v=31a96a9cac" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="../assets/hero/hero.css?v=cc9d30bf3d" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="../assets/hero/hero.css?v=c87ea2ee87" media="print" onload="this.media='all'">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -1992,8 +2017,8 @@ addEventListener('beforeinstallprompt', e => {
 });
 </script>
 <script src="../assets/radio/radio.js?v=556d7dc63f" data-root="../" defer></script>
-<script src="../assets/search/search.js?v=d662144818" data-root="../" defer></script>
+<script src="../assets/search/search.js?v=d8ecf0a81c" data-root="../" defer></script>
 <script src="../assets/me/me.js?v=31a96a9cac" data-root="../" data-home="./" data-lang="uk" data-ach="0" data-teaser="" data-close="Закрити" data-page="404" data-look="2" defer></script>
-<script src="../assets/hero/hero.js?v=cc9d30bf3d" data-root="../" data-home="./" data-data="../assets/hero/uk.json?v=cc9d30bf3d" defer></script>
+<script src="../assets/hero/hero.js?v=c87ea2ee87" data-root="../" data-home="./" data-data="../assets/hero/uk.json?v=c87ea2ee87" defer></script>
 </body>
 </html>
