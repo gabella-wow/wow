@@ -64,7 +64,7 @@ const BUFF = { warrior:'Grito de guerra', paladin:'Bendición de los Reyes', hun
 const RACES = [
   { id:'human', n:'Humano', f:'alliance',
     cls:['warrior','paladin','hunter*','rogue','priest','mage','warlock'],
-    rac:[['a','Will to Survive','Elimina el aturdimiento'],['a','Percepción','Revela enemigos invisibles durante 20 s'],['p','Ruthless','+1% de probabilidad de crítico'],['p','El espíritu humano','+10% de espíritu']],
+    rac:[['a','Lucha por la supervivencia','Elimina el aturdimiento'],['a','Percepción','Revela enemigos invisibles durante 20 s'],['p','Ruthless','+1% de probabilidad de crítico'],['p','El espíritu humano','+10% de espíritu']],
     tip:'El espíritu se convierte en sanación para un Sacerdote Sagrado, así que un sacerdote humano es bueno para sanar.' },
   { id:'dwarf', n:'Enano', f:'alliance',
     cls:['warrior','paladin','hunter','rogue','priest','shaman*'],
@@ -109,7 +109,7 @@ const BETA = '<span class="beta-note">según los datos de la beta</span>';
 const BMARK = '{' + 'beta}';   // split so the guide build (which swaps the marker for the span everywhere) leaves it alone
 const racx = s => String(s).split(BETA).join(BMARK).split(BMARK).map(esc).join(BETA);
 const RC = Object.fromEntries(RACES.map(r => [r.id, r]));
-const RLEAD = {"human": "La raza más numerosa de la Alianza. Versátil y fuerte en JcJ gracias a Will to Survive.", "dwarf": "Mineros y fusileros recios de Forjaz. Por primera vez la Alianza tiene chamanes, y son enanos: en Classic no los había.", "nightelf": "Un pueblo antiguo de los bosques. Escurridizos: su propia forma de esconderse, esquiva y carrera rápida.", "gnome": "Los inventores de Gnomeregan. Pequeños, astutos y con la mejor habilidad de escape del juego.", "skyA": "Una raza nueva en Forever. Los High Order: elfos del viento que buscan la magia arcana perdida de sus ancestros.", "orc": "El corazón de la Horda. Los guerreros más fuertes y maestros del JcJ gracias a Furia sangrienta y Firmeza.", "undead": "Los Renegados: antiguos humanos que se liberaron del Rey Exánime. Inmunes al miedo y al sueño cuando importa.", "tauren": "Gigantes pacíficos de las llanuras. La mayor salud y su propio aturdimiento en área.", "troll": "La tribu Lanza Negra. Más clases que nadie en la Horda y una potente Iracundia para el daño.", "skyH": "Una raza nueva en Forever. Los Windshaper: líderes espirituales de los Skyborne, cercanos a los elementos."}; // race page leads and URL slugs, filled in by build.py
+const RLEAD = {"human": "La raza más numerosa de la Alianza. Versátil y fuerte en JcJ gracias a Lucha por la supervivencia.", "dwarf": "Mineros y fusileros recios de Forjaz. Por primera vez la Alianza tiene chamanes, y son enanos: en Classic no los había.", "nightelf": "Un pueblo antiguo de los bosques. Escurridizos: su propia forma de esconderse, esquiva y carrera rápida.", "gnome": "Los inventores de Gnomeregan. Pequeños, astutos y con la mejor habilidad de escape del juego.", "skyA": "Una raza nueva en Forever. Los High Order: elfos del viento que buscan la magia arcana perdida de sus ancestros.", "orc": "El corazón de la Horda. Los guerreros más fuertes y maestros del JcJ gracias a Furia sangrienta y Firmeza.", "undead": "Los Renegados: antiguos humanos que se liberaron del Rey Exánime. Inmunes al miedo y al sueño cuando importa.", "tauren": "Gigantes pacíficos de las llanuras. La mayor salud y su propio aturdimiento en área.", "troll": "La tribu Lanza Negra. Más clases que nadie en la Horda y una potente Iracundia para el daño.", "skyH": "Una raza nueva en Forever. Los Windshaper: líderes espirituales de los Skyborne, cercanos a los elementos."}; // race page leads and URL slugs, filled in by build.py
 const RSLUG = {"human": "human", "dwarf": "dwarf", "nightelf": "night-elf", "gnome": "gnome", "skyA": "skyborne-alliance", "orc": "orc", "undead": "undead", "tauren": "tauren", "troll": "troll", "skyH": "skyborne-horde"};
 
 const EN = {
@@ -119,7 +119,7 @@ const EN = {
   'Disciplina':'Discipline','Sombras':'Shadow','Elemental':'Elemental','Mejora':'Enhancement','Restauración':'Restoration',
   'Arcano':'Arcane','Fuego':'Fire','Escarcha':'Frost','Aflicción':'Affliction','Demonología':'Demonology','Destrucción':'Destruction',
   'Equilibrio':'Balance','Combate feral':'Feral',
-  'Will to Survive':'Will to Survive','Percepción':'Perception','Ruthless':'Ruthless','El espíritu humano':'The Human Spirit',
+  'Lucha por la supervivencia':'Will to Survive','Percepción':'Perception','Ruthless':'Ruthless','El espíritu humano':'The Human Spirit',
   'Petraforma':'Stoneform','Buscar tesoro':'Find Treasure','Earth Fury':'Earth Fury','Big Game Hunter':'Big Game Hunter',
   'Elune’s Light':"Elune’s Light",'Fusión de las Sombras':'Shadowmeld','Prontitud':'Quickness','Espíritu de fuego fatuo':'Wisp Spirit',
   'Artista del escape':'Escape Artist','Eureka!':'Eureka!','Mente expansiva':'Expansive Mind','Especialización de ingeniería':'Engineering Specialization',

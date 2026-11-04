@@ -186,7 +186,7 @@ STATS_T = n9('Приоритет статов', 'Stat priority', 'Пріорит
 STAT = {
     'wd': n9('Урон оружия', 'Weapon damage', 'Шкода зброї', 'Waffenschaden', 'Dégâts de l’arme', 'Daño de arma', 'Dano da arma',
              'Danni dell’arma', 'Obrażenia broni'),
-    'hit': n9('Меткость', 'Hit', 'Влучність', 'Trefferwertung', 'Toucher', 'Golpe', 'Acerto', 'Colpire', 'Trafienie'),
+    'hit': n9('Меткость', 'Hit', 'Влучність', 'Trefferwertung', 'Toucher', 'Golpe', 'Acerto', 'Impatto', 'Trafienie'),
     'exp': n9('Мастерство', 'Expertise', 'Майстерність', 'Waffenkunde', 'Expertise', 'Pericia', 'Perícia', 'Maestria', 'Biegłość'),
     'agi': n9('Ловкость', 'Agility', 'Спритність', 'Beweglichkeit', 'Agilité', 'Agilidad', 'Agilidade', 'Agilità', 'Zręczność'),
     'crit': n9('Крит', 'Crit', 'Крит', 'Krit', 'Critique', 'Crítico', 'Crítico', 'Critico', 'Kryt'),

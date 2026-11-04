@@ -14,7 +14,7 @@ TEXT = {
     'ru': {'auto': 'по вашему времени', 'reset': 'По времени', 'label': 'Время суток'},
     'en': {'auto': 'by your local time', 'reset': 'Local time', 'label': 'Time of day'},
     'uk': {'auto': 'за вашим часом', 'reset': 'За часом', 'label': 'Час доби'},
-    'de': {'auto': 'nach Ihrer Ortszeit', 'reset': 'Ortszeit', 'label': 'Tageszeit'},
+    'de': {'auto': 'nach deiner Ortszeit', 'reset': 'Ortszeit', 'label': 'Tageszeit'},
     'fr': {'auto': 'selon votre heure', 'reset': 'Heure locale', 'label': 'Moment de la journée'},
     'es': {'auto': 'según tu hora', 'reset': 'Hora local', 'label': 'Momento del día'},
     'pt': {'auto': 'pelo seu horário', 'reset': 'Horário local', 'label': 'Período do dia'},

@@ -113,7 +113,7 @@ Leveling
 By forecasts, Hunter and Mage level fastest (about 8% faster than average), Warrior slowest (about 12%), Druid and Priest slightly slower than average. These are beta estimates, the figures may change.
 You can set up camp right while leveling; five minutes for a campfire pays off with buffs for the group.
 How Forever differs from Classic Era
-Topic
+Theme
 What Forever has
 General
 Eastern Kingdoms and Kalimdor, leveling to 60. A permanent game, not a season. No flying mounts and no level scaling, as in Classic.
