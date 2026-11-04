@@ -1,6 +1,11 @@
 [
  {
   "date": "2026-11-04",
+  "title": "World of Warcraft: Forever is Now Live",
+  "url": "https://www.wowhead.com/news=383749/world-of-warcraft-forever-is-now-live"
+ },
+ {
+  "date": "2026-11-04",
   "title": "Secret Twitch Drop Awarded Pouch of Violet Dust Toy to Live Stream Viewers in WoW: Forever",
   "url": "https://www.wowhead.com/news=383748/secret-twitch-drop-awards-pouch-of-violet-dust-toy-in-wow-forever"
  },
@@ -143,10 +148,5 @@
   "date": "2026-10-31",
   "title": "Repeatable Quest Experience Exploit Fixed for WoW: Forever Launch",
   "url": "https://www.wowhead.com/news=383574/repeatable-quest-experience-exploit-fixed-for-wow-forever-launch"
- },
- {
-  "date": "2026-10-30",
-  "title": "Massive Talent Tree Changes to Druids and Paladins - Class Tuning for WoW: Forever",
-  "url": "https://www.wowhead.com/news=383670/massive-talent-tree-changes-to-druids-and-paladins-class-tuning-for-wow-forever"
  }
 ]
