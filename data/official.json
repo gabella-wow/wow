@@ -1,7 +1,7 @@
 [
  {
   "id": "us-2400905-1",
-  "sha": "23fd4d9b",
+  "sha": "490dee31",
   "date": "2026-11-04",
   "at": "2026-11-04T18:13:53Z",
   "url": "https://us.forums.blizzard.com/en/wow/t/world-of-warcraft-forever-launch-time/2400905/1",
@@ -9,11 +9,13 @@
   "beta": false,
   "title_en": "World of Warcraft: Forever Launch Time",
   "n": 0,
+  "upd": "2026-11-04T20:11:05Z",
   "t": {
    "ru": {
     "h": "World of Warcraft: Forever Launch Time",
     "en": 1,
     "src": "Blizzard, на английском",
+    "upd": "обновлено 04.11",
     "sum": [],
     "site": "https://gabella.site/wow/guides/news/",
     "site_t": "Подробнее на сайте"
@@ -22,6 +24,7 @@
     "h": "World of Warcraft: Forever Launch Time",
     "en": 1,
     "src": "Blizzard",
+    "upd": "updated Nov 4",
     "sum": [],
     "site": "https://gabella.site/wow/en/guides/news/",
     "site_t": "More on the site"
@@ -30,6 +33,7 @@
     "h": "World of Warcraft: Forever Launch Time",
     "en": 1,
     "src": "Blizzard, англійською",
+    "upd": "оновлено 04.11",
     "sum": [],
     "site": "https://gabella.site/wow/uk/guides/news/",
     "site_t": "Детальніше на сайті"
@@ -38,6 +42,7 @@
     "h": "World of Warcraft: Forever Launch Time",
     "en": 1,
     "src": "Blizzard, auf Englisch",
+    "upd": "aktualisiert am 04.11",
     "sum": [],
     "site": "https://gabella.site/wow/de/guides/news/",
     "site_t": "Mehr auf der Seite"
@@ -46,6 +51,7 @@
     "h": "World of Warcraft: Forever Launch Time",
     "en": 1,
     "src": "Blizzard, en anglais",
+    "upd": "mis à jour le 04.11",
     "sum": [],
     "site": "https://gabella.site/wow/fr/guides/news/",
     "site_t": "Plus sur le site"
@@ -54,6 +60,7 @@
     "h": "World of Warcraft: Forever Launch Time",
     "en": 1,
     "src": "Blizzard, en inglés",
+    "upd": "actualizado el 04.11",
     "sum": [],
     "site": "https://gabella.site/wow/es/guides/news/",
     "site_t": "Más en la web"
@@ -62,6 +69,7 @@
     "h": "World of Warcraft: Forever Launch Time",
     "en": 1,
     "src": "Blizzard, em inglês",
+    "upd": "atualizado em 04.11",
     "sum": [],
     "site": "https://gabella.site/wow/pt/guides/news/",
     "site_t": "Mais no site"
@@ -70,6 +78,7 @@
     "h": "World of Warcraft: Forever Launch Time",
     "en": 1,
     "src": "Blizzard, in inglese",
+    "upd": "aggiornato il 04.11",
     "sum": [],
     "site": "https://gabella.site/wow/it/guides/news/",
     "site_t": "Di più sul sito"
@@ -78,6 +87,7 @@
     "h": "World of Warcraft: Forever Launch Time",
     "en": 1,
     "src": "Blizzard, po angielsku",
+    "upd": "zaktualizowano 04.11",
     "sum": [],
     "site": "https://gabella.site/wow/pl/guides/news/",
     "site_t": "Więcej na stronie"
