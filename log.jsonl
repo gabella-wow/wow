@@ -136,3 +136,4 @@
 {"at": "2026-11-05T00:41:06Z", "event": "new", "key": "eu-639571-1", "sha": "27616f7dfb4daaac", "url": "https://eu.forums.blizzard.com/en/wow/t/set-your-campfire-ablaze-with-the-pouch-of-violet-dust/639571/1", "twin_of": "us-2401461-1", "outdated": 0}
 {"at": "2026-11-05T02:51:06Z", "event": "new", "key": "us-2401646-1", "sha": "ac5805a2c12f6384", "url": "https://us.forums.blizzard.com/en/wow/t/issues-resolved-for-invite-a-friend-players/2401646/1", "twin_of": null, "outdated": 0}
 {"at": "2026-11-05T02:51:06Z", "event": "new", "key": "eu-639604-1", "sha": "ac5805a2c12f6384", "url": "https://eu.forums.blizzard.com/en/wow/t/issues-resolved-for-invite-a-friend-players/639604/1", "twin_of": "us-2401646-1", "outdated": 0}
+{"at": "2026-11-05T06:41:02Z", "event": "new", "key": "us-2401777-15", "sha": "416a43764e7f2327", "url": "https://us.forums.blizzard.com/en/wow/t/zeppelins-broken/2401777/15", "twin_of": null, "outdated": 0}
