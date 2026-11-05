@@ -34,6 +34,9 @@
 .thero { --hh: max(540px, min(76svh, max(720px, 44.45vw))); --rmax: 2.25; }
 .thero { min-height: calc(var(--hh) * .66); overflow: visible; padding-bottom: 28px; background: none; }
 .thero::after { display: none; }
+/* the shade and the art hang below the band (the fade runs into the page): the content after it is lifted over them, so a block
+   without a positioned frame (the reader's class news, #mine) is not dimmed by the shade and gets its clicks */
+:is(.thero, .ghero) + .gbody { position: relative; }
 .ghero { --band-h: var(--hh); min-height: calc(var(--hh) * .66); padding: calc(var(--top) + clamp(32px, 8vh, 96px)) 0 28px; display: grid; align-content: start; color: var(--ink); }
 .ghero .stband-art.por img { object-position: 50% 14%; }   /* a class or race portrait: the face, not the chest */
 /* Builds of a class (build_guides.por_band): the class portrait of the reader's side stands where the class page (.chero) has it,

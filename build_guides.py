@@ -888,7 +888,7 @@ function markMine() {
   let top = document.getElementById('mine');
   if (!items.length) { if (top) top.remove(); return; }
   if (!top) {
-    top = document.createElement('section'); top.className = 'gsec'; top.id = 'mine';
+    top = document.createElement('section'); top.className = 'frame gsec'; top.id = 'mine';   // a frame like the sections under it
     const first = document.querySelector('.gsec'); first.parentNode.insertBefore(top, first);
   }
   top.innerHTML = `<h2>${esc(HC.tx.mine)}: ${esc(h.clsN)}</h2><div class="nlist">${items.map(a => a.outerHTML).join('')}</div>`;
