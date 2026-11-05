@@ -244,6 +244,17 @@ def test_calc_render():
         assert all(talents.UI[k].get(l) for l in talents.UI['hint']), k
 
 
+def test_reimport_keeps_other_languages():
+    """A re-import of one language (ruRU) keeps the other languages' names and tooltips from the previous file."""
+    db = talent_import.parse_lua(open(FIX, encoding='utf-8').read())['GabellaTalentsDB']['PALADIN']
+    full = talent_import.convert('paladin', db, fixture=True)
+    ru_only = {'ruRU': db['ruRU']}
+    again = talent_import.convert('paladin', ru_only, full, True)
+    assert again['trees'] == full['trees']
+    fresh = talent_import.convert('paladin', ru_only, fixture=True)
+    assert all('en' not in t['n'] for tr in fresh['trees'] for t in tr['talents'])
+
+
 if __name__ == '__main__':
     n = 0
     for name, fn in list(globals().items()):

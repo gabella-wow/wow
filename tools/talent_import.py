@@ -3,7 +3,7 @@
     python tools/talent_import.py "<WoW>/_forever_/WTF/Account/<account>/SavedVariables/GabellaTalents.lua" [--out DIR] [--fixture]
 
 Rows, columns, arrows, ranks and the icon file id come from the client (the addon API); the names and tooltip lines from every
-client language that was dumped. Icon names and the sprite are added later by tools/talent_icons.py and survive a re-import.
+client language that was dumped (languages missing from a re-import keep their previous text). Icon names and the sprite are added later by tools/talent_icons.py and survive a re-import.
 --fixture marks test data (tests/fixtures/talents): tests refuse such a file in content/talents."""
 import argparse, json, os, re, sys
 
@@ -99,7 +99,8 @@ def convert(cid, by_locale, old=None, fixture=False):
     """One class: the dumps of each client language -> our JSON (old: the previous file, its icons are kept)."""
     keys = TREES[cid]
     base = by_locale.get('enUS') or next(iter(by_locale.values()))
-    icons = {t['id']: (t.get('icon'), t.get('iname')) for tr in (old or {}).get('trees', []) for t in tr['talents']}
+    prev = {t['id']: t for tr in (old or {}).get('trees', []) for t in tr['talents']}
+    icons = {i: (t.get('icon'), t.get('iname')) for i, t in prev.items()}
     trees = []
     for ti, tree in enumerate(base['trees']):
         key = keys[ti]
@@ -114,6 +115,10 @@ def convert(cid, by_locale, old=None, fixture=False):
                 if lang:
                     x['n'][lang] = tt['name']
                     x['tip'][lang] = tt.get('tip') or []
+            for lang, nm in prev.get(tid, {}).get('n', {}).items():   # a language not dumped this time keeps its old text
+                if lang not in x['n']:
+                    x['n'][lang] = nm
+                    x['tip'][lang] = prev[tid].get('tip', {}).get(lang) or []
             if t.get('req'):
                 pr, pc = t['req']
                 x['req'] = next(f'{key}-{j}' for j, s in enumerate(tree['talents'], 1) if int(s['row']) == pr and int(s['col']) == pc)
