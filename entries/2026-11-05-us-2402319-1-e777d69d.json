@@ -1,0 +1,94 @@
+{
+ "event": "new",
+ "key": "us-2402319-1",
+ "source": "forum",
+ "region": "us",
+ "topic": 2402319,
+ "post": 1,
+ "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-bug-report-forum-guidelines/2402319/1",
+ "title": "WoW Forever Bug Report Forum Guidelines",
+ "author": "Kaivax",
+ "role": "Community Manager",
+ "created_at": "2026-11-05T15:22:45.960Z",
+ "updated_at": "2026-11-05T15:22:45.960Z",
+ "version": 1,
+ "category": 352,
+ "beta": false,
+ "sha": "e777d69d4fcc239e6a2260f124076a21e05d037b05f173b0434a77f53a7f064f",
+ "twin_of": null,
+ "also": [],
+ "short_news": {
+  "date": "2026-11-05",
+  "at": "2026-11-05T15:22:45Z",
+  "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-bug-report-forum-guidelines/2402319/1",
+  "title_en": "WoW Forever Bug Report Forum Guidelines",
+  "kind": "post",
+  "beta": false
+ },
+ "changes": [
+  {
+   "path": [
+    "WoW Forever Bug Report Forum Guidelines"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "removed",
+   "pairs": [],
+   "nums": [],
+   "text": "Topics or replies that are not focused on reporting bugs or providing steps or other evidence to reproduce the issue will be removed.",
+   "h": "87927b009486"
+  },
+  {
+   "path": [
+    "WoW Forever Bug Report Forum Guidelines"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Not getting a Blizzard/Blue reply does not mean that your issue is or is not a bug, and it does not mean that your post has been ignored. We read every single post in this forum. We cannot reply to all (or even most) threads.",
+   "h": "6959fd2cdcb2"
+  },
+  {
+   "path": [
+    "How to Report Bugs"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "It’s"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "It’s also always a good idea to include the full name of your character and the ruleset you were playing on when you encountered the issue.",
+   "h": "a2456a062450"
+  }
+ ],
+ "new_lines": [
+  "ea3881eec876",
+  "5a726a432342",
+  "87927b009486",
+  "d379a2d4b362",
+  "9faf935557b1",
+  "b06351ac5590",
+  "6959fd2cdcb2",
+  "4d362f78442d",
+  "a922734d1b7a",
+  "d70f4f2a8996",
+  "6f3b7638e008",
+  "a2456a062450",
+  "5a9d9ff91c83"
+ ],
+ "gone_lines": [],
+ "outdated": [],
+ "to_check": [],
+ "check": [],
+ "detected_at": "2026-11-05T15:31:06Z"
+}
