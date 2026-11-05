@@ -1,0 +1,37 @@
+{
+ "event": "new",
+ "key": "us-2401461-1",
+ "source": "forum",
+ "region": "us",
+ "topic": 2401461,
+ "post": 1,
+ "url": "https://us.forums.blizzard.com/en/wow/t/set-your-campfire-ablaze-with-the-pouch-of-violet-dust/2401461/1",
+ "title": "Set Your Campfire Ablaze with the Pouch of Violet Dust!",
+ "author": "BlizzardEntertainment",
+ "role": "Blizzard News",
+ "created_at": "2026-11-05T00:30:07.691Z",
+ "updated_at": "2026-11-05T00:31:08.565Z",
+ "version": 2,
+ "category": 347,
+ "beta": false,
+ "sha": "27616f7dfb4daaaca33beabf7ed38867a059dc9192a2d83f1ca519ca983bf9c7",
+ "twin_of": null,
+ "also": [
+  "https://eu.forums.blizzard.com/en/wow/t/set-your-campfire-ablaze-with-the-pouch-of-violet-dust/639571/1"
+ ],
+ "short_news": {
+  "date": "2026-11-05",
+  "at": "2026-11-05T00:30:07Z",
+  "url": "https://us.forums.blizzard.com/en/wow/t/set-your-campfire-ablaze-with-the-pouch-of-violet-dust/2401461/1",
+  "title_en": "Set Your Campfire Ablaze with the Pouch of Violet Dust!",
+  "kind": "post",
+  "beta": false
+ },
+ "changes": [],
+ "new_lines": [],
+ "gone_lines": [],
+ "outdated": [],
+ "to_check": [],
+ "check": [],
+ "detected_at": "2026-11-05T00:41:06Z"
+}
