@@ -1,5 +1,90 @@
 [
  {
+  "id": "us-2401646-1",
+  "sha": "ac5805a2",
+  "date": "2026-11-05",
+  "at": "2026-11-05T02:43:58Z",
+  "url": "https://us.forums.blizzard.com/en/wow/t/issues-resolved-for-invite-a-friend-players/2401646/1",
+  "kind": "post",
+  "beta": false,
+  "title_en": "Issues Resolved for Invite-a-Friend Players",
+  "n": 0,
+  "t": {
+   "ru": {
+    "h": "Issues Resolved for Invite-a-Friend Players",
+    "en": 1,
+    "src": "Blizzard, на английском",
+    "sum": [],
+    "site": "https://gabella.site/wow/guides/news/",
+    "site_t": "Подробнее на сайте"
+   },
+   "en": {
+    "h": "Issues Resolved for Invite-a-Friend Players",
+    "en": 1,
+    "src": "Blizzard",
+    "sum": [],
+    "site": "https://gabella.site/wow/en/guides/news/",
+    "site_t": "More on the site"
+   },
+   "uk": {
+    "h": "Issues Resolved for Invite-a-Friend Players",
+    "en": 1,
+    "src": "Blizzard, англійською",
+    "sum": [],
+    "site": "https://gabella.site/wow/uk/guides/news/",
+    "site_t": "Детальніше на сайті"
+   },
+   "de": {
+    "h": "Issues Resolved for Invite-a-Friend Players",
+    "en": 1,
+    "src": "Blizzard, auf Englisch",
+    "sum": [],
+    "site": "https://gabella.site/wow/de/guides/news/",
+    "site_t": "Mehr auf der Seite"
+   },
+   "fr": {
+    "h": "Issues Resolved for Invite-a-Friend Players",
+    "en": 1,
+    "src": "Blizzard, en anglais",
+    "sum": [],
+    "site": "https://gabella.site/wow/fr/guides/news/",
+    "site_t": "Plus sur le site"
+   },
+   "es": {
+    "h": "Issues Resolved for Invite-a-Friend Players",
+    "en": 1,
+    "src": "Blizzard, en inglés",
+    "sum": [],
+    "site": "https://gabella.site/wow/es/guides/news/",
+    "site_t": "Más en la web"
+   },
+   "pt": {
+    "h": "Issues Resolved for Invite-a-Friend Players",
+    "en": 1,
+    "src": "Blizzard, em inglês",
+    "sum": [],
+    "site": "https://gabella.site/wow/pt/guides/news/",
+    "site_t": "Mais no site"
+   },
+   "it": {
+    "h": "Issues Resolved for Invite-a-Friend Players",
+    "en": 1,
+    "src": "Blizzard, in inglese",
+    "sum": [],
+    "site": "https://gabella.site/wow/it/guides/news/",
+    "site_t": "Di più sul sito"
+   },
+   "pl": {
+    "h": "Issues Resolved for Invite-a-Friend Players",
+    "en": 1,
+    "src": "Blizzard, po angielsku",
+    "sum": [],
+    "site": "https://gabella.site/wow/pl/guides/news/",
+    "site_t": "Więcej na stronie"
+   }
+  }
+ },
+ {
   "id": "us-2401461-1",
   "sha": "27616f7d",
   "date": "2026-11-05",
