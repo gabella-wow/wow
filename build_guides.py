@@ -41,7 +41,7 @@ SITE_TILES = [
      'd': {'ru': 'В игре: радио, уровень, таймеры', 'en': 'In game: radio, level, timers', 'uk': 'У грі: радіо, рівень, таймери'}},
 ]
 # Wide hero art; everything else is a class/race portrait cut at 360/600/896/1344
-WIDTHS = {'hero_dawn': (960, 1440, 1920, 2560, 3840), 'hero_campfire': (960, 1600, 2560),
+WIDTHS = {'hero_dawn': (960, 1440, 1920, 2560, 3840), 'hero_campfire': (960, 1600, 2560), 'hero_road': (960, 1600, 2560),
           'hero_tools': (960, 1440, 1920, 2560)}   # the tools scene is also the Tools tile
 FX = {'hero_dawn': 'dawn'}   # living art (assets/living/living.js) over these heroes
 # A guide with 'hero' gets the full-screen inner page hero (.thero, like roster and tools): its own scene, living art,
