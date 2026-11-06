@@ -55,6 +55,9 @@ local function dumpTraits(d)
           tip:ClearLines()
           if pcall(tip.SetSpellByID, tip, sid) then lines = tipLines() end
         end
+        local getDesc = (C_Spell and C_Spell.GetSpellDescription) or GetSpellDescription
+        local desc = sid and getDesc and getDesc(sid)
+        if desc and desc ~= "" then lines[#lines + 1] = desc end   -- the tooltip of a talent not loaded yet has no text
         t.talents[#t.talents + 1] = { name = sid and spellName(sid), icon = icon, maxRank = info.maxRanks, talentID = nodeID,
                                       spellId = sid, posX = info.posX, posY = info.posY, edges = edges, tip = lines }
       end

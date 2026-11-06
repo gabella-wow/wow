@@ -1,8 +1,7 @@
 {
  "class": "hunter",
- "basis": "beta",
- "date": "2026-10-26",
- "source": "hand-copied layout (beta calculators / Classic), see tools/talent_beta.py",
+ "client": "1.60.1.70790",
+ "source": "GabellaTalents addon (client addon API)",
  "trees": [
   {
    "key": "beast-mastery",
@@ -10,6 +9,7 @@
     {
      "id": "beast-mastery-1",
      "n": {
+      "ru": "Смертоносные духи",
       "en": "Deadly Aspects"
      },
      "r": 1,
@@ -18,11 +18,21 @@
      "spells": [
       19552
      ],
-     "iname0": null
+     "file": 136076,
+     "tip": {
+      "ru": [
+       "Смертоносные духи",
+       "Пассивная"
+      ],
+      "en": []
+     },
+     "icon": 0,
+     "iname": "136076"
     },
     {
      "id": "beast-mastery-2",
      "n": {
+      "ru": "Тренировка стойкости",
       "en": "Endurance Training"
      },
      "r": 1,
@@ -31,13 +41,21 @@
      "spells": [
       19583
      ],
-     "iname0": "spell_nature_reincarnation",
-     "icon": 0,
-     "iname": "spell_nature_reincarnation"
+     "file": 136080,
+     "tip": {
+      "ru": [
+       "Тренировка стойкости",
+       "Пассивная"
+      ],
+      "en": []
+     },
+     "icon": 1,
+     "iname": "136080"
     },
     {
      "id": "beast-mastery-3",
      "n": {
+      "ru": "Направленный огонь",
       "en": "Focused Fire"
      },
      "r": 2,
@@ -46,11 +64,21 @@
      "spells": [
       1223755
      ],
-     "iname0": null
+     "file": 135539,
+     "tip": {
+      "ru": [
+       "Направленный огонь",
+       "Пассивная"
+      ],
+      "en": []
+     },
+     "icon": 2,
+     "iname": "135539"
     },
     {
      "id": "beast-mastery-4",
      "n": {
+      "ru": "Улучшенный дух обезьяны",
       "en": "Improved Aspect of the Monkey"
      },
      "r": 2,
@@ -59,43 +87,67 @@
      "spells": [
       19549
      ],
-     "iname0": "ability_hunter_aspectofthemonkey",
-     "icon": 1,
-     "iname": "ability_hunter_aspectofthemonkey"
+     "file": 132159,
+     "tip": {
+      "ru": [
+       "Улучшенный дух обезьяны",
+       "Пассивная"
+      ],
+      "en": []
+     },
+     "icon": 3,
+     "iname": "132159"
     },
     {
-     "id": "beast-mastery-5",
+     "id": "beast-mastery-6",
      "n": {
-      "en": "Pathfinding"
+      "ru": "Улучшенное воскрешение питомца",
+      "en": "Improved Revive Pet"
      },
      "r": 2,
      "c": 3,
      "m": 2,
      "spells": [
-      19559
-     ],
-     "iname0": "ability_mount_jungletiger",
-     "icon": 2,
-     "iname": "ability_mount_jungletiger"
-    },
-    {
-     "id": "beast-mastery-6",
-     "n": {
-      "en": "Improved Revive Pet"
-     },
-     "r": 2,
-     "c": 4,
-     "m": 2,
-     "spells": [
       24443
      ],
-     "iname0": "ability_hunter_beastsoothe",
-     "icon": 3,
-     "iname": "ability_hunter_beastsoothe"
+     "file": 132163,
+     "tip": {
+      "ru": [
+       "Улучшенное воскрешение питомца",
+       "Пассивная"
+      ],
+      "en": []
+     },
+     "icon": 4,
+     "iname": "132163"
+    },
+    {
+     "id": "beast-mastery-5",
+     "n": {
+      "ru": "Знание троп",
+      "en": "Pathfinding"
+     },
+     "r": 3,
+     "c": 1,
+     "m": 2,
+     "spells": [
+      19559
+     ],
+     "file": 132242,
+     "tip": {
+      "ru": [
+       "Знание троп",
+       "Пассивная"
+      ],
+      "en": []
+     },
+     "icon": 5,
+     "iname": "132242"
     },
     {
      "id": "beast-mastery-7",
      "n": {
+      "ru": "Звериная стремительность",
       "en": "Bestial Swiftness"
      },
      "r": 3,
@@ -104,13 +156,21 @@
      "spells": [
       19596
      ],
-     "iname0": "ability_druid_dash",
-     "icon": 4,
-     "iname": "ability_druid_dash"
+     "file": 132120,
+     "tip": {
+      "ru": [
+       "Звериная стремительность",
+       "Пассивная"
+      ],
+      "en": []
+     },
+     "icon": 6,
+     "iname": "132120"
     },
     {
      "id": "beast-mastery-8",
      "n": {
+      "ru": "Неудержимое неистовство",
       "en": "Unleashed Fury"
      },
      "r": 3,
@@ -119,13 +179,21 @@
      "spells": [
       19616
      ],
-     "iname0": "ability_bullrush",
-     "icon": 5,
-     "iname": "ability_bullrush"
+     "file": 132091,
+     "tip": {
+      "ru": [
+       "Неудержимое неистовство",
+       "Пассивная"
+      ],
+      "en": []
+     },
+     "icon": 7,
+     "iname": "132091"
     },
     {
      "id": "beast-mastery-9",
      "n": {
+      "ru": "Улучшенное лечение питомца",
       "en": "Improved Mend Pet"
      },
      "r": 4,
@@ -134,13 +202,21 @@
      "spells": [
       19572
      ],
-     "iname0": "ability_hunter_mendpet",
-     "icon": 6,
-     "iname": "ability_hunter_mendpet"
+     "file": 132179,
+     "tip": {
+      "ru": [
+       "Улучшенное лечение питомца",
+       "Пассивная"
+      ],
+      "en": []
+     },
+     "icon": 8,
+     "iname": "132179"
     },
     {
      "id": "beast-mastery-10",
      "n": {
+      "ru": "Свирепость",
       "en": "Ferocity"
      },
      "r": 4,
@@ -149,13 +225,21 @@
      "spells": [
       19598
      ],
-     "iname0": "inv_misc_monsterclaw_04",
-     "icon": 7,
-     "iname": "inv_misc_monsterclaw_04"
+     "file": 134297,
+     "tip": {
+      "ru": [
+       "Свирепость",
+       "Пассивная"
+      ],
+      "en": []
+     },
+     "icon": 9,
+     "iname": "134297"
     },
     {
      "id": "beast-mastery-11",
      "n": {
+      "ru": "Призыв ястреба",
       "en": "Summon Hawk"
      },
      "r": 4,
@@ -164,11 +248,22 @@
      "spells": [
       1293241
      ],
-     "iname0": null
+     "file": 132158,
+     "tip": {
+      "ru": [
+       "Призыв ястреба",
+       "Мана: 80",
+       "Мгновенное"
+      ],
+      "en": []
+     },
+     "icon": 10,
+     "iname": "132158"
     },
     {
      "id": "beast-mastery-12",
      "n": {
+      "ru": "Узы духа",
       "en": "Spirit Bond"
      },
      "r": 5,
@@ -177,14 +272,27 @@
      "spells": [
       19578
      ],
-     "iname0": "ability_druid_demoralizingroar",
-     "icon": 8,
-     "iname": "ability_druid_demoralizingroar"
+     "file": 132121,
+     "tip": {
+      "ru": [
+       "Узы духа",
+       "Пассивная"
+      ],
+      "en": []
+     },
+     "icon": 11,
+     "iname": "132121"
     },
     {
      "id": "beast-mastery-13",
      "n": {
-      "en": "Intimidation"
+      "ru": "Устрашение",
+      "en": "Intimidation",
+      "de": "Einschüchterung",
+      "es": "Intimidación",
+      "fr": "Intimidation",
+      "it": "Intimidazione",
+      "pt": "Intimidação"
      },
      "r": 5,
      "c": 2,
@@ -192,14 +300,28 @@
      "spells": [
       19577
      ],
-     "iname0": "ability_devour",
+     "file": 132111,
+     "tip": {
+      "ru": [
+       "Устрашение",
+       "Мана: 28",
+       "Мгновенное"
+      ],
+      "en": [],
+      "de": [],
+      "es": [],
+      "fr": [],
+      "it": [],
+      "pt": []
+     },
      "req": "beast-mastery-7",
-     "icon": 9,
-     "iname": "ability_devour"
+     "icon": 12,
+     "iname": "132111"
     },
     {
      "id": "beast-mastery-14",
      "n": {
+      "ru": "Беспрекословное послушание",
       "en": "Bestial Discipline"
      },
      "r": 5,
@@ -208,13 +330,21 @@
      "spells": [
       19590
      ],
-     "iname0": "spell_nature_abolishmagic",
-     "icon": 10,
-     "iname": "spell_nature_abolishmagic"
+     "file": 136006,
+     "tip": {
+      "ru": [
+       "Беспрекословное послушание",
+       "Пассивная"
+      ],
+      "en": []
+     },
+     "icon": 13,
+     "iname": "136006"
     },
     {
      "id": "beast-mastery-15",
      "n": {
+      "ru": "Бешенство",
       "en": "Frenzy"
      },
      "r": 6,
@@ -223,15 +353,28 @@
      "spells": [
       19621
      ],
-     "iname0": "inv_misc_monsterclaw_03",
+     "file": 134296,
+     "tip": {
+      "ru": [
+       "Бешенство",
+       "Пассивная"
+      ],
+      "en": []
+     },
      "req": "beast-mastery-10",
-     "icon": 11,
-     "iname": "inv_misc_monsterclaw_03"
+     "icon": 14,
+     "iname": "134296"
     },
     {
      "id": "beast-mastery-16",
      "n": {
-      "en": "Bestial Wrath"
+      "ru": "Звериный гнев",
+      "en": "Bestial Wrath",
+      "de": "Zorn des Wildtiers",
+      "es": "Cólera de las bestias",
+      "fr": "Courroux bestial",
+      "it": "Ira Bestiale",
+      "pt": "Ira Bestial"
      },
      "r": 7,
      "c": 2,
@@ -239,10 +382,23 @@
      "spells": [
       19574
      ],
-     "iname0": "ability_druid_ferociousbite",
+     "file": 132127,
+     "tip": {
+      "ru": [
+       "Звериный гнев",
+       "Мана: 42",
+       "Мгновенное"
+      ],
+      "en": [],
+      "de": [],
+      "es": [],
+      "fr": [],
+      "it": [],
+      "pt": []
+     },
      "req": "beast-mastery-13",
-     "icon": 12,
-     "iname": "ability_druid_ferociousbite"
+     "icon": 15,
+     "iname": "132127"
     }
    ]
   },
@@ -252,6 +408,7 @@
     {
      "id": "marksmanship-1",
      "n": {
+      "ru": "Глаз ястреба",
       "en": "Hawk Eye"
      },
      "r": 1,
@@ -260,13 +417,19 @@
      "spells": [
       19498
      ],
-     "iname0": "ability_townwatch",
-     "icon": 13,
-     "iname": "ability_townwatch"
+     "file": 132327,
+     "tip": {
+      "ru": [
+       "Глаз ястреба",
+       "Пассивная"
+      ],
+      "en": []
+     }
     },
     {
      "id": "marksmanship-2",
      "n": {
+      "ru": "Улучшенный контузящий выстрел",
       "en": "Improved Concussive Shot"
      },
      "r": 1,
@@ -275,13 +438,21 @@
      "spells": [
       19407
      ],
-     "iname0": "spell_frost_stun",
-     "icon": 14,
-     "iname": "spell_frost_stun"
+     "file": 135860,
+     "tip": {
+      "ru": [
+       "Улучшенный контузящий выстрел",
+       "Пассивная"
+      ],
+      "en": []
+     },
+     "icon": 16,
+     "iname": "135860"
     },
     {
      "id": "marksmanship-3",
      "n": {
+      "ru": "Смертоносные атаки",
       "en": "Lethal Attacks"
      },
      "r": 1,
@@ -290,11 +461,21 @@
      "spells": [
       19426
      ],
-     "iname0": null
+     "file": 132312,
+     "tip": {
+      "ru": [
+       "Смертоносные атаки",
+       "Пассивная"
+      ],
+      "en": []
+     },
+     "icon": 17,
+     "iname": "132312"
     },
     {
      "id": "marksmanship-4",
      "n": {
+      "ru": "Смертельные укусы",
       "en": "Improved Stings"
      },
      "r": 2,
@@ -303,11 +484,21 @@
      "spells": [
       1310661
      ],
-     "iname0": null
+     "file": 132204,
+     "tip": {
+      "ru": [
+       "Смертельные укусы",
+       "Пассивная"
+      ],
+      "en": []
+     },
+     "icon": 18,
+     "iname": "132204"
     },
     {
      "id": "marksmanship-5",
      "n": {
+      "ru": "Эффективность",
       "en": "Efficiency"
      },
      "r": 2,
@@ -316,13 +507,21 @@
      "spells": [
       19416
      ],
-     "iname0": "spell_frost_wizardmark",
-     "icon": 15,
-     "iname": "spell_frost_wizardmark"
+     "file": 135865,
+     "tip": {
+      "ru": [
+       "Эффективность",
+       "Пассивная"
+      ],
+      "en": []
+     },
+     "icon": 19,
+     "iname": "135865"
     },
     {
      "id": "marksmanship-6",
      "n": {
+      "ru": "Верная цель",
       "en": "Careful Aim"
      },
      "r": 2,
@@ -331,13 +530,21 @@
      "spells": [
       1223984
      ],
-     "iname0": null,
-     "icon": 16,
+     "file": 132217,
+     "tip": {
+      "ru": [
+       "Верная цель",
+       "Пассивная"
+      ],
+      "en": []
+     },
+     "icon": 20,
      "iname": "132217"
     },
     {
      "id": "marksmanship-7",
      "n": {
+      "ru": "Быстрые убийства",
       "en": "Rapid Killing"
      },
      "r": 3,
@@ -346,11 +553,21 @@
      "spells": [
       415405
      ],
-     "iname0": null
+     "file": 132205,
+     "tip": {
+      "ru": [
+       "Быстрые убийства",
+       "Пассивная"
+      ],
+      "en": []
+     },
+     "icon": 21,
+     "iname": "132205"
     },
     {
      "id": "marksmanship-8",
      "n": {
+      "ru": "Улучшенный чародейский выстрел",
       "en": "Improved Arcane Shot"
      },
      "r": 3,
@@ -359,13 +576,21 @@
      "spells": [
       19454
      ],
-     "iname0": "ability_impalingbolt",
-     "icon": 17,
-     "iname": "ability_impalingbolt"
+     "file": 132218,
+     "tip": {
+      "ru": [
+       "Улучшенный чародейский выстрел",
+       "Пассивная"
+      ],
+      "en": []
+     },
+     "icon": 22,
+     "iname": "132218"
     },
     {
      "id": "marksmanship-9",
      "n": {
+      "ru": "Одинокий волк",
       "en": "Lone Wolf"
      },
      "r": 3,
@@ -374,11 +599,21 @@
      "spells": [
       415370
      ],
-     "iname0": null
+     "file": 132266,
+     "tip": {
+      "ru": [
+       "Одинокий волк",
+       "Пассивная"
+      ],
+      "en": []
+     },
+     "icon": 23,
+     "iname": "132266"
     },
     {
      "id": "marksmanship-10",
      "n": {
+      "ru": "Аура меткого выстрела",
       "en": "Trueshot Aura"
      },
      "r": 4,
@@ -387,13 +622,22 @@
      "spells": [
       1299346
      ],
-     "iname0": "ability_trueshot",
-     "icon": 18,
-     "iname": "ability_trueshot"
+     "file": 132329,
+     "tip": {
+      "ru": [
+       "Аура меткого выстрела",
+       "Мана: 180",
+       "Мгновенное"
+      ],
+      "en": []
+     },
+     "icon": 24,
+     "iname": "132329"
     },
     {
      "id": "marksmanship-11",
      "n": {
+      "ru": "Смертоносные выстрелы",
       "en": "Mortal Shots"
      },
      "r": 4,
@@ -402,14 +646,22 @@
      "spells": [
       19485
      ],
-     "iname0": "ability_piercedamage",
+     "file": 132271,
+     "tip": {
+      "ru": [
+       "Смертоносные выстрелы",
+       "Пассивная"
+      ],
+      "en": []
+     },
      "req": "marksmanship-6",
-     "icon": 19,
-     "iname": "ability_piercedamage"
+     "icon": 25,
+     "iname": "132271"
     },
     {
      "id": "marksmanship-12",
      "n": {
+      "ru": "Быстрая концентрация",
       "en": "Rapid Recuperation"
      },
      "r": 5,
@@ -418,12 +670,22 @@
      "spells": [
       1223987
      ],
-     "iname0": null,
-     "req": "marksmanship-7"
+     "file": 236201,
+     "tip": {
+      "ru": [
+       "Быстрая концентрация",
+       "Пассивная"
+      ],
+      "en": []
+     },
+     "req": "marksmanship-7",
+     "icon": 26,
+     "iname": "236201"
     },
     {
      "id": "marksmanship-13",
      "n": {
+      "ru": "Заградительный огонь",
       "en": "Barrage"
      },
      "r": 5,
@@ -432,13 +694,21 @@
      "spells": [
       19461
      ],
-     "iname0": "ability_upgrademoonglaive",
-     "icon": 20,
-     "iname": "ability_upgrademoonglaive"
+     "file": 132330,
+     "tip": {
+      "ru": [
+       "Заградительный огонь",
+       "Пассивная"
+      ],
+      "en": []
+     },
+     "icon": 27,
+     "iname": "132330"
     },
     {
      "id": "marksmanship-14",
      "n": {
+      "ru": "Дезориентирующий выстрел",
       "en": "Scatter Shot"
      },
      "r": 5,
@@ -447,13 +717,22 @@
      "spells": [
       19503
      ],
-     "iname0": "ability_golemstormbolt",
-     "icon": 21,
-     "iname": "ability_golemstormbolt"
+     "file": 132153,
+     "tip": {
+      "ru": [
+       "Дезориентирующий выстрел",
+       "Мана: 28",
+       "Мгновенное"
+      ],
+      "en": []
+     },
+     "icon": 28,
+     "iname": "132153"
     },
     {
      "id": "marksmanship-15",
      "n": {
+      "ru": "Специализация на оружии дальнего боя",
       "en": "Ranged Weapon Specialization"
      },
      "r": 6,
@@ -462,13 +741,21 @@
      "spells": [
       19507
      ],
-     "iname0": "inv_weapon_rifle_06",
-     "icon": 22,
-     "iname": "inv_weapon_rifle_06"
+     "file": 135615,
+     "tip": {
+      "ru": [
+       "Специализация на оружии дальнего боя",
+       "Пассивная"
+      ],
+      "en": []
+     },
+     "icon": 29,
+     "iname": "135615"
     },
     {
      "id": "marksmanship-16",
      "n": {
+      "ru": "Снайперский выстрел",
       "en": "Sniper Shot"
      },
      "r": 7,
@@ -477,8 +764,18 @@
      "spells": [
       1310687
      ],
-     "iname0": null,
-     "req": "marksmanship-10"
+     "file": 1412205,
+     "tip": {
+      "ru": [
+       "Снайперский выстрел",
+       "Мана: 365",
+       "Применение: 4 сек."
+      ],
+      "en": []
+     },
+     "req": "marksmanship-10",
+     "icon": 30,
+     "iname": "1412205"
     }
    ]
   },
@@ -488,6 +785,7 @@
     {
      "id": "survival-1",
      "n": {
+      "ru": "Мастерское выслеживание",
       "en": "Improved Tracking"
      },
      "r": 1,
@@ -496,11 +794,21 @@
      "spells": [
       24293
      ],
-     "iname0": null
+     "file": 134154,
+     "tip": {
+      "ru": [
+       "Мастерское выслеживание",
+       "Пассивная"
+      ],
+      "en": []
+     },
+     "icon": 31,
+     "iname": "134154"
     },
     {
      "id": "survival-2",
      "n": {
+      "ru": "Отражение",
       "en": "Deflection"
      },
      "r": 1,
@@ -509,13 +817,21 @@
      "spells": [
       19295
      ],
-     "iname0": "ability_parry",
-     "icon": 23,
-     "iname": "ability_parry"
+     "file": 132269,
+     "tip": {
+      "ru": [
+       "Отражение",
+       "Пассивная"
+      ],
+      "en": []
+     },
+     "icon": 32,
+     "iname": "132269"
     },
     {
      "id": "survival-3",
      "n": {
+      "ru": "Удержание",
       "en": "Entrapment"
      },
      "r": 2,
@@ -524,13 +840,21 @@
      "spells": [
       19184
      ],
-     "iname0": "spell_nature_stranglevines",
-     "icon": 24,
-     "iname": "spell_nature_stranglevines"
+     "file": 136100,
+     "tip": {
+      "ru": [
+       "Удержание",
+       "Пассивная"
+      ],
+      "en": []
+     },
+     "icon": 33,
+     "iname": "136100"
     },
     {
      "id": "survival-4",
      "n": {
+      "ru": "Беспощадные удары",
       "en": "Savage Strikes"
      },
      "r": 2,
@@ -539,13 +863,21 @@
      "spells": [
       19159
      ],
-     "iname0": "ability_racial_bloodrage",
-     "icon": 25,
-     "iname": "ability_racial_bloodrage"
+     "file": 132277,
+     "tip": {
+      "ru": [
+       "Беспощадные удары",
+       "Пассивная"
+      ],
+      "en": []
+     },
+     "icon": 34,
+     "iname": "132277"
     },
     {
      "id": "survival-5",
      "n": {
+      "ru": "Остаться в живых",
       "en": "Survivalist"
      },
      "r": 2,
@@ -554,13 +886,21 @@
      "spells": [
       19255
      ],
-     "iname0": "spell_shadow_twistedfaith",
-     "icon": 26,
-     "iname": "spell_shadow_twistedfaith"
+     "file": 136223,
+     "tip": {
+      "ru": [
+       "Остаться в живых",
+       "Пассивная"
+      ],
+      "en": []
+     },
+     "icon": 35,
+     "iname": "136223"
     },
     {
      "id": "survival-6",
      "n": {
+      "ru": "Улучшенная подрезка крыльев",
       "en": "Improved Wing Clip"
      },
      "r": 2,
@@ -569,13 +909,21 @@
      "spells": [
       19228
      ],
-     "iname0": "ability_rogue_trip",
-     "icon": 27,
-     "iname": "ability_rogue_trip"
+     "file": 132309,
+     "tip": {
+      "ru": [
+       "Улучшенная подрезка крыльев",
+       "Пассивная"
+      ],
+      "en": []
+     },
+     "icon": 36,
+     "iname": "132309"
     },
     {
      "id": "survival-7",
      "n": {
+      "ru": "Хитрые ловушки",
       "en": "Clever Traps"
      },
      "r": 3,
@@ -584,13 +932,21 @@
      "spells": [
       19239
      ],
-     "iname0": "spell_nature_timestop",
-     "icon": 28,
-     "iname": "spell_nature_timestop"
+     "file": 136106,
+     "tip": {
+      "ru": [
+       "Хитрые ловушки",
+       "Пассивная"
+      ],
+      "en": []
+     },
+     "icon": 37,
+     "iname": "136106"
     },
     {
      "id": "survival-8",
      "n": {
+      "ru": "Верный шаг",
       "en": "Surefooted"
      },
      "r": 3,
@@ -599,13 +955,21 @@
      "spells": [
       19290
      ],
-     "iname0": "ability_kick",
-     "icon": 29,
-     "iname": "ability_kick"
+     "file": 132219,
+     "tip": {
+      "ru": [
+       "Верный шаг",
+       "Пассивная"
+      ],
+      "en": []
+     },
+     "icon": 38,
+     "iname": "132219"
     },
     {
      "id": "survival-9",
      "n": {
+      "ru": "Сдерживание",
       "en": "Deterrence"
      },
      "r": 3,
@@ -614,13 +978,21 @@
      "spells": [
       19263
      ],
-     "iname0": "ability_whirlwind",
-     "icon": 30,
-     "iname": "ability_whirlwind"
+     "file": 132369,
+     "tip": {
+      "ru": [
+       "Сдерживание",
+       "Мгновенное действие"
+      ],
+      "en": []
+     },
+     "icon": 39,
+     "iname": "132369"
     },
     {
      "id": "survival-10",
      "n": {
+      "ru": "Тактика выживания",
       "en": "Survival Tactics"
      },
      "r": 4,
@@ -629,13 +1001,21 @@
      "spells": [
       19376
      ],
-     "iname0": null,
-     "icon": 31,
-     "iname": "132293"
+     "file": 132149,
+     "tip": {
+      "ru": [
+       "Тактика выживания",
+       "Пассивная"
+      ],
+      "en": []
+     },
+     "icon": 40,
+     "iname": "132149"
     },
     {
      "id": "survival-11",
      "n": {
+      "ru": "Лезвие хищника",
       "en": "Predator’s Edge"
      },
      "r": 4,
@@ -644,11 +1024,21 @@
      "spells": [
       1310627
      ],
-     "iname0": null
+     "file": 132147,
+     "tip": {
+      "ru": [
+       "Лезвие хищника",
+       "Пассивная"
+      ],
+      "en": []
+     },
+     "icon": 41,
+     "iname": "132147"
     },
     {
      "id": "survival-12",
      "n": {
+      "ru": "Контратака",
       "en": "Counterattack"
      },
      "r": 4,
@@ -657,14 +1047,23 @@
      "spells": [
       19306
      ],
-     "iname0": "ability_warrior_challange",
+     "file": 132336,
+     "tip": {
+      "ru": [
+       "Контратака",
+       "Мана: 30",
+       "Мгновенное"
+      ],
+      "en": []
+     },
      "req": "survival-9",
-     "icon": 32,
-     "iname": "ability_warrior_challange"
+     "icon": 42,
+     "iname": "132336"
     },
     {
      "id": "survival-13",
      "n": {
+      "ru": "Находчивость",
       "en": "Resourcefulness"
      },
      "r": 5,
@@ -673,11 +1072,21 @@
      "spells": [
       440529
      ],
-     "iname0": null
+     "file": 132207,
+     "tip": {
+      "ru": [
+       "Находчивость",
+       "Пассивная"
+      ],
+      "en": []
+     },
+     "icon": 43,
+     "iname": "132207"
     },
     {
      "id": "survival-14",
      "n": {
+      "ru": "Обнаружение добычи",
       "en": "Expose Prey"
      },
      "r": 5,
@@ -686,11 +1095,21 @@
      "spells": [
       1310532
      ],
-     "iname0": null
+     "file": 132215,
+     "tip": {
+      "ru": [
+       "Обнаружение добычи",
+       "Пассивная"
+      ],
+      "en": []
+     },
+     "icon": 44,
+     "iname": "132215"
     },
     {
      "id": "survival-15",
      "n": {
+      "ru": "Дисциплина выживающего",
       "en": "Survivalist’s Discipline"
      },
      "r": 5,
@@ -699,11 +1118,21 @@
      "spells": [
       1310496
      ],
-     "iname0": null
+     "file": 132178,
+     "tip": {
+      "ru": [
+       "Дисциплина выживающего",
+       "Пассивная"
+      ],
+      "en": []
+     },
+     "icon": 45,
+     "iname": "132178"
     },
     {
      "id": "survival-16",
      "n": {
+      "ru": "Удар долгонога",
       "en": "Strider Kick"
      },
      "r": 5,
@@ -712,11 +1141,22 @@
      "spells": [
       1317257
      ],
-     "iname0": null
+     "file": 132198,
+     "tip": {
+      "ru": [
+       "Удар долгонога",
+       "Мана: 20",
+       "Мгновенное"
+      ],
+      "en": []
+     },
+     "icon": 46,
+     "iname": "132198"
     },
     {
      "id": "survival-17",
      "n": {
+      "ru": "Молниеносные рефлексы",
       "en": "Lightning Reflexes"
      },
      "r": 6,
@@ -725,13 +1165,21 @@
      "spells": [
       19168
      ],
-     "iname0": "spell_nature_invisibilty",
-     "icon": 33,
-     "iname": "spell_nature_invisibilty"
+     "file": 136047,
+     "tip": {
+      "ru": [
+       "Молниеносные рефлексы",
+       "Пассивная"
+      ],
+      "en": []
+     },
+     "icon": 47,
+     "iname": "136047"
     },
     {
      "id": "survival-18",
      "n": {
+      "ru": "Раздирающие удары",
       "en": "Lacerating Strikes"
      },
      "r": 7,
@@ -740,11 +1188,20 @@
      "spells": [
       1310533
      ],
-     "iname0": null,
-     "req": "survival-14"
+     "file": 132155,
+     "tip": {
+      "ru": [
+       "Раздирающие удары",
+       "Пассивная"
+      ],
+      "en": []
+     },
+     "req": "survival-14",
+     "icon": 48,
+     "iname": "132155"
     }
    ]
   }
  ],
- "sprite": 34
+ "sprite": 49
 }

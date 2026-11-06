@@ -119,14 +119,20 @@ def _line(v, first, step, med):
 def from_traits(d, old_keys=None):
     """A Forever dump (api = traits: node positions and edges) -> the classic shape (row, col from 1, req as [row, col]),
     talents in row-major order."""
-    out = dict(d, trees=[])
+    out = dict(d, trees=[], grid=True)
     for tree in d['trees']:
         ts = list(tree['talents'].values()) if isinstance(tree['talents'], dict) else list(tree['talents'])
+        mx = sorted(t['posX'] for t in ts)[len(ts) // 2]
+        my = sorted(t['posY'] for t in ts)[len(ts) // 2]
+        # a node with an extra zero in its position (10x) is not in the game's window: checked in the client 06.11
+        # (hunter: a second Lightning Reflexes, a Serpent Sting node that no tree shows)
+        ts = [t for t in ts if _fix(t['posX'], mx) == t['posX'] and _fix(t['posY'], my) == t['posY']]
         x0, dx, xl = _axis([t['posX'] for t in ts])
         y0, dy, yl = _axis([t['posY'] for t in ts])
         pos = {}
         for t in ts:
-            t = dict(t, col=_line(t['posX'], x0, dx, xl) + 1, row=_line(t['posY'], y0, dy, yl) + 1)
+            t = dict(t, col=_line(t['posX'], x0, dx, xl) + 1, row=_line(t['posY'], y0, dy, yl) + 1,
+                     tip=[l for l in (t.get('tip') or []) if l not in ('SpellID', 'IconID')])  # labels another addon adds
             pos[t['talentID']] = t
         for t in list(pos.values()):
             edges = t.get('edges') or []
@@ -140,7 +146,7 @@ def from_traits(d, old_keys=None):
 def convert(cid, by_locale, old=None, fixture=False):
     """One class: the dumps of each client language -> our JSON (old: the previous file, its icons are kept)."""
     keys = TREES[cid]
-    by_locale = {loc: (from_traits(d) if d.get('api') == 'traits' else d) for loc, d in by_locale.items()}
+    by_locale = {loc: (from_traits(d) if d.get('api') == 'traits' and not d.get('grid') else d) for loc, d in by_locale.items()}
     by_pos = {(tr['key'], t['r'], t['c']): t['id'] for tr in (old or {}).get('trees', []) for t in tr['talents']}
     base = by_locale.get('enUS') or next(iter(by_locale.values()))
     prev = {t['id']: t for tr in (old or {}).get('trees', []) for t in tr['talents']}
@@ -149,15 +155,24 @@ def convert(cid, by_locale, old=None, fixture=False):
     for ti, tree in enumerate(base['trees']):
         key = keys[ti]
         talents = []
-        ids = {}                                        # traits dumps: the same place in the tree keeps its id (icon, old texts)
+        ids = {}       # traits dumps: the same talent (its spell, else its place) keeps its id, icon and old texts
         if base.get('api') == 'traits':
-            taken = {v for (k, _, _), v in by_pos.items() if k == key}
-            free = 1 + max([int(v.rsplit('-', 1)[1]) for v in taken] or [0])
-            for t in tree['talents']:
+            olds = next((tr['talents'] for tr in (old or {}).get('trees', []) if tr['key'] == key), [])
+            by_spell = {s: o['id'] for o in olds for s in o.get('spells') or []}
+            spells_of = {o['id']: set(o.get('spells') or []) for o in olds}
+            free = 1 + max([int(o['id'].rsplit('-', 1)[1]) for o in olds] or [0])
+            later = []
+            for t in tree['talents']:                   # first by spell
                 rc = (int(t['row']), int(t['col']))
+                tid = by_spell.get(t.get('spellId'))
+                if tid and tid not in ids.values():
+                    ids[rc] = tid
+                else:
+                    later.append((rc, t))
+            for rc, t in later:                         # then by place, when the old talent there had no other spell
                 tid = by_pos.get((key, *rc))
-                if not tid or tid in ids.values():      # a new talent (or a second one on the same place): a new number
-                    tid, free = f'{key}-{free}', free + 1
+                if not tid or tid in ids.values() or (spells_of.get(tid) and t.get('spellId') not in spells_of[tid]):
+                    tid, free = f'{key}-{free}', free + 1   # a new talent: a new number
                 ids[rc] = tid
         for i, t in enumerate(tree['talents'], 1):
             tid = ids.get((int(t['row']), int(t['col'])), f'{key}-{i}')

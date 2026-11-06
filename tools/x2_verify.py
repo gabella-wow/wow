@@ -36,8 +36,12 @@ def _list(t):
 
 
 def load_lua(path, root):
-    from talent_import import parse_lua
-    return parse_lua(open(path, encoding='utf-8').read()).get(root)
+    from talent_import import parse_lua, from_traits
+    db = parse_lua(open(path, encoding='utf-8').read()).get(root)
+    if root == 'GabellaTalentsDB' and db:              # Forever dumps (C_Traits): positions -> rows and columns
+        db = {c: {loc: (from_traits(d) if isinstance(d, dict) and d.get('api') == 'traits' and not d.get('grid') else d) for loc, d in by.items()}
+              for c, by in db.items()}
+    return db
 
 
 def site_talents(cid):
@@ -156,7 +160,7 @@ def check_order(talents_db, trees):
             out.append((False, f'порядок 31–60 {cid}-{spec}: нет дампа'))
             continue
         try:
-            data = talent_import.convert(cid, by)
+            data = talent_import.convert(cid, by, site_talents(cid))   # English names by spell from the site (the dump may be ru only)
             b = talents.leveling(cid, spec, data)
         except Exception as e:                                     # a dump of a different shape must not hide the other checks
             out.append((False, f'порядок 31–60 {cid}-{spec}: ошибка разбора {type(e).__name__}: {e}'))

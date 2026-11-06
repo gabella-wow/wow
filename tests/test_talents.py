@@ -267,9 +267,10 @@ def _traits_dump(old, moved=None):
         for k, t in enumerate(tr['talents']):
             r, c = (moved or {}).get(t['id'], (t['r'], t['c']))
             px, py = 1500 + c * 600 + rnd.choice([0, 3, -4]), 1200 + r * 600 + rnd.choice([0, 2])
-            ts.append({'name': t['n'].get('ru', t['id']), 'maxRank': t['m'], 'talentID': nid[t['id']],
-                       'posX': px * 10 if k == 3 else px, 'posY': py, 'tip': [],
+            ts.append({'name': t['n'].get('ru', t['id']), 'maxRank': t['m'], 'talentID': nid[t['id']], 'spellId': (t.get('spells') or [None])[0],
+                       'posX': px, 'posY': py, 'tip': [],
                        'edges': [nid[s['id']] for s in tr['talents'] if s.get('req') == t['id']]})
+        ts.append({'name': 'ghost', 'maxRank': 5, 'talentID': 1, 'spellId': 1, 'posX': 15000, 'posY': 39300, 'tip': [], 'edges': []})
         rnd.shuffle(ts)
         trees.append({'info': ['x'], 'talents': ts})
     return {'api': 'traits', 'locale': 'ruRU', 'build': '1.60.1.70790', 'trees': trees}
@@ -290,6 +291,17 @@ def test_traits_dump():
     new = talent_import.convert('mage', {'ruRU': _traits_dump(old, {t0['id']: (9, 4)})}, old)
     ids = [t['id'] for t in new['trees'][0]['talents']]
     assert len(ids) == len(set(ids)) and t0['id'] not in ids
+    # with spells: a talent moved keeps its id (and English name); an old copy with an extra zero is dropped
+    old = json.load(open(os.path.join(ROOT, 'content', 'talents', 'hunter.json'), encoding='utf-8'))
+    t0 = old['trees'][0]['talents'][0]
+    d = _traits_dump(old, {t0['id']: (9, 4)})
+    copy = dict(next(t for t in d['trees'][0]['talents'] if t['spellId'] == t0['spells'][0]), talentID=1)
+    copy['posX'] *= 10
+    d['trees'][0]['talents'].append(copy)
+    new = talent_import.convert('hunter', {'ruRU': d}, old)
+    moved = [t for t in new['trees'][0]['talents'] if t['id'] == t0['id']]
+    assert len(moved) == 1 and (moved[0]['r'], moved[0]['c']) == (9, 4) and moved[0]['n'].get('en') == t0['n'].get('en')
+    assert len(new['trees'][0]['talents']) == len(old['trees'][0]['talents'])
 
 
 if __name__ == '__main__':
