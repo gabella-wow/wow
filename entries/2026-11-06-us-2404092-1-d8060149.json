@@ -1,0 +1,59 @@
+{
+ "event": "new",
+ "key": "us-2404092-1",
+ "source": "forum",
+ "region": "us",
+ "topic": 2404092,
+ "post": 1,
+ "url": "https://us.forums.blizzard.com/en/wow/t/class-tuning-incoming-november-10/2404092/1",
+ "title": "Class Tuning Incoming - November 10",
+ "author": "Kaivax",
+ "role": "Community Manager",
+ "created_at": "2026-11-06T21:11:39.116Z",
+ "updated_at": "2026-11-06T21:11:39.116Z",
+ "version": 1,
+ "category": 347,
+ "beta": false,
+ "sha": "d8060149fd70ee7b0a1a694a57acba79ec542ce6885f76f888bd7437076994de",
+ "twin_of": null,
+ "also": [
+  "https://eu.forums.blizzard.com/en/wow/t/class-tuning-incoming-10-november/640100/1"
+ ],
+ "short_news": {
+  "date": "2026-11-06",
+  "at": "2026-11-06T21:11:39Z",
+  "url": "https://us.forums.blizzard.com/en/wow/t/class-tuning-incoming-november-10/2404092/1",
+  "title_en": "Class Tuning Incoming - November 10",
+  "kind": "post",
+  "beta": false
+ },
+ "changes": [
+  {
+   "path": [],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Bane of Agony",
+    "Siphon Life",
+    "Corruption",
+    "Wrack"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Affliction Warlock reports indicate that always channeling Wrack is superior to also casting damage-over-time abilities like Siphon Life, Corruption, and Bane of Agony. We will make adjustments to make sure those are always worthwhile to cast combined with Wrack, without affecting Affliction Warlocks’ total damage output.",
+   "h": "110574d4bf0c"
+  }
+ ],
+ "new_lines": [
+  "98006be7898d",
+  "110574d4bf0c",
+  "264bc4b6edfb"
+ ],
+ "gone_lines": [],
+ "outdated": [],
+ "to_check": [],
+ "check": [],
+ "detected_at": "2026-11-06T21:21:03Z"
+}
