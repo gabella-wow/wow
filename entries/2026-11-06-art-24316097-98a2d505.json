@@ -1,0 +1,137 @@
+{
+ "event": "new",
+ "key": "art-24316097",
+ "source": "article",
+ "region": "us",
+ "topic": null,
+ "post": null,
+ "url": "https://worldofwarcraft.blizzard.com/en-us/news/24316097/the-adventure-begins-in-wow-forever-stay-connected-with-discord-and-taldramir-takes-shape-in-wow-weekly",
+ "title": "The Adventure Begins in WoW: Forever, Stay Connected with Discord, and Taldramir Takes Shape in WoW Weekly",
+ "author": "Blizzard Entertainment",
+ "role": "Blizzard News",
+ "created_at": "2026-11-06T18:10:00.000Z",
+ "updated_at": null,
+ "version": null,
+ "category": null,
+ "beta": false,
+ "sha": "98a2d5050aa8c15f5c43efe8826c1d110b4312a1957e7db05bbb5f70ef75b937",
+ "twin_of": null,
+ "also": [],
+ "short_news": {
+  "date": "2026-11-06",
+  "at": "2026-11-06T18:10:00Z",
+  "url": "https://worldofwarcraft.blizzard.com/en-us/news/24316097/the-adventure-begins-in-wow-forever-stay-connected-with-discord-and-taldramir-takes-shape-in-wow-weekly",
+  "title_en": "The Adventure Begins in WoW: Forever, Stay Connected with Discord, and Taldramir Takes Shape in WoW Weekly",
+  "kind": "article",
+  "beta": false
+ },
+ "changes": [
+  {
+   "path": [
+    "World of Warcraft: Forever Now Live!"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Azeroth"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Whether you’re stepping into World of Warcraft for the first time or finding your way back to Azeroth, there’s a place for you in World of Warcraft: Forever. Explore a new and reimagined Azeroth at your own pace, discover new places or revisit old favorites, and meet fellow adventurers along the way. This permanent home alongside modern and Classic WoW puts community first and makes the journey as meaningful as the destination.",
+   "h": "09a256246f2b"
+  },
+  {
+   "path": [
+    "Explore WoW: Forever with a Gamepad"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Azeroth"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "A spell to cast, an ally to heal, a well-earned reward to collect—there’s plenty to keep you busy in Azeroth. If you prefer a gamepad, World of Warcraft: Forever gives you another way to join the action.",
+   "h": "1fb5f0eb3532"
+  },
+  {
+   "path": [
+    "Explore WoW: Forever with a Gamepad"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "In World of Warcraft"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "In World of Warcraft: Forever, we’ve refined targeting, casting, looting, and menu navigation for gamepads while keeping the familiar feel players have come to know.",
+   "h": "77cf6837b11a"
+  },
+  {
+   "path": [
+    "Set Your Campfire Ablaze with the Pouch of Violet Dust!"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Start Time"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    4,
+    12,
+    30
+   ],
+   "text": "Start Time: November 4, at 4:30 pm PST End Time: November 12, at 4:30 pm PST",
+   "h": "db3e5b7682a1"
+  },
+  {
+   "path": [
+    "Set Your Campfire Ablaze with the Pouch of Violet Dust!"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "removed",
+   "pairs": [],
+   "nums": [],
+   "text": "This ephemeral item is only available in WoW: Forever and can only be used during the “WoW: Forever Launch Celebration” event period, after which the toy will be removed from players’ collections and will no longer be available in-game.",
+   "h": "ad2db0785c0e"
+  }
+ ],
+ "new_lines": [
+  "09a256246f2b",
+  "8ba01d5d5c1c",
+  "85cdf489db84",
+  "30094661002f",
+  "8ba01d5d5c1c",
+  "7125150ff624",
+  "47f87d21fccb",
+  "8ba01d5d5c1c",
+  "1fb5f0eb3532",
+  "77cf6837b11a",
+  "8ba01d5d5c1c",
+  "2ac913b00c33",
+  "db3e5b7682a1",
+  "ad2db0785c0e",
+  "6590b1317f67",
+  "8ba01d5d5c1c",
+  "2818728f7aac",
+  "512a4286dee6"
+ ],
+ "gone_lines": [],
+ "outdated": [],
+ "to_check": [],
+ "check": [],
+ "detected_at": "2026-11-06T18:10:59Z"
+}
