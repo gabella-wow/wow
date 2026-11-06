@@ -1,5 +1,117 @@
 [
  {
+  "id": "art-24315281",
+  "sha": "17b69ad5",
+  "date": "2026-11-06",
+  "at": "2026-11-06T02:31:00Z",
+  "url": "https://worldofwarcraft.blizzard.com/en-us/news/24315281/wow-forever-hotfixes-november-5-2026",
+  "kind": "hotfixes",
+  "beta": false,
+  "title_en": "WoW: Forever Hotfixes - November 5, 2026",
+  "n": 3,
+  "t": {
+   "ru": {
+    "h": "Хотфиксы от 06.11",
+    "src": "Blizzard, на английском",
+    "sum": [
+     "Mild Spices: 2 → 1",
+     "Бег по равнинам (Plainsrunning): ограничено"
+    ],
+    "more": "Ещё изменений: 1",
+    "site": "https://gabella.site/wow/guides/news/",
+    "site_t": "Подробнее на сайте"
+   },
+   "en": {
+    "h": "Hotfixes of Nov 6",
+    "src": "Blizzard",
+    "sum": [
+     "Mild Spices: 2 → 1",
+     "Plainsrunning: narrowed"
+    ],
+    "more": "1 more changes",
+    "site": "https://gabella.site/wow/en/guides/news/",
+    "site_t": "More on the site"
+   },
+   "uk": {
+    "h": "Хотфікси від 06.11",
+    "src": "Blizzard, англійською",
+    "sum": [
+     "Mild Spices: 2 → 1",
+     "Plainsrunning: обмежено"
+    ],
+    "more": "Ще змін: 1",
+    "site": "https://gabella.site/wow/uk/guides/news/",
+    "site_t": "Детальніше на сайті"
+   },
+   "de": {
+    "h": "Hotfixes vom 06.11",
+    "src": "Blizzard, auf Englisch",
+    "sum": [
+     "Mild Spices: 2 → 1",
+     "Ebenenlaufen: eingeschränkt"
+    ],
+    "more": "Weitere Änderungen: 1",
+    "site": "https://gabella.site/wow/de/guides/news/",
+    "site_t": "Mehr auf der Seite"
+   },
+   "fr": {
+    "h": "Correctifs du 06.11",
+    "src": "Blizzard, en anglais",
+    "sum": [
+     "Mild Spices: 2 → 1",
+     "Course dans les plaines: restreint"
+    ],
+    "more": "Autres changements : 1",
+    "site": "https://gabella.site/wow/fr/guides/news/",
+    "site_t": "Plus sur le site"
+   },
+   "es": {
+    "h": "Correcciones del 06.11",
+    "src": "Blizzard, en inglés",
+    "sum": [
+     "Mild Spices: 2 → 1",
+     "Correr planicies: limitado"
+    ],
+    "more": "Más cambios: 1",
+    "site": "https://gabella.site/wow/es/guides/news/",
+    "site_t": "Más en la web"
+   },
+   "pt": {
+    "h": "Hotfixes de 06.11",
+    "src": "Blizzard, em inglês",
+    "sum": [
+     "Mild Spices: 2 → 1",
+     "Vencer Planícies: restrito"
+    ],
+    "more": "Mais mudanças: 1",
+    "site": "https://gabella.site/wow/pt/guides/news/",
+    "site_t": "Mais no site"
+   },
+   "it": {
+    "h": "Hotfix del 06.11",
+    "src": "Blizzard, in inglese",
+    "sum": [
+     "Mild Spices: 2 → 1",
+     "Vagapianure: limitato"
+    ],
+    "more": "Altre modifiche: 1",
+    "site": "https://gabella.site/wow/it/guides/news/",
+    "site_t": "Di più sul sito"
+   },
+   "pl": {
+    "h": "Hotfixy z 06.11",
+    "src": "Blizzard, po angielsku",
+    "sum": [
+     "Mild Spices: 2 → 1",
+     "Plainsrunning: ograniczone"
+    ],
+    "more": "Więcej zmian: 1",
+    "site": "https://gabella.site/wow/pl/guides/news/",
+    "site_t": "Więcej na stronie"
+   }
+  }
+ },
+ {
   "id": "art-24317865",
   "sha": "b6d93c8b",
   "date": "2026-11-05",
