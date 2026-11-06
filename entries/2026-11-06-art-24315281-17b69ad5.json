@@ -1,0 +1,294 @@
+{
+ "event": "new",
+ "key": "art-24315281",
+ "source": "article",
+ "region": "us",
+ "topic": null,
+ "post": null,
+ "url": "https://worldofwarcraft.blizzard.com/en-us/news/24315281/wow-forever-hotfixes-november-5-2026",
+ "title": "WoW: Forever Hotfixes - November 5, 2026",
+ "author": "Blizzard Entertainment",
+ "role": "Blizzard News",
+ "created_at": "2026-11-06T02:31:00.000Z",
+ "updated_at": null,
+ "version": null,
+ "category": null,
+ "beta": false,
+ "sha": "17b69ad5135f3625ece09cb9806e72d742e1371193d58015234758d94a48130c",
+ "twin_of": null,
+ "also": [
+  "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-5-2026/2403040/1",
+  "https://eu.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-5-2026/639885/1"
+ ],
+ "short_news": {
+  "date": "2026-11-06",
+  "at": "2026-11-06T02:31:00Z",
+  "url": "https://worldofwarcraft.blizzard.com/en-us/news/24315281/wow-forever-hotfixes-november-5-2026",
+  "title_en": "WoW: Forever Hotfixes - November 5, 2026",
+  "kind": "hotfixes",
+  "beta": false
+ },
+ "changes": [
+  {
+   "path": [
+    "Hotfixes",
+    "Enemies and NPCs"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Durotar"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Durotar - Fixed an issue where Yarrog Baneshadow was respawning more slowly than intended.",
+   "h": "d5a1db810e74"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Enemies and NPCs"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Zephras"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Zephras - Lotheluum Starbreeze now offers training to Druids as expected.",
+   "h": "408413c4c41d"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Enemies and NPCs"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Dustwallow Marsh"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Dustwallow Marsh - Fixed an issue where some murlocs in Dustwallow Marsh were respawning too quickly.",
+   "h": "65bbe9554c6e"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Enemies and NPCs"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Swamp of Sorrows"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Swamp of Sorrows - Fixed an issue where Pelluk would sometimes not spawn.",
+   "h": "3a04ff7eb154"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Items"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Zephras Isle"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where trade supply vendors on Zephras Isle didn't sell apprentice tradeskill bags.",
+   "h": "cd092f1349d0"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Items"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Mild Spices"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 1,
+     "old": 2,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    1,
+    2
+   ],
+   "text": "Mild Spices now sell to vendors for 1 copper each (was 2 copper).",
+   "h": "bfc8090e10ca"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Player versus Player"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Plainsrunning"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Plainsrunning could be stacked in a battleground's preparation phase.",
+   "h": "4b451a70becf"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Player versus Player"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Plainsrunning"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Plainsrunning can no longer stack and stacks will be cancelled when carrying a flag in a battleground.",
+   "h": "f4bdc855bd8c"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Elune"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue with incorrect text in \"The Sisterhood of Elune\".",
+   "h": "c67a0390faaa"
+  }
+ ],
+ "new_lines": [
+  "d5a1db810e74",
+  "408413c4c41d",
+  "65bbe9554c6e",
+  "3a04ff7eb154",
+  "cd092f1349d0",
+  "bfc8090e10ca",
+  "4b451a70becf",
+  "f4bdc855bd8c",
+  "c67a0390faaa",
+  "a3c719c6ea47"
+ ],
+ "gone_lines": [],
+ "outdated": [],
+ "to_check": [
+  "guides/best-race/",
+  "guides/leveling/",
+  "guides/transport/",
+  "races/tauren/"
+ ],
+ "check": [
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Zephras",
+   "kind": "changed",
+   "pairs": [],
+   "h": "408413c4c41d",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Mild Spices",
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 1,
+     "old": 2,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "h": "bfc8090e10ca",
+   "findings": [
+    {
+     "page": "guides/leveling/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Mild Spices and Soothing Spices are sold by vendors in cities"
+    }
+   ],
+   "sources": [
+    "content/guides.py:583"
+   ]
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Plainsrunning",
+   "kind": "no_longer",
+   "pairs": [],
+   "h": "f4bdc855bd8c",
+   "findings": [
+    {
+     "page": "guides/best-race/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Plainsrunning"
+    },
+    {
+     "page": "guides/transport/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Plainsrunning)"
+    },
+    {
+     "page": "races/tauren/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Plainsrunning While you keep moving, run speed grows by 2% per stack, up to +60%"
+    }
+   ],
+   "sources": [
+    "content/guides.py:1268",
+    "content/guides.py:1401",
+    "content/guides.py:1402",
+    "i18n/en.txt:303",
+    "i18n/en.txt:1064",
+    "i18n/en.txt:1198"
+   ]
+  }
+ ],
+ "detected_at": "2026-11-06T02:41:02Z"
+}
