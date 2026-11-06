@@ -26,10 +26,17 @@ local function dump()
     local tree = { info = { a, b, c, e, f, g }, talents = {} }
     for i = 1, GetNumTalents(tab) do
       local r = { GetTalentInfo(tab, i) }
-      local pt, pc = GetTalentPrereqs(tab, i)
+      local pt, pc
+      if GetTalentPrereqs then pt, pc = GetTalentPrereqs(tab, i) end
       tip:ClearLines()
-      tip:SetTalent(tab, i)
-      local _, spellId = tip:GetSpell()
+      local spellId
+      if tip.SetTalent then                                    -- no tooltip API in this client: names and ranks still saved
+        pcall(tip.SetTalent, tip, tab, i)
+        if tip.GetSpell then
+          local ok, _, sid = pcall(tip.GetSpell, tip)
+          if ok then spellId = sid end
+        end
+      end
       tree.talents[i] = { name = r[1], icon = r[2], row = r[3], col = r[4], maxRank = r[6],
                           talentID = r[11], spellId = spellId, req = pt and { pt, pc } or nil, tip = tipLines() }
     end
@@ -41,4 +48,7 @@ local function dump()
 end
 
 SLASH_GABELLATALENTS1 = "/gtd"
-SlashCmdList.GABELLATALENTS = dump
+SlashCmdList.GABELLATALENTS = function()
+  local ok, err = pcall(dump)
+  if not ok then print("|cffc9a54aGabella|r: talents error: " .. tostring(err)) end
+end

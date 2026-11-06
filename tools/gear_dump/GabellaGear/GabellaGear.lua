@@ -21,8 +21,30 @@ local P = "|cffc9a54aGabella|r: "
 
 local tip = CreateFrame("GameTooltip", "GabellaGearTip", nil, "GameTooltipTemplate")
 tip:SetOwner(WorldFrame, "ANCHOR_NONE")
-local getStats = (C_Item and C_Item.GetItemStats) or GetItemStats
-local request = C_Item and C_Item.RequestLoadItemDataByID
+-- The Forever client (1.60.x) has no global GetItemInfoInstant: every API call goes through a fallback.
+local GII = GetItemInfoInstant or (C_Item and C_Item.GetItemInfoInstant)
+local getInfo = GetItemInfo or (C_Item and C_Item.GetItemInfo)
+local getStats = GetItemStats or (C_Item and C_Item.GetItemStats)
+-- asking the server: the request API, or else GetItemInfo itself (it asks the server for an item the client does not have)
+local request = (C_Item and C_Item.RequestLoadItemDataByID) or function(id) getInfo(id) end
+
+local function newTicker(sec, fn)
+  if C_Timer and C_Timer.NewTicker then return C_Timer.NewTicker(sec, fn) end
+  local fr, acc = CreateFrame("Frame"), 0
+  fr:SetScript("OnUpdate", function(_, e) acc = acc + e; if acc >= sec then acc = 0; fn() end end)
+  return { Cancel = function() fr:SetScript("OnUpdate", nil) end }
+end
+
+-- what kind an id is: known (the client has it), class, equip slot. Without GetItemInfoInstant only cached items are known.
+local function kind(id)
+  if GII then
+    local _, _, _, equip, _, cls = GII(id)
+    return true, cls, equip
+  end
+  local name, _, _, _, _, _, _, _, equip, _, _, cls = getInfo(id)
+  if name then return true, cls, equip end
+  return false
+end
 
 local function db()
   GabellaGearDB.items = GabellaGearDB.items or {}
@@ -54,7 +76,7 @@ local function wanted(cls, equip)
 end
 
 local function save0(id)
-  local name, link, q, ilvl, req, _, _, _, equip, icon, _, cls, sub = GetItemInfo(id)
+  local name, link, q, ilvl, req, _, _, _, equip, icon, _, cls, sub = getInfo(id)
   if not name or not link then return false end
   local d = db()
   if not wanted(cls, equip) or (req or 0) > d.maxreq or (q or 0) < 1 then return false end
@@ -66,7 +88,7 @@ local function save0(id)
   it.slot = (equip and equip ~= "") and equip or nil
   it.ilvl, it.req, it.q, it.icon = ilvl, req, q, icon
   it.cls, it.sub, it.iclass, it.isub = cls, sub, cls, sub          -- cls/sub: the v1 names, kept for old readers
-  local st = getStats(link)
+  local st = getStats and getStats(link)
   it.stats = (st and next(st)) and st or nil
   it.tip[loc] = tipLines(link)
   d.items[id] = it
@@ -94,7 +116,7 @@ local function addSrc(id, key, rec)
   else
     d.src[id][key] = rec
   end
-  if not save(id) and request then request(id) end
+  if not save(id) then request(id) end
 end
 
 -- the scan: every id of the ranges, STEP a tick; ids the client has to load are asked from the server (REQ_TICK a tick at most)
@@ -146,10 +168,10 @@ local function step0()
     else
       s.n = s.n + 1
       seen = seen + 1
-      local _, _, _, equip, _, cls = GetItemInfoInstant(id)
-      if wanted(cls, equip) then
-        if save(id) then found = found + 1; saved = saved + 1
-        elseif request then
+      local known, cls, equip = kind(id)
+      if not known or wanted(cls, equip) then
+        if known and save(id) then found = found + 1; saved = saved + 1
+        else                                                     -- not loaded yet: ask, GET_ITEM_INFO_RECEIVED saves it
           waiting[id] = true
           request(id)
           asked = asked + 1
@@ -183,7 +205,8 @@ local function start(ranges, fresh)
     print(P .. "going on from " .. seen .. " / " .. s.all .. " ids (/ggd scan new starts again)...")
   end
   waiting, retry, idle = {}, false, 0
-  if not ticker then ticker = C_Timer.NewTicker(TICK, step) end
+  if not ticker then ticker = newTicker(TICK, step) end
+  if not GII then print(P .. "no GetItemInfoInstant in this client: every id is asked from the server (~10 minutes).") end
 end
 
 local function status()
