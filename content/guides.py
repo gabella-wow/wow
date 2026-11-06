@@ -1144,8 +1144,6 @@ GUIDES.append({
          'https://www.method.gg/wow-forever/how-to-get-to-all-starting-zones-in-wow-forever-and-best-starting-zones'),
         (t('Method: прокачка группой (01.11.2026)', 'Method: leveling as a party (Nov 1, 2026)', 'Method: прокачування групою (01.11.2026)'),
          'https://www.method.gg/wow-forever/leveling-as-a-party-in-wow-forever-whats-changed-and-what-you-need-to-know'),
-        (t('Blizzard: порталы у причалов (форум, 05.11.2026)', 'Blizzard: portals at the docks (forums, Nov 5, 2026)', 'Blizzard: портали біля причалів (форум, 05.11.2026)'),
-         'https://us.forums.blizzard.com/en/wow/t/zeppelins-broken/2401777'),
         (t('Output Lag: новые корабли с панели BlizzCon (13.09.2026)', 'Output Lag: new ship routes from the BlizzCon panel (Sep 13, 2026)', 'Output Lag: нові кораблі з панелі BlizzCon (13.09.2026)'),
          'https://outputlag.com/news/world-of-warcraft-forever-adds-three-ship-routes-including-stormwind-to-auberdine/'),
         (t('Icy Veins: без забега через Болотину', 'Icy Veins: skipping the Wetlands death run', 'Icy Veins: без забігу через Wetlands'),
@@ -1158,11 +1156,6 @@ GUIDES.append({
         (t('Blizzard: Legacy', 'Blizzard: Legacy', 'Blizzard: Legacy'), 'https://news.blizzard.com/en-gb/article/24307383'),
     ],
     'sections': [
-        {'id': 'now', 'title': t('Если корабль не приходит', 'If the boat does not come', 'Якщо корабель не приходить'), 'blocks': [
-            ('text', [t('5 ноября Blizzard сообщила: корабли и дирижабли надолго застревают в пути. Временно у большинства причалов и внутри башен дирижаблей стоят порталы на другой материк. Исправление обещали выпустить на следующее утро, порталы уберут, когда его проверят.',
-                        'On 5 November Blizzard reported that boats and zeppelins get stuck in transit for a long time. As a temporary fix there are portals to the other continent near most docks and inside the zeppelin towers. The proper fix was promised for the next morning, and the portals will be removed once it is verified.',
-                        '5 листопада Blizzard повідомила: кораблі й дирижаблі надовго застрягають у дорозі. Тимчасово біля більшості причалів і всередині веж дирижаблів стоять портали на інший материк. Виправлення обіцяли випустити наступного ранку, портали приберуть, коли його перевірять.')]),
-        ]},
         {'id': 'alliance', 'title': t('Альянс', 'Alliance', 'Альянс'), 'blocks': [
             ('table', {'head': TR_HEAD, 'rows': [
                 [t('Stormwind City ↔ Auberdine', 'Stormwind City ↔ Auberdine', 'Stormwind City ↔ Auberdine'),
@@ -1311,8 +1304,6 @@ GUIDES.append({
                  'a': [t('Нет. Летают только перелётами у распорядителя полётов. Наземное ездовое — с 40 уровня.', 'No. You only fly by taking flights from a flight master. Ground mounts come at level 40.', 'Ні. Літають лише перельотами в розпорядника польотів. Наземна їздова тварина — з 40 рівня.')]},
                 {'id': 'zephras', 'q': t('Как попасть на Zephras Isle?', 'How do you get to Zephras Isle?', 'Як потрапити на Zephras Isle?'),
                  'a': [t('Небоходом Skycutter: Альянс садится в [[Даларане|Dalaran]], Орда на Skywatcher Plateau у [[Мулгора|Mulgore]]. Он прилетает в Valanaar на юге острова.', 'By the Skycutter airship: the Alliance boards in Dalaran, the Horde at Skywatcher Plateau by Mulgore. It lands in Valanaar in the south of the island.', 'Небоходом Skycutter: Альянс сідає в Dalaran, Орда на Skywatcher Plateau біля Mulgore. Він прилітає у Valanaar на півдні острова.')]},
-                {'id': 'stuck', 'q': t('Что делать, если корабль или дирижабль не приходит?', 'What if the boat or zeppelin does not come?', 'Що робити, якщо корабель чи дирижабль не приходить?'),
-                 'a': [t('5 ноября Blizzard поставила временные порталы у большинства причалов и в башнях дирижаблей. Ищите портал рядом с причалом.', 'On 5 November Blizzard placed temporary portals near most docks and in the zeppelin towers. Look for a portal next to the dock.', '5 листопада Blizzard поставила тимчасові портали біля більшості причалів і у вежах дирижаблів. Шукайте портал поруч із причалом.')]},
             ]),
         ]},
     ],
