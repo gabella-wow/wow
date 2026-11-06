@@ -255,6 +255,43 @@ def test_reimport_keeps_other_languages():
     assert all('en' not in t['n'] for tr in fresh['trees'] for t in tr['talents'])
 
 
+
+def _traits_dump(old, moved=None):
+    """A Forever (C_Traits) dump made from our JSON: node positions with noise, a few with an extra zero, shuffled."""
+    import random
+    rnd = random.Random(7)
+    trees = []
+    for tr in old['trees']:
+        nid = {t['id']: 1000 + k for k, t in enumerate(tr['talents'])}
+        ts = []
+        for k, t in enumerate(tr['talents']):
+            r, c = (moved or {}).get(t['id'], (t['r'], t['c']))
+            px, py = 1500 + c * 600 + rnd.choice([0, 3, -4]), 1200 + r * 600 + rnd.choice([0, 2])
+            ts.append({'name': t['n'].get('ru', t['id']), 'maxRank': t['m'], 'talentID': nid[t['id']],
+                       'posX': px * 10 if k == 3 else px, 'posY': py, 'tip': [],
+                       'edges': [nid[s['id']] for s in tr['talents'] if s.get('req') == t['id']]})
+        rnd.shuffle(ts)
+        trees.append({'info': ['x'], 'talents': ts})
+    return {'api': 'traits', 'locale': 'ruRU', 'build': '1.60.1.70790', 'trees': trees}
+
+
+def test_traits_dump():
+    for cls in ('mage', 'paladin', 'hunter'):
+        old = json.load(open(os.path.join(ROOT, 'content', 'talents', f'{cls}.json'), encoding='utf-8'))
+        new = talent_import.convert(cls, {'ruRU': _traits_dump(old)}, old)
+        for a, b in zip(old['trees'], new['trees']):
+            assert [(t['id'], t['r'], t['c'], t['m'], t.get('req')) for t in a['talents']] == \
+                   [(t['id'], t['r'], t['c'], t['m'], t.get('req')) for t in b['talents']], (cls, a['key'])
+        was = {t['id']: t for tr in old['trees'] for t in tr['talents']}
+        assert all(t['n'].get('en') == was[t['id']]['n'].get('en') for tr in new['trees'] for t in tr['talents'])
+    # a talent moved to a free place: a new id, no id twice
+    old = json.load(open(os.path.join(ROOT, 'content', 'talents', 'mage.json'), encoding='utf-8'))
+    t0 = old['trees'][0]['talents'][0]
+    new = talent_import.convert('mage', {'ruRU': _traits_dump(old, {t0['id']: (9, 4)})}, old)
+    ids = [t['id'] for t in new['trees'][0]['talents']]
+    assert len(ids) == len(set(ids)) and t0['id'] not in ids
+
+
 if __name__ == '__main__':
     n = 0
     for name, fn in list(globals().items()):

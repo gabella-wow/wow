@@ -95,9 +95,53 @@ def parse_lua(src):
         out[m.group(1)] = value()
 
 
+def _fix(v, med):
+    """The Forever client keeps a few node positions with an extra zero (10x the real one)."""
+    return v / 10 if med > 0 and v > 3 * med else v
+
+
+def _axis(values):
+    """One axis of a trait tree -> (first line, step); nodes may sit a few units off their line."""
+    med = sorted(values)[len(values) // 2]
+    vs = sorted(_fix(v, med) for v in values)
+    gaps = [b - a for a, b in zip(vs, vs[1:]) if b - a > 0]
+    if not gaps:
+        return vs[0], 1, med
+    big = max(gaps)
+    step = min(g for g in gaps if g > 0.3 * big)
+    return vs[0], step, med
+
+
+def _line(v, first, step, med):
+    return int((_fix(v, med) - first) / step + 0.5)
+
+
+def from_traits(d, old_keys=None):
+    """A Forever dump (api = traits: node positions and edges) -> the classic shape (row, col from 1, req as [row, col]),
+    talents in row-major order."""
+    out = dict(d, trees=[])
+    for tree in d['trees']:
+        ts = list(tree['talents'].values()) if isinstance(tree['talents'], dict) else list(tree['talents'])
+        x0, dx, xl = _axis([t['posX'] for t in ts])
+        y0, dy, yl = _axis([t['posY'] for t in ts])
+        pos = {}
+        for t in ts:
+            t = dict(t, col=_line(t['posX'], x0, dx, xl) + 1, row=_line(t['posY'], y0, dy, yl) + 1)
+            pos[t['talentID']] = t
+        for t in list(pos.values()):
+            edges = t.get('edges') or []
+            for target in (edges.values() if isinstance(edges, dict) else edges):
+                if target in pos:
+                    pos[target]['req'] = [t['row'], t['col']]
+        out['trees'].append({'info': tree.get('info'), 'talents': sorted(pos.values(), key=lambda t: (t['row'], t['col']))})
+    return out
+
+
 def convert(cid, by_locale, old=None, fixture=False):
     """One class: the dumps of each client language -> our JSON (old: the previous file, its icons are kept)."""
     keys = TREES[cid]
+    by_locale = {loc: (from_traits(d) if d.get('api') == 'traits' else d) for loc, d in by_locale.items()}
+    by_pos = {(tr['key'], t['r'], t['c']): t['id'] for tr in (old or {}).get('trees', []) for t in tr['talents']}
     base = by_locale.get('enUS') or next(iter(by_locale.values()))
     prev = {t['id']: t for tr in (old or {}).get('trees', []) for t in tr['talents']}
     icons = {i: (t.get('icon'), t.get('iname')) for i, t in prev.items()}
@@ -105,8 +149,18 @@ def convert(cid, by_locale, old=None, fixture=False):
     for ti, tree in enumerate(base['trees']):
         key = keys[ti]
         talents = []
+        ids = {}                                        # traits dumps: the same place in the tree keeps its id (icon, old texts)
+        if base.get('api') == 'traits':
+            taken = {v for (k, _, _), v in by_pos.items() if k == key}
+            free = 1 + max([int(v.rsplit('-', 1)[1]) for v in taken] or [0])
+            for t in tree['talents']:
+                rc = (int(t['row']), int(t['col']))
+                tid = by_pos.get((key, *rc))
+                if not tid or tid in ids.values():      # a new talent (or a second one on the same place): a new number
+                    tid, free = f'{key}-{free}', free + 1
+                ids[rc] = tid
         for i, t in enumerate(tree['talents'], 1):
-            tid = f'{key}-{i}'
+            tid = ids.get((int(t['row']), int(t['col'])), f'{key}-{i}')
             x = {'id': tid, 'n': {}, 'r': int(t['row']), 'c': int(t['col']), 'm': int(t['maxRank']),
                  'spells': [t['spellId']] if t.get('spellId') else [], 'file': t.get('icon'), 'tip': {}}
             for loc, d in by_locale.items():
@@ -121,7 +175,8 @@ def convert(cid, by_locale, old=None, fixture=False):
                     x['tip'][lang] = prev[tid].get('tip', {}).get(lang) or []
             if t.get('req'):
                 pr, pc = t['req']
-                x['req'] = next(f'{key}-{j}' for j, s in enumerate(tree['talents'], 1) if int(s['row']) == pr and int(s['col']) == pc)
+                j = next(j for j, s in enumerate(tree['talents'], 1) if int(s['row']) == pr and int(s['col']) == pc)
+                x['req'] = ids.get((int(pr), int(pc)), f'{key}-{j}')
             icon, iname = icons.get(tid, (None, None))
             if icon is not None:
                 x['icon'], x['iname'] = icon, iname
