@@ -4,6 +4,7 @@
 
 Rows, columns, arrows, ranks and the icon file id come from the client (the addon API); the names and tooltip lines from every
 client language that was dumped (languages missing from a re-import keep their previous text). Icon names and the sprite are added later by tools/talent_icons.py and survive a re-import.
+tid: the game's own id of a talent, the dump's talentID (in Forever the C_Traits node id); the in-game addon finds the talent by it.
 --fixture marks test data (tests/fixtures/talents): tests refuse such a file in content/talents."""
 import argparse, json, os, re, sys
 
@@ -178,6 +179,8 @@ def convert(cid, by_locale, old=None, fixture=False):
             tid = ids.get((int(t['row']), int(t['col'])), f'{key}-{i}')
             x = {'id': tid, 'n': {}, 'r': int(t['row']), 'c': int(t['col']), 'm': int(t['maxRank']),
                  'spells': [t['spellId']] if t.get('spellId') else [], 'file': t.get('icon'), 'tip': {}}
+            if t.get('talentID'):   # the game's own id of the talent (Forever: the C_Traits node id): the in-game addon finds it by it
+                x['tid'] = int(t['talentID'])
             for loc, d in by_locale.items():
                 lang = LOCALES.get(loc)
                 tt = d['trees'][ti]['talents'][i - 1]

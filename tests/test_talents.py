@@ -41,6 +41,7 @@ def test_import_fixture():
     assert prot['Redoubt']['n']['ru'] == 'Оплот' and (prot['Redoubt']['r'], prot['Redoubt']['c'], prot['Redoubt']['m']) == (1, 3, 5)
     assert prot['Shield Specialization']['req'] == prot['Redoubt']['id']
     assert prot['Holy Shield']['req'] == prot['Blessing of Sanctuary']['id']
+    assert prot['Redoubt']['tid'] == 1002                                        # the dump's talentID: the game's id of the talent
 
 
 def test_plan_protection():
@@ -283,6 +284,7 @@ def test_traits_dump():
         for a, b in zip(old['trees'], new['trees']):
             assert [(t['id'], t['r'], t['c'], t['m'], t.get('req')) for t in a['talents']] == \
                    [(t['id'], t['r'], t['c'], t['m'], t.get('req')) for t in b['talents']], (cls, a['key'])
+            assert [t.get('tid') for t in b['talents']] == [1000 + k for k in range(len(a['talents']))], (cls, a['key'])   # the dump's talentID
         was = {t['id']: t for tr in old['trees'] for t in tr['talents']}
         assert all(t['n'].get('en') == was[t['id']]['n'].get('en') for tr in new['trees'] for t in tr['talents'])
     # a talent moved to a free place: a new id, no id twice
