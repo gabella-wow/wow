@@ -1,0 +1,1445 @@
+{
+ "event": "edit",
+ "key": "eu-639885-1",
+ "source": "forum",
+ "region": "eu",
+ "topic": 639885,
+ "post": 1,
+ "url": "https://eu.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-6-2026/639885/1",
+ "title": "WoW: Forever Hotfixes - November 6, 2026",
+ "author": "Kaivax",
+ "role": "Community Manager",
+ "created_at": "2026-11-06T02:35:12.860Z",
+ "updated_at": "2026-11-07T01:07:25.162Z",
+ "version": 3,
+ "category": 360,
+ "beta": false,
+ "sha": "0c75ed36138c790ff7b1af51bea9396c6aa80217fbc95ba0096d0c172f535996",
+ "twin_of": "us-2403040-1",
+ "also": [],
+ "short_news": {
+  "date": "2026-11-06",
+  "at": "2026-11-06T02:35:12Z",
+  "url": "https://eu.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-6-2026/639885/1",
+  "title_en": "WoW: Forever Hotfixes - November 6, 2026",
+  "kind": "hotfixes",
+  "beta": false
+ },
+ "changes": [
+  {
+   "path": [
+    "Classes"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Legacy"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue with the Quick and the Dead Legacy Talent where it sometimes did not work as intended.",
+   "h": "1d4e8e907cbb"
+  },
+  {
+   "path": [
+    "Classes",
+    "Cooldown Manager"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "The Cooldown Manager"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "The Cooldown Manager will now correctly display the duration of crowd control spells at all times, even when diminishing returns or mechanic reductions (like orc stun reduction) are factors.",
+   "h": "431183ae2058"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "abilities": [
+    "Bloom"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Bloom will now correctly heal the target.",
+   "h": "1a2fddec9570"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "abilities": [
+    "Bear Form"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed a bug where the tooltip of Bear Form claimed an incorrect health value increase. The functionality was correct, but the wrong value was reported.",
+   "h": "4fa7b879d775"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "abilities": [
+    "Swiftmend"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed the tooltip for Swiftmend to no longer incorrectly mention consuming the effect.",
+   "h": "aa0448a0c638"
+  },
+  {
+   "path": [
+    "Classes",
+    "Mage"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "mage"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Mages were still learning the Research spell and then losing it upon relogging. This spell should not exist, and you should only have the Study spell after completing the relevant quest.",
+   "h": "af4dbcde7236"
+  },
+  {
+   "path": [
+    "Classes",
+    "Mage"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "mage"
+   },
+   "abilities": [
+    "Arcane Blast"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [
+    18
+   ],
+   "text": "Fixed an issue with Arcane Blast where its duration was not properly 18 seconds.",
+   "h": "76cb1a0377db"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue"
+   },
+   "abilities": [
+    "Shank"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    1,
+    2
+   ],
+   "text": "Shank will now display Rank 1 and Rank 2 in the tooltips.",
+   "h": "eb4f1ec0dfd8"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "While Boot Knife is talented, Shank will now correctly display the number of Combo Points it grants.",
+   "h": "ece43f0e3cde"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warlock"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warlock"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    40
+   ],
+   "text": "Voidwalker base health increased by about 40 at all levels.",
+   "h": "9cd3f3836856"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warlock"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warlock"
+   },
+   "abilities": [
+    "Soul Siphon",
+    "Wrack"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "The Soul Siphon talent no longer incorrectly causes Wrack to increase its own damage.",
+   "h": "92eb2d6e1c4c"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warrior"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warrior"
+   },
+   "abilities": [
+    "Gore Drinker"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed the tooltip for Reckless Swings to mention that it activates Gore Drinker.",
+   "h": "4ec9a799338f"
+  },
+  {
+   "path": [
+    "Dungeons"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Maraudon"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue that would prevent Zaetar’s Spirit from spawning after defeating Princess Theradras in Maraudon.",
+   "h": "4b81652664c1"
+  },
+  {
+   "path": [
+    "Dungeons"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "The Drowned City",
+    "Blackmaw Hold"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue that could cause some creatures inside Blackmaw Hold and The Drowned City to erroneously disengage.",
+   "h": "a4c4ba081cb5"
+  },
+  {
+   "path": [
+    "Dungeons"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "The Drowned City"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "The instance portal should now correctly teleport you inside The Drowned City",
+   "h": "04fef2c51328"
+  },
+  {
+   "path": [
+    "Enemies and NPCs"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Dun Morogh"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Dun Morogh - Fixed an issue where the troggs in Grol’bolar Quarry would respawn too quickly.",
+   "h": "f0d197c30dab"
+  },
+  {
+   "path": [
+    "Enemies and NPCs"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Durotar"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Durotar - Ridgeshade Lurkers now correctly have loot.",
+   "h": "4547ab3e05a9"
+  },
+  {
+   "path": [
+    "Enemies and NPCs"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Riverglades"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Riverglades - Krek the Noxious now has correct loot when defeated.",
+   "h": "74f66f4aae9f"
+  },
+  {
+   "path": [
+    "Enemies and NPCs"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Swamp of Sorrows"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Swamp of Sorrows - Fixed an issue where Pelluk would sometimes not spawn.",
+   "h": "3a04ff7eb154"
+  },
+  {
+   "path": [
+    "Enemies and NPCs"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Teldrassil"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Teldrassil - Fixed an issue where Lasher Sproutlings, Blooming Lashers, and Wrathvine were immune to nature damage.",
+   "h": "79c6635969a2"
+  },
+  {
+   "path": [
+    "Items"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Searing Dagger"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Searing Dagger is now only activated by spells that have a damaging component.",
+   "h": "e8703a3508f6"
+  },
+  {
+   "path": [
+    "Professions",
+    "Leatherworking"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Leatherworking"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 125,
+     "old": 140,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    15,
+    125,
+    140
+   ],
+   "text": "Tanning Rack skill requirement lowered to 125 (was 140). This prevents it from being an obstacle to crafting various Leatherworking patterns that require 125 skill. Tanning Rack skill-ups lowered by 15 skill points to account for this.",
+   "h": "6fc72886d49d"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Resolved an issue with the quest “Vorsha the Lasher” rudely lashing everyone in the zone.",
+   "h": "a15f0f932aa5"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Darnassus"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Brewed a fresh pot of Darnassus’s finest coffee for Kerlonian Evershade so he falls asleep less often during “The Sleeper Has Awakened”. Players now also start with the Horn of Awakening item to wake him up when needed.",
+   "h": "75120e27291c"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Skinning"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "The quest “Rough Wolf Pelts” is now automatically cancelled if you unlearn the Skinning skill.",
+   "h": "34bd2e7110a8"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Resolved an issue with “Rediscovering the Light” where players were sometimes unable to heal NPCs.",
+   "h": "4d823843e241"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue during the quest “Ammo for Rumbleshot” where players could not see loot if interacting immediately following another player.",
+   "h": "48673af065da"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Riverglades"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Resolved an issue where some quest item drops in Riverglades were not shared by players in a party.",
+   "h": "56952ef6f5e8"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "“Never Saddle on Quality” spawns and quest item drops should now be more plentiful.",
+   "h": "b8399cdc996c"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Ruins of Lordaeron"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 15,
+     "old": 16,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    15,
+    16
+   ],
+   "text": "The Abomimable Head dropped from The Baron in the Ruins of Lordaeron dungeon will now properly offer the quest “Unending Torment” for Horde players at level 15 (was level 16).",
+   "h": "ad124e2f5aa8"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Damp Note drop rate increased. Eww.",
+   "h": "51f59d9583bc"
+  },
+  {
+   "path": [
+    "Races",
+    "Night Elf"
+   ],
+   "subject": {
+    "type": "race",
+    "id": "nightelf"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed a bug granting Shadowmelded Druids access to Ravage and Pounce.",
+   "h": "9f2fad6c1520"
+  },
+  {
+   "path": [
+    "Races",
+    "Orc"
+   ],
+   "subject": {
+    "type": "race",
+    "id": "orc"
+   },
+   "abilities": [
+    "Command"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixes an issue where some Warlock pet abilities were benefitting too much from the Orc Command racial ability.",
+   "h": "e3df97cc2708"
+  },
+  {
+   "path": [
+    "World"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Thunder Bluff"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Thunder Bluff - Fixed an issue where the Barbershop was darker than intended. We moooved the lights around.",
+   "h": "42c8e44f0074"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Enemies and NPCs"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Durotar"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Durotar - Fixed an issue where Yarrog Baneshadow was respawning more slowly than intended.",
+   "h": "d5a1db810e74"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Enemies and NPCs"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Zephras"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Zephras - Lotheluum Starbreeze now offers training to Druids as expected.",
+   "h": "408413c4c41d"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Enemies and NPCs"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Dustwallow Marsh"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Dustwallow Marsh - Fixed an issue where some murlocs in Dustwallow Marsh were respawning too quickly.",
+   "h": "65bbe9554c6e"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Enemies and NPCs"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Swamp of Sorrows"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Swamp of Sorrows - Fixed an issue where Pelluk would sometimes not spawn.",
+   "h": "3a04ff7eb154"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Items"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Zephras Isle"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where trade supply vendors on Zephras Isle didn’t sell apprentice tradeskill bags.",
+   "h": "cd092f1349d0"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Items"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Mild Spices"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 1,
+     "old": 2,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    1,
+    2
+   ],
+   "text": "Mild Spices now sell to vendors for 1 copper each (was 2 copper).",
+   "h": "bfc8090e10ca"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Player versus Player"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Plainsrunning"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Plainsrunning could be stacked in a battleground’s preparation phase.",
+   "h": "4b451a70becf"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Player versus Player"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Plainsrunning"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Plainsrunning can no longer stack and stacks will be cancelled when carrying a flag in a battleground.",
+   "h": "f4bdc855bd8c"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Elune"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue with incorrect text in “The Sisterhood of Elune”.",
+   "h": "c67a0390faaa"
+  }
+ ],
+ "new_lines": [
+  "1d4e8e907cbb",
+  "431183ae2058",
+  "1a2fddec9570",
+  "4fa7b879d775",
+  "aa0448a0c638",
+  "af4dbcde7236",
+  "76cb1a0377db",
+  "eb4f1ec0dfd8",
+  "ece43f0e3cde",
+  "9cd3f3836856",
+  "92eb2d6e1c4c",
+  "4ec9a799338f",
+  "4b81652664c1",
+  "a4c4ba081cb5",
+  "04fef2c51328",
+  "f0d197c30dab",
+  "4547ab3e05a9",
+  "74f66f4aae9f",
+  "79c6635969a2",
+  "e8703a3508f6",
+  "6fc72886d49d",
+  "a15f0f932aa5",
+  "75120e27291c",
+  "34bd2e7110a8",
+  "4d823843e241",
+  "48673af065da",
+  "56952ef6f5e8",
+  "b8399cdc996c",
+  "ad124e2f5aa8",
+  "51f59d9583bc",
+  "9f2fad6c1520",
+  "e3df97cc2708",
+  "42c8e44f0074"
+ ],
+ "gone_lines": [],
+ "outdated": [],
+ "to_check": [
+  "assets/hero/en.json",
+  "classes/druid/",
+  "classes/hunter/",
+  "classes/rogue/",
+  "classes/shaman/",
+  "classes/warlock/",
+  "guides/addons/",
+  "guides/builds-druid/",
+  "guides/builds-warlock/",
+  "guides/dungeons/",
+  "guides/dungeons/blackfathom-deeps/",
+  "guides/dungeons/the-deadmines/",
+  "guides/legacy/",
+  "guides/leveling-shaman/",
+  "guides/leveling-warlock/",
+  "guides/leveling-warrior/",
+  "guides/leveling/",
+  "guides/professions/",
+  "guides/spec-druid-balance/",
+  "guides/spec-druid-feral/",
+  "guides/spec-druid-restoration/",
+  "guides/spec-hunter-beast-mastery/",
+  "guides/spec-hunter-marksmanship/",
+  "guides/spec-hunter-survival/",
+  "guides/spec-paladin-holy/",
+  "guides/spec-paladin-retribution/",
+  "guides/spec-priest-shadow/",
+  "guides/spec-rogue-assassination/",
+  "guides/spec-rogue-combat/",
+  "guides/spec-rogue-subtlety/",
+  "guides/spec-shaman-enhancement/",
+  "guides/spec-warlock-affliction/",
+  "guides/spec-warlock-demonology/",
+  "guides/spec-warlock-destruction/",
+  "guides/spec-warrior-protection/",
+  "guides/transport/",
+  "races/night-elf/",
+  "races/orc/",
+  "races/troll/"
+ ],
+ "check": [
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "The Cooldown Manager",
+   "kind": "changed",
+   "pairs": [],
+   "h": "431183ae2058",
+   "findings": [
+    {
+     "page": "guides/addons/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Cooldown Manager: your own cooldowns and buffs Options → Gameplay Enhancement, off by default No"
+    }
+   ],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "ability": "Bloom",
+   "kind": "changed",
+   "pairs": [],
+   "h": "1a2fddec9570",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "ability": "Swiftmend",
+   "kind": "no_longer",
+   "pairs": [],
+   "h": "aa0448a0c638",
+   "findings": [
+    {
+     "page": "classes/druid/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Swiftmend No longer consumes the heal over time"
+    },
+    {
+     "page": "guides/builds-druid/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Swiftmend"
+    },
+    {
+     "page": "guides/spec-druid-restoration/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Swiftmend"
+    }
+   ],
+   "sources": [
+    "content/spec_builds.py:1420",
+    "content/spec_builds.py:1421",
+    "content/spec_builds.py:1425",
+    "content/spec_builds.py:1429",
+    "content/spec_builds.py:1430",
+    "content/spec_builds.py:1440",
+    "content/talents/druid.json:704"
+   ]
+  },
+  {
+   "subject": {
+    "type": "class",
+    "id": "rogue"
+   },
+   "ability": "Shank",
+   "kind": "changed",
+   "pairs": [],
+   "h": "eb4f1ec0dfd8",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "class",
+    "id": "warlock"
+   },
+   "ability": "Soul Siphon",
+   "kind": "no_longer",
+   "pairs": [],
+   "h": "92eb2d6e1c4c",
+   "findings": [
+    {
+     "page": "classes/warlock/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Soul Siphon Stronger Drains"
+    },
+    {
+     "page": "guides/builds-warlock/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Soul Siphon: Drain Life gets stronger for each of your Affliction effects on the target"
+    },
+    {
+     "page": "guides/leveling-warlock/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Soul Siphon 3"
+    },
+    {
+     "page": "guides/spec-warlock-affliction/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Soul Siphon: Drain Life gets stronger for each of your Affliction effects on the target"
+    },
+    {
+     "page": "guides/spec-warlock-demonology/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Soul Siphon 3"
+    },
+    {
+     "page": "guides/spec-warlock-destruction/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Soul Siphon 3"
+    }
+   ],
+   "sources": [
+    "content/spec_builds.py:1203",
+    "content/spec_builds.py:1204",
+    "content/spec_builds.py:1205",
+    "content/class_guides.py:1081",
+    "content/talents/warlock.json:218"
+   ]
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "The Drowned City",
+   "kind": "changed",
+   "pairs": [],
+   "h": "04fef2c51328",
+   "findings": [
+    {
+     "page": "assets/hero/en.json",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "The Drowned City"
+    }
+   ],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Durotar",
+   "kind": "changed",
+   "pairs": [],
+   "h": "4547ab3e05a9",
+   "findings": [
+    {
+     "page": "guides/dungeons/the-deadmines/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Durotar to Grom’gol, then swim north past the enemies of Stranglethorn Vale (Method)"
+    },
+    {
+     "page": "guides/legacy/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Durotar Supply and Logistics"
+    },
+    {
+     "page": "guides/leveling/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Durotar"
+    },
+    {
+     "page": "guides/professions/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Durotar Supply and Logistics for the Horde, Azeroth Commerce Authority for the Alliance)"
+    },
+    {
+     "page": "guides/transport/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Durotar and north of Undercity in Tirisfal Glades"
+    },
+    {
+     "page": "races/orc/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Durotar"
+    },
+    {
+     "page": "races/troll/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Durotar"
+    }
+   ],
+   "sources": [
+    "content/races.py:4",
+    "content/races.py:89",
+    "content/races.py:133",
+    "content/dungeon_pages.py:514",
+    "content/dungeon_pages.py:515",
+    "content/dungeon_pages.py:516",
+    "content/guides.py:786",
+    "content/guides.py:787",
+    "content/guides.py:788",
+    "content/guides.py:1047",
+    "content/guides.py:1184",
+    "content/guides.py:1302",
+    "content/guides.py:2262",
+    "i18n/en.txt:1036",
+    "i18n/en.txt:1043",
+    "i18n/en.txt:1077"
+   ]
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Riverglades",
+   "kind": "changed",
+   "pairs": [],
+   "h": "74f66f4aae9f",
+   "findings": [
+    {
+     "page": "guides/leveling/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Riverglades zone between Redridge and Burning Steppes, Dustwallow Marsh, Badlands, Swamp of Sorrows"
+    },
+    {
+     "page": "guides/transport/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Riverglades zone"
+    }
+   ],
+   "sources": [
+    "content/guides.py:773",
+    "content/guides.py:774",
+    "content/guides.py:775",
+    "content/guides.py:793",
+    "content/guides.py:794",
+    "content/guides.py:795",
+    "content/guides.py:1201",
+    "content/guides.py:1319",
+    "content/guides.py:1320",
+    "content/guides.py:1321",
+    "content/guides.py:1327",
+    "content/guides.py:1328",
+    "content/guides.py:1329"
+   ]
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Searing Dagger",
+   "kind": "changed",
+   "pairs": [],
+   "h": "e8703a3508f6",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Leatherworking",
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 125,
+     "old": 140,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "h": "6fc72886d49d",
+   "findings": [
+    {
+     "page": "assets/hero/en.json",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Leatherworking + Skinning"
+    },
+    {
+     "page": "classes/druid/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Leatherworking + Skinning or Herbalism"
+    },
+    {
+     "page": "classes/hunter/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Leatherworking + Skinning"
+    },
+    {
+     "page": "classes/rogue/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Leatherworking + Skinning"
+    },
+    {
+     "page": "classes/shaman/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Leatherworking + Skinning"
+    },
+    {
+     "page": "guides/leveling-shaman/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "The Leatherworking tent gives 5% rested"
+    },
+    {
+     "page": "guides/leveling/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Leatherworking vendors, no need to equip it"
+    },
+    {
+     "page": "guides/professions/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Leatherworking + Skinning Engineering + Mining"
+    },
+    {
+     "page": "guides/spec-druid-balance/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Leatherworking"
+    },
+    {
+     "page": "guides/spec-druid-feral/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Leatherworking"
+    },
+    {
+     "page": "guides/spec-hunter-beast-mastery/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Leatherworking"
+    },
+    {
+     "page": "guides/spec-hunter-marksmanship/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Leatherworking"
+    },
+    {
+     "page": "guides/spec-hunter-survival/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Leatherworking"
+    },
+    {
+     "page": "guides/spec-paladin-holy/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Leatherworking"
+    },
+    {
+     "page": "guides/spec-paladin-retribution/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Leatherworking"
+    },
+    {
+     "page": "guides/spec-priest-shadow/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Leatherworking"
+    },
+    {
+     "page": "guides/spec-rogue-assassination/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Leatherworking"
+    },
+    {
+     "page": "guides/spec-rogue-combat/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Leatherworking"
+    },
+    {
+     "page": "guides/spec-rogue-subtlety/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Leatherworking"
+    },
+    {
+     "page": "guides/spec-shaman-enhancement/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Leatherworking"
+    },
+    {
+     "page": "guides/spec-warrior-protection/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Leatherworking"
+    }
+   ],
+   "sources": [
+    "content/guides.py:665",
+    "content/guides.py:999",
+    "content/guides.py:1001",
+    "content/class_guides.py:872",
+    "i18n/en.txt:86"
+   ]
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Darnassus",
+   "kind": "changed",
+   "pairs": [],
+   "h": "75120e27291c",
+   "findings": [
+    {
+     "page": "guides/dungeons/blackfathom-deeps/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Darnassus, Ironforge, Darkshore) and the Horde (Zoram’gar Outpost in Ashenvale) have quests here"
+    },
+    {
+     "page": "guides/leveling/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Darnassus, Ironforge or Stormwind City, Orgrimmar, Thunder Bluff or Undercity"
+    },
+    {
+     "page": "guides/transport/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Darnassus ↔ Rut’theran Village A portal in Darnassus"
+    },
+    {
+     "page": "races/night-elf/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Darnassus"
+    }
+   ],
+   "sources": [
+    "content/races.py:43",
+    "content/dungeon_pages.py:991",
+    "content/dungeon_pages.py:992",
+    "content/dungeon_pages.py:993",
+    "content/dungeon_pages.py:1126",
+    "content/dungeon_pages.py:1128",
+    "content/dungeon_pages.py:1138",
+    "content/dungeon_pages.py:1139",
+    "content/guides.py:675",
+    "content/guides.py:1170",
+    "content/guides.py:1215",
+    "i18n/en.txt:999",
+    "i18n/en.txt:1009"
+   ]
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Skinning",
+   "kind": "changed",
+   "pairs": [],
+   "h": "34bd2e7110a8",
+   "findings": [
+    {
+     "page": "assets/hero/en.json",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Skinning"
+    },
+    {
+     "page": "classes/druid/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Skinning or Herbalism"
+    },
+    {
+     "page": "classes/hunter/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Skinning"
+    },
+    {
+     "page": "classes/rogue/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Skinning"
+    },
+    {
+     "page": "classes/shaman/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Skinning"
+    },
+    {
+     "page": "guides/leveling-shaman/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Skinning, +2% crit)"
+    },
+    {
+     "page": "guides/leveling-warrior/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Skinning brings money and a stool at camp (+2% crit)"
+    },
+    {
+     "page": "guides/leveling/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Skinning bring in money and place their own camp objects"
+    },
+    {
+     "page": "guides/professions/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Skinning Engineering + Mining"
+    }
+   ],
+   "sources": [
+    "content/guides.py:665",
+    "content/guides.py:671",
+    "content/guides.py:718",
+    "content/guides.py:744",
+    "content/guides.py:958",
+    "content/guides.py:1001",
+    "content/guides.py:1075",
+    "content/guides.py:1109",
+    "content/class_guides.py:184",
+    "content/class_guides.py:872",
+    "i18n/en.txt:90"
+   ]
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Ruins of Lordaeron",
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 15,
+     "old": 16,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "h": "ad124e2f5aa8",
+   "findings": [
+    {
+     "page": "assets/hero/en.json",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Ruins of Lordaeron"
+    },
+    {
+     "page": "guides/dungeons/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Ruins of Lordaeron · The Deadmines · Wailing Caverns · Shadowfang Keep · Blackfathom Deeps · The Stockade · Excavation S"
+    }
+   ],
+   "sources": [
+    "content/dungeon_pages.py:218",
+    "content/dungeon_pages.py:373",
+    "content/dungeon_pages.py:375",
+    "content/dungeon_pages.py:376"
+   ]
+  }
+ ],
+ "detected_at": "2026-11-07T01:11:16Z"
+}
