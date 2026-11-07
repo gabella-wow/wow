@@ -1968,6 +1968,8 @@ def main():
     seo.main()
     report_new_langs()
     if not listing:
+        import export_addon  # guide data for the in-game addon -> assets/addon/gabella-guide.json, before the worker version below
+        export_addon.main()
         import search  # site search index over the finished pages; it changes assets/, so the worker version is taken again
         search.main()
         brand_version()
