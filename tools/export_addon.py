@@ -139,9 +139,7 @@ def source_of(srcs, keys):
             out.append(('quest', _named(s.get('quest')), None))
         elif kind == 'craft':
             out.append(('recipe', SC.G_PROF.get(s.get('prof')), None))
-        elif kind == 'vendor':
-            out.append(('vendor', _named(s.get('npc')), None))
-        else:
+        else:   # data/gear30.json has no vendor source yet: a new kind gets its type here, with its real fields
             raise ValueError(f'no addon source type for {s}')
     names = [n for _, n, _ in out if n]
     return {'type': out[0][0], 'ru': ' / '.join(dict.fromkeys(names)) or None, 'dungeon': next((k for _, _, k in out if k), None)}
