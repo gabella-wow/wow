@@ -1,5 +1,5 @@
 {
- "version": "40fbfc5c0c7c",
+ "version": "315275e1cf29",
  "dungeons": [
   {
    "key": "ragefire_chasm",
@@ -982,7 +982,7 @@
   "hunter-beast-mastery": [
    {
     "level": 10,
-    "talentID": null,
+    "talentID": 104960,
     "spellID": 19552,
     "rank": 1,
     "ru": "Смертоносные духи",
@@ -990,7 +990,7 @@
    },
    {
     "level": 11,
-    "talentID": null,
+    "talentID": 104960,
     "spellID": 19552,
     "rank": 2,
     "ru": "Смертоносные духи",
@@ -998,7 +998,7 @@
    },
    {
     "level": 12,
-    "talentID": null,
+    "talentID": 104960,
     "spellID": 19552,
     "rank": 3,
     "ru": "Смертоносные духи",
@@ -1006,7 +1006,7 @@
    },
    {
     "level": 13,
-    "talentID": null,
+    "talentID": 104960,
     "spellID": 19552,
     "rank": 4,
     "ru": "Смертоносные духи",
@@ -1014,7 +1014,7 @@
    },
    {
     "level": 14,
-    "talentID": null,
+    "talentID": 104960,
     "spellID": 19552,
     "rank": 5,
     "ru": "Смертоносные духи",
@@ -1022,7 +1022,7 @@
    },
    {
     "level": 15,
-    "talentID": null,
+    "talentID": 104972,
     "spellID": 24443,
     "rank": 1,
     "ru": "Улучшенное воскрешение питомца",
@@ -1030,7 +1030,7 @@
    },
    {
     "level": 16,
-    "talentID": null,
+    "talentID": 104972,
     "spellID": 24443,
     "rank": 2,
     "ru": "Улучшенное воскрешение питомца",
@@ -1038,7 +1038,7 @@
    },
    {
     "level": 17,
-    "talentID": null,
+    "talentID": 104975,
     "spellID": 1223755,
     "rank": 1,
     "ru": "Направленный огонь",
@@ -1046,7 +1046,7 @@
    },
    {
     "level": 18,
-    "talentID": null,
+    "talentID": 104975,
     "spellID": 1223755,
     "rank": 2,
     "ru": "Направленный огонь",
@@ -1054,7 +1054,7 @@
    },
    {
     "level": 19,
-    "talentID": null,
+    "talentID": 104976,
     "spellID": 19583,
     "rank": 1,
     "ru": "Тренировка стойкости",
@@ -1062,7 +1062,7 @@
    },
    {
     "level": 20,
-    "talentID": null,
+    "talentID": 104970,
     "spellID": 19596,
     "rank": 1,
     "ru": "Звериная стремительность",
@@ -1070,7 +1070,7 @@
    },
    {
     "level": 21,
-    "talentID": null,
+    "talentID": 104969,
     "spellID": 19616,
     "rank": 1,
     "ru": "Неудержимое неистовство",
@@ -1078,7 +1078,7 @@
    },
    {
     "level": 22,
-    "talentID": null,
+    "talentID": 104969,
     "spellID": 19616,
     "rank": 2,
     "ru": "Неудержимое неистовство",
@@ -1086,7 +1086,7 @@
    },
    {
     "level": 23,
-    "talentID": null,
+    "talentID": 104969,
     "spellID": 19616,
     "rank": 3,
     "ru": "Неудержимое неистовство",
@@ -1094,7 +1094,7 @@
    },
    {
     "level": 24,
-    "talentID": null,
+    "talentID": 104969,
     "spellID": 19616,
     "rank": 4,
     "ru": "Неудержимое неистовство",
@@ -1102,7 +1102,7 @@
    },
    {
     "level": 25,
-    "talentID": null,
+    "talentID": 104966,
     "spellID": 1293241,
     "rank": 1,
     "ru": "Призыв ястреба",
@@ -1110,7 +1110,7 @@
    },
    {
     "level": 26,
-    "talentID": null,
+    "talentID": 104969,
     "spellID": 19616,
     "rank": 5,
     "ru": "Неудержимое неистовство",
@@ -1118,7 +1118,7 @@
    },
    {
     "level": 27,
-    "talentID": null,
+    "talentID": 104967,
     "spellID": 19598,
     "rank": 1,
     "ru": "Свирепость",
@@ -1126,7 +1126,7 @@
    },
    {
     "level": 28,
-    "talentID": null,
+    "talentID": 104967,
     "spellID": 19598,
     "rank": 2,
     "ru": "Свирепость",
@@ -1134,7 +1134,7 @@
    },
    {
     "level": 29,
-    "talentID": null,
+    "talentID": 104967,
     "spellID": 19598,
     "rank": 3,
     "ru": "Свирепость",
@@ -1142,7 +1142,7 @@
    },
    {
     "level": 30,
-    "talentID": null,
+    "talentID": 104964,
     "spellID": 19577,
     "rank": 1,
     "ru": "Устрашение",
@@ -1150,7 +1150,7 @@
    },
    {
     "level": 31,
-    "talentID": null,
+    "talentID": 104963,
     "spellID": 19590,
     "rank": 1,
     "ru": "Беспрекословное послушание",
@@ -1158,7 +1158,7 @@
    },
    {
     "level": 32,
-    "talentID": null,
+    "talentID": 104963,
     "spellID": 19590,
     "rank": 2,
     "ru": "Беспрекословное послушание",
@@ -1166,7 +1166,7 @@
    },
    {
     "level": 33,
-    "talentID": null,
+    "talentID": 104967,
     "spellID": 19598,
     "rank": 4,
     "ru": "Свирепость",
@@ -1174,7 +1174,7 @@
    },
    {
     "level": 34,
-    "talentID": null,
+    "talentID": 104967,
     "spellID": 19598,
     "rank": 5,
     "ru": "Свирепость",
@@ -1182,7 +1182,7 @@
    },
    {
     "level": 35,
-    "talentID": null,
+    "talentID": 104962,
     "spellID": 19621,
     "rank": 1,
     "ru": "Бешенство",
@@ -1190,7 +1190,7 @@
    },
    {
     "level": 36,
-    "talentID": null,
+    "talentID": 104962,
     "spellID": 19621,
     "rank": 2,
     "ru": "Бешенство",
@@ -1198,7 +1198,7 @@
    },
    {
     "level": 37,
-    "talentID": null,
+    "talentID": 104962,
     "spellID": 19621,
     "rank": 3,
     "ru": "Бешенство",
@@ -1206,7 +1206,7 @@
    },
    {
     "level": 38,
-    "talentID": null,
+    "talentID": 104962,
     "spellID": 19621,
     "rank": 4,
     "ru": "Бешенство",
@@ -1214,7 +1214,7 @@
    },
    {
     "level": 39,
-    "talentID": null,
+    "talentID": 104962,
     "spellID": 19621,
     "rank": 5,
     "ru": "Бешенство",
@@ -1222,7 +1222,7 @@
    },
    {
     "level": 40,
-    "talentID": null,
+    "talentID": 104961,
     "spellID": 19574,
     "rank": 1,
     "ru": "Звериный гнев",
@@ -1230,7 +1230,7 @@
    },
    {
     "level": 41,
-    "talentID": null,
+    "talentID": 105011,
     "spellID": 19426,
     "rank": 1,
     "ru": "Смертоносные атаки",
@@ -1238,7 +1238,7 @@
    },
    {
     "level": 42,
-    "talentID": null,
+    "talentID": 105011,
     "spellID": 19426,
     "rank": 2,
     "ru": "Смертоносные атаки",
@@ -1246,7 +1246,7 @@
    },
    {
     "level": 43,
-    "talentID": null,
+    "talentID": 105011,
     "spellID": 19426,
     "rank": 3,
     "ru": "Смертоносные атаки",
@@ -1254,7 +1254,7 @@
    },
    {
     "level": 44,
-    "talentID": null,
+    "talentID": 105011,
     "spellID": 19426,
     "rank": 4,
     "ru": "Смертоносные атаки",
@@ -1262,7 +1262,7 @@
    },
    {
     "level": 45,
-    "talentID": null,
+    "talentID": 105011,
     "spellID": 19426,
     "rank": 5,
     "ru": "Смертоносные атаки",
@@ -1270,7 +1270,7 @@
    },
    {
     "level": 46,
-    "talentID": null,
+    "talentID": 105008,
     "spellID": 1223984,
     "rank": 1,
     "ru": "Верная цель",
@@ -1278,7 +1278,7 @@
    },
    {
     "level": 47,
-    "talentID": null,
+    "talentID": 105008,
     "spellID": 1223984,
     "rank": 2,
     "ru": "Верная цель",
@@ -1286,7 +1286,7 @@
    },
    {
     "level": 48,
-    "talentID": null,
+    "talentID": 105008,
     "spellID": 1223984,
     "rank": 3,
     "ru": "Верная цель",
@@ -1294,7 +1294,7 @@
    },
    {
     "level": 49,
-    "talentID": null,
+    "talentID": 105008,
     "spellID": 1223984,
     "rank": 4,
     "ru": "Верная цель",
@@ -1302,7 +1302,7 @@
    },
    {
     "level": 50,
-    "talentID": null,
+    "talentID": 105008,
     "spellID": 1223984,
     "rank": 5,
     "ru": "Верная цель",
@@ -1310,7 +1310,7 @@
    },
    {
     "level": 51,
-    "talentID": null,
+    "talentID": 104973,
     "spellID": 19559,
     "rank": 1,
     "ru": "Знание троп",
@@ -1318,7 +1318,7 @@
    },
    {
     "level": 52,
-    "talentID": null,
+    "talentID": 104973,
     "spellID": 19559,
     "rank": 2,
     "ru": "Знание троп",
@@ -1326,7 +1326,7 @@
    },
    {
     "level": 53,
-    "talentID": null,
+    "talentID": 104976,
     "spellID": 19583,
     "rank": 2,
     "ru": "Тренировка стойкости",
@@ -1334,7 +1334,7 @@
    },
    {
     "level": 54,
-    "talentID": null,
+    "talentID": 104976,
     "spellID": 19583,
     "rank": 3,
     "ru": "Тренировка стойкости",
@@ -1342,7 +1342,7 @@
    },
    {
     "level": 55,
-    "talentID": null,
+    "talentID": 104976,
     "spellID": 19583,
     "rank": 4,
     "ru": "Тренировка стойкости",
@@ -1350,7 +1350,7 @@
    },
    {
     "level": 56,
-    "talentID": null,
+    "talentID": 104976,
     "spellID": 19583,
     "rank": 5,
     "ru": "Тренировка стойкости",
@@ -1358,7 +1358,7 @@
    },
    {
     "level": 57,
-    "talentID": null,
+    "talentID": 104965,
     "spellID": 19578,
     "rank": 1,
     "ru": "Узы духа",
@@ -1366,7 +1366,7 @@
    },
    {
     "level": 58,
-    "talentID": null,
+    "talentID": 104965,
     "spellID": 19578,
     "rank": 2,
     "ru": "Узы духа",
@@ -1374,7 +1374,7 @@
    },
    {
     "level": 59,
-    "talentID": null,
+    "talentID": 105013,
     "spellID": 19498,
     "rank": 1,
     "ru": "Глаз ястреба",
@@ -1382,7 +1382,7 @@
    },
    {
     "level": 60,
-    "talentID": null,
+    "talentID": 105013,
     "spellID": 19498,
     "rank": 2,
     "ru": "Глаз ястреба",
