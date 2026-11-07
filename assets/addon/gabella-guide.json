@@ -1,0 +1,1393 @@
+{
+ "version": "40fbfc5c0c7c",
+ "dungeons": [
+  {
+   "key": "ragefire_chasm",
+   "en": "Ragefire Chasm",
+   "ru": "Огненная пропасть",
+   "min": 13,
+   "max": 18,
+   "zone_en": "Orgrimmar",
+   "zone_ru": "Оргриммар",
+   "uiMapID": null,
+   "side": "horde",
+   "entrance": "horde",
+   "verified": false
+  },
+  {
+   "key": "hall_of_thanes",
+   "en": "Hall of Thanes",
+   "ru": null,
+   "min": 13,
+   "max": 18,
+   "zone_en": "Ironforge",
+   "zone_ru": "Стальгорн",
+   "uiMapID": null,
+   "side": "both",
+   "entrance": "alliance",
+   "verified": false
+  },
+  {
+   "key": "ruins_of_lordaeron",
+   "en": "Ruins of Lordaeron",
+   "ru": "Руины Лордерона",
+   "min": 15,
+   "max": 20,
+   "zone_en": "Tirisfal Glades",
+   "zone_ru": "Тирисфальские леса",
+   "uiMapID": null,
+   "side": "both",
+   "entrance": "horde",
+   "verified": false
+  },
+  {
+   "key": "the_deadmines",
+   "en": "The Deadmines",
+   "ru": "Мертвые копи",
+   "min": 15,
+   "max": 22,
+   "zone_en": "Westfall",
+   "zone_ru": "Западный Край",
+   "uiMapID": null,
+   "side": "both",
+   "entrance": "alliance",
+   "verified": false
+  },
+  {
+   "key": "wailing_caverns",
+   "en": "Wailing Caverns",
+   "ru": "Пещеры Стенаний",
+   "min": 17,
+   "max": 24,
+   "zone_en": "The Barrens",
+   "zone_ru": "Степи",
+   "uiMapID": null,
+   "side": "both",
+   "entrance": "horde",
+   "verified": false
+  },
+  {
+   "key": "shadowfang_keep",
+   "en": "Shadowfang Keep",
+   "ru": "Крепость Темного Клыка",
+   "min": 20,
+   "max": 26,
+   "zone_en": "Silverpine Forest",
+   "zone_ru": "Серебряный бор",
+   "uiMapID": null,
+   "side": "both",
+   "entrance": "horde",
+   "verified": false
+  },
+  {
+   "key": "blackfathom_deeps",
+   "en": "Blackfathom Deeps",
+   "ru": "Непроглядная Пучина",
+   "min": 22,
+   "max": 28,
+   "zone_en": "Ashenvale",
+   "zone_ru": "Ясеневый лес",
+   "uiMapID": null,
+   "side": "both",
+   "entrance": null,
+   "verified": false
+  },
+  {
+   "key": "the_stockade",
+   "en": "The Stockade",
+   "ru": "Тюрьма",
+   "min": 25,
+   "max": 29,
+   "zone_en": "Stormwind City",
+   "zone_ru": "Штормград",
+   "uiMapID": null,
+   "side": "alliance",
+   "entrance": "alliance",
+   "verified": false
+  },
+  {
+   "key": "excavation_site_wetlands",
+   "en": "Excavation Site: Wetlands",
+   "ru": "Раскопки в Болотине",
+   "min": 26,
+   "max": 31,
+   "zone_en": "Wetlands",
+   "zone_ru": "Болотина",
+   "uiMapID": null,
+   "side": "both",
+   "entrance": null,
+   "verified": false
+  },
+  {
+   "key": "city_of_dalaran",
+   "en": "City of Dalaran",
+   "ru": null,
+   "min": 28,
+   "max": 33,
+   "zone_en": "Alterac Mountains",
+   "zone_ru": "Альтеракские горы",
+   "uiMapID": null,
+   "side": "both",
+   "entrance": null,
+   "verified": false
+  },
+  {
+   "key": "gnomeregan",
+   "en": "Gnomeregan",
+   "ru": "Гномреган",
+   "min": 29,
+   "max": 38,
+   "zone_en": "Dun Morogh",
+   "zone_ru": "Дун Морог",
+   "uiMapID": null,
+   "side": "both",
+   "entrance": null,
+   "verified": false
+  },
+  {
+   "key": "razorfen_kraul",
+   "en": "Razorfen Kraul",
+   "ru": "Лабиринты Иглошкурых",
+   "min": 29,
+   "max": 38,
+   "zone_en": "The Barrens",
+   "zone_ru": "Степи",
+   "uiMapID": null,
+   "side": "both",
+   "entrance": null,
+   "verified": false
+  },
+  {
+   "key": "scarlet_monastery_graveyard",
+   "en": "Scarlet Monastery: Graveyard",
+   "ru": "Монастырь Алого ордена: кладбище",
+   "min": 30,
+   "max": 38,
+   "zone_en": "Tirisfal Glades",
+   "zone_ru": "Тирисфальские леса",
+   "uiMapID": null,
+   "side": "both",
+   "entrance": null,
+   "verified": false
+  },
+  {
+   "key": "scarlet_monastery_library",
+   "en": "Scarlet Monastery: Library",
+   "ru": "Монастырь Алого ордена: библиотека",
+   "min": 33,
+   "max": 41,
+   "zone_en": "Tirisfal Glades",
+   "zone_ru": "Тирисфальские леса",
+   "uiMapID": null,
+   "side": "both",
+   "entrance": null,
+   "verified": false
+  },
+  {
+   "key": "the_drowned_city",
+   "en": "The Drowned City",
+   "ru": null,
+   "min": 35,
+   "max": 40,
+   "zone_en": "Stranglethorn Vale",
+   "zone_ru": "Тернистая долина",
+   "uiMapID": null,
+   "side": "both",
+   "entrance": null,
+   "verified": false
+  },
+  {
+   "key": "scarlet_monastery_armory",
+   "en": "Scarlet Monastery: Armory",
+   "ru": "Монастырь Алого ордена: оружейная",
+   "min": 36,
+   "max": 44,
+   "zone_en": "Tirisfal Glades",
+   "zone_ru": "Тирисфальские леса",
+   "uiMapID": null,
+   "side": "both",
+   "entrance": null,
+   "verified": false
+  },
+  {
+   "key": "uldaman",
+   "en": "Uldaman",
+   "ru": "Ульдаман",
+   "min": 36,
+   "max": 45,
+   "zone_en": "Badlands",
+   "zone_ru": "Бесплодные земли",
+   "uiMapID": null,
+   "side": "both",
+   "entrance": null,
+   "verified": false
+  },
+  {
+   "key": "razorfen_downs",
+   "en": "Razorfen Downs",
+   "ru": "Курганы Иглошкурых",
+   "min": 37,
+   "max": 46,
+   "zone_en": "The Barrens",
+   "zone_ru": "Степи",
+   "uiMapID": null,
+   "side": "both",
+   "entrance": null,
+   "verified": false
+  },
+  {
+   "key": "scarlet_monastery_cathedral",
+   "en": "Scarlet Monastery: Cathedral",
+   "ru": "Монастырь Алого ордена: собор",
+   "min": 38,
+   "max": 46,
+   "zone_en": "Tirisfal Glades",
+   "zone_ru": "Тирисфальские леса",
+   "uiMapID": null,
+   "side": "both",
+   "entrance": null,
+   "verified": false
+  },
+  {
+   "key": "zulfarrak",
+   "en": "Zul'Farrak",
+   "ru": "Зул’Фаррак",
+   "min": 40,
+   "max": 47,
+   "zone_en": "Tanaris",
+   "zone_ru": "Танарис",
+   "uiMapID": null,
+   "side": "both",
+   "entrance": null,
+   "verified": false
+  },
+  {
+   "key": "kroldok_stronghold",
+   "en": "Krol'dok Stronghold",
+   "ru": null,
+   "min": 40,
+   "max": 45,
+   "zone_en": "Riverglades",
+   "zone_ru": null,
+   "uiMapID": null,
+   "side": "both",
+   "entrance": null,
+   "verified": false
+  },
+  {
+   "key": "maraudon",
+   "en": "Maraudon",
+   "ru": "Мародон",
+   "min": 45,
+   "max": 51,
+   "zone_en": "Desolace",
+   "zone_ru": "Пустоши",
+   "uiMapID": null,
+   "side": "both",
+   "entrance": null,
+   "verified": false
+  },
+  {
+   "key": "alcaz_island_prison",
+   "en": "Alcaz Island Prison",
+   "ru": null,
+   "min": 48,
+   "max": 53,
+   "zone_en": "Dustwallow Marsh",
+   "zone_ru": "Пылевые топи",
+   "uiMapID": null,
+   "side": "both",
+   "entrance": null,
+   "verified": false
+  },
+  {
+   "key": "temple_of_atalhakkar",
+   "en": "Temple of Atal'Hakkar",
+   "ru": "Храм Атал’Хаккара",
+   "min": 50,
+   "max": 55,
+   "zone_en": "Swamp of Sorrows",
+   "zone_ru": "Болото Печали",
+   "uiMapID": null,
+   "side": "both",
+   "entrance": null,
+   "verified": false
+  },
+  {
+   "key": "blackrock_depths",
+   "en": "Blackrock Depths",
+   "ru": "Глубины Черной горы",
+   "min": 52,
+   "max": 60,
+   "zone_en": "Blackrock Mountain",
+   "zone_ru": "Черная гора",
+   "uiMapID": null,
+   "side": "both",
+   "entrance": null,
+   "verified": false
+  },
+  {
+   "key": "blackmaw_hold",
+   "en": "Blackmaw Hold",
+   "ru": null,
+   "min": 55,
+   "max": 60,
+   "zone_en": "Azshara",
+   "zone_ru": "Азшара",
+   "uiMapID": null,
+   "side": "both",
+   "entrance": null,
+   "verified": false
+  },
+  {
+   "key": "lower_blackrock_spire",
+   "en": "Lower Blackrock Spire",
+   "ru": "Нижняя часть Вершины Черной горы",
+   "min": 57,
+   "max": 60,
+   "zone_en": "Blackrock Mountain",
+   "zone_ru": "Черная гора",
+   "uiMapID": null,
+   "side": "both",
+   "entrance": null,
+   "verified": false
+  },
+  {
+   "key": "dire_maul_east",
+   "en": "Dire Maul: East",
+   "ru": "Забытый Город: восток",
+   "min": 58,
+   "max": 60,
+   "zone_en": "Feralas",
+   "zone_ru": "Фералас",
+   "uiMapID": null,
+   "side": "both",
+   "entrance": null,
+   "verified": false
+  },
+  {
+   "key": "shapers_terrace",
+   "en": "Shaper's Terrace",
+   "ru": null,
+   "min": 58,
+   "max": 60,
+   "zone_en": "Un'Goro Crater",
+   "zone_ru": "Кратер Ун’Горо",
+   "uiMapID": null,
+   "side": "both",
+   "entrance": null,
+   "verified": false
+  },
+  {
+   "key": "stratholme_living",
+   "en": "Stratholme: Living",
+   "ru": "Стратхольм: живые",
+   "min": 58,
+   "max": 60,
+   "zone_en": "Eastern Plaguelands",
+   "zone_ru": "Восточные Чумные земли",
+   "uiMapID": null,
+   "side": "both",
+   "entrance": null,
+   "verified": false
+  },
+  {
+   "key": "stratholme_undead",
+   "en": "Stratholme: Undead",
+   "ru": "Стратхольм: нежить",
+   "min": 58,
+   "max": 60,
+   "zone_en": "Eastern Plaguelands",
+   "zone_ru": "Восточные Чумные земли",
+   "uiMapID": null,
+   "side": "both",
+   "entrance": null,
+   "verified": false
+  },
+  {
+   "key": "scholomance",
+   "en": "Scholomance",
+   "ru": "Некроситет",
+   "min": 58,
+   "max": 60,
+   "zone_en": "Western Plaguelands",
+   "zone_ru": "Западные Чумные земли",
+   "uiMapID": null,
+   "side": "both",
+   "entrance": null,
+   "verified": false
+  },
+  {
+   "key": "upper_blackrock_spire",
+   "en": "Upper Blackrock Spire",
+   "ru": "Верхняя часть Вершины Черной горы",
+   "min": 60,
+   "max": 60,
+   "zone_en": "Blackrock Mountain",
+   "zone_ru": "Черная гора",
+   "uiMapID": null,
+   "side": "both",
+   "entrance": null,
+   "verified": false
+  },
+  {
+   "key": "dire_maul_west",
+   "en": "Dire Maul: West",
+   "ru": "Забытый Город: запад",
+   "min": 60,
+   "max": 60,
+   "zone_en": "Feralas",
+   "zone_ru": "Фералас",
+   "uiMapID": null,
+   "side": "both",
+   "entrance": null,
+   "verified": false
+  },
+  {
+   "key": "dire_maul_north",
+   "en": "Dire Maul: North",
+   "ru": "Забытый Город: север",
+   "min": 60,
+   "max": 60,
+   "zone_en": "Feralas",
+   "zone_ru": "Фералас",
+   "uiMapID": null,
+   "side": "both",
+   "entrance": null,
+   "verified": false
+  }
+ ],
+ "route": {
+  "horde": [
+   {
+    "from": 1,
+    "to": 10,
+    "uiMapIDs": [],
+    "zones_ru": [
+     "Дуротар",
+     "Мулгор",
+     "Тирисфальские леса",
+     "Zephras Isle"
+    ],
+    "zones_en": [
+     "Durotar",
+     "Mulgore",
+     "Tirisfal Glades",
+     "Zephras Isle"
+    ],
+    "text_ru": "Орки и тролли: Дуротар. Таурены: Мулгор. Нежить: Тирисфальские леса. Скайборны-ветрорезы: Zephras Isle, до 12.",
+    "verified": false
+   },
+   {
+    "from": 10,
+    "to": 18,
+    "uiMapIDs": [],
+    "zones_ru": [
+     "Степи",
+     "Серебряный бор"
+    ],
+    "zones_en": [
+     "The Barrens",
+     "Silverpine Forest"
+    ],
+    "text_ru": "Степи или Серебряный бор.",
+    "verified": false
+   },
+   {
+    "from": 18,
+    "to": 30,
+    "uiMapIDs": [],
+    "zones_ru": [
+     "Когтистые горы",
+     "Степи",
+     "Ясеневый лес",
+     "Предгорья Хилсбрада",
+     "Тысяча Игл"
+    ],
+    "zones_en": [
+     "Stonetalon Mountains",
+     "The Barrens",
+     "Ashenvale",
+     "Hillsbrad Foothills",
+     "Thousand Needles"
+    ],
+    "text_ru": "Когтистые горы и Степи, затем Ясеневый лес или Предгорья Хилсбрада, с 25 Тысяча Игл.",
+    "verified": false
+   },
+   {
+    "from": 30,
+    "to": 45,
+    "uiMapIDs": [],
+    "zones_ru": [
+     "Пустоши",
+     "Нагорье Арати",
+     "Тернистая долина",
+     "Riverglades",
+     "Пылевые топи",
+     "Бесплодные земли",
+     "Болото Печали"
+    ],
+    "zones_en": [
+     "Desolace",
+     "Arathi Highlands",
+     "Stranglethorn Vale",
+     "Riverglades",
+     "Dustwallow Marsh",
+     "Badlands",
+     "Swamp of Sorrows"
+    ],
+    "text_ru": "Пустоши или Нагорье Арати, Тернистая долина. С 35: новая зона Riverglades, Пылевые топи, Бесплодные земли, Болото Печали.",
+    "verified": false
+   },
+   {
+    "from": 40,
+    "to": 55,
+    "uiMapIDs": [],
+    "zones_ru": [
+     "Танарис",
+     "Фералас",
+     "Внутренние земли",
+     "Тлеющее ущелье",
+     "Выжженные земли",
+     "Азшара",
+     "Кратер Ун’Горо",
+     "Оскверненный лес"
+    ],
+    "zones_en": [
+     "Tanaris",
+     "Feralas",
+     "The Hinterlands",
+     "Searing Gorge",
+     "Blasted Lands",
+     "Azshara",
+     "Un'Goro Crater",
+     "Felwood"
+    ],
+    "text_ru": "Танарис, Фералас, Внутренние земли, затем Тлеющее ущелье, Выжженные земли, Азшара, с 48 Кратер Ун’Горо и Оскверненный лес.",
+    "verified": false
+   },
+   {
+    "from": 50,
+    "to": 60,
+    "uiMapIDs": [],
+    "zones_ru": [
+     "Пылающие степи",
+     "Западные Чумные земли",
+     "Восточные Чумные земли",
+     "Зимние Ключи",
+     "Силитус",
+     "Гора Хиджал"
+    ],
+    "zones_en": [
+     "Burning Steppes",
+     "Western Plaguelands",
+     "Eastern Plaguelands",
+     "Winterspring",
+     "Silithus",
+     "Mount Hyjal"
+    ],
+    "text_ru": "Пылающие степи, Западные Чумные земли, Восточные Чумные земли, Зимние Ключи, Силитус. На 60 открыта Гора Хиджал.",
+    "verified": false
+   }
+  ],
+  "alliance": [
+   {
+    "from": 1,
+    "to": 10,
+    "uiMapIDs": [],
+    "zones_ru": [
+     "Элвиннский лес",
+     "Дун Морог",
+     "Тельдрассил",
+     "Zephras Isle"
+    ],
+    "zones_en": [
+     "Elwynn Forest",
+     "Dun Morogh",
+     "Teldrassil",
+     "Zephras Isle"
+    ],
+    "text_ru": "Люди: Элвиннский лес. Дворфы и гномы: Дун Морог. Ночные эльфы: Тельдрассил, до 11. Высшие скайборны: Zephras Isle, до 12.",
+    "verified": false
+   },
+   {
+    "from": 10,
+    "to": 18,
+    "uiMapIDs": [],
+    "zones_ru": [
+     "Западный Край",
+     "Лок Модан",
+     "Темные берега",
+     "Красногорье"
+    ],
+    "zones_en": [
+     "Westfall",
+     "Loch Modan",
+     "Darkshore",
+     "Redridge Mountains"
+    ],
+    "text_ru": "Западный Край или Лок Модан, ночные эльфы обычно в Темных берегах. С 15 подходит Красногорье.",
+    "verified": false
+   },
+   {
+    "from": 18,
+    "to": 30,
+    "uiMapIDs": [],
+    "zones_ru": [
+     "Сумеречный лес",
+     "Красногорье",
+     "Болотина",
+     "Когтистые горы",
+     "Ясеневый лес"
+    ],
+    "zones_en": [
+     "Duskwood",
+     "Redridge Mountains",
+     "Wetlands",
+     "Stonetalon Mountains",
+     "Ashenvale"
+    ],
+    "text_ru": "Сумеречный лес, Красногорье и Болотина, в Калимдоре Когтистые горы и Ясеневый лес.",
+    "verified": false
+   },
+   {
+    "from": 30,
+    "to": 45,
+    "uiMapIDs": [],
+    "zones_ru": [
+     "Пустоши",
+     "Нагорье Арати",
+     "Тернистая долина",
+     "Riverglades",
+     "Пылевые топи",
+     "Бесплодные земли",
+     "Болото Печали"
+    ],
+    "zones_en": [
+     "Desolace",
+     "Arathi Highlands",
+     "Stranglethorn Vale",
+     "Riverglades",
+     "Dustwallow Marsh",
+     "Badlands",
+     "Swamp of Sorrows"
+    ],
+    "text_ru": "Пустоши или Нагорье Арати, Тернистая долина. С 35: новая зона Riverglades между Красногорьем и Пылающими степями, Пылевые топи, Бесплодные земли, Болото Печали.",
+    "verified": false
+   },
+   {
+    "from": 40,
+    "to": 55,
+    "uiMapIDs": [],
+    "zones_ru": [
+     "Танарис",
+     "Фералас",
+     "Внутренние земли",
+     "Тлеющее ущелье",
+     "Выжженные земли",
+     "Азшара",
+     "Кратер Ун’Горо",
+     "Оскверненный лес"
+    ],
+    "zones_en": [
+     "Tanaris",
+     "Feralas",
+     "The Hinterlands",
+     "Searing Gorge",
+     "Blasted Lands",
+     "Azshara",
+     "Un'Goro Crater",
+     "Felwood"
+    ],
+    "text_ru": "Танарис, Фералас, Внутренние земли, затем Тлеющее ущелье, Выжженные земли, Азшара, с 48 Кратер Ун’Горо и Оскверненный лес.",
+    "verified": false
+   },
+   {
+    "from": 50,
+    "to": 60,
+    "uiMapIDs": [],
+    "zones_ru": [
+     "Пылающие степи",
+     "Западные Чумные земли",
+     "Восточные Чумные земли",
+     "Зимние Ключи",
+     "Силитус",
+     "Гора Хиджал"
+    ],
+    "zones_en": [
+     "Burning Steppes",
+     "Western Plaguelands",
+     "Eastern Plaguelands",
+     "Winterspring",
+     "Silithus",
+     "Mount Hyjal"
+    ],
+    "text_ru": "Пылающие степи, Западные Чумные земли, Восточные Чумные земли, Зимние Ключи, Силитус. На 60 открыта Гора Хиджал.",
+    "verified": false
+   }
+  ]
+ },
+ "gear": {
+  "hunter-beast-mastery": [
+   {
+    "slot": "head",
+    "level": 28,
+    "itemID": 7413,
+    "ru": "Шпионская шапка",
+    "source": {
+     "type": "world",
+     "ru": null,
+     "dungeon": null
+    },
+    "side": "both",
+    "verified": false
+   },
+   {
+    "slot": "head",
+    "level": null,
+    "itemID": 6720,
+    "ru": "Головной убор охотника на духов",
+    "source": {
+     "type": "quest",
+     "ru": "Frostmaw",
+     "dungeon": null
+    },
+    "side": "horde",
+    "verified": false
+   },
+   {
+    "slot": "neck",
+    "level": 30,
+    "itemID": 7731,
+    "ru": "Талисман Призрачного осколка",
+    "source": {
+     "type": "boss",
+     "ru": "Azshir the Sleepless · Монастырь Алого ордена: кладбище",
+     "dungeon": "scarlet_monastery_graveyard"
+    },
+    "side": "both",
+    "verified": false
+   },
+   {
+    "slot": "shoulder",
+    "level": 26,
+    "itemID": 2278,
+    "ru": "Эполеты лесного следопыта",
+    "source": {
+     "type": "world",
+     "ru": null,
+     "dungeon": null
+    },
+    "side": "both",
+    "verified": false
+   },
+   {
+    "slot": "shoulder",
+    "level": 25,
+    "itemID": 2264,
+    "ru": "Оплечье воров",
+    "source": {
+     "type": "boss",
+     "ru": "Лабиринты Иглошкурых",
+     "dungeon": "razorfen_kraul"
+    },
+    "side": "both",
+    "verified": false
+   },
+   {
+    "slot": "back",
+    "level": 29,
+    "itemID": 13108,
+    "ru": "Мантия тигриного прыжка",
+    "source": {
+     "type": "world",
+     "ru": null,
+     "dungeon": null
+    },
+    "side": "both",
+    "verified": false
+   },
+   {
+    "slot": "back",
+    "level": 21,
+    "itemID": 6340,
+    "ru": "Шкура Фенруса",
+    "source": {
+     "type": "boss",
+     "ru": "Крепость Темного Клыка",
+     "dungeon": "shadowfang_keep"
+    },
+    "side": "both",
+    "verified": false
+   },
+   {
+    "slot": "chest",
+    "level": 30,
+    "itemID": 7374,
+    "ru": "Мглистый кожаный доспех",
+    "source": {
+     "type": "recipe",
+     "ru": "Кожевничество",
+     "dungeon": null
+    },
+    "side": "both",
+    "verified": false
+   },
+   {
+    "slot": "wrist",
+    "level": 30,
+    "itemID": 14590,
+    "ru": "Наручи Соколиного Глаза",
+    "source": {
+     "type": "world",
+     "ru": null,
+     "dungeon": null
+    },
+    "side": "both",
+    "verified": false
+   },
+   {
+    "slot": "wrist",
+    "level": 28,
+    "itemID": 9455,
+    "ru": "Посольские манжеты",
+    "source": {
+     "type": "boss",
+     "ru": "Гномреган",
+     "dungeon": "gnomeregan"
+    },
+    "side": "both",
+    "verified": false
+   },
+   {
+    "slot": "hands",
+    "level": null,
+    "itemID": 6727,
+    "ru": "Гоночные перчатки Раззерика",
+    "source": {
+     "type": "quest",
+     "ru": "Safety First",
+     "dungeon": null
+    },
+    "side": "both",
+    "verified": false
+   },
+   {
+    "slot": "legs",
+    "level": null,
+    "itemID": 9624,
+    "ru": "Шаровары бегуна",
+    "source": {
+     "type": "quest",
+     "ru": "Rig Wars / The Grand Betrayal",
+     "dungeon": null
+    },
+    "side": "both",
+    "verified": false
+   },
+   {
+    "slot": "feet",
+    "level": 29,
+    "itemID": 4055,
+    "ru": "Орденские сапоги",
+    "source": {
+     "type": "world",
+     "ru": null,
+     "dungeon": null
+    },
+    "side": "both",
+    "verified": false
+   },
+   {
+    "slot": "feet",
+    "level": null,
+    "itemID": 7751,
+    "ru": "Сапоги Воррела",
+    "source": {
+     "type": "quest",
+     "ru": "Vorrel's Revenge",
+     "dungeon": null
+    },
+    "side": "horde",
+    "verified": false
+   },
+   {
+    "slot": "feet",
+    "level": null,
+    "itemID": 16977,
+    "ru": "Сапоги Песни Войны",
+    "source": {
+     "type": "quest",
+     "ru": "Warsong Supplies",
+     "dungeon": null
+    },
+    "side": "both",
+    "verified": false
+   },
+   {
+    "slot": "finger",
+    "level": 30,
+    "itemID": 7686,
+    "ru": "Око Железноспина",
+    "source": {
+     "type": "boss",
+     "ru": "Монастырь Алого ордена: кладбище",
+     "dungeon": "scarlet_monastery_graveyard"
+    },
+    "side": "both",
+    "verified": false
+   },
+   {
+    "slot": "finger",
+    "level": null,
+    "itemID": 6748,
+    "ru": "Кольцо Обезьяны",
+    "source": {
+     "type": "quest",
+     "ru": "Willix the Importer",
+     "dungeon": null
+    },
+    "side": "both",
+    "verified": false
+   },
+   {
+    "slot": "main",
+    "level": null,
+    "itemID": 9520,
+    "ru": "Бесшумный охотник",
+    "source": {
+     "type": "quest",
+     "ru": "Call to Arms",
+     "dungeon": null
+    },
+    "side": "horde",
+    "verified": false
+   },
+   {
+    "slot": "ranged",
+    "level": null,
+    "itemID": 17687,
+    "ru": "Винтовка опытного охотника",
+    "source": {
+     "type": "quest",
+     "ru": "Big Game Hunter",
+     "dungeon": null
+    },
+    "side": "both",
+    "verified": false
+   }
+  ]
+ },
+ "talents": {
+  "hunter-beast-mastery": [
+   {
+    "level": 10,
+    "talentID": null,
+    "spellID": 19552,
+    "rank": 1,
+    "ru": "Смертоносные духи",
+    "verified": true
+   },
+   {
+    "level": 11,
+    "talentID": null,
+    "spellID": 19552,
+    "rank": 2,
+    "ru": "Смертоносные духи",
+    "verified": true
+   },
+   {
+    "level": 12,
+    "talentID": null,
+    "spellID": 19552,
+    "rank": 3,
+    "ru": "Смертоносные духи",
+    "verified": true
+   },
+   {
+    "level": 13,
+    "talentID": null,
+    "spellID": 19552,
+    "rank": 4,
+    "ru": "Смертоносные духи",
+    "verified": true
+   },
+   {
+    "level": 14,
+    "talentID": null,
+    "spellID": 19552,
+    "rank": 5,
+    "ru": "Смертоносные духи",
+    "verified": true
+   },
+   {
+    "level": 15,
+    "talentID": null,
+    "spellID": 24443,
+    "rank": 1,
+    "ru": "Улучшенное воскрешение питомца",
+    "verified": true
+   },
+   {
+    "level": 16,
+    "talentID": null,
+    "spellID": 24443,
+    "rank": 2,
+    "ru": "Улучшенное воскрешение питомца",
+    "verified": true
+   },
+   {
+    "level": 17,
+    "talentID": null,
+    "spellID": 1223755,
+    "rank": 1,
+    "ru": "Направленный огонь",
+    "verified": true
+   },
+   {
+    "level": 18,
+    "talentID": null,
+    "spellID": 1223755,
+    "rank": 2,
+    "ru": "Направленный огонь",
+    "verified": true
+   },
+   {
+    "level": 19,
+    "talentID": null,
+    "spellID": 19583,
+    "rank": 1,
+    "ru": "Тренировка стойкости",
+    "verified": true
+   },
+   {
+    "level": 20,
+    "talentID": null,
+    "spellID": 19596,
+    "rank": 1,
+    "ru": "Звериная стремительность",
+    "verified": true
+   },
+   {
+    "level": 21,
+    "talentID": null,
+    "spellID": 19616,
+    "rank": 1,
+    "ru": "Неудержимое неистовство",
+    "verified": true
+   },
+   {
+    "level": 22,
+    "talentID": null,
+    "spellID": 19616,
+    "rank": 2,
+    "ru": "Неудержимое неистовство",
+    "verified": true
+   },
+   {
+    "level": 23,
+    "talentID": null,
+    "spellID": 19616,
+    "rank": 3,
+    "ru": "Неудержимое неистовство",
+    "verified": true
+   },
+   {
+    "level": 24,
+    "talentID": null,
+    "spellID": 19616,
+    "rank": 4,
+    "ru": "Неудержимое неистовство",
+    "verified": true
+   },
+   {
+    "level": 25,
+    "talentID": null,
+    "spellID": 1293241,
+    "rank": 1,
+    "ru": "Призыв ястреба",
+    "verified": true
+   },
+   {
+    "level": 26,
+    "talentID": null,
+    "spellID": 19616,
+    "rank": 5,
+    "ru": "Неудержимое неистовство",
+    "verified": true
+   },
+   {
+    "level": 27,
+    "talentID": null,
+    "spellID": 19598,
+    "rank": 1,
+    "ru": "Свирепость",
+    "verified": true
+   },
+   {
+    "level": 28,
+    "talentID": null,
+    "spellID": 19598,
+    "rank": 2,
+    "ru": "Свирепость",
+    "verified": true
+   },
+   {
+    "level": 29,
+    "talentID": null,
+    "spellID": 19598,
+    "rank": 3,
+    "ru": "Свирепость",
+    "verified": true
+   },
+   {
+    "level": 30,
+    "talentID": null,
+    "spellID": 19577,
+    "rank": 1,
+    "ru": "Устрашение",
+    "verified": true
+   },
+   {
+    "level": 31,
+    "talentID": null,
+    "spellID": 19590,
+    "rank": 1,
+    "ru": "Беспрекословное послушание",
+    "verified": false
+   },
+   {
+    "level": 32,
+    "talentID": null,
+    "spellID": 19590,
+    "rank": 2,
+    "ru": "Беспрекословное послушание",
+    "verified": false
+   },
+   {
+    "level": 33,
+    "talentID": null,
+    "spellID": 19598,
+    "rank": 4,
+    "ru": "Свирепость",
+    "verified": false
+   },
+   {
+    "level": 34,
+    "talentID": null,
+    "spellID": 19598,
+    "rank": 5,
+    "ru": "Свирепость",
+    "verified": false
+   },
+   {
+    "level": 35,
+    "talentID": null,
+    "spellID": 19621,
+    "rank": 1,
+    "ru": "Бешенство",
+    "verified": false
+   },
+   {
+    "level": 36,
+    "talentID": null,
+    "spellID": 19621,
+    "rank": 2,
+    "ru": "Бешенство",
+    "verified": false
+   },
+   {
+    "level": 37,
+    "talentID": null,
+    "spellID": 19621,
+    "rank": 3,
+    "ru": "Бешенство",
+    "verified": false
+   },
+   {
+    "level": 38,
+    "talentID": null,
+    "spellID": 19621,
+    "rank": 4,
+    "ru": "Бешенство",
+    "verified": false
+   },
+   {
+    "level": 39,
+    "talentID": null,
+    "spellID": 19621,
+    "rank": 5,
+    "ru": "Бешенство",
+    "verified": false
+   },
+   {
+    "level": 40,
+    "talentID": null,
+    "spellID": 19574,
+    "rank": 1,
+    "ru": "Звериный гнев",
+    "verified": false
+   },
+   {
+    "level": 41,
+    "talentID": null,
+    "spellID": 19426,
+    "rank": 1,
+    "ru": "Смертоносные атаки",
+    "verified": false
+   },
+   {
+    "level": 42,
+    "talentID": null,
+    "spellID": 19426,
+    "rank": 2,
+    "ru": "Смертоносные атаки",
+    "verified": false
+   },
+   {
+    "level": 43,
+    "talentID": null,
+    "spellID": 19426,
+    "rank": 3,
+    "ru": "Смертоносные атаки",
+    "verified": false
+   },
+   {
+    "level": 44,
+    "talentID": null,
+    "spellID": 19426,
+    "rank": 4,
+    "ru": "Смертоносные атаки",
+    "verified": false
+   },
+   {
+    "level": 45,
+    "talentID": null,
+    "spellID": 19426,
+    "rank": 5,
+    "ru": "Смертоносные атаки",
+    "verified": false
+   },
+   {
+    "level": 46,
+    "talentID": null,
+    "spellID": 1223984,
+    "rank": 1,
+    "ru": "Верная цель",
+    "verified": false
+   },
+   {
+    "level": 47,
+    "talentID": null,
+    "spellID": 1223984,
+    "rank": 2,
+    "ru": "Верная цель",
+    "verified": false
+   },
+   {
+    "level": 48,
+    "talentID": null,
+    "spellID": 1223984,
+    "rank": 3,
+    "ru": "Верная цель",
+    "verified": false
+   },
+   {
+    "level": 49,
+    "talentID": null,
+    "spellID": 1223984,
+    "rank": 4,
+    "ru": "Верная цель",
+    "verified": false
+   },
+   {
+    "level": 50,
+    "talentID": null,
+    "spellID": 1223984,
+    "rank": 5,
+    "ru": "Верная цель",
+    "verified": false
+   },
+   {
+    "level": 51,
+    "talentID": null,
+    "spellID": 19559,
+    "rank": 1,
+    "ru": "Знание троп",
+    "verified": false
+   },
+   {
+    "level": 52,
+    "talentID": null,
+    "spellID": 19559,
+    "rank": 2,
+    "ru": "Знание троп",
+    "verified": false
+   },
+   {
+    "level": 53,
+    "talentID": null,
+    "spellID": 19583,
+    "rank": 2,
+    "ru": "Тренировка стойкости",
+    "verified": false
+   },
+   {
+    "level": 54,
+    "talentID": null,
+    "spellID": 19583,
+    "rank": 3,
+    "ru": "Тренировка стойкости",
+    "verified": false
+   },
+   {
+    "level": 55,
+    "talentID": null,
+    "spellID": 19583,
+    "rank": 4,
+    "ru": "Тренировка стойкости",
+    "verified": false
+   },
+   {
+    "level": 56,
+    "talentID": null,
+    "spellID": 19583,
+    "rank": 5,
+    "ru": "Тренировка стойкости",
+    "verified": false
+   },
+   {
+    "level": 57,
+    "talentID": null,
+    "spellID": 19578,
+    "rank": 1,
+    "ru": "Узы духа",
+    "verified": false
+   },
+   {
+    "level": 58,
+    "talentID": null,
+    "spellID": 19578,
+    "rank": 2,
+    "ru": "Узы духа",
+    "verified": false
+   },
+   {
+    "level": 59,
+    "talentID": null,
+    "spellID": 19498,
+    "rank": 1,
+    "ru": "Глаз ястреба",
+    "verified": false
+   },
+   {
+    "level": 60,
+    "talentID": null,
+    "spellID": 19498,
+    "rank": 2,
+    "ru": "Глаз ястреба",
+    "verified": false
+   }
+  ]
+ }
+}
