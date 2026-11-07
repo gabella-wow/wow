@@ -9,8 +9,9 @@ Nothing is typed in here: every value comes from the data the site already shows
             (talents.leveling, content/talents/<class>.json), per TALENT_SPECS
 No made-up data. A Russian name the client data lacks is null where the record has the English twin (en, zone_en) and the English
 name in lists and source lines (as the Russian guide prints it). The sources have no uiMapID (names_ids.json keeps Wowhead zone ids,
-another number): null and []. The talent nodes keep no talent id (tools/talent_import.py reads it from the dump but does not store it):
-null. verified is true only for what was checked against the game: gear of the client dump (provenance "client-dump") and talent
+another number): null and []. talentID is the game's id of the talent: tid of its tree node (tools/talent_import.py keeps the dump's
+talentID, in Forever the C_Traits node id), null for a node without one. verified is true only for what was checked against the
+game: gear of the client dump (provenance "client-dump") and talent
 levels the class guide checked against the in-game tree (TALENTS_CHECKED); dungeon levels (guide sites, Blizzard published none)
 and the route (a beta guideline) are false. version is a hash of the content: the same sources give the same file.
 Run: python tools/export_addon.py  (build.py runs it on every build)"""
@@ -192,7 +193,7 @@ def talent_order(cid, spec):
     for t, _add, a, z in b['steps']:
         for lv in range(a, z + 1):
             rank[t['id']] = rank.get(t['id'], 0) + 1
-            out.append({'level': lv, 'talentID': None, 'spellID': (t.get('spells') or [None])[0], 'rank': rank[t['id']],
+            out.append({'level': lv, 'talentID': t.get('tid'), 'spellID': (t.get('spells') or [None])[0], 'rank': rank[t['id']],
                         'ru': t['n'].get('ru') or t['n']['en'], 'verified': lv <= checked})
     return out
 

@@ -136,6 +136,23 @@ def test_talents():
             rank[k] = x['rank']
             assert type(x['verified']) is bool, x
     assert len(t['hunter-beast-mastery']) == 51 and all(is_id(x['spellID']) for x in t['hunter-beast-mastery'])   # the client tree has every spell
+    assert all(is_id(x['talentID']) for x in t['hunter-beast-mastery']), 'the hunter tree comes from the client dump: every talent has its id'
+
+
+def test_talent_ids():
+    """talentID is the game's id of the talent: tid of its node in content/talents/<class>.json (the dump's talentID, in Forever the
+    C_Traits node id). No id twice in a class; a point carries the id of the very node of its spell and name."""
+    import talents
+    for f in sorted(os.listdir(talents.DATA)):
+        d = talents.load(f[:-5])
+        tids = [n['tid'] for tr in d['trees'] for n in tr['talents'] if 'tid' in n]
+        assert all(is_id(i) for i in tids) and len(set(tids)) == len(tids), f
+    for spec, rows in load()['talents'].items():
+        nodes = {n['tid']: n for tr in talents.load(spec.split('-')[0])['trees'] for n in tr['talents'] if 'tid' in n}
+        for x in rows:
+            if x['talentID'] is not None:
+                n = nodes[x['talentID']]
+                assert x['spellID'] in n['spells'] and x['ru'] == (n['n'].get('ru') or n['n']['en']), (x, n['id'])
 
 
 def test_dungeon_key_and_side():
