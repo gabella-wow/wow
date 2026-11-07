@@ -232,6 +232,37 @@ local function status()
 end
 
 local f = CreateFrame("Frame")
+-- Recipes of the open profession window. Old API (GetTradeSkillLine...) or, in the Forever client where it is
+-- missing, C_TradeSkillUI; with neither the window is skipped quietly.
+local function craftSources(loc)
+  local add = function(link, prof)
+    local id = itemId(link)
+    if id and prof then addSrc(id, "craft:" .. tostring(prof), { kind = "craft", name = { [loc] = prof } }) end
+  end
+  if GetTradeSkillLine and GetNumTradeSkills and GetTradeSkillInfo and GetTradeSkillItemLink then
+    local prof = GetTradeSkillLine()
+    for i = 1, GetNumTradeSkills() do
+      local _, kind = GetTradeSkillInfo(i)
+      if kind ~= "header" then add(GetTradeSkillItemLink(i), prof) end
+    end
+    return
+  end
+  local T = C_TradeSkillUI
+  if not (T and T.GetAllRecipeIDs) then return end
+  local prof
+  if T.GetBaseProfessionInfo then local p = T.GetBaseProfessionInfo(); prof = p and p.professionName end
+  if not prof and T.GetTradeSkillLine then prof = select(2, T.GetTradeSkillLine()) end
+  for _, rid in ipairs(T.GetAllRecipeIDs() or {}) do
+    local link
+    if T.GetRecipeItemLink then link = T.GetRecipeItemLink(rid) end
+    if not link and T.GetRecipeSchematic then
+      local s = T.GetRecipeSchematic(rid, false)
+      if s and s.outputItemID then link = "item:" .. s.outputItemID end
+    end
+    add(link, prof)
+  end
+end
+
 f:RegisterEvent("GET_ITEM_INFO_RECEIVED")
 f:RegisterEvent("LOOT_READY")
 f:RegisterEvent("QUEST_DETAIL")
@@ -265,13 +296,7 @@ f:SetScript("OnEvent", function(_, ev, a1, a2)
       for i = 1, GetNumQuestChoices() do addSrc(itemId(GetQuestItemLink("choice", i)), "quest:" .. qid, rec()) end
       for i = 1, GetNumQuestRewards() do addSrc(itemId(GetQuestItemLink("reward", i)), "quest:" .. qid, rec()) end
     elseif ev == "TRADE_SKILL_SHOW" then                           -- what the open profession window makes
-      local prof = GetTradeSkillLine()
-      for i = 1, GetNumTradeSkills() do
-        local _, kind = GetTradeSkillInfo(i)
-        if kind ~= "header" then
-          addSrc(itemId(GetTradeSkillItemLink(i)), "craft:" .. tostring(prof), { kind = "craft", name = { [loc] = prof } })
-        end
-      end
+      craftSources(loc)
     end
   end)
   if not ok then print(P .. "error in " .. tostring(ev) .. ": " .. tostring(err)) end
