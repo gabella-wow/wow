@@ -1,5 +1,175 @@
 [
  {
+  "id": "eu-640598-1",
+  "sha": "f2a705e7",
+  "date": "2026-11-08",
+  "at": "2026-11-08T19:48:33Z",
+  "url": "https://eu.forums.blizzard.com/en/wow/t/dungeon-enemy-xp-increased-8-november/640598/1",
+  "kind": "post",
+  "beta": false,
+  "title_en": "Dungeon Enemy XP Increased - 8 November",
+  "n": 0,
+  "t": {
+   "ru": {
+    "h": "Dungeon Enemy XP Increased - 8 November",
+    "en": 1,
+    "src": "Blizzard, на английском",
+    "sum": [],
+    "site": "https://gabella.site/wow/guides/news/",
+    "site_t": "Подробнее на сайте"
+   },
+   "en": {
+    "h": "Dungeon Enemy XP Increased - 8 November",
+    "en": 1,
+    "src": "Blizzard",
+    "sum": [],
+    "site": "https://gabella.site/wow/en/guides/news/",
+    "site_t": "More on the site"
+   },
+   "uk": {
+    "h": "Dungeon Enemy XP Increased - 8 November",
+    "en": 1,
+    "src": "Blizzard, англійською",
+    "sum": [],
+    "site": "https://gabella.site/wow/uk/guides/news/",
+    "site_t": "Детальніше на сайті"
+   },
+   "de": {
+    "h": "Dungeon Enemy XP Increased - 8 November",
+    "en": 1,
+    "src": "Blizzard, auf Englisch",
+    "sum": [],
+    "site": "https://gabella.site/wow/de/guides/news/",
+    "site_t": "Mehr auf der Seite"
+   },
+   "fr": {
+    "h": "Dungeon Enemy XP Increased - 8 November",
+    "en": 1,
+    "src": "Blizzard, en anglais",
+    "sum": [],
+    "site": "https://gabella.site/wow/fr/guides/news/",
+    "site_t": "Plus sur le site"
+   },
+   "es": {
+    "h": "Dungeon Enemy XP Increased - 8 November",
+    "en": 1,
+    "src": "Blizzard, en inglés",
+    "sum": [],
+    "site": "https://gabella.site/wow/es/guides/news/",
+    "site_t": "Más en la web"
+   },
+   "pt": {
+    "h": "Dungeon Enemy XP Increased - 8 November",
+    "en": 1,
+    "src": "Blizzard, em inglês",
+    "sum": [],
+    "site": "https://gabella.site/wow/pt/guides/news/",
+    "site_t": "Mais no site"
+   },
+   "it": {
+    "h": "Dungeon Enemy XP Increased - 8 November",
+    "en": 1,
+    "src": "Blizzard, in inglese",
+    "sum": [],
+    "site": "https://gabella.site/wow/it/guides/news/",
+    "site_t": "Di più sul sito"
+   },
+   "pl": {
+    "h": "Dungeon Enemy XP Increased - 8 November",
+    "en": 1,
+    "src": "Blizzard, po angielsku",
+    "sum": [],
+    "site": "https://gabella.site/wow/pl/guides/news/",
+    "site_t": "Więcej na stronie"
+   }
+  }
+ },
+ {
+  "id": "us-2406595-1",
+  "sha": "29da1801",
+  "date": "2026-11-08",
+  "at": "2026-11-08T19:47:33Z",
+  "url": "https://us.forums.blizzard.com/en/wow/t/dungeon-enemy-xp-increased-november-8/2406595/1",
+  "kind": "post",
+  "beta": false,
+  "title_en": "Dungeon Enemy XP Increased - November 8",
+  "n": 0,
+  "t": {
+   "ru": {
+    "h": "Dungeon Enemy XP Increased - November 8",
+    "en": 1,
+    "src": "Blizzard, на английском",
+    "sum": [],
+    "site": "https://gabella.site/wow/guides/news/",
+    "site_t": "Подробнее на сайте"
+   },
+   "en": {
+    "h": "Dungeon Enemy XP Increased - November 8",
+    "en": 1,
+    "src": "Blizzard",
+    "sum": [],
+    "site": "https://gabella.site/wow/en/guides/news/",
+    "site_t": "More on the site"
+   },
+   "uk": {
+    "h": "Dungeon Enemy XP Increased - November 8",
+    "en": 1,
+    "src": "Blizzard, англійською",
+    "sum": [],
+    "site": "https://gabella.site/wow/uk/guides/news/",
+    "site_t": "Детальніше на сайті"
+   },
+   "de": {
+    "h": "Dungeon Enemy XP Increased - November 8",
+    "en": 1,
+    "src": "Blizzard, auf Englisch",
+    "sum": [],
+    "site": "https://gabella.site/wow/de/guides/news/",
+    "site_t": "Mehr auf der Seite"
+   },
+   "fr": {
+    "h": "Dungeon Enemy XP Increased - November 8",
+    "en": 1,
+    "src": "Blizzard, en anglais",
+    "sum": [],
+    "site": "https://gabella.site/wow/fr/guides/news/",
+    "site_t": "Plus sur le site"
+   },
+   "es": {
+    "h": "Dungeon Enemy XP Increased - November 8",
+    "en": 1,
+    "src": "Blizzard, en inglés",
+    "sum": [],
+    "site": "https://gabella.site/wow/es/guides/news/",
+    "site_t": "Más en la web"
+   },
+   "pt": {
+    "h": "Dungeon Enemy XP Increased - November 8",
+    "en": 1,
+    "src": "Blizzard, em inglês",
+    "sum": [],
+    "site": "https://gabella.site/wow/pt/guides/news/",
+    "site_t": "Mais no site"
+   },
+   "it": {
+    "h": "Dungeon Enemy XP Increased - November 8",
+    "en": 1,
+    "src": "Blizzard, in inglese",
+    "sum": [],
+    "site": "https://gabella.site/wow/it/guides/news/",
+    "site_t": "Di più sul sito"
+   },
+   "pl": {
+    "h": "Dungeon Enemy XP Increased - November 8",
+    "en": 1,
+    "src": "Blizzard, po angielsku",
+    "sum": [],
+    "site": "https://gabella.site/wow/pl/guides/news/",
+    "site_t": "Więcej na stronie"
+   }
+  }
+ },
+ {
   "id": "us-2404092-1",
   "sha": "d8060149",
   "date": "2026-11-06",
