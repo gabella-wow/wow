@@ -1,5 +1,5 @@
 {
- "last_run": "2026-11-09T23:41:00Z",
+ "last_run": "2026-11-09T23:51:01Z",
  "posts": {
   "art-24301455": {
    "checked": "2026-10-29T20:21:03Z",
@@ -64,7 +64,7 @@
    "version": null
   },
   "art-24302547": {
-   "checked": "2026-11-09T23:41:00Z",
+   "checked": "2026-11-09T23:51:01Z",
    "lines": [
     "e463594c3307"
    ],
@@ -295,7 +295,7 @@
    "version": null
   },
   "art-24315643": {
-   "checked": "2026-11-09T17:41:03Z",
+   "checked": "2026-11-09T23:51:01Z",
    "lines": [
     "947e64a342be",
     "3a7f6e37e1f0",
@@ -453,10 +453,10 @@
    "version": null
   },
   "art-24317865": {
-   "checked": "2026-11-09T17:41:03Z",
+   "checked": "2026-11-09T23:51:01Z",
    "lines": [],
    "seen": "2026-11-05T22:00:59Z",
-   "sha": "b6d93c8beaa49774df03cd6a39762d6cc58d289f7c0264ebf0153661db336f41",
+   "sha": "95ef93687805342ac95ae824a07a325d0418cf7608865ab109720513d5ab1cb9",
    "title": "WoW: Forever– Watch Forging Forever",
    "updated_at": null,
    "url": "https://worldofwarcraft.blizzard.com/en-us/news/24317865/wow-forever-watch-forging-forever",
@@ -555,7 +555,7 @@
    "version": 1
   },
   "eu-631316-1": {
-   "checked": "2026-11-09T23:41:00Z",
+   "checked": "2026-11-09T23:51:01Z",
    "lines": [
     "b980faad67e4",
     "551f003b8fd3",
@@ -693,7 +693,7 @@
    "version": 5
   },
   "eu-631316-10": {
-   "checked": "2026-11-09T23:41:00Z",
+   "checked": "2026-11-09T23:51:01Z",
    "lines": [
     "65ad0c5dbf28",
     "ce9a126c7693",
@@ -711,7 +711,7 @@
    "version": 1
   },
   "eu-631316-4": {
-   "checked": "2026-11-09T23:41:00Z",
+   "checked": "2026-11-09T23:51:01Z",
    "lines": [
     "a9f91ef9a1d3",
     "3f0687de02e8",
@@ -866,7 +866,7 @@
    "version": 3
   },
   "eu-631316-5": {
-   "checked": "2026-11-09T23:41:00Z",
+   "checked": "2026-11-09T23:51:01Z",
    "lines": [
     "862affbc3ad5",
     "3e1771b3fd67",
@@ -1004,7 +1004,7 @@
    "version": 1
   },
   "eu-631316-6": {
-   "checked": "2026-11-09T23:41:00Z",
+   "checked": "2026-11-09T23:51:01Z",
    "lines": [
     "ba02c8dc2b40",
     "cdd748e437cc",
@@ -1242,7 +1242,7 @@
    "version": 2
   },
   "eu-631316-7": {
-   "checked": "2026-11-09T23:41:00Z",
+   "checked": "2026-11-09T23:51:01Z",
    "lines": [
     "c2f53382556d",
     "157b13cf95b2",
@@ -1270,7 +1270,7 @@
    "version": 4
   },
   "eu-631316-8": {
-   "checked": "2026-11-09T23:41:00Z",
+   "checked": "2026-11-09T23:51:01Z",
    "lines": [
     "180749eee47d",
     "57c724e3010c",
@@ -1287,7 +1287,7 @@
    "version": 2
   },
   "eu-631316-9": {
-   "checked": "2026-11-09T23:41:00Z",
+   "checked": "2026-11-09T23:51:01Z",
    "lines": [
     "eabd14472cc2",
     "e75ab1fa1bb9",
@@ -2019,7 +2019,7 @@
    "version": 3
   },
   "us-2360696-1": {
-   "checked": "2026-11-09T23:41:00Z",
+   "checked": "2026-11-09T23:51:01Z",
    "lines": [
     "b980faad67e4",
     "551f003b8fd3",
@@ -2157,7 +2157,7 @@
    "version": 5
   },
   "us-2360696-10": {
-   "checked": "2026-11-09T23:41:00Z",
+   "checked": "2026-11-09T23:51:01Z",
    "lines": [
     "65ad0c5dbf28",
     "ce9a126c7693",
@@ -2175,7 +2175,7 @@
    "version": 1
   },
   "us-2360696-4": {
-   "checked": "2026-11-09T23:41:00Z",
+   "checked": "2026-11-09T23:51:01Z",
    "lines": [
     "a9f91ef9a1d3",
     "3f0687de02e8",
@@ -2330,7 +2330,7 @@
    "version": 4
   },
   "us-2360696-5": {
-   "checked": "2026-11-09T23:41:00Z",
+   "checked": "2026-11-09T23:51:01Z",
    "lines": [
     "862affbc3ad5",
     "3e1771b3fd67",
@@ -2468,7 +2468,7 @@
    "version": 1
   },
   "us-2360696-6": {
-   "checked": "2026-11-09T23:41:00Z",
+   "checked": "2026-11-09T23:51:01Z",
    "lines": [
     "ba02c8dc2b40",
     "cdd748e437cc",
@@ -2706,7 +2706,7 @@
    "version": 2
   },
   "us-2360696-7": {
-   "checked": "2026-11-09T23:41:00Z",
+   "checked": "2026-11-09T23:51:01Z",
    "lines": [
     "c2f53382556d",
     "157b13cf95b2",
@@ -2734,7 +2734,7 @@
    "version": 4
   },
   "us-2360696-8": {
-   "checked": "2026-11-09T23:41:00Z",
+   "checked": "2026-11-09T23:51:01Z",
    "lines": [
     "180749eee47d",
     "57c724e3010c",
@@ -2751,7 +2751,7 @@
    "version": 2
   },
   "us-2360696-9": {
-   "checked": "2026-11-09T23:41:00Z",
+   "checked": "2026-11-09T23:51:01Z",
    "lines": [
     "eabd14472cc2",
     "e75ab1fa1bb9",
@@ -3607,7 +3607,7 @@
    "version": 1
   },
   "us-2406595-1": {
-   "checked": "2026-11-09T23:41:00Z",
+   "checked": "2026-11-09T23:51:01Z",
    "lines": [],
    "seen": "2026-11-08T19:50:59Z",
    "sha": "29da180161c457385e4f295935ceb3473d2c3a6d1255279f3780b6d4d5e2c846",
@@ -3658,7 +3658,7 @@
   },
   "articles:24302547": {
    "fails": 0,
-   "ok": "2026-11-09T23:41:00Z"
+   "ok": "2026-11-09T23:51:01Z"
   },
   "articles:24303009": {
    "fails": 0,
@@ -3694,7 +3694,7 @@
   },
   "articles:24315643": {
    "fails": 0,
-   "ok": "2026-11-09T17:41:02Z"
+   "ok": "2026-11-09T23:51:00Z"
   },
   "articles:24315819": {
    "fails": 0,
@@ -3722,35 +3722,35 @@
   },
   "articles:24317865": {
    "fails": 0,
-   "ok": "2026-11-09T17:41:01Z"
+   "ok": "2026-11-09T23:50:59Z"
   },
   "articles:list": {
    "fails": 0,
-   "ok": "2026-11-09T23:40:59Z"
+   "ok": "2026-11-09T23:50:59Z"
   },
   "eu:c/wow-forever-beta-discussion/362": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-09T21:51:01Z",
    "fails": 0,
-   "ok": "2026-11-09T23:40:56Z"
+   "ok": "2026-11-09T23:50:55Z"
   },
   "eu:c/wow-forever-beta-discussion/362/new": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-09T22:11:13Z",
    "fails": 0,
-   "ok": "2026-11-09T23:40:57Z"
+   "ok": "2026-11-09T23:50:56Z"
   },
   "eu:c/wow-forever/359": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-09T21:31:02Z",
    "fails": 0,
-   "ok": "2026-11-09T23:40:54Z"
+   "ok": "2026-11-09T23:50:53Z"
   },
   "eu:c/wow-forever/359/new": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-09T22:11:02Z",
    "fails": 0,
-   "ok": "2026-11-09T23:40:55Z"
+   "ok": "2026-11-09T23:50:54Z"
   },
   "eu:t/628701": {
    "fails": 0,
@@ -3784,7 +3784,7 @@
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-09T21:41:10Z",
    "fails": 0,
-   "ok": "2026-11-09T23:40:58Z"
+   "ok": "2026-11-09T23:50:58Z"
   },
   "eu:t/631603": {
    "fails": 0,
@@ -4518,25 +4518,25 @@
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-09T22:10:49Z",
    "fails": 0,
-   "ok": "2026-11-09T23:40:47Z"
+   "ok": "2026-11-09T23:50:48Z"
   },
   "us:c/wow-forever-beta-discussion/349/new": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-09T22:10:51Z",
    "fails": 0,
-   "ok": "2026-11-09T23:40:48Z"
+   "ok": "2026-11-09T23:50:48Z"
   },
   "us:c/wow-forever/346": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-06T15:00:48Z",
    "fails": 0,
-   "ok": "2026-11-09T23:40:45Z"
+   "ok": "2026-11-09T23:50:46Z"
   },
   "us:c/wow-forever/346/new": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-06T15:00:59Z",
    "fails": 0,
-   "ok": "2026-11-09T23:40:46Z"
+   "ok": "2026-11-09T23:50:47Z"
   },
   "us:t/2352595": {
    "fails": 0,
@@ -4590,7 +4590,7 @@
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-04T23:11:01Z",
    "fails": 0,
-   "ok": "2026-11-09T23:40:49Z"
+   "ok": "2026-11-09T23:50:49Z"
   },
   "us:t/2361993": {
    "fails": 0,
@@ -4652,7 +4652,7 @@
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-09T22:10:55Z",
    "fails": 0,
-   "ok": "2026-11-09T23:40:50Z"
+   "ok": "2026-11-09T23:50:50Z"
   },
   "us:t/2381433": {
    "fails": 0,
@@ -5052,11 +5052,11 @@
   },
   "us:t/2406595": {
    "fails": 0,
-   "ok": "2026-11-09T23:40:52Z"
+   "ok": "2026-11-09T23:50:51Z"
   },
   "us:t/2406595/posts": {
    "fails": 0,
-   "ok": "2026-11-09T23:40:53Z"
+   "ok": "2026-11-09T23:50:52Z"
   },
   "us:t/2407990": {
    "fails": 0,
@@ -5075,6 +5075,10 @@
   "us:t/2408105/posts": {
    "fails": 0,
    "ok": "2026-11-09T23:10:50Z"
+  },
+  "us:t/2408599": {
+   "fails": 0,
+   "ok": "2026-11-09T23:50:50Z"
   }
  },
  "topics": {
@@ -5304,8 +5308,9 @@
   "us-2405706": "2026-11-08T12:16:31.615Z|44",
   "us-2405856": "2026-11-09T07:17:43.737Z|6",
   "us-2406215": "2026-11-08T14:38:32.656Z|3",
-  "us-2406595": "2026-11-09T23:40:13.396Z|925",
+  "us-2406595": "2026-11-09T23:46:47.668Z|926",
   "us-2407990": "2026-11-09T20:50:11.107Z|89",
-  "us-2408105": "2026-11-09T23:07:43.174Z|151"
+  "us-2408105": "2026-11-09T23:07:43.174Z|151",
+  "us-2408599": "2026-11-09T23:47:26.072Z|2"
  }
 }
