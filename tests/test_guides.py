@@ -406,6 +406,32 @@ def test_dungeon_loot_index():
     assert 'Тестовый посох' in html and 'Маг · Лёд' in html and 'Elsewhere' not in html
 
 
+def test_level_jump_targets_exist():
+    """«My level» of the leveling guides: every chip of every built page (all languages) leads to an id of the very page,
+    and the chips are the level ranges of the zone route."""
+    import re, langs
+    root = os.path.dirname(os.path.abspath(__file__)) + '/..'
+    steps, _ = bg.leveling_parts()
+    ranges = list(dict.fromkeys((lo, hi) for rows in steps.values() for lo, hi, _d in rows))
+    slugs = ['leveling'] + [g['slug'] for g in bg.GUIDES if g['slug'].startswith('leveling-')]
+    seen = 0
+    for lang in ('',) + tuple(l for l in langs.LANGS if l != 'ru'):
+        for slug in slugs:
+            f = os.path.join(root, lang, 'guides', slug, 'index.html')
+            if not os.path.isfile(f):
+                continue
+            html = open(f, encoding='utf-8').read()
+            nav = re.search(r'<nav class="gjump lvl".*?</nav>', html, re.S)
+            if not nav:
+                continue
+            hrefs = re.findall(r'href="#([^"]+)"', nav.group(0))
+            assert len(hrefs) == len(ranges), (f, hrefs)
+            for h in hrefs:
+                assert f'id="{h}"' in html, f'{f}: no #{h}'
+            seen += 1
+    assert seen >= 10, seen
+
+
 if __name__ == '__main__':
     for name, fn in list(globals().items()):
         if name.startswith('test_'):

@@ -29,6 +29,7 @@ langs.fill([GUIDES, HUB, HUBS, NEWS, NOT_FOUND, PAGES, CLASS_HUB_TILE, BUILDS_HU
 SS_TILE = next(g for g in GUIDES if g['slug'] == 'server-status')['tile']   # «Статус, очередь на вход, слои, техработы»: the launch card on Launch day
 TIP = {'ru': 'Совет', 'en': 'Tip', 'uk': 'Порада'}
 THIS_PAGE = {'ru': 'Эта страница', 'en': 'This page', 'uk': 'Ця сторінка'}
+LVL_JUMP = {'ru': 'Мой уровень', 'en': 'My level', 'uk': 'Мій рівень'}
 MORE_H = {'ru': 'Другие гайды', 'en': 'Other guides', 'uk': 'Інші гайди'}
 MORE_SITE = {'ru': 'Ещё на сайте', 'en': 'More on the site', 'uk': 'Ще на сайті'}
 # Extra tiles under the classes/ and races/ pages: the guides hub and the tools page
@@ -195,12 +196,27 @@ def cpick(lang, root, title, href='classes/{}/'):
     return f'<nav class="cpick" aria-label="{escape(title, quote=True)}">{items}</nav>'
 
 
-def spec_jump(g, lang):
+def spec_jump(g, lang, skip=('answer', 'faq', 'related')):
     """Phones and tablets, a spec sheet: its sections (build, talents, leveling, group, rotation; gear once it is shown) as one row
     of links in the hero, so the talents are one tap from the first screen (the contents column shows from 1024 px)."""
     links = ''.join(f'<a href="#{s["id"]}">{E(s["title"], lang)}</a>' for s in g['sections']
-                    if s['id'] not in ('answer', 'faq', 'related') and lang in s.get('langs', (lang,)))
+                    if s['id'] not in skip and lang in s.get('langs', (lang,)))
     return f'<nav class="gjump" aria-label="{escape(THIS_PAGE[lang], quote=True)}">{links}</nav>'
+
+
+def level_jump(g, lang):
+    """«My level»: the ranges of the zone route as one row of links in the hero, so the answer to «where do I go / which talents now»
+    is one tap from the first screen. «Leveling»: the step of the route (#lvl-alliance-18-30; guide.src.html points the link at the
+    player's side); a class leveling guide: the row of its talents table (#lvl-18-30). '' where the page has no such part."""
+    general = g['slug'] == 'leveling'
+    want = 'route' if general else 'talents'
+    if not any(x['id'] == want and lang in x.get('langs', (lang,)) for x in g['sections']):
+        return ''
+    steps, _ = leveling_parts()
+    ranges = list(dict.fromkeys((lo, hi) for rows in steps.values() for lo, hi, _d in rows))
+    links = ''.join(f'<a href="#{lvl_id(lo, hi, "alliance" if general else None)}"' + (f' data-lvl="{lo}-{hi}"' if general else '') + f'>{lo}–{hi}</a>'
+                    for lo, hi in ranges)
+    return f'<nav class="gjump lvl" aria-label="{escape(LVL_JUMP[lang], quote=True)}"><span>{LVL_JUMP[lang]}</span>{links}</nav>'
 
 
 CLS_ID = {c['n']: c['id'] for c in build.CLASSES}   # «Паладин» -> paladin
@@ -758,7 +774,7 @@ if (lk) { apply(lk); fromLink = true; } else if (sv) apply(sv);
 paint();
 if (lk) box.scrollIntoView({ block: 'start' });"""
 BETA_TX = {'ru': 'по данным беты', 'en': 'per beta data', 'uk': 'за даними бети'}   # {beta} in a guide text: the site's one beta mark (build.BETA_SPAN)
-langs.fill([LG_TX, BETA_TX, TIP, THIS_PAGE, MORE_H, MORE_SITE, SITE_TILES, PROF_HEAD, DG_TX, PLAY_TX, PLAY_MILESTONES])
+langs.fill([LG_TX, BETA_TX, TIP, THIS_PAGE, LVL_JUMP, MORE_H, MORE_SITE, SITE_TILES, PROF_HEAD, DG_TX, PLAY_TX, PLAY_MILESTONES])
 JS['legacy'] = {l: LG_JS.replace('@@TX@@', json.dumps(LG_TX[l], ensure_ascii=False)) for l in LANGS}
 JS['dungeons'] = {l: DG_JS.replace('@@TX@@', json.dumps(dict(DG_TX[l], pg=dungeon_pages.table_links()), ensure_ascii=False)) for l in LANGS}
 
@@ -2045,8 +2061,12 @@ def build_page(g, lang, tpl, base_css, sprite, src):
         html = html.replace('<p class="gfacts"></p>', '<p class="gfacts"></p>' + cpick(lang, root, E(g['title'], lang)), 1)
     elif g['slug'] == 'builds':                                   # phones: class -> its builds page in one tap from the first screen
         html = re.sub(r'(<p class="gfacts">.*?</p>)', lambda m: m[1] + cpick(lang, root, E(g['title'], lang), 'guides/builds-{}/'), html, count=1, flags=re.S)
+    elif g['slug'] == 'leveling' or g['slug'].startswith('leveling-'):   # «My level»: the route step / the talents row of the level, one tap away
+        html = re.sub(r'(<p class="gfacts">.*?</p>)', lambda m: m[1] + level_jump(g, lang), html, count=1, flags=re.S)
     elif g['slug'].startswith('spec-'):                           # phones: the parts of a spec sheet as one row under the lead (gjump)
         html = re.sub(r'(<p class="gfacts">.*?</p>)', lambda m: m[1] + spec_jump(g, lang), html, count=1, flags=re.S)
+    elif g['slug'].startswith('builds-'):                         # phones: the builds of the three specs are stacked on the page, each spec one tap from the first screen
+        html = re.sub(r'(<p class="gfacts">.*?</p>)', lambda m: m[1] + spec_jump(g, lang, ('roles', 'faq', 'related')), html, count=1, flags=re.S)
     elif g['slug'] == 'launch-day' and build.LAUNCH.get('status_card'):   # launch day: the server status card under the facts (data/launch.json)
         html = re.sub(r'(<p class="gfacts">.*?</p>)', lambda m: m[1] + build.launch_card(lang, root, L(SS_TILE, lang)), html, count=1, flags=re.S)
     if g.get('compact') is True:

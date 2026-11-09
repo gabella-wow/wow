@@ -59,7 +59,7 @@
 <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png?v=00a6a7d9">
 <meta name="apple-mobile-web-app-title" content="Gabella WoW">
 <link data-rel="stylesheet" href="../../assets/radio/radio.css?v=556d7dc63f">
-<link data-rel="stylesheet" href="../../assets/search/search.css?v=9cb72bc8c7">
+<link data-rel="stylesheet" href="../../assets/search/search.css?v=855fc6ecde">
 <link data-rel="stylesheet" href="../../assets/me/me.css?v=b0164179dc">
 <link data-rel="stylesheet" href="../../assets/hero/hero.css?v=56e9b73acd">
 <meta name="msvalidate.01" content="73FA74F8B7D415104D305A58E9706FE7">
@@ -197,6 +197,9 @@ document.querySelectorAll('.gtabs').forEach(box => {
       pick(to); to.focus();
     });
   });
+  // «My level» chips of the Leveling guide: the step of the player's side (the tabs open on it)
+  const side = window.GabellaPor && GabellaPor.fac() === 'horde' ? 'horde' : 'alliance';
+  document.querySelectorAll('a[data-lvl]').forEach(a => { a.href = '#lvl-' + side + '-' + a.dataset.lvl; });
   // a link to a step of the hidden tab (#lvl-horde-18-30): open that tab and scroll to the step
   const toHash = () => {
     const el = location.hash.length > 1 && document.getElementById(decodeURIComponent(location.hash.slice(1)));
@@ -300,7 +303,7 @@ addEventListener('beforeinstallprompt', e => {
 });
 </script>
 <script data-src="../../assets/radio/radio.js?v=556d7dc63f" data-root="../../"></script>
-<script data-src="../../assets/search/search.js?v=9cb72bc8c7" data-root="../../"></script>
+<script data-src="../../assets/search/search.js?v=855fc6ecde" data-root="../../"></script>
 <script data-src="../../assets/me/me.js?v=b0164179dc" data-root="../../" data-home="../" data-lang="uk" data-ach="0" data-teaser="" data-close="Закрити" data-page="talents/" data-look="2"></script>
 <script data-src="../../assets/hero/hero.js?v=56e9b73acd" data-root="../../" data-home="../" data-data="../../assets/hero/uk.json?v=56e9b73acd"></script>
 <script type="module" data-src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "ee1d216e690040389063e8d72384c2c7"}'></script>
