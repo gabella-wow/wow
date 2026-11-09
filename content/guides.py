@@ -3573,6 +3573,17 @@ NEXT = {
     'classes': ['builds', 'best-race', 'leveling'],
     'races': ['classes', 'best-race', 'leveling'],
 }
+def lvl_id(lo, hi, side=None):
+    """Anchor of a level range: #lvl-18-30 (a page without sides: the class leveling talents) or #lvl-alliance-18-30 (the zone route).
+    tools/export_addon.py gives the in-game addon links to these anchors."""
+    return 'lvl-' + (f'{side}-' if side else '') + f'{lo}-{hi}'
+
+
+# the zone route of «Leveling»: every step is a range of levels with its own anchor (the addon sends the player to the step)
+for _tab in next(d for k, d in next(s for s in next(g for g in GUIDES if g['slug'] == 'leveling')['sections'] if s['id'] == 'route')['blocks'] if k == 'tabs'):
+    for _st in next(d for k, d in _tab['blocks'] if k == 'steps'):
+        assert isinstance(_st['t'], str), _st['t']
+        _st['id'] = lvl_id(*_st['t'].split('–'), side=_tab['id'])
 for _g in GUIDES + PAGES:
     _s = _g['slug']
     if 'next' in _g or _g.get('only'):

@@ -1,8 +1,12 @@
 """Guide data for the in-game addon -> assets/addon/gabella-guide.json (the addon turns it into Lua, players see it in the game).
 Nothing is typed in here: every value comes from the data the site already shows.
   dungeons  DUNGEONS of index.src.html (content/dungeon_pages.registry): levels, entrance zone and side; Russian names from
-            i18n/names.json (the ruRU client)
+            i18n/names.json (the ruRU client); url — the dungeon's own page (guides/dungeons/<slug>/), else the list guides/dungeons/
+  dungeons_by_area  {areaId: url} for the addon, which knows the area id of the instance the player is in (Questie's ids, kept in
+            data/addon_dungeon_areas.json by tools/questie_areas.py): the dungeon's url; the wings of one instance share the id
+  levels    [{from, to, url}] the ranges of the route with the anchor of the hunter leveling guide (#lvl-<from>-<to>)
   route     the «Zone route» of guides/leveling/ (content/guides.py, build_guides.leveling_parts) in Russian as /play/ shows it;
+            url — the step of that route on the page (#lvl-<side>-<from>-<to>), url_hunter — the same levels in the hunter leveling guide;
             the zones of a step are the zone names in its text (i18n/names_ids.json type "zone", plus the new Forever zones)
   gear      data/gear30.json, the list the spec pages and the gear planner (assets/gear/planner-<lang>.json) show, per GEAR_SPECS
   talents   the leveling order 10–60 of the class leveling guide as the builds page takes it: checked against the client tree
@@ -22,6 +26,7 @@ sys.path.insert(0, ROOT)
 import langs  # noqa: E402
 
 OUT = os.path.join(ROOT, 'assets', 'addon', 'gabella-guide.json')
+SITE = 'https://gabella.site/wow/'                          # absolute: the addon opens these links from the game (copy-paste or the launcher)
 GEAR_SPECS = ('hunter-beast-mastery',)                     # data/gear30.json keys
 TALENT_SPECS = (('hunter', 'beast-mastery'),)              # class and spec with a leveling order (talents.LEVEL_SPEC)
 # levels of the leveling order the class guide checked against the in-game tree: hunter — the talents tip of guides/leveling-hunter/
@@ -63,6 +68,24 @@ def side_of(side, both):
     return side if side and not both else 'both'
 
 
+def dungeon_url(name):
+    """The dungeon's own page when it has one (slug with hyphens, the JSON key has underscores), else the list of dungeons."""
+    from content import dungeon_pages
+    page = dungeon_pages.BY_NAME.get(name)
+    return f'{SITE}guides/dungeons/{page["slug"]}/' if page else f'{SITE}guides/dungeons/'
+
+
+def dungeons_by_area(ds):
+    """{"718": url}: Questie's area id of an instance -> the page of its dungeon. Wings of one instance (Scarlet Monastery) have no
+    pages of their own: all give the list url; ids sorted as numbers."""
+    areas = json.load(open(os.path.join(ROOT, 'data', 'addon_dungeon_areas.json'), encoding='utf-8'))
+    urls = {}
+    for d in ds:
+        if d['en'] in areas:
+            urls.setdefault(areas[d['en']], set()).add(d['url'])
+    return {str(a): (min(u) if len(u) == 1 else f'{SITE}guides/dungeons/') for a, u in sorted(urls.items())}
+
+
 def dungeons():
     from content import dungeon_pages
     reg, order = dungeon_pages.registry()
@@ -70,7 +93,7 @@ def dungeons():
     for name in order:
         lo, hi, zone, _new, _other, side, both = reg[name]
         out.append({'key': key_of(name), 'en': name, 'ru': ru_name(name), 'min': lo, 'max': hi, 'zone_en': zone, 'zone_ru': ru_name(zone),
-                    'uiMapID': None, 'side': side_of(side, both), 'entrance': side or None, 'verified': False})
+                    'uiMapID': None, 'side': side_of(side, both), 'entrance': side or None, 'url': dungeon_url(name), 'verified': False})
     keys = [d['key'] for d in out]
     assert len(set(keys)) == len(keys), keys
     return out
@@ -101,6 +124,7 @@ def zones_of(text):
 
 def route():
     import build, build_guides
+    from content.guides import lvl_id
     steps, _tip = build_guides.leveling_parts()
     out = {}
     for side in SIDES:
@@ -109,7 +133,8 @@ def route():
             ru = d['ru'] if isinstance(d, dict) else d
             zones = zones_of(ru)
             out[side].append({'from': lo, 'to': hi, 'uiMapIDs': [], 'zones_ru': [shown(z) for z in zones], 'zones_en': zones,
-                              'text_ru': build.ru_plain(ru), 'verified': False})
+                              'text_ru': build.ru_plain(ru), 'url': f'{SITE}guides/leveling/#{lvl_id(lo, hi, side)}',
+                              'url_hunter': f'{SITE}guides/leveling-hunter/#{lvl_id(lo, hi)}', 'verified': False})
     return out
 
 
@@ -207,7 +232,10 @@ def version_of(body):
 def payload():
     ds = dungeons()
     keys = {d['key'] for d in ds}
-    body = {'dungeons': ds, 'route': route(), 'gear': {s: gear(s, keys) for s in GEAR_SPECS},
+    rt = route()
+    levels = [{'from': x['from'], 'to': x['to'], 'url': x['url_hunter']} for x in rt['alliance']]
+    assert levels == [{'from': x['from'], 'to': x['to'], 'url': x['url_hunter']} for x in rt['horde']], 'the sides share the level ranges'
+    body = {'dungeons': ds, 'dungeons_by_area': dungeons_by_area(ds), 'levels': levels, 'route': rt, 'gear': {s: gear(s, keys) for s in GEAR_SPECS},
             'talents': {f'{c}-{s}': talent_order(c, s) for c, s in TALENT_SPECS}}
     return {'version': version_of(body), **body}
 

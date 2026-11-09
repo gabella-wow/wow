@@ -1,5 +1,5 @@
 {
- "version": "315275e1cf29",
+ "version": "553883c07637",
  "dungeons": [
   {
    "key": "ragefire_chasm",
@@ -12,6 +12,7 @@
    "uiMapID": null,
    "side": "horde",
    "entrance": "horde",
+   "url": "https://gabella.site/wow/guides/dungeons/ragefire-chasm/",
    "verified": false
   },
   {
@@ -25,6 +26,7 @@
    "uiMapID": null,
    "side": "both",
    "entrance": "alliance",
+   "url": "https://gabella.site/wow/guides/dungeons/hall-of-thanes/",
    "verified": false
   },
   {
@@ -38,6 +40,7 @@
    "uiMapID": null,
    "side": "both",
    "entrance": "horde",
+   "url": "https://gabella.site/wow/guides/dungeons/ruins-of-lordaeron/",
    "verified": false
   },
   {
@@ -51,6 +54,7 @@
    "uiMapID": null,
    "side": "both",
    "entrance": "alliance",
+   "url": "https://gabella.site/wow/guides/dungeons/the-deadmines/",
    "verified": false
   },
   {
@@ -64,6 +68,7 @@
    "uiMapID": null,
    "side": "both",
    "entrance": "horde",
+   "url": "https://gabella.site/wow/guides/dungeons/wailing-caverns/",
    "verified": false
   },
   {
@@ -77,6 +82,7 @@
    "uiMapID": null,
    "side": "both",
    "entrance": "horde",
+   "url": "https://gabella.site/wow/guides/dungeons/shadowfang-keep/",
    "verified": false
   },
   {
@@ -90,6 +96,7 @@
    "uiMapID": null,
    "side": "both",
    "entrance": null,
+   "url": "https://gabella.site/wow/guides/dungeons/blackfathom-deeps/",
    "verified": false
   },
   {
@@ -103,6 +110,7 @@
    "uiMapID": null,
    "side": "alliance",
    "entrance": "alliance",
+   "url": "https://gabella.site/wow/guides/dungeons/the-stockade/",
    "verified": false
   },
   {
@@ -116,6 +124,7 @@
    "uiMapID": null,
    "side": "both",
    "entrance": null,
+   "url": "https://gabella.site/wow/guides/dungeons/excavation-site-wetlands/",
    "verified": false
   },
   {
@@ -129,6 +138,7 @@
    "uiMapID": null,
    "side": "both",
    "entrance": null,
+   "url": "https://gabella.site/wow/guides/dungeons/",
    "verified": false
   },
   {
@@ -142,6 +152,7 @@
    "uiMapID": null,
    "side": "both",
    "entrance": null,
+   "url": "https://gabella.site/wow/guides/dungeons/",
    "verified": false
   },
   {
@@ -155,6 +166,7 @@
    "uiMapID": null,
    "side": "both",
    "entrance": null,
+   "url": "https://gabella.site/wow/guides/dungeons/",
    "verified": false
   },
   {
@@ -168,6 +180,7 @@
    "uiMapID": null,
    "side": "both",
    "entrance": null,
+   "url": "https://gabella.site/wow/guides/dungeons/",
    "verified": false
   },
   {
@@ -181,6 +194,7 @@
    "uiMapID": null,
    "side": "both",
    "entrance": null,
+   "url": "https://gabella.site/wow/guides/dungeons/",
    "verified": false
   },
   {
@@ -194,6 +208,7 @@
    "uiMapID": null,
    "side": "both",
    "entrance": null,
+   "url": "https://gabella.site/wow/guides/dungeons/",
    "verified": false
   },
   {
@@ -207,6 +222,7 @@
    "uiMapID": null,
    "side": "both",
    "entrance": null,
+   "url": "https://gabella.site/wow/guides/dungeons/",
    "verified": false
   },
   {
@@ -220,6 +236,7 @@
    "uiMapID": null,
    "side": "both",
    "entrance": null,
+   "url": "https://gabella.site/wow/guides/dungeons/",
    "verified": false
   },
   {
@@ -233,6 +250,7 @@
    "uiMapID": null,
    "side": "both",
    "entrance": null,
+   "url": "https://gabella.site/wow/guides/dungeons/",
    "verified": false
   },
   {
@@ -246,6 +264,7 @@
    "uiMapID": null,
    "side": "both",
    "entrance": null,
+   "url": "https://gabella.site/wow/guides/dungeons/",
    "verified": false
   },
   {
@@ -259,6 +278,7 @@
    "uiMapID": null,
    "side": "both",
    "entrance": null,
+   "url": "https://gabella.site/wow/guides/dungeons/",
    "verified": false
   },
   {
@@ -272,6 +292,7 @@
    "uiMapID": null,
    "side": "both",
    "entrance": null,
+   "url": "https://gabella.site/wow/guides/dungeons/",
    "verified": false
   },
   {
@@ -285,6 +306,7 @@
    "uiMapID": null,
    "side": "both",
    "entrance": null,
+   "url": "https://gabella.site/wow/guides/dungeons/",
    "verified": false
   },
   {
@@ -298,6 +320,7 @@
    "uiMapID": null,
    "side": "both",
    "entrance": null,
+   "url": "https://gabella.site/wow/guides/dungeons/",
    "verified": false
   },
   {
@@ -311,6 +334,7 @@
    "uiMapID": null,
    "side": "both",
    "entrance": null,
+   "url": "https://gabella.site/wow/guides/dungeons/",
    "verified": false
   },
   {
@@ -324,6 +348,7 @@
    "uiMapID": null,
    "side": "both",
    "entrance": null,
+   "url": "https://gabella.site/wow/guides/dungeons/",
    "verified": false
   },
   {
@@ -337,6 +362,7 @@
    "uiMapID": null,
    "side": "both",
    "entrance": null,
+   "url": "https://gabella.site/wow/guides/dungeons/",
    "verified": false
   },
   {
@@ -350,6 +376,7 @@
    "uiMapID": null,
    "side": "both",
    "entrance": null,
+   "url": "https://gabella.site/wow/guides/dungeons/",
    "verified": false
   },
   {
@@ -363,6 +390,7 @@
    "uiMapID": null,
    "side": "both",
    "entrance": null,
+   "url": "https://gabella.site/wow/guides/dungeons/",
    "verified": false
   },
   {
@@ -376,6 +404,7 @@
    "uiMapID": null,
    "side": "both",
    "entrance": null,
+   "url": "https://gabella.site/wow/guides/dungeons/",
    "verified": false
   },
   {
@@ -389,6 +418,7 @@
    "uiMapID": null,
    "side": "both",
    "entrance": null,
+   "url": "https://gabella.site/wow/guides/dungeons/",
    "verified": false
   },
   {
@@ -402,6 +432,7 @@
    "uiMapID": null,
    "side": "both",
    "entrance": null,
+   "url": "https://gabella.site/wow/guides/dungeons/",
    "verified": false
   },
   {
@@ -415,6 +446,7 @@
    "uiMapID": null,
    "side": "both",
    "entrance": null,
+   "url": "https://gabella.site/wow/guides/dungeons/",
    "verified": false
   },
   {
@@ -428,6 +460,7 @@
    "uiMapID": null,
    "side": "both",
    "entrance": null,
+   "url": "https://gabella.site/wow/guides/dungeons/",
    "verified": false
   },
   {
@@ -441,6 +474,7 @@
    "uiMapID": null,
    "side": "both",
    "entrance": null,
+   "url": "https://gabella.site/wow/guides/dungeons/",
    "verified": false
   },
   {
@@ -454,7 +488,65 @@
    "uiMapID": null,
    "side": "both",
    "entrance": null,
+   "url": "https://gabella.site/wow/guides/dungeons/",
    "verified": false
+  }
+ ],
+ "dungeons_by_area": {
+  "209": "https://gabella.site/wow/guides/dungeons/shadowfang-keep/",
+  "491": "https://gabella.site/wow/guides/dungeons/",
+  "717": "https://gabella.site/wow/guides/dungeons/the-stockade/",
+  "718": "https://gabella.site/wow/guides/dungeons/wailing-caverns/",
+  "719": "https://gabella.site/wow/guides/dungeons/blackfathom-deeps/",
+  "721": "https://gabella.site/wow/guides/dungeons/",
+  "722": "https://gabella.site/wow/guides/dungeons/",
+  "796": "https://gabella.site/wow/guides/dungeons/",
+  "1176": "https://gabella.site/wow/guides/dungeons/",
+  "1337": "https://gabella.site/wow/guides/dungeons/",
+  "1477": "https://gabella.site/wow/guides/dungeons/",
+  "1581": "https://gabella.site/wow/guides/dungeons/the-deadmines/",
+  "1583": "https://gabella.site/wow/guides/dungeons/",
+  "1584": "https://gabella.site/wow/guides/dungeons/",
+  "2017": "https://gabella.site/wow/guides/dungeons/",
+  "2057": "https://gabella.site/wow/guides/dungeons/",
+  "2100": "https://gabella.site/wow/guides/dungeons/",
+  "2437": "https://gabella.site/wow/guides/dungeons/ragefire-chasm/",
+  "2557": "https://gabella.site/wow/guides/dungeons/",
+  "16544": "https://gabella.site/wow/guides/dungeons/",
+  "16611": "https://gabella.site/wow/guides/dungeons/ruins-of-lordaeron/",
+  "16732": "https://gabella.site/wow/guides/dungeons/excavation-site-wetlands/",
+  "16919": "https://gabella.site/wow/guides/dungeons/hall-of-thanes/"
+ },
+ "levels": [
+  {
+   "from": 1,
+   "to": 10,
+   "url": "https://gabella.site/wow/guides/leveling-hunter/#lvl-1-10"
+  },
+  {
+   "from": 10,
+   "to": 18,
+   "url": "https://gabella.site/wow/guides/leveling-hunter/#lvl-10-18"
+  },
+  {
+   "from": 18,
+   "to": 30,
+   "url": "https://gabella.site/wow/guides/leveling-hunter/#lvl-18-30"
+  },
+  {
+   "from": 30,
+   "to": 45,
+   "url": "https://gabella.site/wow/guides/leveling-hunter/#lvl-30-45"
+  },
+  {
+   "from": 40,
+   "to": 55,
+   "url": "https://gabella.site/wow/guides/leveling-hunter/#lvl-40-55"
+  },
+  {
+   "from": 50,
+   "to": 60,
+   "url": "https://gabella.site/wow/guides/leveling-hunter/#lvl-50-60"
   }
  ],
  "route": {
@@ -476,6 +568,8 @@
      "Zephras Isle"
     ],
     "text_ru": "Орки и тролли: Дуротар. Таурены: Мулгор. Нежить: Тирисфальские леса. Скайборны-ветрорезы: Zephras Isle, до 12.",
+    "url": "https://gabella.site/wow/guides/leveling/#lvl-horde-1-10",
+    "url_hunter": "https://gabella.site/wow/guides/leveling-hunter/#lvl-1-10",
     "verified": false
    },
    {
@@ -491,6 +585,8 @@
      "Silverpine Forest"
     ],
     "text_ru": "Степи или Серебряный бор.",
+    "url": "https://gabella.site/wow/guides/leveling/#lvl-horde-10-18",
+    "url_hunter": "https://gabella.site/wow/guides/leveling-hunter/#lvl-10-18",
     "verified": false
    },
    {
@@ -512,6 +608,8 @@
      "Thousand Needles"
     ],
     "text_ru": "Когтистые горы и Степи, затем Ясеневый лес или Предгорья Хилсбрада, с 25 Тысяча Игл.",
+    "url": "https://gabella.site/wow/guides/leveling/#lvl-horde-18-30",
+    "url_hunter": "https://gabella.site/wow/guides/leveling-hunter/#lvl-18-30",
     "verified": false
    },
    {
@@ -537,6 +635,8 @@
      "Swamp of Sorrows"
     ],
     "text_ru": "Пустоши или Нагорье Арати, Тернистая долина. С 35: новая зона Riverglades, Пылевые топи, Бесплодные земли, Болото Печали.",
+    "url": "https://gabella.site/wow/guides/leveling/#lvl-horde-30-45",
+    "url_hunter": "https://gabella.site/wow/guides/leveling-hunter/#lvl-30-45",
     "verified": false
    },
    {
@@ -564,6 +664,8 @@
      "Felwood"
     ],
     "text_ru": "Танарис, Фералас, Внутренние земли, затем Тлеющее ущелье, Выжженные земли, Азшара, с 48 Кратер Ун’Горо и Оскверненный лес.",
+    "url": "https://gabella.site/wow/guides/leveling/#lvl-horde-40-55",
+    "url_hunter": "https://gabella.site/wow/guides/leveling-hunter/#lvl-40-55",
     "verified": false
    },
    {
@@ -587,6 +689,8 @@
      "Mount Hyjal"
     ],
     "text_ru": "Пылающие степи, Западные Чумные земли, Восточные Чумные земли, Зимние Ключи, Силитус. На 60 открыта Гора Хиджал.",
+    "url": "https://gabella.site/wow/guides/leveling/#lvl-horde-50-60",
+    "url_hunter": "https://gabella.site/wow/guides/leveling-hunter/#lvl-50-60",
     "verified": false
    }
   ],
@@ -608,6 +712,8 @@
      "Zephras Isle"
     ],
     "text_ru": "Люди: Элвиннский лес. Дворфы и гномы: Дун Морог. Ночные эльфы: Тельдрассил, до 11. Высшие скайборны: Zephras Isle, до 12.",
+    "url": "https://gabella.site/wow/guides/leveling/#lvl-alliance-1-10",
+    "url_hunter": "https://gabella.site/wow/guides/leveling-hunter/#lvl-1-10",
     "verified": false
    },
    {
@@ -627,6 +733,8 @@
      "Redridge Mountains"
     ],
     "text_ru": "Западный Край или Лок Модан, ночные эльфы обычно в Темных берегах. С 15 подходит Красногорье.",
+    "url": "https://gabella.site/wow/guides/leveling/#lvl-alliance-10-18",
+    "url_hunter": "https://gabella.site/wow/guides/leveling-hunter/#lvl-10-18",
     "verified": false
    },
    {
@@ -648,6 +756,8 @@
      "Ashenvale"
     ],
     "text_ru": "Сумеречный лес, Красногорье и Болотина, в Калимдоре Когтистые горы и Ясеневый лес.",
+    "url": "https://gabella.site/wow/guides/leveling/#lvl-alliance-18-30",
+    "url_hunter": "https://gabella.site/wow/guides/leveling-hunter/#lvl-18-30",
     "verified": false
    },
    {
@@ -673,6 +783,8 @@
      "Swamp of Sorrows"
     ],
     "text_ru": "Пустоши или Нагорье Арати, Тернистая долина. С 35: новая зона Riverglades между Красногорьем и Пылающими степями, Пылевые топи, Бесплодные земли, Болото Печали.",
+    "url": "https://gabella.site/wow/guides/leveling/#lvl-alliance-30-45",
+    "url_hunter": "https://gabella.site/wow/guides/leveling-hunter/#lvl-30-45",
     "verified": false
    },
    {
@@ -700,6 +812,8 @@
      "Felwood"
     ],
     "text_ru": "Танарис, Фералас, Внутренние земли, затем Тлеющее ущелье, Выжженные земли, Азшара, с 48 Кратер Ун’Горо и Оскверненный лес.",
+    "url": "https://gabella.site/wow/guides/leveling/#lvl-alliance-40-55",
+    "url_hunter": "https://gabella.site/wow/guides/leveling-hunter/#lvl-40-55",
     "verified": false
    },
    {
@@ -723,6 +837,8 @@
      "Mount Hyjal"
     ],
     "text_ru": "Пылающие степи, Западные Чумные земли, Восточные Чумные земли, Зимние Ключи, Силитус. На 60 открыта Гора Хиджал.",
+    "url": "https://gabella.site/wow/guides/leveling/#lvl-alliance-50-60",
+    "url_hunter": "https://gabella.site/wow/guides/leveling-hunter/#lvl-50-60",
     "verified": false
    }
   ]

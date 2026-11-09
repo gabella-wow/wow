@@ -42,7 +42,7 @@ def test_file_is_lf_json_and_published():
 
 def test_top_level_and_version_from_content():
     d = load()
-    assert list(d) == ['version', 'dungeons', 'route', 'gear', 'talents'], list(d)
+    assert list(d) == ['version', 'dungeons', 'dungeons_by_area', 'levels', 'route', 'gear', 'talents'], list(d)
     rest = {k: v for k, v in d.items() if k != 'version'}
     want = hashlib.sha1(json.dumps(rest, ensure_ascii=False, sort_keys=True, separators=(',', ':')).encode('utf-8')).hexdigest()[:12]
     assert d['version'] == want, (d['version'], want)   # the hash of the content: the same sources give the same file
@@ -153,6 +153,52 @@ def test_talent_ids():
             if x['talentID'] is not None:
                 n = nodes[x['talentID']]
                 assert x['spellID'] in n['spells'] and x['ru'] == (n['n'].get('ru') or n['n']['en']), (x, n['id'])
+
+
+def _page_html(url):
+    """The built page of an absolute site url (what GitHub Pages serves for it): its html text, None when there is no such page."""
+    import build
+    assert url.startswith(build.SITE), url
+    path = url[len(build.SITE):].split('#')[0]
+    f = os.path.join(ROOT, path, 'index.html')
+    return open(f, encoding='utf-8').read() if os.path.isfile(f) else None
+
+
+def test_links_to_pages():
+    """url: every dungeon has its own page (slug with hyphens) or the list, every route step its anchor on «Leveling» and in the hunter guide."""
+    import build, dungeon_pages
+    data = load()
+    for d in data['dungeons']:
+        page = dungeon_pages.BY_NAME.get(d['en'])
+        want = build.SITE + 'guides/dungeons/' + (page['slug'] + '/' if page else '')
+        assert d['url'] == want, (d['key'], d['url'], want)
+        assert _page_html(d['url']) is not None, d['url']
+    assert sum(d['url'] != build.SITE + 'guides/dungeons/' for d in data['dungeons']) == len(dungeon_pages.DUNGEON_PAGES)
+    for side, steps in data['route'].items():
+        for s in steps:
+            for key, slug in (('url', 'leveling'), ('url_hunter', 'leveling-hunter')):
+                u = s[key]
+                assert u.startswith(f'{build.SITE}guides/{slug}/#lvl-'), u
+                anchor = u.split('#')[1]
+                assert anchor.endswith(f'{s["from"]}-{s["to"]}') and (side in anchor) == (key == 'url'), (side, u)
+                html = _page_html(u)
+                assert html is not None and f'id="{anchor}"' in html, f'{u}: the page has no anchor'
+
+
+def test_dungeons_by_area_and_levels():
+    import build
+    d = load()
+    by = d['dungeons_by_area']
+    assert by['718'] == build.SITE + 'guides/dungeons/wailing-caverns/' and by['2437'] == build.SITE + 'guides/dungeons/ragefire-chasm/', by
+    assert by['796'] == build.SITE + 'guides/dungeons/', 'Scarlet Monastery: four wings, no page of its own'
+    assert list(by) == sorted(by, key=int), 'area ids as numbers, in order'
+    known = {x['url'] for x in d['dungeons']}
+    assert all(re.fullmatch(r'\d+', a) and u in known for a, u in by.items()), by
+    steps = d['route']['alliance']
+    assert [(x['from'], x['to']) for x in d['levels']] == [(x['from'], x['to']) for x in steps], 'the route ranges'
+    for x, s in zip(d['levels'], steps):
+        assert x['url'] == s['url_hunter'] and x['url'].startswith(build.SITE + 'guides/leveling-hunter/#lvl-'), x
+        assert _page_html(x['url']) and 'id="%s"' % x['url'].split('#')[1] in _page_html(x['url']), x
 
 
 def test_dungeon_key_and_side():

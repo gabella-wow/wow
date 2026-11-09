@@ -17,7 +17,7 @@ from content import hero as HERO, looks as LK
 from content import spec_cheats
 from content import dungeon_pages
 from content import play_card
-from content.guides import BUILDS_HUB_TILE, CLASS_HUB_TILE, GUIDES, HUB, HUBS, NEWS, NOT_FOUND, ORDER, PAGES, PLAY_MILESTONES, PLAY_TX
+from content.guides import BUILDS_HUB_TILE, CLASS_HUB_TILE, GUIDES, HUB, HUBS, NEWS, NOT_FOUND, ORDER, PAGES, PLAY_MILESTONES, PLAY_TX, lvl_id
 
 HERE = build.HERE
 
@@ -326,6 +326,32 @@ def td(h, html, i, row, lang):
     return f'<td data-l="{h}"' + (f' class="{" ".join(cls)}"' if cls else '') + f'>{html}</td>'
 
 
+def row_anchors(tr, ids):
+    """ids: anchors (#lvl-18-30) for a table row, as empty spans at the start of its first cell: the page looks the same."""
+    if not ids:
+        return tr
+    spans = ''.join(f'<span id="{i}"></span>' for i in ids)
+    return re.sub(r'(<td[^>]*>)', lambda m: m.group(1) + spans, tr, count=1)
+
+
+def with_level_anchors(blocks):
+    """The talents table of a class leveling guide: each range of the zone route (guides/leveling/) gets an anchor (#lvl-18-30) on the row
+    where the talents of that range start (the last row that starts at or before the range; the first row for 1–10: talents begin at 10)."""
+    steps, _ = leveling_parts()
+    ranges = list(dict.fromkeys((lo, hi) for rows in steps.values() for lo, hi, _d in rows))
+    out = []
+    for kind, data in blocks:
+        if kind == 'table':
+            starts = [int(re.match(r'\d+', r[0]).group()) for r in data['rows']]
+            anchors = {}
+            for lo, hi in ranges:
+                at = max((i for i, st in enumerate(starts) if st <= lo), default=0)
+                anchors.setdefault(at, []).append(lvl_id(lo, hi))
+            data = dict(data, anchors=anchors)
+        out.append((kind, data))
+    return out
+
+
 def render_block(kind, data, lang, root, inner=False):
     """inner: a block inside a tab panel. A tip there is the word only, no plate and no icon: one boxed tip per section."""
     if kind == 'text':
@@ -344,8 +370,9 @@ def render_block(kind, data, lang, root, inner=False):
     if kind == 'table':
         head = [E(h, lang) for h in data['head']]
         th = ''.join(f'<th scope="col">{h}</th>' for h in head)
-        rows = ''.join('<tr>' + ''.join(td(h, cell(c, lang, root), i, r, lang) for i, (h, c) in enumerate(zip(head, r))) + '</tr>'
-                       for r in data['rows'])
+        anc = data.get('anchors', {})                             # row index -> ids: empty anchors at the start of the row's first cell
+        rows = ''.join(row_anchors('<tr>' + ''.join(td(h, cell(c, lang, root), i, r, lang) for i, (h, c) in enumerate(zip(head, r))) + '</tr>', anc.get(n))
+                       for n, r in enumerate(data['rows']))
         return f'<table class="gtable"><thead><tr>{th}</tr></thead><tbody>{rows}</tbody></table>'
     if kind == 'addons':                                          # Addons «install first»: name, one line, a CurseForge button; 'langs' keeps a row to those languages
         go = lambda u: Raw(f'<a class="btn ghost" href="{escape(u)}" target="_blank" rel="noopener">CurseForge ↗</a>')   # noqa: E731
@@ -527,6 +554,8 @@ def render_guide(g, lang, root):
     tier = g['slug'] == 'tier-list'
     def blocks(s):
         bl = cls_cells(s['blocks']) if tier else s['blocks']
+        if g['slug'].startswith('leveling-') and s['id'] == 'talents':
+            bl = with_level_anchors(bl)
         if tier and s['id'] == 'classes' and g.get('side'):
             bl = with_races(bl, g['side'], lang)
         html = ''.join(render_block(k, d, lang, root) for k, d in bl)

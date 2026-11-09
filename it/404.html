@@ -1238,6 +1238,7 @@ dialog.sheet::backdrop { background: rgba(0,0,0,.6); }
 .gtoc a[aria-current="true"] { background: var(--panel-2); color: var(--fg); }
 .gmain { display: flex; flex-direction: column; gap: 24px; min-width: 0; }
 .gsec { padding: 22px 24px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; scroll-margin-top: calc(var(--top) + 16px); }
+.gsec :is(li, td > span)[id^="lvl-"] { scroll-margin-top: calc(var(--top) + 16px); }   /* level anchors (#lvl-18-30): the sticky bar does not cover the row */
 .gsec > h2 { margin: 0; font-size: var(--fs-h2); }
 .tlchg time { margin-right: .35em; font-weight: 600; color: var(--gold-2); }   /* tier list, the changes block: the date of each note (content/tierlist_live.py) */
 :root { --fs-h2: var(--fs-28); }   /* a guide is one long page: all its h2 are the in-page step */
@@ -1788,7 +1789,7 @@ a.frc:hover { text-decoration-color: var(--gold); }
 <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png?v=00a6a7d9">
 <meta name="apple-mobile-web-app-title" content="Gabella WoW">
 <link rel="stylesheet" href="../assets/radio/radio.css?v=556d7dc63f" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="../assets/search/search.css?v=91ad606100" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="../assets/search/search.css?v=9cb72bc8c7" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="../assets/me/me.css?v=b0164179dc" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="../assets/hero/hero.css?v=56e9b73acd" media="print" onload="this.media='all'">
 </head>
@@ -1929,6 +1930,16 @@ document.querySelectorAll('.gtabs').forEach(box => {
       pick(to); to.focus();
     });
   });
+  // a link to a step of the hidden tab (#lvl-horde-18-30): open that tab and scroll to the step
+  const toHash = () => {
+    const el = location.hash.length > 1 && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    const panel = el && el.closest('[role="tabpanel"]');
+    if (!panel || !box.contains(panel)) return;
+    if (panel.hidden) pick([...btns].find(x => x.dataset.tab === panel.dataset.tab));
+    el.scrollIntoView();
+  };
+  toHash();
+  window.addEventListener('hashchange', toHash);
 });
 const tocLinks = [...document.querySelectorAll('.gtoc a')];
 if ('IntersectionObserver' in window && tocLinks.length) {
@@ -2022,7 +2033,7 @@ addEventListener('beforeinstallprompt', e => {
 });
 </script>
 <script src="../assets/radio/radio.js?v=556d7dc63f" data-root="../" defer></script>
-<script src="../assets/search/search.js?v=91ad606100" data-root="../" defer></script>
+<script src="../assets/search/search.js?v=9cb72bc8c7" data-root="../" defer></script>
 <script src="../assets/me/me.js?v=b0164179dc" data-root="../" data-home="./" data-lang="it" data-ach="0" data-teaser="" data-close="Chiudi" data-page="404" data-look="2" defer></script>
 <script src="../assets/hero/hero.js?v=56e9b73acd" data-root="../" data-home="./" data-data="../assets/hero/it.json?v=56e9b73acd" defer></script>
 </body>
