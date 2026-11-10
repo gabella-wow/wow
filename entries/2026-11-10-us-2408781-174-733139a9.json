@@ -1,0 +1,51 @@
+{
+ "event": "new",
+ "key": "us-2408781-174",
+ "source": "forum",
+ "region": "us",
+ "topic": 2408781,
+ "post": 174,
+ "url": "https://us.forums.blizzard.com/en/wow/t/pvp-faction-balance-updates-november-10/2408781/174",
+ "title": "PvP Faction Balance Updates - November 10",
+ "author": "Kaivax",
+ "role": "Community Manager",
+ "created_at": "2026-11-10T03:11:34.974Z",
+ "updated_at": "2026-11-10T03:11:34.974Z",
+ "version": 1,
+ "category": 347,
+ "beta": false,
+ "sha": "733139a9fe2ea5c6d726614671b9b7bf7106000e1a3c8c24f144a3d63b486233",
+ "twin_of": null,
+ "also": [],
+ "short_news": {
+  "date": "2026-11-10",
+  "at": "2026-11-10T03:11:34Z",
+  "url": "https://us.forums.blizzard.com/en/wow/t/pvp-faction-balance-updates-november-10/2408781/174",
+  "title_en": "PvP Faction Balance Updates - November 10",
+  "kind": "post",
+  "beta": false
+ },
+ "changes": [
+  {
+   "path": [],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Lowered the population of players in various zones where there was significant congestion.",
+   "h": "662bfef256e7"
+  }
+ ],
+ "new_lines": [
+  "662bfef256e7",
+  "98852b695e25"
+ ],
+ "gone_lines": [],
+ "outdated": [],
+ "to_check": [],
+ "check": [],
+ "detected_at": "2026-11-10T03:21:04Z"
+}
