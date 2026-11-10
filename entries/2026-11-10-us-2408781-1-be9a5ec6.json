@@ -1,0 +1,37 @@
+{
+ "event": "new",
+ "key": "us-2408781-1",
+ "source": "forum",
+ "region": "us",
+ "topic": 2408781,
+ "post": 1,
+ "url": "https://us.forums.blizzard.com/en/wow/t/pvp-faction-balance-updates-november-10/2408781/1",
+ "title": "PvP Faction Balance Updates - November 10",
+ "author": "Kaivax",
+ "role": "Community Manager",
+ "created_at": "2026-11-10T02:05:13.558Z",
+ "updated_at": "2026-11-10T02:05:13.558Z",
+ "version": 1,
+ "category": 347,
+ "beta": false,
+ "sha": "be9a5ec670b21ebfd5ed03e7f965e6d5997bdd83ea3685e3eb43daeb20389fe4",
+ "twin_of": null,
+ "also": [
+  "https://eu.forums.blizzard.com/en/wow/t/pvp-faction-balance-updates-11-november/641169/1"
+ ],
+ "short_news": {
+  "date": "2026-11-10",
+  "at": "2026-11-10T02:05:13Z",
+  "url": "https://us.forums.blizzard.com/en/wow/t/pvp-faction-balance-updates-november-10/2408781/1",
+  "title_en": "PvP Faction Balance Updates - November 10",
+  "kind": "post",
+  "beta": false
+ },
+ "changes": [],
+ "new_lines": [],
+ "gone_lines": [],
+ "outdated": [],
+ "to_check": [],
+ "check": [],
+ "detected_at": "2026-11-10T02:11:01Z"
+}
