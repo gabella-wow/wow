@@ -168,3 +168,4 @@
 {"at": "2026-11-10T04:31:23Z", "event": "new", "key": "us-2403040-5", "sha": "0a84ba2f55c1893e", "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-9-2026/2403040/5", "twin_of": null, "outdated": 0}
 {"at": "2026-11-10T04:31:23Z", "event": "new", "key": "eu-639885-5", "sha": "0a84ba2f55c1893e", "url": "https://eu.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-6-2026/639885/5", "twin_of": "us-2403040-5", "outdated": 0}
 {"at": "2026-11-10T04:31:23Z", "event": "edit", "key": "art-24315281", "sha": "90611ca6465eeb59", "url": "https://worldofwarcraft.blizzard.com/en-us/news/24315281/wow-forever-hotfixes-november-9-2026", "twin_of": "us-2403040-1", "outdated": 0}
+{"at": "2026-11-10T22:01:07Z", "event": "new", "key": "eu-640380-93", "sha": "69b8b48979bcd3a5", "url": "https://eu.forums.blizzard.com/en/wow/t/no-gold-from-quests-at-lvl-60-seriously/640380/93", "twin_of": null, "outdated": 0}
