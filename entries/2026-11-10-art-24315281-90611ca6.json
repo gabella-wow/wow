@@ -1,0 +1,2444 @@
+{
+ "event": "edit",
+ "key": "art-24315281",
+ "source": "article",
+ "region": "us",
+ "topic": null,
+ "post": null,
+ "url": "https://worldofwarcraft.blizzard.com/en-us/news/24315281/wow-forever-hotfixes-november-9-2026",
+ "title": "WoW: Forever Hotfixes - November 9, 2026",
+ "author": "Blizzard Entertainment",
+ "role": "Blizzard News",
+ "created_at": "2026-11-10T04:22:05.806Z",
+ "updated_at": null,
+ "version": null,
+ "category": null,
+ "beta": false,
+ "sha": "90611ca6465eeb59399dabaaee6a542643fc0226e21d7b1084ce3ce68a0fe2b8",
+ "twin_of": "us-2403040-1",
+ "also": [],
+ "short_news": {
+  "date": "2026-11-10",
+  "at": "2026-11-10T04:22:05Z",
+  "url": "https://worldofwarcraft.blizzard.com/en-us/news/24315281/wow-forever-hotfixes-november-9-2026",
+  "title_en": "WoW: Forever Hotfixes - November 9, 2026",
+  "kind": "hotfixes",
+  "beta": false
+ },
+ "changes": [
+  {
+   "path": [
+    "Hotfixes",
+    "Classes",
+    "Druid"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "abilities": [
+    "The Cooldown Manager",
+    "Lacerate",
+    "Berserk"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "The Cooldown Manager no longer shows Berserk, and now correctly shows Lacerate when learned.",
+   "h": "094b788280fa"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Classes",
+    "Druid"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "abilities": [
+    "Idol of Ferocity"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Idol of Ferocity no longer lists Mangle as an ability it discounts.",
+   "h": "3bd8d60a2ce3"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Classes",
+    "Druid",
+    "Feral"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "feral"
+   },
+   "abilities": [
+    "Feral Charge"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Feral Charge (Cat) was not putting the Druid in combat right away.",
+   "h": "58ed180289fc"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Classes",
+    "Druid",
+    "Feral"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "feral"
+   },
+   "abilities": [
+    "Natural Instinct",
+    "Lacerate"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Natural Instinct was not applying correctly to Lacerate or Pounce.",
+   "h": "8efaebbbc04e"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Classes",
+    "Druid",
+    "Feral"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "feral"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where the Pounce Stun debuff was not showing in the enemy debuffs while active.",
+   "h": "bd9cefc5b495"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Classes",
+    "Hunter"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "hunter"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Vulgara the Insatiable and the Shrieklings of Zephras should now belong to the correct hunter pet families.",
+   "h": "ea7cd222d39d"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Classes",
+    "Hunter"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "hunter"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue causing Hunters to sometimes aggro enemies from very far away by targeting them.",
+   "h": "18b79d99c289"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Classes",
+    "Mage"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "mage"
+   },
+   "abilities": [],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Flamestirke's ticks on the ground no longer incorrectly consume clearcasting.",
+   "h": "adaf8dbe292f"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Classes",
+    "Mage"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "mage"
+   },
+   "abilities": [
+    "Arcane Concentration"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    10
+   ],
+   "text": "Arcane Concentration's activation chance now correctly splits across the cast and every bolt (was granting 10% on cast and per bolt).",
+   "h": "44896e5f5b63"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Classes",
+    "Paladin"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin"
+   },
+   "abilities": [
+    "Consecration"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Consecration could stop dealing increased damage to enemies if targets inside of the Consecration despawned previously.",
+   "h": "fd7b3c5c84b3"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Classes",
+    "Paladin"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Cooldown Manager wasn't showing Seals correctly.",
+   "h": "0e0a9b5d82fe"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Classes",
+    "Priest"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "priest"
+   },
+   "abilities": [
+    "Shadowform",
+    "Fear Ward"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Shadowform no longer breaks when casting Fear Ward.",
+   "h": "e15f7ccf91b2"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Classes",
+    "Priest"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "priest"
+   },
+   "abilities": [
+    "Power Infusion"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Power Infusion will now correctly persist when used on allies.",
+   "h": "0ea5e55584fa"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Classes",
+    "Shaman"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "shaman"
+   },
+   "abilities": [
+    "Lightning Overload",
+    "Lightning Bolt"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Lightning Overload now deals the correct amount of damage for Lightning Bolt.",
+   "h": "8cc22e6d5210"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Classes",
+    "Shaman"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "shaman"
+   },
+   "abilities": [
+    "Improved Ghost Wolf"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue causing Improved Ghost Wolf to not hold the Night Watchman's Torch in its mouth.",
+   "h": "21a0c5338b2f"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Classes",
+    "Warlock",
+    "Completing “Summon Felsteed” will correctly grant the player"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warlock"
+   },
+   "abilities": [
+    "Completing “Summon Felsteed” will correctly grant the player"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Developers’ notes: If a player completed the quest before this hotfix, summoning the Felsteed once will grant them the apprentice riding skill, allowing them to ride other mounts if desired.",
+   "h": "5c564433818f"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Classes",
+    "Warlock"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warlock"
+   },
+   "abilities": [
+    "Incinerate"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue allowing Incinerate to be available to non-Destruction specializations.",
+   "h": "8f64abf22c47"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Classes",
+    "Warrior"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warrior"
+   },
+   "abilities": [
+    "Thunderclap"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Thunderclap no longer tracks its duration on the target via Cooldown Manager and now only shows its cooldown.",
+   "h": "c82b2f303ed7"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Dungeons"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    50
+   ],
+   "text": "Experience rewarded for all enemy kills in dungeons increased by 50%.",
+   "h": "c478e3606e81"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Dungeons",
+    "Alcaz Prison"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Defeating Zarla Ober"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Defeating Zarla Ober will now drop loot.",
+   "h": "2b5d5aea0dc2"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Dungeons",
+    "Blackfathom Deeps"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Blackfathom Deeps"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue that could cause players to become unable to release after dying in Blackfathom Deeps.",
+   "h": "658b23fca232"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Dungeons",
+    "Blackrock Depths"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue that prevented the throne room doors from opening if the party wiped while fighting Emperor Thaurissan.",
+   "h": "f6a72d4800a6"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Dungeons",
+    "Blackrock Depths"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Heart of the Mountain"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Heart of the Mountain can now be looted more than once.",
+   "h": "81b8ecd89fee"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Dungeons",
+    "The Drowned City"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [
+    30
+   ],
+   "text": "Fixed an issue that was causing creatures inside the Drowned City to do about 30% more damage than intended.",
+   "h": "c5db8708de26"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Dungeons",
+    "The Drowned City",
+    "Deathless Marrow"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    25
+   ],
+   "text": "Lowered the health of the creatures in the Deathless Marrow encounter by 25%.",
+   "h": "d286ece748f1"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Dungeons",
+    "The Drowned City",
+    "Deathless Marrow"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Lowered the",
+    "Fireball"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    25
+   ],
+   "text": "Lowered the damage of the Deathless Sorcerer's Fireball by 25%.",
+   "h": "ad7ba3f50951"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Dungeons",
+    "The Drowned City",
+    "Deathless Marrow"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Lowered the",
+    "Charge"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    50
+   ],
+   "text": "Lowered the damage of the Deathless Watcher's Charge by 50%.",
+   "h": "d841c6878306"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Dungeons",
+    "The Drowned City",
+    "Deathless Marrow"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Shield Slam"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    50
+   ],
+   "text": "Reduced the cast frequency of the Deathless Guardian's Shield Slam ability by about 50%.",
+   "h": "351afa4c384f"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Dungeons",
+    "The Shaper’s Terrace"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "The Shaper's Terrace"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "The Shaper's Terrace: Vitrix, Snowtalon, and Cinder now correctly drop loot and higher-level skinning materials.",
+   "h": "78316602d349"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Dungeons",
+    "The Shaper’s Terrace"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Cinder should now correctly spawn after players use the Archival Panel.",
+   "h": "4fed58edbffb"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Dungeons",
+    "Stratholme"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Stratholme"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue that allowed players to mount inside Stratholme.",
+   "h": "9712ba43fbae"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Enemies and NPCs"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Silverpine Forest"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Silverpine Forest - Fixed an issue where Ivar the Foul was respawning more slowly than intended.",
+   "h": "f04d6855c356"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Enemies and NPCs"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Teldrassil"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Teldrassil - Spawn time reduced for Ferocitas the Dream Eater.",
+   "h": "3b34d366ef50"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Enemies and NPCs"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Un’goro Crater"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [
+    51,
+    52,
+    58
+   ],
+   "text": "Un’goro Crater - Fixed an issue that was causing Young Diemetradons to spawn at level 58 (rather than 51 to 52).",
+   "h": "dee3e733c5ec"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Enemies and NPCs"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Zephras"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Zephras - Malduko Cloudcrush now respawns slightly more slowly.",
+   "h": "e9fc926fdf8f"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Items"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue with the Pouch of Violet Dust preventing players from receiving an extra hour of duration of the Camp Benefits aura as intended.",
+   "h": "8a1bafaaad30"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Items"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed a bug that prevented Waylaid Crates and Craftsman's Writs from dropping inside dungeons.",
+   "h": "90b72f7d612f"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Items"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Berdun's Trusty Rifle"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Berdun's Trusty Rifle no longer has random stats and is not Bind-on-Equip.",
+   "h": "7ebb4b007ac9"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Items"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Sprint",
+    "Blink",
+    "Dash"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed a bug causing Nifty Stopwatch to share a cooldown with Dash, Blink, Sprint, and other movement abilities.",
+   "h": "41891b02ac57"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Items"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Zephrali Greatstaff and Fallen Dragon's Scepter now appear correctly oriented when sheathed on the player's back.",
+   "h": "8811f0886803"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Items"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Gloves of Holy Might"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Gloves of Holy Might now work as intended.",
+   "h": "e2103306d2fc"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Player versus Player"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "removed",
+   "pairs": [],
+   "nums": [],
+   "text": "Removed an invisible wall that was incorrectly blocking the roof of the Alliance base in Warsong Gulch. Please be careful up there.",
+   "h": "e48c1a17cc14"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "\"The Monster Surfaces\" quest item is now available to all players in a party.",
+   "h": "f41cb4414546"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "“Croaky's Head” is now available to all players in a party.",
+   "h": "a6794adfa021"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "“Elmpaw's Head” is now available to all players in a party.",
+   "h": "f5af78b651a1"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Mistreating Astor Hadren during the quest “The Deathstalkers” should now properly anger him, allowing you to fight him.",
+   "h": "5366936ecb3d"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed a bug preventing Jom-jom from continuing his escape on “Jom-jom’s Escape”.",
+   "h": "05d35244447b"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "The door available after the quest “Ever After” should now correctly teleport players who interact with the door.",
+   "h": "72e21155061f"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed a bug keeping Terry Longdrink alive during the quest \"Unwelcome Guests\".",
+   "h": "43419ef22d99"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Loch Modan",
+    "Ironforge"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where the quest \"Find Bingles\" was incorrectly categorized in Ironforge, rather than Loch Modan.",
+   "h": "13f50c6113c7"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Henrig Lonebrow’s Journal"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Henrig Lonebrow’s Journal now respawns more quickly, so that more players can get started on “Lonebrow's Journal”. It has also moved slightly down the road. Look for a similar skeleton to mark the location.",
+   "h": "208060eaa7d9"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Resolved an issue preventing completion of “Fetch ‘n’ Fletch”.",
+   "h": "4524f31c3cff"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where restarting the Rogue quest “Mission: Possible not Probable” was much less possible than intended.",
+   "h": "6102e3cde681"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Resolved an issue where Jezap Jinglesprocket could fail to provide players a “Bloodmaster’s Ring”.",
+   "h": "f936b7ff8824"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [
+    60
+   ],
+   "text": "Fixed an issue during the quest \"Feathers in Flight\" where players below level 60 could not loot the Hyjal Owl Nests.",
+   "h": "042e96efe312"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Races",
+    "Tauren"
+   ],
+   "subject": {
+    "type": "race",
+    "id": "tauren"
+   },
+   "abilities": [
+    "Cultivation"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Cultivation now correctly only goes on cooldown after completing the cast.",
+   "h": "ebb72769f61e"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "World"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Lowered the population of players in various zones where there was significant congestion.",
+   "h": "662bfef256e7"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "World"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Thunder Bluff"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Resolved an issue where the flight path from Camp Taurajo to Thunder Bluff could unintentionally go through objects.",
+   "h": "76f43eedbf95"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Classes"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Legacy"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue with the Quick and the Dead Legacy Talent where it sometimes did not work as intended.",
+   "h": "1d4e8e907cbb"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Classes",
+    "Cooldown Manager"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "The Cooldown Manager"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "The Cooldown Manager will now correctly display the duration of crowd control spells at all times, even when diminishing returns or mechanic reductions (like orc stun reduction) are factors.",
+   "h": "431183ae2058"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Classes",
+    "Druid"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "abilities": [
+    "Bloom"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Bloom will now correctly heal the target.",
+   "h": "1a2fddec9570"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Classes",
+    "Druid"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "abilities": [
+    "Bear Form"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed a bug where the tooltip of Bear Form claimed an incorrect health value increase. The functionality was correct, but the wrong value was reported.",
+   "h": "4fa7b879d775"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Classes",
+    "Druid"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "abilities": [
+    "Swiftmend"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed the tooltip for Swiftmend to no longer incorrectly mention consuming the effect.",
+   "h": "aa0448a0c638"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Classes",
+    "Mage"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "mage"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Mages were still learning the Research spell and then losing it upon relogging. This spell should not exist, and you should only have the Study spell after completing the relevant quest.",
+   "h": "af4dbcde7236"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Classes",
+    "Mage"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "mage"
+   },
+   "abilities": [
+    "Arcane Blast"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [
+    18
+   ],
+   "text": "Fixed an issue with Arcane Blast where its duration was not properly 18 seconds.",
+   "h": "76cb1a0377db"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Classes",
+    "Rogue"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue"
+   },
+   "abilities": [
+    "Shank"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    1,
+    2
+   ],
+   "text": "Shank will now display Rank 1 and Rank 2 in the tooltips.",
+   "h": "eb4f1ec0dfd8"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Classes",
+    "Rogue"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "While Boot Knife is talented, Shank will now correctly display the number of Combo Points it grants.",
+   "h": "ece43f0e3cde"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Classes",
+    "Warlock"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warlock"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    40
+   ],
+   "text": "Voidwalker base health increased by about 40 at all levels.",
+   "h": "9cd3f3836856"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Classes",
+    "Warlock"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warlock"
+   },
+   "abilities": [
+    "Soul Siphon",
+    "Wrack"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "The Soul Siphon talent no longer incorrectly causes Wrack to increase its own damage.",
+   "h": "92eb2d6e1c4c"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Classes",
+    "Warrior"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warrior"
+   },
+   "abilities": [
+    "Gore Drinker"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed the tooltip for Reckless Swings to mention that it activates Gore Drinker.",
+   "h": "4ec9a799338f"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Dungeons"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Maraudon"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue that would prevent Zaetar's Spirit from spawning after defeating Princess Theradras in Maraudon.",
+   "h": "4b81652664c1"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Dungeons"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "The Drowned City",
+    "Blackmaw Hold"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue that could cause some creatures inside Blackmaw Hold and The Drowned City to erroneously disengage.",
+   "h": "a4c4ba081cb5"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Dungeons"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "The Drowned City"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "The instance portal should now correctly teleport you inside The Drowned City",
+   "h": "04fef2c51328"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Enemies and NPCs"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Dun Morogh"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Dun Morogh - Fixed an issue where the troggs in Grol'bolar Quarry would respawn too quickly.",
+   "h": "f0d197c30dab"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Enemies and NPCs"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Durotar"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Durotar - Ridgeshade Lurkers now correctly have loot.",
+   "h": "4547ab3e05a9"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Enemies and NPCs"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Riverglades"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Riverglades - Krek the Noxious now has correct loot when defeated.",
+   "h": "74f66f4aae9f"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Enemies and NPCs"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Swamp of Sorrows"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Swamp of Sorrows - Fixed an issue where Pelluk would sometimes not spawn.",
+   "h": "3a04ff7eb154"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Enemies and NPCs"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Teldrassil"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Teldrassil - Fixed an issue where Lasher Sproutlings, Blooming Lashers, and Wrathvine were immune to nature damage.",
+   "h": "79c6635969a2"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Items"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Searing Dagger"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Searing Dagger is now only activated by spells that have a damaging component.",
+   "h": "e8703a3508f6"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Professions",
+    "Leatherworking"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Leatherworking"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 125,
+     "old": 140,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    15,
+    125,
+    140
+   ],
+   "text": "Tanning Rack skill requirement lowered to 125 (was 140). This prevents it from being an obstacle to crafting various Leatherworking patterns that require 125 skill. Tanning Rack skill-ups lowered by 15 skill points to account for this.",
+   "h": "6fc72886d49d"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Resolved an issue with the quest “Vorsha the Lasher” rudely lashing everyone in the zone.",
+   "h": "a15f0f932aa5"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Darnassus"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Brewed a fresh pot of Darnassus’s finest coffee for Kerlonian Evershade so he falls asleep less often during \"The Sleeper Has Awakened\". Players now also start with the Horn of Awakening item to wake him up when needed.",
+   "h": "75120e27291c"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Skinning"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "The quest \"Rough Wolf Pelts\" is now automatically cancelled if you unlearn the Skinning skill.",
+   "h": "34bd2e7110a8"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Resolved an issue with \"Rediscovering the Light\" where players were sometimes unable to heal NPCs.",
+   "h": "4d823843e241"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue during the quest \"Ammo for Rumbleshot\" where players could not see loot if interacting immediately following another player.",
+   "h": "48673af065da"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Riverglades"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Resolved an issue where some quest item drops in Riverglades were not shared by players in a party.",
+   "h": "56952ef6f5e8"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "\"Never Saddle on Quality\" spawns and quest item drops should now be more plentiful.",
+   "h": "b8399cdc996c"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Ruins of Lordaeron"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 15,
+     "old": 16,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    15,
+    16
+   ],
+   "text": "The Abomimable Head dropped from The Baron in the Ruins of Lordaeron dungeon will now properly offer the quest \"Unending Torment\" for Horde players at level 15 (was level 16).",
+   "h": "ad124e2f5aa8"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Damp Note drop rate increased. Eww.",
+   "h": "51f59d9583bc"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Races",
+    "Night Elf"
+   ],
+   "subject": {
+    "type": "race",
+    "id": "nightelf"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed a bug granting Shadowmelded Druids access to Ravage and Pounce.",
+   "h": "9f2fad6c1520"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Races",
+    "Orc"
+   ],
+   "subject": {
+    "type": "race",
+    "id": "orc"
+   },
+   "abilities": [
+    "Command"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixes an issue where some Warlock pet abilities were benefitting too much from the Orc Command racial ability.",
+   "h": "e3df97cc2708"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "World"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Thunder Bluff"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Thunder Bluff - Fixed an issue where the Barbershop was darker than intended. We moooved the lights around.",
+   "h": "42c8e44f0074"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Enemies and NPCs"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Durotar"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Durotar - Fixed an issue where Yarrog Baneshadow was respawning more slowly than intended.",
+   "h": "d5a1db810e74"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Enemies and NPCs"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Zephras"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Zephras - Lotheluum Starbreeze now offers training to Druids as expected.",
+   "h": "408413c4c41d"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Enemies and NPCs"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Dustwallow Marsh"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Dustwallow Marsh - Fixed an issue where some murlocs in Dustwallow Marsh were respawning too quickly.",
+   "h": "65bbe9554c6e"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Enemies and NPCs"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Swamp of Sorrows"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Swamp of Sorrows - Fixed an issue where Pelluk would sometimes not spawn.",
+   "h": "3a04ff7eb154"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Items"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Zephras Isle"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where trade supply vendors on Zephras Isle didn't sell apprentice tradeskill bags.",
+   "h": "cd092f1349d0"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Items"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Mild Spices"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 1,
+     "old": 2,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    1,
+    2
+   ],
+   "text": "Mild Spices now sell to vendors for 1 copper each (was 2 copper).",
+   "h": "bfc8090e10ca"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Player versus Player"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Plainsrunning"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Plainsrunning could be stacked in a battleground's preparation phase.",
+   "h": "4b451a70becf"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Player versus Player"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Plainsrunning"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Plainsrunning can no longer stack and stacks will be cancelled when carrying a flag in a battleground.",
+   "h": "f4bdc855bd8c"
+  },
+  {
+   "path": [
+    "Hotfixes",
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Elune"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue with incorrect text in \"The Sisterhood of Elune\".",
+   "h": "c67a0390faaa"
+  }
+ ],
+ "new_lines": [
+  "094b788280fa",
+  "3bd8d60a2ce3",
+  "58ed180289fc",
+  "8efaebbbc04e",
+  "bd9cefc5b495",
+  "ea7cd222d39d",
+  "18b79d99c289",
+  "adaf8dbe292f",
+  "44896e5f5b63",
+  "fd7b3c5c84b3",
+  "0e0a9b5d82fe",
+  "e15f7ccf91b2",
+  "0ea5e55584fa",
+  "8cc22e6d5210",
+  "21a0c5338b2f",
+  "5c564433818f",
+  "8f64abf22c47",
+  "c82b2f303ed7",
+  "c478e3606e81",
+  "2b5d5aea0dc2",
+  "658b23fca232",
+  "f6a72d4800a6",
+  "81b8ecd89fee",
+  "c5db8708de26",
+  "d286ece748f1",
+  "ad7ba3f50951",
+  "d841c6878306",
+  "351afa4c384f",
+  "78316602d349",
+  "4fed58edbffb",
+  "9712ba43fbae",
+  "f04d6855c356",
+  "3b34d366ef50",
+  "dee3e733c5ec",
+  "e9fc926fdf8f",
+  "8a1bafaaad30",
+  "90b72f7d612f",
+  "7ebb4b007ac9",
+  "41891b02ac57",
+  "8811f0886803",
+  "e2103306d2fc",
+  "e48c1a17cc14",
+  "f41cb4414546",
+  "a6794adfa021",
+  "f5af78b651a1",
+  "5366936ecb3d",
+  "05d35244447b",
+  "72e21155061f",
+  "43419ef22d99",
+  "13f50c6113c7",
+  "208060eaa7d9",
+  "4524f31c3cff",
+  "6102e3cde681",
+  "f936b7ff8824",
+  "042e96efe312",
+  "ebb72769f61e",
+  "662bfef256e7",
+  "76f43eedbf95"
+ ],
+ "gone_lines": [],
+ "outdated": [],
+ "to_check": [
+  "assets/hero/en.json",
+  "classes/paladin/",
+  "classes/priest/",
+  "classes/shaman/",
+  "guides/addons/",
+  "guides/builds-mage/",
+  "guides/builds-paladin/",
+  "guides/builds-priest/",
+  "guides/builds-shaman/",
+  "guides/dungeons/excavation-site-wetlands/",
+  "guides/dungeons/ragefire-chasm/",
+  "guides/dungeons/the-stockade/",
+  "guides/dungeons/wailing-caverns/",
+  "guides/leveling-paladin/",
+  "guides/leveling-priest/",
+  "guides/leveling-warrior/",
+  "guides/leveling/",
+  "guides/spec-mage-arcane/",
+  "guides/spec-paladin-holy/",
+  "guides/spec-paladin-protection/",
+  "guides/spec-paladin-retribution/",
+  "guides/spec-priest-discipline/",
+  "guides/spec-priest-holy/",
+  "guides/spec-priest-shadow/",
+  "guides/spec-shaman-elemental/",
+  "guides/spec-warrior-arms/",
+  "guides/spec-warrior-fury/",
+  "guides/spec-warrior-protection/",
+  "guides/tier-list/",
+  "guides/transport/",
+  "races/night-elf/",
+  "races/tauren/"
+ ],
+ "check": [
+  {
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "ability": "The Cooldown Manager",
+   "kind": "no_longer",
+   "pairs": [],
+   "h": "094b788280fa",
+   "findings": [
+    {
+     "page": "guides/addons/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Cooldown Manager: your own cooldowns and buffs Options → Gameplay Enhancement, off by default No"
+    }
+   ],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "ability": "Idol of Ferocity",
+   "kind": "no_longer",
+   "pairs": [],
+   "h": "3bd8d60a2ce3",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "class",
+    "id": "mage"
+   },
+   "ability": "Arcane Concentration",
+   "kind": "changed",
+   "pairs": [],
+   "h": "44896e5f5b63",
+   "findings": [
+    {
+     "page": "guides/builds-mage/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Arcane Concentration 5 and Presence of Mind"
+    },
+    {
+     "page": "guides/spec-mage-arcane/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Arcane Concentration 5 and Presence of Mind"
+    }
+   ],
+   "sources": [
+    "content/spec_builds.py:425",
+    "content/spec_builds.py:426",
+    "content/spec_builds.py:427",
+    "content/talents/mage.json:77"
+   ]
+  },
+  {
+   "subject": {
+    "type": "class",
+    "id": "paladin"
+   },
+   "ability": "Consecration",
+   "kind": "changed",
+   "pairs": [],
+   "h": "fd7b3c5c84b3",
+   "findings": [
+    {
+     "page": "classes/paladin/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Consecration Reliable area damage"
+    },
+    {
+     "page": "guides/builds-paladin/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Consecration holds threat on a group"
+    },
+    {
+     "page": "guides/leveling-paladin/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Consecration is available from the trainer at level 20 with no talents"
+    },
+    {
+     "page": "guides/spec-paladin-holy/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Consecration scales less with spell power)"
+    },
+    {
+     "page": "guides/spec-paladin-protection/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Consecration holds threat on a group"
+    },
+    {
+     "page": "guides/spec-paladin-retribution/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Consecration scale with spell power"
+    }
+   ],
+   "sources": [
+    "content/spec_builds.py:90",
+    "content/spec_builds.py:101",
+    "content/spec_builds.py:102",
+    "content/spec_builds.py:112",
+    "content/spec_builds.py:113",
+    "content/spec_builds.py:119",
+    "content/spec_builds.py:121",
+    "content/spec_builds.py:128",
+    "content/spec_builds.py:129",
+    "content/spec_builds.py:167",
+    "content/spec_builds.py:168",
+    "content/spec_builds.py:173",
+    "content/spec_builds.py:204",
+    "content/class_guides.py:228",
+    "content/class_guides.py:240",
+    "content/class_guides.py:244",
+    "content/class_guides.py:299",
+    "content/class_guides.py:310",
+    "content/class_guides.py:335",
+    "content/class_guides.py:341"
+   ]
+  },
+  {
+   "subject": {
+    "type": "class",
+    "id": "priest"
+   },
+   "ability": "Shadowform",
+   "kind": "no_longer",
+   "pairs": [],
+   "h": "e15f7ccf91b2",
+   "findings": [
+    {
+     "page": "classes/priest/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Shadowform Reworked: crit chance and cheaper shadow spells"
+    },
+    {
+     "page": "guides/builds-priest/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Shadowform only unlocks at level 40, so at 30 your damage comes from Shadow Word: Pain, Mind Blast and your wand"
+    },
+    {
+     "page": "guides/leveling-priest/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Shadowform talent)"
+    },
+    {
+     "page": "guides/spec-priest-discipline/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Shadowform talent)"
+    },
+    {
+     "page": "guides/spec-priest-holy/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Shadowform talent)"
+    },
+    {
+     "page": "guides/spec-priest-shadow/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Shadowform only unlocks at level 40, so at 30 your damage comes from Shadow Word: Pain, Mind Blast and your wand"
+    },
+    {
+     "page": "guides/tier-list/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Shadowform"
+    }
+   ],
+   "sources": [
+    "content/spec_builds.py:985",
+    "content/guides.py:1860",
+    "content/class_guides.py:666",
+    "content/class_guides.py:690",
+    "content/class_guides.py:760",
+    "i18n/en.txt:778",
+    "content/talents/priest.json:771"
+   ]
+  },
+  {
+   "subject": {
+    "type": "class",
+    "id": "priest"
+   },
+   "ability": "Power Infusion",
+   "kind": "changed",
+   "pairs": [],
+   "h": "0ea5e55584fa",
+   "findings": [
+    {
+     "page": "classes/priest/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Power Infusion A strong buff on an ally, groups value it"
+    }
+   ],
+   "sources": [
+    "i18n/en.txt:783",
+    "content/talents/priest.json:260"
+   ]
+  },
+  {
+   "subject": {
+    "type": "class",
+    "id": "shaman"
+   },
+   "ability": "Lightning Overload",
+   "kind": "changed",
+   "pairs": [],
+   "h": "8cc22e6d5210",
+   "findings": [
+    {
+     "page": "classes/shaman/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Lightning Overload New: lightning casts again"
+    },
+    {
+     "page": "guides/builds-shaman/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Lightning Overload 3 and one point in Elemental Fury"
+    },
+    {
+     "page": "guides/spec-shaman-elemental/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Lightning Overload 3 and one point in Elemental Fury"
+    }
+   ],
+   "sources": [
+    "content/spec_builds.py:1043",
+    "content/spec_builds.py:1044",
+    "content/spec_builds.py:1045",
+    "content/talents/shaman.json:202"
+   ]
+  },
+  {
+   "subject": {
+    "type": "class",
+    "id": "warrior"
+   },
+   "ability": "Thunderclap",
+   "kind": "no_longer",
+   "pairs": [],
+   "h": "c82b2f303ed7",
+   "findings": [
+    {
+     "page": "guides/dungeons/excavation-site-wetlands/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Thunderclap slows the attacks of those nearby, Arcing Smash hits in front of him, Knock Away lowers the target’s threat,"
+    },
+    {
+     "page": "guides/dungeons/wailing-caverns/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Thunderclap, which slows movement and attacks"
+    }
+   ],
+   "sources": [
+    "content/dungeon_pages.py:754",
+    "content/dungeon_pages.py:755",
+    "content/dungeon_pages.py:756",
+    "content/dungeon_pages.py:1363",
+    "content/dungeon_pages.py:1364",
+    "content/dungeon_pages.py:1365"
+   ]
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Defeating Zarla Ober",
+   "kind": "changed",
+   "pairs": [],
+   "h": "2b5d5aea0dc2",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Heart of the Mountain",
+   "kind": "changed",
+   "pairs": [],
+   "h": "81b8ecd89fee",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Lowered the",
+   "kind": "changed",
+   "pairs": [],
+   "h": "ad7ba3f50951",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Lowered the",
+   "kind": "changed",
+   "pairs": [],
+   "h": "d841c6878306",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Shield Slam",
+   "kind": "changed",
+   "pairs": [],
+   "h": "351afa4c384f",
+   "findings": [
+    {
+     "page": "guides/dungeons/ragefire-chasm/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Shield Slam stuns the tank for 2 seconds (Method)"
+    },
+    {
+     "page": "guides/dungeons/the-stockade/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Shield Slam, a 2-second stun"
+    },
+    {
+     "page": "guides/leveling-warrior/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Shield Slam 1"
+    },
+    {
+     "page": "guides/spec-warrior-arms/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Shield Slam 1"
+    },
+    {
+     "page": "guides/spec-warrior-fury/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Shield Slam 1"
+    },
+    {
+     "page": "guides/spec-warrior-protection/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Shield Slam 1"
+    }
+   ],
+   "sources": [
+    "content/dungeon_pages.py:421",
+    "content/dungeon_pages.py:422",
+    "content/dungeon_pages.py:1189",
+    "content/dungeon_pages.py:1190",
+    "content/dungeon_pages.py:1191",
+    "content/dungeon_pages.py:1215",
+    "content/dungeon_pages.py:1216",
+    "content/dungeon_pages.py:1217",
+    "content/class_guides.py:132",
+    "content/class_guides.py:183",
+    "content/class_guides.py:205"
+   ]
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "The Shaper's Terrace",
+   "kind": "changed",
+   "pairs": [],
+   "h": "78316602d349",
+   "findings": [
+    {
+     "page": "assets/hero/en.json",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Shaper's Terrace"
+    }
+   ],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Teldrassil",
+   "kind": "changed",
+   "pairs": [],
+   "h": "3b34d366ef50",
+   "findings": [
+    {
+     "page": "guides/leveling/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Teldrassil (to 11)"
+    },
+    {
+     "page": "guides/transport/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Teldrassil to Darkshore"
+    },
+    {
+     "page": "races/night-elf/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Teldrassil"
+    }
+   ],
+   "sources": [
+    "content/races.py:43",
+    "content/guides.py:764",
+    "content/guides.py:765",
+    "content/guides.py:766",
+    "content/guides.py:1168",
+    "i18n/en.txt:1000",
+    "i18n/en.txt:1009"
+   ]
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Zephras",
+   "kind": "changed",
+   "pairs": [],
+   "h": "e9fc926fdf8f",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Berdun's Trusty Rifle",
+   "kind": "no_longer",
+   "pairs": [],
+   "h": "7ebb4b007ac9",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Gloves of Holy Might",
+   "kind": "changed",
+   "pairs": [],
+   "h": "e2103306d2fc",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Henrig Lonebrow’s Journal",
+   "kind": "changed",
+   "pairs": [],
+   "h": "208060eaa7d9",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "race",
+    "id": "tauren"
+   },
+   "ability": "Cultivation",
+   "kind": "changed",
+   "pairs": [],
+   "h": "ebb72769f61e",
+   "findings": [
+    {
+     "page": "races/tauren/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Cultivation Grows herbs that can be gathered without Herbalism, 15 min cooldown"
+    }
+   ],
+   "sources": [
+    "i18n/en.txt:301",
+    "i18n/en.txt:1065",
+    "i18n/en.txt:1201"
+   ]
+  }
+ ],
+ "detected_at": "2026-11-10T04:31:23Z"
+}
