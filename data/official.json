@@ -1,5 +1,144 @@
 [
  {
+  "id": "us-2403040-5",
+  "sha": "0a84ba2f",
+  "date": "2026-11-10",
+  "at": "2026-11-10T04:23:46Z",
+  "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-9-2026/2403040/5",
+  "kind": "hotfixes",
+  "beta": false,
+  "title_en": "WoW: Forever Hotfixes - November 9, 2026",
+  "n": 33,
+  "t": {
+   "ru": {
+    "h": "Хотфиксы от 10.11",
+    "src": "Blizzard, на английском",
+    "sum": [
+     "Друид · The Cooldown Manager: ограничено",
+     "Друид · Idol of Ferocity: ограничено",
+     "Жрец · Облик Тьмы (Shadowform): ограничено",
+     "Воин · Thunderclap: ограничено",
+     "Berdun’s Trusty Rifle: ограничено"
+    ],
+    "more": "Ещё изменений: 28",
+    "site": "https://gabella.site/wow/guides/news/",
+    "site_t": "Подробнее на сайте"
+   },
+   "en": {
+    "h": "Hotfixes of Nov 10",
+    "src": "Blizzard",
+    "sum": [
+     "Druid · The Cooldown Manager: narrowed",
+     "Druid · Idol of Ferocity: narrowed",
+     "Priest · Shadowform: narrowed",
+     "Warrior · Thunderclap: narrowed",
+     "Berdun’s Trusty Rifle: narrowed"
+    ],
+    "more": "28 more changes",
+    "site": "https://gabella.site/wow/en/guides/news/",
+    "site_t": "More on the site"
+   },
+   "uk": {
+    "h": "Хотфікси від 10.11",
+    "src": "Blizzard, англійською",
+    "sum": [
+     "Друїд · The Cooldown Manager: обмежено",
+     "Друїд · Idol of Ferocity: обмежено",
+     "Жрець · Shadowform: обмежено",
+     "Воїн · Thunderclap: обмежено",
+     "Berdun’s Trusty Rifle: обмежено"
+    ],
+    "more": "Ще змін: 28",
+    "site": "https://gabella.site/wow/uk/guides/news/",
+    "site_t": "Детальніше на сайті"
+   },
+   "de": {
+    "h": "Hotfixes vom 10.11",
+    "src": "Blizzard, auf Englisch",
+    "sum": [
+     "Druide · The Cooldown Manager: eingeschränkt",
+     "Druide · Idol of Ferocity: eingeschränkt",
+     "Priester · Schattengestalt: eingeschränkt",
+     "Krieger · Thunderclap: eingeschränkt",
+     "Berdun’s Trusty Rifle: eingeschränkt"
+    ],
+    "more": "Weitere Änderungen: 28",
+    "site": "https://gabella.site/wow/de/guides/news/",
+    "site_t": "Mehr auf der Seite"
+   },
+   "fr": {
+    "h": "Correctifs du 10.11",
+    "src": "Blizzard, en anglais",
+    "sum": [
+     "Druide · The Cooldown Manager: restreint",
+     "Druide · Idol of Ferocity: restreint",
+     "Prêtre · Forme d’Ombre: restreint",
+     "Guerrier · Thunderclap: restreint",
+     "Berdun’s Trusty Rifle: restreint"
+    ],
+    "more": "Autres changements : 28",
+    "site": "https://gabella.site/wow/fr/guides/news/",
+    "site_t": "Plus sur le site"
+   },
+   "es": {
+    "h": "Correcciones del 10.11",
+    "src": "Blizzard, en inglés",
+    "sum": [
+     "Druida · The Cooldown Manager: limitado",
+     "Druida · Idol of Ferocity: limitado",
+     "Sacerdote · Forma de las Sombras: limitado",
+     "Guerrero · Thunderclap: limitado",
+     "Berdun’s Trusty Rifle: limitado"
+    ],
+    "more": "Más cambios: 28",
+    "site": "https://gabella.site/wow/es/guides/news/",
+    "site_t": "Más en la web"
+   },
+   "pt": {
+    "h": "Hotfixes de 10.11",
+    "src": "Blizzard, em inglês",
+    "sum": [
+     "Druida · The Cooldown Manager: restrito",
+     "Druida · Idol of Ferocity: restrito",
+     "Sacerdote · Forma de Sombra: restrito",
+     "Guerreiro · Thunderclap: restrito",
+     "Berdun’s Trusty Rifle: restrito"
+    ],
+    "more": "Mais mudanças: 28",
+    "site": "https://gabella.site/wow/pt/guides/news/",
+    "site_t": "Mais no site"
+   },
+   "it": {
+    "h": "Hotfix del 10.11",
+    "src": "Blizzard, in inglese",
+    "sum": [
+     "Druido · The Cooldown Manager: limitato",
+     "Druido · Idol of Ferocity: limitato",
+     "Sacerdote · Forma d’Ombra: limitato",
+     "Guerriero · Thunderclap: limitato",
+     "Berdun’s Trusty Rifle: limitato"
+    ],
+    "more": "Altre modifiche: 28",
+    "site": "https://gabella.site/wow/it/guides/news/",
+    "site_t": "Di più sul sito"
+   },
+   "pl": {
+    "h": "Hotfixy z 10.11",
+    "src": "Blizzard, po angielsku",
+    "sum": [
+     "Druid · The Cooldown Manager: ograniczone",
+     "Druid · Idol of Ferocity: ograniczone",
+     "Priest · Shadowform: ograniczone",
+     "Warrior · Thunderclap: ograniczone",
+     "Berdun’s Trusty Rifle: ograniczone"
+    ],
+    "more": "Więcej zmian: 28",
+    "site": "https://gabella.site/wow/pl/guides/news/",
+    "site_t": "Więcej na stronie"
+   }
+  }
+ },
+ {
   "id": "us-2408781-1",
   "sha": "be9a5ec6",
   "date": "2026-11-10",
