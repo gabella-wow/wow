@@ -1,5 +1,90 @@
 [
  {
+  "id": "art-24317866",
+  "sha": "493e8b82",
+  "date": "2026-11-11",
+  "at": "2026-11-11T21:28:14Z",
+  "url": "https://worldofwarcraft.blizzard.com/en-us/news/24317866/purchase-world-of-warcraft-forever-upgrades-and-begin-your-next-journey-in-azeroth",
+  "kind": "article",
+  "beta": false,
+  "title_en": "Purchase World of Warcraft: Forever Upgrades and Begin Your Next Journey in Azeroth",
+  "n": 0,
+  "t": {
+   "ru": {
+    "h": "Purchase World of Warcraft: Forever Upgrades and Begin Your Next Journey in Azeroth",
+    "en": 1,
+    "src": "Blizzard, на английском",
+    "sum": [],
+    "site": "https://gabella.site/wow/guides/news/",
+    "site_t": "Подробнее на сайте"
+   },
+   "en": {
+    "h": "Purchase World of Warcraft: Forever Upgrades and Begin Your Next Journey in Azeroth",
+    "en": 1,
+    "src": "Blizzard",
+    "sum": [],
+    "site": "https://gabella.site/wow/en/guides/news/",
+    "site_t": "More on the site"
+   },
+   "uk": {
+    "h": "Purchase World of Warcraft: Forever Upgrades and Begin Your Next Journey in Azeroth",
+    "en": 1,
+    "src": "Blizzard, англійською",
+    "sum": [],
+    "site": "https://gabella.site/wow/uk/guides/news/",
+    "site_t": "Детальніше на сайті"
+   },
+   "de": {
+    "h": "Purchase World of Warcraft: Forever Upgrades and Begin Your Next Journey in Azeroth",
+    "en": 1,
+    "src": "Blizzard, auf Englisch",
+    "sum": [],
+    "site": "https://gabella.site/wow/de/guides/news/",
+    "site_t": "Mehr auf der Seite"
+   },
+   "fr": {
+    "h": "Purchase World of Warcraft: Forever Upgrades and Begin Your Next Journey in Azeroth",
+    "en": 1,
+    "src": "Blizzard, en anglais",
+    "sum": [],
+    "site": "https://gabella.site/wow/fr/guides/news/",
+    "site_t": "Plus sur le site"
+   },
+   "es": {
+    "h": "Purchase World of Warcraft: Forever Upgrades and Begin Your Next Journey in Azeroth",
+    "en": 1,
+    "src": "Blizzard, en inglés",
+    "sum": [],
+    "site": "https://gabella.site/wow/es/guides/news/",
+    "site_t": "Más en la web"
+   },
+   "pt": {
+    "h": "Purchase World of Warcraft: Forever Upgrades and Begin Your Next Journey in Azeroth",
+    "en": 1,
+    "src": "Blizzard, em inglês",
+    "sum": [],
+    "site": "https://gabella.site/wow/pt/guides/news/",
+    "site_t": "Mais no site"
+   },
+   "it": {
+    "h": "Purchase World of Warcraft: Forever Upgrades and Begin Your Next Journey in Azeroth",
+    "en": 1,
+    "src": "Blizzard, in inglese",
+    "sum": [],
+    "site": "https://gabella.site/wow/it/guides/news/",
+    "site_t": "Di più sul sito"
+   },
+   "pl": {
+    "h": "Purchase World of Warcraft: Forever Upgrades and Begin Your Next Journey in Azeroth",
+    "en": 1,
+    "src": "Blizzard, po angielsku",
+    "sum": [],
+    "site": "https://gabella.site/wow/pl/guides/news/",
+    "site_t": "Więcej na stronie"
+   }
+  }
+ },
+ {
   "id": "us-2403040-5",
   "sha": "0a84ba2f",
   "date": "2026-11-10",
