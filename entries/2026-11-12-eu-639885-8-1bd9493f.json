@@ -1,0 +1,405 @@
+{
+ "event": "new",
+ "key": "eu-639885-8",
+ "source": "forum",
+ "region": "eu",
+ "topic": 639885,
+ "post": 8,
+ "url": "https://eu.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-11-2026/639885/8",
+ "title": "WoW: Forever Hotfixes - November 11, 2026",
+ "author": "Kaivax",
+ "role": "Community Manager",
+ "created_at": "2026-11-12T19:10:54.868Z",
+ "updated_at": "2026-11-12T19:10:54.868Z",
+ "version": 1,
+ "category": 360,
+ "beta": false,
+ "sha": "1bd9493f9b09389620ac0922e83eae88ddcac8b7b3f8ea3c3efcb683adc0a6b8",
+ "twin_of": "us-2403040-9",
+ "also": [],
+ "short_news": {
+  "date": "2026-11-12",
+  "at": "2026-11-12T19:10:54Z",
+  "url": "https://eu.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-11-2026/639885/8",
+  "title_en": "WoW: Forever Hotfixes - November 11, 2026",
+  "kind": "hotfixes",
+  "beta": false
+ },
+ "changes": [
+  {
+   "path": [
+    "Classes",
+    "Shaman"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "shaman"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Weapon imbues and Weapon totems can now be used at the same time.",
+   "h": "9195827b8d50"
+  },
+  {
+   "path": [
+    "Classes",
+    "Shaman",
+    "Enhancement"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "shaman",
+    "spec": "enhancement"
+   },
+   "abilities": [
+    "Stormstrike"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 100,
+     "old": 150,
+     "unit": "%",
+     "old_unit": "%"
+    },
+    {
+     "new": 8,
+     "old": 6,
+     "unit": "s",
+     "old_unit": "s"
+    }
+   ],
+   "nums": [
+    6,
+    8,
+    100,
+    150
+   ],
+   "text": "Stormstrike damage reduced to 100% weapon damage (was 150%), and cooldown increased to 8 seconds (was 6 seconds).",
+   "h": "ff50cf86b6ee"
+  },
+  {
+   "path": [
+    "Classes",
+    "Shaman",
+    "Enhancement"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "shaman",
+    "spec": "enhancement"
+   },
+   "abilities": [
+    "Mental Dexterity"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 100,
+     "old": 50,
+     "unit": "%",
+     "old_unit": "%"
+    }
+   ],
+   "nums": [
+    33,
+    50,
+    66,
+    100,
+    150
+   ],
+   "text": "Mental Dexterity: Intellect to Attack Power conversion ratio reduced to 33/66/100% (was 50/100/150%).",
+   "h": "21166b1ed5f3"
+  },
+  {
+   "path": [
+    "Classes",
+    "Shaman",
+    "Enhancement"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "shaman",
+    "spec": "enhancement"
+   },
+   "abilities": [
+    "Maelstrom Weapon"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 20,
+     "old": 4,
+     "unit": "%",
+     "old_unit": "%"
+    },
+    {
+     "new": 10,
+     "old": 20,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    4,
+    6,
+    7,
+    8,
+    9,
+    10,
+    12,
+    16,
+    20
+   ],
+   "text": "Maelstrom Weapon now grants 20% reduced cast time and Mana cost per application at all ranks (was 4/8/12/16/20% reduced cast time and Mana cost), and chance to activate now increases with rank and activates 6/7/8/9/10 times per minute (was 20 times per minute regardless of rank).",
+   "h": "7d77f93af61f"
+  },
+  {
+   "path": [
+    "Classes",
+    "Shaman",
+    "Enhancement"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "shaman",
+    "spec": "enhancement"
+   },
+   "abilities": [
+    "Maelstrom Weapon"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    2,
+    3.6,
+    5,
+    33,
+    60
+   ],
+   "text": "Maelstrom Weapon tooltip updated to display the Shaman’s % chance to activate it based on their Main Hand Weapon’s speed. For example, if the Shaman has the 5 points into Maelstrom Weapon and has a 3.6 speed weapon it will display a 60% chance to activate on swing, compared to if the Shaman is wielding a 2.0 speed weapon it will display a 33% chance to activate on swing.",
+   "h": "ce79b06dc11f"
+  }
+ ],
+ "new_lines": [
+  "9195827b8d50",
+  "ff50cf86b6ee",
+  "21166b1ed5f3",
+  "7d77f93af61f",
+  "ce79b06dc11f"
+ ],
+ "gone_lines": [],
+ "outdated": [],
+ "to_check": [
+  "classes/shaman/",
+  "guides/builds-shaman/",
+  "guides/leveling-shaman/",
+  "guides/spec-shaman-elemental/",
+  "guides/spec-shaman-enhancement/",
+  "guides/spec-shaman-restoration/"
+ ],
+ "check": [
+  {
+   "subject": {
+    "type": "class",
+    "id": "shaman",
+    "spec": "enhancement"
+   },
+   "ability": "Stormstrike",
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 100,
+     "old": 150,
+     "unit": "%",
+     "old_unit": "%"
+    },
+    {
+     "new": 8,
+     "old": 6,
+     "unit": "s",
+     "old_unit": "s"
+    }
+   ],
+   "h": "ff50cf86b6ee",
+   "findings": [
+    {
+     "page": "classes/shaman/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Stormstrike 8 sec cooldown, no longer the capstone"
+    },
+    {
+     "page": "guides/builds-shaman/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Stormstrike and Windfury Weapon"
+    },
+    {
+     "page": "guides/leveling-shaman/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Stormstrike from level 25 provides the main damage"
+    },
+    {
+     "page": "guides/spec-shaman-elemental/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Stormstrike from level 25 provides the main damage"
+    },
+    {
+     "page": "guides/spec-shaman-enhancement/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Stormstrike and Windfury Weapon"
+    },
+    {
+     "page": "guides/spec-shaman-restoration/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Stormstrike from level 25 provides the main damage"
+    }
+   ],
+   "sources": [
+    "content/spec_builds.py:1068",
+    "content/spec_builds.py:1069",
+    "content/spec_builds.py:1078",
+    "content/spec_builds.py:1079",
+    "content/spec_builds.py:1094",
+    "content/spec_builds.py:1101",
+    "content/spec_builds.py:1102",
+    "content/class_guides.py:795",
+    "content/class_guides.py:815",
+    "content/class_guides.py:864",
+    "content/talents/shaman.json:433"
+   ]
+  },
+  {
+   "subject": {
+    "type": "class",
+    "id": "shaman",
+    "spec": "enhancement"
+   },
+   "ability": "Mental Dexterity",
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 100,
+     "old": 50,
+     "unit": "%",
+     "old_unit": "%"
+    }
+   ],
+   "h": "21166b1ed5f3",
+   "findings": [
+    {
+     "page": "guides/builds-shaman/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Mental Dexterity 3 Attack power from Intellect"
+    },
+    {
+     "page": "guides/leveling-shaman/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Mental Dexterity 3"
+    },
+    {
+     "page": "guides/spec-shaman-elemental/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Mental Dexterity 3"
+    },
+    {
+     "page": "guides/spec-shaman-enhancement/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Mental Dexterity ×3 · Elemental Weapons ×3. Order of points by level"
+    },
+    {
+     "page": "guides/spec-shaman-restoration/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Mental Dexterity 3"
+    }
+   ],
+   "sources": [
+    "content/spec_builds.py:1073",
+    "content/class_guides.py:810",
+    "content/talents/shaman.json:314"
+   ]
+  },
+  {
+   "subject": {
+    "type": "class",
+    "id": "shaman",
+    "spec": "enhancement"
+   },
+   "ability": "Maelstrom Weapon",
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 20,
+     "old": 4,
+     "unit": "%",
+     "old_unit": "%"
+    },
+    {
+     "new": 10,
+     "old": 20,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "h": "7d77f93af61f",
+   "findings": [
+    {
+     "page": "classes/shaman/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Maelstrom Weapon Up to 5 stacks for Lightning Bolt"
+    },
+    {
+     "page": "guides/builds-shaman/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Maelstrom Weapon until you can put all 5 points into it"
+    },
+    {
+     "page": "guides/leveling-shaman/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Maelstrom Weapon 5"
+    },
+    {
+     "page": "guides/spec-shaman-elemental/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Maelstrom Weapon 5"
+    },
+    {
+     "page": "guides/spec-shaman-enhancement/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Maelstrom Weapon until you can put all 5 points into it"
+    },
+    {
+     "page": "guides/spec-shaman-restoration/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Maelstrom Weapon 5"
+    }
+   ],
+   "sources": [
+    "content/spec_builds.py:1082",
+    "content/spec_builds.py:1083",
+    "content/spec_builds.py:1084",
+    "content/class_guides.py:825",
+    "content/talents/shaman.json:492"
+   ]
+  }
+ ],
+ "detected_at": "2026-11-12T19:11:32Z"
+}
