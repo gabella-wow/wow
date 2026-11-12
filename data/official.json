@@ -1,5 +1,90 @@
 [
  {
+  "id": "art-24316981",
+  "sha": "c84a3839",
+  "date": "2026-11-12",
+  "at": "2026-11-12T17:15:00Z",
+  "url": "https://worldofwarcraft.blizzard.com/en-us/news/24316981/watch-the-wow-forever-podcast-the-lore-episode",
+  "kind": "article",
+  "beta": false,
+  "title_en": "Watch the WoW: Forever Podcast – The Lore Episode",
+  "n": 0,
+  "t": {
+   "ru": {
+    "h": "Watch the WoW: Forever Podcast – The Lore Episode",
+    "en": 1,
+    "src": "Blizzard, на английском",
+    "sum": [],
+    "site": "https://gabella.site/wow/guides/news/",
+    "site_t": "Подробнее на сайте"
+   },
+   "en": {
+    "h": "Watch the WoW: Forever Podcast – The Lore Episode",
+    "en": 1,
+    "src": "Blizzard",
+    "sum": [],
+    "site": "https://gabella.site/wow/en/guides/news/",
+    "site_t": "More on the site"
+   },
+   "uk": {
+    "h": "Watch the WoW: Forever Podcast – The Lore Episode",
+    "en": 1,
+    "src": "Blizzard, англійською",
+    "sum": [],
+    "site": "https://gabella.site/wow/uk/guides/news/",
+    "site_t": "Детальніше на сайті"
+   },
+   "de": {
+    "h": "Watch the WoW: Forever Podcast – The Lore Episode",
+    "en": 1,
+    "src": "Blizzard, auf Englisch",
+    "sum": [],
+    "site": "https://gabella.site/wow/de/guides/news/",
+    "site_t": "Mehr auf der Seite"
+   },
+   "fr": {
+    "h": "Watch the WoW: Forever Podcast – The Lore Episode",
+    "en": 1,
+    "src": "Blizzard, en anglais",
+    "sum": [],
+    "site": "https://gabella.site/wow/fr/guides/news/",
+    "site_t": "Plus sur le site"
+   },
+   "es": {
+    "h": "Watch the WoW: Forever Podcast – The Lore Episode",
+    "en": 1,
+    "src": "Blizzard, en inglés",
+    "sum": [],
+    "site": "https://gabella.site/wow/es/guides/news/",
+    "site_t": "Más en la web"
+   },
+   "pt": {
+    "h": "Watch the WoW: Forever Podcast – The Lore Episode",
+    "en": 1,
+    "src": "Blizzard, em inglês",
+    "sum": [],
+    "site": "https://gabella.site/wow/pt/guides/news/",
+    "site_t": "Mais no site"
+   },
+   "it": {
+    "h": "Watch the WoW: Forever Podcast – The Lore Episode",
+    "en": 1,
+    "src": "Blizzard, in inglese",
+    "sum": [],
+    "site": "https://gabella.site/wow/it/guides/news/",
+    "site_t": "Di più sul sito"
+   },
+   "pl": {
+    "h": "Watch the WoW: Forever Podcast – The Lore Episode",
+    "en": 1,
+    "src": "Blizzard, po angielsku",
+    "sum": [],
+    "site": "https://gabella.site/wow/pl/guides/news/",
+    "site_t": "Więcej na stronie"
+   }
+  }
+ },
+ {
   "id": "art-24317866",
   "sha": "493e8b82",
   "date": "2026-11-11",
