@@ -650,157 +650,157 @@
  },
  {
   "id": "us-2403040-1",
-  "sha": "7f60d4e0",
+  "sha": "0f55f353",
   "date": "2026-11-06",
   "at": "2026-11-06T02:34:10Z",
-  "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-10-2026/2403040/1",
+  "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-11-2026/2403040/1",
   "kind": "hotfixes",
   "beta": false,
-  "title_en": "WoW: Forever Hotfixes - November 10, 2026",
-  "n": 90,
-  "upd": "2026-11-11T03:31:24Z",
+  "title_en": "WoW: Forever Hotfixes - November 11, 2026",
+  "n": 106,
+  "upd": "2026-11-12T00:51:26Z",
   "t": {
    "ru": {
     "h": "Хотфиксы от 06.11",
     "src": "Blizzard, на английском",
-    "upd": "обновлено 11.11",
+    "upd": "обновлено 12.11",
     "sum": [
-     "Шаман · Удар бури (Stormstrike): 150% → 100%, 6 с → 8 с",
-     "Шаман · Гибкость разума (Mental Dexterity): 50% → 100%",
-     "Шаман · Оружие Водоворота (Maelstrom Weapon): 4% → 20%, 20 → 10",
-     "Rage of the Storm: 3,2 с → 3,6 с",
-     "Coarse Grinding Stone: 75 → 90",
-     "Journeyman Campfire Kit: 140 → 90"
+     "Riverglades: 1000 → 50",
+     "Red Mageweave Bag: 4 → 5",
+     "Green Silk Pack: 4 → 5",
+     "Black Silk Pack: 5 → 6",
+     "Green Woolen Bag: 4 → 5",
+     "Red Woolen Bag: 4 → 5"
     ],
-    "more": "Ещё изменений: 84",
+    "more": "Ещё изменений: 100",
     "site": "https://gabella.site/wow/guides/news/",
     "site_t": "Подробнее на сайте"
    },
    "en": {
     "h": "Hotfixes of Nov 6",
     "src": "Blizzard",
-    "upd": "updated Nov 11",
+    "upd": "updated Nov 12",
     "sum": [
-     "Shaman · Stormstrike: 150% → 100%, 6 sec → 8 sec",
-     "Shaman · Mental Dexterity: 50% → 100%",
-     "Shaman · Maelstrom Weapon: 4% → 20%, 20 → 10",
-     "Rage of the Storm: 3.2 sec → 3.6 sec",
-     "Coarse Grinding Stone: 75 → 90",
-     "Journeyman Campfire Kit: 140 → 90"
+     "Riverglades: 1000 → 50",
+     "Red Mageweave Bag: 4 → 5",
+     "Green Silk Pack: 4 → 5",
+     "Black Silk Pack: 5 → 6",
+     "Green Woolen Bag: 4 → 5",
+     "Red Woolen Bag: 4 → 5"
     ],
-    "more": "84 more changes",
+    "more": "100 more changes",
     "site": "https://gabella.site/wow/en/guides/news/",
     "site_t": "More on the site"
    },
    "uk": {
     "h": "Хотфікси від 06.11",
     "src": "Blizzard, англійською",
-    "upd": "оновлено 11.11",
+    "upd": "оновлено 12.11",
     "sum": [
-     "Шаман · Stormstrike: 150% → 100%, 6 с → 8 с",
-     "Шаман · Mental Dexterity: 50% → 100%",
-     "Шаман · Maelstrom Weapon: 4% → 20%, 20 → 10",
-     "Rage of the Storm: 3,2 с → 3,6 с",
-     "Coarse Grinding Stone: 75 → 90",
-     "Journeyman Campfire Kit: 140 → 90"
+     "Riverglades: 1000 → 50",
+     "Red Mageweave Bag: 4 → 5",
+     "Green Silk Pack: 4 → 5",
+     "Black Silk Pack: 5 → 6",
+     "Green Woolen Bag: 4 → 5",
+     "Red Woolen Bag: 4 → 5"
     ],
-    "more": "Ще змін: 84",
+    "more": "Ще змін: 100",
     "site": "https://gabella.site/wow/uk/guides/news/",
     "site_t": "Детальніше на сайті"
    },
    "de": {
     "h": "Hotfixes vom 06.11",
     "src": "Blizzard, auf Englisch",
-    "upd": "aktualisiert am 11.11",
+    "upd": "aktualisiert am 12.11",
     "sum": [
-     "Schamane · Sturmschlag: 150% → 100%, 6 Sek. → 8 Sek.",
-     "Schamane · Geistige Gewandtheit: 50% → 100%",
-     "Schamane · Waffe des Mahlstroms: 4% → 20%, 20 → 10",
-     "Rage of the Storm: 3,2 Sek. → 3,6 Sek.",
-     "Coarse Grinding Stone: 75 → 90",
-     "Journeyman Campfire Kit: 140 → 90"
+     "Riverglades: 1000 → 50",
+     "Red Mageweave Bag: 4 → 5",
+     "Green Silk Pack: 4 → 5",
+     "Black Silk Pack: 5 → 6",
+     "Green Woolen Bag: 4 → 5",
+     "Red Woolen Bag: 4 → 5"
     ],
-    "more": "Weitere Änderungen: 84",
+    "more": "Weitere Änderungen: 100",
     "site": "https://gabella.site/wow/de/guides/news/",
     "site_t": "Mehr auf der Seite"
    },
    "fr": {
     "h": "Correctifs du 06.11",
     "src": "Blizzard, en anglais",
-    "upd": "mis à jour le 11.11",
+    "upd": "mis à jour le 12.11",
     "sum": [
-     "Chaman · Courroux naturel: 150% → 100%, 6 s → 8 s",
-     "Chaman · Dextérité mentale: 50% → 100%",
-     "Chaman · Arme du Maelström: 4% → 20%, 20 → 10",
-     "Rage of the Storm: 3,2 s → 3,6 s",
-     "Coarse Grinding Stone: 75 → 90",
-     "Journeyman Campfire Kit: 140 → 90"
+     "Riverglades: 1000 → 50",
+     "Red Mageweave Bag: 4 → 5",
+     "Green Silk Pack: 4 → 5",
+     "Black Silk Pack: 5 → 6",
+     "Green Woolen Bag: 4 → 5",
+     "Red Woolen Bag: 4 → 5"
     ],
-    "more": "Autres changements : 84",
+    "more": "Autres changements : 100",
     "site": "https://gabella.site/wow/fr/guides/news/",
     "site_t": "Plus sur le site"
    },
    "es": {
     "h": "Correcciones del 06.11",
     "src": "Blizzard, en inglés",
-    "upd": "actualizado el 11.11",
+    "upd": "actualizado el 12.11",
     "sum": [
-     "Chamán · Golpe de tormenta: 150% → 100%, 6 s → 8 s",
-     "Chamán · Maña mental: 50% → 100%",
-     "Chamán · Arma vorágine: 4% → 20%, 20 → 10",
-     "Rage of the Storm: 3,2 s → 3,6 s",
-     "Coarse Grinding Stone: 75 → 90",
-     "Journeyman Campfire Kit: 140 → 90"
+     "Riverglades: 1000 → 50",
+     "Red Mageweave Bag: 4 → 5",
+     "Green Silk Pack: 4 → 5",
+     "Black Silk Pack: 5 → 6",
+     "Green Woolen Bag: 4 → 5",
+     "Red Woolen Bag: 4 → 5"
     ],
-    "more": "Más cambios: 84",
+    "more": "Más cambios: 100",
     "site": "https://gabella.site/wow/es/guides/news/",
     "site_t": "Más en la web"
    },
    "pt": {
     "h": "Hotfixes de 06.11",
     "src": "Blizzard, em inglês",
-    "upd": "atualizado em 11.11",
+    "upd": "atualizado em 12.11",
     "sum": [
-     "Xamã · Ataque da Tempestade: 150% → 100%, 6 s → 8 s",
-     "Xamã · Destreza Mental: 50% → 100%",
-     "Xamã · Arma da Voragem: 4% → 20%, 20 → 10",
-     "Rage of the Storm: 3,2 s → 3,6 s",
-     "Coarse Grinding Stone: 75 → 90",
-     "Journeyman Campfire Kit: 140 → 90"
+     "Riverglades: 1000 → 50",
+     "Red Mageweave Bag: 4 → 5",
+     "Green Silk Pack: 4 → 5",
+     "Black Silk Pack: 5 → 6",
+     "Green Woolen Bag: 4 → 5",
+     "Red Woolen Bag: 4 → 5"
     ],
-    "more": "Mais mudanças: 84",
+    "more": "Mais mudanças: 100",
     "site": "https://gabella.site/wow/pt/guides/news/",
     "site_t": "Mais no site"
    },
    "it": {
     "h": "Hotfix del 06.11",
     "src": "Blizzard, in inglese",
-    "upd": "aggiornato il 11.11",
+    "upd": "aggiornato il 12.11",
     "sum": [
-     "Sciamano · Assalto della Tempesta: 150% → 100%, 6 s → 8 s",
-     "Sciamano · Mental Dexterity: 50% → 100%",
-     "Sciamano · Arma del Maelstrom: 4% → 20%, 20 → 10",
-     "Rage of the Storm: 3,2 s → 3,6 s",
-     "Coarse Grinding Stone: 75 → 90",
-     "Journeyman Campfire Kit: 140 → 90"
+     "Riverglades: 1000 → 50",
+     "Red Mageweave Bag: 4 → 5",
+     "Green Silk Pack: 4 → 5",
+     "Black Silk Pack: 5 → 6",
+     "Green Woolen Bag: 4 → 5",
+     "Red Woolen Bag: 4 → 5"
     ],
-    "more": "Altre modifiche: 84",
+    "more": "Altre modifiche: 100",
     "site": "https://gabella.site/wow/it/guides/news/",
     "site_t": "Di più sul sito"
    },
    "pl": {
     "h": "Hotfixy z 06.11",
     "src": "Blizzard, po angielsku",
-    "upd": "zaktualizowano 11.11",
+    "upd": "zaktualizowano 12.11",
     "sum": [
-     "Shaman · Stormstrike: 150% → 100%, 6 s → 8 s",
-     "Shaman · Mental Dexterity: 50% → 100%",
-     "Shaman · Maelstrom Weapon: 4% → 20%, 20 → 10",
-     "Rage of the Storm: 3,2 s → 3,6 s",
-     "Coarse Grinding Stone: 75 → 90",
-     "Journeyman Campfire Kit: 140 → 90"
+     "Riverglades: 1000 → 50",
+     "Red Mageweave Bag: 4 → 5",
+     "Green Silk Pack: 4 → 5",
+     "Black Silk Pack: 5 → 6",
+     "Green Woolen Bag: 4 → 5",
+     "Red Woolen Bag: 4 → 5"
     ],
-    "more": "Więcej zmian: 84",
+    "more": "Więcej zmian: 100",
     "site": "https://gabella.site/wow/pl/guides/news/",
     "site_t": "Więcej na stronie"
    }
