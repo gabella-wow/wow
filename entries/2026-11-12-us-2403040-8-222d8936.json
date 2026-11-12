@@ -1,0 +1,1016 @@
+{
+ "event": "new",
+ "key": "us-2403040-8",
+ "source": "forum",
+ "region": "us",
+ "topic": 2403040,
+ "post": 8,
+ "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-11-2026/2403040/8",
+ "title": "WoW: Forever Hotfixes - November 11, 2026",
+ "author": "Kaivax",
+ "role": "Community Manager",
+ "created_at": "2026-11-12T00:48:47.076Z",
+ "updated_at": "2026-11-12T00:48:47.076Z",
+ "version": 1,
+ "category": 352,
+ "beta": false,
+ "sha": "222d893624c2f4d7d5b92ffafff3f53c90d39191d6368c083e57f0665322515d",
+ "twin_of": null,
+ "also": [
+  "https://eu.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-11-2026/639885/7"
+ ],
+ "short_news": {
+  "date": "2026-11-12",
+  "at": "2026-11-12T00:48:47Z",
+  "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-11-2026/2403040/8",
+  "title_en": "WoW: Forever Hotfixes - November 11, 2026",
+  "kind": "hotfixes",
+  "beta": false
+ },
+ "changes": [
+  {
+   "path": [
+    "Classes",
+    "Druid",
+    "Feral"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "feral"
+   },
+   "abilities": [
+    "Rend and Tear"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Rend and Tear now works on Pounce Bleed.",
+   "h": "c6659938d49d"
+  },
+  {
+   "path": [
+    "Classes",
+    "Hunter"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "hunter"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Volley was activating procs.",
+   "h": "3e82e7c5b9d6"
+  },
+  {
+   "path": [
+    "Classes",
+    "Hunter"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "hunter"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Volley would continue to channel even when the Hunter had started moving.",
+   "h": "8c3d374a2b66"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin"
+   },
+   "abilities": [
+    "Judgement"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Judgement changed to now be considered a Ranged Attack. This means it no longer counts as a Melee attack for the purposes of item and effect procs and uses the Paladin’s Ranged Hit chance.",
+   "h": "2445f0bc778f"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Retribution"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "retribution"
+   },
+   "abilities": [
+    "Windfury Totem",
+    "Holy Strike"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "With the fix to Windfury Totem activating from Holy Strike, we have changed Unsealed Fury. Unsealed Fury no longer generates echoes from Windfury Totem attacks.",
+   "h": "ecc29ef10540"
+  },
+  {
+   "path": [
+    "Classes",
+    "Priest"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "priest"
+   },
+   "abilities": [
+    "Confounding Flash",
+    "Shadowform"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Confounding Flash (Gnome) can now correctly be used while in Shadowform.",
+   "h": "d23569652cd4"
+  },
+  {
+   "path": [
+    "Classes",
+    "Priest",
+    "Holy"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "priest",
+    "spec": "holy"
+   },
+   "abilities": [
+    "Twilight Focus",
+    "Shadowform"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "The Twilight Focus talent will now correctly work while in Shadowform.",
+   "h": "66d4db7cfcc5"
+  },
+  {
+   "path": [
+    "Classes",
+    "Shaman"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "shaman"
+   },
+   "abilities": [
+    "Flametongue Totem"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [
+    2
+   ],
+   "text": "Fixed a bug where Flametongue Totem Rank 2 was not working.",
+   "h": "b561d9227047"
+  },
+  {
+   "path": [
+    "Customer Support"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "The Item Restoration service has been disabled while we investigate and address a critical bug.",
+   "h": "fa6ef8d85c02"
+  },
+  {
+   "path": [
+    "Enemies and NPCs"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Riverglades"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Riverglades - Significantly reduced the amount of damage dealt by the Twilight Enforcer’s “Smash” ability.",
+   "h": "35b62014443e"
+  },
+  {
+   "path": [
+    "Enemies and NPCs"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Riverglades"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Riverglades - Lowered the damage dealt by Executioner Morg.",
+   "h": "d26d842dbdb0"
+  },
+  {
+   "path": [
+    "Enemies and NPCs"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Riverglades"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 50,
+     "old": 1000,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    50,
+    1000
+   ],
+   "text": "Riverglades - Twilight Forgemaster’s “Mark of Flames” now increases damage dealt by 50 (was 1000).",
+   "h": "f8f664a4e86f"
+  },
+  {
+   "path": [
+    "Items"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Bloody Claws of Attack"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    1
+   ],
+   "text": "Bloody Claws of Attack now correctly add +1 Fist/Unarmed Weapon skill.",
+   "h": "8bf97fce3ff3"
+  },
+  {
+   "path": [
+    "Items"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Earthen Silk Slippers"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Earthen Silk Slippers no longer give more spell damage than intended.",
+   "h": "8db139887e1d"
+  },
+  {
+   "path": [
+    "Professions",
+    "Tailoring",
+    "Adjusted the required materials and slot size of several bag"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Red Mageweave Bag"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 5,
+     "old": 4,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    4,
+    5,
+    14
+   ],
+   "text": "Red Mageweave Bag now requires 5 bolts of mageweave (was 4 bolts) and is now 14 slots.",
+   "h": "e111c94b6183"
+  },
+  {
+   "path": [
+    "Professions",
+    "Tailoring",
+    "Adjusted the required materials and slot size of several bag"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Green Silk Pack"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 5,
+     "old": 4,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    4,
+    5,
+    12
+   ],
+   "text": "Green Silk Pack now requires 5 bolts of silk (was 4 bolts) and is now 12 slots.",
+   "h": "b588935e1f90"
+  },
+  {
+   "path": [
+    "Professions",
+    "Tailoring",
+    "Adjusted the required materials and slot size of several bag"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Black Silk Pack"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 6,
+     "old": 5,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    5,
+    6,
+    12
+   ],
+   "text": "Black Silk Pack now requires 6 bolts of silk (was 5 bolts) and is now 12 slots.",
+   "h": "62b09d029d57"
+  },
+  {
+   "path": [
+    "Professions",
+    "Tailoring",
+    "Adjusted the required materials and slot size of several bag"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Green Woolen Bag"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 5,
+     "old": 4,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    4,
+    5,
+    10
+   ],
+   "text": "Green Woolen Bag now requires 5 bolts of wool (was 4 bolts) and is now 10 slots.",
+   "h": "e0917129ec21"
+  },
+  {
+   "path": [
+    "Professions",
+    "Tailoring",
+    "Adjusted the required materials and slot size of several bag"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Red Woolen Bag"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 5,
+     "old": 4,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    4,
+    5,
+    10
+   ],
+   "text": "Red Woolen Bag now requires 5 bolts of wool (was 4 bolts) and is now 10 slots.",
+   "h": "f5214a372c33"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Western Plaguelands",
+    "Command"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Western Plaguelands - Players should now be able to properly interact with the Command Tent while on the quest “Scarlet Diversions”.",
+   "h": "fe4a8dc5ce8e"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Arathi Highlands"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Arathi Highlands - Fixed an issue where the Witherbark Mallet did not function, preventing players from proceeding to “The Giant in the Den”.",
+   "h": "37c36521a851"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Feralas"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Feralas - Fixed an issue where the Cage Door for the quest “Freedom for All Creatures” would not reset. It feels wrong to close it, but…",
+   "h": "31d2b3db623b"
+  },
+  {
+   "path": [
+    "World"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed a bug that prevented the ability to mount in named areas of Shen’dralas.",
+   "h": "1d9b5be31f42"
+  }
+ ],
+ "new_lines": [
+  "c6659938d49d",
+  "3e82e7c5b9d6",
+  "8c3d374a2b66",
+  "2445f0bc778f",
+  "ecc29ef10540",
+  "d23569652cd4",
+  "66d4db7cfcc5",
+  "b561d9227047",
+  "fa6ef8d85c02",
+  "35b62014443e",
+  "d26d842dbdb0",
+  "f8f664a4e86f",
+  "8bf97fce3ff3",
+  "8db139887e1d",
+  "2dd20f93b9ba",
+  "e111c94b6183",
+  "b588935e1f90",
+  "62b09d029d57",
+  "e0917129ec21",
+  "f5214a372c33",
+  "fe4a8dc5ce8e",
+  "37c36521a851",
+  "31d2b3db623b",
+  "1d9b5be31f42"
+ ],
+ "gone_lines": [],
+ "outdated": [],
+ "to_check": [
+  "classes/paladin/",
+  "classes/rogue/",
+  "guides/best-race/",
+  "guides/builds-paladin/",
+  "guides/builds-priest/",
+  "guides/leveling-druid/",
+  "guides/leveling-paladin/",
+  "guides/leveling-rogue/",
+  "guides/leveling-shaman/",
+  "guides/leveling/",
+  "guides/spec-druid-balance/",
+  "guides/spec-druid-feral/",
+  "guides/spec-druid-restoration/",
+  "guides/spec-paladin-holy/",
+  "guides/spec-paladin-protection/",
+  "guides/spec-paladin-retribution/",
+  "guides/spec-priest-holy/",
+  "guides/spec-shaman-elemental/",
+  "guides/spec-shaman-enhancement/",
+  "guides/spec-shaman-restoration/",
+  "guides/transport/",
+  "races/gnome/"
+ ],
+ "check": [
+  {
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "feral"
+   },
+   "ability": "Rend and Tear",
+   "kind": "changed",
+   "pairs": [],
+   "h": "c6659938d49d",
+   "findings": [
+    {
+     "page": "guides/leveling-druid/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Rend and Tear 5"
+    },
+    {
+     "page": "guides/spec-druid-balance/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Rend and Tear 5"
+    },
+    {
+     "page": "guides/spec-druid-feral/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Rend and Tear 5"
+    },
+    {
+     "page": "guides/spec-druid-restoration/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Rend and Tear 5"
+    }
+   ],
+   "sources": [
+    "content/talents/druid.json:519"
+   ]
+  },
+  {
+   "subject": {
+    "type": "class",
+    "id": "paladin"
+   },
+   "ability": "Judgement",
+   "kind": "no_longer",
+   "pairs": [],
+   "h": "2445f0bc778f",
+   "findings": [
+    {
+     "page": "classes/paladin/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Judgement taunts the enemy"
+    },
+    {
+     "page": "guides/builds-paladin/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Judgement"
+    },
+    {
+     "page": "guides/leveling-paladin/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Judgement, Blessing of Might Judgement and attack power"
+    },
+    {
+     "page": "guides/spec-paladin-holy/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Judgement with it puts an effect on the enemy that heals the group a little"
+    },
+    {
+     "page": "guides/spec-paladin-protection/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Judgement"
+    },
+    {
+     "page": "guides/spec-paladin-retribution/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Judgement, Holy Strike and Consecration scale with spell power"
+    }
+   ],
+   "sources": [
+    "content/spec_builds.py:90",
+    "content/spec_builds.py:101",
+    "content/spec_builds.py:102",
+    "content/spec_builds.py:121",
+    "content/spec_builds.py:128",
+    "content/spec_builds.py:129",
+    "content/spec_builds.py:167",
+    "content/spec_builds.py:168",
+    "content/spec_builds.py:178",
+    "content/spec_builds.py:189",
+    "content/spec_builds.py:191",
+    "content/spec_builds.py:204",
+    "content/class_guides.py:304",
+    "content/class_guides.py:326",
+    "i18n/en.txt:159",
+    "i18n/en.txt:651",
+    "i18n/en.txt:662",
+    "i18n/en.txt:664"
+   ]
+  },
+  {
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "retribution"
+   },
+   "ability": "Windfury Totem",
+   "kind": "no_longer",
+   "pairs": [],
+   "h": "ecc29ef10540",
+   "findings": [
+    {
+     "page": "classes/rogue/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Windfury Totem"
+    },
+    {
+     "page": "guides/leveling-rogue/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Windfury Totem (Warcraft Tavern)"
+    },
+    {
+     "page": "guides/leveling-shaman/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Windfury Totem A totem for the group"
+    },
+    {
+     "page": "guides/spec-shaman-elemental/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Windfury Totem from level 32, Mana Spring Totem, Tremor Totem against fear"
+    },
+    {
+     "page": "guides/spec-shaman-enhancement/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Windfury Totem from level 32, Mana Spring Totem, Tremor Totem against fear"
+    },
+    {
+     "page": "guides/spec-shaman-restoration/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Windfury Totem from level 32, Mana Spring Totem, Tremor Totem against fear"
+    }
+   ],
+   "sources": [
+    "content/class_guides.py:616",
+    "content/class_guides.py:866",
+    "i18n/en.txt:745"
+   ]
+  },
+  {
+   "subject": {
+    "type": "class",
+    "id": "priest"
+   },
+   "ability": "Confounding Flash",
+   "kind": "changed",
+   "pairs": [],
+   "h": "d23569652cd4",
+   "findings": [
+    {
+     "page": "guides/best-race/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Confounding Flash, Contingency Plan)"
+    },
+    {
+     "page": "races/gnome/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Confounding Flash new, Contingency Plan new"
+    }
+   ],
+   "sources": [
+    "content/guides.py:1618"
+   ]
+  },
+  {
+   "subject": {
+    "type": "class",
+    "id": "priest",
+    "spec": "holy"
+   },
+   "ability": "Twilight Focus",
+   "kind": "changed",
+   "pairs": [],
+   "h": "66d4db7cfcc5",
+   "findings": [
+    {
+     "page": "guides/builds-priest/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Twilight Focus 3, so damage interrupts your casts less often"
+    },
+    {
+     "page": "guides/spec-priest-holy/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Twilight Focus 3, so damage interrupts your casts less often"
+    }
+   ],
+   "sources": [
+    "content/spec_builds.py:919",
+    "content/spec_builds.py:920",
+    "content/spec_builds.py:921",
+    "content/talents/priest.json:281"
+   ]
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Riverglades",
+   "kind": "changed",
+   "pairs": [],
+   "h": "35b62014443e",
+   "findings": [
+    {
+     "page": "guides/leveling/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Riverglades zone between Redridge and Burning Steppes, Dustwallow Marsh, Badlands, Swamp of Sorrows"
+    },
+    {
+     "page": "guides/transport/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Riverglades zone"
+    }
+   ],
+   "sources": [
+    "content/guides.py:773",
+    "content/guides.py:774",
+    "content/guides.py:775",
+    "content/guides.py:793",
+    "content/guides.py:794",
+    "content/guides.py:795",
+    "content/guides.py:1201",
+    "content/guides.py:1319",
+    "content/guides.py:1320",
+    "content/guides.py:1321",
+    "content/guides.py:1327",
+    "content/guides.py:1328",
+    "content/guides.py:1329"
+   ]
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Riverglades",
+   "kind": "changed",
+   "pairs": [],
+   "h": "d26d842dbdb0",
+   "findings": [
+    {
+     "page": "guides/leveling/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Riverglades zone between Redridge and Burning Steppes, Dustwallow Marsh, Badlands, Swamp of Sorrows"
+    },
+    {
+     "page": "guides/transport/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Riverglades zone"
+    }
+   ],
+   "sources": [
+    "content/guides.py:773",
+    "content/guides.py:774",
+    "content/guides.py:775",
+    "content/guides.py:793",
+    "content/guides.py:794",
+    "content/guides.py:795",
+    "content/guides.py:1201",
+    "content/guides.py:1319",
+    "content/guides.py:1320",
+    "content/guides.py:1321",
+    "content/guides.py:1327",
+    "content/guides.py:1328",
+    "content/guides.py:1329"
+   ]
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Riverglades",
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 50,
+     "old": 1000,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "h": "f8f664a4e86f",
+   "findings": [
+    {
+     "page": "guides/leveling/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Riverglades zone between Redridge and Burning Steppes, Dustwallow Marsh, Badlands, Swamp of Sorrows"
+    },
+    {
+     "page": "guides/transport/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Riverglades zone"
+    }
+   ],
+   "sources": [
+    "content/guides.py:773",
+    "content/guides.py:774",
+    "content/guides.py:775",
+    "content/guides.py:793",
+    "content/guides.py:794",
+    "content/guides.py:795",
+    "content/guides.py:1201",
+    "content/guides.py:1319",
+    "content/guides.py:1320",
+    "content/guides.py:1321",
+    "content/guides.py:1327",
+    "content/guides.py:1328",
+    "content/guides.py:1329"
+   ]
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Bloody Claws of Attack",
+   "kind": "changed",
+   "pairs": [],
+   "h": "8bf97fce3ff3",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Earthen Silk Slippers",
+   "kind": "no_longer",
+   "pairs": [],
+   "h": "8db139887e1d",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Red Mageweave Bag",
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 5,
+     "old": 4,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "h": "e111c94b6183",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Green Silk Pack",
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 5,
+     "old": 4,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "h": "b588935e1f90",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Black Silk Pack",
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 6,
+     "old": 5,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "h": "62b09d029d57",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Green Woolen Bag",
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 5,
+     "old": 4,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "h": "e0917129ec21",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Red Woolen Bag",
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 5,
+     "old": 4,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "h": "f5214a372c33",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Western Plaguelands",
+   "kind": "changed",
+   "pairs": [],
+   "h": "fe4a8dc5ce8e",
+   "findings": [],
+   "sources": []
+  }
+ ],
+ "detected_at": "2026-11-12T00:51:26Z"
+}

@@ -1,0 +1,1225 @@
+{
+ "event": "edit",
+ "key": "us-2403040-6",
+ "source": "forum",
+ "region": "us",
+ "topic": 2403040,
+ "post": 6,
+ "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-11-2026/2403040/6",
+ "title": "WoW: Forever Hotfixes - November 11, 2026",
+ "author": "Kaivax",
+ "role": "Community Manager",
+ "created_at": "2026-11-11T03:27:33.720Z",
+ "updated_at": "2026-11-12T00:46:56.784Z",
+ "version": 2,
+ "category": 352,
+ "beta": false,
+ "sha": "542babef8f1a782fe8868119a9401d5ef3851b3278eeb389cc49ad95db5d1125",
+ "twin_of": null,
+ "also": [],
+ "short_news": {
+  "date": "2026-11-11",
+  "at": "2026-11-11T03:27:33Z",
+  "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-11-2026/2403040/6",
+  "title_en": "WoW: Forever Hotfixes - November 11, 2026",
+  "kind": "hotfixes",
+  "beta": false
+ },
+ "changes": [
+  {
+   "path": [
+    "Classes",
+    "Druid"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "abilities": [
+    "Omen of Clarity"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Omen of Clarity could not activate after swapping specializations.",
+   "h": "be16d69902a0"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid",
+    "Restoration"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "restoration"
+   },
+   "abilities": [
+    "Nature’s Swiftness",
+    "Wild Growth"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Nature’s Swiftness now also makes Wild Growth instant.",
+   "h": "20dac8e918f4"
+  },
+  {
+   "path": [
+    "Classes",
+    "Hunter"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "hunter"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    115,
+    150
+   ],
+   "text": "Fixed a bug where Pets erroneously had 150% of their normal health. This is now corrected to 115% of their normal health.",
+   "h": "cf12117e3354"
+  },
+  {
+   "path": [
+    "Classes",
+    "Hunter"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "hunter"
+   },
+   "abilities": [
+    "Arcane Shot"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    11
+   ],
+   "text": "Arcane Shot mana cost changed to 11% of base Mana for all ranks of Arcane Shot.",
+   "h": "837c9c88ae88"
+  },
+  {
+   "path": [
+    "Classes",
+    "Hunter",
+    "Arcane Shot mana cost changed to 11% of base Mana for all ra"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "hunter"
+   },
+   "abilities": [
+    "Arcane Shot mana cost changed to 11% of base Mana for all ra"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    6,
+    60
+   ],
+   "text": "Developers’ notes: This means the Mana cost on all ranks will always be the same and rise gradually with level. Overall Mana cost at levels 6 and 60 are nearly identical to before this change, and slightly lower for levels in-between.",
+   "h": "cb70beadb561"
+  },
+  {
+   "path": [
+    "Classes",
+    "Hunter",
+    "Beast Mastery"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "hunter",
+    "spec": "beast mastery"
+   },
+   "abilities": [
+    "Summon Hawk",
+    "Arcane Shot"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    11
+   ],
+   "text": "Summon Hawk Mana cost changed to 11% of base Mana for all ranks of Summon Hawk, same as Arcane Shot.",
+   "h": "34ec63bcca8e"
+  },
+  {
+   "path": [
+    "Classes",
+    "Hunter",
+    "Beast Mastery"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "hunter",
+    "spec": "beast mastery"
+   },
+   "abilities": [
+    "Melee"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    80
+   ],
+   "text": "Melee damage dealt by the Hawk pet increased by about 80%.",
+   "h": "8b6683dc73f5"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin"
+   },
+   "abilities": [
+    "Redoubt"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Redoubt can now be tracked in the Cooldown Manager.",
+   "h": "d5aaf1d0337c"
+  },
+  {
+   "path": [
+    "Classes",
+    "Priest"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "priest"
+   },
+   "abilities": [
+    "Vampiric Embrace"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where the Revelation enchant was activated by Vampiric Embrace healing.",
+   "h": "eb897a9513ca"
+  },
+  {
+   "path": [
+    "Classes",
+    "Priest",
+    "Holy"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "priest",
+    "spec": "holy"
+   },
+   "abilities": [
+    "Holy Nova"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Holy Nova was not correctly unlearend when untalenting from the spell.",
+   "h": "56686d596b43"
+  },
+  {
+   "path": [
+    "Classes",
+    "Shaman"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "shaman"
+   },
+   "abilities": [
+    "Maelstrom Weapon"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Maelstrom Weapon can now be tracked in the Cooldown Manager.",
+   "h": "be4bcd4d09a7"
+  },
+  {
+   "path": [
+    "Classes",
+    "Shaman"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "shaman"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Weapon imbues and Weapon totems can now be used at the same time.",
+   "h": "9195827b8d50"
+  },
+  {
+   "path": [
+    "Classes",
+    "Shaman",
+    "Weapon imbues and Weapon totems can now be used at the same "
+   ],
+   "subject": {
+    "type": "class",
+    "id": "shaman"
+   },
+   "abilities": [
+    "Windfury Weapon",
+    "Windfury Totem"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Developers’ notes: For example, this means the Shaman can benefit from Windfury Weapon and Windfury Totem at the same time, granting their attacks a chance to activate both.",
+   "h": "6d6f628be02c"
+  },
+  {
+   "path": [
+    "Classes",
+    "Shaman",
+    "Enhancement"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "shaman",
+    "spec": "enhancement"
+   },
+   "abilities": [
+    "Stormstrike"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 100,
+     "old": 150,
+     "unit": "%",
+     "old_unit": "%"
+    },
+    {
+     "new": 8,
+     "old": 6,
+     "unit": "s",
+     "old_unit": "s"
+    }
+   ],
+   "nums": [
+    6,
+    8,
+    100,
+    150
+   ],
+   "text": "Stormstrike damage reduced to 100% weapon damage (was 150%), and cooldown increased to 8 seconds (was 6 seconds).",
+   "h": "ff50cf86b6ee"
+  },
+  {
+   "path": [
+    "Classes",
+    "Shaman",
+    "Enhancement"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "shaman",
+    "spec": "enhancement"
+   },
+   "abilities": [
+    "Mental Dexterity"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 100,
+     "old": 50,
+     "unit": "%",
+     "old_unit": "%"
+    }
+   ],
+   "nums": [
+    33,
+    50,
+    66,
+    100,
+    150
+   ],
+   "text": "Mental Dexterity: Intellect to Attack Power conversion ratio reduced to 33/66/100% (was 50/100/150%).",
+   "h": "21166b1ed5f3"
+  },
+  {
+   "path": [
+    "Classes",
+    "Shaman",
+    "Enhancement"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "shaman",
+    "spec": "enhancement"
+   },
+   "abilities": [
+    "Maelstrom Weapon"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 20,
+     "old": 4,
+     "unit": "%",
+     "old_unit": "%"
+    },
+    {
+     "new": 10,
+     "old": 20,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    4,
+    6,
+    7,
+    8,
+    9,
+    10,
+    12,
+    16,
+    20
+   ],
+   "text": "Maelstrom Weapon now grants 20% reduced cast time and Mana cost per application at all ranks (was 4/8/12/16/20% reduced cast time and Mana cost), and chance to activate now increases with rank and activates 6/7/8/9/10 times per minute (was 20 times per minute regardless of rank).",
+   "h": "7d77f93af61f"
+  },
+  {
+   "path": [
+    "Classes",
+    "Shaman",
+    "Enhancement"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "shaman",
+    "spec": "enhancement"
+   },
+   "abilities": [
+    "Maelstrom Weapon"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    2,
+    3.6,
+    5,
+    33,
+    60
+   ],
+   "text": "Maelstrom Weapon tooltip updated to display the Shaman’s % chance to activate it based on their Main Hand Weapon’s speed. For example, if the Shaman has the 5 points into Maelstrom Weapon and has a 3.6 speed weapon it will display a 60% chance to activate on swing, compared to if the Shaman is wielding a 2.0 speed weapon it will display a 33% chance to activate on swing.",
+   "h": "ce79b06dc11f"
+  },
+  {
+   "path": [
+    "Classes",
+    "Shaman",
+    "Enhancement"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "shaman",
+    "spec": "enhancement"
+   },
+   "abilities": [
+    "Lightning Bolt"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Developers’ notes: Beta changes to Enhancement Shaman, alongside the Shock and Lightning Bolt changes aimed at Elemental Shaman, caused Enhancement to favor Spell Power and Intellect gear too heavily. While that gearing direction is not inherently a problem, it also pushed Enhancement away from Windfury, which we believe should remain at the heart of the specialization’s fantasy and gameplay. We want to make this adjustment now because it has significant implications for gearing in the upcoming raid. Addressing it before the raid opens will help prevent players from pursuing and winning highly contested items that could become much less valuable after a later change. With that in mind, many of these changes reverse the Beta adjustments aimed specifically at Enhancement and move the specialization in a more Windfury-friendly direction. We believe this better serves both Enhancement’s core fantasy and its intended gearing.",
+   "h": "94721efcd873"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warlock"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warlock"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed a bug causing the Succubus whip sound to play much too often.",
+   "h": "483539a80f52"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warlock"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warlock"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    4,
+    15
+   ],
+   "text": "Imp base damage of the first 4 Ranks of Imp’s Firebolt increased, and base Imp Health increased by ~15%.",
+   "h": "3a348de424df"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warlock"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warlock"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    15
+   ],
+   "text": "Voidwalker base Health increased by ~15%.",
+   "h": "5b8dc4e28b6b"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warlock"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warlock"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    15
+   ],
+   "text": "Incubus base Health increased by ~15%.",
+   "h": "d649e03eb6b6"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warlock"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warlock"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    15
+   ],
+   "text": "Succubus base Health increased by ~15%.",
+   "h": "5161a48f40a7"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warlock",
+    "Affliction"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warlock",
+    "spec": "affliction"
+   },
+   "abilities": [
+    "Soul Siphon",
+    "Bane of Agony",
+    "Siphon Life",
+    "Corruption",
+    "Drain Life",
+    "Drain Soul",
+    "Wrack"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    4,
+    8,
+    12,
+    36
+   ],
+   "text": "Soul Siphon now grants increased effect to your Drain Life, Drain Soul, and Wrack spells by 4/8/12% per each of your Corruption, Siphon Life, and Bane of Agony spells active on the target, up to a maximum of 36% (was any Affliction spell).",
+   "h": "ab4b02685be4"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warlock",
+    "Affliction"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warlock",
+    "spec": "affliction"
+   },
+   "abilities": [
+    "Wrack"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    30
+   ],
+   "text": "Wrack damage reduced by 30%.",
+   "h": "5ac869e5fbc7"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warlock",
+    "Affliction"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warlock",
+    "spec": "affliction"
+   },
+   "abilities": [
+    "Wrack"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Wrack no longer increases the damage of the Warlock’s periodic effects on the target.",
+   "h": "0c1f6eb8294f"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warlock",
+    "Affliction"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warlock",
+    "spec": "affliction"
+   },
+   "abilities": [
+    "Bane of Agony",
+    "Siphon Life",
+    "Corruption",
+    "Wrack"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    1,
+    6,
+    100
+   ],
+   "text": "Wrack tears the target apart from within for 6 seconds, inflicting Shadow damage every 1 second. While channeling, your Siphon Life, Corruption, and Bane of Agony effects on the target deal their periodic damage 100% faster.",
+   "h": "4f349bd2fa76"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warlock",
+    "Affliction"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warlock",
+    "spec": "affliction"
+   },
+   "abilities": [
+    "Bane of Agony",
+    "Corruption",
+    "Wrack"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    0,
+    1,
+    2,
+    3,
+    24
+   ],
+   "text": "Developers’ notes: Wrack speeds up how often your periodic effects deal damage, not how long they last. Bane of Agony still lasts its full 24 seconds, but while Wrack is channeled on the target, it deals damage twice as often. Why this change? Besides being unique, interesting, and more viscerally satisfying to see numbers pop up more often as Affliction - it fixes an issue that the previous design of Wrack had. Previously, Wrack increased periodic damage by a percentage, so if you stopped channeling just before a periodic effect dealt damage, that effect gained 0 benefit from the Wrack you just ended. Now Wrack speeds up your periodic effects while channeled, and the time it skips is kept after Wrack’s channel ends or is interrupted. For example, if you channel Wrack for 1 second during a 3-second Corruption tick, Corruption advances 2 seconds instead of 1, so its next tick lands 1 second later instead of 2, even if you stopped channeling Wrack.",
+   "h": "ff5168133a48"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warlock",
+    "Destruction"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warlock",
+    "spec": "destruction"
+   },
+   "abilities": [
+    "Bane of Havoc"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Bane of Havoc - fixed a bug where this ability was not incurring a global cooldown.",
+   "h": "8c95eef92d3d"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warrior",
+    "Arms"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warrior",
+    "spec": "arms"
+   },
+   "abilities": [
+    "Sweeping Strikes"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Sweeping Strikes no longer loses charges if no second target is hit.",
+   "h": "7de4c7ef1c81"
+  },
+  {
+   "path": [
+    "Enemies and NPCs"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Shatterspear Trolls"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Shatterspear Trolls no longer grant XP on kill. They’re dancers, not fighters!",
+   "h": "6790b21e5d9c"
+  },
+  {
+   "path": [
+    "Enemies and NPCs"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Innkeepers"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Innkeepers now provide better responses when asked “Tell me about the dungeons I can explore”.",
+   "h": "5c84361dc8f9"
+  },
+  {
+   "path": [
+    "Items"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "All racial vendor mounts are now Bind-on-Pickup.",
+   "h": "fcd037ba39d1"
+  },
+  {
+   "path": [
+    "Items"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Sparklance Wand"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Sparklance Wand now does Arcane damage (was Nature damage).",
+   "h": "17bf55a2186a"
+  },
+  {
+   "path": [
+    "Items"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Rage of the Storm"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 3.6,
+     "old": 3.2,
+     "unit": "s",
+     "old_unit": "s"
+    }
+   ],
+   "nums": [
+    3.2,
+    3.6,
+    16
+   ],
+   "text": "Rage of the Storm (Shaman quest reward) now has 16 Strength (was 16 Intellect), and weapon speed decreased to 3.6 (was 3.2 seconds).",
+   "h": "67e46bf55618"
+  },
+  {
+   "path": [
+    "Items"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Leatherworking",
+    "Blacksmithing",
+    "Tailoring"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Reduced the price vendors pay for some crafted armor items from Leatherworking, Tailoring, and Blacksmithing.",
+   "h": "517164f042c3"
+  },
+  {
+   "path": [
+    "Professions",
+    "Alchemy"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 5,
+     "old": 25,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    5,
+    25
+   ],
+   "text": "Minor Arcane Elixir sell value reduced to 5 copper (was 25 copper).",
+   "h": "d230eeb3d945"
+  },
+  {
+   "path": [
+    "Professions",
+    "Alchemy"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Holy Power"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Corrected the name of “Recipe: Elixir of Greater Firepower” to “Recipe: Elixir of Holy Power”, and the elixir’s aura is now called “Holy Power”.",
+   "h": "f82622a36c43"
+  },
+  {
+   "path": [
+    "Professions",
+    "Blacksmithing"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Coarse Grinding Stone"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 90,
+     "old": 75,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    75,
+    90
+   ],
+   "text": "Coarse Grinding Stone now provides skill-ups to 90 (was 75).",
+   "h": "6201a79239e6"
+  },
+  {
+   "path": [
+    "Professions",
+    "Cooking"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Journeyman Campfire Kit",
+    "Cooking"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 90,
+     "old": 140,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    90,
+    140
+   ],
+   "text": "Journeyman Campfire Kit now requires Cooking 90 to place, matching its recipe skill requirement (was Cooking 140).",
+   "h": "a17dcc6c24ac"
+  },
+  {
+   "path": [
+    "Professions",
+    "Enchanting"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Arcane Salvager"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Arcane Salvager now requires the Runed Golden Rod tool to craft (was Runed Truesilver Rod).",
+   "h": "ed8ef314a628"
+  },
+  {
+   "path": [
+    "Professions",
+    "Enchanting"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Arcane Salvager"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Arcane Salvager now correctly applies its disenchanting bonus to lower-level enchanters.",
+   "h": "fcf758649a41"
+  },
+  {
+   "path": [
+    "Professions",
+    "Enchanting"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Enchant Boots"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Enchant Boots - Lesser Spirit and Enchant Bracer - Lesser Spirit now correctly give their stated bonus to Spirit (was Resist All).",
+   "h": "037a1c2b2269"
+  },
+  {
+   "path": [
+    "Professions",
+    "Engineering"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 25,
+     "old": 5,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    1,
+    5,
+    25
+   ],
+   "text": "Iron Grenades vendor price reduced to 1 silver 25 copper (was 5 silver).",
+   "h": "e9ee77983e88"
+  },
+  {
+   "path": [
+    "Professions",
+    "Engineering"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Swiftstrike Shot and Swiftfeather Arrow are no longer Bind-on-Pickup.",
+   "h": "988022aad310"
+  },
+  {
+   "path": [
+    "Professions",
+    "Fishing"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Fishing"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed a condition mismatch that sometimes caused Fishing Racks to fail to provide lures to eligible players.",
+   "h": "0de19983e016"
+  },
+  {
+   "path": [
+    "Professions",
+    "Fishing"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Fishing"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Developers’ notes: We are aware there are other ongoing issues with the Fishing Rack, including other situations that result in “There is no loot” errors.",
+   "h": "279176722bed"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    48
+   ],
+   "text": "Most quests level 48 and higher now additionally reward gold.",
+   "h": "02bd458c0225"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue for the “Call of Water” quests where the events of the final quests would not play out properly consistently.",
+   "h": "54785a60cbc0"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Sovik would not offer the quest “Chief Engineer Scooty” after selecting his gossip option.",
+   "h": "71abec020c6b"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed multiple issues with the quest “Helping Hands.”",
+   "h": "f5293cad6fcf"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Zephras Isle",
+    "Herbalism",
+    "Valanaar"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    101
+   ],
+   "text": "Zephras Isle - “Camping 101: Herbalism” now completes in Shen’dar Village instead of Valanaar.",
+   "h": "c06bfa0adf2e"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "The Broken Frond of Celastrus quest item dropped by “Celastrus the Bitter” should now properly drop for all eligible members of the party.",
+   "h": "7c84f050cfb5"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Feralas"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [
+    22
+   ],
+   "text": "Feralas - Fixed an issue where players could not start the quest “Rescue OOX-22/FE!”.",
+   "h": "1b363030bf75"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Riverglades"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Riverglades - There are now significantly more Glade Vipers available for the quest “Poison Tips.”",
+   "h": "c758e49052ea"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Duskwood"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Duskwood - There are now more Nightbane Vile Fang and Nightbane Tainted Ones available for the quest “Worgen in the Woods.”",
+   "h": "1111786f1fa5"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Murloc Tideskimmers would not drop the Saltwater Murloc Eyes for the quest “A Taste of the Sea”. Mmmmm, murloc eyes.",
+   "h": "2332d8ae1b95"
+  },
+  {
+   "path": [
+    "World"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed issues causing players to be sent to an incorrect graveyard when they died.",
+   "h": "0b9687987358"
+  },
+  {
+   "path": [
+    "World"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where the denizens of Pyrewood Village would not spawn around Dawn and Dusk for periods of time. Probably nothing to worry about; the villagers seem fine and love howling at night.",
+   "h": "2aeccdf8695d"
+  }
+ ],
+ "new_lines": [],
+ "gone_lines": [
+  "26938aedd59f",
+  "8034a1537fd2"
+ ],
+ "outdated": [],
+ "to_check": [],
+ "check": [],
+ "detected_at": "2026-11-12T00:51:26Z"
+}
