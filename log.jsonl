@@ -183,3 +183,4 @@
 {"at": "2026-11-12T00:51:26Z", "event": "new", "key": "eu-639885-6", "sha": "6bd4a842ba5be541", "url": "https://eu.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-11-2026/639885/6", "twin_of": null, "outdated": 0}
 {"at": "2026-11-12T00:51:26Z", "event": "new", "key": "eu-639885-7", "sha": "222d893624c2f4d7", "url": "https://eu.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-11-2026/639885/7", "twin_of": "us-2403040-8", "outdated": 0}
 {"at": "2026-11-12T00:51:26Z", "event": "edit", "key": "art-24315281", "sha": "b38541712ce0930d", "url": "https://worldofwarcraft.blizzard.com/en-us/news/24315281/wow-forever-hotfixes-november-11-2026", "twin_of": "us-2403040-1", "outdated": 0}
+{"at": "2026-11-12T17:41:02Z", "event": "new", "key": "art-24316981", "sha": "c84a383915338042", "url": "https://worldofwarcraft.blizzard.com/en-us/news/24316981/watch-the-wow-forever-podcast-the-lore-episode", "twin_of": null, "outdated": 0}
