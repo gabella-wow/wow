@@ -1,5 +1,5 @@
 {
- "last_run": "2026-11-13T20:00:59Z",
+ "last_run": "2026-11-13T20:10:58Z",
  "posts": {
   "art-24301455": {
    "checked": "2026-10-29T20:21:03Z",
@@ -64,7 +64,7 @@
    "version": null
   },
   "art-24302547": {
-   "checked": "2026-11-13T20:00:59Z",
+   "checked": "2026-11-13T20:10:58Z",
    "lines": [
     "e463594c3307"
    ],
@@ -753,7 +753,7 @@
    "version": 1
   },
   "eu-631316-1": {
-   "checked": "2026-11-13T20:00:59Z",
+   "checked": "2026-11-13T20:10:58Z",
    "lines": [
     "b980faad67e4",
     "551f003b8fd3",
@@ -891,7 +891,7 @@
    "version": 5
   },
   "eu-631316-10": {
-   "checked": "2026-11-13T20:00:59Z",
+   "checked": "2026-11-13T20:10:58Z",
    "lines": [
     "65ad0c5dbf28",
     "ce9a126c7693",
@@ -909,7 +909,7 @@
    "version": 1
   },
   "eu-631316-4": {
-   "checked": "2026-11-13T20:00:59Z",
+   "checked": "2026-11-13T20:10:58Z",
    "lines": [
     "a9f91ef9a1d3",
     "3f0687de02e8",
@@ -1064,7 +1064,7 @@
    "version": 3
   },
   "eu-631316-5": {
-   "checked": "2026-11-13T20:00:59Z",
+   "checked": "2026-11-13T20:10:58Z",
    "lines": [
     "862affbc3ad5",
     "3e1771b3fd67",
@@ -1202,7 +1202,7 @@
    "version": 1
   },
   "eu-631316-6": {
-   "checked": "2026-11-13T20:00:59Z",
+   "checked": "2026-11-13T20:10:58Z",
    "lines": [
     "ba02c8dc2b40",
     "cdd748e437cc",
@@ -1440,7 +1440,7 @@
    "version": 2
   },
   "eu-631316-7": {
-   "checked": "2026-11-13T20:00:59Z",
+   "checked": "2026-11-13T20:10:58Z",
    "lines": [
     "c2f53382556d",
     "157b13cf95b2",
@@ -1468,7 +1468,7 @@
    "version": 4
   },
   "eu-631316-8": {
-   "checked": "2026-11-13T20:00:59Z",
+   "checked": "2026-11-13T20:10:58Z",
    "lines": [
     "180749eee47d",
     "57c724e3010c",
@@ -1485,7 +1485,7 @@
    "version": 2
   },
   "eu-631316-9": {
-   "checked": "2026-11-13T20:00:59Z",
+   "checked": "2026-11-13T20:10:58Z",
    "lines": [
     "eabd14472cc2",
     "e75ab1fa1bb9",
@@ -2526,7 +2526,7 @@
    "version": 3
   },
   "us-2360696-1": {
-   "checked": "2026-11-13T20:00:59Z",
+   "checked": "2026-11-13T20:10:58Z",
    "lines": [
     "b980faad67e4",
     "551f003b8fd3",
@@ -2664,7 +2664,7 @@
    "version": 5
   },
   "us-2360696-10": {
-   "checked": "2026-11-13T20:00:59Z",
+   "checked": "2026-11-13T20:10:58Z",
    "lines": [
     "65ad0c5dbf28",
     "ce9a126c7693",
@@ -2682,7 +2682,7 @@
    "version": 1
   },
   "us-2360696-4": {
-   "checked": "2026-11-13T20:00:59Z",
+   "checked": "2026-11-13T20:10:58Z",
    "lines": [
     "a9f91ef9a1d3",
     "3f0687de02e8",
@@ -2837,7 +2837,7 @@
    "version": 4
   },
   "us-2360696-5": {
-   "checked": "2026-11-13T20:00:59Z",
+   "checked": "2026-11-13T20:10:58Z",
    "lines": [
     "862affbc3ad5",
     "3e1771b3fd67",
@@ -2975,7 +2975,7 @@
    "version": 1
   },
   "us-2360696-6": {
-   "checked": "2026-11-13T20:00:59Z",
+   "checked": "2026-11-13T20:10:58Z",
    "lines": [
     "ba02c8dc2b40",
     "cdd748e437cc",
@@ -3213,7 +3213,7 @@
    "version": 2
   },
   "us-2360696-7": {
-   "checked": "2026-11-13T20:00:59Z",
+   "checked": "2026-11-13T20:10:58Z",
    "lines": [
     "c2f53382556d",
     "157b13cf95b2",
@@ -3241,7 +3241,7 @@
    "version": 4
   },
   "us-2360696-8": {
-   "checked": "2026-11-13T20:00:59Z",
+   "checked": "2026-11-13T20:10:58Z",
    "lines": [
     "180749eee47d",
     "57c724e3010c",
@@ -3258,7 +3258,7 @@
    "version": 2
   },
   "us-2360696-9": {
-   "checked": "2026-11-13T20:00:59Z",
+   "checked": "2026-11-13T20:10:58Z",
    "lines": [
     "eabd14472cc2",
     "e75ab1fa1bb9",
@@ -4543,7 +4543,7 @@
   "us-2408781-1": "be9a5ec6",
   "us-2412856-1": "e3b0c442"
  },
- "requests": 13,
+ "requests": 15,
  "sources": {
   "articles:24301455": {
    "fails": 0,
@@ -4563,7 +4563,7 @@
   },
   "articles:24302547": {
    "fails": 0,
-   "ok": "2026-11-13T20:00:59Z"
+   "ok": "2026-11-13T20:10:58Z"
   },
   "articles:24303009": {
    "fails": 0,
@@ -4649,31 +4649,31 @@
    "err": "HTTPError: HTTP Error 502: Bad Gateway",
    "err_at": "2026-11-12T05:40:56Z",
    "fails": 0,
-   "ok": "2026-11-13T20:00:59Z"
+   "ok": "2026-11-13T20:10:58Z"
   },
   "eu:c/wow-forever-beta-discussion/362": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-13T08:20:59Z",
    "fails": 0,
-   "ok": "2026-11-13T20:00:57Z"
+   "ok": "2026-11-13T20:10:54Z"
   },
   "eu:c/wow-forever-beta-discussion/362/new": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-13T19:21:09Z",
    "fails": 0,
-   "ok": "2026-11-13T20:00:57Z"
+   "ok": "2026-11-13T20:10:56Z"
   },
   "eu:c/wow-forever/359": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-13T05:40:52Z",
    "fails": 0,
-   "ok": "2026-11-13T20:00:55Z"
+   "ok": "2026-11-13T20:10:52Z"
   },
   "eu:c/wow-forever/359/new": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-13T19:21:06Z",
    "fails": 0,
-   "ok": "2026-11-13T20:00:56Z"
+   "ok": "2026-11-13T20:10:53Z"
   },
   "eu:t/628701": {
    "fails": 0,
@@ -4707,7 +4707,7 @@
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-13T19:01:07Z",
    "fails": 0,
-   "ok": "2026-11-13T20:00:58Z"
+   "ok": "2026-11-13T20:10:57Z"
   },
   "eu:t/631603": {
    "fails": 0,
@@ -5861,25 +5861,25 @@
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-09T22:10:49Z",
    "fails": 0,
-   "ok": "2026-11-13T20:00:51Z"
+   "ok": "2026-11-13T20:10:47Z"
   },
   "us:c/wow-forever-beta-discussion/349/new": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-09T22:10:51Z",
    "fails": 0,
-   "ok": "2026-11-13T20:00:52Z"
+   "ok": "2026-11-13T20:10:48Z"
   },
   "us:c/wow-forever/346": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-06T15:00:48Z",
    "fails": 0,
-   "ok": "2026-11-13T20:00:49Z"
+   "ok": "2026-11-13T20:10:46Z"
   },
   "us:c/wow-forever/346/new": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-06T15:00:59Z",
    "fails": 0,
-   "ok": "2026-11-13T20:00:50Z"
+   "ok": "2026-11-13T20:10:46Z"
   },
   "us:t/2352595": {
    "fails": 0,
@@ -5933,7 +5933,7 @@
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-13T19:00:55Z",
    "fails": 0,
-   "ok": "2026-11-13T20:00:53Z"
+   "ok": "2026-11-13T20:10:49Z"
   },
   "us:t/2361993": {
    "fails": 0,
@@ -5995,7 +5995,7 @@
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-09T22:10:55Z",
    "fails": 0,
-   "ok": "2026-11-13T20:00:54Z"
+   "ok": "2026-11-13T20:10:50Z"
   },
   "us:t/2381433": {
    "fails": 0,
@@ -6457,11 +6457,11 @@
   },
   "us:t/2412098": {
    "fails": 0,
-   "ok": "2026-11-13T16:10:51Z"
+   "ok": "2026-11-13T20:10:51Z"
   },
   "us:t/2412098/posts": {
    "fails": 0,
-   "ok": "2026-11-13T16:10:51Z"
+   "ok": "2026-11-13T20:10:51Z"
   },
   "us:t/2412393": {
    "fails": 0,
@@ -6820,7 +6820,7 @@
   "us-2409772": "2026-11-13T02:54:01.960Z|5",
   "us-2410202": "2026-11-10T22:58:07.092Z|4",
   "us-2410997": "2026-11-12T01:47:34.556Z|9",
-  "us-2412098": "2026-11-13T16:10:41.673Z|54",
+  "us-2412098": "2026-11-13T20:08:19.539Z|59",
   "us-2412393": "2026-11-12T13:07:44.964Z|13",
   "us-2412856": "2026-11-13T18:36:38.368Z|52",
   "us-2413141": "2026-11-13T07:08:25.676Z|35",
