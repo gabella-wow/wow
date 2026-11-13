@@ -1,0 +1,37 @@
+{
+ "event": "new",
+ "key": "art-24316096",
+ "source": "article",
+ "region": "us",
+ "topic": null,
+ "post": null,
+ "url": "https://worldofwarcraft.blizzard.com/en-us/news/24316096/watch-the-wow-forever-short-story-cost-of-honor",
+ "title": "Watch the WoW: Forever Short Story, “Cost of Honor”",
+ "author": "Blizzard Entertainment",
+ "role": "Blizzard News",
+ "created_at": "2026-11-13T18:00:00.000Z",
+ "updated_at": null,
+ "version": null,
+ "category": null,
+ "beta": false,
+ "sha": "883b0fe851150709923449241a338e32557fe4c407c4401bfc7c19e77e514579",
+ "twin_of": null,
+ "also": [],
+ "short_news": {
+  "date": "2026-11-13",
+  "at": "2026-11-13T18:00:00Z",
+  "url": "https://worldofwarcraft.blizzard.com/en-us/news/24316096/watch-the-wow-forever-short-story-cost-of-honor",
+  "title_en": "Watch the WoW: Forever Short Story, “Cost of Honor”",
+  "kind": "article",
+  "beta": false
+ },
+ "changes": [],
+ "new_lines": [
+  "324b6512b0ce"
+ ],
+ "gone_lines": [],
+ "outdated": [],
+ "to_check": [],
+ "check": [],
+ "detected_at": "2026-11-13T18:11:07Z"
+}

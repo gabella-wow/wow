@@ -1,0 +1,185 @@
+{
+ "event": "new",
+ "key": "art-24315205",
+ "source": "article",
+ "region": "us",
+ "topic": null,
+ "post": null,
+ "url": "https://worldofwarcraft.blizzard.com/en-us/news/24315205/wow-weekly-highlights-the-wow-forever-podcast-a-new-short-story-this-weeks-videos-and-more",
+ "title": "WoW Weekly Highlights the WoW: Forever Podcast, a New Short Story, This Week’s Videos, and More!",
+ "author": "Blizzard Entertainment",
+ "role": "Blizzard News",
+ "created_at": "2026-11-13T18:01:00.000Z",
+ "updated_at": null,
+ "version": null,
+ "category": null,
+ "beta": false,
+ "sha": "120d1ff3daee2e89759a2cca215080a5ad68413b14520229ce492ca26b07cc4a",
+ "twin_of": null,
+ "also": [],
+ "short_news": {
+  "date": "2026-11-13",
+  "at": "2026-11-13T18:01:00Z",
+  "url": "https://worldofwarcraft.blizzard.com/en-us/news/24315205/wow-weekly-highlights-the-wow-forever-podcast-a-new-short-story-this-weeks-videos-and-more",
+  "title_en": "WoW Weekly Highlights the WoW: Forever Podcast, a New Short Story, This Week’s Videos, and More!",
+  "kind": "article",
+  "beta": false
+ },
+ "changes": [
+  {
+   "path": [
+    "Watch the WoW: Forever Podcast – The Lore Episode"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Join WoW"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Join WoW: Forever Podcast host Countdown To Classic and special guests PlatinumWoW and Nobbel for a conversation with Senior Game Designer Josh “Aggrend” Greenfield and Lore Historian Lead Sean Copeland. Together, they dive deeper into the lore and story of World of Warcraft: Forever.",
+   "h": "0947645c1e26"
+  },
+  {
+   "path": [
+    "Watch the WoW: Forever Short Story, “Cost of Honor”"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Riverglades"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "As a storm rages in the skies above, the young people of the Riverglades gather around a campfire to hear the stories behind their history’s legends from the great Demar Brant. Through tales of war, sacrifice, and hard choices, they learn that the true strength of a people lies not in victory alone, but in the courage to protect one another.",
+   "h": "b199b04931d4"
+  },
+  {
+   "path": [
+    "Watch the WoW: Forever Short Story, “Cost of Honor”"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Written By"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    3
+   ],
+   "text": "Written By: Jonathan Maberry Illustrated By: Surfside 3D Narrated By: Peter Jessop as Demar Brant",
+   "h": "7137f75be24a"
+  },
+  {
+   "path": [
+    "Purchase WoW: Forever Upgrades and Begin Your Next Journey in Azeroth"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Azeroth"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Azeroth is calling once more. World of Warcraft: Forever invites you to begin again in a reimagined original Azeroth, where familiar roads lead to new discoveries, the journey matters as much as the destination, and the world is ready to grow for years to come.",
+   "h": "18bc07515ed2"
+  },
+  {
+   "path": [
+    "Purchase WoW: Forever Upgrades and Begin Your Next Journey in Azeroth"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "World of Warcraft",
+    "Heroic Pack"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "World of Warcraft: Forever access will be included with your World of Warcraft Subscription or Game Time. Optional upgrade editions are available to purchase now on the Battle.net Shop, including the Skyborne Heroic Pack, Skyborne Epic Pack, and the limited-time Warcraft Forever Collection.",
+   "h": "cd5c87fd48dc"
+  }
+ ],
+ "new_lines": [
+  "0947645c1e26",
+  "e17aaeb7b83f",
+  "b199b04931d4",
+  "7137f75be24a",
+  "18bc07515ed2",
+  "cd5c87fd48dc",
+  "84de05cf50dc",
+  "512a4286dee6"
+ ],
+ "gone_lines": [],
+ "outdated": [],
+ "to_check": [
+  "guides/addons/",
+  "guides/launch-day/",
+  "guides/name-reservation/"
+ ],
+ "check": [
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "World of Warcraft",
+   "kind": "changed",
+   "pairs": [],
+   "h": "cd5c87fd48dc",
+   "findings": [
+    {
+     "page": "guides/addons/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "World of Warcraft and the Forever version"
+    },
+    {
+     "page": "guides/launch-day/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "World of Warcraft → the version menu above the Play button → World of Warcraft: Forever → Install"
+    },
+    {
+     "page": "guides/name-reservation/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "World of Warcraft: Forever → Install"
+    }
+   ],
+   "sources": [
+    "content/guides.py:1319",
+    "content/guides.py:1320",
+    "content/guides.py:1321",
+    "content/guides.py:1327",
+    "content/guides.py:1328",
+    "content/guides.py:1329",
+    "content/guides.py:1450",
+    "content/guides.py:1528",
+    "content/guides.py:2423",
+    "content/guides.py:2434",
+    "content/guides.py:2711",
+    "content/guides.py:2712",
+    "content/guides.py:2713",
+    "content/guides.py:2980",
+    "content/guides.py:3014",
+    "content/guides.py:3015",
+    "content/guides.py:3016",
+    "content/guides.py:3058",
+    "content/guides.py:3059",
+    "content/guides.py:3060",
+    "index.src.html:1250"
+   ]
+  }
+ ],
+ "detected_at": "2026-11-13T18:11:07Z"
+}
