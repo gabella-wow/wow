@@ -1,5 +1,5 @@
 {
- "last_run": "2026-11-13T18:50:56Z",
+ "last_run": "2026-11-13T19:01:08Z",
  "posts": {
   "art-24301455": {
    "checked": "2026-10-29T20:21:03Z",
@@ -64,7 +64,7 @@
    "version": null
   },
   "art-24302547": {
-   "checked": "2026-11-13T18:50:56Z",
+   "checked": "2026-11-13T19:01:08Z",
    "lines": [
     "e463594c3307"
    ],
@@ -4563,7 +4563,7 @@
   },
   "articles:24302547": {
    "fails": 0,
-   "ok": "2026-11-13T18:50:56Z"
+   "ok": "2026-11-13T19:01:08Z"
   },
   "articles:24303009": {
    "fails": 0,
@@ -4649,30 +4649,30 @@
    "err": "HTTPError: HTTP Error 502: Bad Gateway",
    "err_at": "2026-11-12T05:40:56Z",
    "fails": 0,
-   "ok": "2026-11-13T18:50:56Z"
+   "ok": "2026-11-13T19:01:07Z"
   },
   "eu:c/wow-forever-beta-discussion/362": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-13T08:20:59Z",
    "fails": 0,
-   "ok": "2026-11-13T18:50:53Z"
+   "ok": "2026-11-13T19:01:02Z"
   },
   "eu:c/wow-forever-beta-discussion/362/new": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-13T05:40:58Z",
    "fails": 0,
-   "ok": "2026-11-13T18:50:54Z"
+   "ok": "2026-11-13T19:01:05Z"
   },
   "eu:c/wow-forever/359": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-13T05:40:52Z",
    "fails": 0,
-   "ok": "2026-11-13T18:50:51Z"
+   "ok": "2026-11-13T19:00:57Z"
   },
   "eu:c/wow-forever/359/new": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
-   "err_at": "2026-11-11T02:00:57Z",
-   "fails": 0,
+   "err_at": "2026-11-13T19:01:01Z",
+   "fails": 1,
    "ok": "2026-11-13T18:50:52Z"
   },
   "eu:t/628701": {
@@ -4705,8 +4705,8 @@
   },
   "eu:t/631316": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
-   "err_at": "2026-11-09T21:41:10Z",
-   "fails": 0,
+   "err_at": "2026-11-13T19:01:07Z",
+   "fails": 1,
    "ok": "2026-11-13T18:50:55Z"
   },
   "eu:t/631603": {
@@ -5861,25 +5861,25 @@
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-09T22:10:49Z",
    "fails": 0,
-   "ok": "2026-11-13T18:50:47Z"
+   "ok": "2026-11-13T19:00:51Z"
   },
   "us:c/wow-forever-beta-discussion/349/new": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-09T22:10:51Z",
    "fails": 0,
-   "ok": "2026-11-13T18:50:48Z"
+   "ok": "2026-11-13T19:00:53Z"
   },
   "us:c/wow-forever/346": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-06T15:00:48Z",
    "fails": 0,
-   "ok": "2026-11-13T18:50:45Z"
+   "ok": "2026-11-13T19:00:47Z"
   },
   "us:c/wow-forever/346/new": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-06T15:00:59Z",
    "fails": 0,
-   "ok": "2026-11-13T18:50:46Z"
+   "ok": "2026-11-13T19:00:49Z"
   },
   "us:t/2352595": {
    "fails": 0,
@@ -5931,8 +5931,8 @@
   },
   "us:t/2360696": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
-   "err_at": "2026-11-04T23:11:01Z",
-   "fails": 0,
+   "err_at": "2026-11-13T19:00:55Z",
+   "fails": 1,
    "ok": "2026-11-13T18:50:49Z"
   },
   "us:t/2361993": {
@@ -5995,7 +5995,7 @@
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-09T22:10:55Z",
    "fails": 0,
-   "ok": "2026-11-13T18:50:50Z"
+   "ok": "2026-11-13T19:00:56Z"
   },
   "us:t/2381433": {
    "fails": 0,
