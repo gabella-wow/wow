@@ -1160,157 +1160,157 @@
  },
  {
   "id": "us-2403040-1",
-  "sha": "0f55f353",
+  "sha": "29f02b6e",
   "date": "2026-11-06",
   "at": "2026-11-06T02:34:10Z",
-  "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-11-2026/2403040/1",
+  "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-13-2026/2403040/1",
   "kind": "hotfixes",
   "beta": false,
-  "title_en": "WoW: Forever Hotfixes - November 11, 2026",
-  "n": 106,
-  "upd": "2026-11-12T00:51:26Z",
+  "title_en": "WoW: Forever Hotfixes - November 13, 2026",
+  "n": 138,
+  "upd": "2026-11-14T02:01:31Z",
   "t": {
    "ru": {
     "h": "Хотфиксы от 06.11",
     "src": "Blizzard, на английском",
-    "upd": "обновлено 12.11",
+    "upd": "обновлено 14.11",
     "sum": [
+     "Друид · Буйный рост (Wild Growth): 3,3% → 6,6%",
+     "Taran Icebreaker: 1 → 2",
      "Riverglades: 1000 → 50",
      "Red Mageweave Bag: 4 → 5",
      "Green Silk Pack: 4 → 5",
-     "Black Silk Pack: 5 → 6",
-     "Green Woolen Bag: 4 → 5",
-     "Red Woolen Bag: 4 → 5"
+     "Black Silk Pack: 5 → 6"
     ],
-    "more": "Ещё изменений: 100",
+    "more": "Ещё изменений: 132",
     "site": "https://gabella.site/wow/guides/news/",
     "site_t": "Подробнее на сайте"
    },
    "en": {
     "h": "Hotfixes of Nov 6",
     "src": "Blizzard",
-    "upd": "updated Nov 12",
+    "upd": "updated Nov 14",
     "sum": [
+     "Druid · Wild Growth: 3.3% → 6.6%",
+     "Taran Icebreaker: 1 → 2",
      "Riverglades: 1000 → 50",
      "Red Mageweave Bag: 4 → 5",
      "Green Silk Pack: 4 → 5",
-     "Black Silk Pack: 5 → 6",
-     "Green Woolen Bag: 4 → 5",
-     "Red Woolen Bag: 4 → 5"
+     "Black Silk Pack: 5 → 6"
     ],
-    "more": "100 more changes",
+    "more": "132 more changes",
     "site": "https://gabella.site/wow/en/guides/news/",
     "site_t": "More on the site"
    },
    "uk": {
     "h": "Хотфікси від 06.11",
     "src": "Blizzard, англійською",
-    "upd": "оновлено 12.11",
+    "upd": "оновлено 14.11",
     "sum": [
+     "Друїд · Wild Growth: 3,3% → 6,6%",
+     "Taran Icebreaker: 1 → 2",
      "Riverglades: 1000 → 50",
      "Red Mageweave Bag: 4 → 5",
      "Green Silk Pack: 4 → 5",
-     "Black Silk Pack: 5 → 6",
-     "Green Woolen Bag: 4 → 5",
-     "Red Woolen Bag: 4 → 5"
+     "Black Silk Pack: 5 → 6"
     ],
-    "more": "Ще змін: 100",
+    "more": "Ще змін: 132",
     "site": "https://gabella.site/wow/uk/guides/news/",
     "site_t": "Детальніше на сайті"
    },
    "de": {
     "h": "Hotfixes vom 06.11",
     "src": "Blizzard, auf Englisch",
-    "upd": "aktualisiert am 12.11",
+    "upd": "aktualisiert am 14.11",
     "sum": [
+     "Druide · Wildwuchs: 3,3% → 6,6%",
+     "Taran Icebreaker: 1 → 2",
      "Riverglades: 1000 → 50",
      "Red Mageweave Bag: 4 → 5",
      "Green Silk Pack: 4 → 5",
-     "Black Silk Pack: 5 → 6",
-     "Green Woolen Bag: 4 → 5",
-     "Red Woolen Bag: 4 → 5"
+     "Black Silk Pack: 5 → 6"
     ],
-    "more": "Weitere Änderungen: 100",
+    "more": "Weitere Änderungen: 132",
     "site": "https://gabella.site/wow/de/guides/news/",
     "site_t": "Mehr auf der Seite"
    },
    "fr": {
     "h": "Correctifs du 06.11",
     "src": "Blizzard, en anglais",
-    "upd": "mis à jour le 12.11",
+    "upd": "mis à jour le 14.11",
     "sum": [
+     "Druide · Croissance sauvage: 3,3% → 6,6%",
+     "Taran Icebreaker: 1 → 2",
      "Riverglades: 1000 → 50",
      "Red Mageweave Bag: 4 → 5",
      "Green Silk Pack: 4 → 5",
-     "Black Silk Pack: 5 → 6",
-     "Green Woolen Bag: 4 → 5",
-     "Red Woolen Bag: 4 → 5"
+     "Black Silk Pack: 5 → 6"
     ],
-    "more": "Autres changements : 100",
+    "more": "Autres changements : 132",
     "site": "https://gabella.site/wow/fr/guides/news/",
     "site_t": "Plus sur le site"
    },
    "es": {
     "h": "Correcciones del 06.11",
     "src": "Blizzard, en inglés",
-    "upd": "actualizado el 12.11",
+    "upd": "actualizado el 14.11",
     "sum": [
+     "Druida · Crecimiento salvaje: 3,3% → 6,6%",
+     "Taran Icebreaker: 1 → 2",
      "Riverglades: 1000 → 50",
      "Red Mageweave Bag: 4 → 5",
      "Green Silk Pack: 4 → 5",
-     "Black Silk Pack: 5 → 6",
-     "Green Woolen Bag: 4 → 5",
-     "Red Woolen Bag: 4 → 5"
+     "Black Silk Pack: 5 → 6"
     ],
-    "more": "Más cambios: 100",
+    "more": "Más cambios: 132",
     "site": "https://gabella.site/wow/es/guides/news/",
     "site_t": "Más en la web"
    },
    "pt": {
     "h": "Hotfixes de 06.11",
     "src": "Blizzard, em inglês",
-    "upd": "atualizado em 12.11",
+    "upd": "atualizado em 14.11",
     "sum": [
+     "Druida · Crescimento Silvestre: 3,3% → 6,6%",
+     "Taran Icebreaker: 1 → 2",
      "Riverglades: 1000 → 50",
      "Red Mageweave Bag: 4 → 5",
      "Green Silk Pack: 4 → 5",
-     "Black Silk Pack: 5 → 6",
-     "Green Woolen Bag: 4 → 5",
-     "Red Woolen Bag: 4 → 5"
+     "Black Silk Pack: 5 → 6"
     ],
-    "more": "Mais mudanças: 100",
+    "more": "Mais mudanças: 132",
     "site": "https://gabella.site/wow/pt/guides/news/",
     "site_t": "Mais no site"
    },
    "it": {
     "h": "Hotfix del 06.11",
     "src": "Blizzard, in inglese",
-    "upd": "aggiornato il 12.11",
+    "upd": "aggiornato il 14.11",
     "sum": [
+     "Druido · Crescita Rigogliosa: 3,3% → 6,6%",
+     "Taran Icebreaker: 1 → 2",
      "Riverglades: 1000 → 50",
      "Red Mageweave Bag: 4 → 5",
      "Green Silk Pack: 4 → 5",
-     "Black Silk Pack: 5 → 6",
-     "Green Woolen Bag: 4 → 5",
-     "Red Woolen Bag: 4 → 5"
+     "Black Silk Pack: 5 → 6"
     ],
-    "more": "Altre modifiche: 100",
+    "more": "Altre modifiche: 132",
     "site": "https://gabella.site/wow/it/guides/news/",
     "site_t": "Di più sul sito"
    },
    "pl": {
     "h": "Hotfixy z 06.11",
     "src": "Blizzard, po angielsku",
-    "upd": "zaktualizowano 12.11",
+    "upd": "zaktualizowano 14.11",
     "sum": [
+     "Druid · Wild Growth: 3,3% → 6,6%",
+     "Taran Icebreaker: 1 → 2",
      "Riverglades: 1000 → 50",
      "Red Mageweave Bag: 4 → 5",
      "Green Silk Pack: 4 → 5",
-     "Black Silk Pack: 5 → 6",
-     "Green Woolen Bag: 4 → 5",
-     "Red Woolen Bag: 4 → 5"
+     "Black Silk Pack: 5 → 6"
     ],
-    "more": "Więcej zmian: 100",
+    "more": "Więcej zmian: 132",
     "site": "https://gabella.site/wow/pl/guides/news/",
     "site_t": "Więcej na stronie"
    }
