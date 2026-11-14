@@ -340,6 +340,127 @@
   }
  },
  {
+  "id": "us-2403040-9",
+  "sha": "8bb570ef",
+  "date": "2026-11-12",
+  "at": "2026-11-12T19:10:52Z",
+  "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-11-2026/2403040/9",
+  "kind": "hotfixes",
+  "beta": false,
+  "title_en": "WoW: Forever Hotfixes - November 11, 2026",
+  "n": 4,
+  "t": {
+   "ru": {
+    "h": "Хотфиксы от 12.11",
+    "src": "Blizzard, на английском",
+    "sum": [
+     "Шаман · Удар бури (Stormstrike): 150% → 100%, 6 с → 8 с",
+     "Шаман · Гибкость разума (Mental Dexterity): 50% → 100%",
+     "Шаман · Оружие Водоворота (Maelstrom Weapon): 4% → 20%, 20 → 10"
+    ],
+    "more": "Ещё изменений: 1",
+    "site": "https://gabella.site/wow/guides/news/",
+    "site_t": "Подробнее на сайте"
+   },
+   "en": {
+    "h": "Hotfixes of Nov 12",
+    "src": "Blizzard",
+    "sum": [
+     "Shaman · Stormstrike: 150% → 100%, 6 sec → 8 sec",
+     "Shaman · Mental Dexterity: 50% → 100%",
+     "Shaman · Maelstrom Weapon: 4% → 20%, 20 → 10"
+    ],
+    "more": "1 more changes",
+    "site": "https://gabella.site/wow/en/guides/news/",
+    "site_t": "More on the site"
+   },
+   "uk": {
+    "h": "Хотфікси від 12.11",
+    "src": "Blizzard, англійською",
+    "sum": [
+     "Шаман · Stormstrike: 150% → 100%, 6 с → 8 с",
+     "Шаман · Mental Dexterity: 50% → 100%",
+     "Шаман · Maelstrom Weapon: 4% → 20%, 20 → 10"
+    ],
+    "more": "Ще змін: 1",
+    "site": "https://gabella.site/wow/uk/guides/news/",
+    "site_t": "Детальніше на сайті"
+   },
+   "de": {
+    "h": "Hotfixes vom 12.11",
+    "src": "Blizzard, auf Englisch",
+    "sum": [
+     "Schamane · Sturmschlag: 150% → 100%, 6 Sek. → 8 Sek.",
+     "Schamane · Geistige Gewandtheit: 50% → 100%",
+     "Schamane · Waffe des Mahlstroms: 4% → 20%, 20 → 10"
+    ],
+    "more": "Weitere Änderungen: 1",
+    "site": "https://gabella.site/wow/de/guides/news/",
+    "site_t": "Mehr auf der Seite"
+   },
+   "fr": {
+    "h": "Correctifs du 12.11",
+    "src": "Blizzard, en anglais",
+    "sum": [
+     "Chaman · Courroux naturel: 150% → 100%, 6 s → 8 s",
+     "Chaman · Dextérité mentale: 50% → 100%",
+     "Chaman · Arme du Maelström: 4% → 20%, 20 → 10"
+    ],
+    "more": "Autres changements : 1",
+    "site": "https://gabella.site/wow/fr/guides/news/",
+    "site_t": "Plus sur le site"
+   },
+   "es": {
+    "h": "Correcciones del 12.11",
+    "src": "Blizzard, en inglés",
+    "sum": [
+     "Chamán · Golpe de tormenta: 150% → 100%, 6 s → 8 s",
+     "Chamán · Maña mental: 50% → 100%",
+     "Chamán · Arma vorágine: 4% → 20%, 20 → 10"
+    ],
+    "more": "Más cambios: 1",
+    "site": "https://gabella.site/wow/es/guides/news/",
+    "site_t": "Más en la web"
+   },
+   "pt": {
+    "h": "Hotfixes de 12.11",
+    "src": "Blizzard, em inglês",
+    "sum": [
+     "Xamã · Ataque da Tempestade: 150% → 100%, 6 s → 8 s",
+     "Xamã · Destreza Mental: 50% → 100%",
+     "Xamã · Arma da Voragem: 4% → 20%, 20 → 10"
+    ],
+    "more": "Mais mudanças: 1",
+    "site": "https://gabella.site/wow/pt/guides/news/",
+    "site_t": "Mais no site"
+   },
+   "it": {
+    "h": "Hotfix del 12.11",
+    "src": "Blizzard, in inglese",
+    "sum": [
+     "Sciamano · Assalto della Tempesta: 150% → 100%, 6 s → 8 s",
+     "Sciamano · Mental Dexterity: 50% → 100%",
+     "Sciamano · Arma del Maelstrom: 4% → 20%, 20 → 10"
+    ],
+    "more": "Altre modifiche: 1",
+    "site": "https://gabella.site/wow/it/guides/news/",
+    "site_t": "Di più sul sito"
+   },
+   "pl": {
+    "h": "Hotfixy z 12.11",
+    "src": "Blizzard, po angielsku",
+    "sum": [
+     "Shaman · Stormstrike: 150% → 100%, 6 s → 8 s",
+     "Shaman · Mental Dexterity: 50% → 100%",
+     "Shaman · Maelstrom Weapon: 4% → 20%, 20 → 10"
+    ],
+    "more": "Więcej zmian: 1",
+    "site": "https://gabella.site/wow/pl/guides/news/",
+    "site_t": "Więcej na stronie"
+   }
+  }
+ },
+ {
   "id": "us-2412856-1",
   "sha": "e3b0c442",
   "date": "2026-11-12",
