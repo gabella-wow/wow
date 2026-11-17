@@ -1,0 +1,37 @@
+{
+ "event": "new",
+ "key": "us-2419757-1",
+ "source": "forum",
+ "region": "us",
+ "topic": 2419757,
+ "post": 1,
+ "url": "https://us.forums.blizzard.com/en/wow/t/actions-for-blackmaw-hold-abuse-november-17/2419757/1",
+ "title": "Actions For Blackmaw Hold Abuse - November 17",
+ "author": "Kaivax",
+ "role": "Community Manager",
+ "created_at": "2026-11-17T18:38:11.984Z",
+ "updated_at": "2026-11-17T18:38:11.984Z",
+ "version": 1,
+ "category": 347,
+ "beta": false,
+ "sha": "a1576bc5d30386322dac10b62e77905350ae0d8d2aafbfad7bd1267683ca5210",
+ "twin_of": null,
+ "also": [
+  "https://eu.forums.blizzard.com/en/wow/t/actions-for-blackmaw-hold-abuse-17-november/643759/1"
+ ],
+ "short_news": {
+  "date": "2026-11-17",
+  "at": "2026-11-17T18:38:11Z",
+  "url": "https://us.forums.blizzard.com/en/wow/t/actions-for-blackmaw-hold-abuse-november-17/2419757/1",
+  "title_en": "Actions For Blackmaw Hold Abuse - November 17",
+  "kind": "post",
+  "beta": false
+ },
+ "changes": [],
+ "new_lines": [],
+ "gone_lines": [],
+ "outdated": [],
+ "to_check": [],
+ "check": [],
+ "detected_at": "2026-11-17T18:41:02Z"
+}
