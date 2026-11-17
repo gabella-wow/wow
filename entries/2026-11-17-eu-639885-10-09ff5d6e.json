@@ -1,0 +1,843 @@
+{
+ "event": "new",
+ "key": "eu-639885-10",
+ "source": "forum",
+ "region": "eu",
+ "topic": 639885,
+ "post": 10,
+ "url": "https://eu.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-16-2026/639885/10",
+ "title": "WoW: Forever Hotfixes - November 16, 2026",
+ "author": "Kaivax",
+ "role": "Community Manager",
+ "created_at": "2026-11-17T02:18:53.389Z",
+ "updated_at": "2026-11-17T02:18:53.389Z",
+ "version": 1,
+ "category": 360,
+ "beta": false,
+ "sha": "09ff5d6e56d70000659daa015fb67c27218e8883d21e9f658e52490dd57b0297",
+ "twin_of": "us-2403040-11",
+ "also": [],
+ "short_news": {
+  "date": "2026-11-17",
+  "at": "2026-11-17T02:18:53Z",
+  "url": "https://eu.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-16-2026/639885/10",
+  "title_en": "WoW: Forever Hotfixes - November 16, 2026",
+  "kind": "hotfixes",
+  "beta": false
+ },
+ "changes": [
+  {
+   "path": [
+    "Camping"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "The Fishing Rack"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "The Fishing Rack now provides lures for everyone.",
+   "h": "f032422dba08"
+  },
+  {
+   "path": [
+    "Camping"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Fishing"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Bloated Fish caught from the Fishing Rack effect have had their drop chance increased and their loot tables adjusted accordingly.",
+   "h": "5aa2df805627"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "abilities": [
+    "Wild Growth"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where ranks of Wild Growth were not going on cooldown.",
+   "h": "673c451ea042"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid",
+    "Balance"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "balance"
+   },
+   "abilities": [
+    "Genesis"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where the Genesis talent was not increasing the damage of Pounce’s bleed.",
+   "h": "abec0a1a791e"
+  },
+  {
+   "path": [
+    "Classes",
+    "Priest"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "priest"
+   },
+   "abilities": [
+    "Dark Inspiration"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Dark Inspiration was stacking if there were multiple Shadow priests in the same party.",
+   "h": "f6daeb1f022f"
+  },
+  {
+   "path": [
+    "Classes",
+    "Priest"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "priest"
+   },
+   "abilities": [
+    "Vampiric Embrace"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 10,
+     "old": 20,
+     "unit": "%",
+     "old_unit": "%"
+    }
+   ],
+   "nums": [
+    10,
+    20,
+    100
+   ],
+   "text": "[With scheduled weekly maintenance] Vampiric Embrace healing is now based on 10% of the Shadow damage done by the casting Priest (was 20%). The casting Priest receives 100% increased healing from this effect.",
+   "h": "cc862623b4ef"
+  },
+  {
+   "path": [
+    "Classes",
+    "Priest",
+    "[With scheduled weekly maintenance] Vampiric Embrace healing"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "priest"
+   },
+   "abilities": [
+    "[With scheduled weekly maintenance] Vampiric Embrace healing"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Developers’ notes: This change results in no difference for Priest solo play.",
+   "h": "a2398e6d2d6c"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue"
+   },
+   "abilities": [],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Rogue Poison ranks can no longer go above the maximum rank.",
+   "h": "a974dc01aa55"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where using Shank on a target that didn’t have your combo points active on them would remove your combo points on other targets, even if Boot Knife wasn’t talented.",
+   "h": "30f3f45fd060"
+  },
+  {
+   "path": [
+    "Classes",
+    "Shaman"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "shaman"
+   },
+   "abilities": [
+    "Windfury Totem"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Windfury Totem attacks were ignoring armor and had no internal cooldown.",
+   "h": "331ff651c4ba"
+  },
+  {
+   "path": [
+    "Classes",
+    "Shaman"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "shaman"
+   },
+   "abilities": [
+    "Windfury Totem"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue causing Windfury Totem extra attacks to not generate Rage.",
+   "h": "40905a28e45a"
+  },
+  {
+   "path": [
+    "Classes",
+    "Shaman"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "shaman"
+   },
+   "abilities": [
+    "Windfury Totem",
+    "Mutilate",
+    "Execute"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Mutilate and Execute would have an extra attempt to activate Windfury Totem.",
+   "h": "50a0ac395ab8"
+  },
+  {
+   "path": [
+    "Classes",
+    "Shaman"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "shaman"
+   },
+   "abilities": [
+    "Windfury Totem",
+    "Shield Slam",
+    "Shield Bash"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Shield Slam, Shield Bash, and Shieldworn empowered Holy Strikes could attempt to activate Windfury Totem.",
+   "h": "a2720ba58955"
+  },
+  {
+   "path": [
+    "Classes",
+    "Shaman",
+    "Enhancement"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "shaman",
+    "spec": "enhancement"
+   },
+   "abilities": [
+    "Maelstrom Weapon"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Maelstrom Weapon could benefit two casts.",
+   "h": "afa341fb23c3"
+  },
+  {
+   "path": [
+    "Classes",
+    "Shaman",
+    "Enhancement"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "shaman",
+    "spec": "enhancement"
+   },
+   "abilities": [
+    "Thundering Strikes"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where the Thundering Strikes talent required a weapon equipped to grant its critical strike chance.",
+   "h": "aa72889a5f19"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warrior"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warrior"
+   },
+   "abilities": [
+    "Legacy"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue that prevented the Revered Champion from offering Legacy of Valor to qualified Warriors.",
+   "h": "19075e6e6a25"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warrior",
+    "Fury"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warrior",
+    "spec": "fury"
+   },
+   "abilities": [
+    "Unbridled Wrath",
+    "Heroic Strike",
+    "Cleave"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Unbridled Wrath was not activated by Cleave or Heroic Strike.",
+   "h": "9783fa34e760"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warrior",
+    "Fury"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warrior",
+    "spec": "fury"
+   },
+   "abilities": [
+    "Heroic Strike",
+    "Cleave",
+    "Flurry"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Flurry stacks were consumed by Cleave or Heroic Strike.",
+   "h": "98edf50cd370"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warrior",
+    "Fury"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warrior",
+    "spec": "fury"
+   },
+   "abilities": [
+    "Heroic Strike",
+    "Cleave"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Reckless Swings was not activated by Cleave or Heroic Strike.",
+   "h": "ee1fc9fcb446"
+  },
+  {
+   "path": [
+    "Dungeons",
+    "The Drowned City"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Captain Dreadrise"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Captain Dreadrise is no longer immune to stun effects.",
+   "h": "be3045b7ec58"
+  },
+  {
+   "path": [
+    "Dungeons",
+    "The Drowned City"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "The rare spawn “Pyromancer” Braxton is now less focused on his duties and will respond to combat.",
+   "h": "a7e6cfbd993f"
+  },
+  {
+   "path": [
+    "Dungeons",
+    "The Drowned City"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "The Abyssal Bubble summoned by Captain Dreadrise can no longer block, dodge or parry.",
+   "h": "2084a1b13083"
+  },
+  {
+   "path": [
+    "Dungeons",
+    "Sunken Temple"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue that stopped the Atal’alarion serpent statues in the Pit of Refuse to become non-interactive if activated in the wrong order.",
+   "h": "42f2c426a696"
+  },
+  {
+   "path": [
+    "Items"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Formula"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Formula: Enchant Boots - Speed from reputation is now bind-on-pickup, as intended.",
+   "h": "509b0e22cfae"
+  },
+  {
+   "path": [
+    "Items"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Outrider’s Gloves"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Outrider’s Gloves now work correctly.",
+   "h": "0a04951ffdce"
+  },
+  {
+   "path": [
+    "Items"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "The Violet Tragan"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "The Violet Tragan no longer breaks crowd control effects.",
+   "h": "5cd2f6635511"
+  },
+  {
+   "path": [
+    "Player versus Player"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Riverglades"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Dying in Arathi Basin Gold Mine should no longer port you to a graveyard in Riverglades.",
+   "h": "bfb14a19e7b0"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "The drop rate of “Blood Red Bandanas” has been increased.",
+   "h": "ad1f6153e180"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Resolved an issue where Witch Doctor Zum’rah may not spawn properly during “The Talisman of Kazdor”.",
+   "h": "9f2f950d77f1"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Scout prisoners in Twilight’s Shroud will now grant credit for “No Soldier Left Behind” for the entire party.",
+   "h": "ec3036979d47"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "The repeatable quest “Water Pouch Bounty” no longer grants experience.",
+   "h": "5872b47adea7"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue that could halt progress on the Theramore quest “The Return of the King?”.",
+   "h": "48721b868b07"
+  }
+ ],
+ "new_lines": [
+  "f032422dba08",
+  "5aa2df805627",
+  "673c451ea042",
+  "abec0a1a791e",
+  "f6daeb1f022f",
+  "cc862623b4ef",
+  "a2398e6d2d6c",
+  "a974dc01aa55",
+  "30f3f45fd060",
+  "331ff651c4ba",
+  "40905a28e45a",
+  "50a0ac395ab8",
+  "a2720ba58955",
+  "afa341fb23c3",
+  "aa72889a5f19",
+  "19075e6e6a25",
+  "9783fa34e760",
+  "98edf50cd370",
+  "ee1fc9fcb446",
+  "ec3ad18471c7",
+  "be3045b7ec58",
+  "a7e6cfbd993f",
+  "2084a1b13083",
+  "42f2c426a696",
+  "509b0e22cfae",
+  "0a04951ffdce",
+  "5cd2f6635511",
+  "bfb14a19e7b0",
+  "ad1f6153e180",
+  "9f2f950d77f1",
+  "ec3036979d47",
+  "31b3cbb0ba33",
+  "5872b47adea7",
+  "48721b868b07"
+ ],
+ "gone_lines": [],
+ "outdated": [],
+ "to_check": [
+  "guides/builds-priest/",
+  "guides/leveling-priest/",
+  "guides/leveling-shaman/",
+  "guides/leveling/",
+  "guides/professions/",
+  "guides/spec-priest-discipline/",
+  "guides/spec-priest-holy/",
+  "guides/spec-priest-shadow/",
+  "guides/transport/"
+ ],
+ "check": [
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "The Fishing Rack",
+   "kind": "changed",
+   "pairs": [],
+   "h": "f032422dba08",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Fishing",
+   "kind": "changed",
+   "pairs": [],
+   "h": "5aa2df805627",
+   "findings": [
+    {
+     "page": "guides/leveling-shaman/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Fishing), Sharpening Wheel (Blacksmithing) and the stool (Skinning, +2% crit)"
+    },
+    {
+     "page": "guides/leveling/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Fishing lets you catch it yourself"
+    },
+    {
+     "page": "guides/professions/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Fishing: they are secondary professions, you can have all three and they cannot be unlearned"
+    }
+   ],
+   "sources": [
+    "content/guides.py:590",
+    "content/guides.py:642",
+    "content/guides.py:672",
+    "content/guides.py:678",
+    "content/guides.py:719",
+    "content/guides.py:993",
+    "content/class_guides.py:872",
+    "i18n/en.txt:82",
+    "i18n/en.txt:488"
+   ]
+  },
+  {
+   "subject": {
+    "type": "class",
+    "id": "priest"
+   },
+   "ability": "Vampiric Embrace",
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 10,
+     "old": 20,
+     "unit": "%",
+     "old_unit": "%"
+    }
+   ],
+   "h": "cc862623b4ef",
+   "findings": [
+    {
+     "page": "guides/builds-priest/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Vampiric Embrace heals the group"
+    },
+    {
+     "page": "guides/leveling-priest/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Vampiric Embrace heals you from the damage you deal"
+    },
+    {
+     "page": "guides/spec-priest-discipline/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Vampiric Embrace heals you from the damage you deal"
+    },
+    {
+     "page": "guides/spec-priest-holy/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Vampiric Embrace heals you from the damage you deal"
+    },
+    {
+     "page": "guides/spec-priest-shadow/",
+     "status": "check",
+     "why": "number not shown next to the name",
+     "seen": "Vampiric Embrace heals the group"
+    }
+   ],
+   "sources": [
+    "content/spec_builds.py:868",
+    "content/spec_builds.py:944",
+    "content/spec_builds.py:945",
+    "content/spec_builds.py:953",
+    "content/class_guides.py:662",
+    "content/class_guides.py:684",
+    "content/talents/priest.json:685"
+   ]
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Captain Dreadrise",
+   "kind": "no_longer",
+   "pairs": [],
+   "h": "be3045b7ec58",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Formula",
+   "kind": "changed",
+   "pairs": [],
+   "h": "509b0e22cfae",
+   "findings": [
+    {
+     "page": "guides/leveling/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Formula for 120 Merchant’s Favor, Enchanting 210"
+    }
+   ],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Outrider’s Gloves",
+   "kind": "changed",
+   "pairs": [],
+   "h": "0a04951ffdce",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "The Violet Tragan",
+   "kind": "no_longer",
+   "pairs": [],
+   "h": "5cd2f6635511",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Riverglades",
+   "kind": "no_longer",
+   "pairs": [],
+   "h": "bfb14a19e7b0",
+   "findings": [
+    {
+     "page": "guides/leveling/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Riverglades zone between Redridge and Burning Steppes, Dustwallow Marsh, Badlands, Swamp of Sorrows"
+    },
+    {
+     "page": "guides/transport/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Riverglades zone"
+    }
+   ],
+   "sources": [
+    "content/guides.py:773",
+    "content/guides.py:774",
+    "content/guides.py:775",
+    "content/guides.py:793",
+    "content/guides.py:794",
+    "content/guides.py:795",
+    "content/guides.py:1201",
+    "content/guides.py:1319",
+    "content/guides.py:1320",
+    "content/guides.py:1321",
+    "content/guides.py:1327",
+    "content/guides.py:1328",
+    "content/guides.py:1329"
+   ]
+  }
+ ],
+ "detected_at": "2026-11-17T02:21:45Z"
+}
