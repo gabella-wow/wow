@@ -1,5 +1,163 @@
 [
  {
+  "id": "art-24315281",
+  "sha": "b0c14fda",
+  "date": "2026-11-18",
+  "at": "2026-11-18T03:23:49Z",
+  "url": "https://worldofwarcraft.blizzard.com/en-us/news/24315281/wow-forever-hotfixes-november-17-2026",
+  "kind": "hotfixes",
+  "beta": false,
+  "title_en": "WoW: Forever Hotfixes - November 17, 2026",
+  "n": 183,
+  "upd": "2026-11-18T03:31:39Z",
+  "t": {
+   "ru": {
+    "h": "Хотфиксы от 18.11",
+    "src": "Blizzard, на английском",
+    "upd": "обновлено 18.11",
+    "sum": [
+     "Жрец · Объятия вампира (Vampiric Embrace): 20% → 10%",
+     "Друид · Буйный рост (Wild Growth): 3,3% → 6,6%",
+     "Taran Icebreaker: 1 → 2",
+     "Riverglades: 1000 → 50",
+     "Red Mageweave Bag: 4 → 5",
+     "Green Silk Pack: 4 → 5"
+    ],
+    "more": "Ещё изменений: 177",
+    "site": "https://gabella.site/wow/guides/news/",
+    "site_t": "Подробнее на сайте"
+   },
+   "en": {
+    "h": "Hotfixes of Nov 18",
+    "src": "Blizzard",
+    "upd": "updated Nov 18",
+    "sum": [
+     "Priest · Vampiric Embrace: 20% → 10%",
+     "Druid · Wild Growth: 3.3% → 6.6%",
+     "Taran Icebreaker: 1 → 2",
+     "Riverglades: 1000 → 50",
+     "Red Mageweave Bag: 4 → 5",
+     "Green Silk Pack: 4 → 5"
+    ],
+    "more": "177 more changes",
+    "site": "https://gabella.site/wow/en/guides/news/",
+    "site_t": "More on the site"
+   },
+   "uk": {
+    "h": "Хотфікси від 18.11",
+    "src": "Blizzard, англійською",
+    "upd": "оновлено 18.11",
+    "sum": [
+     "Жрець · Vampiric Embrace: 20% → 10%",
+     "Друїд · Wild Growth: 3,3% → 6,6%",
+     "Taran Icebreaker: 1 → 2",
+     "Riverglades: 1000 → 50",
+     "Red Mageweave Bag: 4 → 5",
+     "Green Silk Pack: 4 → 5"
+    ],
+    "more": "Ще змін: 177",
+    "site": "https://gabella.site/wow/uk/guides/news/",
+    "site_t": "Детальніше на сайті"
+   },
+   "de": {
+    "h": "Hotfixes vom 18.11",
+    "src": "Blizzard, auf Englisch",
+    "upd": "aktualisiert am 18.11",
+    "sum": [
+     "Priester · Vampirumarmung: 20% → 10%",
+     "Druide · Wildwuchs: 3,3% → 6,6%",
+     "Taran Icebreaker: 1 → 2",
+     "Riverglades: 1000 → 50",
+     "Red Mageweave Bag: 4 → 5",
+     "Green Silk Pack: 4 → 5"
+    ],
+    "more": "Weitere Änderungen: 177",
+    "site": "https://gabella.site/wow/de/guides/news/",
+    "site_t": "Mehr auf der Seite"
+   },
+   "fr": {
+    "h": "Correctifs du 18.11",
+    "src": "Blizzard, en anglais",
+    "upd": "mis à jour le 18.11",
+    "sum": [
+     "Prêtre · Etreinte vampirique: 20% → 10%",
+     "Druide · Croissance sauvage: 3,3% → 6,6%",
+     "Taran Icebreaker: 1 → 2",
+     "Riverglades: 1000 → 50",
+     "Red Mageweave Bag: 4 → 5",
+     "Green Silk Pack: 4 → 5"
+    ],
+    "more": "Autres changements : 177",
+    "site": "https://gabella.site/wow/fr/guides/news/",
+    "site_t": "Plus sur le site"
+   },
+   "es": {
+    "h": "Correcciones del 18.11",
+    "src": "Blizzard, en inglés",
+    "upd": "actualizado el 18.11",
+    "sum": [
+     "Sacerdote · Unirse a vampírica: 20% → 10%",
+     "Druida · Crecimiento salvaje: 3,3% → 6,6%",
+     "Taran Icebreaker: 1 → 2",
+     "Riverglades: 1000 → 50",
+     "Red Mageweave Bag: 4 → 5",
+     "Green Silk Pack: 4 → 5"
+    ],
+    "more": "Más cambios: 177",
+    "site": "https://gabella.site/wow/es/guides/news/",
+    "site_t": "Más en la web"
+   },
+   "pt": {
+    "h": "Hotfixes de 18.11",
+    "src": "Blizzard, em inglês",
+    "upd": "atualizado em 18.11",
+    "sum": [
+     "Sacerdote · Abraço Vampírico: 20% → 10%",
+     "Druida · Crescimento Silvestre: 3,3% → 6,6%",
+     "Taran Icebreaker: 1 → 2",
+     "Riverglades: 1000 → 50",
+     "Red Mageweave Bag: 4 → 5",
+     "Green Silk Pack: 4 → 5"
+    ],
+    "more": "Mais mudanças: 177",
+    "site": "https://gabella.site/wow/pt/guides/news/",
+    "site_t": "Mais no site"
+   },
+   "it": {
+    "h": "Hotfix del 18.11",
+    "src": "Blizzard, in inglese",
+    "upd": "aggiornato il 18.11",
+    "sum": [
+     "Sacerdote · Abbraccio Vampirico: 20% → 10%",
+     "Druido · Crescita Rigogliosa: 3,3% → 6,6%",
+     "Taran Icebreaker: 1 → 2",
+     "Riverglades: 1000 → 50",
+     "Red Mageweave Bag: 4 → 5",
+     "Green Silk Pack: 4 → 5"
+    ],
+    "more": "Altre modifiche: 177",
+    "site": "https://gabella.site/wow/it/guides/news/",
+    "site_t": "Di più sul sito"
+   },
+   "pl": {
+    "h": "Hotfixy z 18.11",
+    "src": "Blizzard, po angielsku",
+    "upd": "zaktualizowano 18.11",
+    "sum": [
+     "Priest · Vampiric Embrace: 20% → 10%",
+     "Druid · Wild Growth: 3,3% → 6,6%",
+     "Taran Icebreaker: 1 → 2",
+     "Riverglades: 1000 → 50",
+     "Red Mageweave Bag: 4 → 5",
+     "Green Silk Pack: 4 → 5"
+    ],
+    "more": "Więcej zmian: 177",
+    "site": "https://gabella.site/wow/pl/guides/news/",
+    "site_t": "Więcej na stronie"
+   }
+  }
+ },
+ {
   "id": "us-2419757-1",
   "sha": "a1576bc5",
   "date": "2026-11-17",
@@ -1687,118 +1845,6 @@
      "Green Silk Pack: 4 → 5"
     ],
     "more": "Więcej zmian: 146",
-    "site": "https://gabella.site/wow/pl/guides/news/",
-    "site_t": "Więcej na stronie"
-   }
-  }
- },
- {
-  "id": "art-24315281",
-  "sha": "17b69ad5",
-  "date": "2026-11-06",
-  "at": "2026-11-06T02:31:00Z",
-  "url": "https://worldofwarcraft.blizzard.com/en-us/news/24315281/wow-forever-hotfixes-november-5-2026",
-  "kind": "hotfixes",
-  "beta": false,
-  "title_en": "WoW: Forever Hotfixes - November 5, 2026",
-  "n": 3,
-  "t": {
-   "ru": {
-    "h": "Хотфиксы от 06.11",
-    "src": "Blizzard, на английском",
-    "sum": [
-     "Mild Spices: 2 → 1",
-     "Бег по равнинам (Plainsrunning): ограничено"
-    ],
-    "more": "Ещё изменений: 1",
-    "site": "https://gabella.site/wow/guides/news/",
-    "site_t": "Подробнее на сайте"
-   },
-   "en": {
-    "h": "Hotfixes of Nov 6",
-    "src": "Blizzard",
-    "sum": [
-     "Mild Spices: 2 → 1",
-     "Plainsrunning: narrowed"
-    ],
-    "more": "1 more changes",
-    "site": "https://gabella.site/wow/en/guides/news/",
-    "site_t": "More on the site"
-   },
-   "uk": {
-    "h": "Хотфікси від 06.11",
-    "src": "Blizzard, англійською",
-    "sum": [
-     "Mild Spices: 2 → 1",
-     "Plainsrunning: обмежено"
-    ],
-    "more": "Ще змін: 1",
-    "site": "https://gabella.site/wow/uk/guides/news/",
-    "site_t": "Детальніше на сайті"
-   },
-   "de": {
-    "h": "Hotfixes vom 06.11",
-    "src": "Blizzard, auf Englisch",
-    "sum": [
-     "Mild Spices: 2 → 1",
-     "Ebenenlaufen: eingeschränkt"
-    ],
-    "more": "Weitere Änderungen: 1",
-    "site": "https://gabella.site/wow/de/guides/news/",
-    "site_t": "Mehr auf der Seite"
-   },
-   "fr": {
-    "h": "Correctifs du 06.11",
-    "src": "Blizzard, en anglais",
-    "sum": [
-     "Mild Spices: 2 → 1",
-     "Course dans les plaines: restreint"
-    ],
-    "more": "Autres changements : 1",
-    "site": "https://gabella.site/wow/fr/guides/news/",
-    "site_t": "Plus sur le site"
-   },
-   "es": {
-    "h": "Correcciones del 06.11",
-    "src": "Blizzard, en inglés",
-    "sum": [
-     "Mild Spices: 2 → 1",
-     "Correr planicies: limitado"
-    ],
-    "more": "Más cambios: 1",
-    "site": "https://gabella.site/wow/es/guides/news/",
-    "site_t": "Más en la web"
-   },
-   "pt": {
-    "h": "Hotfixes de 06.11",
-    "src": "Blizzard, em inglês",
-    "sum": [
-     "Mild Spices: 2 → 1",
-     "Vencer Planícies: restrito"
-    ],
-    "more": "Mais mudanças: 1",
-    "site": "https://gabella.site/wow/pt/guides/news/",
-    "site_t": "Mais no site"
-   },
-   "it": {
-    "h": "Hotfix del 06.11",
-    "src": "Blizzard, in inglese",
-    "sum": [
-     "Mild Spices: 2 → 1",
-     "Vagapianure: limitato"
-    ],
-    "more": "Altre modifiche: 1",
-    "site": "https://gabella.site/wow/it/guides/news/",
-    "site_t": "Di più sul sito"
-   },
-   "pl": {
-    "h": "Hotfixy z 06.11",
-    "src": "Blizzard, po angielsku",
-    "sum": [
-     "Mild Spices: 2 → 1",
-     "Plainsrunning: ograniczone"
-    ],
-    "more": "Więcej zmian: 1",
     "site": "https://gabella.site/wow/pl/guides/news/",
     "site_t": "Więcej na stronie"
    }
