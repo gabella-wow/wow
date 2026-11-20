@@ -1,0 +1,255 @@
+{
+ "event": "new",
+ "key": "art-24317681",
+ "source": "article",
+ "region": "us",
+ "topic": null,
+ "post": null,
+ "url": "https://worldofwarcraft.blizzard.com/en-us/news/24317681/wow-forever-class-design-echoes-of-the-worldcore-and-more-in-wow-weekly",
+ "title": "WoW: Forever Class Design, Echoes of the Worldcore, and More in WoW Weekly",
+ "author": "Blizzard Entertainment",
+ "role": "Blizzard News",
+ "created_at": "2026-11-20T18:00:00.000Z",
+ "updated_at": null,
+ "version": null,
+ "category": null,
+ "beta": false,
+ "sha": "d9a0da8ce57068dabe9b63886ce72adc0c5bc352f1814651086e7c7964189d29",
+ "twin_of": null,
+ "also": [],
+ "short_news": {
+  "date": "2026-11-20",
+  "at": "2026-11-20T18:00:00Z",
+  "url": "https://worldofwarcraft.blizzard.com/en-us/news/24317681/wow-forever-class-design-echoes-of-the-worldcore-and-more-in-wow-weekly",
+  "title_en": "WoW: Forever Class Design, Echoes of the Worldcore, and More in WoW Weekly",
+  "kind": "article",
+  "beta": false
+ },
+ "changes": [
+  {
+   "path": [
+    "WoW: Forever Podcast – Catching up on Classes"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Join WoW"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Join WoW: Forever Podcast host Countdown To Classic for a conversation with Senior Game Designer Aidan Moon and Principal Game Designer Kris Zierhut as they take careful aim on class design.",
+   "h": "9de032d0de1e"
+  },
+  {
+   "path": [
+    "WoW: Forever Podcast – Catching up on Classes"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Watch"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Watch now to bring class design into focus.",
+   "h": "9d24ba8cc02b"
+  },
+  {
+   "path": [
+    "Midnight: Echoes of the Worldcore Arrives on December 1"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Azeroth"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Azeroth’s history is waiting beneath the Coreway. Return to Dornogal, face the Storyteller’s macabre tales in Talebound, and join Li Li Stormstout for a Lorewalk through the stories that shaped Azeroth in Midnight: Echoes of the Worldcore.",
+   "h": "b962a5f930af"
+  },
+  {
+   "path": [
+    "Midnight: Echoes of the Worldcore Arrives on December 1"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "The Worldcore"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "The Worldcore is calling, and we can't wait to meet you in Dornogal.",
+   "h": "5f8f0492a1aa"
+  },
+  {
+   "path": [
+    "Get Mythic 2/6 Gear in Labyrinth of Kindo'jan"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "added",
+   "pairs": [],
+   "nums": [],
+   "text": "New to the Labyrinth of Kindo’jan?",
+   "h": "1d06f5e8cbca"
+  },
+  {
+   "path": [
+    "Join the World of Warcraft 22nd Anniversary Celebration"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Tanaris"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    8,
+    17
+   ],
+   "text": "When: November 17–December 8 Where: Caverns of Time in Tanaris",
+   "h": "813e3fa79540"
+  },
+  {
+   "path": [
+    "Join the World of Warcraft 22nd Anniversary Celebration"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Orgrimmar"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    10
+   ],
+   "text": "Players receive an automatic 10% Experience and Reputation buff during the Anniversary Event. Grab the quest from any Holiday Celebrants and hitch a ride to the Caverns of Time through portals located in Orgrimmar and Stormwind.",
+   "h": "76e384a56691"
+  }
+ ],
+ "new_lines": [
+  "9de032d0de1e",
+  "9d24ba8cc02b",
+  "b962a5f930af",
+  "e1e0f7f6f89d",
+  "5f8f0492a1aa",
+  "8ba01d5d5c1c",
+  "32e9bb7bc094",
+  "92c2ee7278d8",
+  "8ba01d5d5c1c",
+  "1500cfbc016e",
+  "ac66e7cdb4e9",
+  "8ba01d5d5c1c",
+  "1748725467a8",
+  "1d06f5e8cbca",
+  "ae7550cdff54",
+  "39ab4305803b",
+  "c6660c05edd9",
+  "813e3fa79540",
+  "76e384a56691",
+  "664caee1ecf4",
+  "8ba01d5d5c1c",
+  "512a4286dee6"
+ ],
+ "gone_lines": [],
+ "outdated": [],
+ "to_check": [
+  "guides/dungeons/blackfathom-deeps/",
+  "guides/dungeons/excavation-site-wetlands/",
+  "guides/dungeons/the-stockade/",
+  "guides/spec-mage-arcane/",
+  "guides/spec-mage-fire/",
+  "guides/spec-mage-frost/",
+  "guides/spec-warlock-affliction/",
+  "guides/spec-warlock-demonology/",
+  "guides/spec-warlock-destruction/"
+ ],
+ "check": [
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Watch",
+   "kind": "changed",
+   "pairs": [],
+   "h": "9d24ba8cc02b",
+   "findings": [
+    {
+     "page": "guides/dungeons/blackfathom-deeps/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Watch the breath bar"
+    },
+    {
+     "page": "guides/dungeons/excavation-site-wetlands/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Watch your threat"
+    },
+    {
+     "page": "guides/dungeons/the-stockade/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Watch your threat"
+    },
+    {
+     "page": "guides/spec-mage-arcane/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Watch Master's Cloak23 armor, +7 stamina — Quest: Morbent FelAlliance"
+    },
+    {
+     "page": "guides/spec-mage-fire/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Watch Master's Cloak23 armor, +7 stamina — Quest: Morbent FelAlliance"
+    },
+    {
+     "page": "guides/spec-mage-frost/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Watch Master's Cloak23 armor, +7 stamina — Quest: Morbent FelAlliance"
+    },
+    {
+     "page": "guides/spec-warlock-affliction/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Watch Master's Cloak23 armor, +7 stamina — Quest: Morbent FelAlliance"
+    },
+    {
+     "page": "guides/spec-warlock-demonology/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Watch Master's Cloak23 armor, +7 stamina — Quest: Morbent FelAlliance"
+    },
+    {
+     "page": "guides/spec-warlock-destruction/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Watch Master's Cloak23 armor, +7 stamina — Quest: Morbent FelAlliance"
+    }
+   ],
+   "sources": [
+    "content/dungeon_pages.py:1065",
+    "content/dungeon_pages.py:1213",
+    "content/dungeon_pages.py:1344"
+   ]
+  }
+ ],
+ "detected_at": "2026-11-20T18:01:02Z"
+}

@@ -219,3 +219,4 @@
 {"at": "2026-11-20T04:11:16Z", "event": "edit", "key": "eu-639885-1", "sha": "adf3ac078a658a2c", "url": "https://eu.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-19-2026/639885/1", "twin_of": "art-24315281", "outdated": 0}
 {"at": "2026-11-20T04:11:16Z", "event": "new", "key": "eu-639885-12", "sha": "a3966b398f5d4167", "url": "https://eu.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-19-2026/639885/12", "twin_of": "art-24315281", "outdated": 0}
 {"at": "2026-11-20T04:11:16Z", "event": "edit", "key": "art-24315281", "sha": "7ca6df1cabfe3b98", "url": "https://worldofwarcraft.blizzard.com/en-us/news/24315281/wow-forever-hotfixes-november-19-2026", "twin_of": null, "outdated": 0}
+{"at": "2026-11-20T18:01:02Z", "event": "new", "key": "art-24317681", "sha": "d9a0da8ce57068da", "url": "https://worldofwarcraft.blizzard.com/en-us/news/24317681/wow-forever-class-design-echoes-of-the-worldcore-and-more-in-wow-weekly", "twin_of": null, "outdated": 0}
