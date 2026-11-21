@@ -1,0 +1,1049 @@
+{
+ "event": "new",
+ "key": "us-2403040-12",
+ "source": "forum",
+ "region": "us",
+ "topic": 2403040,
+ "post": 12,
+ "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-20-2026/2403040/12",
+ "title": "WoW: Forever Hotfixes - November 20, 2026",
+ "author": "Kaivax",
+ "role": "Community Manager",
+ "created_at": "2026-11-18T03:24:08.117Z",
+ "updated_at": "2026-11-18T03:24:08.117Z",
+ "version": 1,
+ "category": 352,
+ "beta": false,
+ "sha": "7fe13b3bdbcf36c093e6492e71e9d37a9e0e1dfe9417ad6a30ca199ccf5d6898",
+ "twin_of": null,
+ "also": [],
+ "short_news": {
+  "date": "2026-11-18",
+  "at": "2026-11-18T03:24:08Z",
+  "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-20-2026/2403040/12",
+  "title_en": "WoW: Forever Hotfixes - November 20, 2026",
+  "kind": "hotfixes",
+  "beta": false
+ },
+ "changes": [
+  {
+   "path": [
+    "Camping"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Mounted Players",
+    "Cozy Sleeping Bag"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Mounted Players will no longer be permitted to sleep while saddled up atop the Cozy Sleeping Bag.",
+   "h": "e5a1959708f7"
+  },
+  {
+   "path": [
+    "Camping"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Cozy Sleeping Bag"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Cozy Sleeping Bag can now be placed in specific locations, like hunter traps.",
+   "h": "4f1f41e241dd"
+  },
+  {
+   "path": [
+    "Camping"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Cozy Sleeping Bag"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Cozy Sleeping Bag will now provide a Resting aura indicating when you are within its area of effect.",
+   "h": "5c505b9da0ba"
+  },
+  {
+   "path": [
+    "Classes"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Might of Stormwind and Warchief’s Blessing should now always correctly cancel on death.",
+   "h": "5f4495ce979e"
+  },
+  {
+   "path": [
+    "Classes"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Might of Stormwind and Warchief’s Blessing are no longer applied to non-players.",
+   "h": "8b7d878fa726"
+  },
+  {
+   "path": [
+    "Classes",
+    "Shaman"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "shaman"
+   },
+   "abilities": [
+    "Flurry"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Flurry incorrectly lost stacks when Windfury totem attacks landed.",
+   "h": "672930de5b02"
+  },
+  {
+   "path": [
+    "Enemies and NPCs"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Thousand Needles"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Thousand Needles - Fixed an issue where a Pesterhide Snarler or Needles Cougar could spawn inside a rock.",
+   "h": "b6b87e0c7ca5"
+  },
+  {
+   "path": [
+    "Enemies and NPCs"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Thousand Needles"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Thousand Needles - Fixed an issue where a Gravelysnout Digger or Surveyour could path inside a rock.",
+   "h": "9f7262bd6700"
+  },
+  {
+   "path": [
+    "Items"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Shadow Priests"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Shadow Priests can now hold a Night Watchman’s Torch.",
+   "h": "5fccafc70c9a"
+  },
+  {
+   "path": [
+    "Items"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Escape Plan"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Escape Plan now has correct range and damage values.",
+   "h": "807fc6b37630"
+  },
+  {
+   "path": [
+    "Items",
+    "Paladin"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin"
+   },
+   "abilities": [
+    "Soulforge Armor"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Soulforge Armor (upgraded Dungeon Set for tanks) now has Spell Power (was Strength).",
+   "h": "f1fbcb6f8a7a"
+  },
+  {
+   "path": [
+    "Legacy"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Reagent Economy"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Reagent Economy should no longer randomly stop working.",
+   "h": "cad42ab27ea1"
+  },
+  {
+   "path": [
+    "Player versus Player"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue allowing players to mount up in the starting rooms in Warsong Gulch.",
+   "h": "e22058cc715d"
+  },
+  {
+   "path": [
+    "Player versus Player"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    58
+   ],
+   "text": "The Battle for Alterac Valley quests now require level 58 to accept.",
+   "h": "0ebf0e6842d8"
+  },
+  {
+   "path": [
+    "Professions"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed a bug that allowed for certain Waylaid Crate conversions to reward an obsolete turn-in item. Players affected can now turn these crates in for the intended reward.",
+   "h": "e4701a558d4f"
+  },
+  {
+   "path": [
+    "Professions"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Various Paletusks"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Various Paletusks can no longer be pickpocketed",
+   "h": "983b682359ed"
+  },
+  {
+   "path": [
+    "Professions",
+    "Blacksmithing"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Orcish"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "The quest “The Old Ways” now grants the Orcish War Leggings recipe via an item. Players who did not receive their recipe, or lose it, can acquire a replacement from Sumi inside the nearby blacksmithing hut once the quest is completed.",
+   "h": "95bb163ba9eb"
+  },
+  {
+   "path": [
+    "Professions",
+    "Blacksmithing"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Bronze Mace"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Bronze Mace is now Bind on Equip (was unbound). This also allows it to be added to the Transmog Collection.",
+   "h": "4baf8b1a5b35"
+  },
+  {
+   "path": [
+    "Professions",
+    "Blacksmithing"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Craftsman’s Writ"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Craftsman’s Writ: Golden Scale Gauntlets now correctly directs players to the completion NPC when ready to turn-in.",
+   "h": "fd705c48684d"
+  },
+  {
+   "path": [
+    "Professions",
+    "Herbalism"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Cultivation"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed a bug that prevented Cultivation from working correctly on Mageroyal.",
+   "h": "d2e6b3804b76"
+  },
+  {
+   "path": [
+    "Professions",
+    "Herbalism"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Wildflowers for the quest “Her World” will no longer be tracked by Find Herb unless you are on the quest.",
+   "h": "0da518281e04"
+  },
+  {
+   "path": [
+    "Professions",
+    "Skinning"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Skinners"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Skinners can no longer skin a few creatures that typically are not skinnable.",
+   "h": "39da7c4668ca"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    7
+   ],
+   "text": "A bin of mail has been discovered in SI:7 quarters and Mathias Shaw can now give rogues the letter that they’ve been expecting for “The Manor, Ravenholdt”.",
+   "h": "4810d56b9da8"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "“Show Them How It’s Done” can now be properly seen on your map.",
+   "h": "71368ed81e6a"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Wetlands"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Questing players should now encounter more Fen Creepers in Wetlands for “Blisters on the Land”.",
+   "h": "7d5526286bd1"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Find Treasure"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Quest “Step One: Rock” rockpiles will now be tracked via Find Minerals (was Find Treasure) while on the quest.",
+   "h": "1cb1592ba249"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "There are now more Gravelsnout Diggers and Surveyors available for the quest “A New Ore Sample”. You may take ore sample, but we strongly advise you do not take candle.",
+   "h": "842d2c4b454c"
+  },
+  {
+   "path": [
+    "Quests",
+    "Shen’dralas"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Repairing pylon objectives for “Powering the Pylons” is now shared with nearby party members.",
+   "h": "0c503f0f1ffb"
+  },
+  {
+   "path": [
+    "Quests",
+    "Shen’dralas"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "The Depleted Crystal Heart for the quest “Heart of Crystal” now drops for all players in a party.",
+   "h": "714e4ee12a90"
+  },
+  {
+   "path": [
+    "Quests",
+    "Shen’dralas"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Rokren for the Gelkis escort quest “Going Home” has had his escape speed reduced.",
+   "h": "b179bca1b7a0"
+  },
+  {
+   "path": [
+    "Quests",
+    "Shen’dralas"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Miners"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Miners can now track “Spectral Iron Ore”.",
+   "h": "624e762cc349"
+  },
+  {
+   "path": [
+    "Quests",
+    "Shen’dralas"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Spectral Iron Ore spawn rate increased.",
+   "h": "7d2582d5fe7d"
+  },
+  {
+   "path": [
+    "Quests",
+    "Shen’dralas"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Reduced the frequency that Bristleback Skullcrushers cast their abilities.",
+   "h": "b9129b4e7506"
+  },
+  {
+   "path": [
+    "Quests",
+    "Shen’dralas"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Reduced the frequency that Decrepit Pylon Protectors cast their abilities.",
+   "h": "40fe8f75c880"
+  },
+  {
+   "path": [
+    "Quests",
+    "Shen’dralas"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Summon Undead Ravager cast by various necromancers can now be interrupted.",
+   "h": "a88d6bf9d5e3"
+  },
+  {
+   "path": [
+    "Quests",
+    "Shen’dralas"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Razorfen Downs"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "The quest “Agamaggan’s Blood” is no longer a Dungeon Quest and can be completed in the elite area outside of Razorfen Downs.",
+   "h": "8da8ae7d872c"
+  },
+  {
+   "path": [
+    "User Interface"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed a bug preventing players’ ignore lists from persisting through logging out of the game.",
+   "h": "ad51e27230c7"
+  },
+  {
+   "path": [
+    "User Interface"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fix a UI bug with Master Swordsmith, Master Axesmith, Master Hammersmith.",
+   "h": "c161723e575f"
+  }
+ ],
+ "new_lines": [
+  "e5a1959708f7",
+  "4f1f41e241dd",
+  "5c505b9da0ba",
+  "5f4495ce979e",
+  "8b7d878fa726",
+  "672930de5b02",
+  "5817de308e30",
+  "a43220d8c5dd",
+  "b6b87e0c7ca5",
+  "9f7262bd6700",
+  "5fccafc70c9a",
+  "807fc6b37630",
+  "1fa0c3bff068",
+  "f1fbcb6f8a7a",
+  "dc47c3a38e19",
+  "cad42ab27ea1",
+  "e22058cc715d",
+  "0ebf0e6842d8",
+  "e4701a558d4f",
+  "983b682359ed",
+  "95bb163ba9eb",
+  "4baf8b1a5b35",
+  "fd705c48684d",
+  "d2e6b3804b76",
+  "0da518281e04",
+  "39da7c4668ca",
+  "4810d56b9da8",
+  "71368ed81e6a",
+  "7d5526286bd1",
+  "1cb1592ba249",
+  "842d2c4b454c",
+  "0c503f0f1ffb",
+  "714e4ee12a90",
+  "b179bca1b7a0",
+  "624e762cc349",
+  "7d2582d5fe7d",
+  "b9129b4e7506",
+  "40fe8f75c880",
+  "a88d6bf9d5e3",
+  "8da8ae7d872c",
+  "ad51e27230c7",
+  "c161723e575f"
+ ],
+ "gone_lines": [],
+ "outdated": [],
+ "to_check": [
+  "assets/hero/en.json",
+  "guides/dungeons/excavation-site-wetlands/",
+  "guides/dungeons/shadowfang-keep/",
+  "guides/dungeons/the-deadmines/",
+  "guides/dungeons/the-stockade/",
+  "guides/legacy/",
+  "guides/leveling/",
+  "guides/transport/",
+  "races/dwarf/",
+  "races/orc/",
+  "races/skyborne-horde/",
+  "races/tauren/",
+  "races/troll/",
+  "races/undead/"
+ ],
+ "check": [
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Mounted Players",
+   "kind": "no_longer",
+   "pairs": [],
+   "h": "e5a1959708f7",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Cozy Sleeping Bag",
+   "kind": "changed",
+   "pairs": [],
+   "h": "4f1f41e241dd",
+   "findings": [
+    {
+     "page": "guides/leveling/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "The Cozy Sleeping Bag gives up to 3% and stays after death, and lying on it builds rest even while offline"
+    }
+   ],
+   "sources": [
+    "content/guides.py:822",
+    "content/guides.py:823",
+    "content/guides.py:824",
+    "journey.src.html:48",
+    "i18n/en.txt:499"
+   ]
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Cozy Sleeping Bag",
+   "kind": "changed",
+   "pairs": [],
+   "h": "5c505b9da0ba",
+   "findings": [
+    {
+     "page": "guides/leveling/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "The Cozy Sleeping Bag gives up to 3% and stays after death, and lying on it builds rest even while offline"
+    }
+   ],
+   "sources": [
+    "content/guides.py:822",
+    "content/guides.py:823",
+    "content/guides.py:824",
+    "journey.src.html:48",
+    "i18n/en.txt:499"
+   ]
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Shadow Priests",
+   "kind": "changed",
+   "pairs": [],
+   "h": "5fccafc70c9a",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Escape Plan",
+   "kind": "changed",
+   "pairs": [],
+   "h": "807fc6b37630",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "class",
+    "id": "paladin"
+   },
+   "ability": "Soulforge Armor",
+   "kind": "changed",
+   "pairs": [],
+   "h": "f1fbcb6f8a7a",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Reagent Economy",
+   "kind": "no_longer",
+   "pairs": [],
+   "h": "cad42ab27ea1",
+   "findings": [
+    {
+     "page": "guides/legacy/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Reagent Economy (1): class abilities need no bought reagents, tier 1 camp objects need no materials"
+    },
+    {
+     "page": "guides/leveling/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Reagent Economy improve the camp"
+    }
+   ],
+   "sources": [
+    "content/guides.py:912",
+    "content/guides.py:913",
+    "content/guides.py:914",
+    "content/guides.py:2264",
+    "content/guides.py:2266",
+    "content/guides.py:2293",
+    "journey.src.html:67",
+    "i18n/en.txt:375",
+    "i18n/en.txt:517"
+   ]
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Various Paletusks",
+   "kind": "no_longer",
+   "pairs": [],
+   "h": "983b682359ed",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Orcish",
+   "kind": "changed",
+   "pairs": [],
+   "h": "95bb163ba9eb",
+   "findings": [
+    {
+     "page": "races/orc/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Orcish"
+    },
+    {
+     "page": "races/skyborne-horde/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Orcish, Darnassian"
+    },
+    {
+     "page": "races/tauren/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Orcish, Taur-ahe"
+    },
+    {
+     "page": "races/troll/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Orcish, Troll"
+    },
+    {
+     "page": "races/undead/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Orcish, Gutterspeak"
+    }
+   ],
+   "sources": [
+    "i18n/en.txt:1038",
+    "i18n/en.txt:1050",
+    "i18n/en.txt:1061",
+    "i18n/en.txt:1072",
+    "i18n/en.txt:1082"
+   ]
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Bronze Mace",
+   "kind": "changed",
+   "pairs": [],
+   "h": "4baf8b1a5b35",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Craftsman’s Writ",
+   "kind": "changed",
+   "pairs": [],
+   "h": "fd705c48684d",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Skinners",
+   "kind": "no_longer",
+   "pairs": [],
+   "h": "39da7c4668ca",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Wetlands",
+   "kind": "changed",
+   "pairs": [],
+   "h": "7d5526286bd1",
+   "findings": [
+    {
+     "page": "guides/dungeons/excavation-site-wetlands/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Wetlands: Dragonmaw orcs dig for titan relics and wake their guardian"
+    },
+    {
+     "page": "guides/dungeons/shadowfang-keep/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Wetlands and Southshore in the Hillsbrad Foothills (Method)"
+    },
+    {
+     "page": "guides/dungeons/the-stockade/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Wetlands"
+    },
+    {
+     "page": "guides/leveling/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Wetlands"
+    },
+    {
+     "page": "guides/transport/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Wetlands to Dustwallow Marsh"
+    }
+   ],
+   "sources": [
+    "content/guides.py:662",
+    "content/guides.py:770",
+    "content/guides.py:771",
+    "content/guides.py:772",
+    "content/guides.py:1149",
+    "content/guides.py:1166",
+    "content/guides.py:1227",
+    "content/guides.py:1228",
+    "content/guides.py:1229",
+    "content/guides.py:1252",
+    "content/guides.py:1300",
+    "content/dungeon_pages.py:840",
+    "content/dungeon_pages.py:841",
+    "content/dungeon_pages.py:842",
+    "content/dungeon_pages.py:1266",
+    "content/dungeon_pages.py:1267",
+    "content/dungeon_pages.py:1284",
+    "content/dungeon_pages.py:1285",
+    "content/dungeon_pages.py:1286",
+    "content/dungeon_pages.py:1287",
+    "content/dungeon_pages.py:1288",
+    "content/dungeon_pages.py:1292",
+    "content/dungeon_pages.py:1380",
+    "content/dungeon_pages.py:1381",
+    "content/dungeon_pages.py:1382",
+    "content/dungeon_pages.py:1386",
+    "content/dungeon_pages.py:1387"
+   ]
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Find Treasure",
+   "kind": "changed",
+   "pairs": [],
+   "h": "1cb1592ba249",
+   "findings": [
+    {
+     "page": "races/dwarf/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Find Treasure Shows nearby chests and gives a chance at extra items in most chests"
+    }
+   ],
+   "sources": [
+    "i18n/en.txt:240"
+   ]
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Miners",
+   "kind": "changed",
+   "pairs": [],
+   "h": "624e762cc349",
+   "findings": [
+    {
+     "page": "guides/dungeons/the-deadmines/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Miners around"
+    }
+   ],
+   "sources": [
+    "content/dungeon_pages.py:567",
+    "content/dungeon_pages.py:573"
+   ]
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Razorfen Downs",
+   "kind": "no_longer",
+   "pairs": [],
+   "h": "8da8ae7d872c",
+   "findings": [
+    {
+     "page": "assets/hero/en.json",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Razorfen Downs"
+    },
+    {
+     "page": "guides/leveling/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Razorfen Downs"
+    }
+   ],
+   "sources": [
+    "content/guides.py:805",
+    "content/guides.py:806",
+    "content/guides.py:807"
+   ]
+  }
+ ],
+ "detected_at": "2026-11-21T00:21:35Z"
+}

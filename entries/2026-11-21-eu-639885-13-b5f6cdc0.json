@@ -1,0 +1,532 @@
+{
+ "event": "new",
+ "key": "eu-639885-13",
+ "source": "forum",
+ "region": "eu",
+ "topic": 639885,
+ "post": 13,
+ "url": "https://eu.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-20-2026/639885/13",
+ "title": "WoW: Forever Hotfixes - November 20, 2026",
+ "author": "Kaivax",
+ "role": "Community Manager",
+ "created_at": "2026-11-21T00:19:23.672Z",
+ "updated_at": "2026-11-21T00:19:23.672Z",
+ "version": 1,
+ "category": 360,
+ "beta": false,
+ "sha": "b5f6cdc0d46ad3b22c972701f647104d1911838bdc7cbba70f4fe74e5487bcad",
+ "twin_of": "us-2403040-14",
+ "also": [],
+ "short_news": {
+  "date": "2026-11-21",
+  "at": "2026-11-21T00:19:23Z",
+  "url": "https://eu.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-20-2026/639885/13",
+  "title_en": "WoW: Forever Hotfixes - November 20, 2026",
+  "kind": "hotfixes",
+  "beta": false
+ },
+ "changes": [
+  {
+   "path": [
+    "Classes",
+    "Rogue",
+    "Combat"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "combat"
+   },
+   "abilities": [
+    "Blade Flurry"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Blade Flurry will now correctly cause Shank’s damage to hit an additional target.",
+   "h": "316c62733961"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warlock",
+    "Demonology"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warlock",
+    "spec": "demonology"
+   },
+   "abilities": [
+    "Demonic Aegis",
+    "Demon Armor",
+    "Demon Skin"
+   ],
+   "kind": "removed",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed a bug where the effects of the Demonic Aegis talent could be snapshotted into your Demon Armor or Demon Skin and then untalented to retain the effects. Demonic Aegis and Demon Skin are removed when your talents are unlearned.",
+   "h": "d1cc97357530"
+  },
+  {
+   "path": [
+    "Dungeons"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 5,
+     "old": 10,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    5,
+    10
+   ],
+   "text": "Players can now reset and enter each dungeon a maximum of 5 times per hour (was 10).",
+   "h": "acdc5654999a"
+  },
+  {
+   "path": [
+    "Dungeons",
+    "Blackrock Spire"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "A rebel stone pillar should no longer trap unsuspecting adventurers.",
+   "h": "254ffa844b39"
+  },
+  {
+   "path": [
+    "Enemies and NPCs"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Orgrimmar"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Orgrimmar - Mayhoa Skyhoof no longer has glowing eyes.",
+   "h": "8f21fb7caeba"
+  },
+  {
+   "path": [
+    "Items"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 3,
+     "old": 4,
+     "unit": "%",
+     "old_unit": "%"
+    },
+    {
+     "new": 18,
+     "old": 30,
+     "unit": "",
+     "old_unit": ""
+    }
+   ],
+   "nums": [
+    3,
+    4,
+    18,
+    30
+   ],
+   "text": "Stormshroud Armor 3-piece bonus changed to a 3% chance (was 4%) on melee attack of restoring 18 energy (was 30).",
+   "h": "4db0ba53b478"
+  },
+  {
+   "path": [
+    "Professions"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Toron Rockhoof"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Toron Rockhoof has repaired his forge and anvil in Summit of Eternity and they should now be usable for blacksmithing and smelting.",
+   "h": "37a13badd05f"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "The Hinterlands"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "The Hinterlands - Witch Doctor Ti’ik now drops multiple copies of his head when killed by a group that have the quest “Witch Doctor Ti’ik.” It be da voodoo, mon.",
+   "h": "cb41e7d3eed5"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Feralas"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Feralas - Fixed an issue where Perfect Yeti Hide could drop again while you’re already on the quest it starts, “Perfect Yeti Hide.”",
+   "h": "0d6785742de1"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Tanaris"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Tanaris - Gor’marok now respawns more quickly for the quest “The Dunemaul Compound.”",
+   "h": "a8a130e11a3e"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Riverglades"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Riverglades - Dunston Willis no longer runs partway through the quest “Dunston Checks Out.”",
+   "h": "f5dad48aba8f"
+  },
+  {
+   "path": [
+    "User Interface"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Resolved an issue that caused some players to see fewer groups than intended when looking for a group.",
+   "h": "cf969ec2b617"
+  }
+ ],
+ "new_lines": [
+  "316c62733961",
+  "d1cc97357530",
+  "acdc5654999a",
+  "254ffa844b39",
+  "8f21fb7caeba",
+  "4db0ba53b478",
+  "37a13badd05f",
+  "cb41e7d3eed5",
+  "0d6785742de1",
+  "a8a130e11a3e",
+  "f5dad48aba8f",
+  "cf969ec2b617"
+ ],
+ "gone_lines": [],
+ "outdated": [],
+ "to_check": [
+  "classes/rogue/",
+  "guides/builds-rogue/",
+  "guides/dungeons/excavation-site-wetlands/",
+  "guides/dungeons/ragefire-chasm/",
+  "guides/leveling-rogue/",
+  "guides/leveling/",
+  "guides/spec-rogue-assassination/",
+  "guides/spec-rogue-combat/",
+  "guides/spec-rogue-subtlety/",
+  "guides/transport/",
+  "races/orc/",
+  "races/troll/"
+ ],
+ "check": [
+  {
+   "subject": {
+    "type": "class",
+    "id": "rogue",
+    "spec": "combat"
+   },
+   "ability": "Blade Flurry",
+   "kind": "changed",
+   "pairs": [],
+   "h": "316c62733961",
+   "findings": [
+    {
+     "page": "classes/rogue/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Blade Flurry Damage to a second target"
+    },
+    {
+     "page": "guides/builds-rogue/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Blade Flurry: damage to a second target"
+    },
+    {
+     "page": "guides/leveling-rogue/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Blade Flurry hits two enemies at once"
+    },
+    {
+     "page": "guides/spec-rogue-assassination/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Blade Flurry hits two enemies at once"
+    },
+    {
+     "page": "guides/spec-rogue-combat/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Blade Flurry: damage to a second target"
+    },
+    {
+     "page": "guides/spec-rogue-subtlety/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Blade Flurry hits two enemies at once"
+    }
+   ],
+   "sources": [
+    "content/class_guides.py:510",
+    "content/class_guides.py:514",
+    "content/class_guides.py:534",
+    "content/class_guides.py:575",
+    "content/class_guides.py:585",
+    "content/class_guides.py:628",
+    "content/spec_builds.py:748",
+    "content/spec_builds.py:749",
+    "content/spec_builds.py:761",
+    "content/talents/rogue.json:451"
+   ]
+  },
+  {
+   "subject": {
+    "type": "class",
+    "id": "warlock",
+    "spec": "demonology"
+   },
+   "ability": "Demonic Aegis",
+   "kind": "removed",
+   "pairs": [],
+   "h": "d1cc97357530",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Orgrimmar",
+   "kind": "no_longer",
+   "pairs": [],
+   "h": "8f21fb7caeba",
+   "findings": [
+    {
+     "page": "guides/dungeons/excavation-site-wetlands/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Orgrimmar Horde"
+    },
+    {
+     "page": "guides/dungeons/ragefire-chasm/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Orgrimmar: four bosses, tactics for the tank, healer and damage dealers, what to dispel and interrupt, five quests"
+    },
+    {
+     "page": "guides/leveling/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Orgrimmar cheap"
+    },
+    {
+     "page": "guides/transport/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Orgrimmar ↔ Undercity A zeppelin"
+    },
+    {
+     "page": "races/orc/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Orgrimmar"
+    },
+    {
+     "page": "races/troll/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Orgrimmar"
+    }
+   ],
+   "sources": [
+    "content/races.py:89",
+    "content/races.py:133",
+    "content/guides.py:671",
+    "content/guides.py:675",
+    "content/guides.py:1184",
+    "content/guides.py:1192",
+    "content/guides.py:1193",
+    "content/guides.py:1194",
+    "content/guides.py:1223",
+    "content/guides.py:1301",
+    "content/dungeon_pages.py:381",
+    "content/dungeon_pages.py:382",
+    "content/dungeon_pages.py:383",
+    "content/dungeon_pages.py:384",
+    "content/dungeon_pages.py:385",
+    "content/dungeon_pages.py:486",
+    "content/dungeon_pages.py:489",
+    "i18n/en.txt:1035",
+    "i18n/en.txt:1043",
+    "i18n/en.txt:1077"
+   ]
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Toron Rockhoof",
+   "kind": "changed",
+   "pairs": [],
+   "h": "37a13badd05f",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "The Hinterlands",
+   "kind": "changed",
+   "pairs": [],
+   "h": "cb41e7d3eed5",
+   "findings": [
+    {
+     "page": "guides/leveling/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "The Hinterlands, then Searing Gorge, Blasted Lands, Azshara, from 48 Un’Goro Crater and Felwood"
+    }
+   ],
+   "sources": [
+    "content/guides.py:776",
+    "content/guides.py:777",
+    "content/guides.py:778",
+    "content/guides.py:796",
+    "content/guides.py:797",
+    "content/guides.py:798"
+   ]
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Tanaris",
+   "kind": "changed",
+   "pairs": [],
+   "h": "a8a130e11a3e",
+   "findings": [
+    {
+     "page": "guides/leveling/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Tanaris, Feralas, The Hinterlands, then Searing Gorge, Blasted Lands, Azshara, from 48 Un’Goro Crater and Felwood"
+    },
+    {
+     "page": "guides/transport/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Tanaris to the new Riverglades zone"
+    }
+   ],
+   "sources": [
+    "content/guides.py:656",
+    "content/guides.py:664",
+    "content/guides.py:678",
+    "content/guides.py:1201"
+   ]
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Riverglades",
+   "kind": "no_longer",
+   "pairs": [],
+   "h": "f5dad48aba8f",
+   "findings": [
+    {
+     "page": "guides/leveling/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Riverglades zone between Redridge and Burning Steppes, Dustwallow Marsh, Badlands, Swamp of Sorrows"
+    },
+    {
+     "page": "guides/transport/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Riverglades zone"
+    }
+   ],
+   "sources": [
+    "content/guides.py:773",
+    "content/guides.py:774",
+    "content/guides.py:775",
+    "content/guides.py:793",
+    "content/guides.py:794",
+    "content/guides.py:795",
+    "content/guides.py:1201",
+    "content/guides.py:1319",
+    "content/guides.py:1320",
+    "content/guides.py:1321",
+    "content/guides.py:1327",
+    "content/guides.py:1328",
+    "content/guides.py:1329"
+   ]
+  }
+ ],
+ "detected_at": "2026-11-21T00:21:35Z"
+}
