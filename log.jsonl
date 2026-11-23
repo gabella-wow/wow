@@ -229,3 +229,4 @@
 {"at": "2026-11-21T00:21:35Z", "event": "edit", "key": "art-24315281", "sha": "3a79116e20402b97", "url": "https://worldofwarcraft.blizzard.com/en-us/news/24315281/wow-forever-hotfixes-november-20-2026", "twin_of": "us-2403040-1", "outdated": 0}
 {"at": "2026-11-23T16:31:01Z", "event": "new", "key": "us-2426335-4", "sha": "89308b06426c142d", "url": "https://us.forums.blizzard.com/en/wow/t/lockbox-exploit-and-economy-hold-heuristic/2426335/4", "twin_of": null, "outdated": 0}
 {"at": "2026-11-23T16:31:01Z", "event": "new", "key": "eu-645296-2", "sha": "3785dedfda2142a2", "url": "https://eu.forums.blizzard.com/en/wow/t/another-exploit/645296/2", "twin_of": null, "outdated": 0}
+{"at": "2026-11-23T18:41:00Z", "event": "new", "key": "eu-643840-233", "sha": "ac8eb12f1d3395d2", "url": "https://eu.forums.blizzard.com/en/wow/t/battleground-queues-honor-ranks-honor-points-broken-major-bug-hundreds-of-players-affected-layershard-15/643840/233", "twin_of": null, "outdated": 0}
