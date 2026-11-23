@@ -227,3 +227,5 @@
 {"at": "2026-11-21T00:21:35Z", "event": "edit", "key": "eu-639885-1", "sha": "65cf45f929166136", "url": "https://eu.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-20-2026/639885/1", "twin_of": "us-2403040-1", "outdated": 0}
 {"at": "2026-11-21T00:21:35Z", "event": "new", "key": "eu-639885-13", "sha": "b5f6cdc0d46ad3b2", "url": "https://eu.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-20-2026/639885/13", "twin_of": "us-2403040-14", "outdated": 0}
 {"at": "2026-11-21T00:21:35Z", "event": "edit", "key": "art-24315281", "sha": "3a79116e20402b97", "url": "https://worldofwarcraft.blizzard.com/en-us/news/24315281/wow-forever-hotfixes-november-20-2026", "twin_of": "us-2403040-1", "outdated": 0}
+{"at": "2026-11-23T16:31:01Z", "event": "new", "key": "us-2426335-4", "sha": "89308b06426c142d", "url": "https://us.forums.blizzard.com/en/wow/t/lockbox-exploit-and-economy-hold-heuristic/2426335/4", "twin_of": null, "outdated": 0}
+{"at": "2026-11-23T16:31:01Z", "event": "new", "key": "eu-645296-2", "sha": "3785dedfda2142a2", "url": "https://eu.forums.blizzard.com/en/wow/t/another-exploit/645296/2", "twin_of": null, "outdated": 0}
