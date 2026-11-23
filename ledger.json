@@ -1,5 +1,5 @@
 {
- "last_run": "2026-11-23T06:40:54Z",
+ "last_run": "2026-11-23T06:51:04Z",
  "posts": {
   "art-24301455": {
    "checked": "2026-10-29T20:21:03Z",
@@ -773,7 +773,7 @@
    "version": null
   },
   "art-24317086": {
-   "checked": "2026-11-23T00:41:04Z",
+   "checked": "2026-11-23T06:51:04Z",
    "lines": [],
    "seen": "2026-11-19T17:21:05Z",
    "sha": "fdc4561a0604d6ceaf4f4dcf2f0cd93e83f64d0137a4e2b3040534204d1ee432",
@@ -783,7 +783,7 @@
    "version": null
   },
   "art-24317681": {
-   "checked": "2026-11-23T00:41:04Z",
+   "checked": "2026-11-23T06:51:04Z",
    "lines": [
     "9de032d0de1e",
     "9d24ba8cc02b",
@@ -794,7 +794,7 @@
     "76e384a56691"
    ],
    "seen": "2026-11-20T18:01:00Z",
-   "sha": "710cf2b1670e25f0e5c09fb218e0295c32034f1968a88eee5a58963891de6edf",
+   "sha": "1a989e191b767950fe7224c2575b3712377c738ad43a2b646f301d8bc9c42288",
    "title": "WoW: Forever Class Design, Echoes of the Worldcore, and More in WoW Weekly",
    "updated_at": null,
    "url": "https://worldofwarcraft.blizzard.com/en-us/news/24317681/wow-forever-class-design-echoes-of-the-worldcore-and-more-in-wow-weekly",
@@ -925,7 +925,7 @@
    "version": 1
   },
   "eu-631316-1": {
-   "checked": "2026-11-23T06:40:54Z",
+   "checked": "2026-11-23T06:51:04Z",
    "lines": [
     "b980faad67e4",
     "551f003b8fd3",
@@ -1063,7 +1063,7 @@
    "version": 5
   },
   "eu-631316-10": {
-   "checked": "2026-11-23T06:40:54Z",
+   "checked": "2026-11-23T06:51:04Z",
    "lines": [
     "65ad0c5dbf28",
     "ce9a126c7693",
@@ -1081,7 +1081,7 @@
    "version": 1
   },
   "eu-631316-4": {
-   "checked": "2026-11-23T06:40:54Z",
+   "checked": "2026-11-23T06:51:04Z",
    "lines": [
     "a9f91ef9a1d3",
     "3f0687de02e8",
@@ -1236,7 +1236,7 @@
    "version": 3
   },
   "eu-631316-5": {
-   "checked": "2026-11-23T06:40:54Z",
+   "checked": "2026-11-23T06:51:04Z",
    "lines": [
     "862affbc3ad5",
     "3e1771b3fd67",
@@ -1374,7 +1374,7 @@
    "version": 1
   },
   "eu-631316-6": {
-   "checked": "2026-11-23T06:40:54Z",
+   "checked": "2026-11-23T06:51:04Z",
    "lines": [
     "ba02c8dc2b40",
     "cdd748e437cc",
@@ -1612,7 +1612,7 @@
    "version": 2
   },
   "eu-631316-7": {
-   "checked": "2026-11-23T06:40:54Z",
+   "checked": "2026-11-23T06:51:04Z",
    "lines": [
     "c2f53382556d",
     "157b13cf95b2",
@@ -1640,7 +1640,7 @@
    "version": 4
   },
   "eu-631316-8": {
-   "checked": "2026-11-23T06:40:54Z",
+   "checked": "2026-11-23T06:51:04Z",
    "lines": [
     "180749eee47d",
     "57c724e3010c",
@@ -1657,7 +1657,7 @@
    "version": 2
   },
   "eu-631316-9": {
-   "checked": "2026-11-23T06:40:54Z",
+   "checked": "2026-11-23T06:51:04Z",
    "lines": [
     "eabd14472cc2",
     "e75ab1fa1bb9",
@@ -2012,7 +2012,7 @@
    "version": 1
   },
   "eu-635356-1": {
-   "checked": "2026-11-23T00:41:04Z",
+   "checked": "2026-11-23T06:51:04Z",
    "lines": [],
    "seen": "2026-10-27T19:21:05Z",
    "sha": "f15969eaf56fa1bc55b4e85222fccff4e7a4c50e9577f57b5665748f759a3300",
@@ -3111,7 +3111,7 @@
    "version": 3
   },
   "us-2360696-1": {
-   "checked": "2026-11-23T06:40:54Z",
+   "checked": "2026-11-23T06:51:04Z",
    "lines": [
     "b980faad67e4",
     "551f003b8fd3",
@@ -3249,7 +3249,7 @@
    "version": 5
   },
   "us-2360696-10": {
-   "checked": "2026-11-23T06:40:54Z",
+   "checked": "2026-11-23T06:51:04Z",
    "lines": [
     "65ad0c5dbf28",
     "ce9a126c7693",
@@ -3267,7 +3267,7 @@
    "version": 1
   },
   "us-2360696-4": {
-   "checked": "2026-11-23T06:40:54Z",
+   "checked": "2026-11-23T06:51:04Z",
    "lines": [
     "a9f91ef9a1d3",
     "3f0687de02e8",
@@ -3422,7 +3422,7 @@
    "version": 4
   },
   "us-2360696-5": {
-   "checked": "2026-11-23T06:40:54Z",
+   "checked": "2026-11-23T06:51:04Z",
    "lines": [
     "862affbc3ad5",
     "3e1771b3fd67",
@@ -3560,7 +3560,7 @@
    "version": 1
   },
   "us-2360696-6": {
-   "checked": "2026-11-23T06:40:54Z",
+   "checked": "2026-11-23T06:51:04Z",
    "lines": [
     "ba02c8dc2b40",
     "cdd748e437cc",
@@ -3798,7 +3798,7 @@
    "version": 2
   },
   "us-2360696-7": {
-   "checked": "2026-11-23T06:40:54Z",
+   "checked": "2026-11-23T06:51:04Z",
    "lines": [
     "c2f53382556d",
     "157b13cf95b2",
@@ -3826,7 +3826,7 @@
    "version": 4
   },
   "us-2360696-8": {
-   "checked": "2026-11-23T06:40:54Z",
+   "checked": "2026-11-23T06:51:04Z",
    "lines": [
     "180749eee47d",
     "57c724e3010c",
@@ -3843,7 +3843,7 @@
    "version": 2
   },
   "us-2360696-9": {
-   "checked": "2026-11-23T06:40:54Z",
+   "checked": "2026-11-23T06:51:04Z",
    "lines": [
     "eabd14472cc2",
     "e75ab1fa1bb9",
@@ -5530,7 +5530,7 @@
   "us-2419757-1": "a1576bc5",
   "us-2422535-1": "e3b0c442"
  },
- "requests": 12,
+ "requests": 16,
  "sources": {
   "articles:24301455": {
    "fails": 0,
@@ -5626,11 +5626,11 @@
   },
   "articles:24317086": {
    "fails": 0,
-   "ok": "2026-11-23T00:41:04Z"
+   "ok": "2026-11-23T06:51:04Z"
   },
   "articles:24317681": {
    "fails": 0,
-   "ok": "2026-11-23T00:41:03Z"
+   "ok": "2026-11-23T06:51:04Z"
   },
   "articles:24317865": {
    "fails": 0,
@@ -5644,31 +5644,31 @@
    "err": "HTTPError: HTTP Error 502: Bad Gateway",
    "err_at": "2026-11-12T05:40:56Z",
    "fails": 0,
-   "ok": "2026-11-23T06:40:54Z"
+   "ok": "2026-11-23T06:51:03Z"
   },
   "eu:c/wow-forever-beta-discussion/362": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-16T14:40:58Z",
    "fails": 0,
-   "ok": "2026-11-23T06:40:51Z"
+   "ok": "2026-11-23T06:50:57Z"
   },
   "eu:c/wow-forever-beta-discussion/362/new": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-16T14:41:00Z",
    "fails": 0,
-   "ok": "2026-11-23T06:40:52Z"
+   "ok": "2026-11-23T06:50:58Z"
   },
   "eu:c/wow-forever/359": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-22T12:10:51Z",
    "fails": 0,
-   "ok": "2026-11-23T06:40:49Z"
+   "ok": "2026-11-23T06:50:54Z"
   },
   "eu:c/wow-forever/359/new": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-16T14:40:55Z",
    "fails": 0,
-   "ok": "2026-11-23T06:40:50Z"
+   "ok": "2026-11-23T06:50:55Z"
   },
   "eu:t/628701": {
    "fails": 0,
@@ -5718,7 +5718,7 @@
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-19T14:01:02Z",
    "fails": 0,
-   "ok": "2026-11-23T06:40:53Z"
+   "ok": "2026-11-23T06:50:59Z"
   },
   "eu:t/631603": {
    "fails": 0,
@@ -5752,11 +5752,11 @@
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-09T21:41:14Z",
    "fails": 0,
-   "ok": "2026-11-23T00:41:00Z"
+   "ok": "2026-11-23T06:51:01Z"
   },
   "eu:t/635356/posts": {
    "fails": 0,
-   "ok": "2026-11-23T00:41:01Z"
+   "ok": "2026-11-23T06:51:02Z"
   },
   "eu:t/636753": {
    "fails": 0,
@@ -7234,25 +7234,25 @@
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-09T22:10:49Z",
    "fails": 0,
-   "ok": "2026-11-23T06:40:45Z"
+   "ok": "2026-11-23T06:50:51Z"
   },
   "us:c/wow-forever-beta-discussion/349/new": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-09T22:10:51Z",
    "fails": 0,
-   "ok": "2026-11-23T06:40:46Z"
+   "ok": "2026-11-23T06:50:52Z"
   },
   "us:c/wow-forever/346": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-06T15:00:48Z",
    "fails": 0,
-   "ok": "2026-11-23T06:40:44Z"
+   "ok": "2026-11-23T06:50:50Z"
   },
   "us:c/wow-forever/346/new": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-06T15:00:59Z",
    "fails": 0,
-   "ok": "2026-11-23T06:40:44Z"
+   "ok": "2026-11-23T06:50:51Z"
   },
   "us:t/2352595": {
    "fails": 0,
@@ -7310,7 +7310,7 @@
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-13T19:00:55Z",
    "fails": 0,
-   "ok": "2026-11-23T06:40:47Z"
+   "ok": "2026-11-23T06:50:52Z"
   },
   "us:t/2361993": {
    "fails": 0,
@@ -7372,7 +7372,7 @@
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-09T22:10:55Z",
    "fails": 0,
-   "ok": "2026-11-23T06:40:48Z"
+   "ok": "2026-11-23T06:50:53Z"
   },
   "us:t/2381433": {
    "fails": 0,
@@ -8201,7 +8201,7 @@
   "eu-632918": "2026-11-17T16:37:54.179Z|26",
   "eu-632993": "2026-11-22T18:24:57.898Z|142",
   "eu-633935": "2026-11-11T19:20:43.068Z|17",
-  "eu-635356": "2026-11-23T00:40:43.293Z|81",
+  "eu-635356": "2026-11-23T06:41:48.659Z|82",
   "eu-636753": "2026-10-27T19:50:17.892Z|726",
   "eu-636826": "2026-11-21T15:26:21.907Z|77",
   "eu-636864": "2026-11-06T09:18:52.962Z|74",
