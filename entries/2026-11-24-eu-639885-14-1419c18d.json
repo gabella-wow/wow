@@ -1,0 +1,646 @@
+{
+ "event": "new",
+ "key": "eu-639885-14",
+ "source": "forum",
+ "region": "eu",
+ "topic": 639885,
+ "post": 14,
+ "url": "https://eu.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-23-2026/639885/14",
+ "title": "WoW: Forever Hotfixes - November 23, 2026",
+ "author": "Kaivax",
+ "role": "Community Manager",
+ "created_at": "2026-11-24T02:07:58.856Z",
+ "updated_at": "2026-11-24T02:07:58.856Z",
+ "version": 1,
+ "category": 360,
+ "beta": false,
+ "sha": "1419c18d5e088426bf16ffcd560fd173129a3157249fa1bd1f2fc05345b0b512",
+ "twin_of": "us-2403040-15",
+ "also": [],
+ "short_news": {
+  "date": "2026-11-24",
+  "at": "2026-11-24T02:07:58Z",
+  "url": "https://eu.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-23-2026/639885/14",
+  "title_en": "WoW: Forever Hotfixes - November 23, 2026",
+  "kind": "hotfixes",
+  "beta": false
+ },
+ "changes": [
+  {
+   "path": [
+    "Classes",
+    "Druid"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    1,
+    4,
+    5
+   ],
+   "text": "The 4-piece Feralheart set for Druids now correctly grants 4 Energy regeneration every 1 second for 5 seconds.",
+   "h": "cdeba928b9bb"
+  },
+  {
+   "path": [
+    "Classes",
+    "Priest"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "priest"
+   },
+   "abilities": [],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Mind Vision should no longer proc effects.",
+   "h": "4ec1c89452ff"
+  },
+  {
+   "path": [
+    "Classes",
+    "Priest",
+    "Shadow"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "priest",
+    "spec": "shadow"
+   },
+   "abilities": [
+    "Dark Inspiration",
+    "Mind Flay"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Dark Inspiration was not granting the correct amount of %Spirit increase if Mind Flay was used to activate it.",
+   "h": "5a90aaa505bc"
+  },
+  {
+   "path": [
+    "Classes",
+    "Priest",
+    "Shadow"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "priest",
+    "spec": "shadow"
+   },
+   "abilities": [
+    "Shadowform",
+    "Chastise"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Chastise was not usable in Shadowform.",
+   "h": "fcafa83bff2c"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warlock",
+    "Destruction"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warlock",
+    "spec": "destruction"
+   },
+   "abilities": [
+    "Incinerate",
+    "Intensity"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Intensity was not working on Incinerate.",
+   "h": "28072c188a62"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warrior"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warrior"
+   },
+   "abilities": [
+    "Mortal Strike"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where players could have and use Mortal Strike from their spellbook, even without the Mortal Strike talent. This does not remove it from their spellbook but prevents it from being used without the talent point spent.",
+   "h": "7fed6f9df389"
+  },
+  {
+   "path": [
+    "Items"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "The Filcher’s Cowl"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "The Filcher’s Cowl no longer has a level requirement.",
+   "h": "044a973a9445"
+  },
+  {
+   "path": [
+    "Professions",
+    "Cooking"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Boiled Clams, Clam Chowder, Goblin Deviled Clams, Giant Clam Scorcho, Undermine Clam Chowder, and Clam Linguine each now offer the correct Well Fed bonuses and have been recategorized in the recipe list under “Stamina Food”.",
+   "h": "b8a9e3492e10"
+  },
+  {
+   "path": [
+    "Professions",
+    "Cooking"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Murloc Fin Soup"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Murloc Fin Soup has had its recovery and Well-Fed amounts increased to the next tier of food, bringing it closer to other food of that level.",
+   "h": "7a231bd7207d"
+  },
+  {
+   "path": [
+    "Professions",
+    "Engineering"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed a bug that caused Goblin Engineer’s Renewal Gift and Gnome Engineer’s Renewal Gift to appear as broken, unusable question marks in the inventory.",
+   "h": "45b875d0e2b6"
+  },
+  {
+   "path": [
+    "Professions",
+    "Engineering"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed a bug that prevented “The Mortar: Reloaded” recipe from being learned upon learning the “Goblin Mortar” recipe.",
+   "h": "a712caa761dd"
+  },
+  {
+   "path": [
+    "Professions",
+    "Leatherworking"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed a bug that prevented Pattern: Centaur Hoofwarmers from being learnable.",
+   "h": "dc68dcf526bb"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Riverglades"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Riverglades - Dunston Willis once again runs near the end of the escort “Dunston Checks Out.”",
+   "h": "c9cae4ef1ce3"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Wetlands"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Wetlands - After further study, the quest “For Further Study” now has rewards.",
+   "h": "da1849e9243b"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Wetlands",
+    "Ironforge"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Wetlands - The quest “Uncovering the Past” now rewards Ironforge reputation.",
+   "h": "224c53d954a6"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Wetlands",
+    "Ironforge"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Wetlands - The quest “Gleaning Our Future” now rewards Ironforge reputation.",
+   "h": "f9890d8edcff"
+  },
+  {
+   "path": [
+    "Races"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Wisp Form could be applied to players while they were alive.",
+   "h": "3f74b84caa7b"
+  },
+  {
+   "path": [
+    "Spells"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where a few spells and abilities were causing more weapon procs than intended.",
+   "h": "74697f2adffa"
+  },
+  {
+   "path": [
+    "Spells"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where World Buffs would fall off when changing areas. They will still fall off when entering raid instances.",
+   "h": "c5a52f27af23"
+  },
+  {
+   "path": [
+    "Spells"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Ferocity"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Fengus’ Ferocity was granting twice as much Spell Power as intended.",
+   "h": "874d19596389"
+  },
+  {
+   "path": [
+    "Spells"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Darkmoon Faire buffs were granting twice as much power as intended.",
+   "h": "9031da4a9904"
+  }
+ ],
+ "new_lines": [
+  "cdeba928b9bb",
+  "4ec1c89452ff",
+  "5a90aaa505bc",
+  "fcafa83bff2c",
+  "28072c188a62",
+  "7fed6f9df389",
+  "52aa530516b0",
+  "044a973a9445",
+  "b8a9e3492e10",
+  "7a231bd7207d",
+  "45b875d0e2b6",
+  "a712caa761dd",
+  "dc68dcf526bb",
+  "c9cae4ef1ce3",
+  "da1849e9243b",
+  "224c53d954a6",
+  "f9890d8edcff",
+  "3f74b84caa7b",
+  "74697f2adffa",
+  "c5a52f27af23",
+  "874d19596389",
+  "9031da4a9904"
+ ],
+ "gone_lines": [],
+ "outdated": [],
+ "to_check": [
+  "guides/dungeons/excavation-site-wetlands/",
+  "guides/dungeons/shadowfang-keep/",
+  "guides/dungeons/the-stockade/",
+  "guides/leveling/",
+  "guides/transport/"
+ ],
+ "check": [
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "The Filcher’s Cowl",
+   "kind": "no_longer",
+   "pairs": [],
+   "h": "044a973a9445",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Murloc Fin Soup",
+   "kind": "changed",
+   "pairs": [],
+   "h": "7a231bd7207d",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Wetlands",
+   "kind": "changed",
+   "pairs": [],
+   "h": "da1849e9243b",
+   "findings": [
+    {
+     "page": "guides/dungeons/excavation-site-wetlands/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Wetlands: Dragonmaw orcs dig for titan relics and wake their guardian"
+    },
+    {
+     "page": "guides/dungeons/shadowfang-keep/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Wetlands and Southshore in the Hillsbrad Foothills (Method)"
+    },
+    {
+     "page": "guides/dungeons/the-stockade/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Wetlands"
+    },
+    {
+     "page": "guides/leveling/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Wetlands"
+    },
+    {
+     "page": "guides/transport/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Wetlands to Dustwallow Marsh"
+    }
+   ],
+   "sources": [
+    "content/guides.py:662",
+    "content/guides.py:770",
+    "content/guides.py:771",
+    "content/guides.py:772",
+    "content/guides.py:1149",
+    "content/guides.py:1166",
+    "content/guides.py:1227",
+    "content/guides.py:1228",
+    "content/guides.py:1229",
+    "content/guides.py:1252",
+    "content/guides.py:1300",
+    "content/dungeon_pages.py:840",
+    "content/dungeon_pages.py:841",
+    "content/dungeon_pages.py:842",
+    "content/dungeon_pages.py:1266",
+    "content/dungeon_pages.py:1267",
+    "content/dungeon_pages.py:1284",
+    "content/dungeon_pages.py:1285",
+    "content/dungeon_pages.py:1286",
+    "content/dungeon_pages.py:1287",
+    "content/dungeon_pages.py:1288",
+    "content/dungeon_pages.py:1292",
+    "content/dungeon_pages.py:1380",
+    "content/dungeon_pages.py:1381",
+    "content/dungeon_pages.py:1382",
+    "content/dungeon_pages.py:1386",
+    "content/dungeon_pages.py:1387"
+   ]
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Wetlands",
+   "kind": "changed",
+   "pairs": [],
+   "h": "224c53d954a6",
+   "findings": [
+    {
+     "page": "guides/dungeons/excavation-site-wetlands/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Wetlands: Dragonmaw orcs dig for titan relics and wake their guardian"
+    },
+    {
+     "page": "guides/dungeons/shadowfang-keep/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Wetlands and Southshore in the Hillsbrad Foothills (Method)"
+    },
+    {
+     "page": "guides/dungeons/the-stockade/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Wetlands"
+    },
+    {
+     "page": "guides/leveling/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Wetlands"
+    },
+    {
+     "page": "guides/transport/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Wetlands to Dustwallow Marsh"
+    }
+   ],
+   "sources": [
+    "content/guides.py:662",
+    "content/guides.py:770",
+    "content/guides.py:771",
+    "content/guides.py:772",
+    "content/guides.py:1149",
+    "content/guides.py:1166",
+    "content/guides.py:1227",
+    "content/guides.py:1228",
+    "content/guides.py:1229",
+    "content/guides.py:1252",
+    "content/guides.py:1300",
+    "content/dungeon_pages.py:840",
+    "content/dungeon_pages.py:841",
+    "content/dungeon_pages.py:842",
+    "content/dungeon_pages.py:1266",
+    "content/dungeon_pages.py:1267",
+    "content/dungeon_pages.py:1284",
+    "content/dungeon_pages.py:1285",
+    "content/dungeon_pages.py:1286",
+    "content/dungeon_pages.py:1287",
+    "content/dungeon_pages.py:1288",
+    "content/dungeon_pages.py:1292",
+    "content/dungeon_pages.py:1380",
+    "content/dungeon_pages.py:1381",
+    "content/dungeon_pages.py:1382",
+    "content/dungeon_pages.py:1386",
+    "content/dungeon_pages.py:1387"
+   ]
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Wetlands",
+   "kind": "changed",
+   "pairs": [],
+   "h": "f9890d8edcff",
+   "findings": [
+    {
+     "page": "guides/dungeons/excavation-site-wetlands/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Wetlands: Dragonmaw orcs dig for titan relics and wake their guardian"
+    },
+    {
+     "page": "guides/dungeons/shadowfang-keep/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Wetlands and Southshore in the Hillsbrad Foothills (Method)"
+    },
+    {
+     "page": "guides/dungeons/the-stockade/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Wetlands"
+    },
+    {
+     "page": "guides/leveling/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Wetlands"
+    },
+    {
+     "page": "guides/transport/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Wetlands to Dustwallow Marsh"
+    }
+   ],
+   "sources": [
+    "content/guides.py:662",
+    "content/guides.py:770",
+    "content/guides.py:771",
+    "content/guides.py:772",
+    "content/guides.py:1149",
+    "content/guides.py:1166",
+    "content/guides.py:1227",
+    "content/guides.py:1228",
+    "content/guides.py:1229",
+    "content/guides.py:1252",
+    "content/guides.py:1300",
+    "content/dungeon_pages.py:840",
+    "content/dungeon_pages.py:841",
+    "content/dungeon_pages.py:842",
+    "content/dungeon_pages.py:1266",
+    "content/dungeon_pages.py:1267",
+    "content/dungeon_pages.py:1284",
+    "content/dungeon_pages.py:1285",
+    "content/dungeon_pages.py:1286",
+    "content/dungeon_pages.py:1287",
+    "content/dungeon_pages.py:1288",
+    "content/dungeon_pages.py:1292",
+    "content/dungeon_pages.py:1380",
+    "content/dungeon_pages.py:1381",
+    "content/dungeon_pages.py:1382",
+    "content/dungeon_pages.py:1386",
+    "content/dungeon_pages.py:1387"
+   ]
+  }
+ ],
+ "detected_at": "2026-11-24T02:11:44Z"
+}
