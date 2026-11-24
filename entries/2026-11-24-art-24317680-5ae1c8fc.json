@@ -1,0 +1,37 @@
+{
+ "event": "new",
+ "key": "art-24317680",
+ "source": "article",
+ "region": "us",
+ "topic": null,
+ "post": null,
+ "url": "https://worldofwarcraft.blizzard.com/en-us/news/24317680/dont-miss-the-world-of-warcraft-forever-comic-alaketh-rising",
+ "title": "Don’t Miss the World of Warcraft: Forever Comic, “Al'Aketh Rising”",
+ "author": "Blizzard Entertainment",
+ "role": "Blizzard News",
+ "created_at": "2026-11-24T18:00:00.000Z",
+ "updated_at": null,
+ "version": null,
+ "category": null,
+ "beta": false,
+ "sha": "5ae1c8fc51b915c9abaca363276e507e16131d6a20dd5bacacf9b073a20dc552",
+ "twin_of": null,
+ "also": [],
+ "short_news": {
+  "date": "2026-11-24",
+  "at": "2026-11-24T18:00:00Z",
+  "url": "https://worldofwarcraft.blizzard.com/en-us/news/24317680/dont-miss-the-world-of-warcraft-forever-comic-alaketh-rising",
+  "title_en": "Don’t Miss the World of Warcraft: Forever Comic, “Al'Aketh Rising”",
+  "kind": "article",
+  "beta": false
+ },
+ "changes": [],
+ "new_lines": [
+  "324b6512b0ce"
+ ],
+ "gone_lines": [],
+ "outdated": [],
+ "to_check": [],
+ "check": [],
+ "detected_at": "2026-11-24T18:11:02Z"
+}
