@@ -2325,157 +2325,157 @@
  },
  {
   "id": "us-2403040-1",
-  "sha": "ad8c3d94",
+  "sha": "5356a393",
   "date": "2026-11-06",
   "at": "2026-11-06T02:34:10Z",
-  "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-23-2026/2403040/1",
+  "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-25-2026/2403040/1",
   "kind": "hotfixes",
   "beta": false,
-  "title_en": "WoW: Forever Hotfixes - November 23, 2026",
-  "n": 210,
-  "upd": "2026-11-24T02:11:44Z",
+  "title_en": "WoW: Forever Hotfixes - November 25, 2026",
+  "n": 248,
+  "upd": "2026-11-25T23:32:03Z",
   "t": {
    "ru": {
     "h": "Хотфиксы от 06.11",
     "src": "Blizzard, на английском",
-    "upd": "обновлено 24.11",
+    "upd": "обновлено 25.11",
     "sum": [
+     "Друид · Improved Starfire: 5 pt → 2 pt",
      "Жрец · Объятия вампира (Vampiric Embrace): 20% → 10%",
      "Друид · Буйный рост (Wild Growth): 3,3% → 6,6%",
      "Taran Icebreaker: 1 → 2",
      "Riverglades: 1000 → 50",
-     "Red Mageweave Bag: 4 → 5",
-     "Green Silk Pack: 4 → 5"
+     "Red Mageweave Bag: 4 → 5"
     ],
-    "more": "Ещё изменений: 204",
+    "more": "Ещё изменений: 242",
     "site": "https://gabella.site/wow/guides/news/",
     "site_t": "Подробнее на сайте"
    },
    "en": {
     "h": "Hotfixes of Nov 6",
     "src": "Blizzard",
-    "upd": "updated Nov 24",
+    "upd": "updated Nov 25",
     "sum": [
+     "Druid · Improved Starfire: 5 pt → 2 pt",
      "Priest · Vampiric Embrace: 20% → 10%",
      "Druid · Wild Growth: 3.3% → 6.6%",
      "Taran Icebreaker: 1 → 2",
      "Riverglades: 1000 → 50",
-     "Red Mageweave Bag: 4 → 5",
-     "Green Silk Pack: 4 → 5"
+     "Red Mageweave Bag: 4 → 5"
     ],
-    "more": "204 more changes",
+    "more": "242 more changes",
     "site": "https://gabella.site/wow/en/guides/news/",
     "site_t": "More on the site"
    },
    "uk": {
     "h": "Хотфікси від 06.11",
     "src": "Blizzard, англійською",
-    "upd": "оновлено 24.11",
+    "upd": "оновлено 25.11",
     "sum": [
+     "Друїд · Improved Starfire: 5 pt → 2 pt",
      "Жрець · Vampiric Embrace: 20% → 10%",
      "Друїд · Wild Growth: 3,3% → 6,6%",
      "Taran Icebreaker: 1 → 2",
      "Riverglades: 1000 → 50",
-     "Red Mageweave Bag: 4 → 5",
-     "Green Silk Pack: 4 → 5"
+     "Red Mageweave Bag: 4 → 5"
     ],
-    "more": "Ще змін: 204",
+    "more": "Ще змін: 242",
     "site": "https://gabella.site/wow/uk/guides/news/",
     "site_t": "Детальніше на сайті"
    },
    "de": {
     "h": "Hotfixes vom 06.11",
     "src": "Blizzard, auf Englisch",
-    "upd": "aktualisiert am 24.11",
+    "upd": "aktualisiert am 25.11",
     "sum": [
+     "Druide · Improved Starfire: 5 pt → 2 pt",
      "Priester · Vampirumarmung: 20% → 10%",
      "Druide · Wildwuchs: 3,3% → 6,6%",
      "Taran Icebreaker: 1 → 2",
      "Riverglades: 1000 → 50",
-     "Red Mageweave Bag: 4 → 5",
-     "Green Silk Pack: 4 → 5"
+     "Red Mageweave Bag: 4 → 5"
     ],
-    "more": "Weitere Änderungen: 204",
+    "more": "Weitere Änderungen: 242",
     "site": "https://gabella.site/wow/de/guides/news/",
     "site_t": "Mehr auf der Seite"
    },
    "fr": {
     "h": "Correctifs du 06.11",
     "src": "Blizzard, en anglais",
-    "upd": "mis à jour le 24.11",
+    "upd": "mis à jour le 25.11",
     "sum": [
+     "Druide · Improved Starfire: 5 pt → 2 pt",
      "Prêtre · Etreinte vampirique: 20% → 10%",
      "Druide · Croissance sauvage: 3,3% → 6,6%",
      "Taran Icebreaker: 1 → 2",
      "Riverglades: 1000 → 50",
-     "Red Mageweave Bag: 4 → 5",
-     "Green Silk Pack: 4 → 5"
+     "Red Mageweave Bag: 4 → 5"
     ],
-    "more": "Autres changements : 204",
+    "more": "Autres changements : 242",
     "site": "https://gabella.site/wow/fr/guides/news/",
     "site_t": "Plus sur le site"
    },
    "es": {
     "h": "Correcciones del 06.11",
     "src": "Blizzard, en inglés",
-    "upd": "actualizado el 24.11",
+    "upd": "actualizado el 25.11",
     "sum": [
+     "Druida · Improved Starfire: 5 pt → 2 pt",
      "Sacerdote · Unirse a vampírica: 20% → 10%",
      "Druida · Crecimiento salvaje: 3,3% → 6,6%",
      "Taran Icebreaker: 1 → 2",
      "Riverglades: 1000 → 50",
-     "Red Mageweave Bag: 4 → 5",
-     "Green Silk Pack: 4 → 5"
+     "Red Mageweave Bag: 4 → 5"
     ],
-    "more": "Más cambios: 204",
+    "more": "Más cambios: 242",
     "site": "https://gabella.site/wow/es/guides/news/",
     "site_t": "Más en la web"
    },
    "pt": {
     "h": "Hotfixes de 06.11",
     "src": "Blizzard, em inglês",
-    "upd": "atualizado em 24.11",
+    "upd": "atualizado em 25.11",
     "sum": [
+     "Druida · Improved Starfire: 5 pt → 2 pt",
      "Sacerdote · Abraço Vampírico: 20% → 10%",
      "Druida · Crescimento Silvestre: 3,3% → 6,6%",
      "Taran Icebreaker: 1 → 2",
      "Riverglades: 1000 → 50",
-     "Red Mageweave Bag: 4 → 5",
-     "Green Silk Pack: 4 → 5"
+     "Red Mageweave Bag: 4 → 5"
     ],
-    "more": "Mais mudanças: 204",
+    "more": "Mais mudanças: 242",
     "site": "https://gabella.site/wow/pt/guides/news/",
     "site_t": "Mais no site"
    },
    "it": {
     "h": "Hotfix del 06.11",
     "src": "Blizzard, in inglese",
-    "upd": "aggiornato il 24.11",
+    "upd": "aggiornato il 25.11",
     "sum": [
+     "Druido · Improved Starfire: 5 pt → 2 pt",
      "Sacerdote · Abbraccio Vampirico: 20% → 10%",
      "Druido · Crescita Rigogliosa: 3,3% → 6,6%",
      "Taran Icebreaker: 1 → 2",
      "Riverglades: 1000 → 50",
-     "Red Mageweave Bag: 4 → 5",
-     "Green Silk Pack: 4 → 5"
+     "Red Mageweave Bag: 4 → 5"
     ],
-    "more": "Altre modifiche: 204",
+    "more": "Altre modifiche: 242",
     "site": "https://gabella.site/wow/it/guides/news/",
     "site_t": "Di più sul sito"
    },
    "pl": {
     "h": "Hotfixy z 06.11",
     "src": "Blizzard, po angielsku",
-    "upd": "zaktualizowano 24.11",
+    "upd": "zaktualizowano 25.11",
     "sum": [
+     "Druid · Improved Starfire: 5 pt → 2 pt",
      "Priest · Vampiric Embrace: 20% → 10%",
      "Druid · Wild Growth: 3,3% → 6,6%",
      "Taran Icebreaker: 1 → 2",
      "Riverglades: 1000 → 50",
-     "Red Mageweave Bag: 4 → 5",
-     "Green Silk Pack: 4 → 5"
+     "Red Mageweave Bag: 4 → 5"
     ],
-    "more": "Więcej zmian: 204",
+    "more": "Więcej zmian: 242",
     "site": "https://gabella.site/wow/pl/guides/news/",
     "site_t": "Więcej na stronie"
    }
