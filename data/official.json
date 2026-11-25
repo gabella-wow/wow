@@ -376,6 +376,109 @@
   }
  },
  {
+  "id": "us-2403040-15",
+  "sha": "1419c18d",
+  "date": "2026-11-24",
+  "at": "2026-11-24T02:06:52Z",
+  "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-23-2026/2403040/15",
+  "kind": "hotfixes",
+  "beta": false,
+  "title_en": "WoW: Forever Hotfixes - November 23, 2026",
+  "n": 8,
+  "t": {
+   "ru": {
+    "h": "Хотфиксы от 24.11",
+    "src": "Blizzard, на английском",
+    "sum": [
+     "The Filcher’s Cowl: ограничено"
+    ],
+    "more": "Ещё изменений: 7",
+    "site": "https://gabella.site/wow/guides/news/",
+    "site_t": "Подробнее на сайте"
+   },
+   "en": {
+    "h": "Hotfixes of Nov 24",
+    "src": "Blizzard",
+    "sum": [
+     "The Filcher’s Cowl: narrowed"
+    ],
+    "more": "7 more changes",
+    "site": "https://gabella.site/wow/en/guides/news/",
+    "site_t": "More on the site"
+   },
+   "uk": {
+    "h": "Хотфікси від 24.11",
+    "src": "Blizzard, англійською",
+    "sum": [
+     "The Filcher’s Cowl: обмежено"
+    ],
+    "more": "Ще змін: 7",
+    "site": "https://gabella.site/wow/uk/guides/news/",
+    "site_t": "Детальніше на сайті"
+   },
+   "de": {
+    "h": "Hotfixes vom 24.11",
+    "src": "Blizzard, auf Englisch",
+    "sum": [
+     "The Filcher’s Cowl: eingeschränkt"
+    ],
+    "more": "Weitere Änderungen: 7",
+    "site": "https://gabella.site/wow/de/guides/news/",
+    "site_t": "Mehr auf der Seite"
+   },
+   "fr": {
+    "h": "Correctifs du 24.11",
+    "src": "Blizzard, en anglais",
+    "sum": [
+     "The Filcher’s Cowl: restreint"
+    ],
+    "more": "Autres changements : 7",
+    "site": "https://gabella.site/wow/fr/guides/news/",
+    "site_t": "Plus sur le site"
+   },
+   "es": {
+    "h": "Correcciones del 24.11",
+    "src": "Blizzard, en inglés",
+    "sum": [
+     "The Filcher’s Cowl: limitado"
+    ],
+    "more": "Más cambios: 7",
+    "site": "https://gabella.site/wow/es/guides/news/",
+    "site_t": "Más en la web"
+   },
+   "pt": {
+    "h": "Hotfixes de 24.11",
+    "src": "Blizzard, em inglês",
+    "sum": [
+     "The Filcher’s Cowl: restrito"
+    ],
+    "more": "Mais mudanças: 7",
+    "site": "https://gabella.site/wow/pt/guides/news/",
+    "site_t": "Mais no site"
+   },
+   "it": {
+    "h": "Hotfix del 24.11",
+    "src": "Blizzard, in inglese",
+    "sum": [
+     "The Filcher’s Cowl: limitato"
+    ],
+    "more": "Altre modifiche: 7",
+    "site": "https://gabella.site/wow/it/guides/news/",
+    "site_t": "Di più sul sito"
+   },
+   "pl": {
+    "h": "Hotfixy z 24.11",
+    "src": "Blizzard, po angielsku",
+    "sum": [
+     "The Filcher’s Cowl: ograniczone"
+    ],
+    "more": "Więcej zmian: 7",
+    "site": "https://gabella.site/wow/pl/guides/news/",
+    "site_t": "Więcej na stronie"
+   }
+  }
+ },
+ {
   "id": "art-24317681",
   "sha": "d9a0da8c",
   "date": "2026-11-20",
@@ -3768,55 +3871,5 @@
     "site_t": "Więcej na stronie"
    }
   }
- },
- {
-  "id": "us-24303866",
-  "kind": "article",
-  "date": "2026-10-28",
-  "at": "2026-10-28T11:40:00Z",
-  "url": "https://news.blizzard.com/en-us/article/24303866/claim-your-world-of-warcraft-forever-character-names",
-  "title_en": "Claim Your World of Warcraft: Forever Character Names",
-  "t": {
-   "ru": {
-    "h": "Резерв имён в WoW Forever: 27.10 – 3 ноября",
-    "sum": [
-     "**Окно:** 27.10 – 03.11, имя достаётся тому, кто занял первым.",
-     "**Старт по Киеву:** Европа 27.10 в 19:00, Америка 22:00, Корея 28.10 в 00:00, Тайвань 01:00.",
-     "**Кому:** владельцам Skyborne Heroic Pack, Skyborne Epic Pack или Warcraft Forever Collection.",
-     "**Лимит:** до 3 персонажей."
-    ],
-    "more": "Время старта для Океании и конец окна в статье не указаны.",
-    "site": "https://gabella.site/wow/guides/name-reservation/",
-    "site_t": "Наш гид по резерву имён",
-    "src": "Источник: Blizzard"
-   },
-   "uk": {
-    "h": "Резерв імен у WoW Forever: 27.10 – 3 листопада",
-    "sum": [
-     "**Вікно:** 27.10 – 03.11, ім’я дістається тому, хто зайняв першим.",
-     "**Старт за Києвом:** Європа 27.10 о 19:00, Америка 22:00, Корея 28.10 о 00:00, Тайвань 01:00.",
-     "**Кому:** власникам Skyborne Heroic Pack, Skyborne Epic Pack або Warcraft Forever Collection.",
-     "**Ліміт:** до 3 персонажів."
-    ],
-    "more": "Час старту для Океанії та кінець вікна в статті не вказано.",
-    "site": "https://gabella.site/wow/uk/guides/name-reservation/",
-    "site_t": "Наш гайд про резерв імен",
-    "src": "Джерело: Blizzard"
-   },
-   "en": {
-    "h": "Early name reservation in WoW Forever: Oct 27 – Nov 3",
-    "sum": [
-     "**Window:** Oct 27 – Nov 3, first come first served.",
-     "**Start, Kyiv time:** Europe Oct 27 at 19:00, Americas 22:00, Korea Oct 28 at 00:00, Taiwan 01:00.",
-     "**Who:** owners of the Skyborne Heroic Pack, Skyborne Epic Pack or Warcraft Forever Collection.",
-     "**Limit:** up to 3 characters."
-    ],
-    "more": "Oceania start time and the end of the window are not given in the article.",
-    "site": "https://gabella.site/wow/en/guides/name-reservation/",
-    "site_t": "Our name reservation guide",
-    "src": "Source: Blizzard"
-   }
-  },
-  "sha": "598a47b0"
  }
 ]
