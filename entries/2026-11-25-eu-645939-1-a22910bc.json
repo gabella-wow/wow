@@ -1,0 +1,449 @@
+{
+ "event": "new",
+ "key": "eu-645939-1",
+ "source": "forum",
+ "region": "eu",
+ "topic": 645939,
+ "post": 1,
+ "url": "https://eu.forums.blizzard.com/en/wow/t/balance-druid-adjustments-25-november/645939/1",
+ "title": "Balance Druid Adjustments - 25 November",
+ "author": "Kaivax",
+ "role": "Community Manager",
+ "created_at": "2026-11-25T18:32:19.498Z",
+ "updated_at": "2026-11-25T18:32:19.498Z",
+ "version": 1,
+ "category": 360,
+ "beta": false,
+ "sha": "a22910bc88df8b009e443fafa9b0d7301de2a7d8f10e73baaa562d8f8e0e2059",
+ "twin_of": "us-2429007-1",
+ "also": [],
+ "short_news": {
+  "date": "2026-11-25",
+  "at": "2026-11-25T18:32:19Z",
+  "url": "https://eu.forums.blizzard.com/en/wow/t/balance-druid-adjustments-25-november/645939/1",
+  "title_en": "Balance Druid Adjustments - 25 November",
+  "kind": "post",
+  "beta": false
+ },
+ "changes": [
+  {
+   "path": [
+    "Classes",
+    "Druid"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "abilities": [
+    "Improved Wrath",
+    "Wrath"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Improved Wrath is now renamed Starlight Wrath.",
+   "h": "d2bab069dcb1"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid",
+    "Improved Wrath is now renamed Starlight Wrath."
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "abilities": [
+    "Starlight Wrath",
+    "Starfire"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5
+   ],
+   "text": "Starlight Wrath also reduces the cast time of Starfire by 0.1/0.2/0.3/0.4/0.5 seconds.",
+   "h": "bc590772a6df"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "abilities": [
+    "Improved Moonfire"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Improved Moonfire is now renamed Moon and Stars.",
+   "h": "e9060c8145db"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid",
+    "Improved Moonfire is now renamed Moon and Stars."
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "abilities": [
+    "Starfire"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    50,
+    100
+   ],
+   "text": "Moon and Stars also grants Starfire a 50/100% chance not lose casting time when the Druid takes damage.",
+   "h": "16644532d048"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "abilities": [
+    "Improved Starfire"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 2,
+     "old": 5,
+     "unit": "pt",
+     "old_unit": "pt"
+    }
+   ],
+   "nums": [
+    1,
+    2,
+    3,
+    5,
+    8,
+    15
+   ],
+   "text": "Improved Starfire reduced from to 2 points (was 5 points), and now grants 8/15% chance with 1/2 talent points. Druids with 3 or more points spent in this talent will have all their talent points reset and unspent.",
+   "h": "c219b42c6d99"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "abilities": [
+    "Eclipse",
+    "Wrath"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    7,
+    13,
+    20
+   ],
+   "text": "Eclipse now also increases the critical strike chance of Wrath by 7/13/20% at all times.",
+   "h": "afffc89a47ce"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "abilities": [
+    "Moonfury"
+   ],
+   "kind": "removed",
+   "pairs": [],
+   "nums": [],
+   "text": "Moonfury talent removed and replaced with Dreamstate.",
+   "h": "2c2ac441aa3b"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid",
+    "Moonfury talent removed and replaced with Dreamstate."
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "abilities": [
+    "Innervate"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    20,
+    40,
+    60,
+    80,
+    100
+   ],
+   "text": "Dreamstate grants the Druid 20/40/60/80/100% of the benefit of Innervate when casting Innervate on a target other than self.",
+   "h": "12af1d74188a"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "abilities": [
+    "Moonkin Form"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    10
+   ],
+   "text": "Moonkin Form now also increases Arcane and Nature damage done by 10% while in that form.",
+   "h": "9d6677f0fa1c"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "abilities": [
+    "Nature’s Focus",
+    "Moonkin Form",
+    "Starfire",
+    "Wrath"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "These changes are intended to reduce the number of points Balance Druids need to invest to make Starfire viable, to reduce the reliance on the Nature’s Focus talent in Restoration, improve the flow of abilities by increasing Wrath’s critical strike chance, and improve the feel of Moonkin Form by granting it a damage increase.",
+   "h": "9ea38e687621"
+  }
+ ],
+ "new_lines": [
+  "d2bab069dcb1",
+  "bc590772a6df",
+  "e9060c8145db",
+  "16644532d048",
+  "c219b42c6d99",
+  "afffc89a47ce",
+  "2c2ac441aa3b",
+  "12af1d74188a",
+  "9d6677f0fa1c",
+  "9ea38e687621",
+  "26a723093250"
+ ],
+ "gone_lines": [],
+ "outdated": [],
+ "to_check": [
+  "classes/druid/",
+  "guides/builds-druid/",
+  "guides/spec-druid-balance/",
+  "guides/spec-druid-restoration/",
+  "guides/tier-list/"
+ ],
+ "check": [
+  {
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "ability": "Improved Wrath",
+   "kind": "changed",
+   "pairs": [],
+   "h": "d2bab069dcb1",
+   "findings": [
+    {
+     "page": "classes/druid/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Improved Wrath Faster and cheaper Wrath"
+    },
+    {
+     "page": "guides/builds-druid/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Improved Wrath 5 is in both the Icy Veins build and Wowhead’s hard-casting build"
+    },
+    {
+     "page": "guides/spec-druid-balance/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Improved Wrath 5 is in both the Icy Veins build and Wowhead’s hard-casting build"
+    },
+    {
+     "page": "guides/spec-druid-restoration/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Improved Wrath and Insect Swarm from Balance first, then Restoration"
+    }
+   ],
+   "sources": [
+    "content/spec_builds.py:1361",
+    "content/spec_builds.py:1362",
+    "content/spec_builds.py:1363",
+    "content/spec_builds.py:1428",
+    "content/spec_builds.py:1429",
+    "content/spec_builds.py:1430",
+    "content/talents/druid.json:13"
+   ]
+  },
+  {
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "ability": "Improved Moonfire",
+   "kind": "changed",
+   "pairs": [],
+   "h": "e9060c8145db",
+   "findings": [
+    {
+     "page": "guides/builds-druid/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Improved Moonfire 2 Moonfire damage and crit"
+    },
+    {
+     "page": "guides/spec-druid-balance/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Improved Moonfire ×2 · Moonglow ×3 · Nature’s Majesty ×2 · Nature’s Reach ×2 · Nature’s Splendor ×1. Order of points by "
+    }
+   ],
+   "sources": [
+    "content/spec_builds.py:1358",
+    "content/talents/druid.json:56"
+   ]
+  },
+  {
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "ability": "Improved Starfire",
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 2,
+     "old": 5,
+     "unit": "pt",
+     "old_unit": "pt"
+    }
+   ],
+   "h": "c219b42c6d99",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "ability": "Eclipse",
+   "kind": "changed",
+   "pairs": [],
+   "h": "afffc89a47ce",
+   "findings": [
+    {
+     "page": "classes/druid/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Eclipse"
+    },
+    {
+     "page": "guides/builds-druid/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Eclipse is weak for now"
+    },
+    {
+     "page": "guides/spec-druid-balance/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Eclipse is weak for now"
+    },
+    {
+     "page": "guides/tier-list/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Eclipse still looks weak"
+    }
+   ],
+   "sources": [
+    "content/spec_builds.py:1336",
+    "content/spec_builds.py:1349",
+    "content/spec_builds.py:1350",
+    "content/spec_builds.py:1376",
+    "content/spec_builds.py:1377",
+    "i18n/en.txt:901",
+    "content/talents/druid.json:206"
+   ]
+  },
+  {
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "ability": "Moonfury",
+   "kind": "removed",
+   "pairs": [],
+   "h": "2c2ac441aa3b",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "ability": "Moonkin Form",
+   "kind": "changed",
+   "pairs": [],
+   "h": "9d6677f0fa1c",
+   "findings": [
+    {
+     "page": "classes/druid/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Moonkin Form 3% crit for the whole raid"
+    }
+   ],
+   "sources": [
+    "content/talents/druid.json:236"
+   ]
+  }
+ ],
+ "detected_at": "2026-11-25T18:41:02Z"
+}

@@ -1,5 +1,5 @@
 {
- "last_run": "2026-11-25T18:31:05Z",
+ "last_run": "2026-11-25T18:41:00Z",
  "posts": {
   "art-24301455": {
    "checked": "2026-10-29T20:21:03Z",
@@ -956,7 +956,7 @@
    "version": 1
   },
   "eu-631316-1": {
-   "checked": "2026-11-25T18:31:05Z",
+   "checked": "2026-11-25T18:41:00Z",
    "lines": [
     "b980faad67e4",
     "551f003b8fd3",
@@ -1094,7 +1094,7 @@
    "version": 5
   },
   "eu-631316-10": {
-   "checked": "2026-11-25T18:31:05Z",
+   "checked": "2026-11-25T18:41:00Z",
    "lines": [
     "65ad0c5dbf28",
     "ce9a126c7693",
@@ -1112,7 +1112,7 @@
    "version": 1
   },
   "eu-631316-4": {
-   "checked": "2026-11-25T18:31:05Z",
+   "checked": "2026-11-25T18:41:00Z",
    "lines": [
     "a9f91ef9a1d3",
     "3f0687de02e8",
@@ -1267,7 +1267,7 @@
    "version": 3
   },
   "eu-631316-5": {
-   "checked": "2026-11-25T18:31:05Z",
+   "checked": "2026-11-25T18:41:00Z",
    "lines": [
     "862affbc3ad5",
     "3e1771b3fd67",
@@ -1405,7 +1405,7 @@
    "version": 1
   },
   "eu-631316-6": {
-   "checked": "2026-11-25T18:31:05Z",
+   "checked": "2026-11-25T18:41:00Z",
    "lines": [
     "ba02c8dc2b40",
     "cdd748e437cc",
@@ -1643,7 +1643,7 @@
    "version": 2
   },
   "eu-631316-7": {
-   "checked": "2026-11-25T18:31:05Z",
+   "checked": "2026-11-25T18:41:00Z",
    "lines": [
     "c2f53382556d",
     "157b13cf95b2",
@@ -1671,7 +1671,7 @@
    "version": 4
   },
   "eu-631316-8": {
-   "checked": "2026-11-25T18:31:05Z",
+   "checked": "2026-11-25T18:41:00Z",
    "lines": [
     "180749eee47d",
     "57c724e3010c",
@@ -1688,7 +1688,7 @@
    "version": 2
   },
   "eu-631316-9": {
-   "checked": "2026-11-25T18:31:05Z",
+   "checked": "2026-11-25T18:41:00Z",
    "lines": [
     "eabd14472cc2",
     "e75ab1fa1bb9",
@@ -3084,6 +3084,27 @@
    "url": "https://eu.forums.blizzard.com/en/wow/t/another-exploit/645296/2",
    "version": 1
   },
+  "eu-645939-1": {
+   "checked": "2026-11-25T18:41:00Z",
+   "lines": [
+    "d2bab069dcb1",
+    "bc590772a6df",
+    "e9060c8145db",
+    "16644532d048",
+    "c219b42c6d99",
+    "afffc89a47ce",
+    "2c2ac441aa3b",
+    "12af1d74188a",
+    "9d6677f0fa1c",
+    "9ea38e687621"
+   ],
+   "seen": "2026-11-25T18:41:00Z",
+   "sha": "a22910bc88df8b009e443fafa9b0d7301de2a7d8f10e73baaa562d8f8e0e2059",
+   "title": "Balance Druid Adjustments - 25 November",
+   "updated_at": "2026-11-25T18:32:19.498Z",
+   "url": "https://eu.forums.blizzard.com/en/wow/t/balance-druid-adjustments-25-november/645939/1",
+   "version": 1
+  },
   "us-2352595-1": {
    "checked": "2026-10-29T06:20:58Z",
    "lines": [],
@@ -3225,7 +3246,7 @@
    "version": 3
   },
   "us-2360696-1": {
-   "checked": "2026-11-25T18:31:05Z",
+   "checked": "2026-11-25T18:41:00Z",
    "lines": [
     "b980faad67e4",
     "551f003b8fd3",
@@ -3363,7 +3384,7 @@
    "version": 5
   },
   "us-2360696-10": {
-   "checked": "2026-11-25T18:31:05Z",
+   "checked": "2026-11-25T18:41:00Z",
    "lines": [
     "65ad0c5dbf28",
     "ce9a126c7693",
@@ -3381,7 +3402,7 @@
    "version": 1
   },
   "us-2360696-4": {
-   "checked": "2026-11-25T18:31:05Z",
+   "checked": "2026-11-25T18:41:00Z",
    "lines": [
     "a9f91ef9a1d3",
     "3f0687de02e8",
@@ -3536,7 +3557,7 @@
    "version": 4
   },
   "us-2360696-5": {
-   "checked": "2026-11-25T18:31:05Z",
+   "checked": "2026-11-25T18:41:00Z",
    "lines": [
     "862affbc3ad5",
     "3e1771b3fd67",
@@ -3674,7 +3695,7 @@
    "version": 1
   },
   "us-2360696-6": {
-   "checked": "2026-11-25T18:31:05Z",
+   "checked": "2026-11-25T18:41:00Z",
    "lines": [
     "ba02c8dc2b40",
     "cdd748e437cc",
@@ -3912,7 +3933,7 @@
    "version": 2
   },
   "us-2360696-7": {
-   "checked": "2026-11-25T18:31:05Z",
+   "checked": "2026-11-25T18:41:00Z",
    "lines": [
     "c2f53382556d",
     "157b13cf95b2",
@@ -3940,7 +3961,7 @@
    "version": 4
   },
   "us-2360696-8": {
-   "checked": "2026-11-25T18:31:05Z",
+   "checked": "2026-11-25T18:41:00Z",
    "lines": [
     "180749eee47d",
     "57c724e3010c",
@@ -3957,7 +3978,7 @@
    "version": 2
   },
   "us-2360696-9": {
-   "checked": "2026-11-25T18:31:05Z",
+   "checked": "2026-11-25T18:41:00Z",
    "lines": [
     "eabd14472cc2",
     "e75ab1fa1bb9",
@@ -5688,6 +5709,27 @@
    "updated_at": "2026-11-25T01:39:39.816Z",
    "url": "https://us.forums.blizzard.com/en/wow/t/please-blizzard-stop-listening-to-classic-andys-your-making-a-game-for-no-one-currently/2427619/418",
    "version": 2
+  },
+  "us-2429007-1": {
+   "checked": "2026-11-25T18:41:00Z",
+   "lines": [
+    "d2bab069dcb1",
+    "bc590772a6df",
+    "e9060c8145db",
+    "16644532d048",
+    "c219b42c6d99",
+    "afffc89a47ce",
+    "2c2ac441aa3b",
+    "12af1d74188a",
+    "9d6677f0fa1c",
+    "9ea38e687621"
+   ],
+   "seen": "2026-11-25T18:41:00Z",
+   "sha": "a22910bc88df8b009e443fafa9b0d7301de2a7d8f10e73baaa562d8f8e0e2059",
+   "title": "Balance Druid Adjustments - November 25",
+   "updated_at": "2026-11-25T18:32:04.328Z",
+   "url": "https://us.forums.blizzard.com/en/wow/t/balance-druid-adjustments-november-25/2429007/1",
+   "version": 1
   }
  },
  "published": {
@@ -5726,9 +5768,10 @@
   "us-2415068-1": "51d0a0fd",
   "us-2416343-1": "b00ade0d",
   "us-2419757-1": "a1576bc5",
-  "us-2422535-1": "e3b0c442"
+  "us-2422535-1": "e3b0c442",
+  "us-2429007-1": "a22910bc"
  },
- "requests": 14,
+ "requests": 16,
  "sources": {
   "articles:24301455": {
    "fails": 0,
@@ -5846,31 +5889,31 @@
    "err": "HTTPError: HTTP Error 502: Bad Gateway",
    "err_at": "2026-11-12T05:40:56Z",
    "fails": 0,
-   "ok": "2026-11-25T18:31:05Z"
+   "ok": "2026-11-25T18:41:00Z"
   },
   "eu:c/wow-forever-beta-discussion/362": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-16T14:40:58Z",
    "fails": 0,
-   "ok": "2026-11-25T18:31:00Z"
+   "ok": "2026-11-25T18:40:55Z"
   },
   "eu:c/wow-forever-beta-discussion/362/new": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-16T14:41:00Z",
    "fails": 0,
-   "ok": "2026-11-25T18:31:02Z"
+   "ok": "2026-11-25T18:40:56Z"
   },
   "eu:c/wow-forever/359": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-22T12:10:51Z",
    "fails": 0,
-   "ok": "2026-11-25T18:30:58Z"
+   "ok": "2026-11-25T18:40:52Z"
   },
   "eu:c/wow-forever/359/new": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-25T02:01:00Z",
    "fails": 0,
-   "ok": "2026-11-25T18:30:59Z"
+   "ok": "2026-11-25T18:40:53Z"
   },
   "eu:t/628701": {
    "fails": 0,
@@ -5920,7 +5963,7 @@
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-25T02:01:07Z",
    "fails": 0,
-   "ok": "2026-11-25T18:31:03Z"
+   "ok": "2026-11-25T18:40:57Z"
   },
   "eu:t/631603": {
    "fails": 0,
@@ -7522,31 +7565,35 @@
   },
   "eu:t/645938": {
    "fails": 0,
-   "ok": "2026-11-25T18:31:04Z"
+   "ok": "2026-11-25T18:40:58Z"
+  },
+  "eu:t/645939": {
+   "fails": 0,
+   "ok": "2026-11-25T18:40:59Z"
   },
   "us:c/wow-forever-beta-discussion/349": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-09T22:10:49Z",
    "fails": 0,
-   "ok": "2026-11-25T18:30:55Z"
+   "ok": "2026-11-25T18:40:48Z"
   },
   "us:c/wow-forever-beta-discussion/349/new": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-09T22:10:51Z",
    "fails": 0,
-   "ok": "2026-11-25T18:30:55Z"
+   "ok": "2026-11-25T18:40:48Z"
   },
   "us:c/wow-forever/346": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-06T15:00:48Z",
    "fails": 0,
-   "ok": "2026-11-25T18:30:54Z"
+   "ok": "2026-11-25T18:40:47Z"
   },
   "us:c/wow-forever/346/new": {
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-06T15:00:59Z",
    "fails": 0,
-   "ok": "2026-11-25T18:30:55Z"
+   "ok": "2026-11-25T18:40:47Z"
   },
   "us:t/2352595": {
    "fails": 0,
@@ -7604,7 +7651,7 @@
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-13T19:00:55Z",
    "fails": 0,
-   "ok": "2026-11-25T18:30:56Z"
+   "ok": "2026-11-25T18:40:49Z"
   },
   "us:t/2361993": {
    "fails": 0,
@@ -7666,7 +7713,7 @@
    "err": "HTTPError: HTTP Error 503: Service Unavailable",
    "err_at": "2026-11-09T22:10:55Z",
    "fails": 0,
-   "ok": "2026-11-25T18:30:56Z"
+   "ok": "2026-11-25T18:40:50Z"
   },
   "us:t/2381433": {
    "fails": 0,
@@ -8588,7 +8635,7 @@
   },
   "us:t/2428620": {
    "fails": 0,
-   "ok": "2026-11-25T18:30:57Z"
+   "ok": "2026-11-25T18:40:51Z"
   },
   "us:t/2428699": {
    "fails": 0,
@@ -8621,6 +8668,10 @@
   "us:t/2428834/posts": {
    "fails": 0,
    "ok": "2026-11-25T16:20:55Z"
+  },
+  "us:t/2429007": {
+   "fails": 0,
+   "ok": "2026-11-25T18:40:50Z"
   }
  },
  "topics": {
@@ -8962,7 +9013,8 @@
   "eu-645869": "2026-11-25T17:54:14.903Z|5",
   "eu-645900": "2026-11-25T15:51:42.386Z|2",
   "eu-645909": "2026-11-25T16:10:26.337Z|3",
-  "eu-645938": "2026-11-25T18:27:29.838Z|2",
+  "eu-645938": "2026-11-25T18:32:57.385Z|5",
+  "eu-645939": "2026-11-25T18:32:19.498Z|1",
   "us-2352595": "2026-10-29T06:19:20.777Z|92",
   "us-2352687": "2026-10-08T21:38:40.335Z|7",
   "us-2354050": "2026-11-02T18:17:46.443Z|730",
@@ -9122,12 +9174,13 @@
   "us-2427619": "2026-11-25T01:36:42.184Z|417",
   "us-2428157": "2026-11-24T22:10:25.151Z|24",
   "us-2428609": "2026-11-25T16:59:41.405Z|42",
-  "us-2428620": "2026-11-25T18:30:20.647Z|13",
+  "us-2428620": "2026-11-25T18:37:33.158Z|16",
   "us-2428699": "2026-11-25T13:52:26.938Z|15",
   "us-2428714": "2026-11-25T11:40:21.397Z|12",
   "us-2428740": "2026-11-25T12:15:45.437Z|7",
   "us-2428748": "2026-11-25T13:50:39.220Z|40",
   "us-2428762": "2026-11-25T12:49:22.256Z|12",
-  "us-2428834": "2026-11-25T16:20:19.582Z|39"
+  "us-2428834": "2026-11-25T16:20:19.582Z|39",
+  "us-2429007": "2026-11-25T18:40:23.831Z|8"
  }
 }
