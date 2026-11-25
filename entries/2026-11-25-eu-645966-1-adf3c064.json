@@ -1,0 +1,177 @@
+{
+ "event": "new",
+ "key": "eu-645966-1",
+ "source": "forum",
+ "region": "eu",
+ "topic": 645966,
+ "post": 1,
+ "url": "https://eu.forums.blizzard.com/en/wow/t/alterac-valley-adjustments-25-november/645966/1",
+ "title": "Alterac Valley Adjustments - 25 November",
+ "author": "Kaivax",
+ "role": "Community Manager",
+ "created_at": "2026-11-25T19:43:12.893Z",
+ "updated_at": "2026-11-25T19:43:12.893Z",
+ "version": 1,
+ "category": 360,
+ "beta": false,
+ "sha": "adf3c0645e0f4efbf008c7c15280fa8bb6785a5083eeb3b95be9e2a90c663267",
+ "twin_of": "us-2429074-1",
+ "also": [],
+ "short_news": {
+  "date": "2026-11-25",
+  "at": "2026-11-25T19:43:12Z",
+  "url": "https://eu.forums.blizzard.com/en/wow/t/alterac-valley-adjustments-25-november/645966/1",
+  "title_en": "Alterac Valley Adjustments - 25 November",
+  "kind": "post",
+  "beta": false
+ },
+ "changes": [
+  {
+   "path": [
+    "Player versus Player",
+    "Alterac Valley"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Reputation and Honor from killing the enemy faction General has been significantly reduced. The reputation from objectives (Towers, Graveyards, and Mines) has been increased to compensate. Honor from these objectives has been slightly increased as a redistribution.",
+   "h": "a0bc8179170f"
+  },
+  {
+   "path": [
+    "Player versus Player",
+    "Alterac Valley"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Reputation from killing enemy NPCs has been increased.",
+   "h": "97ab7e419d32"
+  },
+  {
+   "path": [
+    "Player versus Player",
+    "Alterac Valley"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Damage and Health has been increased for all enemy creatures in Alterac Valley.",
+   "h": "2946143f1ea5"
+  },
+  {
+   "path": [
+    "Player versus Player",
+    "Alterac Valley"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Warmasters/Marshals will now leash if they leave their respective rooms, and they now aggro from further away.",
+   "h": "c0b00177667c"
+  },
+  {
+   "path": [
+    "Player versus Player",
+    "Alterac Valley"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Generals"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Generals now deal more damage.",
+   "h": "ee36dc3e1529"
+  },
+  {
+   "path": [
+    "Player versus Player",
+    "Alterac Valley"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed a bug where some Generals were not as powerfully defensive as intended.",
+   "h": "d820b9dd8cfc"
+  },
+  {
+   "path": [
+    "Player versus Player",
+    "Alterac Valley"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Generals"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Generals now have increased stealth detection.",
+   "h": "76d5c3948731"
+  }
+ ],
+ "new_lines": [
+  "a0bc8179170f",
+  "97ab7e419d32",
+  "2946143f1ea5",
+  "c0b00177667c",
+  "53036cf53a77",
+  "ee36dc3e1529",
+  "d820b9dd8cfc",
+  "76d5c3948731"
+ ],
+ "gone_lines": [],
+ "outdated": [],
+ "to_check": [],
+ "check": [
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Generals",
+   "kind": "changed",
+   "pairs": [],
+   "h": "ee36dc3e1529",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Generals",
+   "kind": "changed",
+   "pairs": [],
+   "h": "76d5c3948731",
+   "findings": [],
+   "sources": []
+  }
+ ],
+ "detected_at": "2026-11-25T19:51:12Z"
+}
