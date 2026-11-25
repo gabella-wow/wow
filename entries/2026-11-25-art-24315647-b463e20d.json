@@ -1,0 +1,168 @@
+{
+ "event": "new",
+ "key": "art-24315647",
+ "source": "article",
+ "region": "us",
+ "topic": null,
+ "post": null,
+ "url": "https://worldofwarcraft.blizzard.com/en-us/news/24315647/wow-celebration-pass-wow-forevers-alaketh-rising-comic-december-trading-post-and-more-in-wow-weekly",
+ "title": "WoW Celebration Pass, WoW Forever's \"Al'Aketh Rising\" Comic, December Trading Post, and More in WoW Weekly",
+ "author": "Blizzard Entertainment",
+ "role": "Blizzard News",
+ "created_at": "2026-11-25T18:15:00.000Z",
+ "updated_at": null,
+ "version": null,
+ "category": null,
+ "beta": false,
+ "sha": "b463e20df2cab5b5e73c8d335ba86da474e0b603f148a01a7ae6862deaec4293",
+ "twin_of": null,
+ "also": [],
+ "short_news": {
+  "date": "2026-11-25",
+  "at": "2026-11-25T18:15:00Z",
+  "url": "https://worldofwarcraft.blizzard.com/en-us/news/24315647/wow-celebration-pass-wow-forevers-alaketh-rising-comic-december-trading-post-and-more-in-wow-weekly",
+  "title_en": "WoW Celebration Pass, WoW Forever's \"Al'Aketh Rising\" Comic, December Trading Post, and More in WoW Weekly",
+  "kind": "article",
+  "beta": false
+ },
+ "changes": [
+  {
+   "path": [
+    "Get More from World of Warcraft with the WoW Celebration Pass"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Purchase"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Purchase Now",
+   "h": "e8db12f70b20"
+  },
+  {
+   "path": [
+    "Bundle Up for the December Trading Post"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Winter"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Winter has arrived at the December Trading Post, and while things may get icy, you'll find a variety of transmog appearances to keep you warm. This month, bundle up in the Ensemble: Seafarer’s Winter Collection.",
+   "h": "9ef14dca58aa"
+  },
+  {
+   "path": [
+    "Bundle Up for the December Trading Post"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Orgrimmar"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Visit T&W (Tawney and Wilder) just outside the Mage District in Stormwind, or the Zen’shiri Trading Post next to Grommash Hold in Orgrimmar, to check out the latest items they have available. Players can also visit the Trading Post in the capital cities of Dornogal (The Foregrounds) on the Isle of Dorn and in the renewed Silvermoon City, where representatives of both Tawney and Wilder and the Zen’shiri Trading Post are open for business.",
+   "h": "d20ca8abe667"
+  },
+  {
+   "path": [
+    "Twitch Drop: Get the Cuddly Seafoam Grrgle Housing Decor Item December 1!"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Start Time"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    0,
+    1,
+    10,
+    29
+   ],
+   "text": "Start Time: December 1, 10:00 am PST End Time: December 29, 10:00 am PST",
+   "h": "bee03c84172f"
+  },
+  {
+   "path": [
+    "Get Myth 2/6 Gear in Labyrinth of Kindo'jan"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    1,
+    2,
+    6
+   ],
+   "text": "Each week, Wah’du has tasked you with clearing out a specific chamber, and for your efforts, a reward of 1 Mythical Soul Fragment and 2,000 Undercoin. Have you missed a few weeks? No worries, Wah'du has you covered. He'll hand out each skipped quest, one after another, so you can wrap up several in a single visit and get right back on pace. Missed all of them? Now's the time to complete all six of Wah'du's Labyrinth quests in order in one run to earn six Mythical Soul Fragments worth two Myth 2/6 gear pieces of your choice.",
+   "h": "4c16e92a171a"
+  },
+  {
+   "path": [
+    "Get Myth 2/6 Gear in Labyrinth of Kindo'jan"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "added",
+   "pairs": [],
+   "nums": [],
+   "text": "New to the Labyrinth of Kindo’jan?",
+   "h": "1d06f5e8cbca"
+  }
+ ],
+ "new_lines": [
+  "6d9ed85a6874",
+  "850976eb491d",
+  "a10bb15cb829",
+  "e8db12f70b20",
+  "a3e1a9726439",
+  "4b6253649db3",
+  "9ef14dca58aa",
+  "d20ca8abe667",
+  "f3be8d1403b8",
+  "868671da2520",
+  "bee03c84172f",
+  "946d0b8fbdca",
+  "8ba01d5d5c1c",
+  "4c16e92a171a",
+  "1d06f5e8cbca",
+  "ae7550cdff54",
+  "39ab4305803b",
+  "84a0ab0ede05"
+ ],
+ "gone_lines": [],
+ "outdated": [],
+ "to_check": [],
+ "check": [
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Purchase",
+   "kind": "changed",
+   "pairs": [],
+   "h": "e8db12f70b20",
+   "findings": [],
+   "sources": []
+  }
+ ],
+ "detected_at": "2026-11-25T18:51:01Z"
+}
