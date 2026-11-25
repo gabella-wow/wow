@@ -1,0 +1,2388 @@
+{
+ "event": "new",
+ "key": "us-2403040-16",
+ "source": "forum",
+ "region": "us",
+ "topic": 2403040,
+ "post": 16,
+ "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-25-2026/2403040/16",
+ "title": "WoW: Forever Hotfixes - November 25, 2026",
+ "author": "Kaivax",
+ "role": "Community Manager",
+ "created_at": "2026-11-25T23:25:08.237Z",
+ "updated_at": "2026-11-25T23:25:08.237Z",
+ "version": 1,
+ "category": 352,
+ "beta": false,
+ "sha": "e9c8669bb1259a61fa5f8915b2c17a70e64f7f56f05c1cd8da5e5f08263215e5",
+ "twin_of": null,
+ "also": [
+  "https://eu.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-25-2026/639885/15"
+ ],
+ "short_news": {
+  "date": "2026-11-25",
+  "at": "2026-11-25T23:25:08Z",
+  "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-25-2026/2403040/16",
+  "title_en": "WoW: Forever Hotfixes - November 25, 2026",
+  "kind": "hotfixes",
+  "beta": false
+ },
+ "changes": [
+  {
+   "path": [
+    "Classes",
+    "Druid"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "abilities": [
+    "Hurricane"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Hurricane now correctly lands its final hit.",
+   "h": "31a1da150a89"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid",
+    "Balance"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "balance"
+   },
+   "abilities": [
+    "Improved Wrath",
+    "Wrath"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Improved Wrath is now renamed Starlight Wrath.",
+   "h": "d2bab069dcb1"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid",
+    "Balance",
+    "Improved Wrath is now renamed Starlight Wrath."
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "balance"
+   },
+   "abilities": [
+    "Starlight Wrath",
+    "Starfire"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5
+   ],
+   "text": "Starlight Wrath also reduces the cast time of Starfire by 0.1/0.2/0.3/0.4/0.5 seconds.",
+   "h": "bc590772a6df"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid",
+    "Balance"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "balance"
+   },
+   "abilities": [
+    "Improved Moonfire"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Improved Moonfire is now renamed Moon and Stars.",
+   "h": "e9060c8145db"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid",
+    "Balance",
+    "Improved Moonfire is now renamed Moon and Stars."
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "balance"
+   },
+   "abilities": [
+    "Starfire"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    50,
+    100
+   ],
+   "text": "Moon and Stars also grants Starfire a 50/100% chance not lose casting time when the Druid takes damage.",
+   "h": "16644532d048"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid",
+    "Balance"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "balance"
+   },
+   "abilities": [
+    "Improved Starfire"
+   ],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 2,
+     "old": 5,
+     "unit": "pt",
+     "old_unit": "pt"
+    }
+   ],
+   "nums": [
+    1,
+    2,
+    3,
+    5,
+    8,
+    15
+   ],
+   "text": "Improved Starfire reduced from to 2 points (was 5 points), and now grants 8/15% chance with 1/2 talent points. Druids with 3 or more points spent in this talent will have all their talent points reset and unspent.",
+   "h": "c219b42c6d99"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid",
+    "Balance"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "balance"
+   },
+   "abilities": [
+    "Eclipse",
+    "Wrath"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    7,
+    13,
+    20
+   ],
+   "text": "Eclipse now also increases the critical strike chance of Wrath by 7/13/20% at all times.",
+   "h": "afffc89a47ce"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid",
+    "Balance"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "balance"
+   },
+   "abilities": [
+    "Moonfury"
+   ],
+   "kind": "removed",
+   "pairs": [],
+   "nums": [],
+   "text": "Moonfury talent removed and replaced with Dreamstate.",
+   "h": "2c2ac441aa3b"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid",
+    "Balance",
+    "Moonfury talent removed and replaced with Dreamstate."
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "balance"
+   },
+   "abilities": [
+    "Innervate"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [
+    20,
+    40,
+    60,
+    80,
+    100
+   ],
+   "text": "Dreamstate grants the Druid 20/40/60/80/100% of the benefit of Innervate when casting Innervate on a target other than self.",
+   "h": "12af1d74188a"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid",
+    "Balance"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "balance"
+   },
+   "abilities": [
+    "Moonkin Form"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    10
+   ],
+   "text": "Moonkin Form now also increases Arcane and Nature damage done by 10% while in that form.",
+   "h": "9d6677f0fa1c"
+  },
+  {
+   "path": [
+    "Classes",
+    "Druid",
+    "Balance"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "balance"
+   },
+   "abilities": [
+    "Tranquility",
+    "Genesis"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed a bug where Genesis was not increasing the damage of Hurricane or the healing of Tranquility.",
+   "h": "430e16e1404a"
+  },
+  {
+   "path": [
+    "Classes",
+    "Hunter"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "hunter"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [
+    0
+   ],
+   "text": "Fixed an issue where pets had 0% critical strike chance on melee basic attacks.",
+   "h": "ba3770832352"
+  },
+  {
+   "path": [
+    "Classes",
+    "Hunter",
+    "Beast Mastery"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "hunter",
+    "spec": "beast mastery"
+   },
+   "abilities": [
+    "Summoned Hawks"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Summoned Hawks now attack the target they’re summoned on even if the player’s pet is set to Passive.",
+   "h": "b81118bd4da6"
+  },
+  {
+   "path": [
+    "Classes",
+    "Hunter",
+    "Beast Mastery"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "hunter",
+    "spec": "beast mastery"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Summoned Hawks are now dismissed when the Dismiss Pet spell is completed.",
+   "h": "383afb911aed"
+  },
+  {
+   "path": [
+    "Classes",
+    "Hunter",
+    "Beast Mastery"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "hunter",
+    "spec": "beast mastery"
+   },
+   "abilities": [
+    "Summoned Hawks"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Summoned Hawks can also be dismissed by right-clicking their icon below the Hunter’s portrait.",
+   "h": "e3247aff3d16"
+  },
+  {
+   "path": [
+    "Classes",
+    "Hunter",
+    "Beast Mastery"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "hunter",
+    "spec": "beast mastery"
+   },
+   "abilities": [
+    "Summoned Hawks"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Summoned Hawks will attack your current target if they are not actively attacking a target.",
+   "h": "707ada6ce80a"
+  },
+  {
+   "path": [
+    "Classes",
+    "Hunter",
+    "Beast Mastery"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "hunter",
+    "spec": "beast mastery"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [
+    5
+   ],
+   "text": "Fixed an issue where Summoned Hawks had ~5% less critical strike chance than intended.",
+   "h": "2740e596b0e9"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [
+    20
+   ],
+   "text": "Fixed an issue where Judgements on enemies failed to refresh from attacks if they dropped below a 20 second duration.",
+   "h": "1140a941871f"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin"
+   },
+   "abilities": [
+    "Exorcism"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Exorcism was not able to critically strike.",
+   "h": "2a50e7874161"
+  },
+  {
+   "path": [
+    "Classes",
+    "Paladin",
+    "Holy"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "holy"
+   },
+   "abilities": [
+    "Oath of Light"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    60
+   ],
+   "text": "Oath of Light duration increased to 60 minutes.",
+   "h": "e9ee507d58d9"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "All Rogue Poisons and Blinding Powder are temporarily bind-on-pickup, while we work to fix a bug.",
+   "h": "ba4be3669602"
+  },
+  {
+   "path": [
+    "Classes",
+    "Rogue"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "rogue"
+   },
+   "abilities": [
+    "Stealth"
+   ],
+   "kind": "removed",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed a bug where Poised was not being removed when the Rogue casts Sap or Distract while in Stealth.",
+   "h": "778c131bb901"
+  },
+  {
+   "path": [
+    "Classes",
+    "Shaman"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "shaman"
+   },
+   "abilities": [
+    "Maelstrom Weapon"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [
+    5
+   ],
+   "text": "Fixed an issue where Chain Lightning would not consume Clearcasting if the Shaman had both Clearcasting and 5 stacks of Maelstrom Weapon active at the same time.",
+   "h": "3bc889d3a6c9"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warlock"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warlock"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [
+    0
+   ],
+   "text": "Fixed an issue where pets had 0% critical strike chance on melee basic attacks.",
+   "h": "ba3770832352"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warlock"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warlock"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [
+    5
+   ],
+   "text": "Fixed an issue where Succubus and Incubus had 5% higher critical strike chance than intended.",
+   "h": "c18f1a3eab9b"
+  },
+  {
+   "path": [
+    "Classes",
+    "Warrior",
+    "Arms"
+   ],
+   "subject": {
+    "type": "class",
+    "id": "warrior",
+    "spec": "arms"
+   },
+   "abilities": [
+    "Weaponmaster"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "The Weaponmaster talent no longer fails to reapply when the Warrior dies in Battlegrounds.",
+   "h": "38217e5945cd"
+  },
+  {
+   "path": [
+    "Dungeons",
+    "Blackfathom Deeps"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    3
+   ],
+   "text": "The Altar of the Deeps should now resume its interactability after 3 seconds and properly grant the Blessing of Blackfathom.",
+   "h": "5508b8616c6e"
+  },
+  {
+   "path": [
+    "Dungeons",
+    "The Temple of Atal’Hakkar"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "The Avatar of Hakkar should no longer fail to spawn.",
+   "h": "a5beed0f0468"
+  },
+  {
+   "path": [
+    "Enemies and NPCs"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Desolace"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Desolace - The centaurs in Magram Village now respawn more quickly.",
+   "h": "405c1afbc3d7"
+  },
+  {
+   "path": [
+    "Enemies and NPCs"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Duskwood"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Duskwood - Fixed an issue where the Lost Knight would sometimes spawn inside a tree.",
+   "h": "a5920d59cb8f"
+  },
+  {
+   "path": [
+    "Enemies and NPCs"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Riverglades"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Riverglades - Clubtoe in Sunnyglade no longer flags players for PvP.",
+   "h": "10487d6db144"
+  },
+  {
+   "path": [
+    "Items"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Unerring Purpose"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    2
+   ],
+   "text": "Unerring Purpose can now be sold to vendors for more than 2 copper.",
+   "h": "63ba0d88302c"
+  },
+  {
+   "path": [
+    "Items"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "The Totem of the Storm"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "The Totem of the Storm has been renamed Totem of the Maelstrom.",
+   "h": "8468d6a8bbdc"
+  },
+  {
+   "path": [
+    "Items"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "The Blackblade of Shahram"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "The Blackblade of Shahram will now correctly perform its haste buff, but only to the wielder of the Blackblade.",
+   "h": "0bb9ef37766f"
+  },
+  {
+   "path": [
+    "Items"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Judgement",
+    "Command"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed a bug causing Libram of Law to not affect Judgement of Command.",
+   "h": "99a027a7e844"
+  },
+  {
+   "path": [
+    "Items"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed an issue where Chained Essence of Eranikus’ was going through immunities.",
+   "h": "e65833c08837"
+  },
+  {
+   "path": [
+    "Items"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "The Blackhand’s Breadth’s trinket can no longer be resisted.",
+   "h": "e90cbd1f9ce0"
+  },
+  {
+   "path": [
+    "Items"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "The Night Watchman’s Torch"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "The Night Watchman’s Torch can once again be used while mounted, casting spells, etc. This was an unintended side-effect of a separate bug fix. Ride on!",
+   "h": "9bcb38970a7b"
+  },
+  {
+   "path": [
+    "Legacy System"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Legacy"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed a bug that caused PvP Legacy achievements to not grant credit once you have reached Exalted.",
+   "h": "91158d86ca4c"
+  },
+  {
+   "path": [
+    "Legacy System"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Legacy"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Players who complete Lord Valthalak Laid to Rest should now correctly receive Legacy credit.",
+   "h": "5b4deca46f1f"
+  },
+  {
+   "path": [
+    "Legacy System"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Reinforce"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    8,
+    16,
+    24,
+    32,
+    40
+   ],
+   "text": "Reinforce now correctly reduces the amount of durability lost by 8/16/24/32/40%.",
+   "h": "35e7751a2d57"
+  },
+  {
+   "path": [
+    "Legacy System"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Trueshot Aura",
+    "Moonkin Form",
+    "Travel Form",
+    "Shadowform"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed a bug where The Quick and the Dead was not causing Shadowform, Moonkin Form, Travel Form, and Trueshot Aura to be free, as intended.",
+   "h": "0b28c0836e54"
+  },
+  {
+   "path": [
+    "Player versus Player",
+    "Alterac Valley"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Storm Crystals and other Alterac Valley lootable quest items are no longer mailed to players if left unlooted.",
+   "h": "ba63abfcd41e"
+  },
+  {
+   "path": [
+    "Player versus Player",
+    "Alterac Valley"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Reputation and Honor from killing the enemy faction General has been significantly reduced. The reputation from objectives (Towers, Graveyards, and Mines) has been increased to compensate. Honor from these objectives has been slightly increased as a redistribution.",
+   "h": "a0bc8179170f"
+  },
+  {
+   "path": [
+    "Player versus Player",
+    "Alterac Valley"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Reputation from killing enemy NPCs has been increased.",
+   "h": "97ab7e419d32"
+  },
+  {
+   "path": [
+    "Player versus Player",
+    "Alterac Valley"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Reputation gained by defeating Lieutenants has been significantly increased.",
+   "h": "236da22601c5"
+  },
+  {
+   "path": [
+    "Player versus Player",
+    "Alterac Valley"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 20,
+     "old": 60,
+     "unit": "min",
+     "old_unit": "min"
+    }
+   ],
+   "nums": [
+    20,
+    60
+   ],
+   "text": "Shortened the threshold for a “long match” bonus reputation to 20 minutes (was 60 minutes in Era and prior to today’s adjustments). This results in significant reputation earnings when you hold graveyards and mines at the end of long matches.",
+   "h": "b9a8337d64f9"
+  },
+  {
+   "path": [
+    "Player versus Player",
+    "Alterac Valley"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Damage and Health has been increased for all enemy creatures in Alterac Valley.",
+   "h": "2946143f1ea5"
+  },
+  {
+   "path": [
+    "Player versus Player",
+    "Alterac Valley"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Warmasters/Marshals will now leash if they leave their respective rooms, and they now aggro from further away.",
+   "h": "c0b00177667c"
+  },
+  {
+   "path": [
+    "Player versus Player",
+    "Alterac Valley"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Generals"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Generals now deal more damage.",
+   "h": "ee36dc3e1529"
+  },
+  {
+   "path": [
+    "Player versus Player",
+    "Alterac Valley"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed a bug where some Generals were not as powerfully defensive as intended.",
+   "h": "d820b9dd8cfc"
+  },
+  {
+   "path": [
+    "Player versus Player",
+    "Alterac Valley"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Generals"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Generals now have increased stealth detection.",
+   "h": "76d5c3948731"
+  },
+  {
+   "path": [
+    "Professions",
+    "Enchanting"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "The Revelation weapon enchant no longer rolls its proc chance for every target struck by an area of effect spell. It now rolls once per wave.",
+   "h": "9abb77a4650f"
+  },
+  {
+   "path": [
+    "Professions",
+    "Enchanting"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "The Revelation enchant no longer affects the entire duration of channeled spells.",
+   "h": "22c82857415a"
+  },
+  {
+   "path": [
+    "Races and Reputations"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Gnomes, Humans, Night Elves, and Dwarves can no longer go to war with the Kirin Tor.",
+   "h": "b7bef09bfa4d"
+  },
+  {
+   "path": [
+    "Races and Reputations"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Dwarves can no longer go to war with the Wildhammer Clan. Been there, done that.",
+   "h": "fdf627c2b4ae"
+  },
+  {
+   "path": [
+    "Riding"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Riding"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Paladins and Warlocks should now be granted their Journeyman Riding Skill when completing one of the following quests.",
+   "h": "d4b5799bfb7a"
+  },
+  {
+   "path": [
+    "Riding"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Riding"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Any player who has already completed these quests can speak with the following NPCs to get a special gossip option to allow them to learn Journeyman Riding for free.",
+   "h": "21b1365d1a54"
+  },
+  {
+   "path": [
+    "Riding",
+    "Any player who has already completed these quests can speak "
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Orgrimmar"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Zevrost at the Cleft of Shadow in Orgrimmar (Horde Warlocks)",
+   "h": "bce89b320834"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Mount Hyjal",
+    "Mortal Strike",
+    "Vengeance",
+    "Blind"
+   ],
+   "kind": "no_longer",
+   "pairs": [],
+   "nums": [],
+   "text": "Mount Hyjal - Explosive Runeshard should no longer dramatically increase the damage of Mortal Strike used by Felguard Sentinel on “Blind Vengeance”.",
+   "h": "e6c2e8f54b98"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [],
+   "text": "Hunter - The Horde version of “Saving the Best for Last” can now be properly completed.",
+   "h": "c098454de807"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Silithus"
+   ],
+   "kind": "fix",
+   "pairs": [],
+   "nums": [],
+   "text": "Fixed a bug that prevented Encrypted Twilight Texts from dropping in Silithus for the quests “Secret Communication”, “True Believers”, and “Still Believing”.",
+   "h": "4bdbe08275b2"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Searing Gorge"
+   ],
+   "kind": "note",
+   "pairs": [],
+   "nums": [],
+   "text": "Searing Gorge – Players on “STOLEN: Smithing Tuyere and Lookout’s Spyglass” will find that the Dark Iron have recruited additional Steamsmiths to support their efforts.",
+   "h": "cd5c50800340"
+  },
+  {
+   "path": [
+    "Quests"
+   ],
+   "subject": {
+    "type": "general"
+   },
+   "abilities": [
+    "Western Plaguelands"
+   ],
+   "kind": "changed",
+   "pairs": [],
+   "nums": [
+    30
+   ],
+   "text": "Western Plaguelands - The Scarlet Illusion granted during the quest “Scarlet Subterfuge” now lasts an hour (was 30 minutes).",
+   "h": "998bdc961357"
+  }
+ ],
+ "new_lines": [
+  "31a1da150a89",
+  "d2bab069dcb1",
+  "bc590772a6df",
+  "e9060c8145db",
+  "16644532d048",
+  "c219b42c6d99",
+  "afffc89a47ce",
+  "2c2ac441aa3b",
+  "12af1d74188a",
+  "9d6677f0fa1c",
+  "430e16e1404a",
+  "ba3770832352",
+  "b81118bd4da6",
+  "383afb911aed",
+  "e3247aff3d16",
+  "707ada6ce80a",
+  "2740e596b0e9",
+  "1140a941871f",
+  "2a50e7874161",
+  "e9ee507d58d9",
+  "ba4be3669602",
+  "778c131bb901",
+  "3bc889d3a6c9",
+  "ba3770832352",
+  "c18f1a3eab9b",
+  "38217e5945cd",
+  "5508b8616c6e",
+  "a5beed0f0468",
+  "405c1afbc3d7",
+  "a5920d59cb8f",
+  "10487d6db144",
+  "63ba0d88302c",
+  "8468d6a8bbdc",
+  "0bb9ef37766f",
+  "99a027a7e844",
+  "e65833c08837",
+  "e90cbd1f9ce0",
+  "9bcb38970a7b",
+  "91158d86ca4c",
+  "5b4deca46f1f",
+  "35e7751a2d57",
+  "0b28c0836e54",
+  "ba63abfcd41e",
+  "21337ec0c9a1",
+  "a0bc8179170f",
+  "97ab7e419d32",
+  "236da22601c5",
+  "b9a8337d64f9",
+  "2946143f1ea5",
+  "c0b00177667c",
+  "53036cf53a77",
+  "ee36dc3e1529",
+  "d820b9dd8cfc",
+  "76d5c3948731",
+  "9abb77a4650f",
+  "22c82857415a",
+  "b7bef09bfa4d",
+  "fdf627c2b4ae",
+  "d4b5799bfb7a",
+  "f75952dfcb73",
+  "97bb212721eb",
+  "162c1d37f4ea",
+  "21b1365d1a54",
+  "84429aea2117",
+  "3e91a35a8bbd",
+  "bce89b320834",
+  "afe70c552015",
+  "e6c2e8f54b98",
+  "c098454de807",
+  "4bdbe08275b2",
+  "d5d0d6c83d67",
+  "cd5c50800340",
+  "998bdc961357"
+ ],
+ "gone_lines": [],
+ "outdated": [
+  "classes/rogue/",
+  "guides/builds-rogue/",
+  "guides/leveling-rogue/",
+  "guides/spec-rogue-assassination/",
+  "guides/spec-rogue-subtlety/",
+  "guides/tier-list/"
+ ],
+ "to_check": [
+  "classes/druid/",
+  "guides/builds-druid/",
+  "guides/builds-hunter/",
+  "guides/builds-mage/",
+  "guides/builds-paladin/",
+  "guides/builds-priest/",
+  "guides/builds-rogue/",
+  "guides/builds-shaman/",
+  "guides/builds-warlock/",
+  "guides/builds-warrior/",
+  "guides/dungeons/",
+  "guides/faq/",
+  "guides/glossary/",
+  "guides/launch-checklist/",
+  "guides/legacy/",
+  "guides/leveling-druid/",
+  "guides/leveling-hunter/",
+  "guides/leveling-mage/",
+  "guides/leveling-paladin/",
+  "guides/leveling-priest/",
+  "guides/leveling-rogue/",
+  "guides/leveling-shaman/",
+  "guides/leveling-warlock/",
+  "guides/leveling-warrior/",
+  "guides/leveling/",
+  "guides/professions/",
+  "guides/pvp/",
+  "guides/spec-druid-balance/",
+  "guides/spec-druid-feral/",
+  "guides/spec-druid-restoration/",
+  "guides/spec-hunter-beast-mastery/",
+  "guides/spec-hunter-marksmanship/",
+  "guides/spec-hunter-survival/",
+  "guides/spec-mage-arcane/",
+  "guides/spec-mage-fire/",
+  "guides/spec-mage-frost/",
+  "guides/spec-paladin-holy/",
+  "guides/spec-paladin-protection/",
+  "guides/spec-paladin-retribution/",
+  "guides/spec-priest-discipline/",
+  "guides/spec-priest-holy/",
+  "guides/spec-priest-shadow/",
+  "guides/spec-rogue-assassination/",
+  "guides/spec-rogue-combat/",
+  "guides/spec-rogue-subtlety/",
+  "guides/spec-shaman-elemental/",
+  "guides/spec-shaman-enhancement/",
+  "guides/spec-shaman-restoration/",
+  "guides/spec-warlock-affliction/",
+  "guides/spec-warlock-demonology/",
+  "guides/spec-warlock-destruction/",
+  "guides/spec-warrior-arms/",
+  "guides/spec-warrior-fury/",
+  "guides/spec-warrior-protection/",
+  "guides/tier-list/",
+  "guides/transport/",
+  "races/human/"
+ ],
+ "check": [
+  {
+   "subject": {
+    "type": "class",
+    "id": "druid"
+   },
+   "ability": "Hurricane",
+   "kind": "changed",
+   "pairs": [],
+   "h": "31a1da150a89",
+   "findings": [
+    {
+     "page": "guides/builds-druid/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Hurricane only unlocks at level 40 (Icy Veins)"
+    },
+    {
+     "page": "guides/spec-druid-balance/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Hurricane only unlocks at level 40 (Icy Veins)"
+    }
+   ],
+   "sources": [
+    "content/spec_builds.py:1349",
+    "content/spec_builds.py:1350",
+    "content/spec_builds.py:1457"
+   ]
+  },
+  {
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "balance"
+   },
+   "ability": "Improved Wrath",
+   "kind": "changed",
+   "pairs": [],
+   "h": "d2bab069dcb1",
+   "findings": [
+    {
+     "page": "classes/druid/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Improved Wrath Faster and cheaper Wrath"
+    },
+    {
+     "page": "guides/builds-druid/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Improved Wrath 5 is in both the Icy Veins build and Wowhead’s hard-casting build"
+    },
+    {
+     "page": "guides/spec-druid-balance/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Improved Wrath 5 is in both the Icy Veins build and Wowhead’s hard-casting build"
+    },
+    {
+     "page": "guides/spec-druid-restoration/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Improved Wrath and Insect Swarm from Balance first, then Restoration"
+    }
+   ],
+   "sources": [
+    "content/spec_builds.py:1361",
+    "content/spec_builds.py:1362",
+    "content/spec_builds.py:1363",
+    "content/spec_builds.py:1428",
+    "content/spec_builds.py:1429",
+    "content/spec_builds.py:1430",
+    "content/talents/druid.json:13"
+   ]
+  },
+  {
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "balance"
+   },
+   "ability": "Improved Moonfire",
+   "kind": "changed",
+   "pairs": [],
+   "h": "e9060c8145db",
+   "findings": [
+    {
+     "page": "guides/builds-druid/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Improved Moonfire 2 Moonfire damage and crit"
+    },
+    {
+     "page": "guides/spec-druid-balance/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Improved Moonfire ×2 · Moonglow ×3 · Nature’s Majesty ×2 · Nature’s Reach ×2 · Nature’s Splendor ×1. Order of points by "
+    }
+   ],
+   "sources": [
+    "content/spec_builds.py:1358",
+    "content/talents/druid.json:56"
+   ]
+  },
+  {
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "balance"
+   },
+   "ability": "Improved Starfire",
+   "kind": "changed",
+   "pairs": [
+    {
+     "new": 2,
+     "old": 5,
+     "unit": "pt",
+     "old_unit": "pt"
+    }
+   ],
+   "h": "c219b42c6d99",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "balance"
+   },
+   "ability": "Eclipse",
+   "kind": "changed",
+   "pairs": [],
+   "h": "afffc89a47ce",
+   "findings": [
+    {
+     "page": "classes/druid/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Eclipse"
+    },
+    {
+     "page": "guides/builds-druid/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Eclipse is weak for now"
+    },
+    {
+     "page": "guides/spec-druid-balance/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Eclipse is weak for now"
+    },
+    {
+     "page": "guides/tier-list/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Eclipse still looks weak"
+    }
+   ],
+   "sources": [
+    "content/spec_builds.py:1336",
+    "content/spec_builds.py:1349",
+    "content/spec_builds.py:1350",
+    "content/spec_builds.py:1376",
+    "content/spec_builds.py:1377",
+    "i18n/en.txt:901",
+    "content/talents/druid.json:206"
+   ]
+  },
+  {
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "balance"
+   },
+   "ability": "Moonfury",
+   "kind": "removed",
+   "pairs": [],
+   "h": "2c2ac441aa3b",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "class",
+    "id": "druid",
+    "spec": "balance"
+   },
+   "ability": "Moonkin Form",
+   "kind": "changed",
+   "pairs": [],
+   "h": "9d6677f0fa1c",
+   "findings": [
+    {
+     "page": "classes/druid/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Moonkin Form 3% crit for the whole raid"
+    }
+   ],
+   "sources": [
+    "content/talents/druid.json:236"
+   ]
+  },
+  {
+   "subject": {
+    "type": "class",
+    "id": "hunter",
+    "spec": "beast mastery"
+   },
+   "ability": "Summoned Hawks",
+   "kind": "changed",
+   "pairs": [],
+   "h": "b81118bd4da6",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "class",
+    "id": "paladin",
+    "spec": "holy"
+   },
+   "ability": "Oath of Light",
+   "kind": "changed",
+   "pairs": [],
+   "h": "e9ee507d58d9",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "class",
+    "id": "rogue"
+   },
+   "ability": "Stealth",
+   "kind": "removed",
+   "pairs": [],
+   "h": "778c131bb901",
+   "findings": [
+    {
+     "page": "classes/rogue/",
+     "status": "outdated",
+     "why": "removed in the post, the page still shows it",
+     "seen": "Stealth and lots of crowd control"
+    },
+    {
+     "page": "guides/builds-rogue/",
+     "status": "outdated",
+     "why": "removed in the post, the page still shows it",
+     "seen": "Stealth"
+    },
+    {
+     "page": "guides/leveling-rogue/",
+     "status": "outdated",
+     "why": "removed in the post, the page still shows it",
+     "seen": "Stealth A combo point builder and a finisher"
+    },
+    {
+     "page": "guides/spec-rogue-assassination/",
+     "status": "outdated",
+     "why": "removed in the post, the page still shows it",
+     "seen": "Stealth (Wowhead), so you can use it before a pull"
+    },
+    {
+     "page": "guides/spec-rogue-subtlety/",
+     "status": "outdated",
+     "why": "removed in the post, the page still shows it",
+     "seen": "Stealth"
+    },
+    {
+     "page": "guides/tier-list/",
+     "status": "outdated",
+     "why": "removed in the post, the page still shows it",
+     "seen": "Stealth and control: the most reliable pick in PvP"
+    }
+   ],
+   "sources": [
+    "content/class_guides.py:569",
+    "content/class_guides.py:607",
+    "content/spec_builds.py:729",
+    "content/spec_builds.py:731",
+    "content/spec_builds.py:742",
+    "content/spec_builds.py:789",
+    "content/spec_builds.py:807",
+    "i18n/en.txt:753"
+   ]
+  },
+  {
+   "subject": {
+    "type": "class",
+    "id": "warrior",
+    "spec": "arms"
+   },
+   "ability": "Weaponmaster",
+   "kind": "no_longer",
+   "pairs": [],
+   "h": "38217e5945cd",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Desolace",
+   "kind": "changed",
+   "pairs": [],
+   "h": "405c1afbc3d7",
+   "findings": [
+    {
+     "page": "guides/leveling/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Desolace or Arathi Highlands, Stranglethorn Vale"
+    },
+    {
+     "page": "guides/transport/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Desolace, and the flight passes Thunder Bluff"
+    }
+   ],
+   "sources": [
+    "content/guides.py:590",
+    "content/guides.py:655",
+    "content/guides.py:805",
+    "content/guides.py:806",
+    "content/guides.py:807",
+    "content/guides.py:1190"
+   ]
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Riverglades",
+   "kind": "no_longer",
+   "pairs": [],
+   "h": "10487d6db144",
+   "findings": [
+    {
+     "page": "guides/leveling/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Riverglades zone between Redridge and Burning Steppes, Dustwallow Marsh, Badlands, Swamp of Sorrows"
+    },
+    {
+     "page": "guides/transport/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Riverglades zone"
+    }
+   ],
+   "sources": [
+    "content/guides.py:773",
+    "content/guides.py:774",
+    "content/guides.py:775",
+    "content/guides.py:793",
+    "content/guides.py:794",
+    "content/guides.py:795",
+    "content/guides.py:1201",
+    "content/guides.py:1319",
+    "content/guides.py:1320",
+    "content/guides.py:1321",
+    "content/guides.py:1327",
+    "content/guides.py:1328",
+    "content/guides.py:1329"
+   ]
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Unerring Purpose",
+   "kind": "changed",
+   "pairs": [],
+   "h": "63ba0d88302c",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "The Blackblade of Shahram",
+   "kind": "changed",
+   "pairs": [],
+   "h": "0bb9ef37766f",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Legacy",
+   "kind": "changed",
+   "pairs": [],
+   "h": "5b4deca46f1f",
+   "findings": [
+    {
+     "page": "guides/builds-druid/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Legacy points"
+    },
+    {
+     "page": "guides/builds-hunter/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Legacy points): a hawk attacks your targets for 18 seconds, and two can be active at once"
+    },
+    {
+     "page": "guides/builds-mage/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Legacy Talented perk (1/5)"
+    },
+    {
+     "page": "guides/builds-paladin/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Legacy Talented perk, both add Infusion of Light: Flash of Light and Holy Shock crits speed up the next Holy Light"
+    },
+    {
+     "page": "guides/builds-priest/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Legacy Talented perk and spends 5 of its 21 points on Spirit Tap from the Shadow tree"
+    },
+    {
+     "page": "guides/builds-rogue/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "The Legacy points differ too: Icy Veins takes Improved Poisons to 5 and adds Vile Poisons, Wowhead takes Improved Evisce"
+    },
+    {
+     "page": "guides/builds-shaman/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Legacy points both add Lightning Overload 3 and one point in Elemental Fury"
+    },
+    {
+     "page": "guides/builds-warlock/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Legacy points Wowhead takes Soul Siphon to 3."
+    },
+    {
+     "page": "guides/builds-warrior/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Legacy Talented points on Bloodthrill: Icy Veins all 5, Wowhead 3, with 2 into Two-Handed Weapon Specialization"
+    },
+    {
+     "page": "guides/dungeons/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Legacy point"
+    },
+    {
+     "page": "guides/faq/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Legacy, camp, optional transmog and a choice of visual style (Classic or modern), official gamepad support"
+    },
+    {
+     "page": "guides/glossary/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Legacy and perks mean: short definitions so you can read the other guides on the first pass"
+    },
+    {
+     "page": "guides/launch-checklist/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "The Legacy System"
+    },
+    {
+     "page": "guides/legacy/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Legacy is progress shared across your whole Battle.net account"
+    },
+    {
+     "page": "guides/leveling-druid/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "The Legacy Talented perk gives talents up to 5 levels earlier"
+    },
+    {
+     "page": "guides/leveling-hunter/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Legacy Talented perk gives talents up to 5 levels earlier: the order is the same"
+    },
+    {
+     "page": "guides/leveling-mage/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "The Legacy Talented perk gives talents up to 5 levels earlier"
+    },
+    {
+     "page": "guides/leveling-paladin/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "The Legacy Talented perk gives talents up to 5 levels earlier"
+    },
+    {
+     "page": "guides/leveling-priest/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "The Legacy Talented perk gives talents up to 5 levels earlier"
+    },
+    {
+     "page": "guides/leveling-rogue/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "The Legacy Talented perk gives talents up to 5 levels earlier"
+    },
+    {
+     "page": "guides/leveling-shaman/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "The Legacy Talented perk gives talents up to 5 levels earlier"
+    },
+    {
+     "page": "guides/leveling-warlock/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "The Legacy Talented perk gives talents from level 5 instead of 10."
+    },
+    {
+     "page": "guides/leveling-warrior/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "The Legacy Talented perk gives talents up to 5 levels earlier: the order is the same, just shift the levels"
+    },
+    {
+     "page": "guides/leveling/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Legacy and the camp"
+    },
+    {
+     "page": "guides/professions/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "The Legacy Bountiful Harvest perk helps you find extra scarce resources more often"
+    },
+    {
+     "page": "guides/pvp/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Legacy point"
+    },
+    {
+     "page": "guides/spec-druid-balance/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Legacy points"
+    },
+    {
+     "page": "guides/spec-druid-feral/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Legacy points both take Improved Shifting Power 2 for a more frequent Shifting Power"
+    },
+    {
+     "page": "guides/spec-druid-restoration/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Legacy points Wowhead takes Improved Tranquility: a threat-free group heal on a 2-minute cooldown"
+    },
+    {
+     "page": "guides/spec-hunter-beast-mastery/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Legacy points): a hawk attacks your targets for 18 seconds, and two can be active at once"
+    },
+    {
+     "page": "guides/spec-hunter-marksmanship/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Legacy points, Icy Veins suggests 5 points in Deadly Aspects, and Rapid Recuperation later on for mana problems"
+    },
+    {
+     "page": "guides/spec-hunter-survival/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Legacy points on Resourcefulness 2, which saves mana, and Expose Prey 2: attacks on a target with Hunter’s Mark some"
+    },
+    {
+     "page": "guides/spec-mage-arcane/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "The Legacy Talented perk gives talents up to 5 levels earlier"
+    },
+    {
+     "page": "guides/spec-mage-fire/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "The Legacy Talented perk gives talents up to 5 levels earlier"
+    },
+    {
+     "page": "guides/spec-mage-frost/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Legacy Talented perk (1/5)"
+    },
+    {
+     "page": "guides/spec-paladin-holy/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Legacy Talented perk, both add Infusion of Light: Flash of Light and Holy Shock crits speed up the next Holy Light"
+    },
+    {
+     "page": "guides/spec-paladin-protection/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "The Legacy Talented perk gives talents up to 5 levels earlier"
+    },
+    {
+     "page": "guides/spec-paladin-retribution/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Legacy Talented perk) like this: Vengeance 3 and one point in Champion of the Light, which turns part of your Intell"
+    },
+    {
+     "page": "guides/spec-priest-discipline/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Legacy Talented perk and spends 5 of its 21 points on Spirit Tap from the Shadow tree"
+    },
+    {
+     "page": "guides/spec-priest-holy/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Legacy points, Icy Veins drops the wand points for group healing and takes Spiritual Guidance, Wowhead takes Litany "
+    },
+    {
+     "page": "guides/spec-priest-shadow/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Legacy points both take Devouring Contagion 2: a cheaper Devouring Plague that jumps to nearby enemies when the targ"
+    },
+    {
+     "page": "guides/spec-rogue-assassination/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "The Legacy points differ too: Icy Veins takes Improved Poisons to 5 and adds Vile Poisons, Wowhead takes Improved Evisce"
+    },
+    {
+     "page": "guides/spec-rogue-combat/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Legacy points on Hack and Slash 5: with a sword or an axe your attacks sometimes grant an extra hit"
+    },
+    {
+     "page": "guides/spec-rogue-subtlety/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Legacy points both take Preparation: it resets your cooldowns, which means a second Vanish"
+    },
+    {
+     "page": "guides/spec-shaman-elemental/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Legacy points both add Lightning Overload 3 and one point in Elemental Fury"
+    },
+    {
+     "page": "guides/spec-shaman-enhancement/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Legacy points both take Improved Stormstrike to 2 and add Spirit Weapons and Mental Quickness"
+    },
+    {
+     "page": "guides/spec-shaman-restoration/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Legacy points too: Tidal Mastery to 5, Healing Way 3 for a stronger Healing Wave, and one point in Purification"
+    },
+    {
+     "page": "guides/spec-warlock-affliction/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Legacy points Wowhead takes Soul Siphon to 3."
+    },
+    {
+     "page": "guides/spec-warlock-demonology/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Legacy points, together with Demonic Knowledge 3."
+    },
+    {
+     "page": "guides/spec-warlock-destruction/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Legacy points"
+    },
+    {
+     "page": "guides/spec-warrior-arms/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Legacy Talented points on Bloodthrill: Icy Veins all 5, Wowhead 3, with 2 into Two-Handed Weapon Specialization"
+    },
+    {
+     "page": "guides/spec-warrior-fury/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "The Legacy Talented perk gives talents up to 5 levels earlier: the order is the same, just shift the levels"
+    },
+    {
+     "page": "guides/spec-warrior-protection/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "The Legacy Talented perk gives talents up to 5 levels earlier: the order is the same, just shift the levels"
+    },
+    {
+     "page": "guides/transport/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Legacy perk: flights are cheaper and faster"
+    },
+    {
+     "page": "races/human/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Legacy"
+    }
+   ],
+   "sources": [
+    "content/class_guides.py:140",
+    "content/class_guides.py:277",
+    "content/class_guides.py:409",
+    "content/class_guides.py:549",
+    "content/class_guides.py:698",
+    "content/class_guides.py:830",
+    "content/class_guides.py:966",
+    "content/class_guides.py:1092",
+    "content/class_guides.py:1228",
+    "content/races.py:19",
+    "content/spec_cheats.py:589",
+    "content/spec_cheats.py:590",
+    "content/spec_cheats.py:591",
+    "content/spec_cheats.py:592",
+    "content/spec_cheats.py:593",
+    "content/spec_cheats.py:595",
+    "content/spec_cheats.py:596",
+    "content/spec_cheats.py:597",
+    "content/spec_cheats.py:598",
+    "content/spec_cheats.py:599",
+    "content/guides.py:85",
+    "content/guides.py:493",
+    "content/guides.py:494",
+    "content/guides.py:501",
+    "content/guides.py:502",
+    "content/guides.py:678",
+    "content/guides.py:680",
+    "content/guides.py:698",
+    "content/guides.py:699",
+    "content/guides.py:700",
+    "content/guides.py:701",
+    "content/guides.py:871",
+    "content/guides.py:912",
+    "content/guides.py:913",
+    "content/guides.py:914",
+    "content/guides.py:1028",
+    "content/guides.py:1035",
+    "content/guides.py:1051",
+    "content/guides.py:1242",
+    "content/guides.py:1262",
+    "content/guides.py:1319",
+    "content/guides.py:1320",
+    "content/guides.py:1321",
+    "content/guides.py:1327",
+    "content/guides.py:1328",
+    "content/guides.py:1329",
+    "content/guides.py:1564",
+    "content/guides.py:1965",
+    "content/guides.py:1988",
+    "content/guides.py:1989",
+    "content/guides.py:1990",
+    "content/guides.py:1993",
+    "content/guides.py:1994",
+    "content/guides.py:1995",
+    "content/guides.py:2036",
+    "content/guides.py:2041",
+    "content/guides.py:2042",
+    "content/guides.py:2043",
+    "content/guides.py:2045",
+    "content/guides.py:2046",
+    "content/guides.py:2047",
+    "content/guides.py:2049",
+    "content/guides.py:2050",
+    "content/guides.py:2051",
+    "content/guides.py:2140",
+    "content/guides.py:2201",
+    "content/guides.py:2206",
+    "content/guides.py:2214",
+    "content/guides.py:2215",
+    "content/guides.py:2216",
+    "content/guides.py:2226",
+    "content/guides.py:2227",
+    "content/guides.py:2228",
+    "content/guides.py:2257",
+    "content/guides.py:2284",
+    "content/guides.py:2286",
+    "content/guides.py:2288",
+    "content/guides.py:2290",
+    "content/guides.py:2292",
+    "content/guides.py:2510",
+    "content/guides.py:2634",
+    "content/guides.py:2638",
+    "content/guides.py:3086",
+    "content/guides.py:3087",
+    "content/guides.py:3088",
+    "content/guides.py:3089",
+    "content/guides.py:3092",
+    "content/guides.py:3130",
+    "content/guides.py:3131",
+    "content/guides.py:3132",
+    "content/guides.py:3135",
+    "content/guides.py:3136",
+    "content/guides.py:3142",
+    "content/guides.py:3543",
+    "content/spec_builds.py:146",
+    "content/spec_builds.py:147",
+    "content/spec_builds.py:148",
+    "content/spec_builds.py:181",
+    "content/spec_builds.py:182",
+    "content/spec_builds.py:183",
+    "content/spec_builds.py:341",
+    "content/spec_builds.py:342",
+    "content/spec_builds.py:343",
+    "content/spec_builds.py:556",
+    "content/spec_builds.py:557",
+    "content/spec_builds.py:558",
+    "content/spec_builds.py:570",
+    "content/spec_builds.py:571",
+    "content/spec_builds.py:572",
+    "content/spec_builds.py:621",
+    "content/spec_builds.py:622",
+    "content/spec_builds.py:623",
+    "content/spec_builds.py:639",
+    "content/spec_builds.py:640",
+    "content/spec_builds.py:641",
+    "content/spec_builds.py:723",
+    "content/spec_builds.py:724",
+    "content/spec_builds.py:725",
+    "content/spec_builds.py:764",
+    "content/spec_builds.py:765",
+    "content/spec_builds.py:766",
+    "content/spec_builds.py:801",
+    "content/spec_builds.py:802",
+    "content/spec_builds.py:803",
+    "content/spec_builds.py:884",
+    "content/spec_builds.py:885",
+    "content/spec_builds.py:886",
+    "content/spec_builds.py:919",
+    "content/spec_builds.py:920",
+    "content/spec_builds.py:921",
+    "content/spec_builds.py:956",
+    "content/spec_builds.py:957",
+    "content/spec_builds.py:958",
+    "content/spec_builds.py:983",
+    "content/spec_builds.py:1043",
+    "content/spec_builds.py:1044",
+    "content/spec_builds.py:1045",
+    "content/spec_builds.py:1082",
+    "content/spec_builds.py:1083",
+    "content/spec_builds.py:1084",
+    "content/spec_builds.py:1122",
+    "content/spec_builds.py:1123",
+    "content/spec_builds.py:1124",
+    "content/spec_builds.py:1203",
+    "content/spec_builds.py:1204",
+    "content/spec_builds.py:1205",
+    "content/spec_builds.py:1239",
+    "content/spec_builds.py:1240",
+    "content/spec_builds.py:1241",
+    "content/spec_builds.py:1273",
+    "content/spec_builds.py:1274",
+    "content/spec_builds.py:1275",
+    "content/spec_builds.py:1375",
+    "content/spec_builds.py:1376",
+    "content/spec_builds.py:1377",
+    "content/spec_builds.py:1397",
+    "content/spec_builds.py:1398",
+    "content/spec_builds.py:1399",
+    "content/spec_builds.py:1428",
+    "content/spec_builds.py:1429",
+    "content/spec_builds.py:1430",
+    "index.src.html:29",
+    "index.src.html:38",
+    "index.src.html:1289",
+    "journey.src.html:47",
+    "journey.src.html:52",
+    "journey.src.html:54",
+    "journey.src.html:61",
+    "journey.src.html:65",
+    "journey.src.html:85",
+    "journey.src.html:143",
+    "guide.src.html:366",
+    "i18n/en.txt:2",
+    "i18n/en.txt:3",
+    "i18n/en.txt:57",
+    "i18n/en.txt:103",
+    "i18n/en.txt:105",
+    "i18n/en.txt:125",
+    "i18n/en.txt:139",
+    "i18n/en.txt:449",
+    "i18n/en.txt:491",
+    "i18n/en.txt:498",
+    "i18n/en.txt:503",
+    "i18n/en.txt:505",
+    "i18n/en.txt:511",
+    "i18n/en.txt:515",
+    "i18n/en.txt:534",
+    "i18n/en.txt:972",
+    "i18n/en.txt:1213"
+   ]
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Reinforce",
+   "kind": "changed",
+   "pairs": [],
+   "h": "35e7751a2d57",
+   "findings": [
+    {
+     "page": "guides/legacy/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Reinforce (5): less durability loss on death"
+    }
+   ],
+   "sources": [
+    "content/guides.py:2264"
+   ]
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Generals",
+   "kind": "changed",
+   "pairs": [],
+   "h": "ee36dc3e1529",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Generals",
+   "kind": "changed",
+   "pairs": [],
+   "h": "76d5c3948731",
+   "findings": [],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Riding",
+   "kind": "changed",
+   "pairs": [],
+   "h": "d4b5799bfb7a",
+   "findings": [
+    {
+     "page": "guides/leveling-paladin/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Riding without buying a mount"
+    },
+    {
+     "page": "guides/leveling-priest/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Riding, dual specialization —"
+    },
+    {
+     "page": "guides/leveling-rogue/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Riding, dual specialization —"
+    },
+    {
+     "page": "guides/leveling-shaman/",
+     "status": "check",
+     "why": "mentioned, the post changes it",
+     "seen": "Riding, dual specialization —"
+    }
+   ],
+   "sources": []
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Mount Hyjal",
+   "kind": "no_longer",
+   "pairs": [],
+   "h": "e6c2e8f54b98",
+   "findings": [
+    {
+     "page": "guides/leveling/",
+     "status": "check",
+     "why": "post: no longer …",
+     "seen": "Mount Hyjal opens at 60."
+    }
+   ],
+   "sources": [
+    "content/guides.py:779",
+    "content/guides.py:780",
+    "content/guides.py:781",
+    "content/guides.py:799",
+    "content/guides.py:800",
+    "content/guides.py:801",
+    "content/guides.py:1319",
+    "content/guides.py:1320",
+    "content/guides.py:1321",
+    "content/guides.py:1327",
+    "content/guides.py:1328",
+    "content/guides.py:1329",
+    "content/guides.py:3413",
+    "content/guides.py:3414",
+    "content/guides.py:3415"
+   ]
+  },
+  {
+   "subject": {
+    "type": "general"
+   },
+   "ability": "Western Plaguelands",
+   "kind": "changed",
+   "pairs": [],
+   "h": "998bdc961357",
+   "findings": [],
+   "sources": []
+  }
+ ],
+ "detected_at": "2026-11-25T23:32:03Z"
+}
