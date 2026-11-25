@@ -1,5 +1,126 @@
 [
  {
+  "id": "us-2429007-1",
+  "sha": "a22910bc",
+  "date": "2026-11-25",
+  "at": "2026-11-25T18:32:04Z",
+  "url": "https://us.forums.blizzard.com/en/wow/t/balance-druid-adjustments-november-25/2429007/1",
+  "kind": "post",
+  "beta": false,
+  "title_en": "Balance Druid Adjustments - November 25",
+  "n": 6,
+  "t": {
+   "ru": {
+    "h": "Balance Druid Adjustments - November 25",
+    "en": 1,
+    "src": "Blizzard, на английском",
+    "sum": [
+     "Друид · Improved Starfire: 5 pt → 2 pt",
+     "Друид · Moonfury: убрано"
+    ],
+    "more": "Ещё изменений: 4",
+    "site": "https://gabella.site/wow/guides/news/",
+    "site_t": "Подробнее на сайте"
+   },
+   "en": {
+    "h": "Balance Druid Adjustments - November 25",
+    "en": 1,
+    "src": "Blizzard",
+    "sum": [
+     "Druid · Improved Starfire: 5 pt → 2 pt",
+     "Druid · Moonfury: removed"
+    ],
+    "more": "4 more changes",
+    "site": "https://gabella.site/wow/en/guides/news/",
+    "site_t": "More on the site"
+   },
+   "uk": {
+    "h": "Balance Druid Adjustments - November 25",
+    "en": 1,
+    "src": "Blizzard, англійською",
+    "sum": [
+     "Друїд · Improved Starfire: 5 pt → 2 pt",
+     "Друїд · Moonfury: прибрано"
+    ],
+    "more": "Ще змін: 4",
+    "site": "https://gabella.site/wow/uk/guides/news/",
+    "site_t": "Детальніше на сайті"
+   },
+   "de": {
+    "h": "Balance Druid Adjustments - November 25",
+    "en": 1,
+    "src": "Blizzard, auf Englisch",
+    "sum": [
+     "Druide · Improved Starfire: 5 pt → 2 pt",
+     "Druide · Moonfury: entfernt"
+    ],
+    "more": "Weitere Änderungen: 4",
+    "site": "https://gabella.site/wow/de/guides/news/",
+    "site_t": "Mehr auf der Seite"
+   },
+   "fr": {
+    "h": "Balance Druid Adjustments - November 25",
+    "en": 1,
+    "src": "Blizzard, en anglais",
+    "sum": [
+     "Druide · Improved Starfire: 5 pt → 2 pt",
+     "Druide · Moonfury: supprimé"
+    ],
+    "more": "Autres changements : 4",
+    "site": "https://gabella.site/wow/fr/guides/news/",
+    "site_t": "Plus sur le site"
+   },
+   "es": {
+    "h": "Balance Druid Adjustments - November 25",
+    "en": 1,
+    "src": "Blizzard, en inglés",
+    "sum": [
+     "Druida · Improved Starfire: 5 pt → 2 pt",
+     "Druida · Moonfury: eliminado"
+    ],
+    "more": "Más cambios: 4",
+    "site": "https://gabella.site/wow/es/guides/news/",
+    "site_t": "Más en la web"
+   },
+   "pt": {
+    "h": "Balance Druid Adjustments - November 25",
+    "en": 1,
+    "src": "Blizzard, em inglês",
+    "sum": [
+     "Druida · Improved Starfire: 5 pt → 2 pt",
+     "Druida · Moonfury: removido"
+    ],
+    "more": "Mais mudanças: 4",
+    "site": "https://gabella.site/wow/pt/guides/news/",
+    "site_t": "Mais no site"
+   },
+   "it": {
+    "h": "Balance Druid Adjustments - November 25",
+    "en": 1,
+    "src": "Blizzard, in inglese",
+    "sum": [
+     "Druido · Improved Starfire: 5 pt → 2 pt",
+     "Druido · Moonfury: rimosso"
+    ],
+    "more": "Altre modifiche: 4",
+    "site": "https://gabella.site/wow/it/guides/news/",
+    "site_t": "Di più sul sito"
+   },
+   "pl": {
+    "h": "Balance Druid Adjustments - November 25",
+    "en": 1,
+    "src": "Blizzard, po angielsku",
+    "sum": [
+     "Druid · Improved Starfire: 5 pt → 2 pt",
+     "Druid · Moonfury: usunięte"
+    ],
+    "more": "Więcej zmian: 4",
+    "site": "https://gabella.site/wow/pl/guides/news/",
+    "site_t": "Więcej na stronie"
+   }
+  }
+ },
+ {
   "id": "art-24317680",
   "sha": "5ae1c8fc",
   "date": "2026-11-24",
